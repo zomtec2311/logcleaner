@@ -1,0 +1,83 @@
+#logcleaner {
+	display: flex;
+	justify-content: center;
+	margin: 16px;
+}
+#wtdelete {
+	float: left;
+}
+#wtlogmsg {
+	float :left;
+}
+#logcleaner-infobtn {
+	float: left;
+	display: flex;
+	justify-content: left;
+	margin-top: 22px;
+}
+#logcleaner-btns {
+	float: left;
+	display: flex;
+	justify-content: left;
+	margin: 16px;
+	font-size: 0.8em;
+}
+#logcleaner-info {
+	float: left;
+	display: flex;
+	justify-content: left;
+	margin: 16px;
+}
+.alert-info {
+		text-align: center;
+		margin-top: 15px;
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #bce8f1;
+    font-size: 1em;
+}
+.alert-info2 {
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #bce8f1;
+    font-size: 0.75em;
+}
+.alert-level0 {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    font-size: 0.75em;
+}
+.alert-level1 {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    font-size: 0.75em;
+}
+.alert-level2 {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    font-size: 0.75em;
+}
+.alert-level3 {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    font-size: 0.75em;
+}
+.alert-level4 {
+    color: #870482;
+    background-color: #f9aaf6;
+    border-color: #ebccd1;
+    font-size: 0.75em;
+}
+.alert {
+  display: flex;
+	align-items: center;
+	justify-content: left;
+    padding: 2px;
+    margin-bottom: 2px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}

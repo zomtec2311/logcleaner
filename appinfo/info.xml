@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+	<id>logcleaner</id>
+	<name>Log Cleaner</name>
+	<summary>Administrator Tool for cleaning up the logfile</summary>
+	<description><![CDATA[**Administrator Tool for cleaning up the logfile**
+
+- ✅ Only accessable for Administrators.
+- ✅ Error levels with different colors.
+- ✅ Number of displayed log entries can be set.
+- ✅ After correcting a log entry it can be deleted from the log file.
+- ✅ One click deletion of all dublicates within the logfile.]]></description>
+	<version>1.0.5</version>
+	<licence>agpl</licence>
+	<author mail="wtoedt@gmail.com" homepage="http://wtgogs.ddns.net:8081/zomtec/logcleaner">Wolfgang Tödt</author>
+	<namespace>LogCleaner</namespace>
+	<category>tools</category>
+	<bugs>http://wtgogs.ddns.net:8081/zomtec/logcleaner/issues</bugs>
+	<website>http://wtgogs.ddns.net:8081/zomtec/logcleaner</website>
+	<repository type="git">http://wtgogs.ddns.net:8081/zomtec/logcleaner</repository>
+	<screenshot>http://wttec.bplaced.net/wt/logcleaner-info.png</screenshot>
+	<dependencies>
+		<nextcloud min-version="29" max-version="31"/>
+	</dependencies>
+	<navigations>
+		<navigation>
+			<id>logcleaner</id>
+			<name>Log Cleaner</name>
+			<route>logcleaner.page.index</route>
+			<icon>logcleaner.svg</icon>
+			<type>link</type>
+		</navigation>
+	</navigations>
+</info>
