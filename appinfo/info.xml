@@ -13,12 +13,12 @@
 - ✅ One click deletion of all dublicates within the logfile.]]></description>
 	<version>1.0.5</version>
 	<licence>agpl</licence>
-	<author mail="wtoedt@gmail.com" homepage="http://wtgogs.ddns.net:8081/zomtec/logcleaner">Wolfgang Tödt</author>
+	<author mail="wtoedt@gmail.com" homepage="https://github.com/zomtec2311/logcleaner">Wolfgang Tödt</author>
 	<namespace>LogCleaner</namespace>
 	<category>tools</category>
-	<bugs>http://wtgogs.ddns.net:8081/zomtec/logcleaner/issues</bugs>
-	<website>http://wtgogs.ddns.net:8081/zomtec/logcleaner</website>
-	<repository type="git">http://wtgogs.ddns.net:8081/zomtec/logcleaner</repository>
+	<bugs>https://github.com/zomtec2311/logcleaner/issues</bugs>
+	<website>https://github.com/zomtec2311/logcleaner</website>
+	<repository type="git">https://github.com/zomtec2311/logcleaner</repository>
 	<dependencies>
 		<nextcloud min-version="29" max-version="31"/>
 	</dependencies>
