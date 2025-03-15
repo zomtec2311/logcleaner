@@ -17,6 +17,7 @@
 	<namespace>LogCleaner</namespace>
 	<category>tools</category>
 	<bugs>https://github.com/zomtec2311/logcleaner/issues</bugs>
+	<screenshot>https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/img/logcleaner1.png</screenshot>
 	<website>https://github.com/zomtec2311/logcleaner</website>
 	<repository type="git">https://github.com/zomtec2311/logcleaner</repository>
 	<dependencies>
