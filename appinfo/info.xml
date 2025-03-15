@@ -19,7 +19,6 @@
 	<bugs>http://wtgogs.ddns.net:8081/zomtec/logcleaner/issues</bugs>
 	<website>http://wtgogs.ddns.net:8081/zomtec/logcleaner</website>
 	<repository type="git">http://wtgogs.ddns.net:8081/zomtec/logcleaner</repository>
-	<screenshot>http://wttec.bplaced.net/wt/logcleaner-info.png</screenshot>
 	<dependencies>
 		<nextcloud min-version="29" max-version="31"/>
 	</dependencies>
