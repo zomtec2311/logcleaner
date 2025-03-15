@@ -11,7 +11,7 @@
 - ✅ Number of displayed log entries can be set.
 - ✅ After correcting a log entry it can be deleted from the log file.
 - ✅ One click deletion of all dublicates within the logfile.]]></description>
-	<version>1.0.5</version>
+	<version>1.0.6</version>
 	<licence>agpl</licence>
 	<author mail="wtoedt@gmail.com" homepage="https://github.com/zomtec2311/logcleaner">Wolfgang Tödt</author>
 	<namespace>LogCleaner</namespace>
