@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.6
+### Fixed
+- bugfix information.png
+  
+## 1.0.5
+### Added
+- some new features
+  
 ## 1.0.4
 ### Changed
 - added license comments to php files
