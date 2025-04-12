@@ -15,6 +15,16 @@
 	justify-content: left;
 	margin-top: 22px;
 }
+#logcleaner-innum {
+	float: left;
+	width: 130px;
+}
+#logcleaner_wt_zeilen {
+	width: 70px;
+}
+#logcleaner_wt_offset {
+	width: 70px;
+}
 #logcleaner-btns {
 	float: left;
 	display: flex;

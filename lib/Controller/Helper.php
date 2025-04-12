@@ -86,7 +86,7 @@ class Helper
         return;
     }
 
-    public function myoutputdata($wtlog,$wtall,$wtlogfilezeilen,$wt_characters) {
+    public function myoutputdata($wtlog,$wtall,$wtlogfilezeilen,$wt_characters,$wt_offset) {
         $wtarr =[];
         $obja = new \stdClass();
         if ($wtall === 0) {
@@ -115,7 +115,8 @@ class Helper
             case "0":
               break;
             case "1":
-              $obja->zeit = $this->l->t('Time') . " : " . $this->l->l('date', $log[$i][1]) . ' - ' . $this->l->l('time', $log[$i][1])  . $trenn;
+              $wttimelog = strtotime($log[$i][1]) + 3600*$wt_offset;
+              $obja->zeit = $this->l->t('Time') . " : " . $this->l->l('date', $wttimelog) . ' - ' . $this->l->l('time', $wttimelog)  . $trenn;
               break;
             case "2":
               $obja->ip = $this->l->t('IP') . " :".$log[$i][1] . $trenn;

@@ -89,6 +89,7 @@ class SettingsController extends Controller {
 		}
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		$wt_zeilen = (int)$this->helper->getAppValue("logcleaner_wt_zeilen");
+		$wt_offset = (int)$this->helper->getAppValue("logcleaner_wt_offset");
 		$wt_art = (int)$this->helper->getAppValue("logcleaner_wt_art");
 		$wt_characters = (int)$this->helper->getAppValue("logcleaner_wt_characters");
 		$wtpara_menue = (int)$this->helper->getAppValue('wtparam_menue');
@@ -130,10 +131,10 @@ class SettingsController extends Controller {
 			$a = (isset($wwt[$wt_zeilen-$i-1])) ? $wwt[$wt_zeilen-$i-1] : null;
 			if ($a) {
 				if ($wt_zeilen >= count($wwt)) {
-					$wtarr []= $this->helper->myoutputdata($a,$wtlogfilezeilen,$wtlogfilezeilen + $wt_zeilen - count($wwt)-$i-1,$wt_characters); $array[$i] = $i;
+					$wtarr []= $this->helper->myoutputdata($a,$wtlogfilezeilen,$wtlogfilezeilen + $wt_zeilen - count($wwt)-$i-1,$wt_characters,$wt_offset); $array[$i] = $i;
 				}
 			 	else {
-				 	$wtarr []= $this->helper->myoutputdata($a,$wtlogfilezeilen,$wtlogfilezeilen-$i,$wt_characters); $array[$i] = $i;
+					$wtarr []= $this->helper->myoutputdata($a,$wtlogfilezeilen,$wtlogfilezeilen-$i,$wt_characters,$wt_offset); $array[$i] = $i;
 			 	}
 			}
 		}

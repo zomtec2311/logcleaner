@@ -29,6 +29,7 @@ OC.L10N.register(
     "URL" : "URL",
     "right" : "right",
     "top" : "top",
+    "Time offset in hours, e.g. due to winter time" : "Time offset in hours, e.g. due to winter time",    
     "which menue to use" : "which menue to use",
     "(only effective after the next page refresh)" : "(only effective after the next page refresh)"
 },
