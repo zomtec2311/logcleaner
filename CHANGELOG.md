@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.7
+### Fixed
+- right date format for admin
+
 ## 1.0.6
 ### Fixed
 - bugfix information.png
