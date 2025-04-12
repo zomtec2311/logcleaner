@@ -5,6 +5,7 @@
 - new Parameter time offset in settings
 ### Changed
 - Settings input radio
+- Settings height
 
 ## 1.0.7
 ### Fixed
