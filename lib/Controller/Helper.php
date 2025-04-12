@@ -37,10 +37,8 @@ use OCP\IL10N;
 use OCA\LogReader\Service\SettingsService;
 use OCP\AppFramework\Services\IInitialState;
 use OCP\Util;
-
 use OCP\HintException;
 use OCP\IConfig;
-
 
 class Helper
 {
@@ -117,7 +115,7 @@ class Helper
             case "0":
               break;
             case "1":
-              $obja->zeit = $this->l->t('Time') . " : ".date("d.m.Y - H:i:s", strtotime($log[$i][1] . " + 1 Hour")) . $trenn;
+              $obja->zeit = $this->l->t('Time') . " : " . $this->l->l('date', $log[$i][1]) . ' - ' . $this->l->l('time', $log[$i][1])  . $trenn;
               break;
             case "2":
               $obja->ip = $this->l->t('IP') . " :".$log[$i][1] . $trenn;
