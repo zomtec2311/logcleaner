@@ -73,19 +73,22 @@ class SettingsController extends Controller {
 		$array = [];
 		$wtarr =[];
 		$this->initialState->provideInitialState('settings', $this->settingsService->getAppSettings());
-		$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		$wtlogfile = $this->config->getSystemValue('logfile');
 		if (!file_exists($wtlogfile)) {
-			$obja = new \stdClass();
-			$obja->all = 0;
-			$obja->zeit = '';
-			$obja->ip = '';
-			$obja->user = '';
-			$obja->app = '';
-			$obja->method = '';
-			$obja->zeit = '';
-			$obja->grund = $this->l->t('log file cannot be located');
-			$wtarr [] = $obja;
-			return $wtarr;
+			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+				if (!file_exists($wtlogfile)) {
+					$obja = new \stdClass();
+					$obja->all = 0;
+					$obja->zeit = '';
+					$obja->ip = '';
+					$obja->user = '';
+					$obja->app = '';
+					$obja->method = '';
+					$obja->zeit = '';
+					$obja->grund = $this->l->t('log file cannot be located');
+					$wtarr [] = $obja;
+					return $wtarr;
+				}
 		}
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		$wt_zeilen = (int)$this->helper->getAppValue("logcleaner_wt_zeilen");
@@ -150,7 +153,10 @@ class SettingsController extends Controller {
 	}
 
 	public function getAll() {
-		$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		$wtlogfile = $this->config->getSystemValue('logfile');
+		if (!file_exists($wtlogfile)) {
+			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		}
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		$wtlogfilezeilen = count($wwt);
 		return $wtlogfilezeilen;
@@ -164,7 +170,10 @@ class SettingsController extends Controller {
 		$temp_array = array();
 		$new_array = array();
 		$uu = "";
-		$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		$wtlogfile = $this->config->getSystemValue('logfile');
+		if (!file_exists($wtlogfile)) {
+			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		}
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		foreach ($wwt as $value) {
 			$tmp_array[] = explode(',"', $value);
