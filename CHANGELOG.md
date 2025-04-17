@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.9
+### Changed
+- Path verification
+
 ## 1.0.8
 ### Added
 - new Parameter time offset in settings
