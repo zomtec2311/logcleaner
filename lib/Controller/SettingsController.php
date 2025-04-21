@@ -144,6 +144,86 @@ class SettingsController extends Controller {
 		return $wtarr;
 	}
 
+	public function getalllog(?int $logid = null) {
+		if ($logid === null) {
+			$logid = null;
+		}
+		$wt_out = "";
+		$array = [];
+		$wtarr =[];
+		$this->initialState->provideInitialState('settings', $this->settingsService->getAppSettings());
+		$wtlogfile = $this->config->getSystemValue('logfile');
+		if (!file_exists($wtlogfile)) {
+			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+				if (!file_exists($wtlogfile)) {
+					$obja = new \stdClass();
+					$obja->all = 0;
+					$obja->zeit = '';
+					$obja->ip = '';
+					$obja->user = '';
+					$obja->app = '';
+					$obja->method = '';
+					$obja->zeit = '';
+					$obja->grund = $this->l->t('log file cannot be located');
+					$wtarr [] = $obja;
+					return $wtarr;
+				}
+		}
+		$wwt = $this->helper->wtlogtoarr($wtlogfile);
+		$wt_zeilen = (int)$this->helper->getAppValue("logcleaner_wt_zeilen");
+		$wt_offset = (int)$this->helper->getAppValue("logcleaner_wt_offset");
+		$wt_art = (int)$this->helper->getAppValue("logcleaner_wt_art");
+		$wt_characters = (int)$this->helper->getAppValue("logcleaner_wt_characters");
+		$wtpara_menue = (int)$this->helper->getAppValue('wtparam_menue');
+		if((!isset($wtpara_menue)) || ($wtpara_menue === 0)) {
+			$this->helper->setAppValue('wtparam_menue', 1);
+		}
+		if((!isset($wt_zeilen)) || ($wt_zeilen === 0)) {
+			$wt_zeilen = 5;
+			$this->helper->setAppValue('logcleaner_wt_zeilen', 5);
+		}
+		if((!isset($wt_art)) || ($wt_art === 0)) {
+			$wt_art = 2;
+			$this->helper->setAppValue('logcleaner_wt_art', 9);
+		}
+		if((!isset($wt_characters)) || ($wt_characters === 0)) {
+			$wt_characters = 500;
+			$this->helper->setAppValue('logcleaner_wt_characters', 500);
+		}
+		if (isset($logid)) {
+			$this->helper->wtzeileweg($logid, $wwt, $wtlogfile);
+			$wwt = $this->helper->wtlogtoarr($wtlogfile);
+		}
+		$wtlogfilezeilen = count($wwt);
+		if ($wtlogfilezeilen == 0) {
+			$obja = new \stdClass();
+		  $obja->all = 0;
+		  $obja->zeit = '';
+		  $obja->ip = '';
+		  $obja->user = '';
+		  $obja->app = '';
+		  $obja->method = '';
+		  $obja->zeit = '';
+			$obja->grund = $this->l->t('no log entries available');
+			$wtarr [] = $obja;
+		  return $wtarr;
+		}
+		$wt_zeilen = $wtlogfilezeilen;
+		$wwt = array_splice($wwt, -$wt_zeilen);
+		for($i=0; $i < $wt_zeilen; $i++) {
+			$a = (isset($wwt[$wt_zeilen-$i-1])) ? $wwt[$wt_zeilen-$i-1] : null;
+			if ($a) {
+				if ($wt_zeilen >= count($wwt)) {
+					$wtarr []= $this->helper->myoutputdata($a,$wtlogfilezeilen,$wtlogfilezeilen + $wt_zeilen - count($wwt)-$i-1,$wt_characters,$wt_offset); $array[$i] = $i;
+				}
+			 	else {
+					$wtarr []= $this->helper->myoutputdata($a,$wtlogfilezeilen,$wtlogfilezeilen-$i,$wt_characters,$wt_offset); $array[$i] = $i;
+			 	}
+			}
+		}
+		return $wtarr;
+	}
+
 	public function dellog(string $logid) {
 		if ($logid === null) {
 			$logid = null;
