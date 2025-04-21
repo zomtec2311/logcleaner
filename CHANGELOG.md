@@ -1,6 +1,9 @@
 # Changelog
 
 ## 1.0.9
+### Added
+- Pagination
+- 
 ### Changed
 - Path verification
 
