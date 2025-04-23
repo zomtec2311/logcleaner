@@ -1,7 +1,7 @@
 #logcleaner {
 	display: flex;
 	justify-content: center;
-	margin: 16px;
+	margin: 3px;
 }
 #wtdelete {
 	float: left;
@@ -40,9 +40,6 @@
 }
 .alert-info {
 		text-align: center;
-		margin-top: 15px;
-    color: #000000;
-    background-color: #ffffff;
     border-color: #bce8f1;
     font-size: 1em;
 }
