@@ -1,9 +1,15 @@
 # Changelog
 
+## 1.0.10
+### Added
+- Spinner while loading data
+### Changed
+- Responsive look for small devices
+
 ## 1.0.9
 ### Added
 - Pagination
-- 
+
 ### Changed
 - Path verification
 
