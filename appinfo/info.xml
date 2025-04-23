@@ -11,13 +11,13 @@
 - ✅ Number of displayed log entries can be set.
 - ✅ After correcting a log entry it can be deleted from the log file.
 - ✅ One click deletion of all dublicates within the logfile.]]></description>
-	<version>1.0.9</version>
+	<version>1.0.10</version>
 	<licence>agpl</licence>
 	<author mail="wtoedt@gmail.com" homepage="https://github.com/zomtec2311/logcleaner">Wolfgang Tödt</author>
 	<namespace>LogCleaner</namespace>
 	<category>tools</category>
 	<bugs>https://github.com/zomtec2311/logcleaner/issues</bugs>
-	<screenshot>https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleaner-info.png</screenshot>
+	<screenshot>https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/img/logcleaner3.png</screenshot>
 	<website>https://github.com/zomtec2311/logcleaner</website>
 	<repository type="git">https://github.com/zomtec2311/logcleaner</repository>
 	<dependencies>
