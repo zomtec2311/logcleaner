@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.11
+### Changed
+- Some code cleanup
+
 ## 1.0.10
 ### Added
 - Spinner while loading data
