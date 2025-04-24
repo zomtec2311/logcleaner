@@ -30,8 +30,4 @@ use OCP\Util;
 Util::addStyle(OCA\LogCleaner\AppInfo\Application::APP_ID, 'logcleaner-main');
 Util::addScript(OCA\LogCleaner\AppInfo\Application::APP_ID, 'logcleaner-main');
 ?>
-<div>
-  <div id="logcleaner-btns"></div>
-  <div id="logcleaner-info"></div>
-</div>
 <div id="logcleaner"></div>
