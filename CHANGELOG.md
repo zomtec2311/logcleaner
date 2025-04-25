@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.12
+### Fixed
+- Code clean up
+
 ## 1.0.11
 ### Changed
 - Some code cleanup
