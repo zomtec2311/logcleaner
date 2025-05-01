@@ -249,7 +249,7 @@ class SettingsController extends Controller {
 		$key_array = array();
 		$temp_array = array();
 		$new_array = array();
-		$uu = "";
+		$uu = 0;
 		$wtlogfile = $this->config->getSystemValue('logfile');
 		if (!file_exists($wtlogfile)) {
 			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
@@ -276,6 +276,34 @@ class SettingsController extends Controller {
 			$current = $new_array;
 			file_put_contents($file, $current,LOCK_EX);
 		}
+		return $ii;
+	}
+
+	public function countDub() {
+		$i = 0;
+		$ii = 0;
+		$tmp_array = array();
+		$key_array = array();
+		$temp_array = array();
+		$wtlogfile = $this->config->getSystemValue('logfile');
+		if (!file_exists($wtlogfile)) {
+			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		}
+		$wwt = $this->helper->wtlogtoarr($wtlogfile);
+		foreach ($wwt as $value) {
+			$tmp_array[] = explode(',"', $value);
+		}
+		unset($value);
+		foreach($tmp_array as $val) {
+			if (!in_array($val[8], $key_array)) {
+				$key_array[$i] = $val[8];
+				$temp_array[$i] = $i;
+      }
+			else {
+				$ii++;
+			}
+      $i++;
+    }
 		return $ii;
 	}
 }
