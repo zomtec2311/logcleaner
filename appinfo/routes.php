@@ -32,6 +32,7 @@ return [
      ['name' => 'Settings#getAppValueZ', 'url' => '/getparam/{who}', 'verb' => 'GET'],
      ['name' => 'Settings#getAll', 'url' => '/getall', 'verb' => 'GET'],
      ['name' => 'Settings#delDub', 'url' => '/deldub', 'verb' => 'GET'],
+     ['name' => 'Settings#countDub', 'url' => '/countdub', 'verb' => 'GET'],
      ['name' => 'Settings#dellog', 'url' => '/dellog/{logid}', 'verb' => 'GET'],
      ['name' => 'Settings#dellog', 'url' => '/dellog/{logid}', 'verb' => 'GET'],
      ['name' => 'Settings#setSettingZeilen', 'url' => '/setlines/{who}/{zeilen}', 'verb' => 'GET'],
