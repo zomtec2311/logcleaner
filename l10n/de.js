@@ -4,6 +4,7 @@ OC.L10N.register(
     "How many lines to display" : "Wieviele Zeilen sollen angezeigt werden",
     "How many characters should the error reason display" : "Wieviele Zeichen soll der Fehlergrund anzeigen",
     "Delete dublicates" : "Dubletten löschen",
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n Dublette löschen","%n Dubletten löschen"],
     "Log entries fetched" : "Log Einträge eingelesen",
     "Could not fetch log entries" : "Log Einträge konnten nicht eingelesen werden",
     "Could not fetch settings" : "Einstellungen nicht eingelesen werden",
