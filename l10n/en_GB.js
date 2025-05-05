@@ -3,7 +3,6 @@ OC.L10N.register(
     {
     "How many lines to display" : "How many lines to display",
     "How many characters should the error reason display" : "How many characters should the error reason display",
-    "Delete dublicates" : "Delete dublicates",
     "_Delete %n dublicate_::_Delete %n dublicates_" : ["Delete %n dublicate","Delete %n dublicates"],
     "Log entries fetched" : "Log entries fetched",
     "Could not fetch log entries" : "Could not fetch log entries",
