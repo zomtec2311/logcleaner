@@ -29,6 +29,7 @@ return [
      ['name' => 'page#index', 'url' => '/', 'verb' => 'POST','postfix' => 'logcleaner'],
      ['name' => 'Settings#getlog', 'url' => '/getdata', 'verb' => 'GET'],
      ['name' => 'Settings#getalllog', 'url' => '/getalldata', 'verb' => 'GET'],
+     ['name' => 'Settings#emptylog', 'url' => '/emptylog', 'verb' => 'GET'],
      ['name' => 'Settings#getAppValueZ', 'url' => '/getparam/{who}', 'verb' => 'GET'],
      ['name' => 'Settings#getAll', 'url' => '/getall', 'verb' => 'GET'],
      ['name' => 'Settings#delDub', 'url' => '/deldub', 'verb' => 'GET'],
