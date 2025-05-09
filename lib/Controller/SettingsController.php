@@ -306,4 +306,13 @@ class SettingsController extends Controller {
     }
 		return $ii;
 	}
+
+	public function emptylog() {
+		$wtlogfile = $this->config->getSystemValue('logfile');
+		if (!file_exists($wtlogfile)) {
+			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		}
+		file_put_contents($wtlogfile, "",LOCK_EX);
+		return;
+	}
 }
