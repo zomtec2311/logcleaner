@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "Foutvlak 4: Fatal: Die bediener stop.",
     "_%n log entry_::_%n log entries_" : ["%n log inskrywing","%n loginskrywings"],
     "Time offset in hours, e.g. due to winter time" : "Tydskans in ure, bv. As gevolg van wintertyd",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Delete %n duplikaat","Verwyder %n duplikate"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Delete %n duplikaat","Verwyder %n duplikate"],
+    "This button will delete shown number of dublicates within the error log file" : "Hierdie knoppie sal die getoon aantal duplikate binne die foutloglêer verwyder",
+    "Empty the Log File" : "Maak die loglêer leeg",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "AANDAG !! Hierdie funksie moet slegs gebruik word as u regtig seker is wat u doen. Hierdie knoppie leeg die hele loglêer, maar maak geen foute op nie.",
+    "Empty the Log File now" : "Maak die loglêer nou leeg",
+    "Cancel" : "Kanselleer"
 },
 "nplurals=2; plural=n != 1;");

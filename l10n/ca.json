@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "Nivell d’error 4: fatal: el servidor s’atura.",
     "_%n log entry_::_%n log entries_" : ["%n Entrada de registre","%n Entrades de registre"],
     "Time offset in hours, e.g. due to winter time" : "Temps compensat en hores, p. A causa del temps d'hivern",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Suprimeix %n duplica","Suprimeix %n duplicats"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Suprimeix %n duplica","Suprimeix %n duplicats"],
+    "This button will delete shown number of dublicates within the error log file" : "Aquest botó eliminarà el nombre mostrat de duplicats dins del fitxer de registre d'errors",
+    "Empty the Log File" : "Buida el fitxer de registre",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Atenció !! Aquesta funció només s'ha d'utilitzar si esteu segurs del que esteu fent. Aquest botó buida tot el fitxer de registre, però no soluciona cap error.",
+    "Empty the Log File now" : "Buida el fitxer de registre ara",
+    "Cancel" : "Cancel·lar"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

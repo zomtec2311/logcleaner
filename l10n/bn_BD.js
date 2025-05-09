@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "ত্রুটি স্তর 4: মারাত্মক: সার্ভারটি বন্ধ হয়ে যায়।",
     "_%n log entry_::_%n log entries_" : ["%n লগ এন্ট্রি","%n লগ এন্ট্রি"],
     "Time offset in hours, e.g. due to winter time" : "ঘন্টা সময় অফসেট, উদাঃ শীতের সময় কারণে",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n সদৃশ মুছুন","%n ডুপ্লিকেট মুছুন"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n সদৃশ মুছুন","%n ডুপ্লিকেট মুছুন"],
+    "This button will delete shown number of dublicates within the error log file" : "এই বোতামটি ত্রুটি লগ ফাইলের মধ্যে ডুপ্লিকেটগুলির সংখ্যা মুছে ফেলবে",
+    "Empty the Log File" : "লগ ফাইলটি খালি করুন",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "মনোযোগ !! এই ফাংশনটি কেবল তখনই ব্যবহার করা উচিত যদি আপনি কী করছেন সে সম্পর্কে সত্যই নিশ্চিত হন। এই বোতামটি পুরো লগ ফাইলটি খালি করে তবে কোনও ত্রুটি ঠিক করে না।",
+    "Empty the Log File now" : "এখনই লগ ফাইলটি খালি করুন",
+    "Cancel" : "বাতিল"
 },
 "nplurals=2; plural=n > 1;");

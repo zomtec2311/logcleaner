@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "خطأ المستوى 4: مميت: يتوقف الخادم.",
     "_%n log entry_::_%n log entries_" : ["%n دخول السجل","%n إدخالات سجل","%n مدخل سجل","%n مدخل سجل","%n مدخل سجل","%n مدخل سجل"],
     "Time offset in hours, e.g. due to winter time" : "وقت الإزاحة في ساعات ، على سبيل المثال بسبب وقت الشتاء",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["حذف %n دبليكا","حذف %n دبليكا","حذف %n دبليكا","حذف %n دبليكات","حذف %n دبليكات","حذف %n دبليكات"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["حذف %n دبليكا","حذف %n دبليكا","حذف %n دبليكا","حذف %n دبليكات","حذف %n دبليكات","حذف %n دبليكات"],
+    "This button will delete shown number of dublicates within the error log file" : "سيحذف هذا الزر عدد من التكرارات في ملف سجل الخطأ",
+    "Empty the Log File" : "تفريغ ملف السجل",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "انتباه!! يجب استخدام هذه الوظيفة فقط إذا كنت متأكدًا حقًا مما تفعله. يفرغ هذا الزر ملف السجل بأكمله ، لكنه لا يصلح أي أخطاء.",
+    "Empty the Log File now" : "تفريغ ملف السجل الآن",
+    "Cancel" : "يلغي"
 },"pluralForm" :"nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n % 100 >= 3 && n % 100 <= 10) ? 3 : ((n % 100 >= 11 && n % 100 <= 99) ? 4 : 5))));"
 }

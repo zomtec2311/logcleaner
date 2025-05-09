@@ -31,6 +31,11 @@ OC.L10N.register(
     "top" : "oben",
     "Time offset in hours, e.g. due to winter time" : "Zeitversatz in Stunden, z.B. wegen Winterzeit",
     "which menue to use" : "Welches Menü nutzen",
-    "(only effective after the next page refresh)" : "(Erst nach nächstem Seitenrefresh wirksam)"
+    "(only effective after the next page refresh)" : "(Erst nach nächstem Seitenrefresh wirksam)",
+    "This button will delete shown number of dublicates within the error log file" : "Diese Schaltfläche löscht die angezeigte Anzahl von Duplikaten in der Logdatei",
+    "Empty the Log File" : "Logdatei leeren",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Achtung!! Diese Funktion sollte nur verwendet werden, wenn man sich wirklich sicher ist, was man tut. Diese Schaltfläche leert die gesamte Logdatei, behebt jedoch keine Fehler.",
+    "Empty the Log File now" : "Logdatei jetzt leeren",
+    "Cancel" : "Abbruch"
 },
 "nplurals=2; plural=(n != 1);");

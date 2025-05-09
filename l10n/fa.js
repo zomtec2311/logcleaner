@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "خطای سطح 4: کشنده: سرور متوقف می شود.",
     "_%n log entry_::_%n log entries_" : ["ورودی ورود به سیستم %n","نوشته های log %n"],
     "Time offset in hours, e.g. due to winter time" : "جبران زمان در ساعت ها ، به عنوان مثال به دلیل زمان زمستان",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n و کپی کردن","%n غیر نسخه برداری را حذف کنید"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n و کپی کردن","%n غیر نسخه برداری را حذف کنید"],
+    "This button will delete shown number of dublicates within the error log file" : "این دکمه تعداد کپی های نشان داده شده را در پرونده ورود به سیستم حذف می کند",
+    "Empty the Log File" : "پرونده ورود به سیستم را خالی کنید",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "توجه !! این عملکرد فقط باید در صورتی مورد استفاده قرار گیرد که واقعاً از آنچه انجام می دهید مطمئن باشید. این دکمه کل پرونده ورود به سیستم را خالی می کند ، اما هیچ خطایی برطرف نمی کند.",
+    "Empty the Log File now" : "پرونده ورود به سیستم را اکنون خالی کنید",
+    "Cancel" : "لغو کردن"
 },
 "nplurals=2; plural=n > 1;");

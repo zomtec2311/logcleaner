@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "Nivel de error 4: fatal: el servidor se detiene.",
     "_%n log entry_::_%n log entries_" : ["%n entrada de registro","%n entradas de registro"],
     "Time offset in hours, e.g. due to winter time" : "Compensación de tiempo en horas, p. Debido al invierno",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Eliminar %n dublicate","Eliminar %n dublicates"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Eliminar %n dublicate","Eliminar %n dublicates"],
+    "This button will delete shown number of dublicates within the error log file" : "Este botón eliminará el número de duplicados mostrados dentro del archivo de registro de errores",
+    "Empty the Log File" : "Vaciar el archivo de registro",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "¡¡Atención!! Esta función solo debe usarse si está realmente seguro de lo que está haciendo. Este botón vacía todo el archivo de registro, pero no corre ningún error.",
+    "Empty the Log File now" : "Vacíe el archivo de registro ahora",
+    "Cancel" : "Cancelar"
 },
 "nplurals=2; plural=(n != 1);");

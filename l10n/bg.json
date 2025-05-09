@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "Ниво на грешка 4: Фатално: Сървърът спира.",
     "_%n log entry_::_%n log entries_" : ["%n Вход в дневника","%n записи в дневника"],
     "Time offset in hours, e.g. due to winter time" : "Отместване на времето за часове, напр. Поради зимното време",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Изтрийте %n дублирайте","Изтриване на %n дубликати"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Изтрийте %n дублирайте","Изтриване на %n дубликати"],
+    "This button will delete shown number of dublicates within the error log file" : "Този бутон ще изтрие показания брой дубликати във файла на журнала за грешки",
+    "Empty the Log File" : "Изпразнете лог файла",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Внимание !! Тази функция трябва да се използва само ако сте наистина сигурни в това, което правите. Този бутон изпразва целия лог файл, но не поправя никакви грешки.",
+    "Empty the Log File now" : "Изпразнете лог файла сега",
+    "Cancel" : "Отказ"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

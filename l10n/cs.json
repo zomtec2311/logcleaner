@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "Úroveň chyby 4: FATAL: Server se zastaví.",
     "_%n log entry_::_%n log entries_" : ["%n záznam protokolu","%n záznamy v protokolu","%n záznamů v protokolu"],
     "Time offset in hours, e.g. due to winter time" : "Časový posun v hodinách, např. Kvůli zimnímu času",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Smazat %n duplikát","Smazat %n duplikáty","Smazat %n duplikátů"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Smazat %n duplikát","Smazat %n duplikáty","Smazat %n duplikátů"],
+    "This button will delete shown number of dublicates within the error log file" : "Toto tlačítko odstraní zobrazené číslo duplikátů v souboru protokolu chyb",
+    "Empty the Log File" : "Vyprázdněte soubor protokolu",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Pozor!! Tato funkce by měla být použita pouze tehdy, pokud jste si jisti, co děláte. Toto tlačítko vyprázdní celý soubor protokolu, ale neopravuje žádné chyby.",
+    "Empty the Log File now" : "Vyprázdněte soubor protokolu hned teď",
+    "Cancel" : "Zrušit"
 },"pluralForm" :"nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);"
 }

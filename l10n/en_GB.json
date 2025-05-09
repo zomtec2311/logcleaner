@@ -29,6 +29,11 @@
     "top" : "top",
     "Time offset in hours, e.g. due to winter time" : "Time offset in hours, e.g. due to winter time",
     "which menue to use" : "which menue to use",
-    "(only effective after the next page refresh)" : "(only effective after the next page refresh)"
+    "(only effective after the next page refresh)" : "(only effective after the next page refresh)",
+    "This button will delete shown number of dublicates within the error log file" : "This button will delete shown number of dublicates within the error log file",
+    "Empty the Log File" : "Empty the Log File",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors.",
+    "Empty the Log File now" : "Empty the Log File now",
+    "Cancel" : "Cancel"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -31,6 +31,11 @@ OC.L10N.register(
     "top" : "au-dessus",
     "Time offset in hours, e.g. due to winter time" : "Décalage horaire en heures, par exemple en raison de l'heure d'hiver",
     "which menue to use" : "Quel menu utiliser",
-    "(only effective after the next page refresh)" : "(Uniquement après l'actualisation de la page suivante)"
+    "(only effective after the next page refresh)" : "(Uniquement après l'actualisation de la page suivante)",
+    "This button will delete shown number of dublicates within the error log file" : "Ce bouton supprimera le nombre affiché de doublons dans le fichier journal d'erreur",
+    "Empty the Log File" : "Vider le fichier journal",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Attention!! Cette fonction ne doit être utilisée que si vous êtes vraiment sûr de ce que vous faites. Ce bouton vide l'intégralité du fichier journal, mais ne corrige aucune erreur.",
+    "Empty the Log File now" : "Videz le fichier journal maintenant",
+    "Cancel" : "Annuler"
 },
 "nplurals=2; plural=(n != 1);");

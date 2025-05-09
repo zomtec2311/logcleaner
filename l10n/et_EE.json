@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "Viga 4. tase: saatuslik: server peatub.",
     "_%n log entry_::_%n log entries_" : ["%n logi sissekanne","%n Logi kanded"],
     "Time offset in hours, e.g. due to winter time" : "Ajavahemik tundides, nt. Talveaja tõttu",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Kustuta %n duplikaadid","Kustuta %n duplikaadid"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Kustuta %n duplikaadid","Kustuta %n duplikaadid"],
+    "This button will delete shown number of dublicates within the error log file" : "See nupp kustutab kuvatud duplikaatide arvu tõrkelogifailis",
+    "Empty the Log File" : "Tühjendage logifail",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Tähelepanu !! Seda funktsiooni tuleks kasutada ainult siis, kui olete väga kindel, mida teete. See nupp tühjendab kogu logifaili, kuid ei paranda vigu.",
+    "Empty the Log File now" : "Tühjendage logifail kohe",
+    "Cancel" : "Tühistama"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

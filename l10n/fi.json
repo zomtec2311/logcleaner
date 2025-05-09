@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "Virhetaso 4: Fatal: Palvelin pysähtyy.",
     "_%n log entry_::_%n log entries_" : ["%n loki -merkintä","%n lokitiedot"],
     "Time offset in hours, e.g. due to winter time" : "Aikavaihto tunteina, esim. Talviajan takia",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Poista %n kaksoiskappale","Poista %n -kopioita"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Poista %n kaksoiskappale","Poista %n -kopioita"],
+    "This button will delete shown number of dublicates within the error log file" : "Tämä painike poistaa esitetty kaksoiskappaleiden lukumäärä virhelokitiedoston sisällä",
+    "Empty the Log File" : "Tyhjennä lokitiedosto",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Huomio!! Tätä toimintoa tulisi käyttää vain, jos olet todella varma tekemästäsi. Tämä painike tyhjentää koko lokitiedoston, mutta ei korjaa virheitä.",
+    "Empty the Log File now" : "Tyhjennä lokitiedosto nyt",
+    "Cancel" : "Peruuttaa"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

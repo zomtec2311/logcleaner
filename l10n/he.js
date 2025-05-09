@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "שגיאה ברמה 4: קטלנית: השרת נעצר.",
     "_%n log entry_::_%n log entries_" : ["%n ערך יומן","%n רשומות יומן","%n רשומות יומן"],
     "Time offset in hours, e.g. due to winter time" : "קיזוז זמן בשעות, למשל בגלל זמן החורף",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["מחיקה n% כפילות","מחיקה n% שכפול","מחיקה n% שכפול"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["מחיקה n% כפילות","מחיקה n% שכפול","מחיקה n% שכפול"],
+    "This button will delete shown number of dublicates within the error log file" : "כפתור זה ימחק את מספר הכפילויות המוצג בקובץ יומן השגיאות",
+    "Empty the Log File" : "רוקן את קובץ היומן",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "תְשׁוּמַת לֵב!! יש להשתמש בפונקציה זו רק אם אתה באמת בטוח במה שאתה עושה. כפתור זה מרוקן את כל קובץ היומן, אך אינו מתקן שגיאות.",
+    "Empty the Log File now" : "רוקן את קובץ היומן עכשיו",
+    "Cancel" : "לְבַטֵל"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 2) ? 1 : 2);");

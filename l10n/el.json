@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "Επίπεδο σφάλματος 4: Μικρά: Ο διακομιστής σταματά.",
     "_%n log entry_::_%n log entries_" : ["%n καταχώρηση καταγραφής","%n καταχωρήσεις καταγραφής"],
     "Time offset in hours, e.g. due to winter time" : "Χρονική μετατόπιση σε ώρες, π.χ. Λόγω χειμερινής ώρας",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Διαγραφή %n αντίγραφο","Διαγραφή %n διπλότυπου"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Διαγραφή %n αντίγραφο","Διαγραφή %n διπλότυπου"],
+    "This button will delete shown number of dublicates within the error log file" : "Αυτό το κουμπί θα διαγράψει τον αριθμό των αντιγράφων εντός του αρχείου καταγραφής σφαλμάτων",
+    "Empty the Log File" : "Αδειάστε το αρχείο καταγραφής",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Προσοχή!! Αυτή η λειτουργία θα πρέπει να χρησιμοποιείται μόνο εάν είστε πραγματικά σίγουροι για το τι κάνετε. Αυτό το κουμπί αδειάζει ολόκληρο το αρχείο καταγραφής, αλλά δεν διορθώνει σφάλματα.",
+    "Empty the Log File now" : "Αδειάστε το αρχείο καταγραφής τώρα",
+    "Cancel" : "Ματαίωση"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

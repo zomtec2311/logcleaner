@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "Fazi al live 4: FATAL: Ar servijer a chom.",
     "_%n log entry_::_%n log entries_" : ["%n enrolladenn marilh","%n enankad marilh","%n enrolladenn marilh","%n marilh","%n enankad marilh"],
     "Time offset in hours, e.g. due to winter time" : "Amzer offset en eurvezhioù, da s.k. abalamour d'an amzer goañv",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Dilemel %n eiladenn","Dilemel %n eiladenn","Dilemel %n eiladenn","Dilemel %n eiladenn","Dilemel %n eiladenn"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Dilemel %n eiladenn","Dilemel %n eiladenn","Dilemel %n eiladenn","Dilemel %n eiladenn","Dilemel %n eiladenn"],
+    "This button will delete shown number of dublicates within the error log file" : "Diverkañ a raio ar bouton-mañ niver a doublennoù diskouezet e-barzh ar restr roll fazi .",
+    "Empty the Log File" : "Goullo ar restr Log .",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Evezh!! Ar fonksion-mañ ne zlefe bezañ implijet nemet ma'z oc'h sur e gwirionez eus ar pezh a rit. Ar bouton-mañ a zalc'h ar restr roll a-bezh, met ne reizh ket fazi ebet.",
+    "Empty the Log File now" : "Goullo ar restr Log bremañ",
+    "Cancel" : "Nullañ"
 },
 "nplurals=5; plural=(n % 10 == 1 && n % 100 != 11 && n % 100 != 71 && n % 100 != 91) ? 0 : ((n % 10 == 2 && n % 100 != 12 && n % 100 != 72 && n % 100 != 92) ? 1 : ((((n % 10 == 3 || n % 10 == 4) || n % 10 == 9) && (n % 100 < 10 || n % 100 > 19) && (n % 100 < 70 || n % 100 > 79) && (n % 100 < 90 || n % 100 > 99)) ? 2 : ((n != 0 && n % 1000000 == 0) ? 3 : 4)));");

@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "4. errorea: Fatal: Zerbitzaria gelditzen da.",
     "_%n log entry_::_%n log entries_" : ["%n log sarrera","%n egunkariko sarrerak"],
     "Time offset in hours, e.g. due to winter time" : "Ordua desplazatu orduetan, e.g. Neguko ordua dela eta",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Ezabatu %n eta bikoiztu","Ezabatu %n Bikiko ez direnak"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Ezabatu %n eta bikoiztu","Ezabatu %n Bikiko ez direnak"],
+    "This button will delete shown number of dublicates within the error log file" : "Botoi honek akats erregistroaren fitxategiaren barruan bikoiztutako kopurua ezabatu egingo du",
+    "Empty the Log File" : "Huts egin egunkariaren fitxategia",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Arreta !! Funtzio hau egiten ari zarenaz ziur egonez gero bakarrik erabili behar da. Botoi honek erregistro fitxategi osoa hustu du, baina ez du akatsik konpontzen.",
+    "Empty the Log File now" : "Huts egin egunkariaren fitxategia orain",
+    "Cancel" : "Indargabetu"
 },
 "nplurals=2; plural=n != 1;");

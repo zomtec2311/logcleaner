@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "Fejlniveau 4: Fatal: Serveren stopper.",
     "_%n log entry_::_%n log entries_" : ["%n logindgang","%n logposter"],
     "Time offset in hours, e.g. due to winter time" : "Tidsforskydning i timer, f.eks. På grund af vintertid",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Slet %n duplikat","Slet %n -duplikater"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Slet %n duplikat","Slet %n -duplikater"],
+    "This button will delete shown number of dublicates within the error log file" : "Denne knap sletter vist antal duplikater inden for fejllogfilen",
+    "Empty the Log File" : "Tøm logfilen",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Opmærksomhed!! Denne funktion skal kun bruges, hvis du virkelig er sikker på, hvad du laver. Denne knap tømmer hele logfilen, men løser ikke fejl.",
+    "Empty the Log File now" : "Tøm logfilen nu",
+    "Cancel" : "Ophæve"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

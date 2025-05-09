@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "Səhv Səviyyə 4: Ölümcül: Server dayanır.",
     "_%n log entry_::_%n log entries_" : ["%n Giriş Giriş","%n log girişləri"],
     "Time offset in hours, e.g. due to winter time" : "Saatlarla vaxt ofset, məsələn, məsələn Qış vaxtı səbəbiylə",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n Və dublikat silin","%n Dublikatları silin"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n Və dublikat silin","%n Dublikatları silin"],
+    "This button will delete shown number of dublicates within the error log file" : "Bu düymə səhv qeyd sənədində göstərilən sayda dublikatların silinəcəkdir",
+    "Empty the Log File" : "Giriş sənədini boşaltın",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Diqqət! Bu funksiya yalnız nə etdiyinizə əminsinizsə, həqiqətən istifadə olunmalıdır. Bu düymə bütün giriş sənədini boşaldır, lakin heç bir səhv düzəltmir.",
+    "Empty the Log File now" : "İndi giriş sənədini boşaltın",
+    "Cancel" : "Ləğv etmək"
 },
 "nplurals=2; plural=n != 1;");

@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "Gwall Lefel 4: Angheuol: Mae'r gweinydd yn stopio.",
     "_%n log entry_::_%n log entries_" : ["%n cofnod log","%n cofnodion log","%n gofnod log","%n cofnod log","%n cofnod log","%n o gofnodion log"],
     "Time offset in hours, e.g. due to winter time" : "Gwrthbwyso amser mewn oriau, e.e. oherwydd amser y gaeaf",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Dileu %n dyblyg","Dileu %n dyblyg","Dileu %n ddyblyg","Dileu %n dyblyg","Dileu %n dyblyg","Dileu %n dyblyg"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Dileu %n dyblyg","Dileu %n dyblyg","Dileu %n ddyblyg","Dileu %n dyblyg","Dileu %n dyblyg","Dileu %n dyblyg"],
+    "This button will delete shown number of dublicates within the error log file" : "Bydd y botwm hwn yn dileu nifer y dyblygu a ddangosir o fewn y ffeil log gwallau",
+    "Empty the Log File" : "Gwagiwch y ffeil log",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Sylw !! Dim ond os ydych chi'n siŵr iawn o'r hyn rydych chi'n ei wneud y dylid defnyddio'r swyddogaeth hon. Mae'r botwm hwn yn gwagio'r ffeil log gyfan, ond nid yw'n trwsio unrhyw wallau.",
+    "Empty the Log File now" : "Gwagiwch y ffeil log nawr",
+    "Cancel" : "Chansliff"
 },"pluralForm" :"nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n == 3) ? 3 : ((n == 6) ? 4 : 5))));"
 }
