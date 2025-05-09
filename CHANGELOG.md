@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.15
+
+### Fixed
+- Console error caused by js-Code
+
+### Added
+- New function to empty log file completely
+- New text strings within language files
+
 ## 1.0.14
 
 ### Added
