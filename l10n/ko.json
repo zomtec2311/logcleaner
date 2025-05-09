@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "오류 레벨 4 : 치명적 : 서버가 중지됩니다.",
     "_%n log entry_::_%n log entries_" : ["%n 로그 항목"],
     "Time offset in hours, e.g. due to winter time" : "시간 오프셋 시간 (예 : 겨울 시간으로 인해",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n 복제본을 삭제합니다"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n 복제본을 삭제합니다"],
+    "This button will delete shown number of dublicates within the error log file" : "이 버튼은 오류 로그 파일 내에서 중복 된 숫자 수를 삭제합니다.",
+    "Empty the Log File" : "로그 파일을 비우십시오",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "주목!! 이 기능은 자신이하는 일을 정말로 확신하는 경우에만 사용해야합니다. 이 버튼은 전체 로그 파일을 비우지 만 오류가 수정되지는 않습니다.",
+    "Empty the Log File now" : "지금 로그 파일을 비우십시오",
+    "Cancel" : "취소"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

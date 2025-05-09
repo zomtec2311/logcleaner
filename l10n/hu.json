@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "4. hiba szint: Végzetes: A szerver leáll.",
     "_%n log entry_::_%n log entries_" : ["%n Naplóbejegyzés","%n Naplóbejegyzések"],
     "Time offset in hours, e.g. due to winter time" : "Idő eltolás órákban, pl. A téli idő miatt",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Törölje a %n és másolja","Törölje a %n másolatokat"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Törölje a %n és másolja","Törölje a %n másolatokat"],
+    "This button will delete shown number of dublicates within the error log file" : "Ez a gomb töröli a megjelenített számú duplikátum számát a hibanapló fájlban",
+    "Empty the Log File" : "Ürítse ki a naplófájlt",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Figyelem!! Ezt a funkciót csak akkor szabad használni, ha valóban biztos benne, mit csinál. Ez a gomb kiüríti a teljes naplófájlt, de nem javítja a hibákat.",
+    "Empty the Log File now" : "Ürítse ki most a naplófájlt",
+    "Cancel" : "Töröl"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

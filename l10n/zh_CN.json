@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "错误级别4：致命：服务器停止。",
     "_%n log entry_::_%n log entries_" : ["%n 日志条目"],
     "Time offset in hours, e.g. due to winter time" : "时间偏移数小时，例如由于冬季",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["删除 %n 和重复"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["删除 %n 和重复"],
+    "This button will delete shown number of dublicates within the error log file" : "此按钮将在错误日志文件中删除显示的重复数字",
+    "Empty the Log File" : "清空日志文件",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "注意力！！仅当您真的确定自己在做什么时，才应使用此功能。此按钮清空整个日志文件，但没有解决任何错误。",
+    "Empty the Log File now" : "立即清空日志文件",
+    "Cancel" : "取消"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

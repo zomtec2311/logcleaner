@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "エラーレベル4：致命的：サーバーが停止します。",
     "_%n log entry_::_%n log entries_" : ["%n ログエントリ"],
     "Time offset in hours, e.g. due to winter time" : "時間の時間オフセット、例えば冬のために",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n を削除して複製します"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n を削除して複製します"],
+    "This button will delete shown number of dublicates within the error log file" : "このボタンは、エラーログファイル内で表示されている複製の数を削除します",
+    "Empty the Log File" : "ログファイルを空にします",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "注意！！この関数は、自分が何をしているのか本当に確信している場合にのみ使用する必要があります。このボタンはログファイル全体を空にしますが、エラーは修正されません。",
+    "Empty the Log File now" : "今すぐログファイルを空にします",
+    "Cancel" : "キャンセル"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

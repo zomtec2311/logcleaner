@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "Ниво на грешка 4: Фатално: Серверот застанува.",
     "_%n log entry_::_%n log entries_" : ["%n записи во дневникот","%n записи во дневникот"],
     "Time offset in hours, e.g. due to winter time" : "Време се неутрализира во часови, на пр. Поради зимско време",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Избриши %n дупликати","Избриши %n дупликати"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Избриши %n дупликати","Избриши %n дупликати"],
+    "This button will delete shown number of dublicates within the error log file" : "Ова копче ќе го избрише прикажаниот број на дупликати во датотеката за дневник на грешки",
+    "Empty the Log File" : "Испразнете ја датотеката за дневник",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Внимание !! Оваа функција треба да се користи само ако сте навистина сигурни во она што го правите. Ова копче ја испразнува целата датотека за најавување, но не поправа никакви грешки.",
+    "Empty the Log File now" : "Испразнете ја датотеката за дневник сега",
+    "Cancel" : "Откажи"
 },
 "nplurals=2; plural=(n==1 || n%10==1 ? 0 : 1);");

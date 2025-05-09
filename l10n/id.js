@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "Level Kesalahan 4: Fatal: Server berhenti.",
     "_%n log entry_::_%n log entries_" : ["%n entri log"],
     "Time offset in hours, e.g. due to winter time" : "Waktu offset dalam jam, mis. Karena waktu musim dingin",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Hapus %n duplikat"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Hapus %n duplikat"],
+    "This button will delete shown number of dublicates within the error log file" : "Tombol ini akan menghapus jumlah duplikat yang ditampilkan dalam file log kesalahan",
+    "Empty the Log File" : "Kosongkan file log",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Perhatian!! Fungsi ini hanya boleh digunakan jika Anda benar -benar yakin dengan apa yang Anda lakukan. Tombol ini mengosongkan seluruh file log, tetapi tidak memperbaiki kesalahan apa pun.",
+    "Empty the Log File now" : "Kosongkan file log sekarang",
+    "Cancel" : "Membatalkan"
 },
 "nplurals=1; plural=0;");

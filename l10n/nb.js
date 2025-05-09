@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "Feilnivå 4: FATAL: Serveren stopper.",
     "_%n log entry_::_%n log entries_" : ["%n Loggoppføring","%n loggoppføringer"],
     "Time offset in hours, e.g. due to winter time" : "Tidsforskyvning i timer, f.eks. På grunn av vintertid",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Slett %n duplikat","Slett %n duplikater"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Slett %n duplikat","Slett %n duplikater"],
+    "This button will delete shown number of dublicates within the error log file" : "Denne knappen vil slette vist antall duplikater i feilloggfilen",
+    "Empty the Log File" : "Tøm loggfilen",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Oppmerksomhet!! Denne funksjonen skal bare brukes hvis du er helt sikker på hva du gjør. Denne knappen tømmer hele loggfilen, men løser ingen feil.",
+    "Empty the Log File now" : "Tøm loggfilen nå",
+    "Cancel" : "Kansellere"
 },
 "nplurals=2; plural=n != 1;");

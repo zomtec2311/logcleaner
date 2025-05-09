@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "შეცდომა დონე 4: ფატალური: სერვერი ჩერდება.",
     "_%n log entry_::_%n log entries_" : ["%n ჟურნალის ჩანაწერი","%n ჟურნალის ჩანაწერები"],
     "Time offset in hours, e.g. due to winter time" : "დროის კომპენსაცია საათებში, მაგ. ზამთრის დროის გამო",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["წაშლა %n დუბლიკატი","წაშალეთ %n დუბლიკატები"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["წაშლა %n დუბლიკატი","წაშალეთ %n დუბლიკატები"],
+    "This button will delete shown number of dublicates within the error log file" : "ეს ღილაკი წაშლის დუბლიკატების რაოდენობას შეცდომის ჟურნალის ფაილში",
+    "Empty the Log File" : "ცარიელი ჟურნალის ფაილი",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "ყურადღება !! ეს ფუნქცია უნდა იქნას გამოყენებული მხოლოდ იმ შემთხვევაში, თუ ნამდვილად დარწმუნებული ხართ რას აკეთებთ. ეს ღილაკი ცარიელდება მთელ ჟურნალის ფაილზე, მაგრამ არ ასწორებს შეცდომებს.",
+    "Empty the Log File now" : "ცარიელი ფაილი ახლავე",
+    "Cancel" : "გაუქმება"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "Lỗi Cấp 4: Fatal: Máy chủ dừng.",
     "_%n log entry_::_%n log entries_" : ["%n nhập nhật ký"],
     "Time offset in hours, e.g. due to winter time" : "Thời gian bù tính theo giờ, ví dụ: Do thời gian mùa đông",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Xóa %n trùng lặp"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Xóa %n trùng lặp"],
+    "This button will delete shown number of dublicates within the error log file" : "Nút này sẽ xóa số lượng sao chép trong tệp nhật ký lỗi",
+    "Empty the Log File" : "Làm trống tệp nhật ký",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Chú ý!! Chức năng này chỉ nên được sử dụng nếu bạn thực sự chắc chắn về những gì bạn đang làm. Nút này làm trống toàn bộ tệp nhật ký, nhưng không khắc phục bất kỳ lỗi nào.",
+    "Empty the Log File now" : "Làm trống tệp nhật ký ngay bây giờ",
+    "Cancel" : "Hủy bỏ"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

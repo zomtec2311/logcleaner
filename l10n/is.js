@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "Villa stig 4: Banvæn: Miðlarinn stoppar.",
     "_%n log entry_::_%n log entries_" : ["%n log færsla","%n log færslur"],
     "Time offset in hours, e.g. due to winter time" : "Tími á móti klukkustundum, t.d. Vegna vetrartíma",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Eyða %n afrit","Eyða %n afrit"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Eyða %n afrit","Eyða %n afrit"],
+    "This button will delete shown number of dublicates within the error log file" : "Þessi hnappur eyðir sýnt fjölda afritunar innan villuskrárskrárinnar",
+    "Empty the Log File" : "Tæmdu annál skrána",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Athygli !! Þessi aðgerð ætti aðeins að vera notuð ef þú ert virkilega viss um hvað þú ert að gera. Þessi hnappur tæmir alla annálaskrána en lagar engar villur.",
+    "Empty the Log File now" : "Tæmdu annál skrána núna",
+    "Cancel" : "Hætta við"
 },
 "nplurals=2; plural=n % 10 != 1 || n % 100 == 11;");

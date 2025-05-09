@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "Hata Seviyesi 4: Ölümcül: Sunucu durur.",
     "_%n log entry_::_%n log entries_" : ["%n Günlük Girişi","%n günlük girişleri"],
     "Time offset in hours, e.g. due to winter time" : "Saatlerce zaman ofseti, ör. Kış zamanı nedeniyle",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n ve kopya","%n Yinelenmeyenleri sil"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n ve kopya","%n Yinelenmeyenleri sil"],
+    "This button will delete shown number of dublicates within the error log file" : "Bu düğme, hata günlüğü dosyasında gösterilen sayıda kopyayı silecektir",
+    "Empty the Log File" : "Günlük dosyasını boşaltın",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Dikkat!! Bu işlev yalnızca ne yaptığınızdan gerçekten eminseniz kullanılmalıdır. Bu düğme tüm günlük dosyasını boşaltır, ancak herhangi bir hatayı düzeltmez.",
+    "Empty the Log File now" : "Günlük dosyasını şimdi boşaltın",
+    "Cancel" : "İptal etmek"
 },
 "nplurals=2; plural=n != 1;");

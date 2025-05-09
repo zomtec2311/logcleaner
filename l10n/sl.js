@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "Stopnja napake 4: usodna: strežnik se ustavi.",
     "_%n log entry_::_%n log entries_" : ["%n Vnos dnevnika","%n vnosi dnevnika","%n vnosov v dnevnik","%n vnosov v dnevnik"],
     "Time offset in hours, e.g. due to winter time" : "Časovni odmik v urah, npr. Zaradi zimskega časa",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Izbrišite %n podvojite","Izbrišite %n dvojnika","Izbriši %n podvojenih polj","Izbriši %n dvojnikov"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Izbrišite %n podvojite","Izbrišite %n dvojnika","Izbriši %n podvojenih polj","Izbriši %n dvojnikov"],
+    "This button will delete shown number of dublicates within the error log file" : "Ta gumb bo v datoteki dnevnika napak izbrisal prikazano število dvojnikov",
+    "Empty the Log File" : "Izprazni datoteko dnevnika",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Pozornost !! To funkcijo je treba uporabiti le, če ste resnično prepričani, kaj počnete. Ta gumb izprazni celotno datoteko dnevnika, vendar ne odpravi nobenih napak.",
+    "Empty the Log File now" : "Izpraznite datoteko dnevnika zdaj",
+    "Cancel" : "Odpovedati"
 },
 "nplurals=4; plural=(n % 100 == 1) ? 0 : ((n % 100 == 2) ? 1 : ((n % 100 == 3 || n % 100 == 4) ? 2 : 3));");

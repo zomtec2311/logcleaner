@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "Ниво грешке 4: Фатално: сервер се зауставља.",
     "_%n log entry_::_%n log entries_" : ["%n унос уписа","%n уноса на дневник","%n уноса у дневник"],
     "Time offset in hours, e.g. due to winter time" : "Временски одмак у сатима, нпр. Зимско време",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Избришите %n дупликате","Избришите %n Дуплицати","Обриши %n дупликата"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Избришите %n дупликате","Избришите %n Дуплицати","Обриши %n дупликата"],
+    "This button will delete shown number of dublicates within the error log file" : "Ово дугме ће избрисати приказан број дупликата у датотеци дневника грешака",
+    "Empty the Log File" : "Испразните датотеку дневника",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Пажња !! Ова функција треба да се користи само ако сте заиста сигурни у оно што радите. Ово дугме испразни целокупну датотеку дневника, али не поправља ниједно грешке.",
+    "Empty the Log File now" : "Испразните датотеку дневника сада",
+    "Cancel" : "Отказати"
 },"pluralForm" :"nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);"
 }

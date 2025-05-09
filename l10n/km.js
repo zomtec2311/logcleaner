@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "កម្រិតកំហុសទី 4: គ្រោះថ្នាក់: ម៉ាស៊ីនមេឈប់។",
     "_%n log entry_::_%n log entries_" : ["%n ចូលធាតុ"],
     "Time offset in hours, e.g. due to winter time" : "អុហ្វសិតពេលវេលាគិតជាម៉ោងឧ។ ដោយសារតែពេលវេលារដូវរងារ",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["លុប %n និងស្ទួន"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["លុប %n និងស្ទួន"],
+    "This button will delete shown number of dublicates within the error log file" : "ប៊ូតុងនេះនឹងលុបចំនួនស្ទួនដែលបានបង្ហាញនៅក្នុងឯកសារកំណត់ហេតុកំហុស",
+    "Empty the Log File" : "ទទេឯកសារ",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "យកចិត្តទុកដាក់ !! មុខងារនេះគួរតែត្រូវបានប្រើប្រសិនបើអ្នកប្រាកដថាអ្នកកំពុងធ្វើ។ ប៊ូតុងនេះធ្វើឱ្យខូចឯកសារកំណត់ហេតុទាំងមូលប៉ុន្តែមិនជួសជុលកំហុសណាមួយឡើយ។",
+    "Empty the Log File now" : "ឯកសារកំណត់ហេតុឥឡូវនេះ",
+    "Cancel" : "លប់ចោល"
 },
 "nplurals=1; plural=0;");

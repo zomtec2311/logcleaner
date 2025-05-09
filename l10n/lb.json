@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "Feeler beim Niveau 4: Fatal: de Server stoppt.",
     "_%n log entry_::_%n log entries_" : ["%n Logrësch","%n Log Entréen"],
     "Time offset in hours, e.g. due to winter time" : "Zäit an Stonnen, z .. Wéinst der Wanterzäit",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Läschen %n Duplikat","Läschen %n Duplikates"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Läschen %n Duplikat","Läschen %n Duplikates"],
+    "This button will delete shown number of dublicates within the error log file" : "Dëse Knäppche läscht notéiert Zuel vun Duplikates an der Errorstécker Datei",
+    "Empty the Log File" : "Eidel d'Log Datei",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "OPGEPASST !! Dës Funktioun sollt nëmme benotzt ginn wann Dir wierklech sécher sidd wat Dir maacht. Dëse Knäppche gëtt d'ganz Log Datei eidel, awer feelt keng Feeler.",
+    "Empty the Log File now" : "Eidel der Log Datei elo",
+    "Cancel" : "Ofbriechen"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "Nível de erro 4: Fatal: o servidor para.",
     "_%n log entry_::_%n log entries_" : ["%n entrada de log","%n entradas de log","%n entradas de log"],
     "Time offset in hours, e.g. due to winter time" : "Compensação de tempo em horas, p. Devido ao inverno",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Exclua %n duplicado","Excluir %n duplicados","Excluir %n duplicatas"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Exclua %n duplicado","Excluir %n duplicados","Excluir %n duplicatas"],
+    "This button will delete shown number of dublicates within the error log file" : "Este botão excluirá o número mostrado de duplicatas dentro do arquivo de log de erros",
+    "Empty the Log File" : "Esvazie o arquivo de log",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Atenção!! Essa função só deve ser usada se você tiver certeza do que está fazendo. Este botão esvazia o arquivo de log inteiro, mas não corrige nenhum erro.",
+    "Empty the Log File now" : "Esvazie o arquivo de log agora",
+    "Cancel" : "Cancelar"
 },"pluralForm" :"nplurals=3; plural=(n == 0 || n == 1) ? 0 : ((n != 0 && n % 1000000 == 0) ? 1 : 2);"
 }

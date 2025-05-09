@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "Felnivå 4: Fatal: Servern stannar.",
     "_%n log entry_::_%n log entries_" : ["%n loggning","%n loggposter"],
     "Time offset in hours, e.g. due to winter time" : "Tidsförskjutning i timmar, t.ex. På grund av vintertid",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Ta bort %n duplicera","Ta bort %n dubbletter"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Ta bort %n duplicera","Ta bort %n dubbletter"],
+    "This button will delete shown number of dublicates within the error log file" : "Den här knappen kommer att ta bort visat antal duplikat i felloggfilen",
+    "Empty the Log File" : "Töm loggfilen",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Uppmärksamhet!! Denna funktion bör endast användas om du verkligen är säker på vad du gör. Den här knappen tömmer hela loggfilen, men fixar inga fel.",
+    "Empty the Log File now" : "Töm loggfilen nu",
+    "Cancel" : "Avboka"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

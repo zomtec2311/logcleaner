@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "Алдаа 4-р түвшин: Фатал: Сервер зогсдог.",
     "_%n log entry_::_%n log entries_" : ["%n бүртгэл нэвтрэх","%n бүртгэлийн оруулгууд"],
     "Time offset in hours, e.g. due to winter time" : "Цагийн цагаар офсет, e.g. Өвлийн цаг хугацаатай холбоотой",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n хуулбарыг устгана уу","%n хуулбарыг устгана уу"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n хуулбарыг устгана уу","%n хуулбарыг устгана уу"],
+    "This button will delete shown number of dublicates within the error log file" : "Энэ товчлуур нь алдааны бүртгэлийн файл доторх давхардсан тоог устгах болно",
+    "Empty the Log File" : "Бүртгэлийн файлыг хоослох",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Анхаар !! Энэ функцийг зөвхөн хийж байгаа зүйлдээ үнэхээр итгэлтэй байгаа бол ашиглах ёстой. Энэ товчлуур нь бүртгэлийн файлыг бүхэлд нь хоослодог боловч аливаа алдааг засдаггүй.",
+    "Empty the Log File now" : "Одоо бүртгэлийн файлыг хоослох",
+    "Cancel" : "Цуаах"
 },
 "nplurals=2; plural=n != 1;");

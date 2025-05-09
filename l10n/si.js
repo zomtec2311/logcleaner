@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "දෝෂ 3 මට්ටම: මාරාන්තික: සේවාදායකය නතර වේ.",
     "_%n log entry_::_%n log entries_" : ["%n ලොග් ඇතුළත් කිරීම","%n ලොග් සටහන්"],
     "Time offset in hours, e.g. due to winter time" : "පැය ගණනාවක කාලය, ඊ.ජී. ශීත කාලය නිසා",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n සහ අනුපිටපත් මකන්න","%n අනුපිටපත් මකන්න"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n සහ අනුපිටපත් මකන්න","%n අනුපිටපත් මකන්න"],
+    "This button will delete shown number of dublicates within the error log file" : "මෙම බොත්තම දෝෂ ලොග් ගොනුව තුළ ඇති අනුපිටපත් ගණන පෙන්වනු ඇත",
+    "Empty the Log File" : "ලොග් ගොනුව හිස් කරන්න",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "අවධානය යොමු කරන්න !! මෙම ශ්රිතය භාවිතා කළ යුත්තේ ඔබ කරන්නේ කුමක්ද යන්න ගැන ඔබට සැබවින්ම විශ්වාස නම් පමණි. මෙම බොත්තම සම්පූර්ණ ලොග් ගොනුව හිස් කළ හැකි නමුත් කිසිදු දෝෂයක් නිවැරදි නොකරයි.",
+    "Empty the Log File now" : "දැන් ලොග් ගොනුව හිස් කරන්න",
+    "Cancel" : "අවලංගු කරන්න"
 },
 "nplurals=2; plural=n > 1;");

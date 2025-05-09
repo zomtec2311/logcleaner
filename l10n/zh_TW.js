@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "錯誤級別4：致命：服務器停止。",
     "_%n log entry_::_%n log entries_" : ["%n 日誌條目"],
     "Time offset in hours, e.g. due to winter time" : "時間偏移數小時，例如由於冬季",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["刪除 %n 和重複"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["刪除 %n 和重複"],
+    "This button will delete shown number of dublicates within the error log file" : "此按鈕將在錯誤日誌文件中刪除顯示的重複數字",
+    "Empty the Log File" : "清空日誌文件",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "注意力！ ！僅當您真的確定自己在做什麼時，才應使用此功能。此按鈕清空整個日誌文件，但沒有解決任何錯誤。",
+    "Empty the Log File now" : "立即清空日誌文件",
+    "Cancel" : "取消"
 },
 "nplurals=1; plural=0;");

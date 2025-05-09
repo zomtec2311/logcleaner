@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "Nivelul de eroare 4: Fatal: serverul se oprește.",
     "_%n log entry_::_%n log entries_" : ["%n intrare de jurnal","%n intrări de jurnal","%n de intrări în jurnal"],
     "Time offset in hours, e.g. due to winter time" : "Oare compensată în ore, de ex. Din cauza timpului de iarnă",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Ștergeți %n duplicat","Ștergeți %n duplicate","Ștergeți %n de duplicate"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Ștergeți %n duplicat","Ștergeți %n duplicate","Ștergeți %n de duplicate"],
+    "This button will delete shown number of dublicates within the error log file" : "Acest buton va șterge numărul afișat de duplicate în fișierul jurnal de eroare",
+    "Empty the Log File" : "Goliți fișierul jurnal",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Atenţie!! Această funcție ar trebui să fie folosită numai dacă sunteți cu adevărat sigur de ceea ce faceți. Acest buton goli întregul fișier jurnal, dar nu remediază nicio eroare.",
+    "Empty the Log File now" : "Goliți fișierul jurnal acum",
+    "Cancel" : "Anula"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 0 || n != 1 && n % 100 >= 1 && n % 100 <= 19) ? 1 : 2);");

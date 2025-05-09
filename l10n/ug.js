@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "4-باسقۇچ: ئەجەللىك: مۇلازىمېتىر توختايدۇ.",
     "_%n log entry_::_%n log entries_" : ["%n خاتىرىلەش","%n خاتىرە بۇيۇم"],
     "Time offset in hours, e.g. due to winter time" : "ۋاقىت دەم ئېلىش ۋاقتى, مەسىلەن, مەسىلەن. قىش ۋاقتى سەۋەبىدىن",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n ۋە كۆپەيتىلگەن","%n كۆپەيتىلمىگەن"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n ۋە كۆپەيتىلگەن","%n كۆپەيتىلمىگەن"],
+    "This button will delete shown number of dublicates within the error log file" : "بۇ كۇنۇپكا خاتالىق ھۆججىتىدە كۆپەيتىلگەن نۇسخىسىنى كۆرسىتىدۇ",
+    "Empty the Log File" : "خاتىرە ھۆججىتىنى بوش قويۇڭ",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "دىققەت! ئەگەر سىز پەقەت نېمە قىلىۋاتقانلىقىڭىزنى ھەقىقىي جەزملەشتۈرسىڭىز, بۇ ئىقتىدارنى پەقەت ئىشلىتىشكە بولىدۇ. بۇ كۇنۇپكا باشقا خاتىرە ھۆججىتى, ئەمما ھېچقانداق خاتالىقنى ئوڭشالمايدۇ.",
+    "Empty the Log File now" : "خاتىرە ھۆججىتىنى ھازىر قۇرۇق",
+    "Cancel" : "بىكار قىلىش"
 },
 "nplurals=2; plural=n != 1;");

@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "ದೋಷ ಮಟ್ಟ 4: ಮಾರಕ: ಸರ್ವರ್ ನಿಲ್ಲುತ್ತದೆ.",
     "_%n log entry_::_%n log entries_" : ["%n ಲಾಗ್ ಎಂಟ್ರಿ","%n ಲಾಗ್ ನಮೂದುಗಳು"],
     "Time offset in hours, e.g. due to winter time" : "ಗಂಟೆಗಳಲ್ಲಿ ಸಮಯ ಆಫ್‌ಸೆಟ್, ಉದಾ. ಚಳಿಗಾಲದ ಸಮಯದಿಂದಾಗಿ",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n ಮತ್ತು ನಕಲನ್ನು ಅಳಿಸಿ","%n ನಕಲುಗಳನ್ನು ಅಳಿಸಿ"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n ಮತ್ತು ನಕಲನ್ನು ಅಳಿಸಿ","%n ನಕಲುಗಳನ್ನು ಅಳಿಸಿ"],
+    "This button will delete shown number of dublicates within the error log file" : "ಈ ಬಟನ್ ದೋಷ ಲಾಗ್ ಫೈಲ್‌ನೊಳಗಿನ ನಕಲುಗಳ ಸಂಖ್ಯೆಯನ್ನು ಅಳಿಸುತ್ತದೆ",
+    "Empty the Log File" : "ಲಾಗ್ ಫೈಲ್ ಅನ್ನು ಖಾಲಿ ಮಾಡಿ",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "ಗಮನ !! ನೀವು ಏನು ಮಾಡುತ್ತಿದ್ದೀರಿ ಎಂಬುದರ ಬಗ್ಗೆ ನಿಮಗೆ ನಿಜವಾಗಿಯೂ ಖಚಿತವಾಗಿದ್ದರೆ ಮಾತ್ರ ಈ ಕಾರ್ಯವನ್ನು ಬಳಸಬೇಕು. ಈ ಬಟನ್ ಸಂಪೂರ್ಣ ಲಾಗ್ ಫೈಲ್ ಅನ್ನು ಖಾಲಿ ಮಾಡುತ್ತದೆ, ಆದರೆ ಯಾವುದೇ ದೋಷಗಳನ್ನು ಸರಿಪಡಿಸುವುದಿಲ್ಲ.",
+    "Empty the Log File now" : "ಲಾಗ್ ಫೈಲ್ ಅನ್ನು ಈಗ ಖಾಲಿ ಮಾಡಿ",
+    "Cancel" : "ರದ್ದುಮಾಡು"
 },"pluralForm" :"nplurals=2; plural=n > 1;"
 }

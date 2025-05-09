@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "Błąd Poziom 4: Fatal: Serwer zatrzymuje się.",
     "_%n log entry_::_%n log entries_" : ["%n Wpis dziennika","%n Wpisy dziennika","%n wpisów w dzienniku"],
     "Time offset in hours, e.g. due to winter time" : "Przesunięcie czasu w godzinach, np. Z powodu czasu zimowego",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Usuń %n duplikat","Usuń %n duplikatów","Usuń %n duplikatów"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Usuń %n duplikat","Usuń %n duplikatów","Usuń %n duplikatów"],
+    "This button will delete shown number of dublicates within the error log file" : "Ten przycisk usunie pokazane liczbę duplikatów w pliku dziennika błędów",
+    "Empty the Log File" : "Opróżnij plik dziennika",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Uwaga!! Ta funkcja powinna być używana tylko wtedy, gdy jesteś naprawdę pewien, co robisz. Ten przycisk opróżnia cały plik dziennika, ale nie naprawia żadnych błędów.",
+    "Empty the Log File now" : "Opróżnij teraz plik dziennika",
+    "Cancel" : "Anulować"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);");

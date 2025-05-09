@@ -33,6 +33,11 @@ OC.L10N.register(
     "Error Level 4: FATAL: The server stops." : "Սխալ մակարդակ 4. Fatal. Սերվերը դադարում է:",
     "_%n log entry_::_%n log entries_" : ["%n log Մուտք","%n Մուտք գրություններ"],
     "Time offset in hours, e.g. due to winter time" : "Ժամանակի ընթացքում ժամանակի օֆսեթը, օրինակ. Ձմեռային ժամանակի պատճառով",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Delete նջել %n եւ կրկնօրինակել","Delete նջել %n ոչ կրկնօրինակները"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Delete նջել %n եւ կրկնօրինակել","Delete նջել %n ոչ կրկնօրինակները"],
+    "This button will delete shown number of dublicates within the error log file" : "Այս կոճակը կջնջի կրկնօրինակների քանակը սխալի մուտքի ֆայլում",
+    "Empty the Log File" : "Դատարկեք տեղեկամատյանային ֆայլը",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Ուշադրություն !! Այս գործառույթը պետք է օգտագործվի միայն այն դեպքում, եթե իսկապես վստահ եք, թե ինչ եք անում: Այս կոճակը դատարկում է ամբողջ մուտքի ֆայլը, բայց սխալներ չի շտկում:",
+    "Empty the Log File now" : "Այժմ դատարկեք տեղեկամատյանային ֆայլը",
+    "Cancel" : "Չեղարկել"
 },
 "nplurals=2; plural=n > 1;");

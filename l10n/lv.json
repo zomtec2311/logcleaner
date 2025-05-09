@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "Kļūdas 4. līmenis: Fatāls: serveris apstājas.",
     "_%n log entry_::_%n log entries_" : ["%n žurnāla ieraksts","%n žurnālu ieraksti","%n žurnāla ierakstu"],
     "Time offset in hours, e.g. due to winter time" : "Laika kompensācija stundās, piem. Ziemas laika dēļ",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Dzēst %n dublikāt","Dzēst %n dublikātus","Dzēst %n dublikātus"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Dzēst %n dublikāt","Dzēst %n dublikātus","Dzēst %n dublikātus"],
+    "This button will delete shown number of dublicates within the error log file" : "Šī poga izdzēsīs parādīto dublikātu skaitu kļūdu žurnāla failā",
+    "Empty the Log File" : "Iztukšojiet žurnālfailu",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Uzmanība !! Šī funkcija jāizmanto tikai tad, ja esat patiešām pārliecināts par to, ko darāt. Šī poga iztukšo visu žurnāla failu, bet neizlabo kļūdas.",
+    "Empty the Log File now" : "Iztukšojiet žurnāla failu tūlīt",
+    "Cancel" : "Atcelt"
 },"pluralForm" :"nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);"
 }

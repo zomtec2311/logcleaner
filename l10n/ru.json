@@ -31,6 +31,11 @@
     "Error Level 4: FATAL: The server stops." : "Уровень ошибок 4: фатальный: сервер останавливается.",
     "_%n log entry_::_%n log entries_" : ["%n запись в журнале","%n записи в журнале","%n записей в журнале"],
     "Time offset in hours, e.g. due to winter time" : "Время смещения в часы, например Из -за зимнего времени",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Удалить %n дубликаты","Удалить %n дубликаты","Удалить %n дубликатов"]
+    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Удалить %n дубликаты","Удалить %n дубликаты","Удалить %n дубликатов"],
+    "This button will delete shown number of dublicates within the error log file" : "Эта кнопка удалит показанное количество дубликатов в файле журнала ошибок",
+    "Empty the Log File" : "Опустошить файл журнала",
+    "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Внимание!! Эта функция должна использоваться только в том случае, если вы действительно уверены в том, что делаете. Эта кнопка пускает весь файл журнала, но не исправляет никаких ошибок.",
+    "Empty the Log File now" : "Опустошить файл журнала сейчас",
+    "Cancel" : "Отмена"
 },"pluralForm" :"nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);"
 }
