@@ -24,3 +24,16 @@ Furthermore LogCleaner can detect duplicates in the log file and delete them wit
 - It is recommended to download or install this app directly from the [Nextcloud App store](https://apps.nextcloud.com/apps/logcleaner).
 - Alternatively you can download the [latest logcleaner release](https://github.com/zomtec2311/logcleaner/releases) based on this repository.
 
+## F.A.Q.
+
+<details>
+  <summary><b>All of the text is in English?</b></summary>
+	Maybe your language files are missing.
+
+  You might want to help translating the app to new languages or report errors in existing translations. So feel free and send me translations.
+</details>
+
+<details>
+  <summary><b>Very bad translation?</b></summary>
+  We used the AI-based Google translator to generate language files. Of course, there were limitations to the translation depending on the quality of the AI. If you'd like to help improve your language file, open an issue and report your suggestion for improvement. Thank you
+</details>
