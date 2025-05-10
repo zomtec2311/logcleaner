@@ -36,6 +36,8 @@
     "Empty the Log File" : "清空日志文件",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "注意力！！仅当您真的确定自己在做什么时，才应使用此功能。此按钮清空整个日志文件，但没有解决任何错误。",
     "Empty the Log File now" : "立即清空日志文件",
-    "Cancel" : "取消"
+    "Cancel" : "取消",
+    "This button will empty the complete log file" : "此按钮将清空完整的日志文件",
+    "Okay, I understand and I am sure" : "好吧，我明白，我确定"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

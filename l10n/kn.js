@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "ಲಾಗ್ ಫೈಲ್ ಅನ್ನು ಖಾಲಿ ಮಾಡಿ",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "ಗಮನ !! ನೀವು ಏನು ಮಾಡುತ್ತಿದ್ದೀರಿ ಎಂಬುದರ ಬಗ್ಗೆ ನಿಮಗೆ ನಿಜವಾಗಿಯೂ ಖಚಿತವಾಗಿದ್ದರೆ ಮಾತ್ರ ಈ ಕಾರ್ಯವನ್ನು ಬಳಸಬೇಕು. ಈ ಬಟನ್ ಸಂಪೂರ್ಣ ಲಾಗ್ ಫೈಲ್ ಅನ್ನು ಖಾಲಿ ಮಾಡುತ್ತದೆ, ಆದರೆ ಯಾವುದೇ ದೋಷಗಳನ್ನು ಸರಿಪಡಿಸುವುದಿಲ್ಲ.",
     "Empty the Log File now" : "ಲಾಗ್ ಫೈಲ್ ಅನ್ನು ಈಗ ಖಾಲಿ ಮಾಡಿ",
-    "Cancel" : "ರದ್ದುಮಾಡು"
+    "Cancel" : "ರದ್ದುಮಾಡು",
+    "This button will empty the complete log file" : "ಈ ಬಟನ್ ಸಂಪೂರ್ಣ ಲಾಗ್ ಫೈಲ್ ಅನ್ನು ಖಾಲಿ ಮಾಡುತ್ತದೆ",
+    "Okay, I understand and I am sure" : "ಸರಿ, ನಾನು ಅರ್ಥಮಾಡಿಕೊಂಡಿದ್ದೇನೆ ಮತ್ತು ನನಗೆ ಖಚಿತವಾಗಿದೆ"
 },
 "nplurals=2; plural=n > 1;");

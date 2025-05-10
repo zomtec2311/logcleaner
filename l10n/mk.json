@@ -36,6 +36,8 @@
     "Empty the Log File" : "Испразнете ја датотеката за дневник",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Внимание !! Оваа функција треба да се користи само ако сте навистина сигурни во она што го правите. Ова копче ја испразнува целата датотека за најавување, но не поправа никакви грешки.",
     "Empty the Log File now" : "Испразнете ја датотеката за дневник сега",
-    "Cancel" : "Откажи"
+    "Cancel" : "Откажи",
+    "This button will empty the complete log file" : "Ова копче ќе ја испразни целосната датотека за најавување",
+    "Okay, I understand and I am sure" : "Добро, разбирам и сигурен сум"
 },"pluralForm" :"nplurals=2; plural=(n==1 || n%10==1 ? 0 : 1);"
 }

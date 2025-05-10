@@ -36,6 +36,8 @@
     "Empty the Log File" : "Opróżnij plik dziennika",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Uwaga!! Ta funkcja powinna być używana tylko wtedy, gdy jesteś naprawdę pewien, co robisz. Ten przycisk opróżnia cały plik dziennika, ale nie naprawia żadnych błędów.",
     "Empty the Log File now" : "Opróżnij teraz plik dziennika",
-    "Cancel" : "Anulować"
+    "Cancel" : "Anulować",
+    "This button will empty the complete log file" : "Ten przycisk opróżni pełny plik dziennika",
+    "Okay, I understand and I am sure" : "Okej, rozumiem i jestem pewien"
 },"pluralForm" :"nplurals=3; plural=(n == 1) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);"
 }

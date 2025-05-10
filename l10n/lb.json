@@ -36,6 +36,8 @@
     "Empty the Log File" : "Eidel d'Log Datei",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "OPGEPASST !! Dës Funktioun sollt nëmme benotzt ginn wann Dir wierklech sécher sidd wat Dir maacht. Dëse Knäppche gëtt d'ganz Log Datei eidel, awer feelt keng Feeler.",
     "Empty the Log File now" : "Eidel der Log Datei elo",
-    "Cancel" : "Ofbriechen"
+    "Cancel" : "Ofbriechen",
+    "This button will empty the complete log file" : "Dëse Knäppchen wäert d'komplett Log Datei eidel maachen",
+    "Okay, I understand and I am sure" : "Okay, ech verstinn an ech si sécher"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

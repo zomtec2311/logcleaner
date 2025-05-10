@@ -36,6 +36,8 @@
     "Empty the Log File" : "Tæmdu annál skrána",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Athygli !! Þessi aðgerð ætti aðeins að vera notuð ef þú ert virkilega viss um hvað þú ert að gera. Þessi hnappur tæmir alla annálaskrána en lagar engar villur.",
     "Empty the Log File now" : "Tæmdu annál skrána núna",
-    "Cancel" : "Hætta við"
+    "Cancel" : "Hætta við",
+    "This button will empty the complete log file" : "Þessi hnappur tæmir alla annálaskrána",
+    "Okay, I understand and I am sure" : "Allt í lagi, ég skil og ég er viss"
 },"pluralForm" :"nplurals=2; plural=n % 10 != 1 || n % 100 == 11;"
 }

@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "ล้างไฟล์บันทึก",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "ความสนใจ!! ฟังก์ชั่นนี้ควรใช้เฉพาะในกรณีที่คุณแน่ใจในสิ่งที่คุณกำลังทำ ปุ่มนี้ทำให้ไฟล์บันทึกทั้งหมดทั้งหมด แต่ไม่สามารถแก้ไขข้อผิดพลาดใด ๆ ได้",
     "Empty the Log File now" : "ล้างไฟล์บันทึกทันที",
-    "Cancel" : "ยกเลิก"
+    "Cancel" : "ยกเลิก",
+    "This button will empty the complete log file" : "ปุ่มนี้จะล้างไฟล์บันทึกที่สมบูรณ์",
+    "Okay, I understand and I am sure" : "โอเคฉันเข้าใจและฉันแน่ใจ"
 },
 "nplurals=1; plural=0;");

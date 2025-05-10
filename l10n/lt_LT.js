@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "Ištuštinkite žurnalo failą",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Dėmesio !! Ši funkcija turėtų būti naudojama tik tuo atveju, jei esate tikrai tikri dėl to, ką darote. Šis mygtukas ištuština visą žurnalo failą, tačiau neištaiso jokių klaidų.",
     "Empty the Log File now" : "Ištuštinkite žurnalo failą dabar",
-    "Cancel" : "Atšaukti"
+    "Cancel" : "Atšaukti",
+    "This button will empty the complete log file" : "Šis mygtukas ištuštins visą žurnalo failą",
+    "Okay, I understand and I am sure" : "Gerai, aš suprantu ir esu tikras"
 },
 "nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);");

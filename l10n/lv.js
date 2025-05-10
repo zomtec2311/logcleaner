@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "Iztukšojiet žurnālfailu",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Uzmanība !! Šī funkcija jāizmanto tikai tad, ja esat patiešām pārliecināts par to, ko darāt. Šī poga iztukšo visu žurnāla failu, bet neizlabo kļūdas.",
     "Empty the Log File now" : "Iztukšojiet žurnāla failu tūlīt",
-    "Cancel" : "Atcelt"
+    "Cancel" : "Atcelt",
+    "This button will empty the complete log file" : "Šī poga iztukšos visu žurnālfailu",
+    "Okay, I understand and I am sure" : "Labi, es saprotu un esmu pārliecināts"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");

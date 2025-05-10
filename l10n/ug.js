@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "خاتىرە ھۆججىتىنى بوش قويۇڭ",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "دىققەت! ئەگەر سىز پەقەت نېمە قىلىۋاتقانلىقىڭىزنى ھەقىقىي جەزملەشتۈرسىڭىز, بۇ ئىقتىدارنى پەقەت ئىشلىتىشكە بولىدۇ. بۇ كۇنۇپكا باشقا خاتىرە ھۆججىتى, ئەمما ھېچقانداق خاتالىقنى ئوڭشالمايدۇ.",
     "Empty the Log File now" : "خاتىرە ھۆججىتىنى ھازىر قۇرۇق",
-    "Cancel" : "بىكار قىلىش"
+    "Cancel" : "بىكار قىلىش",
+    "This button will empty the complete log file" : "بۇ كۇنۇپكا تولۇق خاتىرە ھۆججىتىنى بوشاتتى",
+    "Okay, I understand and I am sure" : "ماقۇل, مەن چۈشىنىمەن"
 },
 "nplurals=2; plural=n != 1;");

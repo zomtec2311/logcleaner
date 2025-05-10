@@ -36,6 +36,8 @@
     "Empty the Log File" : "Làm trống tệp nhật ký",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Chú ý!! Chức năng này chỉ nên được sử dụng nếu bạn thực sự chắc chắn về những gì bạn đang làm. Nút này làm trống toàn bộ tệp nhật ký, nhưng không khắc phục bất kỳ lỗi nào.",
     "Empty the Log File now" : "Làm trống tệp nhật ký ngay bây giờ",
-    "Cancel" : "Hủy bỏ"
+    "Cancel" : "Hủy bỏ",
+    "This button will empty the complete log file" : "Nút này sẽ làm trống tệp nhật ký hoàn chỉnh",
+    "Okay, I understand and I am sure" : "Được rồi, tôi hiểu và tôi chắc chắn"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

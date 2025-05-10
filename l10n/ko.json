@@ -36,6 +36,8 @@
     "Empty the Log File" : "로그 파일을 비우십시오",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "주목!! 이 기능은 자신이하는 일을 정말로 확신하는 경우에만 사용해야합니다. 이 버튼은 전체 로그 파일을 비우지 만 오류가 수정되지는 않습니다.",
     "Empty the Log File now" : "지금 로그 파일을 비우십시오",
-    "Cancel" : "취소"
+    "Cancel" : "취소",
+    "This button will empty the complete log file" : "이 버튼은 전체 로그 파일을 비워집니다",
+    "Okay, I understand and I am sure" : "좋아, 이해하고 확신합니다"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

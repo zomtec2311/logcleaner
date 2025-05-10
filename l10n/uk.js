@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "Порожні файл журналу",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Увага !! Цю функцію слід використовувати лише в тому випадку, якщо ви дійсно впевнені в тому, що робите. Ця кнопка спорожняє весь файл журналу, але не виправляє жодних помилок.",
     "Empty the Log File now" : "Порожні файл журналу зараз",
-    "Cancel" : "Скасувати"
+    "Cancel" : "Скасувати",
+    "This button will empty the complete log file" : "Ця кнопка спорожнить повний файл журналу",
+    "Okay, I understand and I am sure" : "Гаразд, я розумію і впевнений"
 },
 "nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);");

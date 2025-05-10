@@ -36,6 +36,8 @@
     "Empty the Log File" : "Испразните датотеку дневника",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Пажња !! Ова функција треба да се користи само ако сте заиста сигурни у оно што радите. Ово дугме испразни целокупну датотеку дневника, али не поправља ниједно грешке.",
     "Empty the Log File now" : "Испразните датотеку дневника сада",
-    "Cancel" : "Отказати"
+    "Cancel" : "Отказати",
+    "This button will empty the complete log file" : "Ово дугме ће испразнити комплетну датотеку дневника",
+    "Okay, I understand and I am sure" : "Ок, разумем и сигуран сам"
 },"pluralForm" :"nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);"
 }

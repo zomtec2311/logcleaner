@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "ログファイルを空にします",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "注意！！この関数は、自分が何をしているのか本当に確信している場合にのみ使用する必要があります。このボタンはログファイル全体を空にしますが、エラーは修正されません。",
     "Empty the Log File now" : "今すぐログファイルを空にします",
-    "Cancel" : "キャンセル"
+    "Cancel" : "キャンセル",
+    "This button will empty the complete log file" : "このボタンは完全なログファイルを空にします",
+    "Okay, I understand and I am sure" : "さて、私は理解しています、そして私は確信しています"
 },
 "nplurals=1; plural=0;");

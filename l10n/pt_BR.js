@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "Esvazie o arquivo de log",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Atenção!! Essa função só deve ser usada se você tiver certeza do que está fazendo. Este botão esvazia o arquivo de log inteiro, mas não corrige nenhum erro.",
     "Empty the Log File now" : "Esvazie o arquivo de log agora",
-    "Cancel" : "Cancelar"
+    "Cancel" : "Cancelar",
+    "This button will empty the complete log file" : "Este botão vai esvaziar o arquivo de log completo",
+    "Okay, I understand and I am sure" : "Ok, eu entendo e tenho certeza"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : ((n != 0 && n % 1000000 == 0) ? 1 : 2);");

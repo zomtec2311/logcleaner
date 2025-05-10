@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "Zbraconi skedarin e regjistrit",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Vëmendje !! Ky funksion duhet të përdoret vetëm nëse jeni vërtet të sigurt për atë që po bëni. Ky buton zbraz të gjithë skedarin log, por nuk rregullon gabime.",
     "Empty the Log File now" : "Bosh skedarin log tani",
-    "Cancel" : "Anuloj"
+    "Cancel" : "Anuloj",
+    "This button will empty the complete log file" : "Ky buton do të zbrazet skedarin e plotë të regjistrit",
+    "Okay, I understand and I am sure" : "Mirë, e kuptoj dhe jam i sigurt"
 },
 "nplurals=2; plural=n != 1;");

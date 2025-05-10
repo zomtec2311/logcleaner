@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "רוקן את קובץ היומן",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "תְשׁוּמַת לֵב!! יש להשתמש בפונקציה זו רק אם אתה באמת בטוח במה שאתה עושה. כפתור זה מרוקן את כל קובץ היומן, אך אינו מתקן שגיאות.",
     "Empty the Log File now" : "רוקן את קובץ היומן עכשיו",
-    "Cancel" : "לְבַטֵל"
+    "Cancel" : "לְבַטֵל",
+    "This button will empty the complete log file" : "כפתור זה ירוקן את קובץ היומן המלא",
+    "Okay, I understand and I am sure" : "אוקיי, אני מבין ואני בטוח"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 2) ? 1 : 2);");

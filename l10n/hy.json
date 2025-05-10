@@ -36,6 +36,8 @@
     "Empty the Log File" : "Դատարկեք տեղեկամատյանային ֆայլը",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Ուշադրություն !! Այս գործառույթը պետք է օգտագործվի միայն այն դեպքում, եթե իսկապես վստահ եք, թե ինչ եք անում: Այս կոճակը դատարկում է ամբողջ մուտքի ֆայլը, բայց սխալներ չի շտկում:",
     "Empty the Log File now" : "Այժմ դատարկեք տեղեկամատյանային ֆայլը",
-    "Cancel" : "Չեղարկել"
+    "Cancel" : "Չեղարկել",
+    "This button will empty the complete log file" : "Այս կոճակը կտարբերի ամբողջական տեղեկամատյանային ֆայլը",
+    "Okay, I understand and I am sure" : "Լավ, ես հասկանում եմ եւ վստահ եմ"
 },"pluralForm" :"nplurals=2; plural=n > 1;"
 }

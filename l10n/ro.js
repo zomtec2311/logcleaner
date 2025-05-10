@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "Goliți fișierul jurnal",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Atenţie!! Această funcție ar trebui să fie folosită numai dacă sunteți cu adevărat sigur de ceea ce faceți. Acest buton goli întregul fișier jurnal, dar nu remediază nicio eroare.",
     "Empty the Log File now" : "Goliți fișierul jurnal acum",
-    "Cancel" : "Anula"
+    "Cancel" : "Anula",
+    "This button will empty the complete log file" : "Acest buton va goli fișierul jurnal complet",
+    "Okay, I understand and I am sure" : "Bine, înțeleg și sunt sigur"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 0 || n != 1 && n % 100 >= 1 && n % 100 <= 19) ? 1 : 2);");

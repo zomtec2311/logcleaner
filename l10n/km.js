@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "ទទេឯកសារ",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "យកចិត្តទុកដាក់ !! មុខងារនេះគួរតែត្រូវបានប្រើប្រសិនបើអ្នកប្រាកដថាអ្នកកំពុងធ្វើ។ ប៊ូតុងនេះធ្វើឱ្យខូចឯកសារកំណត់ហេតុទាំងមូលប៉ុន្តែមិនជួសជុលកំហុសណាមួយឡើយ។",
     "Empty the Log File now" : "ឯកសារកំណត់ហេតុឥឡូវនេះ",
-    "Cancel" : "លប់ចោល"
+    "Cancel" : "លប់ចោល",
+    "This button will empty the complete log file" : "ប៊ូតុងនេះនឹងទទេឯកសារកំណត់ហេតុពេញលេញ",
+    "Okay, I understand and I am sure" : "មិនអីទេខ្ញុំយល់ហើយខ្ញុំប្រាកដ"
 },
 "nplurals=1; plural=0;");

@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "Ispraznite datoteku dnevnika",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Pažnja!! Ovu se funkciju treba koristiti samo ako ste stvarno sigurni u ono što radite. Ovaj gumb isprazni cijelu datoteku dnevnika, ali ne popravlja nikakve pogreške.",
     "Empty the Log File now" : "Ispraznite datoteku dnevnika odmah",
-    "Cancel" : "Otkazati"
+    "Cancel" : "Otkazati",
+    "This button will empty the complete log file" : "Ovaj će gumb isprazniti kompletnu datoteku dnevnika",
+    "Okay, I understand and I am sure" : "U redu, razumijem i siguran sam"
 },
 "nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);");

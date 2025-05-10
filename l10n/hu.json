@@ -36,6 +36,8 @@
     "Empty the Log File" : "Ürítse ki a naplófájlt",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Figyelem!! Ezt a funkciót csak akkor szabad használni, ha valóban biztos benne, mit csinál. Ez a gomb kiüríti a teljes naplófájlt, de nem javítja a hibákat.",
     "Empty the Log File now" : "Ürítse ki most a naplófájlt",
-    "Cancel" : "Töröl"
+    "Cancel" : "Töröl",
+    "This button will empty the complete log file" : "Ez a gomb kiüríti a teljes naplófájlt",
+    "Okay, I understand and I am sure" : "Oké, megértem és biztos vagyok benne"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

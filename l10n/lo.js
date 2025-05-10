@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "ເປົ່າໄຟລ໌ບັນທຶກ",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "ເອົາໃຈໃສ່ !! ຫນ້າທີ່ນີ້ຄວນໃຊ້ຖ້າທ່ານແນ່ໃຈແທ້ໆໃນສິ່ງທີ່ທ່ານກໍາລັງເຮັດຢູ່. ປຸ່ມນີ້ກໍາຈັດແຟ້ມບັນທຶກທັງຫມົດ, ແຕ່ບໍ່ໄດ້ແກ້ໄຂຂໍ້ຜິດພາດໃດໆ.",
     "Empty the Log File now" : "now ໄຟລ໌ log ດຽວນີ້",
-    "Cancel" : "ຍົກເລີກ"
+    "Cancel" : "ຍົກເລີກ",
+    "This button will empty the complete log file" : "ປຸ່ມນີ້ຈະເຮັດໃຫ້ເອກະສານບັນທຶກທີ່ສົມບູນ",
+    "Okay, I understand and I am sure" : "ໂອເຄ, ຂ້ອຍເຂົ້າໃຈແລະຂ້ອຍແນ່ໃຈ"
 },
 "nplurals=1; plural=0;");

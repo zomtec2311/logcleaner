@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "Töm loggfilen",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Uppmärksamhet!! Denna funktion bör endast användas om du verkligen är säker på vad du gör. Den här knappen tömmer hela loggfilen, men fixar inga fel.",
     "Empty the Log File now" : "Töm loggfilen nu",
-    "Cancel" : "Avboka"
+    "Cancel" : "Avboka",
+    "This button will empty the complete log file" : "Den här knappen kommer att tömma den kompletta loggfilen",
+    "Okay, I understand and I am sure" : "Okej, jag förstår och jag är säker"
 },
 "nplurals=2; plural=n != 1;");

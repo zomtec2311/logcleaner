@@ -36,6 +36,8 @@
     "Empty the Log File" : "Kosongkan file log",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Perhatian!! Fungsi ini hanya boleh digunakan jika Anda benar -benar yakin dengan apa yang Anda lakukan. Tombol ini mengosongkan seluruh file log, tetapi tidak memperbaiki kesalahan apa pun.",
     "Empty the Log File now" : "Kosongkan file log sekarang",
-    "Cancel" : "Membatalkan"
+    "Cancel" : "Membatalkan",
+    "This button will empty the complete log file" : "Tombol ini akan mengosongkan file log lengkap",
+    "Okay, I understand and I am sure" : "Oke, saya mengerti dan saya yakin"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
