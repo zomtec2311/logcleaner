@@ -36,6 +36,8 @@
     "Empty the Log File" : "Vaciar el archivo de registro",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "¡¡Atención!! Esta función solo debe usarse si está realmente seguro de lo que está haciendo. Este botón vacía todo el archivo de registro, pero no corre ningún error.",
     "Empty the Log File now" : "Vacíe el archivo de registro ahora",
-    "Cancel" : "Cancelar"
+    "Cancel" : "Cancelar",
+    "This button will empty the complete log file" : "Este botón vaciará el archivo de registro completo",
+    "Okay, I understand and I am sure" : "Bien, entiendo y estoy seguro"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -36,6 +36,8 @@
     "Empty the Log File" : "Изпразнете лог файла",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Внимание !! Тази функция трябва да се използва само ако сте наистина сигурни в това, което правите. Този бутон изпразва целия лог файл, но не поправя никакви грешки.",
     "Empty the Log File now" : "Изпразнете лог файла сега",
-    "Cancel" : "Отказ"
+    "Cancel" : "Отказ",
+    "This button will empty the complete log file" : "Този бутон ще изпразне пълния файл на дневника",
+    "Okay, I understand and I am sure" : "Добре, разбирам и съм сигурен"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

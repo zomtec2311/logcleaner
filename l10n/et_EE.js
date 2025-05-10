@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "Tühjendage logifail",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Tähelepanu !! Seda funktsiooni tuleks kasutada ainult siis, kui olete väga kindel, mida teete. See nupp tühjendab kogu logifaili, kuid ei paranda vigu.",
     "Empty the Log File now" : "Tühjendage logifail kohe",
-    "Cancel" : "Tühistama"
+    "Cancel" : "Tühistama",
+    "This button will empty the complete log file" : "See nupp tühjendab kogu logifaili",
+    "Okay, I understand and I am sure" : "Olgu, ma saan aru ja olen kindel"
 },
 "nplurals=2; plural=n != 1;");

@@ -36,6 +36,8 @@
     "Empty the Log File" : "Folamh an comhad logála",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Aird !! Níor chóir an fheidhm seo a úsáid ach amháin má tá tú cinnte faoi cad atá á dhéanamh agat. Folaíonn an cnaipe seo an comhad loga ar fad, ach ní shocraíonn sé aon earráidí.",
     "Empty the Log File now" : "Folamh an comhad logála anois",
-    "Cancel" : "Cealaigh"
+    "Cancel" : "Cealaigh",
+    "This button will empty the complete log file" : "Folaíonn an cnaipe seo an comhad logála iomlán",
+    "Okay, I understand and I am sure" : "Ceart go leor, tuigim agus táim cinnte"
 },"pluralForm" :"nplurals=5; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n >= 3 && n <= 6) ? 2 : ((n >= 7 && n <= 10) ? 3 : 4)));"
 }

@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "Αδειάστε το αρχείο καταγραφής",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Προσοχή!! Αυτή η λειτουργία θα πρέπει να χρησιμοποιείται μόνο εάν είστε πραγματικά σίγουροι για το τι κάνετε. Αυτό το κουμπί αδειάζει ολόκληρο το αρχείο καταγραφής, αλλά δεν διορθώνει σφάλματα.",
     "Empty the Log File now" : "Αδειάστε το αρχείο καταγραφής τώρα",
-    "Cancel" : "Ματαίωση"
+    "Cancel" : "Ματαίωση",
+    "This button will empty the complete log file" : "Αυτό το κουμπί θα αδειάσει το πλήρες αρχείο καταγραφής",
+    "Okay, I understand and I am sure" : "Εντάξει, καταλαβαίνω και είμαι σίγουρος"
 },
 "nplurals=2; plural=n != 1;");

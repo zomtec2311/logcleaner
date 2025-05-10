@@ -36,6 +36,8 @@
     "Empty the Log File" : "Tyhjennä lokitiedosto",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Huomio!! Tätä toimintoa tulisi käyttää vain, jos olet todella varma tekemästäsi. Tämä painike tyhjentää koko lokitiedoston, mutta ei korjaa virheitä.",
     "Empty the Log File now" : "Tyhjennä lokitiedosto nyt",
-    "Cancel" : "Peruuttaa"
+    "Cancel" : "Peruuttaa",
+    "This button will empty the complete log file" : "Tämä painike tyhjentää koko lokitiedoston",
+    "Okay, I understand and I am sure" : "Okei, ymmärrän ja olen varma"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

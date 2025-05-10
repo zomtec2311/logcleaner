@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "Vyprázdněte soubor protokolu",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Pozor!! Tato funkce by měla být použita pouze tehdy, pokud jste si jisti, co děláte. Toto tlačítko vyprázdní celý soubor protokolu, ale neopravuje žádné chyby.",
     "Empty the Log File now" : "Vyprázdněte soubor protokolu hned teď",
-    "Cancel" : "Zrušit"
+    "Cancel" : "Zrušit",
+    "This button will empty the complete log file" : "Toto tlačítko vyprázdní celý soubor protokolu",
+    "Okay, I understand and I am sure" : "Dobře, chápu a jsem si jistý"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);");

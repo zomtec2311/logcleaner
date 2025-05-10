@@ -36,6 +36,8 @@ OC.L10N.register(
     "Empty the Log File" : "Logdatei leeren",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Achtung!! Diese Funktion sollte nur verwendet werden, wenn man sich wirklich sicher ist, was man tut. Diese Schaltfläche leert die gesamte Logdatei, behebt jedoch keine Fehler.",
     "Empty the Log File now" : "Logdatei jetzt leeren",
-    "Cancel" : "Abbruch"
+    "Cancel" : "Abbruch",
+    "This button will empty the complete log file" : "Diese Schaltfläche wird die komplette Logdatei leeren",
+    "Okay, I understand and I am sure" : "Okay, ich verstehe und ich bin mir sicher"
 },
 "nplurals=2; plural=(n != 1);");

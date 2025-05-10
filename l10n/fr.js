@@ -36,6 +36,8 @@ OC.L10N.register(
     "Empty the Log File" : "Vider le fichier journal",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Attention!! Cette fonction ne doit être utilisée que si vous êtes vraiment sûr de ce que vous faites. Ce bouton vide l'intégralité du fichier journal, mais ne corrige aucune erreur.",
     "Empty the Log File now" : "Videz le fichier journal maintenant",
-    "Cancel" : "Annuler"
+    "Cancel" : "Annuler",
+    "This button will empty the complete log file" : "Ce bouton videra le fichier journal complet",
+    "Okay, I understand and I am sure" : "D'accord, je comprends et je suis sûr"
 },
 "nplurals=2; plural=(n != 1);");

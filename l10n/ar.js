@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "تفريغ ملف السجل",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "انتباه!! يجب استخدام هذه الوظيفة فقط إذا كنت متأكدًا حقًا مما تفعله. يفرغ هذا الزر ملف السجل بأكمله ، لكنه لا يصلح أي أخطاء.",
     "Empty the Log File now" : "تفريغ ملف السجل الآن",
-    "Cancel" : "يلغي"
+    "Cancel" : "يلغي",
+    "This button will empty the complete log file" : "هذا الزر سوف يفرغ ملف السجل الكامل",
+    "Okay, I understand and I am sure" : "حسنًا ، أنا أفهم وأنا متأكد"
 },
 "nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n % 100 >= 3 && n % 100 <= 10) ? 3 : ((n % 100 >= 11 && n % 100 <= 99) ? 4 : 5))));");

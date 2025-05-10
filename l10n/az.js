@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "Giriş sənədini boşaltın",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Diqqət! Bu funksiya yalnız nə etdiyinizə əminsinizsə, həqiqətən istifadə olunmalıdır. Bu düymə bütün giriş sənədini boşaldır, lakin heç bir səhv düzəltmir.",
     "Empty the Log File now" : "İndi giriş sənədini boşaltın",
-    "Cancel" : "Ləğv etmək"
+    "Cancel" : "Ləğv etmək",
+    "This button will empty the complete log file" : "Bu düymə tam giriş sənədini boşaldacaqdır",
+    "Okay, I understand and I am sure" : "Tamam, başa düşürəm və əminəm"
 },
 "nplurals=2; plural=n != 1;");

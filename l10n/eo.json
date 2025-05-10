@@ -36,6 +36,8 @@
     "Empty the Log File" : "Malplenigu la protokolan dosieron",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Atentu !! Ĉi tiu funkcio devas esti uzata nur se vi vere certas pri tio, kion vi faras. Ĉi tiu butono malplenigas la tutan protokolan dosieron, sed ne riparas erarojn.",
     "Empty the Log File now" : "Malplenigu la protokolan dosieron nun",
-    "Cancel" : "Nuligi"
+    "Cancel" : "Nuligi",
+    "This button will empty the complete log file" : "Ĉi tiu butono malplenigos la kompletan protokolan dosieron",
+    "Okay, I understand and I am sure" : "Bone, mi komprenas kaj mi certas"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

@@ -36,6 +36,8 @@
     "Empty the Log File" : "Maak die loglêer leeg",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "AANDAG !! Hierdie funksie moet slegs gebruik word as u regtig seker is wat u doen. Hierdie knoppie leeg die hele loglêer, maar maak geen foute op nie.",
     "Empty the Log File now" : "Maak die loglêer nou leeg",
-    "Cancel" : "Kanselleer"
+    "Cancel" : "Kanselleer",
+    "This button will empty the complete log file" : "Hierdie knoppie sal die volledige loglêer leegmaak",
+    "Okay, I understand and I am sure" : "Goed, ek verstaan ​​en ek is seker"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "Huts egin egunkariaren fitxategia",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Arreta !! Funtzio hau egiten ari zarenaz ziur egonez gero bakarrik erabili behar da. Botoi honek erregistro fitxategi osoa hustu du, baina ez du akatsik konpontzen.",
     "Empty the Log File now" : "Huts egin egunkariaren fitxategia orain",
-    "Cancel" : "Indargabetu"
+    "Cancel" : "Indargabetu",
+    "This button will empty the complete log file" : "Botoi honek erregistro fitxategi osoa hustuko du",
+    "Okay, I understand and I am sure" : "Ados, ulertzen dut eta ziur nago"
 },
 "nplurals=2; plural=n != 1;");

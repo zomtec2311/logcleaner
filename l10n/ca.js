@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "Buida el fitxer de registre",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Atenció !! Aquesta funció només s'ha d'utilitzar si esteu segurs del que esteu fent. Aquest botó buida tot el fitxer de registre, però no soluciona cap error.",
     "Empty the Log File now" : "Buida el fitxer de registre ara",
-    "Cancel" : "Cancel·lar"
+    "Cancel" : "Cancel·lar",
+    "This button will empty the complete log file" : "Aquest botó buidarà el fitxer de registre complet",
+    "Okay, I understand and I am sure" : "D'acord, ho entenc i estic segur"
 },
 "nplurals=2; plural=(n != 1);");

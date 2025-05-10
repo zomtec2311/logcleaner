@@ -38,6 +38,8 @@ OC.L10N.register(
     "Empty the Log File" : "Gwagiwch y ffeil log",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Sylw !! Dim ond os ydych chi'n siŵr iawn o'r hyn rydych chi'n ei wneud y dylid defnyddio'r swyddogaeth hon. Mae'r botwm hwn yn gwagio'r ffeil log gyfan, ond nid yw'n trwsio unrhyw wallau.",
     "Empty the Log File now" : "Gwagiwch y ffeil log nawr",
-    "Cancel" : "Chansliff"
+    "Cancel" : "Chansliff",
+    "This button will empty the complete log file" : "Bydd y botwm hwn yn gwagio'r ffeil log gyflawn",
+    "Okay, I understand and I am sure" : "Iawn, dwi'n deall ac rydw i'n siŵr"
 },
 "nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n == 3) ? 3 : ((n == 6) ? 4 : 5))));");

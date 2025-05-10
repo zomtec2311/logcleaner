@@ -36,6 +36,8 @@
     "Empty the Log File" : "লগ ফাইলটি খালি করুন",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "মনোযোগ !! এই ফাংশনটি কেবল তখনই ব্যবহার করা উচিত যদি আপনি কী করছেন সে সম্পর্কে সত্যই নিশ্চিত হন। এই বোতামটি পুরো লগ ফাইলটি খালি করে তবে কোনও ত্রুটি ঠিক করে না।",
     "Empty the Log File now" : "এখনই লগ ফাইলটি খালি করুন",
-    "Cancel" : "বাতিল"
+    "Cancel" : "বাতিল",
+    "This button will empty the complete log file" : "এই বোতামটি সম্পূর্ণ লগ ফাইলটি খালি করবে",
+    "Okay, I understand and I am sure" : "ঠিক আছে, আমি বুঝতে পারি এবং আমি নিশ্চিত"
 },"pluralForm" :"nplurals=2; plural=n > 1;"
 }

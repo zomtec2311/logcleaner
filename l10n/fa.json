@@ -36,6 +36,8 @@
     "Empty the Log File" : "پرونده ورود به سیستم را خالی کنید",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "توجه !! این عملکرد فقط باید در صورتی مورد استفاده قرار گیرد که واقعاً از آنچه انجام می دهید مطمئن باشید. این دکمه کل پرونده ورود به سیستم را خالی می کند ، اما هیچ خطایی برطرف نمی کند.",
     "Empty the Log File now" : "پرونده ورود به سیستم را اکنون خالی کنید",
-    "Cancel" : "لغو کردن"
+    "Cancel" : "لغو کردن",
+    "This button will empty the complete log file" : "این دکمه پرونده ورود کامل را خالی می کند",
+    "Okay, I understand and I am sure" : "خوب ، من می فهمم و مطمئن هستم"
 },"pluralForm" :"nplurals=2; plural=n > 1;"
 }
