@@ -9,6 +9,11 @@
 - New function to empty log file completely
 - New text strings within language files
 
+### Changed
+- switched from NcButton to normal button due to problems in the design of the background color
+- Colors in settings for some elements to make it more uniform
+
+
 ## 1.0.14
 
 ### Added
