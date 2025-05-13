@@ -37,3 +37,18 @@ Furthermore LogCleaner can detect duplicates in the log file and delete them wit
   <summary><b>Very bad translation?</b></summary>
   We used the AI-based Google translator to generate language files. Of course, there were limitations to the translation depending on the quality of the AI. If you'd like to help improve your language file, open an issue and report your suggestion for improvement. Thank you
 </details>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  <tr>
+    <td><img src="http://wttec.bplaced.net/wt/logcleaner4.png" alt="http://wttec.bplaced.net/wt/logcleaner4.png" width="800px;"></td>
+    <td>This App is similar to the nextcloud's built in logreader but with some additional features for the instance Administrator</td>
+  </tr>
+  <tr>
+    <td>✅ Only accessable for Administrators.<br>✅ Error levels with different colors.<br>✅ Number of displayed log entries can be set.<br>✅ After correcting a log entry it can be deleted from the log file.<br>✅ One click deletion of all dublicates within the logfile.</td>
+    <td><img src="http://wttec.bplaced.net/wt/logcleaner3.png" alt="http://wttec.bplaced.net/wt/logcleaner3.png"></td>
+  </tr>
+</table>
