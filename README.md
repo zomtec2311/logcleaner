@@ -8,10 +8,10 @@
 <table>
   <tr>
     <td><img src="http://wttec.bplaced.net/wt/logcleaner4.png" alt="http://wttec.bplaced.net/wt/logcleaner4.png" width="800px;"></td>
-    <td>This App is similar to the nextcloud's built in logreader but with some additional features for the instance Administrator</td>
+    <td>This app is similar to the nextcloud's built in logreader but with some additional features for the instance administration</td>
   </tr>
   <tr>
-    <td>✅ Only accessable for Administrators.<br>✅ Error levels with different colors.<br>✅ Number of displayed log entries can be set.<br>✅ After correcting a log entry it can be deleted from the log file.<br>✅ One click deletion of all dublicates within the logfile.<br>✅ Empty the logfile without using shell commands.</td>
+    <td>✅ Only accessible for administration.<br>✅ Error levels with different colors.<br>✅ Number of displayed log entries can be set.<br>✅ After correcting a log entry it can be deleted from the log file.<br>✅ One click deletion of all duplicates within the logfile.<br>✅ Empty the logfile without using shell commands.</td>
     <td><img src="http://wttec.bplaced.net/wt/logcleaner3.png" alt="http://wttec.bplaced.net/wt/logcleaner3.png"></td>
   </tr>
 </table>
@@ -33,7 +33,7 @@ Furthermore LogCleaner can detect duplicates in the log file and delete them wit
 ## F.A.Q.
 
 <details>
-  <summary><b>All of the text is in English?</b></summary>
+  <summary><b>All of the text is in english?</b></summary>
 	Maybe your language files are missing.
 
   You might want to help translating the app to new languages or report errors in existing translations. So feel free and send me translations.
