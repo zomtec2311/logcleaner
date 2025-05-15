@@ -1,7 +1,7 @@
 { "translations": {
     "How many lines to display" : "Wieviele Zeilen sollen angezeigt werden",
     "How many characters should the error reason display" : "Wieviele Zeichen soll der Fehlergrund anzeigen",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n Dublette löschen","%n Dubletten löschen"],
+    "_Delete %n duplicate_::_Delete %n duplicates_" : ["%n Dublette löschen","%n Dubletten löschen"],
     "Log entries fetched" : "Log Einträge eingelesen",
     "Could not fetch log entries" : "Log Einträge konnten nicht eingelesen werden",
     "Could not fetch settings" : "Einstellungen konnten nicht eingelesen werden",
@@ -30,10 +30,10 @@
     "Time offset in hours, e.g. due to winter time" : "Zeitversatz in Stunden, z.B. wegen Winterzeit",
     "which menue to use" : "Welches Menü nutzen",
     "(only effective after the next page refresh)" : "(Erst nach nächstem Seitenrefresh wirksam)",
-    "This button will delete shown number of dublicates within the error log file" : "Diese Schaltfläche löscht die angezeigte Anzahl von Duplikaten in der Logdatei",
-    "Empty the Log File" : "Logdatei leeren",
+    "This button will delete shown number of duplicates within the error log file" : "Diese Schaltfläche löscht die angezeigte Anzahl von Duplikaten in der Logdatei",
+    "Empty the log file" : "Logdatei leeren",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Achtung!! Diese Funktion sollte nur verwendet werden, wenn man sich wirklich sicher ist, was man tut. Diese Schaltfläche leert die gesamte Logdatei, behebt jedoch keine Fehler.",
-    "Empty the Log File now" : "Logdatei jetzt leeren",
+    "Empty the log file now" : "Logdatei jetzt leeren",
     "Cancel" : "Abbruch",
     "This button will empty the complete log file" : "Diese Schaltfläche wird die komplette Logdatei leeren",
     "Okay, I understand and I am sure" : "Okay, ich verstehe und ich bin mir sicher"

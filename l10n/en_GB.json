@@ -1,7 +1,7 @@
 { "translations": {
     "How many lines to display" : "How many lines to display",
     "How many characters should the error reason display" : "How many characters should the error reason display",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["Delete %n dublicate","Delete %n dublicates"],
+    "_Delete %n duplicate_::_Delete %n duplicates_" : ["Delete %n duplicate","Delete %n duplicates"],
     "Log entries fetched" : "Log entries fetched",
     "Could not fetch log entries" : "Could not fetch log entries",
     "Could not fetch settings" : "Could not fetch settings",
@@ -30,10 +30,10 @@
     "Time offset in hours, e.g. due to winter time" : "Time offset in hours, e.g. due to winter time",
     "which menue to use" : "which menue to use",
     "(only effective after the next page refresh)" : "(only effective after the next page refresh)",
-    "This button will delete shown number of dublicates within the error log file" : "This button will delete shown number of dublicates within the error log file",
-    "Empty the Log File" : "Empty the Log File",
+    "This button will delete shown number of duplicates within the error log file" : "This button will delete shown number of duplicates within the error log file",
+    "Empty the log file" : "Empty the log file",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors.",
-    "Empty the Log File now" : "Empty the Log File now",
+    "Empty the log file now" : "Empty the log file now",
     "Cancel" : "Cancel",
     "This button will empty the complete log file" : "This button will empty the complete log file",
     "Okay, I understand and I am sure" : "Okay, I understand and I am sure"

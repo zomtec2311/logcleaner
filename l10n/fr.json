@@ -1,7 +1,7 @@
 { "translations": {
     "How many lines to display" : "Combien de lignes doivent être affichées",
     "How many characters should the error reason display" : "Combien de caractères le motif de l'erreur doit-il afficher",
-    "_Delete %n dublicate_::_Delete %n dublicates_" : ["%n Supprimer le doublon","%n Supprimer les doublons"],
+    "_Delete %n duplicate_::_Delete %n duplicates_" : ["%n Supprimer le doublon","%n Supprimer les doublons"],
     "Log entries fetched" : "Entrées de journal lues",
     "Could not fetch log entries" : "Les entrées du journal n'ont pas pu être lues",
     "Could not fetch settings" : "Les paramètres n'ont pas pu être lus",
@@ -30,10 +30,10 @@
     "Time offset in hours, e.g. due to winter time" : "Décalage horaire en heures, par exemple en raison de l'heure d'hiver",
     "which menue to use" : "Quel menu utiliser",
     "(only effective after the next page refresh)" : "(Uniquement après l'actualisation de la page suivante)",
-    "This button will delete shown number of dublicates within the error log file" : "Ce bouton supprimera le nombre affiché de doublons dans le fichier journal d'erreur",
-    "Empty the Log File" : "Vider le fichier journal",
+    "This button will delete shown number of duplicates within the error log file" : "Ce bouton supprimera le nombre affiché de doublons dans le fichier journal d'erreur",
+    "Empty the log file" : "Vider le fichier journal",
     "Attention!! This function should only be used if you are really sure of what you are doing. This button empties the entire log file, but does not fix any errors." : "Attention!! Cette fonction ne doit être utilisée que si vous êtes vraiment sûr de ce que vous faites. Ce bouton vide l'intégralité du fichier journal, mais ne corrige aucune erreur.",
-    "Empty the Log File now" : "Videz le fichier journal maintenant",
+    "Empty the log file now" : "Videz le fichier journal maintenant",
     "Cancel" : "Annuler",
     "This button will empty the complete log file" : "Ce bouton videra le fichier journal complet",
     "Okay, I understand and I am sure" : "D'accord, je comprends et je suis sûr"
