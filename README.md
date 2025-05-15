@@ -11,7 +11,7 @@
     <td>This app is similar to the nextcloud's built in logreader but with some additional features for the instance administration</td>
   </tr>
   <tr>
-    <td>✅ Only accessible for administration<br>✅ Error levels with different colors.<br>✅ Number of displayed log entries can be set.<br>✅ After correcting a log entry it can be deleted from the log file.<br>✅ One click deletion of all duplicates within the logfile.<br>✅ Empty the logfile without using shell commands.</td>
+    <td>✅ Only accessible for administration<br>✅ Error levels with different colors.<br>✅ Number of displayed log entries can be set.<br>✅ After correcting a log entry it can be deleted from the log file.<br>✅ One click deletion of all duplicates within the log file.<br>✅ Empty the log file without using shell commands.</td>
     <td><img src="http://wttec.bplaced.net/wt/logcleaner3.png" alt="http://wttec.bplaced.net/wt/logcleaner3.png"></td>
   </tr>
 </table>
