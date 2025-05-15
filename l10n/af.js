@@ -40,6 +40,7 @@ OC.L10N.register(
     "Empty the log file now" : "Maak die loglêer nou leeg",
     "Cancel" : "Kanselleer",
     "This button will empty the complete log file" : "Hierdie knoppie sal die volledige loglêer leegmaak",
-    "Okay, I understand and I am sure" : "Goed, ek verstaan ​​en ek is seker"
+    "Okay, I understand and I am sure" : "Goed, ek verstaan ​​en ek is seker",
+    "_%n duplicate_::_%n duplicates_" : ["%n duplikaat","%n duplikate"]
 },
 "nplurals=2; plural=n != 1;");

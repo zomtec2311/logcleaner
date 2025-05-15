@@ -38,6 +38,7 @@ OC.L10N.register(
     "Empty the log file now" : "Logdatei jetzt leeren",
     "Cancel" : "Abbruch",
     "This button will empty the complete log file" : "Diese Schaltfläche wird die komplette Logdatei leeren",
-    "Okay, I understand and I am sure" : "Okay, ich verstehe und ich bin mir sicher"
+    "Okay, I understand and I am sure" : "Okay, ich verstehe und ich bin mir sicher",
+    "_%n duplicate_::_%n duplicates_" : ["%n Dublette","%n Dubletten"]
 },
 "nplurals=2; plural=(n != 1);");
