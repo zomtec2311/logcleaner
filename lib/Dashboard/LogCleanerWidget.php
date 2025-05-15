@@ -1,0 +1,200 @@
+<?php
+/**
+ *
+ * LogCleaner APP (Nextcloud)
+ *
+ * @author Wolfgang Tödt <wtoedt@gmail.com>
+ *
+ * @copyright Copyright (c) 2025 Wolfgang Tödt
+ *
+ * @license GNU AGPL version 3 or any later version
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+declare(strict_types=1);
+
+namespace OCA\LogCleaner\Dashboard;
+
+use OCP\AppFramework\Services\IInitialState;
+use OCP\Dashboard\IAPIWidget;
+use OCP\IL10N;
+
+use OCP\Dashboard\IAPIWidgetV2;
+use OCP\Dashboard\Model\WidgetItems;
+use OCP\Dashboard\Model\WidgetItem;
+use OCP\IURLGenerator;
+use OCP\IConfig;
+use OCP\IUserSession;
+use OCP\IGroupManager;
+
+use OCA\LogCleaner\AppInfo\Application;
+use OCP\Util;
+
+	class LogCleanerWidget implements IAPIWidgetV2 {
+
+	private $l10n;
+	private $config;
+	private $initialStateService;
+	private $userId;
+
+	public function __construct(
+		IL10N $l10n,
+		private readonly IURLGenerator $urlGenerator,
+		IConfig $config,
+		IUserSession $userSession,
+		IGroupManager $groupManager,
+		IInitialState $initialStateService,
+		?string $userId) {
+			$this->l10n = $l10n;
+			$this->config = $config;
+			$this->initialStateService = $initialStateService;
+			$this->userId = $userId;
+			$user = $userSession->getUser();
+			$this->wtisadmin = $groupManager->isAdmin($user->getUID());
+	}
+
+	public function getId(): string {
+		if ($this->wtisadmin) { return 'logcleanerdashboard-logcleaner-widget'; }
+		else return '';
+	}
+
+	public function getTitle(): string {
+		if ($this->wtisadmin) { return $this->l10n->t('LogCleaner'); }
+		else return '';
+	}
+
+	public function getOrder(): int {
+		return 10;
+	}
+
+	public function getIconClass(): string {
+		if ($this->wtisadmin) { return 'icon-logcleaner'; }
+		else return '';
+	}
+
+	public function getIconUrl(): string {
+		return $this->urlGenerator->getAbsoluteURL(
+			$this->urlGenerator->imagePath('logcleaner', 'logcleaner-dark.svg')
+		);
+	}
+
+	public function getUrl(): ?string {
+		return null;
+	}
+
+	public function load(): void {
+		Util::addStyle('logcleaner', 'logcleaner-main');
+	}
+
+	public function getItems(string $userId, int $limit = 7): array {
+		$wtlogfile = $this->config->getSystemValue('logfile');
+		if (!file_exists($wtlogfile)) {
+			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		}
+		$logcleaneritems = [];
+		if (!$this->wtisadmin) { return $logcleaneritems; }
+		else {
+			$logcleaneritems[] = new WidgetItem(
+				$wtlogfile,
+				$this->show_filesize('/var/www/html/data/nextcloud.log',2),
+				$this->urlGenerator->getAbsoluteURL($this->urlGenerator->linkToRoute('logcleaner.page.index')),
+				'2',
+				''
+			);
+			$logcleaneritems[] = new WidgetItem(
+				$this->l10n->n('%n log entry', '%n log entries', $this->getAll()),
+				'',
+				$this->urlGenerator->getAbsoluteURL($this->urlGenerator->linkToRoute('logcleaner.page.index')),
+				$this->urlGenerator->imagePath('logcleaner', 'favicon.ico'),
+				''
+			);
+			$logcleaneritems[] = new WidgetItem(
+				$this->l10n->n('Delete %n duplicate', 'Delete %n duplicates', $this->countDub()),
+				'',
+				$this->urlGenerator->getAbsoluteURL($this->urlGenerator->linkToRoute('logcleaner.page.index')),
+				$this->urlGenerator->imagePath('logcleaner', 'favicon.ico'),
+				''
+			);
+			return $logcleaneritems;
+		}
+	}
+
+	public function getItemsV2(string $userId, ?string $since = null, int $limit = 7): WidgetItems {
+		$items = $this->getItems($userId, $limit);
+		return new WidgetItems(
+			$items,
+			count($items) === 0 ? '' : '',
+		);
+	}
+
+	public function show_filesize($filename, $decimalplaces = 0) {
+	  $size = filesize($filename);
+	  $sizes = array('B', 'kB', 'MB', 'GB', 'TB');
+	  for ($i=0; $size > 1024 && $i < count($sizes) - 1; $i++) {
+	     $size /= 1024;
+	  }
+	  return round($size, $decimalplaces).' '.$sizes[$i];
+
+	}
+
+	public function getAll() {
+		$wtlogfile = $this->config->getSystemValue('logfile');
+		if (!file_exists($wtlogfile)) {
+			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		}
+		$wwt = $this->wtlogtoarr($wtlogfile);
+		$wtlogfilezeilen = count($wwt);
+		return $wtlogfilezeilen;
+	}
+
+	public function wtlogtoarr(?string $wtlog)
+	{
+			if ($wtlog === null) {
+					$wtlog = "";
+					return;
+			}
+			return file("$wtlog");
+	}
+
+	public function countDub() {
+		$i = 0;
+		$ii = 0;
+		$tmp_array = array();
+		$key_array = array();
+		$temp_array = array();
+		$wtlogfile = $this->config->getSystemValue('logfile');
+		if (!file_exists($wtlogfile)) {
+			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		}
+		$wwt = $this->wtlogtoarr($wtlogfile);
+		foreach ($wwt as $value) {
+			$tmp_array[] = explode(',"', $value);
+		}
+		unset($value);
+		foreach($tmp_array as $val) {
+			if (!in_array($val[8], $key_array)) {
+				$key_array[$i] = $val[8];
+				$temp_array[$i] = $i;
+      }
+			else {
+				$ii++;
+			}
+      $i++;
+    }
+		return $ii;
+	}
+
+}
