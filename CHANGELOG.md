@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.0.16
+
+### Fixed
+- Improved grammar and fixed typo (Thanks to rakekniven)
+
+### Added
+- LogCleaner Dashboard Widget
+
+### Changed
+- button disabled if log file is empty
+
 ## 1.0.15
 
 ### Fixed
