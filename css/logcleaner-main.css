@@ -3,6 +3,13 @@
 	justify-content: center;
 	margin: 3px;
 }
+#logcleanerfirst {
+	width: 30%;
+}
+
+#logcleanerthird {
+	width: 100%;
+}
 #wtdelete {
 	float: left;
 }
@@ -87,4 +94,19 @@
     margin-bottom: 2px;
     border: 1px solid transparent;
     border-radius: 8px;
+}
+@media (max-width:650px) {
+#logcleanerfirst {
+	width: 400px;
+}
+
+#logcleanerthird {
+float: left;
+	width: auto;
+}
+}
+
+.icon-logcleaner {
+	background-image: url(./../img/logcleaner-dark.svg);
+	filter: var(--background-invert-if-dark);
 }
