@@ -37,6 +37,9 @@ use OCP\IGroupManager;
 use OCP\INavigationManager;
 use OCP\IURLGenerator;
 use OCP\IConfig;
+use OCP\IServerContainer;
+
+use OCA\LogCleaner\Dashboard\LogCleanerWidget;
 
 class Application extends App implements IBootstrap {
 	public const APP_ID = 'logcleaner';
@@ -46,16 +49,15 @@ class Application extends App implements IBootstrap {
 	}
 
 	public function register(IRegistrationContext $context): void {
+		$context->registerDashboardWidget(LogCleanerWidget::class);
 	}
 
 	public function boot(IBootContext $context): void {
-
 		$server = $context->getServerContainer();
 		try {
 			$context->injectFn($this->registerAppsManagementNavigation(...));
 		} catch (NotFoundExceptionInterface|ContainerExceptionInterface|Throwable) {
 		}
-
 	}
 
 	private function registerAppsManagementNavigation(IUserSession $userSession, IConfig $config): void {
