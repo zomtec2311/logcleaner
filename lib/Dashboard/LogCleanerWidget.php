@@ -111,7 +111,7 @@ use OCP\Util;
 				$wtlogfile,
 				$this->show_filesize('/var/www/html/data/nextcloud.log',2),
 				$this->urlGenerator->getAbsoluteURL($this->urlGenerator->linkToRoute('logcleaner.page.index')),
-				'2',
+				$this->urlGenerator->imagePath('logcleaner', 'icon-file.png'),
 				''
 			);
 			$logcleaneritems[] = new WidgetItem(
