@@ -3,15 +3,16 @@
 	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
 	<id>logcleaner</id>
 	<name>Log Cleaner</name>
-	<summary>Administration tool for cleaning up the log file</summary>
+	<summary>Administrator Tool for cleaning up the logfile</summary>
 	<description><![CDATA[**Administration tool for cleaning up the log file**
 
 - ✅ Only accessible for administration.
 - ✅ Error levels with different colors.
 - ✅ Number of displayed log entries can be set.
 - ✅ After correcting a log entry it can be deleted from the log file.
-- ✅ One click deletion of all duplicates within the log file.]]></description>
-	<version>1.0.15</version>
+- ✅ One click deletion of all duplicates within the log file.
+- ✅ Empty the log file without using shell commands.]]></description>
+	<version>1.0.16</version>
 	<licence>agpl</licence>
 	<author mail="wtoedt@gmail.com" homepage="https://github.com/zomtec2311/logcleaner">Wolfgang Tödt</author>
 	<namespace>LogCleaner</namespace>
