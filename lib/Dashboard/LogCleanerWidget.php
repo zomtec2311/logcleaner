@@ -122,7 +122,7 @@ use OCP\Util;
 				''
 			);
 			$logcleaneritems[] = new WidgetItem(
-				$this->l10n->n('Delete %n duplicate', 'Delete %n duplicates', $this->countDub()),
+				$this->l10n->n('%n duplicate', '%n duplicates', $this->countDub()),
 				'',
 				$this->urlGenerator->getAbsoluteURL($this->urlGenerator->linkToRoute('logcleaner.page.index')),
 				$this->urlGenerator->imagePath('logcleaner', 'favicon.ico'),
