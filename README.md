@@ -53,8 +53,19 @@ Furthermore LogCleaner can detect duplicates in the log file and delete them wit
 <details>
   <summary><b>Show me</b></summary>
   <p align="center">
+  <b>Info content:</b><br>
   <img src="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerAA.png" alt="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerAA.png">
-  <br>
+  <br><br>
+  <b>Main view with settings:</b><br>
   <img src="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleaner3.png" alt="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleaner3.png">
+  <br><br>
+  <b>'Empty log file' button pressed:</b><br>
+  <img src="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerEbutton.png" alt="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerEbutton.png">
+  <br><br>
+  <b>'Empty the log file now' button active after enabled check box:</b><br>
+  <img src="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerEbuttonok.png" alt="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerEbuttonok.png">
+  <br><br>
+  <b>LogCleaner dashboard widget:</b><br>
+  <img src="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerwidget.png" alt="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerwidget.png">
   </p>
 </details>
