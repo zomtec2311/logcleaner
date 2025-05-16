@@ -47,3 +47,14 @@ Furthermore LogCleaner can detect duplicates in the log file and delete them wit
   <summary><b>Very bad translation?</b></summary>
   We used the AI-based Google translator to generate language files. Of course, there were limitations to the translation depending on the quality of the AI. If you'd like to help improve your language file, open an issue and report your suggestion for improvement. Thank you
 </details>
+
+## Some screenshots
+
+<details>
+  <summary><b>Show me</b></summary>
+  <p align="center">
+  <img src="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerAA.png" alt="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerAA.png">
+  <br>
+  <img src="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleaner3.png" alt="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleaner3.png">
+  </p>
+</details>
