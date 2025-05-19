@@ -40,6 +40,9 @@ use OCP\IConfig;
 use OCP\IServerContainer;
 
 use OCA\LogCleaner\Dashboard\LogCleanerWidget;
+use OCA\LogCleaner\Dashboard\LogCleanerWidget2;
+
+//use Psr\Container\ContainerInterface;
 
 class Application extends App implements IBootstrap {
 	public const APP_ID = 'logcleaner';
@@ -50,7 +53,10 @@ class Application extends App implements IBootstrap {
 
 	public function register(IRegistrationContext $context): void {
 		$context->registerDashboardWidget(LogCleanerWidget::class);
+		$context->registerDashboardWidget(LogCleanerWidget2::class);
 	}
+
+
 
 	public function boot(IBootContext $context): void {
 		$server = $context->getServerContainer();
