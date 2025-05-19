@@ -118,14 +118,14 @@ use OCP\Util;
 				$this->l10n->n('%n log entry', '%n log entries', $this->getAll()),
 				'',
 				$this->urlGenerator->getAbsoluteURL($this->urlGenerator->linkToRoute('logcleaner.page.index')),
-				$this->urlGenerator->imagePath('logcleaner', 'favicon.ico'),
+				$this->urlGenerator->imagePath('logcleaner', 'logcleaner.png'),
 				''
 			);
 			$logcleaneritems[] = new WidgetItem(
 				$this->l10n->n('%n duplicate', '%n duplicates', $this->countDub()),
 				'',
 				$this->urlGenerator->getAbsoluteURL($this->urlGenerator->linkToRoute('logcleaner.page.index')),
-				$this->urlGenerator->imagePath('logcleaner', 'favicon.ico'),
+				$this->urlGenerator->imagePath('logcleaner', 'logcleaner.png'),
 				''
 			);
 			return $logcleaneritems;
