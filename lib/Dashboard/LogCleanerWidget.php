@@ -35,6 +35,7 @@ use OCP\IL10N;
 use OCP\Dashboard\IAPIWidgetV2;
 use OCP\Dashboard\Model\WidgetItems;
 use OCP\Dashboard\Model\WidgetItem;
+use OCP\Dashboard\IConditionalWidget;
 use OCP\IURLGenerator;
 use OCP\IConfig;
 use OCP\IUserSession;
@@ -43,7 +44,7 @@ use OCP\IGroupManager;
 use OCA\LogCleaner\AppInfo\Application;
 use OCP\Util;
 
-	class LogCleanerWidget implements IAPIWidgetV2 {
+	class LogCleanerWidget implements IAPIWidgetV2, IConditionalWidget {
 
 	private $l10n;
 	private $config;
@@ -66,14 +67,16 @@ use OCP\Util;
 			$this->wtisadmin = $groupManager->isAdmin($user->getUID());
 	}
 
+	public function isEnabled(): bool {
+		return $this->wtisadmin ? true : false;
+	}
+
 	public function getId(): string {
-		if ($this->wtisadmin) { return 'logcleanerdashboard-logcleaner-widget'; }
-		else return '';
+		return 'logcleanerdashboard-logcleaner-widget';
 	}
 
 	public function getTitle(): string {
-		if ($this->wtisadmin) { return $this->l10n->t('LogCleaner'); }
-		else return '';
+		return $this->l10n->t('LogCleaner 1');
 	}
 
 	public function getOrder(): int {
@@ -81,8 +84,7 @@ use OCP\Util;
 	}
 
 	public function getIconClass(): string {
-		if ($this->wtisadmin) { return 'icon-logcleaner'; }
-		else return '';
+		return 'icon-logcleaner';
 	}
 
 	public function getIconUrl(): string {
@@ -96,7 +98,7 @@ use OCP\Util;
 	}
 
 	public function load(): void {
-		Util::addStyle('logcleaner', 'logcleaner-main');
+		Util::addStyle('logcleaner', 'logcleanerwidget');
 	}
 
 	public function getItems(string $userId, int $limit = 7): array {
@@ -105,9 +107,7 @@ use OCP\Util;
 			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
 		}
 		$logcleaneritems = [];
-		if (!$this->wtisadmin) { return $logcleaneritems; }
-		else {
-			$logcleaneritems[] = new WidgetItem(
+				$logcleaneritems[] = new WidgetItem(
 				$wtlogfile,
 				$this->show_filesize($wtlogfile,2),
 				$this->urlGenerator->getAbsoluteURL($this->urlGenerator->linkToRoute('logcleaner.page.index')),
@@ -129,7 +129,6 @@ use OCP\Util;
 				''
 			);
 			return $logcleaneritems;
-		}
 	}
 
 	public function getItemsV2(string $userId, ?string $since = null, int $limit = 7): WidgetItems {
@@ -147,7 +146,6 @@ use OCP\Util;
 	     $size /= 1024;
 	  }
 	  return round($size, $decimalplaces).' '.$sizes[$i];
-
 	}
 
 	public function getAll() {
