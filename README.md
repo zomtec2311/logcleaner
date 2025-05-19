@@ -65,7 +65,7 @@ Furthermore LogCleaner can detect duplicates in the log file and delete them wit
   <b>'Empty the log file now' button active after enabled check box:</b><br>
   <img src="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerEbuttonok.png" alt="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerEbuttonok.png">
   <br><br>
-  <b>LogCleaner dashboard widget:</b><br>
+  <b>LogCleaner dashboard widgets:</b><br>
   <img src="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerwidget.png" alt="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerwidget.png">
   </p>
 </details>
