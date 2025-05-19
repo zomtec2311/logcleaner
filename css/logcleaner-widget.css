@@ -1,0 +1,82 @@
+#logcleaner-widget2 {
+}
+
+#logcleaner-widget2 h2 {
+	margin-top: 0;
+	margin-bottom: 16px;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+#logcleaner-widget2 p {
+	margin-bottom: 8px;
+	font-size: 1rem;
+}
+
+#logcleaner-widget2 ul {
+	list-style: disc;
+	padding-left: 20px;
+	margin-bottom: 8px;
+	font-size: 1rem;
+}
+
+#logcleaner-widget21 {
+	padding: 5px;
+	margin-bottom: 18px;
+	border-radius: 8px;
+	color: #000000;
+	background-color: white;
+	border-top: 10px solid orange;
+}
+
+#logcleaner-widget22 {
+	padding: 5px;
+	margin-bottom: 18px;
+	border-radius: 8px;
+	color: #000000;
+	background-color: white;
+	border-top: 10px solid steelblue;
+}
+
+#logcleaner-widget23 {
+	padding: 5px;
+	border-radius: 8px;
+	color: #000000;
+	background-color: white;
+	border-top: 10px solid #008000;
+}
+
+#logcleaner-widget li {
+	margin-bottom: 8px;
+}
+
+#logcleaner-widget .button {
+	padding: 8px 16px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 1rem;
+	transition: background-color 0.3s ease;
+	margin-top: 8px;
+	display: inline-block;
+}
+
+#logcleaner-widget .info {
+	padding: 12px;
+	border-radius: 4px;
+	margin-bottom: 16px;
+	font-size: 0.9rem;
+	border: 1px solid #ccc;
+}
+
+#logcleaner-widget .error {
+	color: red;
+	font-size: 1rem;
+	margin-top: 8px;
+}
+
+#logcleaner-widget .success {
+	color: green;
+	font-size: 1rem;
+	margin-top: 8px;
+}
