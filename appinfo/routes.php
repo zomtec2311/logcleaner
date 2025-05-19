@@ -37,5 +37,6 @@ return [
      ['name' => 'Settings#dellog', 'url' => '/dellog/{logid}', 'verb' => 'GET'],
      ['name' => 'Settings#dellog', 'url' => '/dellog/{logid}', 'verb' => 'GET'],
      ['name' => 'Settings#setSettingZeilen', 'url' => '/setlines/{who}/{zeilen}', 'verb' => 'GET'],
+     ['name' => 'Settings#logfileandsize', 'url' => '/logfileandsize', 'verb' => 'GET'],
   ]
 ];
