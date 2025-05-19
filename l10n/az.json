@@ -38,6 +38,11 @@
     "Empty the log file now" : "İndi giriş sənədini boşaltın",
     "Cancel" : "Ləğv etmək",
     "This button will empty the complete log file" : "Bu düymə tam giriş sənədini boşaldacaqdır",
+    "good" : "yaxşı",
+    "bad" : "pis",
+    "very bad" : "çox pis",
+    "Hint:" : "İşarə:",
+    "The color at the top of a box indicates the range of the warning." : "Bir qutunun başındakı rəng xəbərdarlığın aralığını göstərir.",
     "Okay, I understand and I am sure" : "Tamam, başa düşürəm və əminəm"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

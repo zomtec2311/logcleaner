@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "Baleira o ficheiro de rexistro agora",
     "Cancel" : "Cancelar",
     "This button will empty the complete log file" : "Este botón baleirará o ficheiro de rexistro completo",
+    "good" : "bo",
+    "bad" : "malo",
+    "very bad" : "Moi malo",
+    "Hint:" : "Consello:",
+    "The color at the top of a box indicates the range of the warning." : "A cor na parte superior dunha caixa indica o rango do aviso.",
     "Okay, I understand and I am sure" : "Vale, entendo e estou seguro"
 },
 "nplurals=2; plural=n != 1;");

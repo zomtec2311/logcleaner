@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "Goullo ar restr Log bremañ",
     "Cancel" : "Nullañ",
     "This button will empty the complete log file" : "Ar bouton-mañ a vo goullo ar restr enrollañ klok",
+    "good" : "mat",
+    "bad" : "fall",
+    "very bad" : "fall-tre",
+    "Hint:" : "Damlavaret:",
+    "The color at the top of a box indicates the range of the warning." : "Ar liv e penn ur voest a ziskouez rann ar c'hemenn.",
     "Okay, I understand and I am sure" : "Mat eo, kompren a ran ha sur on"
 },
 "nplurals=5; plural=(n % 10 == 1 && n % 100 != 11 && n % 100 != 71 && n % 100 != 91) ? 0 : ((n % 10 == 2 && n % 100 != 12 && n % 100 != 72 && n % 100 != 92) ? 1 : ((((n % 10 == 3 || n % 10 == 4) || n % 10 == 9) && (n % 100 < 10 || n % 100 > 19) && (n % 100 < 70 || n % 100 > 79) && (n % 100 < 90 || n % 100 > 99)) ? 2 : ((n != 0 && n % 1000000 == 0) ? 3 : 4)));");

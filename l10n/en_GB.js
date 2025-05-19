@@ -39,6 +39,11 @@ OC.L10N.register(
     "Cancel" : "Cancel",
     "This button will empty the complete log file" : "This button will empty the complete log file",
     "Okay, I understand and I am sure" : "Okay, I understand and I am sure",
+    "good" : "good",
+    "bad" : "bad",
+    "very bad" : "very bad",
+    "Hint:" : "Hint:",
+    "The color at the top of a box indicates the range of the warning." : "The color at the top of a box indicates the range of the warning.",
     "_%n duplicate_::_%n duplicates_" : ["%n duplicate","%n duplicates"]
 },
 "nplurals=2; plural=(n != 1);");

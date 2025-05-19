@@ -38,6 +38,11 @@
     "Empty the log file now" : "تفريغ ملف السجل الآن",
     "Cancel" : "يلغي",
     "This button will empty the complete log file" : "هذا الزر سوف يفرغ ملف السجل الكامل",
+    "good" : "جيد",
+    "bad" : "سيء",
+    "very bad" : "سيء جدا",
+    "Hint:" : "تَلمِيح:",
+    "The color at the top of a box indicates the range of the warning." : "يشير اللون في الجزء العلوي من المربع إلى نطاق التحذير.",
     "Okay, I understand and I am sure" : "حسنًا ، أنا أفهم وأنا متأكد"
 },"pluralForm" :"nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n % 100 >= 3 && n % 100 <= 10) ? 3 : ((n % 100 >= 11 && n % 100 <= 99) ? 4 : 5))));"
 }

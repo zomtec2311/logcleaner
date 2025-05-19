@@ -38,6 +38,11 @@
     "Empty the log file now" : "Αδειάστε το αρχείο καταγραφής τώρα",
     "Cancel" : "Ματαίωση",
     "This button will empty the complete log file" : "Αυτό το κουμπί θα αδειάσει το πλήρες αρχείο καταγραφής",
+    "good" : "καλός",
+    "bad" : "κακός",
+    "very bad" : "χειριστός",
+    "Hint:" : "Υπαινιγμός:",
+    "The color at the top of a box indicates the range of the warning." : "Το χρώμα στην κορυφή ενός κουτιού υποδεικνύει το εύρος της προειδοποίησης.",
     "Okay, I understand and I am sure" : "Εντάξει, καταλαβαίνω και είμαι σίγουρος"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

@@ -38,6 +38,11 @@
     "Empty the log file now" : "এখনই লগ ফাইলটি খালি করুন",
     "Cancel" : "বাতিল",
     "This button will empty the complete log file" : "এই বোতামটি সম্পূর্ণ লগ ফাইলটি খালি করবে",
+    "good" : "ভাল",
+    "bad" : "খারাপ",
+    "very bad" : "খুব খারাপ",
+    "Hint:" : "ইঙ্গিত:",
+    "The color at the top of a box indicates the range of the warning." : "একটি বাক্সের শীর্ষে রঙটি সতর্কতার পরিসীমা নির্দেশ করে।",
     "Okay, I understand and I am sure" : "ঠিক আছে, আমি বুঝতে পারি এবং আমি নিশ্চিত"
 },"pluralForm" :"nplurals=2; plural=n > 1;"
 }

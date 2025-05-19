@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "רוקן את קובץ היומן עכשיו",
     "Cancel" : "לְבַטֵל",
     "This button will empty the complete log file" : "כפתור זה ירוקן את קובץ היומן המלא",
+    "good" : "טוֹב",
+    "bad" : "רַע",
+    "very bad" : "רע מאוד",
+    "Hint:" : "רֶמֶז:",
+    "The color at the top of a box indicates the range of the warning." : "הצבע בחלקו העליון של קופסה מציין את טווח האזהרה.",
     "Okay, I understand and I am sure" : "אוקיי, אני מבין ואני בטוח"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 2) ? 1 : 2);");

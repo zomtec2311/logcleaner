@@ -38,6 +38,11 @@
     "Empty the log file now" : "Buida el fitxer de registre ara",
     "Cancel" : "Cancel·lar",
     "This button will empty the complete log file" : "Aquest botó buidarà el fitxer de registre complet",
+    "good" : "bona",
+    "bad" : "dolent",
+    "very bad" : "molt dolent",
+    "Hint:" : "Suggeriment:",
+    "The color at the top of a box indicates the range of the warning." : "El color a la part superior d’una caixa indica la gamma de l’avís.",
     "Okay, I understand and I am sure" : "D'acord, ho entenc i estic segur"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

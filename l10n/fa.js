@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "پرونده ورود به سیستم را اکنون خالی کنید",
     "Cancel" : "لغو کردن",
     "This button will empty the complete log file" : "این دکمه پرونده ورود کامل را خالی می کند",
+    "good" : "خوب",
+    "bad" : "بد",
+    "very bad" : "خیلی بد",
+    "Hint:" : "نکته:",
+    "The color at the top of a box indicates the range of the warning." : "رنگ در بالای جعبه نشان دهنده دامنه هشدار است.",
     "Okay, I understand and I am sure" : "خوب ، من می فهمم و مطمئن هستم"
 },
 "nplurals=2; plural=n > 1;");

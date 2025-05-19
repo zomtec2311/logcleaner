@@ -38,6 +38,11 @@ OC.L10N.register(
     "Empty the log file now" : "Videz le fichier journal maintenant",
     "Cancel" : "Annuler",
     "This button will empty the complete log file" : "Ce bouton videra le fichier journal complet",
+    "good" : "bien",
+    "bad" : "mauvais",
+    "very bad" : "très mauvais",
+    "Hint:" : "Indice:",
+    "The color at the top of a box indicates the range of the warning." : "La couleur en haut d'une boîte indique la plage de l'avertissement.",
     "Okay, I understand and I am sure" : "D'accord, je comprends et je suis sûr"
 },
 "nplurals=2; plural=(n != 1);");

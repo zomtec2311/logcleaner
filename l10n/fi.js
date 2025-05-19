@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "Tyhjennä lokitiedosto nyt",
     "Cancel" : "Peruuttaa",
     "This button will empty the complete log file" : "Tämä painike tyhjentää koko lokitiedoston",
+    "good" : "hyvä",
+    "bad" : "huono",
+    "very bad" : "erittäin huono",
+    "Hint:" : "Vihje:",
+    "The color at the top of a box indicates the range of the warning." : "Laatikon yläosassa oleva väri osoittaa varoituksen alueen.",
     "Okay, I understand and I am sure" : "Okei, ymmärrän ja olen varma"
 },
 "nplurals=2; plural=n != 1;");

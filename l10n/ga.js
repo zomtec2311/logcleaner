@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "Folamh an comhad logála anois",
     "Cancel" : "Cealaigh",
     "This button will empty the complete log file" : "Folaíonn an cnaipe seo an comhad logála iomlán",
+    "good" : "go maith",
+    "bad" : "millteanach",
+    "very bad" : "an -dona",
+    "Hint:" : "Leid:",
+    "The color at the top of a box indicates the range of the warning." : "Léiríonn an dath ag barr an bhosca raon an rabhaidh.",
     "Okay, I understand and I am sure" : "Ceart go leor, tuigim agus táim cinnte"
 },
 "nplurals=5; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n >= 3 && n <= 6) ? 2 : ((n >= 7 && n <= 10) ? 3 : 4)));");

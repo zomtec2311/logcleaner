@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "Huts egin egunkariaren fitxategia orain",
     "Cancel" : "Indargabetu",
     "This button will empty the complete log file" : "Botoi honek erregistro fitxategi osoa hustuko du",
+    "good" : "on",
+    "bad" : "txar",
+    "very bad" : "oso txarra",
+    "Hint:" : "Aholkua:",
+    "The color at the top of a box indicates the range of the warning." : "Kutxa baten goiko aldean dagoen koloreak abisuaren barrutia adierazten du.",
     "Okay, I understand and I am sure" : "Ados, ulertzen dut eta ziur nago"
 },
 "nplurals=2; plural=n != 1;");

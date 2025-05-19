@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "Tühjendage logifail kohe",
     "Cancel" : "Tühistama",
     "This button will empty the complete log file" : "See nupp tühjendab kogu logifaili",
+    "good" : "hea",
+    "bad" : "halb",
+    "very bad" : "väga halb",
+    "Hint:" : "Vihje:",
+    "The color at the top of a box indicates the range of the warning." : "Värv kasti ülaosas näitab hoiatuse vahemikku.",
     "Okay, I understand and I am sure" : "Olgu, ma saan aru ja olen kindel"
 },
 "nplurals=2; plural=n != 1;");
