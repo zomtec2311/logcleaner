@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "Esvazie o arquivo de log agora",
     "Cancel" : "Cancelar",
     "This button will empty the complete log file" : "Este botão vai esvaziar o arquivo de log completo",
+    "good" : "bom",
+    "bad" : "ruim",
+    "very bad" : "muito ruim",
+    "Hint:" : "Dica:",
+    "The color at the top of a box indicates the range of the warning." : "A cor no topo de uma caixa indica o alcance do aviso.",
     "Okay, I understand and I am sure" : "Ok, eu entendo e tenho certeza"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : ((n != 0 && n % 1000000 == 0) ? 1 : 2);");

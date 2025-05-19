@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "Kosongkan file log sekarang",
     "Cancel" : "Membatalkan",
     "This button will empty the complete log file" : "Tombol ini akan mengosongkan file log lengkap",
+    "good" : "Bagus",
+    "bad" : "buruk",
+    "very bad" : "sangat buruk",
+    "Hint:" : "Petunjuk:",
+    "The color at the top of a box indicates the range of the warning." : "Warna di bagian atas kotak menunjukkan kisaran peringatan.",
     "Okay, I understand and I am sure" : "Oke, saya mengerti dan saya yakin"
 },
 "nplurals=1; plural=0;");

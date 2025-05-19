@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "Tæmdu annál skrána núna",
     "Cancel" : "Hætta við",
     "This button will empty the complete log file" : "Þessi hnappur tæmir alla annálaskrána",
+    "good" : "Gott",
+    "bad" : "Slæmt",
+    "very bad" : "mjög slæmt",
+    "Hint:" : "Vísbending:",
+    "The color at the top of a box indicates the range of the warning." : "Liturinn efst á kassa gefur til kynna svið viðvörunarinnar.",
     "Okay, I understand and I am sure" : "Allt í lagi, ég skil og ég er viss"
 },
 "nplurals=2; plural=n % 10 != 1 || n % 100 == 11;");

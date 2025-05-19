@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "ឯកសារកំណត់ហេតុឥឡូវនេះ",
     "Cancel" : "លប់ចោល",
     "This button will empty the complete log file" : "ប៊ូតុងនេះនឹងទទេឯកសារកំណត់ហេតុពេញលេញ",
+    "good" : "ល្អ",
+    "bad" : "អារកក់",
+    "very bad" : "អាក្រក់ណាស់",
+    "Hint:" : "ព័ត៌មានជំនួយ:",
+    "The color at the top of a box indicates the range of the warning." : "ពណ៌នៅផ្នែកខាងលើនៃប្រអប់មួយបង្ហាញពីជួរនៃការព្រមាន។",
     "Okay, I understand and I am sure" : "មិនអីទេខ្ញុំយល់ហើយខ្ញុំប្រាកដ"
 },
 "nplurals=1; plural=0;");

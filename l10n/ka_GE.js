@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "ცარიელი ფაილი ახლავე",
     "Cancel" : "გაუქმება",
     "This button will empty the complete log file" : "ეს ღილაკი ცარიელდება სრული ჟურნალის ფაილზე",
+    "good" : "კარგი",
+    "bad" : "ცუდი",
+    "very bad" : "ძალიან ცუდი",
+    "Hint:" : "მინიშნება:",
+    "The color at the top of a box indicates the range of the warning." : "ყუთის ზედა ნაწილში ფერი მიუთითებს გაფრთხილების დიაპაზონში.",
     "Okay, I understand and I am sure" : "კარგი, მესმის და დარწმუნებული ვარ"
 },
 "nplurals=2; plural=n != 1;");

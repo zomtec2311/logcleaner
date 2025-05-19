@@ -38,6 +38,11 @@
     "Empty the log file now" : "Испразните датотеку дневника сада",
     "Cancel" : "Отказати",
     "This button will empty the complete log file" : "Ово дугме ће испразнити комплетну датотеку дневника",
+    "good" : "добри",
+    "bad" : "лош",
+    "very bad" : "веома лош",
+    "Hint:" : "Савет:",
+    "The color at the top of a box indicates the range of the warning." : "Боја на врху кутије указује на распон упозорења.",
     "Okay, I understand and I am sure" : "Ок, разумем и сигуран сам"
 },"pluralForm" :"nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);"
 }

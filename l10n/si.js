@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "දැන් ලොග් ගොනුව හිස් කරන්න",
     "Cancel" : "අවලංගු කරන්න",
     "This button will empty the complete log file" : "මෙම බොත්තම සම්පූර්ණ ලොග් ගොනුව හිස් කරයි",
+    "good" : "හොඳයි",
+    "bad" : "නරක",
+    "very bad" : "ඉතා නරකයි",
+    "Hint:" : "ඉඟිය:",
+    "The color at the top of a box indicates the range of the warning." : "පෙට්ටියක මුදුනේ ඇති වර්ණය අනතුරු ඇඟවීමේ පරාසය පෙන්නුම් කරයි.",
     "Okay, I understand and I am sure" : "හරි, මට තේරෙනවා, මට විශ්වාසයි"
 },
 "nplurals=2; plural=n > 1;");

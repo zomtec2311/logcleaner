@@ -38,6 +38,11 @@
     "Empty the log file now" : "ล้างไฟล์บันทึกทันที",
     "Cancel" : "ยกเลิก",
     "This button will empty the complete log file" : "ปุ่มนี้จะล้างไฟล์บันทึกที่สมบูรณ์",
+    "good" : "ดี",
+    "bad" : "แย่",
+    "very bad" : "แย่มาก",
+    "Hint:" : "คำใบ้:",
+    "The color at the top of a box indicates the range of the warning." : "สีที่ด้านบนของกล่องหมายถึงช่วงของคำเตือน",
     "Okay, I understand and I am sure" : "โอเคฉันเข้าใจและฉันแน่ใจ"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "Vyprázdnite súbor denníka teraz",
     "Cancel" : "Zrušiť",
     "This button will empty the complete log file" : "Toto tlačidlo vyprázdne kompletný protokolový súbor",
+    "good" : "dobrý",
+    "bad" : "zlý",
+    "very bad" : "veľmi zlý",
+    "Hint:" : "Náznak:",
+    "The color at the top of a box indicates the range of the warning." : "Farba v hornej časti škatule označuje rozsah varovania.",
     "Okay, I understand and I am sure" : "Dobre, chápem a som si istý"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);");

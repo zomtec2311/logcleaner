@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "立即清空日誌文件",
     "Cancel" : "取消",
     "This button will empty the complete log file" : "此按鈕將清空完整的日誌文件",
+    "good" : "好的",
+    "bad" : "壞的",
+    "very bad" : "非常糟糕",
+    "Hint:" : "暗示：",
+    "The color at the top of a box indicates the range of the warning." : "盒子頂部的顏色表示警告的範圍。",
     "Okay, I understand and I am sure" : "好吧，我明白，我確定"
 },
 "nplurals=1; plural=0;");

@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "Испразнете ја датотеката за дневник сега",
     "Cancel" : "Откажи",
     "This button will empty the complete log file" : "Ова копче ќе ја испразни целосната датотека за најавување",
+    "good" : "добро",
+    "bad" : "лошо",
+    "very bad" : "многу лошо",
+    "Hint:" : "Совет:",
+    "The color at the top of a box indicates the range of the warning." : "Бојата на врвот на кутијата го означува опсегот на предупредување.",
     "Okay, I understand and I am sure" : "Добро, разбирам и сигурен сум"
 },
 "nplurals=2; plural=(n==1 || n%10==1 ? 0 : 1);");

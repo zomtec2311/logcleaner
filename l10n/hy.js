@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "Այժմ դատարկեք տեղեկամատյանային ֆայլը",
     "Cancel" : "Չեղարկել",
     "This button will empty the complete log file" : "Այս կոճակը կտարբերի ամբողջական տեղեկամատյանային ֆայլը",
+    "good" : "լավ",
+    "bad" : "վատ",
+    "very bad" : "Շատ վատ",
+    "Hint:" : "Ակնարկ.",
+    "The color at the top of a box indicates the range of the warning." : "Տուփի վերեւում գտնվող գույնը ցույց է տալիս նախազգուշացման շրջանակը:",
     "Okay, I understand and I am sure" : "Լավ, ես հասկանում եմ եւ վստահ եմ"
 },
 "nplurals=2; plural=n > 1;");

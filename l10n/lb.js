@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "Eidel der Log Datei elo",
     "Cancel" : "Ofbriechen",
     "This button will empty the complete log file" : "Dëse Knäppchen wäert d'komplett Log Datei eidel maachen",
+    "good" : "gutt",
+    "bad" : "schlecht",
+    "very bad" : "ganz schlecht",
+    "Hint:" : "Hiweis:",
+    "The color at the top of a box indicates the range of the warning." : "D'Faarf uewen op enger Këscht weist d'Gamme vun der Warnung.",
     "Okay, I understand and I am sure" : "Okay, ech verstinn an ech si sécher"
 },
 "nplurals=2; plural=n != 1;");

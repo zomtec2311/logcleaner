@@ -38,6 +38,11 @@ OC.L10N.register(
     "Empty the log file now" : "Svuota ora il file di registro",
     "Cancel" : "Cancellare",
     "This button will empty the complete log file" : "Questo pulsante svuoterà il file di registro completo",
+    "good" : "Bene",
+    "bad" : "male",
+    "very bad" : "Molto male",
+    "Hint:" : "Suggerimento:",
+    "The color at the top of a box indicates the range of the warning." : "Il colore nella parte superiore di una scatola indica l'intervallo dell'avvertimento.",
     "Okay, I understand and I am sure" : "Ok, ho capito e ne sono sicuro"
 },
 "nplurals=2; plural=(n != 1);");

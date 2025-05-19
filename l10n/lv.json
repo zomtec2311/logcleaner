@@ -38,6 +38,11 @@
     "Empty the log file now" : "Iztukšojiet žurnāla failu tūlīt",
     "Cancel" : "Atcelt",
     "This button will empty the complete log file" : "Šī poga iztukšos visu žurnālfailu",
+    "good" : "labs",
+    "bad" : "slikts",
+    "very bad" : "ļoti slikti",
+    "Hint:" : "Mājiens:",
+    "The color at the top of a box indicates the range of the warning." : "Krāsa kastes augšdaļā norāda brīdinājuma diapazonu.",
     "Okay, I understand and I am sure" : "Labi, es saprotu un esmu pārliecināts"
 },"pluralForm" :"nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);"
 }

@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "Одоо бүртгэлийн файлыг хоослох",
     "Cancel" : "Цуаах",
     "This button will empty the complete log file" : "Энэ товчлуур нь бүрэн бүртгэлийн файлыг хоослох болно",
+    "good" : "сайн байна",
+    "bad" : "муу",
+    "very bad" : "маш муу",
+    "Hint:" : "Зөвлөгөө:",
+    "The color at the top of a box indicates the range of the warning." : "Хайрцгийн дээд хэсэгт байгаа өнгө нь анхааруулгыг илтгэнэ.",
     "Okay, I understand and I am sure" : "За, би ойлгож байна, би итгэлтэй байна"
 },
 "nplurals=2; plural=n != 1;");

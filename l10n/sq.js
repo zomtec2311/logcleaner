@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "Bosh skedarin log tani",
     "Cancel" : "Anuloj",
     "This button will empty the complete log file" : "Ky buton do të zbrazet skedarin e plotë të regjistrit",
+    "good" : "i mirë",
+    "bad" : "i keq",
+    "very bad" : "shumë keq",
+    "Hint:" : "Aluzion:",
+    "The color at the top of a box indicates the range of the warning." : "Ngjyra në krye të një kutie tregon gamën e paralajmërimit.",
     "Okay, I understand and I am sure" : "Mirë, e kuptoj dhe jam i sigurt"
 },
 "nplurals=2; plural=n != 1;");

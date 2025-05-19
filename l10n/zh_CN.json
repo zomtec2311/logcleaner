@@ -38,6 +38,11 @@
     "Empty the log file now" : "立即清空日志文件",
     "Cancel" : "取消",
     "This button will empty the complete log file" : "此按钮将清空完整的日志文件",
+    "good" : "好的",
+    "bad" : "坏的",
+    "very bad" : "非常糟糕",
+    "Hint:" : "暗示：",
+    "The color at the top of a box indicates the range of the warning." : "盒子顶部的颜色表示警告的范围。",
     "Okay, I understand and I am sure" : "好吧，我明白，我确定"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

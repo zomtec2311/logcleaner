@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "خاتىرە ھۆججىتىنى ھازىر قۇرۇق",
     "Cancel" : "بىكار قىلىش",
     "This button will empty the complete log file" : "بۇ كۇنۇپكا تولۇق خاتىرە ھۆججىتىنى بوشاتتى",
+    "good" : "ياخشى",
+    "bad" : "ناچار",
+    "very bad" : "بەك ناچار",
+    "Hint:" : "تەكلىپ:",
+    "The color at the top of a box indicates the range of the warning." : "بىر قۇتىنىڭ ئۈستىدىكى رەڭ ئاگاھلاندۇرۇشنىڭ دائىرىسىنى كۆرسىتىدۇ.",
     "Okay, I understand and I am sure" : "ماقۇل, مەن چۈشىنىمەن"
 },
 "nplurals=2; plural=n != 1;");

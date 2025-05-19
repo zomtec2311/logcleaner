@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "Günlük dosyasını şimdi boşaltın",
     "Cancel" : "İptal etmek",
     "This button will empty the complete log file" : "Bu düğme tam günlük dosyasını boşaltacak",
+    "good" : "iyi",
+    "bad" : "kötü",
+    "very bad" : "çok kötü",
+    "Hint:" : "İpucu:",
+    "The color at the top of a box indicates the range of the warning." : "Bir kutunun üstündeki renk, uyarı aralığını gösterir.",
     "Okay, I understand and I am sure" : "Tamam, anlıyorum ve eminim"
 },
 "nplurals=2; plural=n != 1;");

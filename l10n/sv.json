@@ -38,6 +38,11 @@
     "Empty the log file now" : "Töm loggfilen nu",
     "Cancel" : "Avboka",
     "This button will empty the complete log file" : "Den här knappen kommer att tömma den kompletta loggfilen",
+    "good" : "bra",
+    "bad" : "dålig",
+    "very bad" : "mycket dålig",
+    "Hint:" : "Antydan:",
+    "The color at the top of a box indicates the range of the warning." : "Färgen överst i en låda indikerar varningsområdet.",
     "Okay, I understand and I am sure" : "Okej, jag förstår och jag är säker"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

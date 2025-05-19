@@ -38,6 +38,11 @@
     "Empty the log file now" : "Làm trống tệp nhật ký ngay bây giờ",
     "Cancel" : "Hủy bỏ",
     "This button will empty the complete log file" : "Nút này sẽ làm trống tệp nhật ký hoàn chỉnh",
+    "good" : "Tốt",
+    "bad" : "xấu",
+    "very bad" : "Rất tệ",
+    "Hint:" : "Gợi ý:",
+    "The color at the top of a box indicates the range of the warning." : "Màu ở trên cùng của một hộp cho biết phạm vi của cảnh báo.",
     "Okay, I understand and I am sure" : "Được rồi, tôi hiểu và tôi chắc chắn"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

@@ -38,6 +38,11 @@
     "Empty the log file now" : "今すぐログファイルを空にします",
     "Cancel" : "キャンセル",
     "This button will empty the complete log file" : "このボタンは完全なログファイルを空にします",
+    "good" : "良い",
+    "bad" : "悪い",
+    "very bad" : "非常に悪い",
+    "Hint:" : "ヒント：",
+    "The color at the top of a box indicates the range of the warning." : "ボックスの上部にある色は、警告の範囲を示しています。",
     "Okay, I understand and I am sure" : "さて、私は理解しています、そして私は確信しています"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

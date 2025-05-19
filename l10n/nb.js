@@ -40,6 +40,11 @@ OC.L10N.register(
     "Empty the log file now" : "Tøm loggfilen nå",
     "Cancel" : "Kansellere",
     "This button will empty the complete log file" : "Denne knappen vil tømme den komplette loggfilen",
+    "good" : "god",
+    "bad" : "dårlig",
+    "very bad" : "veldig dårlig",
+    "Hint:" : "Hint:",
+    "The color at the top of a box indicates the range of the warning." : "Fargen på toppen av en boks indikerer advarselområdet.",
     "Okay, I understand and I am sure" : "Ok, jeg forstår og jeg er sikker på"
 },
 "nplurals=2; plural=n != 1;");
