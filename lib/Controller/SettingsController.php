@@ -224,6 +224,39 @@ class SettingsController extends Controller {
 		return $wtarr;
 	}
 
+	public function logfileandsize() {
+		$wtlogfile = $this->config->getSystemValue('logfile');
+		if (!file_exists($wtlogfile)) {
+			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		}
+		if (file_exists($wtlogfile)) {
+			$teile = explode("/", $wtlogfile);
+			$obja = new \stdClass();
+			$obja->file = $wtlogfile;
+			$obja->filearr = $teile;
+			$obja->filesize = $this->show_filesize($wtlogfile,2);
+			$wtarr [] = $obja;
+			return $wtarr;
+		}
+		else {
+			$obja = new \stdClass();
+			$obja->file = '';
+			$obja->filearr = [];
+			$obja->filesize = '';
+			$wtarr [] = $obja;
+			return $wtarr;
+		}
+	}
+
+	public function show_filesize($filename, $decimalplaces = 0) {
+	  $size = filesize($filename);
+	  $sizes = array('B', 'kB', 'MB', 'GB', 'TB');
+	  for ($i=0; $size > 1024 && $i < count($sizes) - 1; $i++) {
+	     $size /= 1024;
+	  }
+	  return round($size, $decimalplaces).' '.$sizes[$i];
+	}
+
 	public function dellog(string $logid) {
 		if ($logid === null) {
 			$logid = null;
