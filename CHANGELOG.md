@@ -1,6 +1,15 @@
 # Changelog
 
-## 1.0.16
+## 1.1.2
+
+### Fixed
+- Now widgets are only for admins
+
+### Added
+- New Vue dashboard widget. Now you can choose between 2 WidgetItems
+- New text strings within language files 
+
+## 1.1.1
 
 ### Fixed
 - Improved grammar and fixed typo (Thanks to rakekniven)
