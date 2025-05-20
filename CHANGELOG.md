@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.3
+
+### Fixed
+- wrong widget img path
+- wrong widget logcleaner url
+
+### Added
+- folder/file icons for Vue dashboard widget
+
 ## 1.1.2
 
 ### Fixed
