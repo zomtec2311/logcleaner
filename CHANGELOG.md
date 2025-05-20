@@ -9,6 +9,10 @@
 
 ### Added
 - folder/file icons for Vue dashboard widget
+- Type of verification so that the app is only accessible to administrators
+
+### Removed
+- Some dirty code that hid the app from users
 
 ## 1.1.2
 
