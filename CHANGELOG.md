@@ -5,6 +5,7 @@
 ### Fixed
 - wrong widget img path
 - wrong widget logcleaner url
+- size of js-file Vue dashbord widget decreased
 
 ### Added
 - folder/file icons for Vue dashboard widget
