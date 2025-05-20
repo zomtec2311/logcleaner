@@ -18,8 +18,7 @@
 	<namespace>LogCleaner</namespace>
 	<category>tools</category>
 	<bugs>https://github.com/zomtec2311/logcleaner/issues</bugs>
-    <screenshot small-thumbnail="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleaner3-small.png">https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleaner3-small.png</screenshot>
-    <screenshot>https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/img/logcleaner3.png</screenshot>
+    <screenshot small-thumbnail="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleaner3-small.png">https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleaner3.png</screenshot>
 	<screenshot>https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerwidget.png</screenshot>    
 	<website>https://github.com/zomtec2311/logcleaner</website>
 	<repository type="git">https://github.com/zomtec2311/logcleaner</repository>
