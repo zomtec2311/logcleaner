@@ -67,5 +67,7 @@ Furthermore LogCleaner can detect duplicates in the log file and delete them wit
   <br><br>
   <b>LogCleaner dashboard widgets:</b><br>
   <img src="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerwidget.png" alt="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerwidget.png">
+
+   <img src="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerwidget-dark.png" alt="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerwidget-dark.png">
   </p>
 </details>
