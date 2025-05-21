@@ -13,6 +13,7 @@
 
 ### Changed
 - Design for dark themes
+- Some code cleanups
 
 ### Removed
 - Some dirty code that hid the app from users
