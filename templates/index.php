@@ -24,10 +24,5 @@
  *
  */
 declare(strict_types=1);
-
-use OCP\Util;
-
-Util::addStyle(OCA\LogCleaner\AppInfo\Application::APP_ID, 'logcleaner-main');
-Util::addScript(OCA\LogCleaner\AppInfo\Application::APP_ID, 'logcleaner-main');
 ?>
 <div id="logcleaner"></div>

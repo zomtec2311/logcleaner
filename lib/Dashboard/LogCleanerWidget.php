@@ -88,9 +88,7 @@ use OCP\Util;
 	}
 
 	public function getIconUrl(): string {
-		return $this->urlGenerator->getAbsoluteURL(
-			$this->urlGenerator->imagePath('logcleaner', 'logcleaner-dark.svg')
-		);
+		return $this->urlGenerator->getAbsoluteURL($this->urlGenerator->imagePath('logcleaner', 'logcleaner-dark.svg'));
 	}
 
 	public function getUrl(): ?string {
@@ -194,5 +192,4 @@ use OCP\Util;
     }
 		return $ii;
 	}
-
 }

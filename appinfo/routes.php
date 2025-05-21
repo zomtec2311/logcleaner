@@ -25,18 +25,18 @@
  */
 return [
   'routes' => [
-	   ['name' => 'page#index', 'url' => '/', 'verb' => 'GET'],
-     ['name' => 'page#index', 'url' => '/', 'verb' => 'POST','postfix' => 'logcleaner'],
-     ['name' => 'Settings#getlog', 'url' => '/getdata', 'verb' => 'GET'],
-     ['name' => 'Settings#getalllog', 'url' => '/getalldata', 'verb' => 'GET'],
-     ['name' => 'Settings#emptylog', 'url' => '/emptylog', 'verb' => 'GET'],
-     ['name' => 'Settings#getAppValueZ', 'url' => '/getparam/{who}', 'verb' => 'GET'],
-     ['name' => 'Settings#getAll', 'url' => '/getall', 'verb' => 'GET'],
-     ['name' => 'Settings#delDub', 'url' => '/deldub', 'verb' => 'GET'],
-     ['name' => 'Settings#countDub', 'url' => '/countdub', 'verb' => 'GET'],
-     ['name' => 'Settings#dellog', 'url' => '/dellog/{logid}', 'verb' => 'GET'],
-     ['name' => 'Settings#dellog', 'url' => '/dellog/{logid}', 'verb' => 'GET'],
-     ['name' => 'Settings#setSettingZeilen', 'url' => '/setlines/{who}/{zeilen}', 'verb' => 'GET'],
-     ['name' => 'Settings#logfileandsize', 'url' => '/logfileandsize', 'verb' => 'GET'],
+    ['name' => 'page#index', 'url' => '/', 'verb' => 'GET'],
+    ['name' => 'page#index', 'url' => '/', 'verb' => 'POST','postfix' => 'logcleaner'],
+    ['name' => 'Settings#getlog', 'url' => '/getdata', 'verb' => 'GET'],
+    ['name' => 'Settings#getalllog', 'url' => '/getalldata', 'verb' => 'GET'],
+    ['name' => 'Settings#emptylog', 'url' => '/emptylog', 'verb' => 'GET'],
+    ['name' => 'Settings#getAppValueZ', 'url' => '/getparam/{who}', 'verb' => 'GET'],
+    ['name' => 'Settings#getAll', 'url' => '/getall', 'verb' => 'GET'],
+    ['name' => 'Settings#delDub', 'url' => '/deldub', 'verb' => 'GET'],
+    ['name' => 'Settings#countDub', 'url' => '/countdub', 'verb' => 'GET'],
+    ['name' => 'Settings#dellog', 'url' => '/dellog/{logid}', 'verb' => 'GET'],
+    ['name' => 'Settings#dellog', 'url' => '/dellog/{logid}', 'verb' => 'GET'],
+    ['name' => 'Settings#setSettingZeilen', 'url' => '/setlines/{who}/{zeilen}', 'verb' => 'GET'],
+    ['name' => 'Settings#logfileandsize', 'url' => '/logfileandsize', 'verb' => 'GET'],
   ]
 ];

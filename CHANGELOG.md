@@ -11,6 +11,9 @@
 - folder/file icons for Vue dashboard widget
 - Type of verification so that the app is only accessible to administrators
 
+### Changed
+- Design for dark themes
+
 ### Removed
 - Some dirty code that hid the app from users
 

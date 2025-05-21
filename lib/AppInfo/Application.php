@@ -28,25 +28,20 @@ declare(strict_types=1);
 namespace OCA\LogCleaner\AppInfo;
 
 use OCP\AppFramework\App;
+use OCP\App\IAppManager;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
-
-use OCP\IUserSession;
-use OCP\IGroupManager;
 use OCP\INavigationManager;
 use OCP\IURLGenerator;
 use OCP\IConfig;
 use OCP\IServerContainer;
-
 use OCA\LogCleaner\Dashboard\LogCleanerWidget;
 use OCA\LogCleaner\Dashboard\LogCleanerWidget2;
 
-//use Psr\Container\ContainerInterface;
-
 class Application extends App implements IBootstrap {
 	public const APP_ID = 'logcleaner';
-	/** @psalm-suppress PossiblyUnusedMethod */
+	
 	public function __construct() {
 		parent::__construct(self::APP_ID);
 	}
@@ -56,8 +51,6 @@ class Application extends App implements IBootstrap {
 		$context->registerDashboardWidget(LogCleanerWidget2::class);
 	}
 
-
-
 	public function boot(IBootContext $context): void {
 		$server = $context->getServerContainer();
 		try {
@@ -66,57 +59,39 @@ class Application extends App implements IBootstrap {
 		}
 	}
 
-	private function registerAppsManagementNavigation(IUserSession $userSession, IConfig $config): void {
+	private function registerAppsManagementNavigation(IConfig $config, IAppManager $appManager): void {
 		$container = $this->getContainer();
 		$this->config = $config;
-		$wtpara_menue = (int)$this->config->getAppValue('logcleaner', 'wtparam_menue');
+		$appManager->enableAppForGroups(self::APP_ID, array('admin'), false);
+		$wtpara_menue = (int)$this->config->getAppValue(self::APP_ID, 'wtparam_menue');
 		if (!isset($wtpara_menue)) {
 			$wtpara_menue = 1;
-			$this->config->setAppValue('logcleaner', 'wtparam_menue', 1);
+			$this->config->setAppValue(self::APP_ID, 'wtparam_menue', 1);
 		}
-			/** @var IGroupManager $groupManager */
-			$groupManager = $container->get(IGroupManager::class);
-			/** @var IUser $user */
-		$user = \OC::$server->getUserSession()->getUser();
-		if (!is_null($user)) {
-			if ($groupManager->isInGroup($user->getUID(), 'admin')) {
-				if ($wtpara_menue == 1) {
-					$container->get(INavigationManager::class)->add(function () use ($container) {
-						$urlGenerator = $container->get(IURLGenerator::class);
-						return [
-							'id' => self::APP_ID,
-							'order' => 2,
-							'href' => $urlGenerator->linkToRoute('logcleaner.page.index'),
-							'icon' => $urlGenerator->imagePath('logcleaner', 'logcleaner-dark.svg'),
-							'name' => 'LogCleaner',
-							'type' => 'settings'
-						];
-					});
-				}
-				else {
-					$container->get(INavigationManager::class)->add(function () use ($container) {
-						$urlGenerator = $container->get(IURLGenerator::class);
-						return [
-						'id' => self::APP_ID,
-						'order' => 1000,
-						'href' => $urlGenerator->linkToRoute('logcleaner.page.index'),
-						'icon' => $urlGenerator->imagePath('logcleaner', 'logcleaner.svg'),
-						'name' => 'LogCleaner',
-						];
-					});
-				}
-			}
-			else {
-				$container->get(INavigationManager::class)->add(function () use ($container) {
-					$urlGenerator = $container->get(IURLGenerator::class);
-					return [
-						'id' => self::APP_ID,
-						'order' => 1000,
-						'icon' => $urlGenerator->imagePath('logcleaner', 'logcleaner-none.svg'),
-						'name' => ' ',
-					];
-				});
-			}
+		if ($wtpara_menue == 1) {
+			$container->get(INavigationManager::class)->add(function () use ($container) {
+				$urlGenerator = $container->get(IURLGenerator::class);
+				return [
+					'id' => self::APP_ID,
+					'order' => 2,
+					'href' => $urlGenerator->linkToRoute(self::APP_ID.'.page.index'),
+					'icon' => $urlGenerator->imagePath(self::APP_ID, self::APP_ID.'-dark.svg'),
+					'name' => 'LogCleaner',
+					'type' => 'settings'
+				];
+			});
+		}
+		else {
+			$container->get(INavigationManager::class)->add(function () use ($container) {
+				$urlGenerator = $container->get(IURLGenerator::class);
+				return [
+				'id' => self::APP_ID,
+				'order' => 1000,
+				'href' => $urlGenerator->linkToRoute(self::APP_ID.'.page.index'),
+				'icon' => $urlGenerator->imagePath(self::APP_ID, self::APP_ID.'.svg'),
+				'name' => 'LogCleaner',
+				];
+			});
 		}
 	}
 }

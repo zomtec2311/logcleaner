@@ -42,17 +42,11 @@ use OCP\IConfig;
 
 class Helper
 {
-    //$authorized = json_decode($this->config->getAppValue(Application::APP_ID, 'authorized', '["admin"]'))
-
-    /** @var ISubAdmin $subAdmin */
-
     private IConfig $config;
     private $appName;
     private $l;
     #[NoCSRFRequired]
-    //#[NoAdminRequired]      //<----------- auskommentiert haben nur admins access
-    //#[FrontpageRoute(verb: 'GET', url: '/')]
-   #[FrontpageRoute(verb: 'POST', url: '/')]
+    #[FrontpageRoute(verb: 'POST', url: '/')]
 
    public function __construct(IConfig $config, IL10N $l, $appName){
         $this->config = $config;
@@ -136,7 +130,6 @@ class Helper
             case "7":
               $obja->grund = $this->l->t('Reason') . " :".substr($log[$i][1], 0, $wt_characters) . $trenn;
               break;
-            //default:
           }
           switch ($log[$i][1]) {
             case "0":

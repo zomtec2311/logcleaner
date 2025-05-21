@@ -34,11 +34,11 @@ use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
 use OCP\AppFramework\Http\Attribute\OpenAPI;
 use OCP\AppFramework\Http\TemplateResponse;
-
 use OCP\IConfig;
 use OCP\IRequest;
 use OCP\AppFramework\Services\IInitialState;
 use OCA\LogReader\Service\SettingsService;
+use OCP\Util;
 
 class PageController extends Controller {
 
@@ -55,9 +55,11 @@ class PageController extends Controller {
 	#[FrontpageRoute(verb: 'POST', url: '/')]
 
 	public function index(?string $getParameter, ?int $Zeile): TemplateResponse {
-    return new TemplateResponse(
-			Application::APP_ID,
-			'index',
-		);
+        Util::addStyle(Application::APP_ID, 'logcleaner-main');
+        Util::addScript(Application::APP_ID, 'logcleaner-main');
+        return new TemplateResponse(
+                Application::APP_ID,
+                'index',
+            );
   }
 }
