@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "רַע",
     "very bad" : "רע מאוד",
     "Hint:" : "רֶמֶז:",
+    "deleted" : "נמחק",
     "The color at the top of a box indicates the range of the warning." : "הצבע בחלקו העליון של קופסה מציין את טווח האזהרה.",
     "Okay, I understand and I am sure" : "אוקיי, אני מבין ואני בטוח"
 },

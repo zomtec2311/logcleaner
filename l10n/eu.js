@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "txar",
     "very bad" : "oso txarra",
     "Hint:" : "Aholkua:",
+    "deleted" : "ezabatu",
     "The color at the top of a box indicates the range of the warning." : "Kutxa baten goiko aldean dagoen koloreak abisuaren barrutia adierazten du.",
     "Okay, I understand and I am sure" : "Ados, ulertzen dut eta ziur nago"
 },

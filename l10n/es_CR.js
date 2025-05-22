@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "malo",
     "very bad" : "muy mal",
     "Hint:" : "Pista:",
+    "deleted" : "eliminado",
     "The color at the top of a box indicates the range of the warning." : "El color en la parte superior de una caja indica el rango de la advertencia.",
     "Okay, I understand and I am sure" : "Bien, entiendo y estoy seguro"
 },

@@ -42,6 +42,7 @@
     "bad" : "بد",
     "very bad" : "خیلی بد",
     "Hint:" : "نکته:",
+    "deleted" : "حذف شده",
     "The color at the top of a box indicates the range of the warning." : "رنگ در بالای جعبه نشان دهنده دامنه هشدار است.",
     "Okay, I understand and I am sure" : "خوب ، من می فهمم و مطمئن هستم"
 },"pluralForm" :"nplurals=2; plural=n > 1;"

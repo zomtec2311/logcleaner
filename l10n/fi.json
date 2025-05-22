@@ -42,6 +42,7 @@
     "bad" : "huono",
     "very bad" : "erittäin huono",
     "Hint:" : "Vihje:",
+    "deleted" : "poistettu",
     "The color at the top of a box indicates the range of the warning." : "Laatikon yläosassa oleva väri osoittaa varoituksen alueen.",
     "Okay, I understand and I am sure" : "Okei, ymmärrän ja olen varma"
 },"pluralForm" :"nplurals=2; plural=n != 1;"

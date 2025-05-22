@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "fall",
     "very bad" : "fall-tre",
     "Hint:" : "Damlavaret:",
+    "deleted" : "bet diverket",
     "The color at the top of a box indicates the range of the warning." : "Ar liv e penn ur voest a ziskouez rann ar c'hemenn.",
     "Okay, I understand and I am sure" : "Mat eo, kompren a ran ha sur on"
 },

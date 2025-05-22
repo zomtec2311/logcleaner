@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "millteanach",
     "very bad" : "an -dona",
     "Hint:" : "Leid:",
+    "deleted" : "scriosta",
     "The color at the top of a box indicates the range of the warning." : "Léiríonn an dath ag barr an bhosca raon an rabhaidh.",
     "Okay, I understand and I am sure" : "Ceart go leor, tuigim agus táim cinnte"
 },

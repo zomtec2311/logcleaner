@@ -45,6 +45,7 @@ OC.L10N.register(
     "bad" : "sleg",
     "very bad" : "baie sleg",
     "Hint:" : "Wenk:",
+    "deleted" : "geskrap",
     "The color at the top of a box indicates the range of the warning." : "Die kleur aan die bokant van 'n boks dui op die omvang van die waarskuwing.",
     "_%n duplicate_::_%n duplicates_" : ["%n duplikaat","%n duplikate"]
 },

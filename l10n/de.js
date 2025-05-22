@@ -43,6 +43,7 @@ OC.L10N.register(
     "bad" : "schlecht",
     "very bad" : "sehr schlecht",
     "Hint:" : "Hinweis:",
+    "deleted" : "gelöscht",
     "The color at the top of a box indicates the range of the warning." : "Die Farbe am oberen Rand einer Box zeigt den Bereich der Warnung an.",
     "_%n duplicate_::_%n duplicates_" : ["%n Dublette","%n Dubletten"]
 },

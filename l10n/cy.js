@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "bam",
     "very bad" : "drwg iawn",
     "Hint:" : "Awgrym:",
+    "deleted" : "ngwrthod",
     "The color at the top of a box indicates the range of the warning." : "Mae'r lliw ar ben blwch yn dynodi ystod y rhybudd.",
     "Okay, I understand and I am sure" : "Iawn, dwi'n deall ac rydw i'n siŵr"
 },

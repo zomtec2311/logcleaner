@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "rossz",
     "very bad" : "nagyon rossz",
     "Hint:" : "Célzás:",
+    "deleted" : "törölt",
     "The color at the top of a box indicates the range of the warning." : "A doboz tetején lévő szín jelzi a figyelmeztetés tartományát.",
     "Okay, I understand and I am sure" : "Oké, megértem és biztos vagyok benne"
 },

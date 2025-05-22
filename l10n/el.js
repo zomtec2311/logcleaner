@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "κακός",
     "very bad" : "χειριστός",
     "Hint:" : "Υπαινιγμός:",
+    "deleted" : "διαγραμμένος",
     "The color at the top of a box indicates the range of the warning." : "Το χρώμα στην κορυφή ενός κουτιού υποδεικνύει το εύρος της προειδοποίησης.",
     "Okay, I understand and I am sure" : "Εντάξει, καταλαβαίνω και είμαι σίγουρος"
 },

@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "halb",
     "very bad" : "väga halb",
     "Hint:" : "Vihje:",
+    "deleted" : "kustutatud",
     "The color at the top of a box indicates the range of the warning." : "Värv kasti ülaosas näitab hoiatuse vahemikku.",
     "Okay, I understand and I am sure" : "Olgu, ma saan aru ja olen kindel"
 },
