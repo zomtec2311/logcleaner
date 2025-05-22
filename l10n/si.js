@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "නරක",
     "very bad" : "ඉතා නරකයි",
     "Hint:" : "ඉඟිය:",
+    "deleted" : "මකා දමන ලදි",
     "The color at the top of a box indicates the range of the warning." : "පෙට්ටියක මුදුනේ ඇති වර්ණය අනතුරු ඇඟවීමේ පරාසය පෙන්නුම් කරයි.",
     "Okay, I understand and I am sure" : "හරි, මට තේරෙනවා, මට විශ්වාසයි"
 },

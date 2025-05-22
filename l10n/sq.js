@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "i keq",
     "very bad" : "shumë keq",
     "Hint:" : "Aluzion:",
+    "deleted" : "i fshirë",
     "The color at the top of a box indicates the range of the warning." : "Ngjyra në krye të një kutie tregon gamën e paralajmërimit.",
     "Okay, I understand and I am sure" : "Mirë, e kuptoj dhe jam i sigurt"
 },

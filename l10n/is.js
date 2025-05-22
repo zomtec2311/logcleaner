@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "Slæmt",
     "very bad" : "mjög slæmt",
     "Hint:" : "Vísbending:",
+    "deleted" : "eytt",
     "The color at the top of a box indicates the range of the warning." : "Liturinn efst á kassa gefur til kynna svið viðvörunarinnar.",
     "Okay, I understand and I am sure" : "Allt í lagi, ég skil og ég er viss"
 },

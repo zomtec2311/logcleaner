@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "ცუდი",
     "very bad" : "ძალიან ცუდი",
     "Hint:" : "მინიშნება:",
+    "deleted" : "წაშლილი",
     "The color at the top of a box indicates the range of the warning." : "ყუთის ზედა ნაწილში ფერი მიუთითებს გაფრთხილების დიაპაზონში.",
     "Okay, I understand and I am sure" : "კარგი, მესმის და დარწმუნებული ვარ"
 },

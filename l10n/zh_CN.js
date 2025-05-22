@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "坏的",
     "very bad" : "非常糟糕",
     "Hint:" : "暗示：",
+    "deleted" : "删除",
     "The color at the top of a box indicates the range of the warning." : "盒子顶部的颜色表示警告的范围。",
     "Okay, I understand and I am sure" : "好吧，我明白，我确定"
 },

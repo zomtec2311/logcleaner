@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "ناچار",
     "very bad" : "بەك ناچار",
     "Hint:" : "تەكلىپ:",
+    "deleted" : "ئۆچۈرۈلدى",
     "The color at the top of a box indicates the range of the warning." : "بىر قۇتىنىڭ ئۈستىدىكى رەڭ ئاگاھلاندۇرۇشنىڭ دائىرىسىنى كۆرسىتىدۇ.",
     "Okay, I understand and I am sure" : "ماقۇل, مەن چۈشىنىمەن"
 },

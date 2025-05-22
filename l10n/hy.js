@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "վատ",
     "very bad" : "Շատ վատ",
     "Hint:" : "Ակնարկ.",
+    "deleted" : "ջնջված",
     "The color at the top of a box indicates the range of the warning." : "Տուփի վերեւում գտնվող գույնը ցույց է տալիս նախազգուշացման շրջանակը:",
     "Okay, I understand and I am sure" : "Լավ, ես հասկանում եմ եւ վստահ եմ"
 },

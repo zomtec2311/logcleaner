@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "나쁜",
     "very bad" : "아주 나쁜",
     "Hint:" : "힌트:",
+    "deleted" : "삭제",
     "The color at the top of a box indicates the range of the warning." : "상자 상단의 색상은 경고 범위를 나타냅니다.",
     "Okay, I understand and I am sure" : "좋아, 이해하고 확신합니다"
 },

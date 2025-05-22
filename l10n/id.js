@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "buruk",
     "very bad" : "sangat buruk",
     "Hint:" : "Petunjuk:",
+    "deleted" : "dihapus",
     "The color at the top of a box indicates the range of the warning." : "Warna di bagian atas kotak menunjukkan kisaran peringatan.",
     "Okay, I understand and I am sure" : "Oke, saya mengerti dan saya yakin"
 },

@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "kötü",
     "very bad" : "çok kötü",
     "Hint:" : "İpucu:",
+    "deleted" : "silinmiş",
     "The color at the top of a box indicates the range of the warning." : "Bir kutunun üstündeki renk, uyarı aralığını gösterir.",
     "Okay, I understand and I am sure" : "Tamam, anlıyorum ve eminim"
 },

@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "ຊົ່ວ",
     "very bad" : "ທີ່ບໍ່ດີຫຼາຍ",
     "Hint:" : "ຄໍາແນະນໍາ:",
+    "deleted" : "ລຶບ",
     "The color at the top of a box indicates the range of the warning." : "ສີຢູ່ເທິງສຸດຂອງປ່ອງທີ່ບົ່ງບອກເຖິງລະດັບຂອງຄໍາເຕືອນ.",
     "Okay, I understand and I am sure" : "ໂອເຄ, ຂ້ອຍເຂົ້າໃຈແລະຂ້ອຍແນ່ໃຈ"
 },

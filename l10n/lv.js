@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "slikts",
     "very bad" : "ļoti slikti",
     "Hint:" : "Mājiens:",
+    "deleted" : "izdzēsts",
     "The color at the top of a box indicates the range of the warning." : "Krāsa kastes augšdaļā norāda brīdinājuma diapazonu.",
     "Okay, I understand and I am sure" : "Labi, es saprotu un esmu pārliecināts"
 },

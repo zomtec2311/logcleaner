@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "bloga",
     "very bad" : "Labai blogai",
     "Hint:" : "Užuomina:",
+    "deleted" : "ištrinta",
     "The color at the top of a box indicates the range of the warning." : "Spalva dėžutės viršuje nurodo įspėjimo diapazoną.",
     "Okay, I understand and I am sure" : "Gerai, aš suprantu ir esu tikras"
 },

@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "муу",
     "very bad" : "маш муу",
     "Hint:" : "Зөвлөгөө:",
+    "deleted" : "Уавлид",
     "The color at the top of a box indicates the range of the warning." : "Хайрцгийн дээд хэсэгт байгаа өнгө нь анхааруулгыг илтгэнэ.",
     "Okay, I understand and I am sure" : "За, би ойлгож байна, би итгэлтэй байна"
 },

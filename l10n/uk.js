@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "поганий",
     "very bad" : "дуже погано",
     "Hint:" : "Підказка:",
+    "deleted" : "видалений",
     "The color at the top of a box indicates the range of the warning." : "Колір у верхній частині коробки вказує на діапазон попередження.",
     "Okay, I understand and I am sure" : "Гаразд, я розумію і впевнений"
 },

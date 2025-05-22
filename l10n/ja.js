@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "悪い",
     "very bad" : "非常に悪い",
     "Hint:" : "ヒント：",
+    "deleted" : "削除されました",
     "The color at the top of a box indicates the range of the warning." : "ボックスの上部にある色は、警告の範囲を示しています。",
     "Okay, I understand and I am sure" : "さて、私は理解しています、そして私は確信しています"
 },

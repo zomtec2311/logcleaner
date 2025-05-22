@@ -42,6 +42,7 @@
     "bad" : "rău",
     "very bad" : "Foarte rău",
     "Hint:" : "Aluzie:",
+    "deleted" : "șters",
     "The color at the top of a box indicates the range of the warning." : "Culoarea din partea de sus a unei cutii indică gama avertismentului.",
     "Okay, I understand and I am sure" : "Bine, înțeleg și sunt sigur"
 },"pluralForm" :"nplurals=3; plural=(n == 1) ? 0 : ((n == 0 || n != 1 && n % 100 >= 1 && n % 100 <= 19) ? 1 : 2);"

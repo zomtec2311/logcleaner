@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "rău",
     "very bad" : "Foarte rău",
     "Hint:" : "Aluzie:",
+    "deleted" : "șters",
     "The color at the top of a box indicates the range of the warning." : "Culoarea din partea de sus a unei cutii indică gama avertismentului.",
     "Okay, I understand and I am sure" : "Bine, înțeleg și sunt sigur"
 },

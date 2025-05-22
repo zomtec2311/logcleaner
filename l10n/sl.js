@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "slabo",
     "very bad" : "zelo slabo",
     "Hint:" : "Namig:",
+    "deleted" : "izbrisano",
     "The color at the top of a box indicates the range of the warning." : "Barva na vrhu škatle označuje obseg opozorila.",
     "Okay, I understand and I am sure" : "V redu, razumem in prepričan sem"
 },

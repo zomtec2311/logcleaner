@@ -44,6 +44,7 @@ OC.L10N.register(
     "bad" : "ಕೆಟ್ಟ",
     "very bad" : "ತುಂಬಾ ಕೆಟ್ಟದು",
     "Hint:" : "ಸುಳಿವು:",
+    "deleted" : "ಅಳಿಸಿದ",
     "The color at the top of a box indicates the range of the warning." : "ಪೆಟ್ಟಿಗೆಯ ಮೇಲ್ಭಾಗದಲ್ಲಿರುವ ಬಣ್ಣವು ಎಚ್ಚರಿಕೆಯ ವ್ಯಾಪ್ತಿಯನ್ನು ಸೂಚಿಸುತ್ತದೆ.",
     "Okay, I understand and I am sure" : "ಸರಿ, ನಾನು ಅರ್ಥಮಾಡಿಕೊಂಡಿದ್ದೇನೆ ಮತ್ತು ನನಗೆ ಖಚಿತವಾಗಿದೆ"
 },
