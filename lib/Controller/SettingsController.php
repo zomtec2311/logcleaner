@@ -256,6 +256,15 @@ class SettingsController extends Controller {
 	  }
 	  return round($size, $decimalplaces).' '.$sizes[$i];
 	}
+	
+	public function wtfilesize($size, $decimalplaces = 0) {
+	  //$size = filesize($filename);
+	  $sizes = array('B', 'kB', 'MB', 'GB', 'TB');
+	  for ($i=0; $size > 1024 && $i < count($sizes) - 1; $i++) {
+	     $size /= 1024;
+	  }
+	  return round($size, $decimalplaces).' '.$sizes[$i];
+	}
 
 	public function dellog(string $logid) {
 		if ($logid === null) {
@@ -287,6 +296,8 @@ class SettingsController extends Controller {
 		if (!file_exists($wtlogfile)) {
 			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
 		}
+		
+		$filesizebefore = filesize($wtlogfile);
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		foreach ($wwt as $value) {
 			$tmp_array[] = explode(',"', $value);
@@ -309,7 +320,13 @@ class SettingsController extends Controller {
 			$current = $new_array;
 			file_put_contents($file, $current,LOCK_EX);
 		}
-		return $ii;
+		clearstatcache();
+		$filesizediff = $this->wtfilesize($filesizebefore - filesize($wtlogfile),2);		
+			$obja = new \stdClass();
+			$obja->cntdub = $ii;
+			$obja->sizediff = $filesizediff;
+			$wtarr [] = $obja;
+			return $wtarr;
 	}
 
 	public function countDub() {
