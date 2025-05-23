@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "velmi špatné",
     "Hint:" : "Náznak:",
     "deleted" : "smazáno",
+    "Show messages by this app within the log file" : "Zobrazit zprávy podle této aplikace v souboru protokolu",
+    "yes" : "Ano",
+    "no" : "žádný",
     "The color at the top of a box indicates the range of the warning." : "Barva v horní části krabice označuje rozsah varování.",
     "Okay, I understand and I am sure" : "Dobře, chápu a jsem si jistý"
 },

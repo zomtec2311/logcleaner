@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "Moi malo",
     "Hint:" : "Consello:",
     "deleted" : "eliminado",
+    "Show messages by this app within the log file" : "Amosar mensaxes desta aplicación dentro do ficheiro de rexistro",
+    "yes" : "Si",
+    "no" : "non",
     "The color at the top of a box indicates the range of the warning." : "A cor na parte superior dunha caixa indica o rango do aviso.",
     "Okay, I understand and I am sure" : "Vale, entendo e estou seguro"
 },

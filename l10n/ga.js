@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "an -dona",
     "Hint:" : "Leid:",
     "deleted" : "scriosta",
+    "Show messages by this app within the log file" : "Taispeáin teachtaireachtaí leis an aip seo laistigh den chomhad loga",
+    "yes" : "tá",
+    "no" : "níl",
     "The color at the top of a box indicates the range of the warning." : "Léiríonn an dath ag barr an bhosca raon an rabhaidh.",
     "Okay, I understand and I am sure" : "Ceart go leor, tuigim agus táim cinnte"
 },

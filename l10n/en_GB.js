@@ -44,6 +44,9 @@ OC.L10N.register(
     "very bad" : "very bad",
     "Hint:" : "Hint:",
     "deleted" : "deleted",
+    "Show messages by this app within the log file" : "Show messages by this app within the log file",
+    "yes" : "yes",
+    "no" : "no",
     "The color at the top of a box indicates the range of the warning." : "The color at the top of a box indicates the range of the warning.",
     "_%n duplicate_::_%n duplicates_" : ["%n duplicate","%n duplicates"]
 },

@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "খুব খারাপ",
     "Hint:" : "ইঙ্গিত:",
     "deleted" : "মুছে ফেলা",
+    "Show messages by this app within the log file" : "লগ ফাইলের মধ্যে এই অ্যাপ্লিকেশন দ্বারা বার্তাগুলি দেখান",
+    "yes" : "হ্যাঁ",
+    "no" : "না",
     "The color at the top of a box indicates the range of the warning." : "একটি বাক্সের শীর্ষে রঙটি সতর্কতার পরিসীমা নির্দেশ করে।",
     "Okay, I understand and I am sure" : "ঠিক আছে, আমি বুঝতে পারি এবং আমি নিশ্চিত"
 },

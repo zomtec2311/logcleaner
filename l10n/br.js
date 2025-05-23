@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "fall-tre",
     "Hint:" : "Damlavaret:",
     "deleted" : "bet diverket",
+    "Show messages by this app within the log file" : "Diskouez kemennadennoù gant an arload-mañ e-barzh ar restr roll",
+    "yes" : "Ya",
+    "no" : "Ket",
     "The color at the top of a box indicates the range of the warning." : "Ar liv e penn ur voest a ziskouez rann ar c'hemenn.",
     "Okay, I understand and I am sure" : "Mat eo, kompren a ran ha sur on"
 },

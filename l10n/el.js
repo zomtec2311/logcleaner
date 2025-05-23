@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "χειριστός",
     "Hint:" : "Υπαινιγμός:",
     "deleted" : "διαγραμμένος",
+    "Show messages by this app within the log file" : "Εμφάνιση μηνυμάτων από αυτήν την εφαρμογή στο αρχείο καταγραφής",
+    "yes" : "Ναί",
+    "no" : "Όχι",
     "The color at the top of a box indicates the range of the warning." : "Το χρώμα στην κορυφή ενός κουτιού υποδεικνύει το εύρος της προειδοποίησης.",
     "Okay, I understand and I am sure" : "Εντάξει, καταλαβαίνω και είμαι σίγουρος"
 },

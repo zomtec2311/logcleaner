@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "väga halb",
     "Hint:" : "Vihje:",
     "deleted" : "kustutatud",
+    "Show messages by this app within the log file" : "Kuvage selle rakenduse kaudu logifailis sõnumeid",
+    "yes" : "jah",
+    "no" : "mitte",
     "The color at the top of a box indicates the range of the warning." : "Värv kasti ülaosas näitab hoiatuse vahemikku.",
     "Okay, I understand and I am sure" : "Olgu, ma saan aru ja olen kindel"
 },

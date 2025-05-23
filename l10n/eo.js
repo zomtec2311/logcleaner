@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "tre malbone",
     "Hint:" : "Aludo:",
     "deleted" : "forigita",
+    "Show messages by this app within the log file" : "Montru mesaĝojn per ĉi tiu app en la protokola dosiero",
+    "yes" : "Jes",
+    "no" : "Ne",
     "The color at the top of a box indicates the range of the warning." : "La koloro ĉe la supro de skatolo indikas la gamon de la averto.",
     "Okay, I understand and I am sure" : "Bone, mi komprenas kaj mi certas"
 },

@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "erittäin huono",
     "Hint:" : "Vihje:",
     "deleted" : "poistettu",
+    "Show messages by this app within the log file" : "Näytä tämän sovelluksen viestejä lokitiedoston sisällä",
+    "yes" : "kyllä",
+    "no" : "ei",
     "The color at the top of a box indicates the range of the warning." : "Laatikon yläosassa oleva väri osoittaa varoituksen alueen.",
     "Okay, I understand and I am sure" : "Okei, ymmärrän ja olen varma"
 },

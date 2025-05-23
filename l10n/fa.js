@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "خیلی بد",
     "Hint:" : "نکته:",
     "deleted" : "حذف شده",
+    "Show messages by this app within the log file" : "پیام های این برنامه را در پرونده ورود به سیستم نشان دهید",
+    "yes" : "بله",
+    "no" : "هیچ",
     "The color at the top of a box indicates the range of the warning." : "رنگ در بالای جعبه نشان دهنده دامنه هشدار است.",
     "Okay, I understand and I am sure" : "خوب ، من می فهمم و مطمئن هستم"
 },

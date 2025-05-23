@@ -43,6 +43,9 @@
     "very bad" : "muy mal",
     "Hint:" : "Pista:",
     "deleted" : "eliminado",
+    "Show messages by this app within the log file" : "Mostrar mensajes de esta aplicación dentro del archivo de registro",
+    "yes" : "Sí",
+    "no" : "No",
     "The color at the top of a box indicates the range of the warning." : "El color en la parte superior de una caja indica el rango de la advertencia.",
     "Okay, I understand and I am sure" : "Bien, entiendo y estoy seguro"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

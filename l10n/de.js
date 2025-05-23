@@ -44,6 +44,9 @@ OC.L10N.register(
     "very bad" : "sehr schlecht",
     "Hint:" : "Hinweis:",
     "deleted" : "gelöscht",
+    "Show messages by this app within the log file" : "Zeige Meldungen dieser App in der Logdatei",
+    "yes" : "ja",
+    "no" : "nein",
     "The color at the top of a box indicates the range of the warning." : "Die Farbe am oberen Rand einer Box zeigt den Bereich der Warnung an.",
     "_%n duplicate_::_%n duplicates_" : ["%n Dublette","%n Dubletten"]
 },

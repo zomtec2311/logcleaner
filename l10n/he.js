@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "רע מאוד",
     "Hint:" : "רֶמֶז:",
     "deleted" : "נמחק",
+    "Show messages by this app within the log file" : "הצג הודעות על ידי אפליקציה זו בתוך קובץ היומן",
+    "yes" : "כֵּן",
+    "no" : "לֹא",
     "The color at the top of a box indicates the range of the warning." : "הצבע בחלקו העליון של קופסה מציין את טווח האזהרה.",
     "Okay, I understand and I am sure" : "אוקיי, אני מבין ואני בטוח"
 },

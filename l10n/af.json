@@ -44,6 +44,9 @@
     "very bad" : "baie sleg",
     "Hint:" : "Wenk:",
     "deleted" : "geskrap",
+    "Show messages by this app within the log file" : "Toon boodskappe deur hierdie app binne die loglêer",
+    "yes" : "ja",
+    "no" : "nee",
     "The color at the top of a box indicates the range of the warning." : "Die kleur aan die bokant van 'n boks dui op die omvang van die waarskuwing.",
     "_%n duplicate_::_%n duplicates_" : ["%n duplikaat","%n duplikate"]
 },"pluralForm" :"nplurals=2; plural=n != 1;"
