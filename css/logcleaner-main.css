@@ -20,7 +20,7 @@
 	float: left;
 	display: flex;
 	justify-content: left;
-	margin-top: 22px;
+	margin-top: 5px; 
 }
 #logcleaner-innum {
 	float: left;
@@ -36,7 +36,7 @@
 	float: left;
 	display: flex;
 	justify-content: left;
-	margin: 16px;
+	/* margin: 16px; */
 	font-size: 0.8em;
 }
 #logcleaner-info {
