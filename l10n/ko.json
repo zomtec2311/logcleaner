@@ -43,6 +43,9 @@
     "very bad" : "아주 나쁜",
     "Hint:" : "힌트:",
     "deleted" : "삭제",
+    "Show messages by this app within the log file" : "로그 파일 내 에서이 앱으로 메시지를 표시하십시오",
+    "yes" : "예",
+    "no" : "아니요",
     "The color at the top of a box indicates the range of the warning." : "상자 상단의 색상은 경고 범위를 나타냅니다.",
     "Okay, I understand and I am sure" : "좋아, 이해하고 확신합니다"
 },"pluralForm" :"nplurals=1; plural=0;"

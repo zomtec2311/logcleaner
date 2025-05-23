@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "Foarte rău",
     "Hint:" : "Aluzie:",
     "deleted" : "șters",
+    "Show messages by this app within the log file" : "Afișați mesaje de către această aplicație în fișierul jurnal",
+    "yes" : "Da",
+    "no" : "nu",
     "The color at the top of a box indicates the range of the warning." : "Culoarea din partea de sus a unei cutii indică gama avertismentului.",
     "Okay, I understand and I am sure" : "Bine, înțeleg și sunt sigur"
 },

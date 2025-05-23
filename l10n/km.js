@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "អាក្រក់ណាស់",
     "Hint:" : "ព័ត៌មានជំនួយ:",
     "deleted" : "បានលុប",
+    "Show messages by this app within the log file" : "បង្ហាញសារដោយកម្មវិធីនេះក្នុងឯកសារកំណត់ហេតុ",
+    "yes" : "បាត",
+    "no" : "ដេលក្ផាន",
     "The color at the top of a box indicates the range of the warning." : "ពណ៌នៅផ្នែកខាងលើនៃប្រអប់មួយបង្ហាញពីជួរនៃការព្រមាន។",
     "Okay, I understand and I am sure" : "មិនអីទេខ្ញុំយល់ហើយខ្ញុំប្រាកដ"
 },

@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "çok kötü",
     "Hint:" : "İpucu:",
     "deleted" : "silinmiş",
+    "Show messages by this app within the log file" : "Günlük dosyasında bu uygulamaya göre mesajları göster",
+    "yes" : "Evet",
+    "no" : "HAYIR",
     "The color at the top of a box indicates the range of the warning." : "Bir kutunun üstündeki renk, uyarı aralığını gösterir.",
     "Okay, I understand and I am sure" : "Tamam, anlıyorum ve eminim"
 },

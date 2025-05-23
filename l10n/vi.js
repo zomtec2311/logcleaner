@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "Rất tệ",
     "Hint:" : "Gợi ý:",
     "deleted" : "đã xóa",
+    "Show messages by this app within the log file" : "Hiển thị tin nhắn của ứng dụng này trong tệp nhật ký",
+    "yes" : "Đúng",
+    "no" : "KHÔNG",
     "The color at the top of a box indicates the range of the warning." : "Màu ở trên cùng của một hộp cho biết phạm vi của cảnh báo.",
     "Okay, I understand and I am sure" : "Được rồi, tôi hiểu và tôi chắc chắn"
 },

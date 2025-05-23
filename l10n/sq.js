@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "shumë keq",
     "Hint:" : "Aluzion:",
     "deleted" : "i fshirë",
+    "Show messages by this app within the log file" : "Tregoni mesazhe nga kjo aplikacion brenda skedarit log",
+    "yes" : "po",
+    "no" : "jo",
     "The color at the top of a box indicates the range of the warning." : "Ngjyra në krye të një kutie tregon gamën e paralajmërimit.",
     "Okay, I understand and I am sure" : "Mirë, e kuptoj dhe jam i sigurt"
 },

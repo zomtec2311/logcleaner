@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "ļoti slikti",
     "Hint:" : "Mājiens:",
     "deleted" : "izdzēsts",
+    "Show messages by this app within the log file" : "Parādiet šīs lietotnes ziņojumus žurnāla failā",
+    "yes" : "jā",
+    "no" : "ne",
     "The color at the top of a box indicates the range of the warning." : "Krāsa kastes augšdaļā norāda brīdinājuma diapazonu.",
     "Okay, I understand and I am sure" : "Labi, es saprotu un esmu pārliecināts"
 },

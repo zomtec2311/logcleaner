@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "veľmi zlý",
     "Hint:" : "Náznak:",
     "deleted" : "vymazaný",
+    "Show messages by this app within the log file" : "Zobraziť správy podľa tejto aplikácie v súbore protokolu",
+    "yes" : "áno",
+    "no" : "nie",
     "The color at the top of a box indicates the range of the warning." : "Farba v hornej časti škatule označuje rozsah varovania.",
     "Okay, I understand and I am sure" : "Dobre, chápem a som si istý"
 },

@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "sangat buruk",
     "Hint:" : "Petunjuk:",
     "deleted" : "dihapus",
+    "Show messages by this app within the log file" : "Tampilkan pesan melalui aplikasi ini di dalam file log",
+    "yes" : "Ya",
+    "no" : "TIDAK",
     "The color at the top of a box indicates the range of the warning." : "Warna di bagian atas kotak menunjukkan kisaran peringatan.",
     "Okay, I understand and I am sure" : "Oke, saya mengerti dan saya yakin"
 },

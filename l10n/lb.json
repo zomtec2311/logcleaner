@@ -43,6 +43,9 @@
     "very bad" : "ganz schlecht",
     "Hint:" : "Hiweis:",
     "deleted" : "opgäscht",
+    "Show messages by this app within the log file" : "Show Messagen duerch dës App an der Logbuchdatei",
+    "yes" : "Jo",
+    "no" : "Nee",
     "The color at the top of a box indicates the range of the warning." : "D'Faarf uewen op enger Këscht weist d'Gamme vun der Warnung.",
     "Okay, I understand and I am sure" : "Okay, ech verstinn an ech si sécher"
 },"pluralForm" :"nplurals=2; plural=n != 1;"

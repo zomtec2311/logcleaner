@@ -43,6 +43,9 @@
     "very bad" : "بەك ناچار",
     "Hint:" : "تەكلىپ:",
     "deleted" : "ئۆچۈرۈلدى",
+    "Show messages by this app within the log file" : "خاتىرە ھۆججىتى ئىچىدىكى بۇ دېتال ئارقىلىق ئۇچۇرلارنى كۆرسىتىڭ",
+    "yes" : "ھەئە",
+    "no" : "ياق",
     "The color at the top of a box indicates the range of the warning." : "بىر قۇتىنىڭ ئۈستىدىكى رەڭ ئاگاھلاندۇرۇشنىڭ دائىرىسىنى كۆرسىتىدۇ.",
     "Okay, I understand and I am sure" : "ماقۇل, مەن چۈشىنىمەن"
 },"pluralForm" :"nplurals=2; plural=n != 1;"

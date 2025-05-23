@@ -43,6 +43,9 @@
     "very bad" : "Շատ վատ",
     "Hint:" : "Ակնարկ.",
     "deleted" : "ջնջված",
+    "Show messages by this app within the log file" : "Show ուցադրել հաղորդագրությունները այս ծրագրի միջոցով տեղեկամատյանում",
+    "yes" : "այո",
+    "no" : "ոչ",
     "The color at the top of a box indicates the range of the warning." : "Տուփի վերեւում գտնվող գույնը ցույց է տալիս նախազգուշացման շրջանակը:",
     "Okay, I understand and I am sure" : "Լավ, ես հասկանում եմ եւ վստահ եմ"
 },"pluralForm" :"nplurals=2; plural=n > 1;"

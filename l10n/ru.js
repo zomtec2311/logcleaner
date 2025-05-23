@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "очень плохо",
     "Hint:" : "Намекать:",
     "deleted" : "удален",
+    "Show messages by this app within the log file" : "Показать сообщения этим приложением в файле журнала",
+    "yes" : "да",
+    "no" : "нет",
     "The color at the top of a box indicates the range of the warning." : "Цвет в верхней части коробки указывает на диапазон предупреждения.",
     "Okay, I understand and I am sure" : "Хорошо, я понимаю, и я уверен"
 },

@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "ძალიან ცუდი",
     "Hint:" : "მინიშნება:",
     "deleted" : "წაშლილი",
+    "Show messages by this app within the log file" : "ამ პროგრამის მიერ შეტყობინებების ჩვენება ჟურნალის ფაილში",
+    "yes" : "დიახ",
+    "no" : "არა",
     "The color at the top of a box indicates the range of the warning." : "ყუთის ზედა ნაწილში ფერი მიუთითებს გაფრთხილების დიაპაზონში.",
     "Okay, I understand and I am sure" : "კარგი, მესმის და დარწმუნებული ვარ"
 },

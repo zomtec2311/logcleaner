@@ -44,6 +44,9 @@ OC.L10N.register(
     "Hint:" : "Suggerimento:",
     "deleted" : "cancellato",
     "The color at the top of a box indicates the range of the warning." : "Il colore nella parte superiore di una scatola indica l'intervallo dell'avvertimento.",
+    "Show messages by this app within the log file" : "Mostra i messaggi da questa app all'interno del file di registro",
+    "yes" : "SÌ",
+    "no" : "NO",
     "Okay, I understand and I am sure" : "Ok, ho capito e ne sono sicuro"
 },
 "nplurals=2; plural=(n != 1);");

@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "mycket dålig",
     "Hint:" : "Antydan:",
     "deleted" : "raderad",
+    "Show messages by this app within the log file" : "Visa meddelanden från den här appen i loggfilen",
+    "yes" : "ja",
+    "no" : "inga",
     "The color at the top of a box indicates the range of the warning." : "Färgen överst i en låda indikerar varningsområdet.",
     "Okay, I understand and I am sure" : "Okej, jag förstår och jag är säker"
 },

@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "Labai blogai",
     "Hint:" : "Užuomina:",
     "deleted" : "ištrinta",
+    "Show messages by this app within the log file" : "Rodyti pranešimus pagal šią programą žurnalo faile",
+    "yes" : "taip",
+    "no" : "ne",
     "The color at the top of a box indicates the range of the warning." : "Spalva dėžutės viršuje nurodo įspėjimo diapazoną.",
     "Okay, I understand and I am sure" : "Gerai, aš suprantu ir esu tikras"
 },

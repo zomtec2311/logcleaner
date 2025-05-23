@@ -43,6 +43,9 @@
     "very bad" : "nagyon rossz",
     "Hint:" : "Célzás:",
     "deleted" : "törölt",
+    "Show messages by this app within the log file" : "Az üzenetek megjelenítése az alkalmazás által a naplófájlon belül",
+    "yes" : "igen",
+    "no" : "nem",
     "The color at the top of a box indicates the range of the warning." : "A doboz tetején lévő szín jelzi a figyelmeztetés tartományát.",
     "Okay, I understand and I am sure" : "Oké, megértem és biztos vagyok benne"
 },"pluralForm" :"nplurals=2; plural=n != 1;"

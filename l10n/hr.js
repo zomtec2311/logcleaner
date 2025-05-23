@@ -45,6 +45,9 @@ OC.L10N.register(
     "very bad" : "vrlo loš",
     "Hint:" : "Savjet:",
     "deleted" : "izbrisan",
+    "Show messages by this app within the log file" : "Prikaži poruke ove aplikacije u datoteci dnevnika",
+    "yes" : "Da",
+    "no" : "Ne",
     "The color at the top of a box indicates the range of the warning." : "Boja na vrhu kutije ukazuje na raspon upozorenja.",
     "Okay, I understand and I am sure" : "U redu, razumijem i siguran sam"
 },
