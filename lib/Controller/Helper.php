@@ -27,17 +27,10 @@ declare(strict_types=1);
 
 namespace OCA\LogCleaner\Controller;
 
-use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\Attribute\FrontpageRoute;
 use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
-use OCP\AppFramework\Http\TemplateResponse;
-use OCP\IRequest;
 use OCP\IL10N;
-use OCA\LogReader\Service\SettingsService;
-use OCP\AppFramework\Services\IInitialState;
-use OCP\Util;
-use OCP\HintException;
 use OCP\IConfig;
 
 class Helper

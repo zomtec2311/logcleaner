@@ -36,13 +36,11 @@ use OCP\AppFramework\Http\Attribute\OpenAPI;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IConfig;
 use OCP\IRequest;
-use OCP\AppFramework\Services\IInitialState;
-use OCA\LogReader\Service\SettingsService;
 use OCP\Util;
 
 class PageController extends Controller {
 
-    public function __construct(private IConfig $config, IRequest $request, private IInitialState $initialState, private SettingsService $settingsService, private Helper $helper)
+    public function __construct(private IConfig $config, IRequest $request, private Helper $helper)
     {
         $this->config = $config;
         $this->helper = $helper;

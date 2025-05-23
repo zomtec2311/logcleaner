@@ -29,12 +29,10 @@ use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\Attribute\UseSession;
-use OCP\AppFramework\Http\DataResponse;
 use OCP\IL10N;
 use OCP\IRequest;
 use OCP\IConfig;
-use OCP\AppFramework\Services\IInitialState;
-use OCA\LogReader\Service\SettingsService;
+use Psr\Log\LoggerInterface;
 
 class SettingsController extends Controller {
 	private $config;
@@ -43,9 +41,8 @@ class SettingsController extends Controller {
 		IL10N $l,
 		IConfig $config,
 		IRequest $request,
-		private IInitialState $initialState,
-		private SettingsService $settingsService,
-		private Helper $helper
+		private Helper $helper,
+		private readonly LoggerInterface $logger,
 	) {
 		parent::__construct('logcleaner', $request);
 		$this->l = $l;
@@ -72,7 +69,6 @@ class SettingsController extends Controller {
 		$wt_out = "";
 		$array = [];
 		$wtarr =[];
-		$this->initialState->provideInitialState('settings', $this->settingsService->getAppSettings());
 		$wtlogfile = $this->config->getSystemValue('logfile');
 		if (!file_exists($wtlogfile)) {
 			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
@@ -151,7 +147,6 @@ class SettingsController extends Controller {
 		$wt_out = "";
 		$array = [];
 		$wtarr =[];
-		$this->initialState->provideInitialState('settings', $this->settingsService->getAppSettings());
 		$wtlogfile = $this->config->getSystemValue('logfile');
 		if (!file_exists($wtlogfile)) {
 			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
@@ -175,6 +170,7 @@ class SettingsController extends Controller {
 		$wt_art = (int)$this->helper->getAppValue("logcleaner_wt_art");
 		$wt_characters = (int)$this->helper->getAppValue("logcleaner_wt_characters");
 		$wtpara_menue = (int)$this->helper->getAppValue('wtparam_menue');
+		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
 		if((!isset($wtpara_menue)) || ($wtpara_menue === 0)) {
 			$this->helper->setAppValue('wtparam_menue', 1);
 		}
@@ -185,6 +181,9 @@ class SettingsController extends Controller {
 		if((!isset($wt_art)) || ($wt_art === 0)) {
 			$wt_art = 2;
 			$this->helper->setAppValue('logcleaner_wt_art', 9);
+		}
+		if((!isset($wtpara_logmessage)) || ($wtpara_logmessage === 0)) {
+			$this->helper->setAppValue('wtparam_logmessage', 2);
 		}
 		if((!isset($wt_characters)) || ($wt_characters === 0)) {
 			$wt_characters = 500;
@@ -258,7 +257,6 @@ class SettingsController extends Controller {
 	}
 	
 	public function wtfilesize($size, $decimalplaces = 0) {
-	  //$size = filesize($filename);
 	  $sizes = array('B', 'kB', 'MB', 'GB', 'TB');
 	  for ($i=0; $size > 1024 && $i < count($sizes) - 1; $i++) {
 	     $size /= 1024;
@@ -285,6 +283,7 @@ class SettingsController extends Controller {
 	}
 
 	public function delDub() {
+		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
 		$i = 0;
 		$ii = 0;
 		$tmp_array = array();
@@ -326,6 +325,10 @@ class SettingsController extends Controller {
 			$obja->cntdub = $ii;
 			$obja->sizediff = $filesizediff;
 			$wtarr [] = $obja;
+			if ($wtpara_logmessage===2) {
+				if ($ii===1) $this->logger->info(sprintf('LogCleaner: %d duplicate was deleted and %s of disk space were cleared. This log entry can be deleted without verification.', $ii, $filesizediff)); //blau
+				else $this->logger->info(sprintf('LogCleaner: %d duplicates were deleted and %s of disk space were cleared. This log entry can be deleted without verification.', $ii, $filesizediff)); //blau
+			}
 			return $wtarr;
 	}
 
@@ -358,11 +361,15 @@ class SettingsController extends Controller {
 	}
 
 	public function emptylog() {
+		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
 		$wtlogfile = $this->config->getSystemValue('logfile');
 		if (!file_exists($wtlogfile)) {
 			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
 		}
 		file_put_contents($wtlogfile, "",LOCK_EX);
+		if ($wtpara_logmessage===2) {
+			$this->logger->info('LogCleaner: log file has been emptied. This log entry can be deleted without verification.');
+		}
 		return;
 	}
 }

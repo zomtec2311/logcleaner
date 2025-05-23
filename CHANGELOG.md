@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.1.4
+
+### Added
+- New setting parameter for info messages
+- Info messages for actions
+
+### Changed
+- language files
+- controller methods
+- some js code
+
+### Fixed
+- Bug calculating colors for the widget
+
 ## 1.1.3
 
 ### Fixed
