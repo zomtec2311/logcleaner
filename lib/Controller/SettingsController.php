@@ -238,7 +238,6 @@ class SettingsController extends Controller {
 			$obja->file = $wtlogfile;
 			$obja->filearr = $teile;
 			$obja->appversion = $this->appManager->getAppVersion('logcleaner', true);
-			//$obja->filearr = $teile;
 			$obja->filesize = $this->show_filesize($wtlogfile,2);
 			$wtarr [] = $obja;
 			return $wtarr;
