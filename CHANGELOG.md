@@ -10,6 +10,7 @@
 - language files
 - controller methods
 - some js code
+- Changed the appearance of the info button from image to Unicode character due to path issues on some systems
 
 ### Fixed
 - Bug calculating colors for the widget
