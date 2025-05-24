@@ -34,6 +34,8 @@ use OCP\IRequest;
 use OCP\IConfig;
 use Psr\Log\LoggerInterface;
 
+use OCP\App\IAppManager;
+
 class SettingsController extends Controller {
 	private $config;
 	private $l;
@@ -43,11 +45,13 @@ class SettingsController extends Controller {
 		IRequest $request,
 		private Helper $helper,
 		private readonly LoggerInterface $logger,
+		private IAppManager $appManager
 	) {
 		parent::__construct('logcleaner', $request);
 		$this->l = $l;
 		$this->config = $config;
 		$this->helper = $helper;
+		$this->appManager = $appManager;
 	}
 
 	#[NoAdminRequired]
@@ -233,6 +237,8 @@ class SettingsController extends Controller {
 			$obja = new \stdClass();
 			$obja->file = $wtlogfile;
 			$obja->filearr = $teile;
+			$obja->appversion = $this->appManager->getAppVersion('logcleaner', true);
+			//$obja->filearr = $teile;
 			$obja->filesize = $this->show_filesize($wtlogfile,2);
 			$wtarr [] = $obja;
 			return $wtarr;
