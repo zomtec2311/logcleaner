@@ -47,6 +47,8 @@
     "yes" : "kyllä",
     "no" : "ei",
     "The color at the top of a box indicates the range of the warning." : "Laatikon yläosassa oleva väri osoittaa varoituksen alueen.",
-    "Okay, I understand and I am sure" : "Okei, ymmärrän ja olen varma"
+    "Okay, I understand and I am sure" : "Okei, ymmärrän ja olen varma",
+    "Amount" : "Määrä",
+    "Apps with the most log entries" : "Sovellukset, joissa on eniten loki merkinnät"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

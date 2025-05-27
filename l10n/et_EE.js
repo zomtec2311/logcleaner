@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "jah",
     "no" : "mitte",
     "The color at the top of a box indicates the range of the warning." : "Värv kasti ülaosas näitab hoiatuse vahemikku.",
-    "Okay, I understand and I am sure" : "Olgu, ma saan aru ja olen kindel"
+    "Okay, I understand and I am sure" : "Olgu, ma saan aru ja olen kindel",
+    "Amount" : "Summa",
+    "Apps with the most log entries" : "Rakendused, kus on kõige rohkem logikirjeid"
 },
 "nplurals=2; plural=n != 1;");

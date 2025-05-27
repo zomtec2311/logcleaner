@@ -50,6 +50,8 @@ OC.L10N.register(
     "yes" : "ja",
     "no" : "nee",
     "The color at the top of a box indicates the range of the warning." : "Die kleur aan die bokant van 'n boks dui op die omvang van die waarskuwing.",
-    "_%n duplicate_::_%n duplicates_" : ["%n duplikaat","%n duplikate"]
+    "_%n duplicate_::_%n duplicates_" : ["%n duplikaat","%n duplikate"],
+    "Amount" : "Bedrag",
+    "Apps with the most log entries" : "Apps met die meeste log -inskrywings"
 },
 "nplurals=2; plural=n != 1;");

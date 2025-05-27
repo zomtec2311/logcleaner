@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "হ্যাঁ",
     "no" : "না",
     "The color at the top of a box indicates the range of the warning." : "একটি বাক্সের শীর্ষে রঙটি সতর্কতার পরিসীমা নির্দেশ করে।",
-    "Okay, I understand and I am sure" : "ঠিক আছে, আমি বুঝতে পারি এবং আমি নিশ্চিত"
+    "Okay, I understand and I am sure" : "ঠিক আছে, আমি বুঝতে পারি এবং আমি নিশ্চিত",
+    "Amount" : "পরিমাণ",
+    "Apps with the most log entries" : "সর্বাধিক লগ এন্ট্রি সহ অ্যাপ্লিকেশন"
 },
 "nplurals=2; plural=n > 1;");

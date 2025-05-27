@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "bəli",
     "no" : "yox",
     "The color at the top of a box indicates the range of the warning." : "Bir qutunun başındakı rəng xəbərdarlığın aralığını göstərir.",
-    "Okay, I understand and I am sure" : "Tamam, başa düşürəm və əminəm"
+    "Okay, I understand and I am sure" : "Tamam, başa düşürəm və əminəm",
+    "Amount" : "Miqdar",
+    "Apps with the most log entries" : "Ən çox giriş girişləri olan tətbiqlər"
 },
 "nplurals=2; plural=n != 1;");

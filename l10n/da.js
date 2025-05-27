@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "ja",
     "no" : "ingen",
     "The color at the top of a box indicates the range of the warning." : "Farven øverst på en kasse angiver rækkevidden af ​​advarslen.",
-    "Okay, I understand and I am sure" : "Okay, jeg forstår det, og jeg er sikker på"
+    "Okay, I understand and I am sure" : "Okay, jeg forstår det, og jeg er sikker på",
+    "Amount" : "Beløb",
+    "Apps with the most log entries" : "Apps med de mest logposter"
 },
 "nplurals=2; plural=n != 1;");

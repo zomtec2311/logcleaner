@@ -47,6 +47,8 @@
     "yes" : "כֵּן",
     "no" : "לֹא",
     "The color at the top of a box indicates the range of the warning." : "הצבע בחלקו העליון של קופסה מציין את טווח האזהרה.",
-    "Okay, I understand and I am sure" : "אוקיי, אני מבין ואני בטוח"
+    "Okay, I understand and I am sure" : "אוקיי, אני מבין ואני בטוח",
+    "Amount" : "סְכוּם",
+    "Apps with the most log entries" : "אפליקציות עם ערכי היומן ביותר"
 },"pluralForm" :"nplurals=3; plural=(n == 1) ? 0 : ((n == 2) ? 1 : 2);"
 }

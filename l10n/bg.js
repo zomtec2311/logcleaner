@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "Да",
     "no" : "не",
     "The color at the top of a box indicates the range of the warning." : "Цветът в горната част на кутията показва обхвата на предупреждението.",
-    "Okay, I understand and I am sure" : "Добре, разбирам и съм сигурен"
+    "Okay, I understand and I am sure" : "Добре, разбирам и съм сигурен",
+    "Amount" : "Сума",
+    "Apps with the most log entries" : "Приложения с най -много записи в дневника"
 },
 "nplurals=2; plural=n != 1;");

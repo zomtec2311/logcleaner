@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "Jes",
     "no" : "Ne",
     "The color at the top of a box indicates the range of the warning." : "La koloro ĉe la supro de skatolo indikas la gamon de la averto.",
-    "Okay, I understand and I am sure" : "Bone, mi komprenas kaj mi certas"
+    "Okay, I understand and I am sure" : "Bone, mi komprenas kaj mi certas",
+    "Amount" : "Kvanto",
+    "Apps with the most log entries" : "Aplikoj kun la plej multaj enskribaj enskriboj"
 },
 "nplurals=2; plural=n != 1;");

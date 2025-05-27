@@ -48,6 +48,8 @@ OC.L10N.register(
     "yes" : "yes",
     "no" : "no",
     "The color at the top of a box indicates the range of the warning." : "The color at the top of a box indicates the range of the warning.",
-    "_%n duplicate_::_%n duplicates_" : ["%n duplicate","%n duplicates"]
+    "_%n duplicate_::_%n duplicates_" : ["%n duplicate","%n duplicates"],
+    "Amount" : "Amount",
+    "Apps with the most log entries" : "Apps with the most log entries"
 },
 "nplurals=2; plural=(n != 1);");

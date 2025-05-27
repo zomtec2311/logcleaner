@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "بله",
     "no" : "هیچ",
     "The color at the top of a box indicates the range of the warning." : "رنگ در بالای جعبه نشان دهنده دامنه هشدار است.",
-    "Okay, I understand and I am sure" : "خوب ، من می فهمم و مطمئن هستم"
+    "Okay, I understand and I am sure" : "خوب ، من می فهمم و مطمئن هستم",
+    "Amount" : "مقدار",
+    "Apps with the most log entries" : "برنامه هایی با بیشترین ورودی های ورود به سیستم"
 },
 "nplurals=2; plural=n > 1;");

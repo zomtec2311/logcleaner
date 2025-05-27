@@ -47,6 +47,8 @@ OC.L10N.register(
     "yes" : "Oui",
     "no" : "Non",
     "The color at the top of a box indicates the range of the warning." : "La couleur en haut d'une boîte indique la plage de l'avertissement.",
-    "Okay, I understand and I am sure" : "D'accord, je comprends et je suis sûr"
+    "Okay, I understand and I am sure" : "D'accord, je comprends et je suis sûr",
+    "Amount" : "Montant",
+    "Apps with the most log entries" : "Applications avec le plus de journaux"
 },
 "nplurals=2; plural=(n != 1);");

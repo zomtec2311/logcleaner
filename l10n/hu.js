@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "igen",
     "no" : "nem",
     "The color at the top of a box indicates the range of the warning." : "A doboz tetején lévő szín jelzi a figyelmeztetés tartományát.",
-    "Okay, I understand and I am sure" : "Oké, megértem és biztos vagyok benne"
+    "Okay, I understand and I am sure" : "Oké, megértem és biztos vagyok benne",
+    "Amount" : "Összeg",
+    "Apps with the most log entries" : "Alkalmazások a legtöbb naplóbejegyzéssel"
 },
 "nplurals=2; plural=n != 1;");

@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "ie",
     "no" : "Na",
     "The color at the top of a box indicates the range of the warning." : "Mae'r lliw ar ben blwch yn dynodi ystod y rhybudd.",
-    "Okay, I understand and I am sure" : "Iawn, dwi'n deall ac rydw i'n siŵr"
+    "Okay, I understand and I am sure" : "Iawn, dwi'n deall ac rydw i'n siŵr",
+    "Amount" : "Swm",
+    "Apps with the most log entries" : "Apiau gyda'r nifer fwyaf o gofnodion log"
 },
 "nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n == 3) ? 3 : ((n == 6) ? 4 : 5))));");

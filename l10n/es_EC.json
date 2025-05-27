@@ -47,6 +47,8 @@
     "yes" : "Sí",
     "no" : "No",
     "The color at the top of a box indicates the range of the warning." : "El color en la parte superior de una caja indica el rango de la advertencia.",
-    "Okay, I understand and I am sure" : "Bien, entiendo y estoy seguro"
+    "Okay, I understand and I am sure" : "Bien, entiendo y estoy seguro",
+    "Amount" : "Cantidad",
+    "Apps with the most log entries" : "Aplicaciones con la mayoría de las entradas de registro"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

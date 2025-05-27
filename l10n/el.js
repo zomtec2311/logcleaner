@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "Ναί",
     "no" : "Όχι",
     "The color at the top of a box indicates the range of the warning." : "Το χρώμα στην κορυφή ενός κουτιού υποδεικνύει το εύρος της προειδοποίησης.",
-    "Okay, I understand and I am sure" : "Εντάξει, καταλαβαίνω και είμαι σίγουρος"
+    "Okay, I understand and I am sure" : "Εντάξει, καταλαβαίνω και είμαι σίγουρος",
+    "Amount" : "Ποσό",
+    "Apps with the most log entries" : "Εφαρμογές με τις περισσότερες καταχωρήσεις καταγραφής"
 },
 "nplurals=2; plural=n != 1;");
