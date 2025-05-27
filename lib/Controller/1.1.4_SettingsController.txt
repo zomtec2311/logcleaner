@@ -364,32 +364,6 @@ class SettingsController extends Controller {
     }
 		return $ii;
 	}
-	
-	public function logapps() {
-		$i = 0;
-		$ii = 0;
-		$iii = 0;
-		$tmp_array = array();
-		$key_array = array();
-		$temp_array = array();
-		$wtlogfile = $this->config->getSystemValue('logfile');
-		if (!file_exists($wtlogfile)) {
-			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-		}
-		$wwt = $this->helper->wtlogtoarr($wtlogfile);
-		foreach ($wwt as $value) {
-			$tmp_array[] = explode(',"', $value);
-		}
-		unset($value);
-		foreach($tmp_array as $val) {
-			$teil = substr(str_replace('url":"/', "", $val[7]), 0, -1);
-			$teile = explode("/", $teil);
-			if($teile[0] == 'apps') $temp_array[$i] = $teile[1];
-			else $temp_array[$i] = substr(str_replace('app":"', "", $val[5]), 0, -1);			
-      $i++;
-    }  
-    return $temp_array;
-	}
 
 	public function emptylog() {
 		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');

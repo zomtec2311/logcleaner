@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.5
+
+### Added
+- New feature within info popover. Now you can see apps with the most log entries sorted
+- New text strings within language files
+
+### Fixed
+- Bug in view for small devices
+
 ## 1.1.4
 
 ### Added

@@ -34,6 +34,7 @@ return [
     ['name' => 'Settings#getAll', 'url' => '/getall', 'verb' => 'GET'],
     ['name' => 'Settings#delDub', 'url' => '/deldub', 'verb' => 'GET'],
     ['name' => 'Settings#countDub', 'url' => '/countdub', 'verb' => 'GET'],
+    ['name' => 'Settings#logapps', 'url' => '/logapps', 'verb' => 'GET'],
     ['name' => 'Settings#dellog', 'url' => '/dellog/{logid}', 'verb' => 'GET'],
     ['name' => 'Settings#dellog', 'url' => '/dellog/{logid}', 'verb' => 'GET'],
     ['name' => 'Settings#setSettingZeilen', 'url' => '/setlines/{who}/{zeilen}', 'verb' => 'GET'],

@@ -17,6 +17,8 @@
 	float :left;
 }
 #logcleaner-infobtn {
+    /* font-family: Arial; */
+    font-weight: normal;
 	float: left;
 	display: flex;
 	justify-content: left;
