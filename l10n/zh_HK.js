@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "是的",
     "no" : "不",
     "The color at the top of a box indicates the range of the warning." : "盒子頂部的顏色表示警告的範圍。",
-    "Okay, I understand and I am sure" : "好吧，我明白，我確定"
+    "Okay, I understand and I am sure" : "好吧，我明白，我確定",
+    "Amount" : "數量",
+    "Apps with the most log entries" : "最多的日誌條目的應用程序"
 },
 "nplurals=1; plural=0;");

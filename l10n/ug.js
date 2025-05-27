@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "ھەئە",
     "no" : "ياق",
     "The color at the top of a box indicates the range of the warning." : "بىر قۇتىنىڭ ئۈستىدىكى رەڭ ئاگاھلاندۇرۇشنىڭ دائىرىسىنى كۆرسىتىدۇ.",
-    "Okay, I understand and I am sure" : "ماقۇل, مەن چۈشىنىمەن"
+    "Okay, I understand and I am sure" : "ماقۇل, مەن چۈشىنىمەن",
+    "Amount" : "سومما",
+    "Apps with the most log entries" : "ئەڭ كۆپ خاتىرە بۇيۇملار بار ئەپلەر"
 },
 "nplurals=2; plural=n != 1;");

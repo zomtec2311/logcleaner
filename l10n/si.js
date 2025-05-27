@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "ඔව්",
     "no" : "නැත",
     "The color at the top of a box indicates the range of the warning." : "පෙට්ටියක මුදුනේ ඇති වර්ණය අනතුරු ඇඟවීමේ පරාසය පෙන්නුම් කරයි.",
-    "Okay, I understand and I am sure" : "හරි, මට තේරෙනවා, මට විශ්වාසයි"
+    "Okay, I understand and I am sure" : "හරි, මට තේරෙනවා, මට විශ්වාසයි",
+    "Amount" : "මුදල",
+    "Apps with the most log entries" : "බොහෝ ලොග් ඇතුළත් කිරීම් සහිත යෙදුම්"
 },
 "nplurals=2; plural=n > 1;");

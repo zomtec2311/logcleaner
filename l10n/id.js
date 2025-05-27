@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "Ya",
     "no" : "TIDAK",
     "The color at the top of a box indicates the range of the warning." : "Warna di bagian atas kotak menunjukkan kisaran peringatan.",
-    "Okay, I understand and I am sure" : "Oke, saya mengerti dan saya yakin"
+    "Okay, I understand and I am sure" : "Oke, saya mengerti dan saya yakin",
+    "Amount" : "Jumlah",
+    "Apps with the most log entries" : "Aplikasi dengan entri log terbanyak"
 },
 "nplurals=1; plural=0;");

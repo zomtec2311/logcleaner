@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "ใช่",
     "no" : "เลขที่",
     "The color at the top of a box indicates the range of the warning." : "สีที่ด้านบนของกล่องหมายถึงช่วงของคำเตือน",
-    "Okay, I understand and I am sure" : "โอเคฉันเข้าใจและฉันแน่ใจ"
+    "Okay, I understand and I am sure" : "โอเคฉันเข้าใจและฉันแน่ใจ",
+    "Amount" : "จำนวน",
+    "Apps with the most log entries" : "แอพที่มีรายการบันทึกมากที่สุด"
 },
 "nplurals=1; plural=0;");

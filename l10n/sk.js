@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "áno",
     "no" : "nie",
     "The color at the top of a box indicates the range of the warning." : "Farba v hornej časti škatule označuje rozsah varovania.",
-    "Okay, I understand and I am sure" : "Dobre, chápem a som si istý"
+    "Okay, I understand and I am sure" : "Dobre, chápem a som si istý",
+    "Amount" : "Výška",
+    "Apps with the most log entries" : "Aplikácie s najväčšími záznamami za protokol"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);");

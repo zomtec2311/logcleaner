@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "ಹೌದು",
     "no" : "ಇಲ್ಲ",
     "The color at the top of a box indicates the range of the warning." : "ಪೆಟ್ಟಿಗೆಯ ಮೇಲ್ಭಾಗದಲ್ಲಿರುವ ಬಣ್ಣವು ಎಚ್ಚರಿಕೆಯ ವ್ಯಾಪ್ತಿಯನ್ನು ಸೂಚಿಸುತ್ತದೆ.",
-    "Okay, I understand and I am sure" : "ಸರಿ, ನಾನು ಅರ್ಥಮಾಡಿಕೊಂಡಿದ್ದೇನೆ ಮತ್ತು ನನಗೆ ಖಚಿತವಾಗಿದೆ"
+    "Okay, I understand and I am sure" : "ಸರಿ, ನಾನು ಅರ್ಥಮಾಡಿಕೊಂಡಿದ್ದೇನೆ ಮತ್ತು ನನಗೆ ಖಚಿತವಾಗಿದೆ",
+    "Amount" : "ಮೊತ್ತ",
+    "Apps with the most log entries" : "ಹೆಚ್ಚಿನ ಲಾಗ್ ನಮೂದುಗಳನ್ನು ಹೊಂದಿರುವ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು"
 },
 "nplurals=2; plural=n > 1;");

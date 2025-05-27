@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "мон",
     "no" : "-гүй / -битгий",
     "The color at the top of a box indicates the range of the warning." : "Хайрцгийн дээд хэсэгт байгаа өнгө нь анхааруулгыг илтгэнэ.",
-    "Okay, I understand and I am sure" : "За, би ойлгож байна, би итгэлтэй байна"
+    "Okay, I understand and I am sure" : "За, би ойлгож байна, би итгэлтэй байна",
+    "Amount" : "Хэмжээ",
+    "Apps with the most log entries" : "Ихэнх бүртгэлийн оруулгуудтай програмууд"
 },
 "nplurals=2; plural=n != 1;");

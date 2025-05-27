@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "այո",
     "no" : "ոչ",
     "The color at the top of a box indicates the range of the warning." : "Տուփի վերեւում գտնվող գույնը ցույց է տալիս նախազգուշացման շրջանակը:",
-    "Okay, I understand and I am sure" : "Լավ, ես հասկանում եմ եւ վստահ եմ"
+    "Okay, I understand and I am sure" : "Լավ, ես հասկանում եմ եւ վստահ եմ",
+    "Amount" : "Գումար",
+    "Apps with the most log entries" : "Ծրագրեր `առավելագույն տեղեկամատյանների գրառումներով"
 },
 "nplurals=2; plural=n > 1;");

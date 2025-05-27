@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "Đúng",
     "no" : "KHÔNG",
     "The color at the top of a box indicates the range of the warning." : "Màu ở trên cùng của một hộp cho biết phạm vi của cảnh báo.",
-    "Okay, I understand and I am sure" : "Được rồi, tôi hiểu và tôi chắc chắn"
+    "Okay, I understand and I am sure" : "Được rồi, tôi hiểu và tôi chắc chắn",
+    "Amount" : "Số lượng",
+    "Apps with the most log entries" : "Ứng dụng có nhiều mục nhật ký nhất"
 },
 "nplurals=1; plural=0;");

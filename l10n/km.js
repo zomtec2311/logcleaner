@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "បាត",
     "no" : "ដេលក្ផាន",
     "The color at the top of a box indicates the range of the warning." : "ពណ៌នៅផ្នែកខាងលើនៃប្រអប់មួយបង្ហាញពីជួរនៃការព្រមាន។",
-    "Okay, I understand and I am sure" : "មិនអីទេខ្ញុំយល់ហើយខ្ញុំប្រាកដ"
+    "Okay, I understand and I am sure" : "មិនអីទេខ្ញុំយល់ហើយខ្ញុំប្រាកដ",
+    "Amount" : "ចមនយន",
+    "Apps with the most log entries" : "កម្មវិធីដែលមានធាតុកំណត់ហេតុច្រើនបំផុត"
 },
 "nplurals=1; plural=0;");

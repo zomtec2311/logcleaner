@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "Já",
     "no" : "Nei",
     "The color at the top of a box indicates the range of the warning." : "Liturinn efst á kassa gefur til kynna svið viðvörunarinnar.",
-    "Okay, I understand and I am sure" : "Allt í lagi, ég skil og ég er viss"
+    "Okay, I understand and I am sure" : "Allt í lagi, ég skil og ég er viss",
+    "Amount" : "Upphæð",
+    "Apps with the most log entries" : "Forrit með flestum annálum"
 },
 "nplurals=2; plural=n % 10 != 1 || n % 100 == 11;");

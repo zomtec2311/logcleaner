@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "jā",
     "no" : "ne",
     "The color at the top of a box indicates the range of the warning." : "Krāsa kastes augšdaļā norāda brīdinājuma diapazonu.",
-    "Okay, I understand and I am sure" : "Labi, es saprotu un esmu pārliecināts"
+    "Okay, I understand and I am sure" : "Labi, es saprotu un esmu pārliecināts",
+    "Amount" : "Summa",
+    "Apps with the most log entries" : "Lietotnes ar visvairāk žurnāla ierakstiem"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");

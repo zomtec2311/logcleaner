@@ -47,6 +47,8 @@ OC.L10N.register(
     "Show messages by this app within the log file" : "Mostra i messaggi da questa app all'interno del file di registro",
     "yes" : "SÌ",
     "no" : "NO",
-    "Okay, I understand and I am sure" : "Ok, ho capito e ne sono sicuro"
+    "Okay, I understand and I am sure" : "Ok, ho capito e ne sono sicuro",
+    "Amount" : "Quantità",
+    "Apps with the most log entries" : "App con più voci di registro"
 },
 "nplurals=2; plural=(n != 1);");

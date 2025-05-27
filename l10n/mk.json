@@ -47,6 +47,8 @@
     "yes" : "Да",
     "no" : "Не",
     "The color at the top of a box indicates the range of the warning." : "Бојата на врвот на кутијата го означува опсегот на предупредување.",
-    "Okay, I understand and I am sure" : "Добро, разбирам и сигурен сум"
+    "Okay, I understand and I am sure" : "Добро, разбирам и сигурен сум",
+    "Amount" : "Количина",
+    "Apps with the most log entries" : "Апликации со најмногу записи за најавување"
 },"pluralForm" :"nplurals=2; plural=(n==1 || n%10==1 ? 0 : 1);"
 }

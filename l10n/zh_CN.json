@@ -47,6 +47,8 @@
     "yes" : "是的",
     "no" : "不",
     "The color at the top of a box indicates the range of the warning." : "盒子顶部的颜色表示警告的范围。",
-    "Okay, I understand and I am sure" : "好吧，我明白，我确定"
+    "Okay, I understand and I am sure" : "好吧，我明白，我确定",
+    "Amount" : "数量",
+    "Apps with the most log entries" : "最多的日志条目的应用程序"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

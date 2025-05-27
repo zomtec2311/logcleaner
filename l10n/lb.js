@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "Jo",
     "no" : "Nee",
     "The color at the top of a box indicates the range of the warning." : "D'Faarf uewen op enger Këscht weist d'Gamme vun der Warnung.",
-    "Okay, I understand and I am sure" : "Okay, ech verstinn an ech si sécher"
+    "Okay, I understand and I am sure" : "Okay, ech verstinn an ech si sécher",
+    "Amount" : "Mobil Bet an der Offer",
+    "Apps with the most log entries" : "Apps mat de Logbuch"
 },
 "nplurals=2; plural=n != 1;");

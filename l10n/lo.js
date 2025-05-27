@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "ແລ້ວ",
     "no" : "ບໍ່",
     "The color at the top of a box indicates the range of the warning." : "ສີຢູ່ເທິງສຸດຂອງປ່ອງທີ່ບົ່ງບອກເຖິງລະດັບຂອງຄໍາເຕືອນ.",
-    "Okay, I understand and I am sure" : "ໂອເຄ, ຂ້ອຍເຂົ້າໃຈແລະຂ້ອຍແນ່ໃຈ"
+    "Okay, I understand and I am sure" : "ໂອເຄ, ຂ້ອຍເຂົ້າໃຈແລະຂ້ອຍແນ່ໃຈ",
+    "Amount" : "ຈໍານວນ",
+    "Apps with the most log entries" : "Apps ທີ່ມີລາຍການບັນທຶກຫຼາຍທີ່ສຸດ"
 },
 "nplurals=1; plural=0;");

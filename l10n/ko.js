@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "예",
     "no" : "아니요",
     "The color at the top of a box indicates the range of the warning." : "상자 상단의 색상은 경고 범위를 나타냅니다.",
-    "Okay, I understand and I am sure" : "좋아, 이해하고 확신합니다"
+    "Okay, I understand and I am sure" : "좋아, 이해하고 확신합니다",
+    "Amount" : "양",
+    "Apps with the most log entries" : "가장 많은 로그 항목이있는 앱"
 },
 "nplurals=1; plural=0;");

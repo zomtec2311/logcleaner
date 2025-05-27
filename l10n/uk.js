@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "так",
     "no" : "ні",
     "The color at the top of a box indicates the range of the warning." : "Колір у верхній частині коробки вказує на діапазон попередження.",
-    "Okay, I understand and I am sure" : "Гаразд, я розумію і впевнений"
+    "Okay, I understand and I am sure" : "Гаразд, я розумію і впевнений",
+    "Amount" : "Обсяг",
+    "Apps with the most log entries" : "Програми з найбільшою кількістю журналів"
 },
 "nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);");

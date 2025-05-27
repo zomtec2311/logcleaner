@@ -47,6 +47,8 @@
     "yes" : "Evet",
     "no" : "HAYIR",
     "The color at the top of a box indicates the range of the warning." : "Bir kutunun üstündeki renk, uyarı aralığını gösterir.",
-    "Okay, I understand and I am sure" : "Tamam, anlıyorum ve eminim"
+    "Okay, I understand and I am sure" : "Tamam, anlıyorum ve eminim",
+    "Amount" : "Miktar",
+    "Apps with the most log entries" : "En çok günlük girişlerine sahip uygulamalar"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

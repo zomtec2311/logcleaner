@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "დიახ",
     "no" : "არა",
     "The color at the top of a box indicates the range of the warning." : "ყუთის ზედა ნაწილში ფერი მიუთითებს გაფრთხილების დიაპაზონში.",
-    "Okay, I understand and I am sure" : "კარგი, მესმის და დარწმუნებული ვარ"
+    "Okay, I understand and I am sure" : "კარგი, მესმის და დარწმუნებული ვარ",
+    "Amount" : "თანხა",
+    "Apps with the most log entries" : "პროგრამები ყველაზე მეტი ჩანაწერით"
 },
 "nplurals=2; plural=n != 1;");

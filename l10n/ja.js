@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "はい",
     "no" : "いいえ",
     "The color at the top of a box indicates the range of the warning." : "ボックスの上部にある色は、警告の範囲を示しています。",
-    "Okay, I understand and I am sure" : "さて、私は理解しています、そして私は確信しています"
+    "Okay, I understand and I am sure" : "さて、私は理解しています、そして私は確信しています",
+    "Amount" : "額",
+    "Apps with the most log entries" : "ログエントリが最も多いアプリ"
 },
 "nplurals=1; plural=0;");

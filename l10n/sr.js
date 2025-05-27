@@ -49,6 +49,8 @@ OC.L10N.register(
     "yes" : "да",
     "no" : "не",
     "The color at the top of a box indicates the range of the warning." : "Боја на врху кутије указује на распон упозорења.",
-    "Okay, I understand and I am sure" : "Ок, разумем и сигуран сам"
+    "Okay, I understand and I am sure" : "Ок, разумем и сигуран сам",
+    "Amount" : "Износ",
+    "Apps with the most log entries" : "Апликације са највише уноса на могла"
 },
 "nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);");
