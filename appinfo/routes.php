@@ -31,6 +31,8 @@ return [
     ['name' => 'Settings#getalllog', 'url' => '/getalldata', 'verb' => 'GET'],
     ['name' => 'Settings#emptylog', 'url' => '/emptylog', 'verb' => 'GET'],
     ['name' => 'Settings#getAppValueZ', 'url' => '/getparam/{who}', 'verb' => 'GET'],
+    ['name' => 'Settings#getLL', 'url' => '/getll', 'verb' => 'GET'],
+    ['name' => 'Settings#setLL', 'url' => '/setll/{who}', 'verb' => 'GET'],
     ['name' => 'Settings#getAll', 'url' => '/getall', 'verb' => 'GET'],
     ['name' => 'Settings#delDub', 'url' => '/deldub', 'verb' => 'GET'],
     ['name' => 'Settings#countDub', 'url' => '/countdub', 'verb' => 'GET'],
