@@ -49,6 +49,12 @@
     "The color at the top of a box indicates the range of the warning." : "Laatikon yläosassa oleva väri osoittaa varoituksen alueen.",
     "Okay, I understand and I am sure" : "Okei, ymmärrän ja olen varma",
     "Amount" : "Määrä",
-    "Apps with the most log entries" : "Sovellukset, joissa on eniten loki merkinnät"
+    "Apps with the most log entries" : "Sovellukset, joissa on eniten loki merkinnät",
+    "Set logging level" : "Aseta hakkuustaso",
+    "debug" : "virheenkorjaus",
+    "info" : "tiedot",
+    "warning" : "Varoitus",
+    "error" : "virhe",
+    "fatal" : "kohtalokas"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

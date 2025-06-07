@@ -49,6 +49,12 @@
     "The color at the top of a box indicates the range of the warning." : "El color en la parte superior de una caja indica el rango de la advertencia.",
     "Okay, I understand and I am sure" : "Bien, entiendo y estoy seguro",
     "Amount" : "Cantidad",
-    "Apps with the most log entries" : "Aplicaciones con la mayoría de las entradas de registro"
+    "Apps with the most log entries" : "Aplicaciones con la mayoría de las entradas de registro",
+    "Set logging level" : "Establecer el nivel de registro",
+    "debug" : "depurar",
+    "info" : "información",
+    "warning" : "advertencia",
+    "error" : "error",
+    "fatal" : "fatal"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

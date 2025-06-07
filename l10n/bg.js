@@ -51,6 +51,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "Цветът в горната част на кутията показва обхвата на предупреждението.",
     "Okay, I understand and I am sure" : "Добре, разбирам и съм сигурен",
     "Amount" : "Сума",
-    "Apps with the most log entries" : "Приложения с най -много записи в дневника"
+    "Apps with the most log entries" : "Приложения с най -много записи в дневника",
+    "Set logging level" : "Задайте нивото на регистрация",
+    "debug" : "Отстраняване на грешки",
+    "info" : "информация",
+    "warning" : "предупреждение",
+    "error" : "Грешка",
+    "fatal" : "фатален"
 },
 "nplurals=2; plural=n != 1;");

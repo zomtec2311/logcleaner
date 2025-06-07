@@ -50,6 +50,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "Die Farbe am oberen Rand einer Box zeigt den Bereich der Warnung an.",
     "_%n duplicate_::_%n duplicates_" : ["%n Dublette","%n Dubletten"],
     "Amount" : "Anzahl",
-    "Apps with the most log entries" : "Apps mit den meisten Logeinträgen"
+    "Apps with the most log entries" : "Apps mit den meisten Logeinträgen",
+    "Set logging level" : "Protokollierungsstufe einstellen",
+    "debug" : "Debug",
+    "info" : "Info",
+    "warning" : "Warnung",
+    "error" : "Fehler",
+    "fatal" : "Fatal"
 },
 "nplurals=2; plural=(n != 1);");

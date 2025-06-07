@@ -51,6 +51,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "একটি বাক্সের শীর্ষে রঙটি সতর্কতার পরিসীমা নির্দেশ করে।",
     "Okay, I understand and I am sure" : "ঠিক আছে, আমি বুঝতে পারি এবং আমি নিশ্চিত",
     "Amount" : "পরিমাণ",
-    "Apps with the most log entries" : "সর্বাধিক লগ এন্ট্রি সহ অ্যাপ্লিকেশন"
+    "Apps with the most log entries" : "সর্বাধিক লগ এন্ট্রি সহ অ্যাপ্লিকেশন",
+    "Set logging level" : "লগিং স্তর সেট করুন",
+    "debug" : "ডিবাগ",
+    "info" : "তথ্য",
+    "warning" : "সতর্কতা",
+    "error" : "ত্রুটি",
+    "fatal" : "মারাত্মক"
 },
 "nplurals=2; plural=n > 1;");

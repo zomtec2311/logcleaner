@@ -49,6 +49,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "La couleur en haut d'une boîte indique la plage de l'avertissement.",
     "Okay, I understand and I am sure" : "D'accord, je comprends et je suis sûr",
     "Amount" : "Montant",
-    "Apps with the most log entries" : "Applications avec le plus de journaux"
+    "Apps with the most log entries" : "Applications avec le plus de journaux",
+    "Set logging level" : "Définir le niveau de journalisation",
+    "debug" : "déboguer",
+    "info" : "informations",
+    "warning" : "avertissement",
+    "error" : "erreur",
+    "fatal" : "fatal"
 },
 "nplurals=2; plural=(n != 1);");

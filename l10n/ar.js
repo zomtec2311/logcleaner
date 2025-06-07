@@ -51,6 +51,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "يشير اللون في الجزء العلوي من المربع إلى نطاق التحذير.",
     "Okay, I understand and I am sure" : "حسنًا ، أنا أفهم وأنا متأكد",
     "Amount" : "كمية",
-    "Apps with the most log entries" : "تطبيقات مع أكثر إدخالات السجل"
+    "Apps with the most log entries" : "تطبيقات مع أكثر إدخالات السجل",
+    "Set logging level" : "تعيين مستوى التسجيل",
+    "debug" : "تصحيح",
+    "info" : "معلومات",
+    "warning" : "تحذير",
+    "error" : "خطأ",
+    "fatal" : "مميت"
 },
 "nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n % 100 >= 3 && n % 100 <= 10) ? 3 : ((n % 100 >= 11 && n % 100 <= 99) ? 4 : 5))));");

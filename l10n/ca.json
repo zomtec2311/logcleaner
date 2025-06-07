@@ -49,6 +49,12 @@
     "The color at the top of a box indicates the range of the warning." : "El color a la part superior d’una caixa indica la gamma de l’avís.",
     "Okay, I understand and I am sure" : "D'acord, ho entenc i estic segur",
     "Amount" : "Quantitat",
-    "Apps with the most log entries" : "Aplicacions amb més entrades de registre"
+    "Apps with the most log entries" : "Aplicacions amb més entrades de registre",
+    "Set logging level" : "Estableix el nivell de registre",
+    "debug" : "anterioritat",
+    "info" : "informació",
+    "warning" : "advertència",
+    "error" : "error",
+    "fatal" : "fatal"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

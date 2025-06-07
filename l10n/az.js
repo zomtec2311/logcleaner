@@ -51,6 +51,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "Bir qutunun başındakı rəng xəbərdarlığın aralığını göstərir.",
     "Okay, I understand and I am sure" : "Tamam, başa düşürəm və əminəm",
     "Amount" : "Miqdar",
-    "Apps with the most log entries" : "Ən çox giriş girişləri olan tətbiqlər"
+    "Apps with the most log entries" : "Ən çox giriş girişləri olan tətbiqlər",
+    "Set logging level" : "Giriş səviyyəsini təyin edin",
+    "debug" : "debug",
+    "info" : "məlumat",
+    "warning" : "xəbərdarlıq",
+    "error" : "səhv",
+    "fatal" : "ölümcül"
 },
 "nplurals=2; plural=n != 1;");

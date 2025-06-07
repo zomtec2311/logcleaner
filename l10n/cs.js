@@ -51,6 +51,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "Barva v horní části krabice označuje rozsah varování.",
     "Okay, I understand and I am sure" : "Dobře, chápu a jsem si jistý",
     "Amount" : "Množství",
-    "Apps with the most log entries" : "Aplikace s nejvíce položkami"
+    "Apps with the most log entries" : "Aplikace s nejvíce položkami",
+    "Set logging level" : "Nastavit úroveň protokolování",
+    "debug" : "ladit",
+    "info" : "informace",
+    "warning" : "varování",
+    "error" : "chyba",
+    "fatal" : "fatální"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);");

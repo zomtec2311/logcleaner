@@ -51,6 +51,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "Kutxa baten goiko aldean dagoen koloreak abisuaren barrutia adierazten du.",
     "Okay, I understand and I am sure" : "Ados, ulertzen dut eta ziur nago",
     "Amount" : "Kopuru",
-    "Apps with the most log entries" : "Aplikazioak erregistroko sarrera gehien dituztenak"
+    "Apps with the most log entries" : "Aplikazioak erregistroko sarrera gehien dituztenak",
+    "Set logging level" : "Ezarri erregistro maila",
+    "debug" : "galtzo",
+    "info" : "ez informazio zuen",
+    "warning" : "gaztigu",
+    "error" : "errakuntza",
+    "fatal" : "hilgarri"
 },
 "nplurals=2; plural=n != 1;");
