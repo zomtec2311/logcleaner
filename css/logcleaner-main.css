@@ -3,6 +3,14 @@
 	justify-content: center;
 	margin: 3px;
 }
+
+#logcleaner_logapps {
+    float: left;
+    margin-top: 20px;
+    width: 80%;
+    font-size: 0.8em;"
+}
+
 #logcleanerfirst {
 	width: 30%;
 }
