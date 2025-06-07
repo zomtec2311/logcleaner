@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.6
+
+### Added
+- New feature in settings. Now the log level can be set without editing the config.php
+- New text strings within language files
+
 ## 1.1.5
 
 ### Added
