@@ -51,6 +51,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "Färgen överst i en låda indikerar varningsområdet.",
     "Okay, I understand and I am sure" : "Okej, jag förstår och jag är säker",
     "Amount" : "Belopp",
-    "Apps with the most log entries" : "Appar med de flesta loggposter"
+    "Apps with the most log entries" : "Appar med de flesta loggposter",
+    "Set logging level" : "Ställ in loggningsnivå",
+    "debug" : "felsökning",
+    "info" : "info",
+    "warning" : "varning",
+    "error" : "fel",
+    "fatal" : "dödlig"
 },
 "nplurals=2; plural=n != 1;");

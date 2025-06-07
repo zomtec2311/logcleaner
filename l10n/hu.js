@@ -51,6 +51,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "A doboz tetején lévő szín jelzi a figyelmeztetés tartományát.",
     "Okay, I understand and I am sure" : "Oké, megértem és biztos vagyok benne",
     "Amount" : "Összeg",
-    "Apps with the most log entries" : "Alkalmazások a legtöbb naplóbejegyzéssel"
+    "Apps with the most log entries" : "Alkalmazások a legtöbb naplóbejegyzéssel",
+    "Set logging level" : "A fakitermelési szint beállítása",
+    "debug" : "hibakeresés",
+    "info" : "információ",
+    "warning" : "figyelmeztetés",
+    "error" : "hiba",
+    "fatal" : "halálos"
 },
 "nplurals=2; plural=n != 1;");

@@ -51,6 +51,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "상자 상단의 색상은 경고 범위를 나타냅니다.",
     "Okay, I understand and I am sure" : "좋아, 이해하고 확신합니다",
     "Amount" : "양",
-    "Apps with the most log entries" : "가장 많은 로그 항목이있는 앱"
+    "Apps with the most log entries" : "가장 많은 로그 항목이있는 앱",
+    "Set logging level" : "로깅 레벨을 설정하십시오",
+    "debug" : "디버그",
+    "info" : "정보",
+    "warning" : "경고",
+    "error" : "오류",
+    "fatal" : "치명적인"
 },
 "nplurals=1; plural=0;");

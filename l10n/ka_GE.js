@@ -51,6 +51,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "ყუთის ზედა ნაწილში ფერი მიუთითებს გაფრთხილების დიაპაზონში.",
     "Okay, I understand and I am sure" : "კარგი, მესმის და დარწმუნებული ვარ",
     "Amount" : "თანხა",
-    "Apps with the most log entries" : "პროგრამები ყველაზე მეტი ჩანაწერით"
+    "Apps with the most log entries" : "პროგრამები ყველაზე მეტი ჩანაწერით",
+    "Set logging level" : "დააყენეთ ხეების დონის დონე",
+    "debug" : "დაარეგეთ სროლა",
+    "info" : "ინფორმაცია",
+    "warning" : "გაფრთხილება",
+    "error" : "შეცდომა",
+    "fatal" : "საბედისწერო"
 },
 "nplurals=2; plural=n != 1;");

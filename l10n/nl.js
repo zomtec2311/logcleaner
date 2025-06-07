@@ -51,6 +51,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "De kleur bovenaan een doos geeft het bereik van de waarschuwing aan.",
     "Okay, I understand and I am sure" : "Oké, ik begrijp het en ik weet het zeker",
     "Amount" : "Hoeveelheid",
-    "Apps with the most log entries" : "Apps met de meeste logboekvermeldingen"
+    "Apps with the most log entries" : "Apps met de meeste logboekvermeldingen",
+    "Set logging level" : "Stel het logboekniveau in",
+    "debug" : "debug",
+    "info" : "info",
+    "warning" : "waarschuwing",
+    "error" : "fout",
+    "fatal" : "dodelijk"
 },
 "nplurals=2; plural=(n != 1);");

@@ -51,6 +51,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "Warna di bagian atas kotak menunjukkan kisaran peringatan.",
     "Okay, I understand and I am sure" : "Oke, saya mengerti dan saya yakin",
     "Amount" : "Jumlah",
-    "Apps with the most log entries" : "Aplikasi dengan entri log terbanyak"
+    "Apps with the most log entries" : "Aplikasi dengan entri log terbanyak",
+    "Set logging level" : "Atur level logging",
+    "debug" : "debug",
+    "info" : "info",
+    "warning" : "peringatan",
+    "error" : "kesalahan",
+    "fatal" : "fatal"
 },
 "nplurals=1; plural=0;");

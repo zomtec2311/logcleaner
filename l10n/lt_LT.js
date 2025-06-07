@@ -51,6 +51,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "Spalva dėžutės viršuje nurodo įspėjimo diapazoną.",
     "Okay, I understand and I am sure" : "Gerai, aš suprantu ir esu tikras",
     "Amount" : "Suma",
-    "Apps with the most log entries" : "Programos su daugiausiai žurnalų įrašų"
+    "Apps with the most log entries" : "Programos su daugiausiai žurnalų įrašų",
+    "Set logging level" : "Nustatykite registravimo lygį",
+    "debug" : "Derinimas",
+    "info" : "Informacija",
+    "warning" : "Įspėjimas",
+    "error" : "klaida",
+    "fatal" : "Fatal"
 },
 "nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);");

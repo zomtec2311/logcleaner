@@ -49,6 +49,12 @@ OC.L10N.register(
     "no" : "NO",
     "Okay, I understand and I am sure" : "Ok, ho capito e ne sono sicuro",
     "Amount" : "Quantità",
-    "Apps with the most log entries" : "App con più voci di registro"
+    "Apps with the most log entries" : "App con più voci di registro",
+    "Set logging level" : "Imposta il livello di registrazione",
+    "debug" : "debug",
+    "info" : "informazioni",
+    "warning" : "avvertimento",
+    "error" : "errore",
+    "fatal" : "fatale"
 },
 "nplurals=2; plural=(n != 1);");

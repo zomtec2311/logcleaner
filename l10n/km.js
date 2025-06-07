@@ -51,6 +51,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "ពណ៌នៅផ្នែកខាងលើនៃប្រអប់មួយបង្ហាញពីជួរនៃការព្រមាន។",
     "Okay, I understand and I am sure" : "មិនអីទេខ្ញុំយល់ហើយខ្ញុំប្រាកដ",
     "Amount" : "ចមនយន",
-    "Apps with the most log entries" : "កម្មវិធីដែលមានធាតុកំណត់ហេតុច្រើនបំផុត"
+    "Apps with the most log entries" : "កម្មវិធីដែលមានធាតុកំណត់ហេតុច្រើនបំផុត",
+    "Set logging level" : "កំណត់កម្រិតកំណត់ហេតុ",
+    "debug" : "ដមបតី",
+    "info" : "ព័ត៌មាន",
+    "warning" : "ការរបមាន",
+    "error" : "កមហុស",
+    "fatal" : "ចាការស្លាប់រស់"
 },
 "nplurals=1; plural=0;");

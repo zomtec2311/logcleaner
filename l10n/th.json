@@ -49,6 +49,12 @@
     "The color at the top of a box indicates the range of the warning." : "สีที่ด้านบนของกล่องหมายถึงช่วงของคำเตือน",
     "Okay, I understand and I am sure" : "โอเคฉันเข้าใจและฉันแน่ใจ",
     "Amount" : "จำนวน",
-    "Apps with the most log entries" : "แอพที่มีรายการบันทึกมากที่สุด"
+    "Apps with the most log entries" : "แอพที่มีรายการบันทึกมากที่สุด",
+    "Set logging level" : "ตั้งค่าระดับการบันทึก",
+    "debug" : "การดีบัก",
+    "info" : "ข้อมูล",
+    "warning" : "คำเตือน",
+    "error" : "ข้อผิดพลาด",
+    "fatal" : "ร้ายแรง"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

@@ -51,6 +51,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "Culoarea din partea de sus a unei cutii indică gama avertismentului.",
     "Okay, I understand and I am sure" : "Bine, înțeleg și sunt sigur",
     "Amount" : "Cantitate",
-    "Apps with the most log entries" : "Aplicații cu cele mai multe înregistrări de jurnal"
+    "Apps with the most log entries" : "Aplicații cu cele mai multe înregistrări de jurnal",
+    "Set logging level" : "Setați nivelul de înregistrare",
+    "debug" : "Debug",
+    "info" : "informații",
+    "warning" : "avertizare",
+    "error" : "eroare",
+    "fatal" : "fatal"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 0 || n != 1 && n % 100 >= 1 && n % 100 <= 19) ? 1 : 2);");

@@ -51,6 +51,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "Տուփի վերեւում գտնվող գույնը ցույց է տալիս նախազգուշացման շրջանակը:",
     "Okay, I understand and I am sure" : "Լավ, ես հասկանում եմ եւ վստահ եմ",
     "Amount" : "Գումար",
-    "Apps with the most log entries" : "Ծրագրեր `առավելագույն տեղեկամատյանների գրառումներով"
+    "Apps with the most log entries" : "Ծրագրեր `առավելագույն տեղեկամատյանների գրառումներով",
+    "Set logging level" : "Սահմանել անտառահատումների մակարդակը",
+    "debug" : "կարգավորել",
+    "info" : "Տեղեկատվություն",
+    "warning" : "նախազգուշացում",
+    "error" : "սխալ",
+    "fatal" : "ճակատագրական"
 },
 "nplurals=2; plural=n > 1;");

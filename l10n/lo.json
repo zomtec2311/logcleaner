@@ -49,6 +49,12 @@
     "The color at the top of a box indicates the range of the warning." : "ສີຢູ່ເທິງສຸດຂອງປ່ອງທີ່ບົ່ງບອກເຖິງລະດັບຂອງຄໍາເຕືອນ.",
     "Okay, I understand and I am sure" : "ໂອເຄ, ຂ້ອຍເຂົ້າໃຈແລະຂ້ອຍແນ່ໃຈ",
     "Amount" : "ຈໍານວນ",
-    "Apps with the most log entries" : "Apps ທີ່ມີລາຍການບັນທຶກຫຼາຍທີ່ສຸດ"
+    "Apps with the most log entries" : "Apps ທີ່ມີລາຍການບັນທຶກຫຼາຍທີ່ສຸດ",
+    "Set logging level" : "ຕັ້ງລະດັບການຕັດໄມ້",
+    "debug" : "Debug",
+    "info" : "ຂໍ້ມູນ",
+    "warning" : "ຄໍາເຕືອນ",
+    "error" : "ຜິດ",
+    "fatal" : "ຕາຍ"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

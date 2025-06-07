@@ -49,6 +49,12 @@
     "The color at the top of a box indicates the range of the warning." : "بىر قۇتىنىڭ ئۈستىدىكى رەڭ ئاگاھلاندۇرۇشنىڭ دائىرىسىنى كۆرسىتىدۇ.",
     "Okay, I understand and I am sure" : "ماقۇل, مەن چۈشىنىمەن",
     "Amount" : "سومما",
-    "Apps with the most log entries" : "ئەڭ كۆپ خاتىرە بۇيۇملار بار ئەپلەر"
+    "Apps with the most log entries" : "ئەڭ كۆپ خاتىرە بۇيۇملار بار ئەپلەر",
+    "Set logging level" : "كىرىش دەرىجىسىنى بەلگىلەڭ",
+    "debug" : "ھەل قىلىش",
+    "info" : "ئۇچۇر",
+    "warning" : "ئاگاھلاندۇرۇش",
+    "error" : "خاتالىق",
+    "fatal" : "fatal"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

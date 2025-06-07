@@ -51,6 +51,12 @@ OC.L10N.register(
     "The color at the top of a box indicates the range of the warning." : "Krāsa kastes augšdaļā norāda brīdinājuma diapazonu.",
     "Okay, I understand and I am sure" : "Labi, es saprotu un esmu pārliecināts",
     "Amount" : "Summa",
-    "Apps with the most log entries" : "Lietotnes ar visvairāk žurnāla ierakstiem"
+    "Apps with the most log entries" : "Lietotnes ar visvairāk žurnāla ierakstiem",
+    "Set logging level" : "Iestatiet mežizstrādes līmeni",
+    "debug" : "atkļūdošana",
+    "info" : "informācija",
+    "warning" : "brīdinājums",
+    "error" : "kļūda",
+    "fatal" : "liktenīgs"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");

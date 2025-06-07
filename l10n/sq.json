@@ -49,6 +49,12 @@
     "The color at the top of a box indicates the range of the warning." : "Ngjyra në krye të një kutie tregon gamën e paralajmërimit.",
     "Okay, I understand and I am sure" : "Mirë, e kuptoj dhe jam i sigurt",
     "Amount" : "Sasi",
-    "Apps with the most log entries" : "Aplikacione me shënimet më të regjistruara"
+    "Apps with the most log entries" : "Aplikacione me shënimet më të regjistruara",
+    "Set logging level" : "Vendosni nivelin e prerjeve",
+    "debug" : "debugoj",
+    "info" : "informacion",
+    "warning" : "paralajmërim",
+    "error" : "gabim",
+    "fatal" : "fatal"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }
