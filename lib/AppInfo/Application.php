@@ -68,7 +68,7 @@ class Application extends App implements IBootstrap {
 			$wtpara_menue = 1;
 			$this->config->setAppValue(self::APP_ID, 'wtparam_menue', 1);
 		}
-		if ($wtpara_menue == 1) {
+		if ($wtpara_menue == 1) { // right
 			$container->get(INavigationManager::class)->add(function () use ($container) {
 				$urlGenerator = $container->get(IURLGenerator::class);
 				return [
@@ -81,7 +81,7 @@ class Application extends App implements IBootstrap {
 				];
 			});
 		}
-		else {
+		else { // top
 			$container->get(INavigationManager::class)->add(function () use ($container) {
 				$urlGenerator = $container->get(IURLGenerator::class);
 				return [

@@ -65,6 +65,20 @@ class SettingsController extends Controller {
 	public function getAppValueZ($who) {
 		return $this->config->getAppValue('logcleaner', $who);
 	}
+	
+	public function getLL() {
+		return $this->config->getSystemValue('loglevel');
+	}
+	
+	public function setLL($who) {
+		$who = intval($who);
+		if (!is_int($who) || $who < 0 || $who > 4) {
+				$this->logger->debug('Cannot set loglevel');
+			}
+			// Set backend loglevel directly via system value
+			$this->config->setSystemValue('loglevel', $who);	
+		return;
+	}
 
 	public function getlog(?int $logid = null) {
 		if ($logid === null) {
