@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.1.7
+
+### Added
+- Background job: delete duplicates every 24 hours
+- New feature in settings. Enable/disable background job
+
+### Changed
+- cut the title of the settings icon
+
+### Fixed
+- view for large/wide devices
+
 ## 1.1.6
 
 ### Added

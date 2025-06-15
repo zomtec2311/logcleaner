@@ -105,7 +105,7 @@ class SettingsController extends Controller {
 				}
 		}
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
-		$wt_zeilen = (int)$this->helper->getAppValue("logcleaner_wt_zeilen");
+		$wt_zeilen = (int)$this->helper->getAppValue("logcleaner_wt_zeilen");		
 		$wt_offset = (int)$this->helper->getAppValue("logcleaner_wt_offset");
 		$wt_art = (int)$this->helper->getAppValue("logcleaner_wt_art");
 		$wt_characters = (int)$this->helper->getAppValue("logcleaner_wt_characters");
@@ -188,7 +188,12 @@ class SettingsController extends Controller {
 		$wt_art = (int)$this->helper->getAppValue("logcleaner_wt_art");
 		$wt_characters = (int)$this->helper->getAppValue("logcleaner_wt_characters");
 		$wtpara_menue = (int)$this->helper->getAppValue('wtparam_menue');
-		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
+		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');		
+		$wtpara_cron_deldub = (int)$this->helper->getAppValue("wtpara_cron_deldub");		
+		if((!isset($wtpara_cron_deldub)) || ($wtpara_cron_deldub === 0)) {
+			$wtpara_cron_deldub = 1;
+			$this->helper->setAppValue('wtpara_cron_deldub', 1);
+		}		
 		if((!isset($wtpara_menue)) || ($wtpara_menue === 0)) {
 			$this->helper->setAppValue('wtparam_menue', 1);
 		}
