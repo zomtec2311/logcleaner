@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "ez informazio zuen",
     "warning" : "gaztigu",
     "error" : "errakuntza",
-    "fatal" : "hilgarri"
+    "fatal" : "hilgarri",
+    "Automatically delete duplicates every 24 hours" : "Automatikoki ezabatu bikoiztuak 24 orduz behin",
+    "display this settings as accordion or modal" : "Bistaratu ezarpen hau akordeoi edo modal gisa",
+    "accordion" : "eskusoinu",
+    "modal" : "nagusi"
 },
 "nplurals=2; plural=n != 1;");

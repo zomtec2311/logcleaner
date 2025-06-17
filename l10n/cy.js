@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "ngwybodaeth",
     "warning" : "rhybuddion",
     "error" : "gwallau",
-    "fatal" : "angheuol"
+    "fatal" : "angheuol",
+    "Automatically delete duplicates every 24 hours" : "Dileu dyblygu yn awtomatig bob 24 awr",
+    "display this settings as accordion or modal" : "Arddangos y gosodiadau hyn fel acordion neu foddol",
+    "accordion" : "acordion",
+    "modal" : "moddol"
 },
 "nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n == 3) ? 3 : ((n == 6) ? 4 : 5))));");

@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "tiedot",
     "warning" : "Varoitus",
     "error" : "virhe",
-    "fatal" : "kohtalokas"
+    "fatal" : "kohtalokas",
+    "Automatically delete duplicates every 24 hours" : "Poista kopiot automaattisesti 24 tunnin välein",
+    "display this settings as accordion or modal" : "Näytä tämä asetukset haitarina tai modaalina",
+    "accordion" : "harmonikka",
+    "modal" : "modaalinen"
 },
 "nplurals=2; plural=n != 1;");

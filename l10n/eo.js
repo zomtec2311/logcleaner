@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "Informoj",
     "warning" : "AVERTO",
     "error" : "Eraro",
-    "fatal" : "Fatala"
+    "fatal" : "Fatala",
+    "Automatically delete duplicates every 24 hours" : "Aŭtomate forigi duplikatojn ĉiun 24 horojn",
+    "display this settings as accordion or modal" : "Montru ĉi tiujn agordojn kiel akordionon aŭ modalon",
+    "accordion" : "Akordiono",
+    "modal" : "Modala"
 },
 "nplurals=2; plural=n != 1;");

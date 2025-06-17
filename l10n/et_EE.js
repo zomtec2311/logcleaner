@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "teave",
     "warning" : "hoiatus",
     "error" : "viga",
-    "fatal" : "surmav"
+    "fatal" : "surmav",
+    "Automatically delete duplicates every 24 hours" : "Kustutage duplikaati automaatselt iga 24 tunni järel",
+    "display this settings as accordion or modal" : "Kuva need sätted akordionina või modaalina",
+    "accordion" : "akordion",
+    "modal" : "modaal"
 },
 "nplurals=2; plural=n != 1;");

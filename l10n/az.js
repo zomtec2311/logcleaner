@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "məlumat",
     "warning" : "xəbərdarlıq",
     "error" : "səhv",
-    "fatal" : "ölümcül"
+    "fatal" : "ölümcül",
+    "Automatically delete duplicates every 24 hours" : "Hər 24 saatda hər 24 saatda dublikatları avtomatik olaraq silmək",
+    "display this settings as accordion or modal" : "Bu parametrləri akkordeon və ya modal kimi göstərin",
+    "accordion" : "akkordeon",
+    "modal" : "modal"
 },
 "nplurals=2; plural=n != 1;");

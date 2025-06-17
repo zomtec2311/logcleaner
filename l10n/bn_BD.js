@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "তথ্য",
     "warning" : "সতর্কতা",
     "error" : "ত্রুটি",
-    "fatal" : "মারাত্মক"
+    "fatal" : "মারাত্মক",
+    "Automatically delete duplicates every 24 hours" : "প্রতি 24 ঘন্টা স্বয়ংক্রিয়ভাবে নকলগুলি মুছুন",
+    "display this settings as accordion or modal" : "অ্যাকর্ডিয়ান বা মডেল হিসাবে এই সেটিংস প্রদর্শন করুন",
+    "accordion" : "অ্যাকর্ডিয়ান",
+    "modal" : "মডেল"
 },
 "nplurals=2; plural=n > 1;");

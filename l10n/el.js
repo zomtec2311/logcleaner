@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "πληροφορίες",
     "warning" : "προειδοποίηση",
     "error" : "σφάλμα",
-    "fatal" : "θανατηφόρος"
+    "fatal" : "θανατηφόρος",
+    "Automatically delete duplicates every 24 hours" : "Διαγράψτε αυτόματα τα αντίγραφα κάθε 24 ώρες",
+    "display this settings as accordion or modal" : "Εμφανίστε αυτές τις ρυθμίσεις ως ακορντεόν ή modal",
+    "accordion" : "ακορντεόν",
+    "modal" : "τροπικός"
 },
 "nplurals=2; plural=n != 1;");

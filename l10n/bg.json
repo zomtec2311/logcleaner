@@ -55,6 +55,10 @@
     "info" : "информация",
     "warning" : "предупреждение",
     "error" : "Грешка",
-    "fatal" : "фатален"
+    "fatal" : "фатален",
+    "Automatically delete duplicates every 24 hours" : "Автоматично изтрийте дубликати на всеки 24 часа",
+    "display this settings as accordion or modal" : "Показване на тези настройки като акордеон или модален",
+    "accordion" : "акордеон",
+    "modal" : "Модален"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

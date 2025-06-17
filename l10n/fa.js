@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "اطلاعات",
     "warning" : "هشدار",
     "error" :"خطا",
-    "fatal" : "کشنده"
+    "fatal" : "کشنده",
+    "Automatically delete duplicates every 24 hours" : "هر 24 ساعت به طور خودکار کپی ها را حذف کنید",
+    "display this settings as accordion or modal" : "این تنظیمات را به صورت آکاردئون یا معین نمایش دهید",
+    "accordion" : "آکاردئون",
+    "modal" : "معین"
 },
 "nplurals=2; plural=n > 1;");

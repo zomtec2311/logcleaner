@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "informace",
     "warning" : "varování",
     "error" : "chyba",
-    "fatal" : "fatální"
+    "fatal" : "fatální",
+    "Automatically delete duplicates every 24 hours" : "Automaticky smazat duplikáty každých 24 hodin",
+    "display this settings as accordion or modal" : "zobrazit toto nastavení jako akordeon nebo modální",
+    "accordion" : "akordeon",
+    "modal" : "modální"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);");

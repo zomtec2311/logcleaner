@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "informació",
     "warning" : "advertència",
     "error" : "error",
-    "fatal" : "fatal"
+    "fatal" : "fatal",
+    "Automatically delete duplicates every 24 hours" : "Suprimeix automàticament els duplicats cada 24 hores",
+    "display this settings as accordion or modal" : "Mostra aquesta configuració com a acordió o modal",
+    "accordion" : "acordió",
+    "modal" : "modal"
 },
 "nplurals=2; plural=(n != 1);");
