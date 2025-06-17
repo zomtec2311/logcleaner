@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "informacion",
     "warning" : "paralajmërim",
     "error" : "gabim",
-    "fatal" : "fatal"
+    "fatal" : "fatal",
+    "Automatically delete duplicates every 24 hours" : "Fshi automatikisht kopjimet çdo 24 orë",
+    "display this settings as accordion or modal" : "Shfaq këtë cilësime si fizarmonikë ose modale",
+    "accordion" : "fizarmonikë",
+    "modal" : "modal"
 },
 "nplurals=2; plural=n != 1;");

@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "információ",
     "warning" : "figyelmeztetés",
     "error" : "hiba",
-    "fatal" : "halálos"
+    "fatal" : "halálos",
+    "Automatically delete duplicates every 24 hours" : "24 óránként automatikusan törölje a másolatokat",
+    "display this settings as accordion or modal" : "Jelenítse meg ezt a beállításokat harmonikaként vagy modálisként",
+    "accordion" : "harmonika",
+    "modal" : "modális"
 },
 "nplurals=2; plural=n != 1;");

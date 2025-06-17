@@ -55,6 +55,10 @@
     "info" : "資訊",
     "warning" : "警告",
     "error" : "錯誤",
-    "fatal" : "致命的"
+    "fatal" : "致命的",
+    "Automatically delete duplicates every 24 hours" : "每24小時自動刪除重複一次",
+    "display this settings as accordion or modal" : "顯示此設置為手風琴或模態",
+    "accordion" : "手風琴",
+    "modal" : "模態"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

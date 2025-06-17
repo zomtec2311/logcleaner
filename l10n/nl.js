@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "info",
     "warning" : "waarschuwing",
     "error" : "fout",
-    "fatal" : "dodelijk"
+    "fatal" : "dodelijk",
+    "Automatically delete duplicates every 24 hours" : "Verwijder automatisch om de 24 uur duplicaten",
+    "display this settings as accordion or modal" : "Geef deze instellingen weer als accordeon of modaal",
+    "accordion" : "accordeon",
+    "modal" : "modaal"
 },
 "nplurals=2; plural=(n != 1);");

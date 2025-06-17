@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "info",
     "warning" : "peringatan",
     "error" : "kesalahan",
-    "fatal" : "fatal"
+    "fatal" : "fatal",
+    "Automatically delete duplicates every 24 hours" : "Hapus duplikat secara otomatis setiap 24 jam",
+    "display this settings as accordion or modal" : "Tampilkan pengaturan ini sebagai akordeon atau modal",
+    "accordion" : "akordeon",
+    "modal" : "modal"
 },
 "nplurals=1; plural=0;");

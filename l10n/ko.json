@@ -55,6 +55,10 @@
     "info" : "정보",
     "warning" : "경고",
     "error" : "오류",
-    "fatal" : "치명적인"
+    "fatal" : "치명적인",
+    "Automatically delete duplicates every 24 hours" : "24 시간마다 중복을 자동으로 삭제합니다",
+    "display this settings as accordion or modal" : "이 설정을 아코디언 또는 모달로 표시하십시오",
+    "accordion" : "아코디언",
+    "modal" : "모달"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

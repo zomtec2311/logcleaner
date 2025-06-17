@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "ข้อมูล",
     "warning" : "คำเตือน",
     "error" : "ข้อผิดพลาด",
-    "fatal" : "ร้ายแรง"
+    "fatal" : "ร้ายแรง",
+    "Automatically delete duplicates every 24 hours" : "ลบซ้ำโดยอัตโนมัติทุก 24 ชั่วโมงโดยอัตโนมัติ",
+    "display this settings as accordion or modal" : "แสดงการตั้งค่านี้เป็นหีบเพลงหรือโมดอล",
+    "accordion" : "หีบเพลง",
+    "modal" : "เป็นโมฆะ"
 },
 "nplurals=1; plural=0;");

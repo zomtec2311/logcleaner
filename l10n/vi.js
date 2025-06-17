@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "thông tin",
     "warning" : "cảnh báo",
     "error" : "lỗi",
-    "fatal" : "gây tử vong"
+    "fatal" : "gây tử vong",
+    "Automatically delete duplicates every 24 hours" : "Tự động xóa các bản sao mỗi 24 giờ",
+    "display this settings as accordion or modal" : "hiển thị cài đặt này dưới dạng accordion hoặc phương thức",
+    "accordion" : "accordion",
+    "modal" : "phương thức"
 },
 "nplurals=1; plural=0;");

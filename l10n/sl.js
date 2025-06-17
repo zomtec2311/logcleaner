@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "informacije",
     "warning" : "opozorilo",
     "error" : "napaka",
-    "fatal" : "usodno"
+    "fatal" : "usodno",
+    "Automatically delete duplicates every 24 hours" : "Samodejno izbrišite dvojnika vsakih 24 ur",
+    "display this settings as accordion or modal" : "Prikažite te nastavitve kot harmoniko ali modal",
+    "accordion" : "harmonika",
+    "modal" : "modal"
 },
 "nplurals=4; plural=(n % 100 == 1) ? 0 : ((n % 100 == 2) ? 1 : ((n % 100 == 3 || n % 100 == 4) ? 2 : 3));");

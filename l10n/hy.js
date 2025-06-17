@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "Տեղեկատվություն",
     "warning" : "նախազգուշացում",
     "error" : "սխալ",
-    "fatal" : "ճակատագրական"
+    "fatal" : "ճակատագրական",
+    "Automatically delete duplicates every 24 hours" : "Ավտոմատ կերպով ջնջել կրկնօրինակները ամեն 24 ժամվա ընթացքում",
+    "display this settings as accordion or modal" : "Display ուցադրել այս պարամետրերը որպես ակորդե կամ մոդալ",
+    "accordion" : "ակորդեոն",
+    "modal" : "մոդալ"
 },
 "nplurals=2; plural=n > 1;");

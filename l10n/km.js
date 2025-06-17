@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "ព័ត៌មាន",
     "warning" : "ការរបមាន",
     "error" : "កមហុស",
-    "fatal" : "ចាការស្លាប់រស់"
+    "fatal" : "ចាការស្លាប់រស់",
+    "Automatically delete duplicates every 24 hours" : "លុបស្ទួនដោយស្វ័យប្រវត្តិរៀងរាល់ 24 ម៉ោង",
+    "display this settings as accordion or modal" : "បង្ហាញការកំណត់នេះជាឬម៉ូឌុល",
+    "accordion" : "អាករដេអុង",
+    "modal" : "ការរបកបត្ដិការ"
 },
 "nplurals=1; plural=0;");

@@ -55,6 +55,10 @@
     "info" : "ئۇچۇر",
     "warning" : "ئاگاھلاندۇرۇش",
     "error" : "خاتالىق",
-    "fatal" : "fatal"
+    "fatal" : "fatal",
+    "Automatically delete duplicates every 24 hours" : "ھەر 24 سائەتتە كۆپەيتىلگەن نۇسخىسىنى ئاپتوماتىك ئۆچۈرۈڭ",
+    "display this settings as accordion or modal" : "بۇ تەڭشەكنى ماس ھالدا ياكى مودېل سۈپىتىدە كۆرسىتىڭ",
+    "accordion" : "ئاككوردىيون",
+    "modal" : "modal"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

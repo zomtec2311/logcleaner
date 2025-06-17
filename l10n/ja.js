@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "情報",
     "warning" : "警告",
     "error" : "エラー",
-    "fatal" : "致命的"
+    "fatal" : "致命的",
+    "Automatically delete duplicates every 24 hours" : "24時間ごとに複製を自動的に削除します",
+    "display this settings as accordion or modal" : "この設定をアコーディオンまたはモーダルとして表示します",
+    "accordion" : "アコーディオン",
+    "modal" : "モーダル"
 },
 "nplurals=1; plural=0;");

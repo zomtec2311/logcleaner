@@ -55,6 +55,10 @@
     "info" : "ಮಾಹಿತಿ",
     "warning" : "ಎಚ್ಚರಿಕೆ",
     "error" : "ದೋಷ",
-    "fatal" : "ಮಯ"
+    "fatal" : "ಮಯ",
+    "Automatically delete duplicates every 24 hours" : "ಪ್ರತಿ 24 ಗಂಟೆಗಳಿಗೊಮ್ಮೆ ನಕಲುಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಅಳಿಸಿ",
+    "display this settings as accordion or modal" : "ಈ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಅಕಾರ್ಡಿಯನ್ ಅಥವಾ ಮೋಡಲ್ ಆಗಿ ಪ್ರದರ್ಶಿಸಿ",
+    "accordion" : "ಸ ೦ ಶೋಕಿ",
+    "modal" : "ಮೊನಚಾದ"
 },"pluralForm" :"nplurals=2; plural=n > 1;"
 }

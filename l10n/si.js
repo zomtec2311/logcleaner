@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "තොරතුරු",
     "warning" : "අවවාදයයි",
     "error" : "දෝෂයකි",
-    "fatal" : "මාරාන්තික"
+    "fatal" : "මාරාන්තික",
+    "Automatically delete duplicates every 24 hours" : "සෑම පැය 24 කට වරක් ස්වයංක්රීයව අනුපිටපත් මකන්න",
+    "display this settings as accordion or modal" : "මෙම සැකසුම් ඇකෝනැෙන්ට් හෝ මොඩල් ලෙස පෙන්වන්න",
+    "accordion" : "ඇකෝනියන්",
+    "modal" : "මෝඩල්"
 },
 "nplurals=2; plural=n > 1;");

@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "ຂໍ້ມູນ",
     "warning" : "ຄໍາເຕືອນ",
     "error" : "ຜິດ",
-    "fatal" : "ຕາຍ"
+    "fatal" : "ຕາຍ",
+    "Automatically delete duplicates every 24 hours" : "ລຶບຊ້ໍາຄືນອັດຕະໂນມັດໃນທຸກໆ 24 ຊົ່ວໂມງ",
+    "display this settings as accordion or modal" : "ສະແດງການຕັ້ງຄ່ານີ້ເປັນ ໂຄສະນາ ຫຼື ພິມ",
+    "accordion" : "ໂຄສະນາ",
+    "modal" : "ພິມ"
 },
 "nplurals=1; plural=0;");

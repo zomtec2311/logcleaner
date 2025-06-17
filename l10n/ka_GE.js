@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "ინფორმაცია",
     "warning" : "გაფრთხილება",
     "error" : "შეცდომა",
-    "fatal" : "საბედისწერო"
+    "fatal" : "საბედისწერო",
+    "Automatically delete duplicates every 24 hours" : "ავტომატურად წაშალეთ დუბლიკატები ყოველ 24 საათში",
+    "display this settings as accordion or modal" : "აჩვენეთ ეს პარამეტრები, როგორც აკორდეონი ან მოდალური",
+    "accordion" : "აკორდეონი",
+    "modal" : "მოდალური"
 },
 "nplurals=2; plural=n != 1;");

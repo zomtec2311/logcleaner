@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "Upplýsingar",
     "warning" : "Viðvörun",
     "error" : "Villa",
-    "fatal" : "banvæn"
+    "fatal" : "banvæn",
+    "Automatically delete duplicates every 24 hours" : "Eyða sjálfkrafa afrit á 24 tíma fresti",
+    "display this settings as accordion or modal" : "Birtu þessar stillingar sem harmonikku eða módel",
+    "accordion" : "harmonikku",
+    "modal" : "modal"
 },
 "nplurals=2; plural=n % 10 != 1 || n % 100 == 11;");

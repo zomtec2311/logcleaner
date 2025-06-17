@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "Infoen",
     "warning" : "enger Facwannung",
     "error" : "Feeler",
-    "fatal" : "fatal"
+    "fatal" : "fatal",
+    "Automatically delete duplicates every 24 hours" : "Automatesch läschen Duplizéiert all 24 Stonnen",
+    "display this settings as accordion or modal" : "Display dës Astellunge als Akkord- oder Modal",
+    "accordion" : "adekationéiert",
+    "modal" : "mënschheet"
 },
 "nplurals=2; plural=n != 1;");

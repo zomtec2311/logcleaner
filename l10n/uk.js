@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "інформація",
     "warning" : "УВАГА",
     "error" : "помилка",
-    "fatal" : "фатальний"
+    "fatal" : "фатальний",
+    "Automatically delete duplicates every 24 hours" : "Автоматично видаляти дублікат кожні 24 години",
+    "display this settings as accordion or modal" : "відображати ці параметри як акордеон або модальний",
+    "accordion" : "акордеон",
+    "modal" : "модальний"
 },
 "nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);");

@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "Инфо",
     "warning" : "Предупредување",
     "error" : "грешка",
-    "fatal" : "фатално"
+    "fatal" : "фатално",
+    "Automatically delete duplicates every 24 hours" : "Автоматски избришете ги дупликатите на секои 24 часа",
+    "display this settings as accordion or modal" : "прикажете ги овие поставки како хармоника или модална",
+    "accordion" : "хармоника",
+    "modal" : "модал"
 },
 "nplurals=2; plural=(n==1 || n%10==1 ? 0 : 1);");

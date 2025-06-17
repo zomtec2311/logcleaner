@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "informații",
     "warning" : "avertizare",
     "error" : "eroare",
-    "fatal" : "fatal"
+    "fatal" : "fatal",
+    "Automatically delete duplicates every 24 hours" : "Ștergeți automat duplicatele la fiecare 24 de ore",
+    "display this settings as accordion or modal" : "Afișați aceste setări ca acordeon sau modal",
+    "accordion" : "acordeon",
+    "modal" : "modal"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 0 || n != 1 && n % 100 >= 1 && n % 100 <= 19) ? 1 : 2);");

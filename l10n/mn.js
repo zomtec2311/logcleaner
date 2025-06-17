@@ -57,6 +57,10 @@ OC.L10N.register(
     "info" : "мэдээллийн дүрэм",
     "warning" : "анхааруулга",
     "error" : "алдаа",
-    "fatal" : "хортой"
+    "fatal" : "хортой",
+    "Automatically delete duplicates every 24 hours" : "Давхардлыг автоматаар 24 цаг тутамд устгана",
+    "display this settings as accordion or modal" : "Энэ тохиргоог ordical эсвэл Modal хэлбэрээр харуулах",
+    "accordion" : "баян хуур",
+    "modal" : "барилгын хөл"
 },
 "nplurals=2; plural=n != 1;");
