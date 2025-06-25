@@ -35,6 +35,7 @@ use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCP\INavigationManager;
 use OCP\IURLGenerator;
 use OCP\IConfig;
+//use OCP\IAppConfig;
 use OCP\IServerContainer;
 use OCA\LogCleaner\Dashboard\LogCleanerWidget;
 use OCA\LogCleaner\Dashboard\LogCleanerWidget2;
@@ -42,6 +43,7 @@ use OCA\LogCleaner\Dashboard\LogCleanerWidget2;
 class Application extends App implements IBootstrap {
 	public const APP_ID = 'logcleaner';
 	
+	//public function __construct(private IAppConfig $appConfig,) {
 	public function __construct() {
 		parent::__construct(self::APP_ID);
 	}
@@ -59,11 +61,13 @@ class Application extends App implements IBootstrap {
 		}
 	}
 
-	private function registerAppsManagementNavigation(IConfig $config, IAppManager $appManager): void {
+	private function registerAppsManagementNavigation(IAppManager $appManager): void {
 		$container = $this->getContainer();
-		$this->config = $config;
+		//$this->config = $config;
+		$config = $this->getContainer()->query(IConfig::class);
 		$appManager->enableAppForGroups(self::APP_ID, array('admin'), false);
-		$wtpara_menue = (int)$this->config->getAppValue(self::APP_ID, 'wtparam_menue');
+		$wtpara_menue = (int)$config->getAppValue(self::APP_ID, 'wtparam_menue');
+		//$wtpara_menue = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_menue', '1', false);
 		if (!isset($wtpara_menue)) {
 			$wtpara_menue = 1;
 			$this->config->setAppValue(self::APP_ID, 'wtparam_menue', 1);
