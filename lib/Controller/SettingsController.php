@@ -32,8 +32,9 @@ use OCP\AppFramework\Http\Attribute\UseSession;
 use OCP\IL10N;
 use OCP\IRequest;
 use OCP\IConfig;
+use OCP\AppFramework\Http\DataResponse;
 use Psr\Log\LoggerInterface;
-
+use OCP\IAppConfig;
 use OCP\App\IAppManager;
 
 class SettingsController extends Controller {
@@ -45,39 +46,50 @@ class SettingsController extends Controller {
 		IRequest $request,
 		private Helper $helper,
 		private readonly LoggerInterface $logger,
-		private IAppManager $appManager
+		private IAppManager $appManager,
+		private IAppConfig $appConfig
 	) {
 		parent::__construct('logcleaner', $request);
 		$this->l = $l;
 		$this->config = $config;
 		$this->helper = $helper;
 		$this->appManager = $appManager;
+		//$this->appconfig = $appConfig;
 	}
 
 	#[NoAdminRequired]
 	#[UseSession]
 
-	public function setSettingZeilen($who,$zeilen) {
+	public function setSettingZeilen($who,$zeilen): DataResponse {
 		$this->config->setAppValue('logcleaner', $who, $zeilen);
-		return;
+		return new DataResponse([
+            ]);
 	}
 
-	public function getAppValueZ($who) {
-		return $this->config->getAppValue('logcleaner', $who);
+	public function getAppValueZ($who): DataResponse {
+		//return $this->config->getAppValue('logcleaner', $who);
+		return new DataResponse([
+                'valuez' => $this->config->getAppValue('logcleaner', $who),
+            ]);
 	}
 	
-	public function getLL() {
-		return $this->config->getSystemValue('loglevel');
+	public function getLL(): DataResponse {
+		//return $this->config->getSystemValue('loglevel');
+		return new DataResponse([
+                'loglevel' => $this->config->getSystemValue('loglevel'),
+            ]);
 	}
 	
-	public function setLL($who) {
+	public function setLL($who): DataResponse {
 		$who = intval($who);
 		if (!is_int($who) || $who < 0 || $who > 4) {
 				$this->logger->debug('Cannot set loglevel');
 			}
 			// Set backend loglevel directly via system value
 			$this->config->setSystemValue('loglevel', $who);	
-		return;
+		//return;
+			return new DataResponse([
+            ]);
 	}
 
 	public function getlog(?int $logid = null) {
@@ -105,11 +117,11 @@ class SettingsController extends Controller {
 				}
 		}
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
-		$wt_zeilen = (int)$this->helper->getAppValue("logcleaner_wt_zeilen");		
-		$wt_offset = (int)$this->helper->getAppValue("logcleaner_wt_offset");
-		$wt_art = (int)$this->helper->getAppValue("logcleaner_wt_art");
-		$wt_characters = (int)$this->helper->getAppValue("logcleaner_wt_characters");
-		$wtpara_menue = (int)$this->helper->getAppValue('wtparam_menue');
+		$wt_zeilen = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_zeilen', '1', false);	
+		$wt_offset = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset', '0', false);
+		$wt_art = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_art', '1', false);
+		$wt_characters = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_characters', '500', false);
+		$wtpara_menue = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_menue', '2', false);
 		if((!isset($wtpara_menue)) || ($wtpara_menue === 0)) {
 			$this->helper->setAppValue('wtparam_menue', 1);
 		}
@@ -158,7 +170,7 @@ class SettingsController extends Controller {
 		return $wtarr;
 	}
 
-	public function getalllog(?int $logid = null) {
+	public function getalllog(?int $logid = null): DataResponse {
 		if ($logid === null) {
 			$logid = null;
 		}
@@ -179,17 +191,21 @@ class SettingsController extends Controller {
 					$obja->zeit = '';
 					$obja->grund = $this->l->t('log file cannot be located');
 					$wtarr [] = $obja;
-					return $wtarr;
+					//return $wtarr;
+					return new DataResponse([
+                'al' => $wtarr,
+            ]);
 				}
 		}
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
-		$wt_zeilen = (int)$this->helper->getAppValue("logcleaner_wt_zeilen");
-		$wt_offset = (int)$this->helper->getAppValue("logcleaner_wt_offset");
-		$wt_art = (int)$this->helper->getAppValue("logcleaner_wt_art");
-		$wt_characters = (int)$this->helper->getAppValue("logcleaner_wt_characters");
-		$wtpara_menue = (int)$this->helper->getAppValue('wtparam_menue');
-		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');		
-		$wtpara_cron_deldub = (int)$this->helper->getAppValue("wtpara_cron_deldub");		
+		$wt_zeilen = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_zeilen', '5', false);;
+		$wt_offset = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset', '0', false);
+		$wt_art = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_art', '2', false);
+		$wt_characters = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_characters', '500', false);
+		$wtpara_menue = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_menue', '1', false);
+		$wtpara_logmessage = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '2', false);
+		$wtpara_cron_deldub = (int)$this->appConfig->getValueString('logcleaner', 'wtpara_cron_deldub', '1', false);
+		
 		if((!isset($wtpara_cron_deldub)) || ($wtpara_cron_deldub === 0)) {
 			$wtpara_cron_deldub = 1;
 			$this->helper->setAppValue('wtpara_cron_deldub', 1);
@@ -228,7 +244,10 @@ class SettingsController extends Controller {
 		  $obja->zeit = '';
 			$obja->grund = $this->l->t('no log entries available');
 			$wtarr [] = $obja;
-		  return $wtarr;
+		  //return $wtarr;
+		  return new DataResponse([
+                'al' => $wtarr,
+            ]);
 		}
 		$wt_zeilen = $wtlogfilezeilen;
 		$wwt = array_splice($wwt, -$wt_zeilen);
@@ -243,10 +262,14 @@ class SettingsController extends Controller {
 			 	}
 			}
 		}
-		return $wtarr;
+		//return $wtarr;
+		return new DataResponse([
+                'al' => $wtarr,
+            ]);
 	}
 
-	public function logfileandsize() {
+	public function logfileandsize(): DataResponse {
+	try {
 		$wtlogfile = $this->config->getSystemValue('logfile');
 		if (!file_exists($wtlogfile)) {
 			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
@@ -258,17 +281,32 @@ class SettingsController extends Controller {
 			$obja->filearr = $teile;
 			$obja->appversion = $this->appManager->getAppVersion('logcleaner', true);
 			$obja->filesize = $this->show_filesize($wtlogfile,2);
-			$wtarr [] = $obja;
-			return $wtarr;
 		}
 		else {
 			$obja = new \stdClass();
 			$obja->file = '';
 			$obja->filearr = [];
 			$obja->filesize = '';
-			$wtarr [] = $obja;
-			return $wtarr;
 		}
+	return new DataResponse([
+                'file' => $obja->file,
+				'filearr' => $obja->filearr,
+				'appversion' => $obja->appversion,
+				'filesize' => $obja->filesize,
+            ]);
+
+        } catch (\Throwable $e) {
+            $this->logger->error(
+                'LogCleaner: FATAL ERROR or EXCEPTION in SettingsController->logfileandsize: ' . $e->getMessage() . "\n" . $e->getTraceAsString(),
+                ['app' => 'logcleaner']
+            );
+            return new DataResponse([
+                'file' => -1,
+				'filearr' => -1,
+				'appversion' => -1,
+				'filesize' => -1,
+            ], 500);
+        }
 	}
 
 	public function show_filesize($filename, $decimalplaces = 0) {
@@ -288,25 +326,31 @@ class SettingsController extends Controller {
 	  return round($size, $decimalplaces).' '.$sizes[$i];
 	}
 
-	public function dellog(string $logid) {
+	public function dellog(string $logid): DataResponse {
 		if ($logid === null) {
 			$logid = null;
 		}
 		$logid = intval($logid);
-		return $this->getlog($logid);
+		$this->getlog($logid);
+		return new DataResponse([
+            ]);
 	}
 
-	public function getAll() {
+	public function getAll(): DataResponse {
 		$wtlogfile = $this->config->getSystemValue('logfile');
 		if (!file_exists($wtlogfile)) {
 			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
 		}
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		$wtlogfilezeilen = count($wwt);
-		return $wtlogfilezeilen;
+		//return $wtlogfilezeilen;
+		return new DataResponse([
+				//'wtarr' => $wtarr,
+                'wtlogfilezeilen' => $wtlogfilezeilen,
+            ]);
 	}
 
-	public function delDub() {
+	public function delDub(): DataResponse {
 		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
 		$i = 0;
 		$ii = 0;
@@ -348,15 +392,20 @@ class SettingsController extends Controller {
 			$obja = new \stdClass();
 			$obja->cntdub = $ii;
 			$obja->sizediff = $filesizediff;
-			$wtarr [] = $obja;
+			//$wtarr [] = $obja;
 			if ($wtpara_logmessage===2) {
 				if ($ii===1) $this->logger->info(sprintf('LogCleaner: %d duplicate was deleted and %s of disk space were cleared. This log entry can be deleted without verification.', $ii, $filesizediff)); //blau
 				else $this->logger->info(sprintf('LogCleaner: %d duplicates were deleted and %s of disk space were cleared. This log entry can be deleted without verification.', $ii, $filesizediff)); //blau
 			}
-			return $wtarr;
+			//return $wtarr;
+			return new DataResponse([
+				//'wtarr' => $wtarr,
+                'cntdub' => $ii,
+				'sizediff' => $filesizediff,
+            ]);
 	}
 
-	public function countDub() {
+	public function countDub(): DataResponse {
 		$i = 0;
 		$ii = 0;
 		$tmp_array = array();
@@ -381,10 +430,42 @@ class SettingsController extends Controller {
 			}
       $i++;
     }
+		//return $ii;
+		return new DataResponse([
+				//'wtarr' => $wtarr,
+                'cntdub' => $ii,
+            ]);
+	}
+	
+	public function countDebug() {
+		$i = 0;
+		$ii = 0;
+		$tmp_array = array();
+		$key_array = array();
+		$temp_array = array();
+		$wtlogfile = $this->config->getSystemValue('logfile');
+		if (!file_exists($wtlogfile)) {
+			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		}
+		$wwt = $this->helper->wtlogtoarr($wtlogfile);
+		foreach ($wwt as $value) {
+			$tmp_array[] = explode(',"', $value);
+		}
+		unset($value);
+		foreach($tmp_array as $val) {
+			if (!in_array($val[1], $key_array)) {
+				$key_array[$i] = $val[1];
+				$temp_array[$i] = $i;
+      }
+			else {
+				$ii++;
+			}
+      $i++;
+    }
 		return $ii;
 	}
 	
-	public function logapps() {
+	public function logapps(): DataResponse {
 		$i = 0;
 		$ii = 0;
 		$iii = 0;
@@ -407,10 +488,13 @@ class SettingsController extends Controller {
 			else $temp_array[$i] = substr(str_replace('app":"', "", $val[5]), 0, -1);			
       $i++;
     }  
-    return $temp_array;
+    //return $temp_array;
+	return new DataResponse([
+                'logapps' => $temp_array,                                  
+            ]);
 	}
 
-	public function emptylog() {
+	public function emptylog(): DataResponse {
 		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
 		$wtlogfile = $this->config->getSystemValue('logfile');
 		if (!file_exists($wtlogfile)) {
@@ -420,6 +504,7 @@ class SettingsController extends Controller {
 		if ($wtpara_logmessage===2) {
 			$this->logger->info('LogCleaner: log file has been emptied. This log entry can be deleted without verification.');
 		}
-		return;
+		return new DataResponse([
+            ]);
 	}
 }

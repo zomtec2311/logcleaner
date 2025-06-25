@@ -48,7 +48,7 @@ class Helper
     }
 
     public function getAppValue($key) {
-        return $this->config->getAppValue($this->appName, $key);
+        return $this->config->getAppValue($this->appName, $key); // $wtpara_cron_deldub = (int)$this->appconfig->getValueString('logcleaner', 'wtpara_cron_deldub', '9', false);
     }
 
     public function setAppValue($key, $value) {
