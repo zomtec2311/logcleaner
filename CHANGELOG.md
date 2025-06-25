@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.8
+
+### Added
+- New feature: you can choose how you want the settings to be displayed - accordion or modal
+
+### Fixed
+- language files updated
+- code changes due to deprecated methods
+
 ## 1.1.7
 
 ### Added
