@@ -38,6 +38,10 @@
 	float: left;
 	width: 130px;
 }
+#logcleaner-inum {
+	float: left;
+	width: 175px;
+}
 #logcleaner_wt_zeilen {
 	width: 70px;
 }
@@ -106,6 +110,27 @@
     margin-bottom: 2px;
     border: 1px solid transparent;
     border-radius: 8px;
+}
+.insettings {
+    width: 100%;
+    height: max-content;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.outsettings {
+    width: 400px;
+    height: max-content;
+    float: left;
+}
+.icosettings {
+    margin-top: 11px;
+    margin-left: 10px;
+}
+.icoinfo {
+    padding-top: 11px;
+    padding-left: 50px;
+    
 }
 @media (max-width:650px) {
 #logcleanerfirst {
