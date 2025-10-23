@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.9
+
+### Added
+- Nextcloud 32 compatibility
+
+### Fixed
+- Empty parameters on new installation
+
 ## 1.1.8
 
 ### Added
@@ -76,7 +84,7 @@
 
 ### Added
 - New Vue dashboard widget. Now you can choose between 2 WidgetItems
-- New text strings within language files 
+- New text strings within language files
 
 ## 1.1.1
 
