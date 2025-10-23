@@ -12,21 +12,21 @@
 - ✅ After correcting a log entry it can be deleted from the log file.
 - ✅ One click deletion of all duplicates within the log file.
 - ✅ Empty the log file without using shell commands.]]></description>
-	<version>1.1.8</version>
+	<version>1.1.9</version>
 	<licence>agpl</licence>
 	<author mail="wtoedt@gmail.com" homepage="https://github.com/zomtec2311/logcleaner">Wolfgang Tödt</author>
 	<namespace>LogCleaner</namespace>
 	<category>tools</category>
 	<bugs>https://github.com/zomtec2311/logcleaner/issues</bugs>
     <screenshot small-thumbnail="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleaner3-small.png">https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleaner3.png</screenshot>
-	<screenshot>https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerwidget.png</screenshot>    
+	<screenshot>https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerwidget.png</screenshot>
 	<website>https://github.com/zomtec2311/logcleaner</website>
 	<repository type="git">https://github.com/zomtec2311/logcleaner</repository>
     <background-jobs>
         <job>OCA\LogCleaner\Cron\Cleanup</job>
     </background-jobs>
 	<dependencies>
-		<nextcloud min-version="29" max-version="31"/>
+		<nextcloud min-version="29" max-version="32"/>
 	</dependencies>
 	<navigations>
 		<navigation>
