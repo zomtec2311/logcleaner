@@ -16,7 +16,7 @@
   </tr>
 </table>
 
-## About
+## ✨ About
 There are programs or server environments that log a lot and may generate masses of log files. This is also the case with Nextcloud. Under certain circumstances, this can regularly lead to the hard drive running full, because the log file may be constantly fed with new errors.
 
 It is not advisable to simply empty or delete the log file. The better approach is to look at the individual error entries and correct them so that they do not occur again.
@@ -25,16 +25,16 @@ That's where the LogCleaner app comes in. With LogCleaner it is possible to deci
 
 Furthermore LogCleaner can detect duplicates in the log file and delete them with just one click.
 
-## Usage
+## ⚙️ Usage
 
 - It is recommended to download or install this app directly from the [Nextcloud App store](https://apps.nextcloud.com/apps/logcleaner).
 - Alternatively you can download the [latest logcleaner release](https://github.com/zomtec2311/logcleaner/releases) based on this repository.
 
-## Thanks to
+## 🙏 Thanks to
 
 - [rakekniven](https://github.com/rakekniven) for improving grammar and fixing typos
 
-## F.A.Q.
+## 💡 F.A.Q.
 
 <details>
   <summary><b>All of the text is in english?</b></summary>
@@ -48,7 +48,14 @@ Furthermore LogCleaner can detect duplicates in the log file and delete them wit
   We used the AI-based Google translator to generate language files. Of course, there were limitations to the translation depending on the quality of the AI. If you'd like to help improve your language file, open an issue and report your suggestion for improvement. Thank you
 </details>
 
-## Some screenshots
+## 🤝 How you can support this project
+
+1. **🌟 Star this repository**: This is the easiest way to support LogCleaner and it costs nothing.
+1. **🪲 Report bugs**: Report any bugs you find on the issue tracker.
+1. **📖 Translate**: Help translate LogCleaner into your language, if the AI-based Google translator generated language files are poorly translated
+1. **📝 Contribute**: Read and file or comment on an issue and ask for guidance or give advice.
+
+## 👀 Some screenshots
 
 <details>
   <summary><b>Show me</b></summary>
