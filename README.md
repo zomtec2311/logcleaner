@@ -51,7 +51,7 @@ Furthermore LogCleaner can detect duplicates in the log file and delete them wit
 ## 🤝 How you can support this project
 
 1. **🌟 Star this repository**: This is the easiest way to support LogCleaner and it costs nothing.
-2. **⭐ Rate and/or 💬 comment** on Logcleaner in the [AppStore](https://apps.nextcloud.com/apps/logcleaner)
+2. **⭐ Rate and/or 💬 comment** on Logcleaner in the [Nextcloud AppStore](https://apps.nextcloud.com/apps/logcleaner)
 3. **🪲 Report bugs**: Report any bugs you find on the issue tracker.
 4. **📖 Translate**: Help translate LogCleaner into your language, if the AI-based Google translator generated language files are poorly translated
 5. **📝 Contribute**: Read and file or comment on an issue and ask for guidance or give advice.
