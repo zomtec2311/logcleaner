@@ -50,7 +50,7 @@ class PageController extends Controller {
 	#[NoCSRFRequired]
 	//#[NoAdminRequired]      //<----------- auskommentiert haben nur admins access
 	#[OpenAPI(OpenAPI::SCOPE_IGNORE)]
-	#[FrontpageRoute(verb: 'POST', url: '/')]
+	//#[FrontpageRoute(verb: 'POST', url: '/')]
 
 	public function index(?string $getParameter, ?int $Zeile): TemplateResponse {
         Util::addStyle(Application::APP_ID, 'logcleaner-main');
