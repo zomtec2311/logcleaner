@@ -7,7 +7,7 @@ assignees:
 
 ---
 **Description**
-A clear and concise description of what the bug is.
+A clear and concise description of what the bug is. Please give as much information you can.
 
 **Reproduction**
 Steps to reproduce the behavior:
