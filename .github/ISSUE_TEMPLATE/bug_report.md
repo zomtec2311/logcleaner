@@ -32,3 +32,7 @@ Which browser are you using?
 Nextcloud server version: ??
 LogCleaner version: ??
 Database system: MySQL/MariaDB/PostgreSQL/Sqlite
+
+**Logged errors**
+errors in nextcloud.log
+errors in apache/nginx error.log or access.log
