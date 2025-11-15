@@ -30,9 +30,9 @@ namespace OCA\LogCleaner\Controller;
 use OCA\LogCleaner\AppInfo\Application;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\Attribute\FrontpageRoute;
-use OCP\AppFramework\Http\Attribute\NoAdminRequired;
+//use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
-use OCP\AppFramework\Http\Attribute\OpenAPI;
+//use OCP\AppFramework\Http\Attribute\OpenAPI;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IConfig;
 use OCP\IRequest;
@@ -47,12 +47,11 @@ class PageController extends Controller {
         parent::__construct(Application::APP_ID, $request);
     }
 
-	#[NoCSRFRequired]
+	
 	//#[NoAdminRequired]      //<----------- auskommentiert haben nur admins access
-	#[OpenAPI(OpenAPI::SCOPE_IGNORE)]
-	//#[FrontpageRoute(verb: 'POST', url: '/')]
-
-	public function index(?string $getParameter, ?int $Zeile): TemplateResponse {
+	//#[OpenAPI(OpenAPI::SCOPE_IGNORE)]
+    #[NoCSRFRequired]
+	public function index(): TemplateResponse {
         Util::addStyle(Application::APP_ID, 'logcleaner-main');
         Util::addScript(Application::APP_ID, 'logcleaner-main');
         return new TemplateResponse(

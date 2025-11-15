@@ -38,6 +38,7 @@ use OCP\Util;
 use OCP\IUserSession;
 use OCP\IGroupManager;
 
+#[\AllowDynamicProperties]
 class LogCleanerWidget2 implements IWidget, IConditionalWidget
 {
   public function __construct(private IL10N $l10n,

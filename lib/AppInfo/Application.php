@@ -36,7 +36,8 @@ use OCP\INavigationManager;
 use OCP\IURLGenerator;
 use OCP\IConfig;
 //use OCP\IAppConfig;
-use OCP\IServerContainer;
+//use OCP\IServerContainer;
+use Psr\Container\ContainerInterface;
 use OCA\LogCleaner\Dashboard\LogCleanerWidget;
 use OCA\LogCleaner\Dashboard\LogCleanerWidget2;
 

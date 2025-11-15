@@ -43,7 +43,8 @@ use OCP\IGroupManager;
 
 use OCA\LogCleaner\AppInfo\Application;
 use OCP\Util;
-
+	
+	#[\AllowDynamicProperties]
 	class LogCleanerWidget implements IAPIWidgetV2, IConditionalWidget {
 
 	private $l10n;

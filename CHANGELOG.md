@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.0
+
+### Fixed
+- Bug in routes.php caused 405 error in some cases
+
 ## 1.1.9
 
 ### Added
