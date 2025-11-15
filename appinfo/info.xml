@@ -26,7 +26,7 @@
         <job>OCA\LogCleaner\Cron\Cleanup</job>
     </background-jobs>
 	<dependencies>
-		<nextcloud min-version="29" max-version="32"/>
+		<nextcloud min-version="31" max-version="32"/>
 	</dependencies>
 	<navigations>
 		<navigation>
