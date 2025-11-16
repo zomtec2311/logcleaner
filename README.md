@@ -33,6 +33,7 @@ Furthermore LogCleaner can detect duplicates in the log file and delete them wit
 ## 🙏 Thanks to
 
 - [rakekniven](https://github.com/rakekniven) for improving grammar and fixing typos
+- [maghog](https://github.com/maghog) for the revision of the swedish language files
 
 ## 💡 F.A.Q.
 
