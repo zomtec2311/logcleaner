@@ -1,9 +1,24 @@
 # Changelog
 
+## 1.2.3
+
+### Changed
+-some code fixes
+-removed backup process
+
+
+## 1.2.2
+
+### Changed
+- backup process
+
 ## 1.2.1
 
 ### Fixed
 - new swedish language files because of bad translation (Thanks to maghog)
+
+### Added
+- backup of the previous version of the app 
 
 ## 1.2.0
 
