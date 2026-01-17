@@ -375,10 +375,11 @@ class SettingsController extends Controller {
 		}
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		$wtlogfilezeilen = count($wwt);
-		//return $wtlogfilezeilen;
+		$wttext = $this->l->n('%n log entry', '%n log entries', $wtlogfilezeilen);
 		return new DataResponse([
 				//'wtarr' => $wtarr,
                 'wtlogfilezeilen' => $wtlogfilezeilen,
+				'wttext' => $wttext,
             ]);
 	}
 
@@ -462,10 +463,12 @@ class SettingsController extends Controller {
 			}
       $i++;
     }
-		//return $ii;
+		$wttext = $this->l->n('Delete %n duplicate', 'Delete %n duplicates', $ii);
+		$wttextinfo = $this->l->t('This button will delete shown number of duplicates within the error log file');
 		return new DataResponse([
-				//'wtarr' => $wtarr,
                 'cntdub' => $ii,
+				'wttext' => $wttext,
+				'wttextinfo' => $wttextinfo,
             ]);
 	}
 
