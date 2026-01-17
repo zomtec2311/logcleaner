@@ -12,7 +12,7 @@
 - ✅ After correcting a log entry it can be deleted from the log file.
 - ✅ One click deletion of all duplicates within the log file.
 - ✅ Empty the log file without using shell commands.]]></description>
-	<version>1.2.3</version>
+	<version>1.2.4</version>
 	<licence>agpl</licence>
 	<author mail="wtoedt@gmail.com" homepage="https://github.com/zomtec2311/logcleaner">Wolfgang Tödt</author>
 	<namespace>LogCleaner</namespace>
