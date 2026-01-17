@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.4
+
+### Added
+- Preparation for cooperation with AdminCockpit
+
 ## 1.2.3
 
 ### Changed
