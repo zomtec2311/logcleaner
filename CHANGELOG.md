@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.5
+
+### Added
+- Showing log entry details
+
 ## 1.2.4
 
 ### Added

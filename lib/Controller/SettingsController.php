@@ -276,7 +276,6 @@ class SettingsController extends Controller {
 		  $obja->zeit = '';
 			$obja->grund = $this->l->t('no log entries available');
 			$wtarr [] = $obja;
-		  //return $wtarr;
 		  return new DataResponse([
                 'al' => $wtarr,
             ]);
@@ -294,7 +293,6 @@ class SettingsController extends Controller {
 			 	}
 			}
 		}
-		//return $wtarr;
 		return new DataResponse([
                 'al' => $wtarr,
             ]);
@@ -365,6 +363,36 @@ class SettingsController extends Controller {
 		$logid = intval($logid);
 		$this->getlog($logid);
 		return new DataResponse([
+            ]);
+	}
+	
+	public function showdetail(string $detail): DataResponse {
+		if ($detail === null) {
+			$detail = null;
+		}
+		$wt_out = "";
+		$array = [];
+		$wtarr =[];
+		$wtlogfile = $this->config->getSystemValue('logfile');
+		if (!file_exists($wtlogfile)) {
+			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+				if (!file_exists($wtlogfile)) {
+					return new DataResponse([ 
+					 'detail' => $this->l->t('log file cannot be located'),
+            ]);
+				}
+		}
+		$wwt = $this->helper->wtlogtoarr($wtlogfile);
+		if (isset($detail)) {
+			//$this->helper->wtzeileweg($logid, $wwt, $wtlogfile);
+			//$wwt = $this->helper->wtlogtoarr($wtlogfile);
+			$wtdetail = $wwt[$detail];
+			return new DataResponse([ 
+					 'detail' => $wtdetail,
+            ]);
+		}
+		return new DataResponse([ 
+					 'detail' => '',
             ]);
 	}
 

@@ -145,4 +145,6 @@ class Helper
         $obja->id = $wtlogfilezeilen;
         return $obja;
       }
+      
+      
 }
