@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "ავტომატურად წაშალეთ დუბლიკატები ყოველ 24 საათში",
     "display this settings as accordion or modal" : "აჩვენეთ ეს პარამეტრები, როგორც აკორდეონი ან მოდალური",
     "accordion" : "აკორდეონი",
-    "modal" : "მოდალური"
+    "modal" : "მოდალური",
+    "Copy to clipboard": "კოპირება ბუფერში",
+    "Detail": "დეტალი",
+    "View detail": "დეტალების ნახვა"
 },
 "nplurals=2; plural=n != 1;");

@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Fshi automatikisht kopjimet çdo 24 orë",
     "display this settings as accordion or modal" : "Shfaq këtë cilësime si fizarmonikë ose modale",
     "accordion" : "fizarmonikë",
-    "modal" : "modal"
+    "modal" : "modal",
+    "Copy to clipboard": "Kopjo në kujtesën e fragmenteve",
+    "Detail": "Detaj",
+    "View detail": "Shiko detajet"
 },
 "nplurals=2; plural=n != 1;");

@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "24 óránként automatikusan törölje a másolatokat",
     "display this settings as accordion or modal" : "Jelenítse meg ezt a beállításokat harmonikaként vagy modálisként",
     "accordion" : "harmonika",
-    "modal" : "modális"
+    "modal" : "modális",
+    "Copy to clipboard": "Másolás a vágólapra",
+    "Detail": "Részlet",
+    "View detail": "Részletek megtekintése"
 },
 "nplurals=2; plural=n != 1;");

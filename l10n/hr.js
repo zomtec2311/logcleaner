@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Automatski izbrisati duplikate svaka 24 sata",
     "display this settings as accordion or modal" : "Prikažite ove postavke kao harmonika ili modal",
     "accordion" : "harmonika",
-    "modal" : "modalni"
+    "modal" : "modalni",
+    "Copy to clipboard": "Kopiraj u međuspremnik",
+    "Detail": "Detalj",
+    "View detail": "Pogledaj detalje"
 },
 "nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);");

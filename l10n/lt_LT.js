@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Automatiškai ištrinkite dublika kas 24 valandas",
     "display this settings as accordion or modal" : "Parodykite šiuos nustatymus kaip akordeoną arba modalą",
     "accordion" : "akordeonas",
-    "modal" : "Modalas"
+    "modal" : "Modalas",
+    "Copy to clipboard": "Kopijuoti į mainų sritį",
+    "Detail": "Detalė",
+    "View detail": "Žiūrėti išsamią informaciją"
 },
 "nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);");

@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Ավտոմատ կերպով ջնջել կրկնօրինակները ամեն 24 ժամվա ընթացքում",
     "display this settings as accordion or modal" : "Display ուցադրել այս պարամետրերը որպես ակորդե կամ մոդալ",
     "accordion" : "ակորդեոն",
-    "modal" : "մոդալ"
+    "modal" : "մոդալ",
+    "Copy to clipboard": "Պատճենել clipboard-ում",
+    "Detail": "Մանրամասն",
+    "View detail": "Դիտել մանրամասն"
 },
 "nplurals=2; plural=n > 1;");

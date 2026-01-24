@@ -59,6 +59,9 @@
     "Automatically delete duplicates every 24 hours" : "ಪ್ರತಿ 24 ಗಂಟೆಗಳಿಗೊಮ್ಮೆ ನಕಲುಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಅಳಿಸಿ",
     "display this settings as accordion or modal" : "ಈ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಅಕಾರ್ಡಿಯನ್ ಅಥವಾ ಮೋಡಲ್ ಆಗಿ ಪ್ರದರ್ಶಿಸಿ",
     "accordion" : "ಸ ೦ ಶೋಕಿ",
-    "modal" : "ಮೊನಚಾದ"
+    "modal" : "ಮೊನಚಾದ",
+    "Copy to clipboard": "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಿ",
+    "Detail": "ವಿವರ",
+    "View detail": "ವಿವರ ವೀಕ್ಷಿಸಿ"
 },"pluralForm" :"nplurals=2; plural=n > 1;"
 }

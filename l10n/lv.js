@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Automātiski izdzēst dublikātus ik pēc 24 stundām",
     "display this settings as accordion or modal" : "Parādiet šos iestatījumus kā akordeonu vai modālu",
     "accordion" : "akordeons",
-    "modal" : "modāls"
+    "modal" : "modāls",
+    "Copy to clipboard": "Kopēt starpliktuvē",
+    "Detail": "Detaļas",
+    "View detail": "Skatīt detalizētu informāciju"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");

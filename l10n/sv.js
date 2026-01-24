@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Ta bort dubbletter automatiskt var 24:e timme",
     "display this settings as accordion or modal" : "Visa dessa inställningar som meny eller modal",
     "accordion" : "meny",
-    "modal" : "modal"
+    "modal" : "modal",
+    "Copy to clipboard": "Kopiera till urklipp",
+    "Detail": "Detalj",
+    "View detail": "Visa detaljer"
 },
 "nplurals=2; plural=n != 1;");

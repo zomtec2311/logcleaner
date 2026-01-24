@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Hapus duplikat secara otomatis setiap 24 jam",
     "display this settings as accordion or modal" : "Tampilkan pengaturan ini sebagai akordeon atau modal",
     "accordion" : "akordeon",
-    "modal" : "modal"
+    "modal" : "modal",
+    "Copy to clipboard": "Salin ke papan klip",
+    "Detail": "Detil",
+    "View detail": "Lihat detailnya"
 },
 "nplurals=1; plural=0;");

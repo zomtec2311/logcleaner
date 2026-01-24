@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "24 saatte bir kopyaları otomatik olarak silin",
     "display this settings as accordion or modal" : "Bu ayarları akordeon veya modal olarak görüntüleyin",
     "accordion" : "akordeon",
-    "modal" : "modsal"
+    "modal" : "modsal",
+    "Copy to clipboard": "Panoya kopyala",
+    "Detail": "Detay",
+    "View detail": "Ayrıntıyı görüntüle"
 },
 "nplurals=2; plural=n != 1;");

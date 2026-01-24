@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "24時間ごとに複製を自動的に削除します",
     "display this settings as accordion or modal" : "この設定をアコーディオンまたはモーダルとして表示します",
     "accordion" : "アコーディオン",
-    "modal" : "モーダル"
+    "modal" : "モーダル",
+    "Copy to clipboard": "クリップボードにコピー",
+    "Detail": "詳細",
+    "View detail": "詳細を見る"
 },
 "nplurals=1; plural=0;");

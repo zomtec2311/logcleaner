@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Ștergeți automat duplicatele la fiecare 24 de ore",
     "display this settings as accordion or modal" : "Afișați aceste setări ca acordeon sau modal",
     "accordion" : "acordeon",
-    "modal" : "modal"
+    "modal" : "modal",
+    "Copy to clipboard": "Copiați în clipboard",
+    "Detail": "Detaliu",
+    "View detail": "Vezi detalii"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 0 || n != 1 && n % 100 >= 1 && n % 100 <= 19) ? 1 : 2);");

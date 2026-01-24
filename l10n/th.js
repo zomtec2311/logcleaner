@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "ลบซ้ำโดยอัตโนมัติทุก 24 ชั่วโมงโดยอัตโนมัติ",
     "display this settings as accordion or modal" : "แสดงการตั้งค่านี้เป็นหีบเพลงหรือโมดอล",
     "accordion" : "หีบเพลง",
-    "modal" : "เป็นโมฆะ"
+    "modal" : "เป็นโมฆะ",
+    "Copy to clipboard": "คัดลอกไปยังคลิปบอร์ด",
+    "Detail": "รายละเอียด",
+    "View detail": "ดูรายละเอียด"
 },
 "nplurals=1; plural=0;");

@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Давхардлыг автоматаар 24 цаг тутамд устгана",
     "display this settings as accordion or modal" : "Энэ тохиргоог ordical эсвэл Modal хэлбэрээр харуулах",
     "accordion" : "баян хуур",
-    "modal" : "барилгын хөл"
+    "modal" : "барилгын хөл",
+    "Copy to clipboard": "Түр санах ойд хуулах",
+    "Detail": "Дэлгэрэнгүй",
+    "View detail": "Дэлгэрэнгүй үзэх"
 },
 "nplurals=2; plural=n != 1;");

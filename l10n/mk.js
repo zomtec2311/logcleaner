@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Автоматски избришете ги дупликатите на секои 24 часа",
     "display this settings as accordion or modal" : "прикажете ги овие поставки како хармоника или модална",
     "accordion" : "хармоника",
-    "modal" : "модал"
+    "modal" : "модал",
+    "Copy to clipboard": "Копирај во таблата со исечоци",
+    "Detail": "Детал",
+    "View detail": "Погледнете ги деталите"
 },
 "nplurals=2; plural=(n==1 || n%10==1 ? 0 : 1);");

@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "ລຶບຊ້ໍາຄືນອັດຕະໂນມັດໃນທຸກໆ 24 ຊົ່ວໂມງ",
     "display this settings as accordion or modal" : "ສະແດງການຕັ້ງຄ່ານີ້ເປັນ ໂຄສະນາ ຫຼື ພິມ",
     "accordion" : "ໂຄສະນາ",
-    "modal" : "ພິມ"
+    "modal" : "ພິມ",
+    "Copy to clipboard": "ສຳເນົາໃສ່ຄລິບບອດ",
+    "Detail": "ລາຍລະອຽດ",
+    "View detail": "ເບິ່ງລາຍລະອຽດ"
 },
 "nplurals=1; plural=0;");

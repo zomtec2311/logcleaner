@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Slett duplikater automatisk hver 24. time",
     "display this settings as accordion or modal" : "Vis disse innstillingene som trekkspill eller modal",
     "accordion" : "trekkspill",
-    "modal" : "modal"
+    "modal" : "modal",
+    "Copy to clipboard": "Kopier til utklippstavlen",
+    "Detail": "Detalj",
+    "View detail": "Se detaljer"
 },
 "nplurals=2; plural=n != 1;");

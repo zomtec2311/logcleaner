@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "מחק אוטומטית כפילויות כל 24 שעות",
     "display this settings as accordion or modal" : "הצג הגדרות אלה כאקורדיון או מודאלי",
     "accordion" : "אַקוֹרדִיוֹן",
-    "modal" : "מוֹדָלִי"
+    "modal" : "מוֹדָלִי",
+    "Copy to clipboard": "העתק ללוח",
+    "Detail": "פְּרָט",
+    "View detail": "הצג פרטים"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 2) ? 1 : 2);");

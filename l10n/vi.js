@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Tự động xóa các bản sao mỗi 24 giờ",
     "display this settings as accordion or modal" : "hiển thị cài đặt này dưới dạng accordion hoặc phương thức",
     "accordion" : "accordion",
-    "modal" : "phương thức"
+    "modal" : "phương thức",
+    "Copy to clipboard": "Sao chép vào khay nhớ tạm",
+    "Detail": "Chi tiết",
+    "View detail": "Xem chi tiết"
 },
 "nplurals=1; plural=0;");

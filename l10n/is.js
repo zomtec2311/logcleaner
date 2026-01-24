@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Eyða sjálfkrafa afrit á 24 tíma fresti",
     "display this settings as accordion or modal" : "Birtu þessar stillingar sem harmonikku eða módel",
     "accordion" : "harmonikku",
-    "modal" : "modal"
+    "modal" : "modal",
+    "Copy to clipboard": "Afritaðu á klemmuspjald",
+    "Detail": "Smáatriði",
+    "View detail": "Skoða smáatriði"
 },
 "nplurals=2; plural=n % 10 != 1 || n % 100 == 11;");

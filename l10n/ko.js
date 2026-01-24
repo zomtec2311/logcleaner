@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "24 시간마다 중복을 자동으로 삭제합니다",
     "display this settings as accordion or modal" : "이 설정을 아코디언 또는 모달로 표시하십시오",
     "accordion" : "아코디언",
-    "modal" : "모달"
+    "modal" : "모달",
+    "Copy to clipboard": "클립보드에 복사",
+    "Detail": "세부 사항",
+    "View detail": "세부정보 보기"
 },
 "nplurals=1; plural=0;");

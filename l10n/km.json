@@ -59,6 +59,9 @@
     "Automatically delete duplicates every 24 hours" : "លុបស្ទួនដោយស្វ័យប្រវត្តិរៀងរាល់ 24 ម៉ោង",
     "display this settings as accordion or modal" : "បង្ហាញការកំណត់នេះជាឬម៉ូឌុល",
     "accordion" : "អាករដេអុង",
-    "modal" : "ការរបកបត្ដិការ"
+    "modal" : "ការរបកបត្ដិការ",
+    "Copy to clipboard": "ចម្លងទៅក្ដារតម្បៀតខ្ទាស់",
+    "Detail": "លម្អិត",
+    "View detail": "មើលព័ត៌មានលម្អិត"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

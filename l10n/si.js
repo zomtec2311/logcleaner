@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "සෑම පැය 24 කට වරක් ස්වයංක්රීයව අනුපිටපත් මකන්න",
     "display this settings as accordion or modal" : "මෙම සැකසුම් ඇකෝනැෙන්ට් හෝ මොඩල් ලෙස පෙන්වන්න",
     "accordion" : "ඇකෝනියන්",
-    "modal" : "මෝඩල්"
+    "modal" : "මෝඩල්",
+    "Copy to clipboard": "පසුරු පුවරුවට පිටපත් කරන්න",
+    "Detail": "විස්තර",
+    "View detail": "විස්තර බලන්න"
 },
 "nplurals=2; plural=n > 1;");

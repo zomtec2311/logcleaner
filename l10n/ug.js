@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "ھەر 24 سائەتتە كۆپەيتىلگەن نۇسخىسىنى ئاپتوماتىك ئۆچۈرۈڭ",
     "display this settings as accordion or modal" : "بۇ تەڭشەكنى ماس ھالدا ياكى مودېل سۈپىتىدە كۆرسىتىڭ",
     "accordion" : "ئاككوردىيون",
-    "modal" : "modal"
+    "modal" : "modal",
+    "Copy to clipboard": "چاپلاش تاختىسىغا كۆچۈرۈڭ",
+    "Detail": "Detail",
+    "View detail": "تەپسىلاتنى كۆرۈڭ"
 },
 "nplurals=2; plural=n != 1;");

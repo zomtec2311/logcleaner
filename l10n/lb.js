@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Automatesch läschen Duplizéiert all 24 Stonnen",
     "display this settings as accordion or modal" : "Display dës Astellunge als Akkord- oder Modal",
     "accordion" : "adekationéiert",
-    "modal" : "mënschheet"
+    "modal" : "mënschheet",
+    "Copy to clipboard": "Kopéiert op Clipboard",
+    "Detail": "Detail",
+    "View detail": "Kuckt Detailer"
 },
 "nplurals=2; plural=n != 1;");
