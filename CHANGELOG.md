@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.6
+
+### Added
+- new function to copy log detail to clipboard
+
+### Changed
+- language files updated
+- loading spinner position
+
 ## 1.2.5
 
 ### Added
