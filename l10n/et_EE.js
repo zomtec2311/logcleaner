@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Kustutage duplikaati automaatselt iga 24 tunni järel",
     "display this settings as accordion or modal" : "Kuva need sätted akordionina või modaalina",
     "accordion" : "akordion",
-    "modal" : "modaal"
+    "modal" : "modaal",
+    "Copy to clipboard": "Kopeeri lõikelauale",
+    "Detail": "Detail",
+    "View detail": "Kuva üksikasjad"
 },
 "nplurals=2; plural=n != 1;");

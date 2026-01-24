@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "حذف التكرارات تلقائيًا كل 24 ساعة",
     "display this settings as accordion or modal" : "عرض هذه الإعدادات على أنها الأكورديون أو وسيط",
     "accordion" : "الأكورديون",
-    "modal" : "وسيط"
+    "modal" : "وسيط",
+    "Copy to clipboard": "نسخ إلى الحافظة",
+    "Detail": "التفاصيل",
+    "View detail": "عرض التفاصيل"
 },
 "nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n % 100 >= 3 && n % 100 <= 10) ? 3 : ((n % 100 >= 11 && n % 100 <= 99) ? 4 : 5))));");

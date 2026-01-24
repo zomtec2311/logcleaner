@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Automatikoki ezabatu bikoiztuak 24 orduz behin",
     "display this settings as accordion or modal" : "Bistaratu ezarpen hau akordeoi edo modal gisa",
     "accordion" : "eskusoinu",
-    "modal" : "nagusi"
+    "modal" : "nagusi",
+    "Copy to clipboard": "Kopiatu arbelean",
+    "Detail": "Xehetasuna",
+    "View detail": "Ikusi xehetasuna"
 },
 "nplurals=2; plural=n != 1;");

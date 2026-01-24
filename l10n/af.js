@@ -62,6 +62,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Duiken dupliseer dit outomaties elke 24 uur",
     "display this settings as accordion or modal" : "Vertoon hierdie instellings as trekklavier of modaal",
     "accordion" : "trekklavier",
-    "modal" : "modaal"
+    "modal" : "modaal",
+    "Copy to clipboard": "Kopieer na knipbord",
+    "Detail": "Detail",
+    "View detail": "Bekyk detail"
 },
 "nplurals=2; plural=n != 1;");

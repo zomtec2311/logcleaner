@@ -59,6 +59,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Supprimer automatiquement les doublons toutes les 24 heures",
     "display this settings as accordion or modal" : "Afficher ces paramètres comme accordéon ou modal",
     "accordion" : "accordéon",
-    "modal" : "modal"
+    "modal" : "modal",
+    "Copy to clipboard": "Copier dans le presse-papier",
+    "Detail": "Détail",
+    "View detail": "Voir le détail"
 },
 "nplurals=2; plural=(n != 1);");

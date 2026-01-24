@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Poista kopiot automaattisesti 24 tunnin välein",
     "display this settings as accordion or modal" : "Näytä tämä asetukset haitarina tai modaalina",
     "accordion" : "harmonikka",
-    "modal" : "modaalinen"
+    "modal" : "modaalinen",
+    "Copy to clipboard": "Kopioi leikepöydälle",
+    "Detail": "Yksityiskohta",
+    "View detail": "Näytä tiedot"
 },
 "nplurals=2; plural=n != 1;");

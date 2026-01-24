@@ -60,6 +60,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Automatische Löschung von Dubletten alle 24 Stunden",
     "display this settings as accordion or modal" : "Diese Einstellungen als Akkordeon oder Modal anzeigen",
     "accordion" : "Akkordeon",
-    "modal" : "Modal"
+    "modal" : "Modal",
+    "Copy to clipboard": "In die Zwischenablage kopieren",
+"Detail": "Detail",
+"View detail": "Detail anzeigen"
 },
 "nplurals=2; plural=(n != 1);");

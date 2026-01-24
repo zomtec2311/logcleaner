@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Aŭtomate forigi duplikatojn ĉiun 24 horojn",
     "display this settings as accordion or modal" : "Montru ĉi tiujn agordojn kiel akordionon aŭ modalon",
     "accordion" : "Akordiono",
-    "modal" : "Modala"
+    "modal" : "Modala",
+    "Copy to clipboard": "Kopiu al tondujo",
+    "Detail": "Detalo",
+    "View detail": "Rigardu detalon"
 },
 "nplurals=2; plural=n != 1;");

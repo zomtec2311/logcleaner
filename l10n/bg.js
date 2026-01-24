@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Автоматично изтрийте дубликати на всеки 24 часа",
     "display this settings as accordion or modal" : "Показване на тези настройки като акордеон или модален",
     "accordion" : "акордеон",
-    "modal" : "Модален"
+    "modal" : "Модален",
+    "Copy to clipboard": "Копиране в клипборда",
+    "Detail": "детайл",
+    "View detail": "Вижте подробности"
 },
 "nplurals=2; plural=n != 1;");

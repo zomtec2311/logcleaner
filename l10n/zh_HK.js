@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "每24小時自動刪除重複一次",
     "display this settings as accordion or modal" : "顯示此設置為手風琴或模態",
     "accordion" : "手風琴",
-    "modal" : "模態"
+    "modal" : "模態",
+    "Copy to clipboard": "複製到剪貼板",
+    "Detail": "細節",
+    "View detail": "查看詳情"
 },
 "nplurals=1; plural=0;");

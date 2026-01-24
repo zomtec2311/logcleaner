@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Automaticky smazat duplikáty každých 24 hodin",
     "display this settings as accordion or modal" : "zobrazit toto nastavení jako akordeon nebo modální",
     "accordion" : "akordeon",
-    "modal" : "modální"
+    "modal" : "modální",
+    "Copy to clipboard": "Kopírovat do schránky",
+    "Detail": "Detail",
+    "View detail": "Zobrazit detail"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);");

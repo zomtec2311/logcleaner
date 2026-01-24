@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "Suprimeix automàticament els duplicats cada 24 hores",
     "display this settings as accordion or modal" : "Mostra aquesta configuració com a acordió o modal",
     "accordion" : "acordió",
-    "modal" : "modal"
+    "modal" : "modal",
+    "Copy to clipboard": "Copia al porta-retalls",
+    "Detail": "Detall",
+    "View detail": "Veure detall"
 },
 "nplurals=2; plural=(n != 1);");

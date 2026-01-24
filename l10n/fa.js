@@ -61,6 +61,9 @@ OC.L10N.register(
     "Automatically delete duplicates every 24 hours" : "هر 24 ساعت به طور خودکار کپی ها را حذف کنید",
     "display this settings as accordion or modal" : "این تنظیمات را به صورت آکاردئون یا معین نمایش دهید",
     "accordion" : "آکاردئون",
-    "modal" : "معین"
+    "modal" : "معین",
+    "Copy to clipboard": "در کلیپ بورد کپی کنید",
+    "Detail": "جزئیات",
+    "View detail": "مشاهده جزئیات"
 },
 "nplurals=2; plural=n > 1;");
