@@ -7,6 +7,7 @@
 
 ### Changed
 - position of button 'view detail' ([#14](https://github.com/zomtec2311/logcleaner/issues/14))
+- position of button 'copy to clipboard' sticky
 
 ## 1.2.6
 
