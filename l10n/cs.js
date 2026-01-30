@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "modální",
     "Copy to clipboard": "Kopírovat do schránky",
     "Detail": "Detail",
-    "View detail": "Zobrazit detail"
+    "View detail": "Zobrazit detail",
+    "Search issue of the log entry on the Internet": "Vyhledejte problém záznamu protokolu na internetu"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);");

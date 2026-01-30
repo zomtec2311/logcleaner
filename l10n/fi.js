@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "modaalinen",
     "Copy to clipboard": "Kopioi leikepöydälle",
     "Detail": "Yksityiskohta",
-    "View detail": "Näytä tiedot"
+    "View detail": "Näytä tiedot",
+    "Search issue of the log entry on the Internet": "Etsi lokimerkinnän ongelma Internetistä"
 },
 "nplurals=2; plural=n != 1;");

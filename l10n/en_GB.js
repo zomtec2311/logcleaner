@@ -63,6 +63,7 @@ OC.L10N.register(
     "modal" : "modal",
     "Copy to clipboard": "Copy to clipboard",
     "Detail": "Detail",
-    "View detail": "View detail"
+    "View detail": "View detail",
+    "Search issue of the log entry on the Internet": "Search issue of the log entry on the Internet"
 },
 "nplurals=2; plural=(n != 1);");

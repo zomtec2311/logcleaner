@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "mionsonra",
     "Copy to clipboard": "Cóipeáil chuig an ngearrthaisce",
     "Detail": "Sonraigh",
-    "View detail": "Féach ar na sonraí"
+    "View detail": "Féach ar na sonraí",
+    "Search issue of the log entry on the Internet": "Eisiúint cuardaigh an iontráil loga ar an Idirlíon"
 },
 "nplurals=5; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n >= 3 && n <= 6) ? 2 : ((n >= 7 && n <= 10) ? 3 : 4)));");

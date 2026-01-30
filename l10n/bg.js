@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "Модален",
     "Copy to clipboard": "Копиране в клипборда",
     "Detail": "детайл",
-    "View detail": "Вижте подробности"
+    "View detail": "Вижте подробности",
+    "Search issue of the log entry on the Internet": "Търсете въпрос на запис в дневника в Интернет"
 },
 "nplurals=2; plural=n != 1;");

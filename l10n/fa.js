@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "معین",
     "Copy to clipboard": "در کلیپ بورد کپی کنید",
     "Detail": "جزئیات",
-    "View detail": "مشاهده جزئیات"
+    "View detail": "مشاهده جزئیات",
+    "Search issue of the log entry on the Internet": "جست و جوی شماره ورودی گزارش در اینترنت"
 },
 "nplurals=2; plural=n > 1;");

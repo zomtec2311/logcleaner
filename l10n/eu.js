@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "nagusi",
     "Copy to clipboard": "Kopiatu arbelean",
     "Detail": "Xehetasuna",
-    "View detail": "Ikusi xehetasuna"
+    "View detail": "Ikusi xehetasuna",
+    "Search issue of the log entry on the Internet": "Bilatu erregistroko sarreraren arazoa Interneten"
 },
 "nplurals=2; plural=n != 1;");

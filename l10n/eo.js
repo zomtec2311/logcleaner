@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "Modala",
     "Copy to clipboard": "Kopiu al tondujo",
     "Detail": "Detalo",
-    "View detail": "Rigardu detalon"
+    "View detail": "Rigardu detalon",
+    "Search issue of the log entry on the Internet": "Serĉu temon de la protokolo-eniro en Interreto"
 },
 "nplurals=2; plural=n != 1;");

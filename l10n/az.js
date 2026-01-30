@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "modal",
     "Copy to clipboard": "Buferə kopyalayın",
     "Detail": "Detal",
-    "View detail": "Detallara baxın"
+    "View detail": "Detallara baxın",
+    "Search issue of the log entry on the Internet": "İnternetdə log girişi məsələsini axtarın"
 },
 "nplurals=2; plural=n != 1;");

@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "modaal",
     "Copy to clipboard": "Kopeeri lõikelauale",
     "Detail": "Detail",
-    "View detail": "Kuva üksikasjad"
+    "View detail": "Kuva üksikasjad",
+    "Search issue of the log entry on the Internet": "Otsi logikirje väljaannet Internetist"
 },
 "nplurals=2; plural=n != 1;");

@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "modal",
     "Copy to clipboard": "Kopiér til udklipsholder",
     "Detail": "Detalje",
-    "View detail": "Se detaljer"
+    "View detail": "Se detaljer",
+    "Search issue of the log entry on the Internet": "Søgeproblem for logposten på internettet"
 },
 "nplurals=2; plural=n != 1;");

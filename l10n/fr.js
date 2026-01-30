@@ -62,6 +62,7 @@ OC.L10N.register(
     "modal" : "modal",
     "Copy to clipboard": "Copier dans le presse-papier",
     "Detail": "Détail",
-    "View detail": "Voir le détail"
+    "View detail": "Voir le détail",
+    "Search issue of the log entry on the Internet": "Problème de recherche de l'entrée de journal sur Internet"
 },
 "nplurals=2; plural=(n != 1);");

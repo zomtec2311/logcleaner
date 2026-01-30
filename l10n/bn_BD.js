@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "মডেল",
     "Copy to clipboard": "ক্লিপবোর্ডে কপি করুন",
     "Detail": "বিস্তারিত",
-    "View detail": "বিস্তারিত দেখুন"
+    "View detail": "বিস্তারিত দেখুন",
+    "Search issue of the log entry on the Internet": "ইন্টারনেটে লগ এন্ট্রির সার্চ সমস্যা"
 },
 "nplurals=2; plural=n > 1;");
