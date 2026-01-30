@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "מוֹדָלִי",
     "Copy to clipboard": "העתק ללוח",
     "Detail": "פְּרָט",
-    "View detail": "הצג פרטים"
+    "View detail": "הצג פרטים",
+    "Search issue of the log entry on the Internet": "בעיית חיפוש של ערך היומן באינטרנט"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 2) ? 1 : 2);");

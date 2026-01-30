@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "մոդալ",
     "Copy to clipboard": "Պատճենել clipboard-ում",
     "Detail": "Մանրամասն",
-    "View detail": "Դիտել մանրամասն"
+    "View detail": "Դիտել մանրամասն",
+    "Search issue of the log entry on the Internet": "Ինտերնետում տեղեկամատյան մուտքագրման խնդիրը որոնել"
 },
 "nplurals=2; plural=n > 1;");

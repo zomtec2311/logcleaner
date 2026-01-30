@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "phương thức",
     "Copy to clipboard": "Sao chép vào khay nhớ tạm",
     "Detail": "Chi tiết",
-    "View detail": "Xem chi tiết"
+    "View detail": "Xem chi tiết",
+    "Search issue of the log entry on the Internet": "Vấn đề tìm kiếm mục nhật ký trên Internet"
 },
 "nplurals=1; plural=0;");

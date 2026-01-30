@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "เป็นโมฆะ",
     "Copy to clipboard": "คัดลอกไปยังคลิปบอร์ด",
     "Detail": "รายละเอียด",
-    "View detail": "ดูรายละเอียด"
+    "View detail": "ดูรายละเอียด",
+    "Search issue of the log entry on the Internet": "ปัญหาการค้นหาของรายการบันทึกบนอินเทอร์เน็ต"
 },
 "nplurals=1; plural=0;");

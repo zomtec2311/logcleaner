@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "модал",
     "Copy to clipboard": "Копирај во таблата со исечоци",
     "Detail": "Детал",
-    "View detail": "Погледнете ги деталите"
+    "View detail": "Погледнете ги деталите",
+    "Search issue of the log entry on the Internet": "Барај прашање на записот во дневникот на Интернет"
 },
 "nplurals=2; plural=(n==1 || n%10==1 ? 0 : 1);");

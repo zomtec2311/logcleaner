@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "මෝඩල්",
     "Copy to clipboard": "පසුරු පුවරුවට පිටපත් කරන්න",
     "Detail": "විස්තර",
-    "View detail": "විස්තර බලන්න"
+    "View detail": "විස්තර බලන්න",
+    "Search issue of the log entry on the Internet": "අන්තර්ජාලයේ ලොග් සටහනේ සෙවුම් ගැටළුව"
 },
 "nplurals=2; plural=n > 1;");

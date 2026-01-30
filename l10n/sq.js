@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "modal",
     "Copy to clipboard": "Kopjo në kujtesën e fragmenteve",
     "Detail": "Detaj",
-    "View detail": "Shiko detajet"
+    "View detail": "Shiko detajet",
+    "Search issue of the log entry on the Internet": "Kërkoni çështjen e hyrjes së regjistrit në internet"
 },
 "nplurals=2; plural=n != 1;");

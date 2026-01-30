@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "ພິມ",
     "Copy to clipboard": "ສຳເນົາໃສ່ຄລິບບອດ",
     "Detail": "ລາຍລະອຽດ",
-    "View detail": "ເບິ່ງລາຍລະອຽດ"
+    "View detail": "ເບິ່ງລາຍລະອຽດ",
+    "Search issue of the log entry on the Internet": "ຄົ້ນຫາບັນຫາການເຂົ້າສູ່ລະບົບໃນອິນເຕີເນັດ"
 },
 "nplurals=1; plural=0;");

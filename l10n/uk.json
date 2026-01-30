@@ -62,6 +62,7 @@
     "modal" : "модальний",
     "Copy to clipboard": "Копіювати в буфер обміну",
     "Detail": "Деталь",
-    "View detail": "Переглянути деталі"
+    "View detail": "Переглянути деталі",
+    "Search issue of the log entry on the Internet": "Пошук питання запису журналу в Інтернеті"
 },"pluralForm" :"nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);"
 }

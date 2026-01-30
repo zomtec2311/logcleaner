@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "модальный",
     "Copy to clipboard": "Скопировать в буфер обмена",
     "Detail": "Деталь",
-    "View detail": "Посмотреть детали"
+    "View detail": "Посмотреть детали",
+    "Search issue of the log entry on the Internet": "Проблема с поиском записи журнала в Интернете"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);");

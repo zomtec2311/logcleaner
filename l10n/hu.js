@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "modális",
     "Copy to clipboard": "Másolás a vágólapra",
     "Detail": "Részlet",
-    "View detail": "Részletek megtekintése"
+    "View detail": "Részletek megtekintése",
+    "Search issue of the log entry on the Internet": "A naplóbejegyzés keresési kérdése az interneten"
 },
 "nplurals=2; plural=n != 1;");

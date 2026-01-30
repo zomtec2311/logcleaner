@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "барилгын хөл",
     "Copy to clipboard": "Түр санах ойд хуулах",
     "Detail": "Дэлгэрэнгүй",
-    "View detail": "Дэлгэрэнгүй үзэх"
+    "View detail": "Дэлгэрэнгүй үзэх",
+    "Search issue of the log entry on the Internet": "Бүртгэлийн бүртгэлийн асуудлыг интернетээс хайх"
 },
 "nplurals=2; plural=n != 1;");

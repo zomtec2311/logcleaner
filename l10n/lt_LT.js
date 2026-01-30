@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "Modalas",
     "Copy to clipboard": "Kopijuoti į mainų sritį",
     "Detail": "Detalė",
-    "View detail": "Žiūrėti išsamią informaciją"
+    "View detail": "Žiūrėti išsamią informaciją",
+    "Search issue of the log entry on the Internet": "Žurnalo įrašo paieška internete"
 },
 "nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);");

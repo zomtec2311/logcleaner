@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "模態",
     "Copy to clipboard": "複製到剪貼板",
     "Detail": "細節",
-    "View detail": "查看詳情"
+    "View detail": "查看詳情",
+    "Search issue of the log entry on the Internet": "網上搜索該日誌條目的問題"
 },
 "nplurals=1; plural=0;");

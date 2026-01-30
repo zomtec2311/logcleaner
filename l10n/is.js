@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "modal",
     "Copy to clipboard": "Afritaðu á klemmuspjald",
     "Detail": "Smáatriði",
-    "View detail": "Skoða smáatriði"
+    "View detail": "Skoða smáatriði",
+    "Search issue of the log entry on the Internet": "Leitarútgáfu skráningarfærslunnar á Netinu"
 },
 "nplurals=2; plural=n % 10 != 1 || n % 100 == 11;");

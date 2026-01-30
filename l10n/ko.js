@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "모달",
     "Copy to clipboard": "클립보드에 복사",
     "Detail": "세부 사항",
-    "View detail": "세부정보 보기"
+    "View detail": "세부정보 보기",
+    "Search issue of the log entry on the Internet": "인터넷 로그 항목 검색 문제"
 },
 "nplurals=1; plural=0;");

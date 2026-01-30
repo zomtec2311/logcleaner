@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "modaal",
     "Copy to clipboard": "Kopiëren naar klembord",
     "Detail": "Detail",
-    "View detail": "Bekijk details"
+    "View detail": "Bekijk details",
+    "Search issue of the log entry on the Internet": "Zoekprobleem van de logvermelding op internet"
 },
 "nplurals=2; plural=(n != 1);");

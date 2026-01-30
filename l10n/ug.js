@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "modal",
     "Copy to clipboard": "چاپلاش تاختىسىغا كۆچۈرۈڭ",
     "Detail": "Detail",
-    "View detail": "تەپسىلاتنى كۆرۈڭ"
+    "View detail": "تەپسىلاتنى كۆرۈڭ",
+    "Search issue of the log entry on the Internet": "تورغا كىرىش خاتىرىسىنىڭ ئىزدەش مەسىلىسى"
 },
 "nplurals=2; plural=n != 1;");

@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "モーダル",
     "Copy to clipboard": "クリップボードにコピー",
     "Detail": "詳細",
-    "View detail": "詳細を見る"
+    "View detail": "詳細を見る",
+    "Search issue of the log entry on the Internet": "インターネット上のログエントリの検索問題"
 },
 "nplurals=1; plural=0;");

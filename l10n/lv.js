@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "modāls",
     "Copy to clipboard": "Kopēt starpliktuvē",
     "Detail": "Detaļas",
-    "View detail": "Skatīt detalizētu informāciju"
+    "View detail": "Skatīt detalizētu informāciju",
+    "Search issue of the log entry on the Internet": "Meklēt žurnāla ierakstu internetā"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");

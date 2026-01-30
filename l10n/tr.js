@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "modsal",
     "Copy to clipboard": "Panoya kopyala",
     "Detail": "Detay",
-    "View detail": "Ayrıntıyı görüntüle"
+    "View detail": "Ayrıntıyı görüntüle",
+    "Search issue of the log entry on the Internet": "İnternetteki günlük girişinin arama sorunu"
 },
 "nplurals=2; plural=n != 1;");

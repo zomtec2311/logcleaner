@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "modal",
     "Copy to clipboard": "Kopiera till urklipp",
     "Detail": "Detalj",
-    "View detail": "Visa detaljer"
+    "View detail": "Visa detaljer",
+    "Search issue of the log entry on the Internet": "Sökfråga för loggposten på Internet"
 },
 "nplurals=2; plural=n != 1;");

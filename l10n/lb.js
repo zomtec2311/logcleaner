@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "mënschheet",
     "Copy to clipboard": "Kopéiert op Clipboard",
     "Detail": "Detail",
-    "View detail": "Kuckt Detailer"
+    "View detail": "Kuckt Detailer",
+    "Search issue of the log entry on the Internet": "Sicht Thema vun der Logbicher um Internet"
 },
 "nplurals=2; plural=n != 1;");

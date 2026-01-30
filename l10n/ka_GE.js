@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "მოდალური",
     "Copy to clipboard": "კოპირება ბუფერში",
     "Detail": "დეტალი",
-    "View detail": "დეტალების ნახვა"
+    "View detail": "დეტალების ნახვა",
+    "Search issue of the log entry on the Internet": "მოძებნეთ ჟურნალის ჩანაწერის საკითხი ინტერნეტში"
 },
 "nplurals=2; plural=n != 1;");

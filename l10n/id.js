@@ -64,6 +64,7 @@ OC.L10N.register(
     "modal" : "modal",
     "Copy to clipboard": "Salin ke papan klip",
     "Detail": "Detil",
-    "View detail": "Lihat detailnya"
+    "View detail": "Lihat detailnya",
+    "Search issue of the log entry on the Internet": "Masalah pencarian entri log di Internet"
 },
 "nplurals=1; plural=0;");
