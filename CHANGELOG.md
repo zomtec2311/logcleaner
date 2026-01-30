@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.7
+
+### Fixed
+- some code fixes
+
+### Changed
+- position of button 'view detail' ([#14](https://github.com/zomtec2311/logcleaner/issues/14))
+
 ## 1.2.6
 
 ### Added
