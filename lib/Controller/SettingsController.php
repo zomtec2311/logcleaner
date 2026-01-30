@@ -54,7 +54,6 @@ class SettingsController extends Controller {
 		$this->config = $config;
 		$this->helper = $helper;
 		$this->appManager = $appManager;
-		//$this->appconfig = $appConfig;
 	}
 
 	#[NoAdminRequired]
@@ -223,7 +222,6 @@ class SettingsController extends Controller {
 					$obja->zeit = '';
 					$obja->grund = $this->l->t('log file cannot be located');
 					$wtarr [] = $obja;
-					//return $wtarr;
 					return new DataResponse([
                 'al' => $wtarr,
             ]);
@@ -384,8 +382,6 @@ class SettingsController extends Controller {
 		}
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		if (isset($detail)) {
-			//$this->helper->wtzeileweg($logid, $wwt, $wtlogfile);
-			//$wwt = $this->helper->wtlogtoarr($wtlogfile);
 			$wtdetail = $wwt[$detail];
 			return new DataResponse([ 
 					 'detail' => $wtdetail,
@@ -405,7 +401,6 @@ class SettingsController extends Controller {
 		$wtlogfilezeilen = count($wwt);
 		$wttext = $this->l->n('%n log entry', '%n log entries', $wtlogfilezeilen);
 		return new DataResponse([
-				//'wtarr' => $wtarr,
                 'wtlogfilezeilen' => $wtlogfilezeilen,
 				'wttext' => $wttext,
             ]);
@@ -453,14 +448,11 @@ class SettingsController extends Controller {
 			$obja = new \stdClass();
 			$obja->cntdub = $ii;
 			$obja->sizediff = $filesizediff;
-			//$wtarr [] = $obja;
 			if ($wtpara_logmessage===2) {
 				if ($ii===1) $this->logger->info(sprintf('LogCleaner: %d duplicate was deleted and %s of disk space were cleared. This log entry can be deleted without verification.', $ii, $filesizediff)); //blau
 				else $this->logger->info(sprintf('LogCleaner: %d duplicates were deleted and %s of disk space were cleared. This log entry can be deleted without verification.', $ii, $filesizediff)); //blau
 			}
-			//return $wtarr;
 			return new DataResponse([
-				//'wtarr' => $wtarr,
                 'cntdub' => $ii,
 				'sizediff' => $filesizediff,
             ]);
