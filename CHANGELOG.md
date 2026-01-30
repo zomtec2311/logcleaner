@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.8
+
+### Added
+- Function to search for log entries on various search engines
+
 ## 1.2.7
 
 ### Fixed
