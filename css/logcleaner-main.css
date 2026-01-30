@@ -25,6 +25,11 @@
 }
 #wtlogmsg {
 	float :left;
+    overflow: hidden;
+    width: 100%;
+}
+#wtlogdet {
+	float : left;
 }
 #logcleaner-infobtn {
     /* font-family: Arial; */
@@ -103,6 +108,7 @@
     font-size: 0.75em;
 }
 .alert {
+   /* width: 95%; */
   display: flex;
 	align-items: center;
 	justify-content: left;
