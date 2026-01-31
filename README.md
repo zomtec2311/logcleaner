@@ -39,7 +39,7 @@ ff you are unsure and don't know exactly how to work with LogCleaner, feel free 
 - [rakekniven](https://github.com/rakekniven) for improving grammar and fixing typos
 - [maghog](https://github.com/maghog) for the revision of the swedish language files
 
-## 💡 F.A.Q.
+## 📘 F.A.Q.
 
 <details>
   <summary><b>All of the text is in english?</b></summary>
