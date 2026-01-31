@@ -80,7 +80,7 @@ Furthermore LogCleaner can detect duplicates in the log file and delete them wit
    <img src="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerwidget-dark.png" alt="https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleanerwidget-dark.png">
   </p>
   <br><br>
-  <b>New featuressince LogCleaner 1.2.8: View Details and search for solutions on the internet</b><br>
+  <b>New features since LogCleaner 1.2.8: View Details and search for solutions on the internet</b><br>
   
 
 https://github.com/user-attachments/assets/cdf10eac-e3ff-4816-aa37-73994dfbeb02
