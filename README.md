@@ -81,5 +81,9 @@ Furthermore LogCleaner can detect duplicates in the log file and delete them wit
   </p>
   <br><br>
   <b>New featuressince LogCleaner 1.2.8: View Details and search for solutions on the internet</b><br>
-  [![Watch the video](https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleaner-searchengines-TN.png)](https://raw.githubusercontent.com/zomtec2311/logcleaner/refs/heads/main/logcleaner-searchengines.mp4)
+  
+
+https://github.com/user-attachments/assets/cdf10eac-e3ff-4816-aa37-73994dfbeb02
+
+
 </details>
