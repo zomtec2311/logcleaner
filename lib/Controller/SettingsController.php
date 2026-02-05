@@ -571,8 +571,8 @@ class SettingsController extends Controller {
 		}
 		unset($value);
 		foreach($tmp_array as $val) {
-			if (!in_array($val[8], $key_array)) {
-				$key_array[$i] = $val[8];
+			if (!in_array($val[9], $key_array)) {
+				$key_array[$i] = $val[9];
 				$temp_array[$i] = $i;
       }
 			else {
@@ -618,8 +618,8 @@ class SettingsController extends Controller {
 		}
 		unset($value);
 		foreach($tmp_array as $val) {
-			if (!in_array($val[8], $key_array)) {
-				$key_array[$i] = $val[8];
+			if (!in_array($val[9], $key_array)) {
+				$key_array[$i] = $val[9];
 				$temp_array[$i] = $i;
       }
 			else {
@@ -633,6 +633,7 @@ class SettingsController extends Controller {
                 'cntdub' => $ii,
 				'wttext' => $wttext,
 				'wttextinfo' => $wttextinfo,
+				'keyarray' =>$wwt,
             ]);
 	}
 
