@@ -1,3 +1,25 @@
+.filter-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.log-select {
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.log-select:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
 #logcleaner {
 	/* display: flex; */
      width: 100%; 
@@ -134,10 +156,78 @@
     margin-left: 10px;
 }
 .icoinfo {
-    padding-top: 11px;
+    padding-top: 8px;
     padding-left: 50px;
     
 }
+
+.log-badge.is-active {
+    border-bottom-color: currentColor;
+    background-color: rgba(0, 0, 0, 0.02);
+    transform: translateY(-2px);
+}
+
+.filter-off {
+    background-color: #f9f9f9;
+    border-radius: 4px 4px 0 0;
+}
+
+.filter-off.is-active {
+    border-bottom-color: currentColor;
+    color: #000;
+    font-weight: bold;
+}
+
+.log-badge.clickable {
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.log-badge.clickable:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.log-badge.clickable:active {
+    transform: scale(0.95);
+}
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; 
+    align-items: flex-end;
+    margin: 10px 0 5px 0;
+}
+
+.is-empty {
+    opacity: 0.3;
+}
+
+.log-badge {
+    padding: 6px 12px;
+    border-radius: 4px 4px 0 0;
+    min-width: 80px;
+    display: flex;
+    flex-direction: row; 
+    gap: 8px;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.count {
+    font-size: 1rem;
+    font-weight: 800;
+}
+
 @media (max-width:650px) {
 #logcleanerfirst {
 	width: 400px;
