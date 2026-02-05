@@ -28,6 +28,7 @@ return [
     ['name' => 'page#index', 'url' => '/', 'verb' => 'GET'],
     ['name' => 'Settings#getlog', 'url' => '/getdata', 'verb' => 'GET'],
     ['name' => 'Settings#getalllog', 'url' => '/getalldata', 'verb' => 'GET'],
+    ['name' => 'Settings#getallfilteredlog', 'url' => '/getallfiltereddata/{level}', 'verb' => 'GET'],
     ['name' => 'Settings#emptylog', 'url' => '/emptylog', 'verb' => 'GET'],
     ['name' => 'Settings#getAppValueZ', 'url' => '/getparam/{who}', 'verb' => 'GET'],
     ['name' => 'Settings#getLL', 'url' => '/getll', 'verb' => 'GET'],
@@ -41,5 +42,6 @@ return [
     ['name' => 'Settings#dellog', 'url' => '/dellog/{logid}', 'verb' => 'GET'],
     ['name' => 'Settings#setSettingZeilen', 'url' => '/setlines/{who}/{zeilen}', 'verb' => 'GET'],
     ['name' => 'Settings#logfileandsize', 'url' => '/logfileandsize', 'verb' => 'GET'],
+    ['name' => 'Settings#getcntll', 'url' => '/getcntll', 'verb' => 'GET'],
   ]
 ];
