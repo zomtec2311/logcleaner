@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.2.9
+
+### Fixed
+- Bug fixed wrong log output ([#18](https://github.com/zomtec2311/logcleaner/issues/18))
+
+### Added
+- Filter function for displayed error levels
+
+### Changed
+- language files updated
+
 ## 1.2.8
 
 ### Added
