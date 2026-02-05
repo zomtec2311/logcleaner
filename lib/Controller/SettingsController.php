@@ -93,6 +93,10 @@ class SettingsController extends Controller {
 					$dummy = 1;
 					$this->setSettingZeilen($who,$dummy);
 					break;
+				case 'wtparam_filter':
+					$dummy = 1;
+					$this->setSettingZeilen($who,$dummy);
+					break;
 				case 'wtpara_cron_deldub':
 					$dummy = 1;
 					$this->setSettingZeilen($who,$dummy);
@@ -105,7 +109,6 @@ class SettingsController extends Controller {
 	}
 
 	public function getLL(): DataResponse {
-		//return $this->config->getSystemValue('loglevel');
 		return new DataResponse([
                 'loglevel' => $this->config->getSystemValue('loglevel'),
             ]);
@@ -200,7 +203,7 @@ class SettingsController extends Controller {
 		}
 		return $wtarr;
 	}
-
+// dieeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeseeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 	public function getalllog(?int $logid = null): DataResponse {
 		if ($logid === null) {
 			$logid = null;
@@ -288,6 +291,106 @@ class SettingsController extends Controller {
 				}
 			 	else {
 					$wtarr []= $this->helper->myoutputdata($a,$wtlogfilezeilen,$wtlogfilezeilen-$i,$wt_characters,$wt_offset); $array[$i] = $i;
+			 	}
+			}
+		}
+		return new DataResponse([
+                'al' => $wtarr,
+            ]);
+	}
+	
+	public function getallfilteredlog($level): DataResponse {
+		$wt_out = "";
+		$array = [];
+		$wtarr =[];
+		$wtlogfile = $this->config->getSystemValue('logfile');
+		if (!file_exists($wtlogfile)) {
+			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+				if (!file_exists($wtlogfile)) {
+					$obja = new \stdClass();
+					$obja->all = 0;
+					$obja->zeit = '';
+					$obja->ip = '';
+					$obja->user = '';
+					$obja->app = '';
+					$obja->method = '';
+					$obja->zeit = '';
+					$obja->grund = $this->l->t('log file cannot be located');
+					$wtarr [] = $obja;
+					return new DataResponse([
+                'al' => $wtarr,
+            ]);
+				}
+		}
+		$wwt = $this->helper->wtlogtoarr($wtlogfile);
+		$wt_zeilen = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_zeilen', '5', false);;
+		$wt_offset = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset', '0', false);
+		$wt_art = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_art', '2', false);
+		$wt_characters = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_characters', '500', false);
+		$wtpara_menue = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_menue', '1', false);
+		$wtpara_logmessage = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '2', false);
+		$wtpara_cron_deldub = (int)$this->appConfig->getValueString('logcleaner', 'wtpara_cron_deldub', '1', false);
+
+		if((!isset($wtpara_cron_deldub)) || ($wtpara_cron_deldub === 0)) {
+			$wtpara_cron_deldub = 1;
+			$this->helper->setAppValue('wtpara_cron_deldub', 1);
+		}
+		if((!isset($wtpara_menue)) || ($wtpara_menue === 0)) {
+			$this->helper->setAppValue('wtparam_menue', 1);
+		}
+		if((!isset($wt_zeilen)) || ($wt_zeilen === 0)) {
+			$wt_zeilen = 5;
+			$this->helper->setAppValue('logcleaner_wt_zeilen', 5);
+		}
+		if((!isset($wt_art)) || ($wt_art === 0)) {
+			$wt_art = 2;
+			$this->helper->setAppValue('logcleaner_wt_art', 9);
+		}
+		if((!isset($wtpara_logmessage)) || ($wtpara_logmessage === 0)) {
+			$this->helper->setAppValue('wtparam_logmessage', 2);
+		}
+		if((!isset($wt_characters)) || ($wt_characters === 0)) {
+			$wt_characters = 500;
+			$this->helper->setAppValue('logcleaner_wt_characters', 500);
+		}
+		if (isset($logid)) {
+			$this->helper->wtzeileweg($logid, $wwt, $wtlogfile);
+			$wwt = $this->helper->wtlogtoarr($wtlogfile);
+		}
+		$wtlogfilezeilen = count($wwt);
+		if ($wtlogfilezeilen == 0) {
+			$obja = new \stdClass();
+		  $obja->all = 0;
+		  $obja->zeit = '';
+		  $obja->ip = '';
+		  $obja->user = '';
+		  $obja->app = '';
+		  $obja->method = '';
+		  $obja->zeit = '';
+			$obja->grund = $this->l->t('no log entries available');
+			$wtarr [] = $obja;
+		  return new DataResponse([
+                'al' => $wtarr,
+            ]);
+		}
+		$wt_zeilen = $wtlogfilezeilen;
+		$wwt = array_splice($wwt, -$wt_zeilen);
+		for($i=0; $i < $wt_zeilen; $i++) {
+			$a = (isset($wwt[$wt_zeilen-$i-1])) ? $wwt[$wt_zeilen-$i-1] : null;
+			if ($a) {
+				if ($wt_zeilen >= count($wwt)) {
+					$wta = $this->helper->myfilteredoutputdata($a,$wtlogfilezeilen,$wtlogfilezeilen + $wt_zeilen - count($wwt)-$i-1,$wt_characters,$wt_offset, $level);
+					if (intval($wta->level) === intval($level)) {
+						$wtarr []= $wta; 
+					}
+					$array[$i] = $i;
+				}
+			 	else {
+					$wta = $this->helper->myfilteredoutputdata($a,$wtlogfilezeilen,$wtlogfilezeilen-$i,$wt_characters,$wt_offset, $level);
+					if (intval($wta->level) === intval($level)) {
+					$wtarr []= $wta; 
+					}
+					$array[$i] = $i;
 			 	}
 			}
 		}
@@ -405,6 +508,47 @@ class SettingsController extends Controller {
 				'wttext' => $wttext,
             ]);
 	}
+	
+	public function getcntll(): DataResponse {
+		$wtlogfile = $this->config->getSystemValue('logfile');
+		if (!file_exists($wtlogfile)) {
+			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		}
+		$stats = [
+			0 => ['count' => 0, 'label' => $this->l->t('DEBUG'), 'color' => '#DFF0D8', 'txtcolor' => '#3C763D', 'level' => 0],
+			1 => ['count' => 0, 'label' => $this->l->t('INFO'),  'color' => '#D9EDF7', 'txtcolor' => '#31708F', 'level' => 1],
+			2 => ['count' => 0, 'label' => $this->l->t('WARN'),  'color' => '#fcf8e3', 'txtcolor' => '#8A6d3B', 'level' => 2],
+			3 => ['count' => 0, 'label' => $this->l->t('ERROR'), 'color' => '#f2dede', 'txtcolor' => '#A94442', 'level' => 3],
+			4 => ['count' => 0, 'label' => $this->l->t('FATAL'), 'color' => '#f9aaf6', 'txtcolor' => '#870482', 'level' => 4],
+		];
+
+		if (file_exists($wtlogfile)) {
+			$handle = fopen($wtlogfile, "r");
+			while (($line = fgets($handle)) !== false) {
+				$data = json_decode($line, true);
+				if (isset($data['level']) && isset($stats[$data['level']])) {
+					$stats[$data['level']]['count']++;
+				}
+			}
+			fclose($handle);
+		}
+		$activeFiltersCount = 0;
+
+		foreach ($stats as $level => $data) {
+			$stats[$level]['level'] = $level;
+			
+			if (isset($data['count']) && $data['count'] > 0) {
+				$activeFiltersCount++;
+			}
+		}
+
+		$showFilters = ($activeFiltersCount > 1);
+
+		return new DataResponse([
+			'wtcntll' => array_values($stats),
+			'showFilters' => $showFilters
+		]);
+	}
 
 	public function delDub(): DataResponse {
 		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
@@ -449,8 +593,8 @@ class SettingsController extends Controller {
 			$obja->cntdub = $ii;
 			$obja->sizediff = $filesizediff;
 			if ($wtpara_logmessage===2) {
-				if ($ii===1) $this->logger->info(sprintf('LogCleaner: %d duplicate was deleted and %s of disk space were cleared. This log entry can be deleted without verification.', $ii, $filesizediff)); //blau
-				else $this->logger->info(sprintf('LogCleaner: %d duplicates were deleted and %s of disk space were cleared. This log entry can be deleted without verification.', $ii, $filesizediff)); //blau
+				if ($ii===1) $this->logger->info(sprintf('LogCleaner: %d duplicate was deleted and %s of disk space were cleared. This log entry can be deleted without verification.', $ii, $filesizediff));
+				else $this->logger->info(sprintf('LogCleaner: %d duplicates were deleted and %s of disk space were cleared. This log entry can be deleted without verification.', $ii, $filesizediff));
 			}
 			return new DataResponse([
                 'cntdub' => $ii,
@@ -543,7 +687,6 @@ class SettingsController extends Controller {
 			else $temp_array[$i] = substr(str_replace('app":"', "", $val[5]), 0, -1);
       $i++;
     }
-    //return $temp_array;
 	return new DataResponse([
                 'logapps' => $temp_array,
             ]);

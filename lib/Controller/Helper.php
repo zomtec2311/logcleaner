@@ -48,7 +48,7 @@ class Helper
     }
 
     public function getAppValue($key) {
-        return $this->config->getAppValue($this->appName, $key); // $wtpara_cron_deldub = (int)$this->appconfig->getValueString('logcleaner', 'wtpara_cron_deldub', '9', false);
+        return $this->config->getAppValue($this->appName, $key);
     }
 
     public function setAppValue($key, $value) {
@@ -87,63 +87,83 @@ class Helper
           $obja->grund = $this->l->t('no log entries available');
           return $obja;
         }
-        $wt_characters = intval($wt_characters);
+        $trenn = '*';
+        $json = json_decode($wtlog);
         $obja->all = $wtall;
-        $out = '';
-        $teile = explode(',"', $wtlog);
-        for($i=1; $i < 9; $i++) {
-          $teilee = explode('":', $teile[$i]);
-          $log[$i-1][0] = str_replace('"', "", $teilee[0]);
-          $log[$i-1][1] = str_replace('"', "", $teilee[1]);
+        $wttimelog = strtotime($json->time) + 3600*$wt_offset;
+        $obja->zeit = $this->l->t('Time') . " : " . $this->l->l('date', $wttimelog) . ' - ' . $this->l->l('time', $wttimelog)  . $trenn;
+        $obja->ip = $this->l->t('IP') . " :". $json->remoteAddr . $trenn;
+        $obja->user = $this->l->t('User') . " :".$json->user . $trenn;
+        $obja->app = $this->l->t('App') . " :".$json->app . $trenn;
+        $obja->method = $this->l->t('Method') . " :".$json->method . $trenn;
+        $obja->url = $this->l->t('URL') . " :".$json->url . $trenn;
+        $obja->grund = $this->l->t('Reason') . " :".substr($json->message, 0, $wt_characters);
+        switch ($json->level) {
+          case "0":
+            $obja->error = "alert alert-level0";
+            break;
+          case "1":
+            $obja->error = "alert alert-level1";
+            break;
+          case "2":
+            $obja->error = "alert alert-level2";
+            break;
+          case "3":
+            $obja->error = "alert alert-level3";
+            break;
+          case "4":
+            $obja->error = "alert alert-level4";
+            break;
         }
-        for($i=0; $i < 8; $i++) {
-          $trenn = ($i < 7) ? ' * ' : null;
-          switch ($i) {
-            case "0":
-              break;
-            case "1":
-              $wttimelog = strtotime($log[$i][1]) + 3600*$wt_offset;
-              $obja->zeit = $this->l->t('Time') . " : " . $this->l->l('date', $wttimelog) . ' - ' . $this->l->l('time', $wttimelog)  . $trenn;
-              break;
-            case "2":
-              $obja->ip = $this->l->t('IP') . " :".$log[$i][1] . $trenn;
-              break;
-            case "3":
-              $obja->user = $this->l->t('User') . " :".$log[$i][1] . $trenn;
-              break;
-            case "4":
-              $obja->app = $this->l->t('App') . " :".$log[$i][1] . $trenn;
-              break;
-            case "5":
-              $obja->method = $this->l->t('Method') . " :".$log[$i][1] . $trenn;
-              break;
-            case "6":
-              $obja->url = $this->l->t('URL') . " :".$log[$i][1] . $trenn;
-              break;
-            case "7":
-              $obja->grund = $this->l->t('Reason') . " :".substr($log[$i][1], 0, $wt_characters) . $trenn;
-              break;
-          }
-          switch ($log[$i][1]) {
-            case "0":
-              $obja->error = "alert alert-level0";
-              break;
-            case "1":
-              $obja->error = "alert alert-level1";
-              break;
-            case "2":
-              $obja->error = "alert alert-level2";
-              break;
-            case "3":
-              $obja->error = "alert alert-level3";
-              break;
-            case "4":
-              $obja->error = "alert alert-level4";
-              break;
-          }
+      $obja->id = $wtlogfilezeilen;
+      return $obja;       
+      }
+      
+      public function myfilteredoutputdata($wtlog,$wtall,$wtlogfilezeilen,$wt_characters,$wt_offset, $level) {
+        $wtarr =[];
+        $obja = new \stdClass();
+        if ($wtall === 0) {
+          $obja->all = 0;
+          $obja->zeit = '';
+          $obja->ip = '';
+          $obja->user = '';
+          $obja->app = '';
+          $obja->method = '';
+          $obja->zeit = '';
+          $obja->grund = $this->l->t('no log entries available');
+          return $obja;
         }
-        $obja->id = $wtlogfilezeilen;
-        return $obja;
+        $trenn = '*';
+        $json = json_decode($wtlog);
+        $obja->all = $wtall;
+        $wttimelog = strtotime($json->time) + 3600*$wt_offset;
+        $obja->zeit = $this->l->t('Time') . " : " . $this->l->l('date', $wttimelog) . ' - ' . $this->l->l('time', $wttimelog)  . $trenn;
+        $obja->ip = $this->l->t('IP') . " :". $json->remoteAddr . $trenn;
+        $obja->user = $this->l->t('User') . " :".$json->user . $trenn;
+        $obja->app = $this->l->t('App') . " :".$json->app . $trenn;
+        $obja->method = $this->l->t('Method') . " :".$json->method . $trenn;
+        $obja->url = $this->l->t('URL') . " :".$json->url . $trenn;
+        $obja->grund = $this->l->t('Reason') . " :".substr($json->message, 0, $wt_characters);
+        $obja->level = $json->level;
+        switch ($json->level) {
+          case "0":
+            $obja->error = "alert alert-level0";
+            break;
+          case "1":
+            $obja->error = "alert alert-level1";
+            break;
+          case "2":
+            $obja->error = "alert alert-level2";
+            break;
+          case "3":
+            $obja->error = "alert alert-level3";
+            break;
+          case "4":
+            $obja->error = "alert alert-level4";
+            break;
+        }
+      $obja->id = $wtlogfilezeilen;
+      return $obja;
       }
       
       
