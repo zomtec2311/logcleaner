@@ -549,12 +549,11 @@ class SettingsController extends Controller {
 			'showFilters' => $showFilters
 		]);
 	}
-
+	
 	public function delDub(): DataResponse {
 		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
 		$i = 0;
 		$ii = 0;
-		$tmp_array = array();
 		$key_array = array();
 		$temp_array = array();
 		$new_array = array();
@@ -563,16 +562,12 @@ class SettingsController extends Controller {
 		if (!file_exists($wtlogfile)) {
 			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
 		}
-
 		$filesizebefore = filesize($wtlogfile);
-		$wwt = $this->helper->wtlogtoarr($wtlogfile);
-		foreach ($wwt as $value) {
-			$tmp_array[] = explode(',"', $value);
-		}
-		unset($value);
-		foreach($tmp_array as $val) {
-			if (!in_array($val[9], $key_array)) {
-				$key_array[$i] = $val[9];
+		$wwt = $this->helper->wtlogtoarr($wtlogfile);		
+		foreach($wwt as $val) {
+			$json = json_decode($val);
+			if (!in_array($json->message, $key_array)) {
+				$key_array[$i] = $json->message;
 				$temp_array[$i] = $i;
       }
 			else {
@@ -601,11 +596,10 @@ class SettingsController extends Controller {
 				'sizediff' => $filesizediff,
             ]);
 	}
-
+	
 	public function countDub(): DataResponse {
 		$i = 0;
 		$ii = 0;
-		$tmp_array = array();
 		$key_array = array();
 		$temp_array = array();
 		$wtlogfile = $this->config->getSystemValue('logfile');
@@ -613,13 +607,10 @@ class SettingsController extends Controller {
 			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
 		}
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
-		foreach ($wwt as $value) {
-			$tmp_array[] = explode(',"', $value);
-		}
-		unset($value);
-		foreach($tmp_array as $val) {
-			if (!in_array($val[9], $key_array)) {
-				$key_array[$i] = $val[9];
+		foreach($wwt as $val) {
+			$json = json_decode($val);
+			if (!in_array($json->message, $key_array)) {
+				$key_array[$i] = $json->message;
 				$temp_array[$i] = $i;
       }
 			else {
@@ -633,7 +624,6 @@ class SettingsController extends Controller {
                 'cntdub' => $ii,
 				'wttext' => $wttext,
 				'wttextinfo' => $wttextinfo,
-				'keyarray' =>$wwt,
             ]);
 	}
 
