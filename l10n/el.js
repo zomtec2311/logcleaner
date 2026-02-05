@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Αντιγραφή στο πρόχειρο",
     "Detail": "Λεπτομέρεια",
     "View detail": "Προβολή λεπτομερειών",
-    "Search issue of the log entry on the Internet": "Ζήτημα αναζήτησης της καταχώρισης ημερολογίου στο Διαδίκτυο"
+    "Search issue of the log entry on the Internet": "Ζήτημα αναζήτησης της καταχώρισης ημερολογίου στο Διαδίκτυο",
+    "Show filters as": "Εμφάνιση φίλτρων ως",
+"variant 1": "παραλλαγή 1",
+"variant 2": "παραλλαγή 2",
+"Filter": "Φίλτρο",
+"off": "μακριά από",
+"Filter off": "Απενεργοποίηση φίλτρου",
+"DEBUG": "ΕΝΤΟΠΙΣΜΟΣ ΣΦΑΛΜΑΤΩΝ",
+"INFO": "ΠΛΗΡΟΦΟΡΙΕΣ",
+"WARN": "ΠΡΟΕΙΔΟΠΟΙΩ",
+"ERROR": "ΣΦΑΛΜΑ",
+"FATAL": "ΘΑΝΑΤΗΦΟΡΟΣ"
 },
 "nplurals=2; plural=n != 1;");

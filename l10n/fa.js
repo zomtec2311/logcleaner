@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "در کلیپ بورد کپی کنید",
     "Detail": "جزئیات",
     "View detail": "مشاهده جزئیات",
-    "Search issue of the log entry on the Internet": "جست و جوی شماره ورودی گزارش در اینترنت"
+    "Search issue of the log entry on the Internet": "جست و جوی شماره ورودی گزارش در اینترنت",
+    "Show filters as": "نمایش فیلترها به عنوان",
+"variant 1": "نوع 1",
+"variant 2": "نوع 2",
+"Filter": "فیلتر کنید",
+"off": "خاموش",
+"Filter off": "فیلتر کردن",
+"DEBUG": "اشکال زدایی",
+"INFO": "اطلاعات",
+"WARN": "هشدار",
+"ERROR": "خطا",
+"FATAL": "کشنده"
 },
 "nplurals=2; plural=n > 1;");

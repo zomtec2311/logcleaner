@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Copïo i'r clipfwrdd",
     "Detail": "Manylyn",
     "View detail": "Gweld manylion",
-    "Search issue of the log entry on the Internet": "Chwilio rhifyn y cofnod log ar y Rhyngrwyd"
+    "Search issue of the log entry on the Internet": "Chwilio rhifyn y cofnod log ar y Rhyngrwyd",
+    "Show filters as": "Dangos hidlwyr fel",
+"variant 1": "amrywiad 1",
+"variant 2": "amrywiad 2",
+"Filter": "Hidlo",
+"off": "i ffwrdd",
+"Filter off": "Hidlo i ffwrdd",
+"DEBUG": "DEBUG",
+"INFO": "GWYBODAETH",
+"WARN": "RHYBUDD",
+"ERROR": "GWALL",
+"FATAL": "ANgheuol"
 },
 "nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n == 3) ? 3 : ((n == 6) ? 4 : 5))));");

@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Kopioi leikepöydälle",
     "Detail": "Yksityiskohta",
     "View detail": "Näytä tiedot",
-    "Search issue of the log entry on the Internet": "Etsi lokimerkinnän ongelma Internetistä"
+    "Search issue of the log entry on the Internet": "Etsi lokimerkinnän ongelma Internetistä",
+    "Show filters as": "Näytä suodattimet muodossa",
+"variant 1": "variantti 1",
+"variant 2": "variantti 2",
+"Filter": "Suodattaa",
+"off": "pois",
+"Filter off": "Suodata pois",
+"DEBUG": "DEBUG",
+"INFO": "TIEDOT",
+"WARN": "VAROITTAA",
+"ERROR": "VIRHE",
+"FATAL": "KAPPALEEN"
 },
 "nplurals=2; plural=n != 1;");

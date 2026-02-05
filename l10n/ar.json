@@ -63,6 +63,17 @@
     "Copy to clipboard": "نسخ إلى الحافظة",
     "Detail": "التفاصيل",
     "View detail": "عرض التفاصيل",
-    "Search issue of the log entry on the Internet": "ابحث عن مشكلة إدخال السجل على الإنترنت"
+    "Search issue of the log entry on the Internet": "ابحث عن مشكلة إدخال السجل على الإنترنت",
+    "Show filters as": "إظهار المرشحات كـ",
+"variant 1": "البديل 1",
+"variant 2": "البديل 2",
+"Filter": "فلتر",
+"off": "عن",
+"Filter off": "التصفية معطلة",
+"DEBUG": "تصحيح",
+"INFO": "معلومات",
+"WARN": "تحذير",
+"ERROR": "خطأ",
+"FATAL": "مميت"
 },"pluralForm" :"nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n % 100 >= 3 && n % 100 <= 10) ? 3 : ((n % 100 >= 11 && n % 100 <= 99) ? 4 : 5))));"
 }

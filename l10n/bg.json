@@ -63,6 +63,17 @@
     "Copy to clipboard": "Копиране в клипборда",
     "Detail": "детайл",
     "View detail": "Вижте подробности",
-    "Search issue of the log entry on the Internet": "Търсете въпрос на запис в дневника в Интернет"
+    "Search issue of the log entry on the Internet": "Търсете въпрос на запис в дневника в Интернет",
+    "Show filters as": "Показване на филтрите като",
+"variant 1": "вариант 1",
+"variant 2": "вариант 2",
+"Filter": "Филтър",
+"off": "изключено",
+"Filter off": "Филтрирайте",
+"DEBUG": "ОТСТРАНЯВАНЕ НА ГРЕШКИ",
+"INFO": "ИНФО",
+"WARN": "ПРЕДУПРЕЖДЕНИЕ",
+"ERROR": "ГРЕШКА",
+"FATAL": "ФАТАЛНО"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

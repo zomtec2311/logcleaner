@@ -64,6 +64,17 @@ OC.L10N.register(
     "Copy to clipboard": "Copy to clipboard",
     "Detail": "Detail",
     "View detail": "View detail",
-    "Search issue of the log entry on the Internet": "Search issue of the log entry on the Internet"
+    "Search issue of the log entry on the Internet": "Search issue of the log entry on the Internet",
+    "Show filters as": "Show filters as",
+"variant 1": "variant 1",
+"variant 2": "variant 2",
+"Filter": "Filter",
+"off": "off",
+"Filter off": "Filter off",
+"DEBUG": "DEBUG",
+"INFO": "INFO",
+"WARN": "WARN",
+"ERROR": "ERROR",
+"FATAL": "FATAL"
 },
 "nplurals=2; plural=(n != 1);");

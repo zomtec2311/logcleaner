@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Copiar al portapapeles",
     "Detail": "Detalle",
     "View detail": "Ver detalle",
-    "Search issue of the log entry on the Internet": "Problema de búsqueda de la entrada del registro en Internet"
+    "Search issue of the log entry on the Internet": "Problema de búsqueda de la entrada del registro en Internet",
+    "Show filters as": "Mostrar filtros como",
+"variant 1": "variante 1",
+"variant 2": "variante 2",
+"Filter": "Filtrar",
+"off": "apagado",
+"Filter off": "Filtrar",
+"DEBUG": "DEPURAR",
+"INFO": "INFORMACIÓN",
+"WARN": "ADVERTIR",
+"ERROR": "ERROR",
+"FATAL": "FATAL"
 },
 "nplurals=2; plural=(n != 1);");

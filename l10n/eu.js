@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Kopiatu arbelean",
     "Detail": "Xehetasuna",
     "View detail": "Ikusi xehetasuna",
-    "Search issue of the log entry on the Internet": "Bilatu erregistroko sarreraren arazoa Interneten"
+    "Search issue of the log entry on the Internet": "Bilatu erregistroko sarreraren arazoa Interneten",
+    "Show filters as": "Erakutsi iragazkiak honela",
+"variant 1": "aldaera 1",
+"variant 2": "aldaera 2",
+"Filter": "Iragazkia",
+"off": "itzali",
+"Filter off": "Iragazkia desaktibatu",
+"DEBUG": "ARAZTU",
+"INFO": "INFO",
+"WARN": "ABISTU",
+"ERROR": "ERROREA",
+"FATAL": "HILTZAILEA"
 },
 "nplurals=2; plural=n != 1;");

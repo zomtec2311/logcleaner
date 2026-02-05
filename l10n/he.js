@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "העתק ללוח",
     "Detail": "פְּרָט",
     "View detail": "הצג פרטים",
-    "Search issue of the log entry on the Internet": "בעיית חיפוש של ערך היומן באינטרנט"
+    "Search issue of the log entry on the Internet": "בעיית חיפוש של ערך היומן באינטרנט",
+    "Show filters as": "הצג מסננים בתור",
+"variant 1": "גרסה 1",
+"variant 2": "גרסה 2",
+"Filter": "לְסַנֵן",
+"off": "כבוי",
+"Filter off": "לסנן",
+"DEBUG": "לְנַפּוֹת",
+"INFO": "מידע",
+"WARN": "לְהַזהִיר",
+"ERROR": "שְׁגִיאָה",
+"FATAL": "קָטלָנִי"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 2) ? 1 : 2);");

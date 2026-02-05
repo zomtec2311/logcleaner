@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Kopeeri lõikelauale",
     "Detail": "Detail",
     "View detail": "Kuva üksikasjad",
-    "Search issue of the log entry on the Internet": "Otsi logikirje väljaannet Internetist"
+    "Search issue of the log entry on the Internet": "Otsi logikirje väljaannet Internetist",
+    "Show filters as": "Näita filtreid kui",
+"variant 1": "variant 1",
+"variant 2": "variant 2",
+"Filter": "Filter",
+"off": "välja",
+"Filter off": "Filtreerige välja",
+"DEBUG": "SILU",
+"INFO": "INFO",
+"WARN": "HOIATUS",
+"ERROR": "VIGA",
+"FATAL": "SAATUSLIKKUS"
 },
 "nplurals=2; plural=n != 1;");

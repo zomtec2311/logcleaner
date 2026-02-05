@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Cóipeáil chuig an ngearrthaisce",
     "Detail": "Sonraigh",
     "View detail": "Féach ar na sonraí",
-    "Search issue of the log entry on the Internet": "Eisiúint cuardaigh an iontráil loga ar an Idirlíon"
+    "Search issue of the log entry on the Internet": "Eisiúint cuardaigh an iontráil loga ar an Idirlíon",
+    "Show filters as": "Taispeáin na scagairí mar",
+"variant 1": "leagan 1",
+"variant 2": "leagan 2",
+"Filter": "Scagaire",
+"off": "as",
+"Filter off": "Scag as",
+"DEBUG": "DEBUG",
+"INFO": "EOLAS",
+"WARN": "RABHADH",
+"ERROR": "EARRÁID",
+"FATAL": "MARBHACH"
 },
 "nplurals=5; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n >= 3 && n <= 6) ? 2 : ((n >= 7 && n <= 10) ? 3 : 4)));");

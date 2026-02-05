@@ -63,6 +63,17 @@
     "Copy to clipboard": "Copiar no portapapeis",
     "Detail": "Detalle",
     "View detail": "Ver detalle",
-    "Search issue of the log entry on the Internet": "Problema de busca da entrada de rexistro en Internet"
+    "Search issue of the log entry on the Internet": "Problema de busca da entrada de rexistro en Internet",
+    "Show filters as": "Mostrar filtros como",
+"variant 1": "variante 1",
+"variant 2": "variante 2",
+"Filter": "Filtro",
+"off": "apagado",
+"Filter off": "Desactivar o filtro",
+"DEBUG": "DEPURAR",
+"INFO": "INFO",
+"WARN": "AVISO",
+"ERROR": "ERRO",
+"FATAL": "FATAL"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

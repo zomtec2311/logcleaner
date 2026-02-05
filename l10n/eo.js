@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Kopiu al tondujo",
     "Detail": "Detalo",
     "View detail": "Rigardu detalon",
-    "Search issue of the log entry on the Internet": "Serĉu temon de la protokolo-eniro en Interreto"
+    "Search issue of the log entry on the Internet": "Serĉu temon de la protokolo-eniro en Interreto",
+    "Show filters as": "Montru filtrilojn kiel",
+"variant 1": "varianto 1",
+"variant 2": "varianto 2",
+"Filter": "Filtrilo",
+"off": "for",
+"Filter off": "Filtrilo malŝaltita",
+"DEBUG": "ELSENCIGI",
+"INFO": "INFO",
+"WARN": "AVERTU",
+"ERROR": "ERARO",
+"FATAL": "FATALA"
 },
 "nplurals=2; plural=n != 1;");

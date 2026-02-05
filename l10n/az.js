@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Buferə kopyalayın",
     "Detail": "Detal",
     "View detail": "Detallara baxın",
-    "Search issue of the log entry on the Internet": "İnternetdə log girişi məsələsini axtarın"
+    "Search issue of the log entry on the Internet": "İnternetdə log girişi məsələsini axtarın",
+    "Show filters as": "Filtrləri kimi göstərin",
+"variant 1": "variant 1",
+"variant 2": "variant 2",
+"Filter": "Filtr",
+"off": "off",
+"Filter off": "Süzün",
+"DEBUG": "DEBUG",
+"INFO": "MƏLUMAT",
+"WARN": "XƏBƏRDARLIQ",
+"ERROR": "XƏTA",
+"FATAL": "FATAL"
 },
 "nplurals=2; plural=n != 1;");
