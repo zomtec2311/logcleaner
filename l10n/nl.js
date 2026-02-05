@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Kopiëren naar klembord",
     "Detail": "Detail",
     "View detail": "Bekijk details",
-    "Search issue of the log entry on the Internet": "Zoekprobleem van de logvermelding op internet"
+    "Search issue of the log entry on the Internet": "Zoekprobleem van de logvermelding op internet",
+    "Show filters as": "Filters weergeven als",
+"variant 1": "variant 1",
+"variant 2": "variant 2",
+"Filter": "Filter",
+"off": "uit",
+"Filter off": "Filter uit",
+"DEBUG": "DEBUGGEN",
+"INFO": "INFO",
+"WARN": "WAARSCHUWEN",
+"ERROR": "FOUT",
+"FATAL": "FATAAL"
 },
 "nplurals=2; plural=(n != 1);");

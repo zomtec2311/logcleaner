@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Kopírovať do schránky",
     "Detail": "Detail",
     "View detail": "Zobraziť detail",
-    "Search issue of the log entry on the Internet": "Vyhľadajte problém záznamu denníka na internete"
+    "Search issue of the log entry on the Internet": "Vyhľadajte problém záznamu denníka na internete",
+    "Show filters as": "Zobraziť filtre ako",
+"variant 1": "variant 1",
+"variant 2": "variant 2",
+"Filter": "Filter",
+"off": "vypnuté",
+"Filter off": "Odfiltrujte",
+"DEBUG": "DEBUG",
+"INFO": "INFO",
+"WARN": "UPOZORNENIE",
+"ERROR": "CHYBA",
+"FATAL": "FATAL"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);");

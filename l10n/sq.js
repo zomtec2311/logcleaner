@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Kopjo në kujtesën e fragmenteve",
     "Detail": "Detaj",
     "View detail": "Shiko detajet",
-    "Search issue of the log entry on the Internet": "Kërkoni çështjen e hyrjes së regjistrit në internet"
+    "Search issue of the log entry on the Internet": "Kërkoni çështjen e hyrjes së regjistrit në internet",
+    "Show filters as": "Shfaq filtrat si",
+"variant 1": "varianti 1",
+"variant 2": "varianti 2",
+"Filter": "Filtro",
+"off": "fikur",
+"Filter off": "Filtro fiket",
+"DEBUG": "DEBUGON",
+"INFO": "INFO",
+"WARN": "PARALAJMËROJ",
+"ERROR": "GABIM",
+"FATAL": "FATAL"
 },
 "nplurals=2; plural=n != 1;");

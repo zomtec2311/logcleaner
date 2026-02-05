@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Copiați în clipboard",
     "Detail": "Detaliu",
     "View detail": "Vezi detalii",
-    "Search issue of the log entry on the Internet": "Problema de căutare a intrării de jurnal pe Internet"
+    "Search issue of the log entry on the Internet": "Problema de căutare a intrării de jurnal pe Internet",
+    "Show filters as": "Afișați filtrele ca",
+"variant 1": "varianta 1",
+"variant 2": "varianta 2",
+"Filter": "Filtra",
+"off": "oprit",
+"Filter off": "Filtru dezactivat",
+"DEBUG": "DEBUG",
+"INFO": "INFO",
+"WARN": "AVERTIZA",
+"ERROR": "EROARE",
+"FATAL": "FATAL"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 0 || n != 1 && n % 100 >= 1 && n % 100 <= 19) ? 1 : 2);");

@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಿ",
     "Detail": "ವಿವರ",
     "View detail": "ವಿವರ ವೀಕ್ಷಿಸಿ",
-    "Search issue of the log entry on the Internet": "ಇಂಟರ್ನೆಟ್‌ನಲ್ಲಿ ಲಾಗ್ ಪ್ರವೇಶದ ಹುಡುಕಾಟ ಸಮಸ್ಯೆ"
+    "Search issue of the log entry on the Internet": "ಇಂಟರ್ನೆಟ್‌ನಲ್ಲಿ ಲಾಗ್ ಪ್ರವೇಶದ ಹುಡುಕಾಟ ಸಮಸ್ಯೆ",
+    "Show filters as": "ಫಿಲ್ಟರ್‌ಗಳನ್ನು ಹೀಗೆ ತೋರಿಸಿ",
+"variant 1": "ರೂಪಾಂತರ 1",
+"variant 2": "ರೂಪಾಂತರ 2",
+"Filter": "ಫಿಲ್ಟರ್",
+"off": "ಆಫ್",
+"Filter off": "ಫಿಲ್ಟರ್ ಆಫ್",
+"DEBUG": "ಡೀಬಗ್",
+"INFO": "ಮಾಹಿತಿ",
+"WARN": "ಎಚ್ಚರಿಕೆ",
+"ERROR": "ದೋಷ",
+"FATAL": "ಮಾರಕ"
 },
 "nplurals=2; plural=n > 1;");

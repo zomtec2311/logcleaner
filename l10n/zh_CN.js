@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "复制到剪贴板",
     "Detail": "细节",
     "View detail": "查看详情",
-    "Search issue of the log entry on the Internet": "网上搜索该日志条目的问题"
+    "Search issue of the log entry on the Internet": "网上搜索该日志条目的问题",
+    "Show filters as": "将过滤器显示为",
+"variant 1": "变体1",
+"variant 2": "变体2",
+"Filter": "筛选",
+"off": "离开",
+"Filter off": "过滤掉",
+"DEBUG": "调试",
+"INFO": "信息",
+"WARN": "警告",
+"ERROR": "错误",
+"FATAL": "致命的"
 },
 "nplurals=1; plural=0;");

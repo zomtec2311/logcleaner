@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Түр санах ойд хуулах",
     "Detail": "Дэлгэрэнгүй",
     "View detail": "Дэлгэрэнгүй үзэх",
-    "Search issue of the log entry on the Internet": "Бүртгэлийн бүртгэлийн асуудлыг интернетээс хайх"
+    "Search issue of the log entry on the Internet": "Бүртгэлийн бүртгэлийн асуудлыг интернетээс хайх",
+    "Show filters as": "Шүүлтүүрийг дараах байдлаар харуулах",
+"variant 1": "хувилбар 1",
+"variant 2": "хувилбар 2",
+"Filter": "Шүүлтүүр",
+"off": "унтраах",
+"Filter off": "Шүүлтүүрийг унтраа",
+"DEBUG": "DEBAG",
+"INFO": "МЭДЭЭЛЭЛ",
+"WARN": "АНХААРУУЛГА",
+"ERROR": "АЛДАА",
+"FATAL": "ҮХЭЛТАЙ"
 },
 "nplurals=2; plural=n != 1;");

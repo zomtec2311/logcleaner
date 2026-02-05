@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Panoya kopyala",
     "Detail": "Detay",
     "View detail": "Ayrıntıyı görüntüle",
-    "Search issue of the log entry on the Internet": "İnternetteki günlük girişinin arama sorunu"
+    "Search issue of the log entry on the Internet": "İnternetteki günlük girişinin arama sorunu",
+    "Show filters as": "Filtreleri şu şekilde göster:",
+"variant 1": "varyant 1",
+"variant 2": "varyant 2",
+"Filter": "Filtre",
+"off": "kapalı",
+"Filter off": "Filtrele",
+"DEBUG": "HATA AYIKLAMA",
+"INFO": "BİLGİ",
+"WARN": "UYARMAK",
+"ERROR": "HATA",
+"FATAL": "ÖLÜMCÜL"
 },
 "nplurals=2; plural=n != 1;");

@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Копіювати в буфер обміну",
     "Detail": "Деталь",
     "View detail": "Переглянути деталі",
-    "Search issue of the log entry on the Internet": "Пошук питання запису журналу в Інтернеті"
+    "Search issue of the log entry on the Internet": "Пошук питання запису журналу в Інтернеті",
+    "Show filters as": "Показати фільтри як",
+"variant 1": "варіант 1",
+"variant 2": "варіант 2",
+"Filter": "фільтр",
+"off": "вимкнено",
+"Filter off": "Відфільтрувати",
+"DEBUG": "НАЛАШТУВАННЯ",
+"INFO": "ІНФО",
+"WARN": "ПОПЕРЕДЖЕННЯ",
+"ERROR": "ПОМИЛКА",
+"FATAL": "ФАТАЛЬНИЙ"
 },
 "nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);");

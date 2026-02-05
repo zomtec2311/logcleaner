@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "පසුරු පුවරුවට පිටපත් කරන්න",
     "Detail": "විස්තර",
     "View detail": "විස්තර බලන්න",
-    "Search issue of the log entry on the Internet": "අන්තර්ජාලයේ ලොග් සටහනේ සෙවුම් ගැටළුව"
+    "Search issue of the log entry on the Internet": "අන්තර්ජාලයේ ලොග් සටහනේ සෙවුම් ගැටළුව",
+    "Show filters as": "පෙරහන් ලෙස පෙන්වන්න",
+"variant 1": "ප්රභේදය 1",
+"variant 2": "ප්රභේදය 2",
+"Filter": "පෙරහන",
+"off": "අක්රිය",
+"Filter off": "පෙරහන ක්‍රියාවිරහිත කරන්න",
+"DEBUG": "නිදොස් කිරීම",
+"INFO": "තොරතුරු",
+"WARN": "අනතුරු අඟවන්න",
+"ERROR": "දෝෂයකි",
+"FATAL": "මාරාන්තික"
 },
 "nplurals=2; plural=n > 1;");

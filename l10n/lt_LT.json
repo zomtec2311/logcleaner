@@ -63,6 +63,17 @@
     "Copy to clipboard": "Kopijuoti į mainų sritį",
     "Detail": "Detalė",
     "View detail": "Žiūrėti išsamią informaciją",
-    "Search issue of the log entry on the Internet": "Žurnalo įrašo paieška internete"
+    "Search issue of the log entry on the Internet": "Žurnalo įrašo paieška internete",
+    "Show filters as": "Rodyti filtrus kaip",
+"variant 1": "1 variantas",
+"variant 2": "2 variantas",
+"Filter": "Filtruoti",
+"off": "išjungti",
+"Filter off": "Filtruoti",
+"DEBUG": "DERINTI",
+"INFO": "INFORMACIJA",
+"WARN": "ĮSPĖJIMAS",
+"ERROR": "KLAIDA",
+"FATAL": "MIRTINGAS"
 },"pluralForm" :"nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);"
 }

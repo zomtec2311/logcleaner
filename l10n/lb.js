@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Kopéiert op Clipboard",
     "Detail": "Detail",
     "View detail": "Kuckt Detailer",
-    "Search issue of the log entry on the Internet": "Sicht Thema vun der Logbicher um Internet"
+    "Search issue of the log entry on the Internet": "Sicht Thema vun der Logbicher um Internet",
+    "Show filters as": "Show Filteren als",
+"variant 1": "Variant 1",
+"variant 2": "Variant 2",
+"Filter": "Filter",
+"off": "aus",
+"Filter off": "Filter of",
+"DEBUG": "DEBUG",
+"INFO": "INFO",
+"WARN": "OPGEPASST",
+"ERROR": "ERROR",
+"FATAL": "FATAL"
 },
 "nplurals=2; plural=n != 1;");

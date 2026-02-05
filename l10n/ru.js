@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Скопировать в буфер обмена",
     "Detail": "Деталь",
     "View detail": "Посмотреть детали",
-    "Search issue of the log entry on the Internet": "Проблема с поиском записи журнала в Интернете"
+    "Search issue of the log entry on the Internet": "Проблема с поиском записи журнала в Интернете",
+    "Show filters as": "Показать фильтры как",
+"variant 1": "вариант 1",
+"variant 2": "вариант 2",
+"Filter": "Фильтр",
+"off": "выключенный",
+"Filter off": "Отфильтровать",
+"DEBUG": "ОТЛАЖИВАТЬ",
+"INFO": "ИНФОРМАЦИЯ",
+"WARN": "ПРЕДУПРЕЖДАТЬ",
+"ERROR": "ОШИБКА",
+"FATAL": "ФАТАЛЬНЫЙ"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);");

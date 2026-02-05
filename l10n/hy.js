@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Պատճենել clipboard-ում",
     "Detail": "Մանրամասն",
     "View detail": "Դիտել մանրամասն",
-    "Search issue of the log entry on the Internet": "Ինտերնետում տեղեկամատյան մուտքագրման խնդիրը որոնել"
+    "Search issue of the log entry on the Internet": "Ինտերնետում տեղեկամատյան մուտքագրման խնդիրը որոնել",
+    "Show filters as": "Ցույց տալ զտիչները որպես",
+"variant 1": "տարբերակ 1",
+"variant 2": "տարբերակ 2",
+"Filter": "Զտել",
+"off": "անջատված է",
+"Filter off": "Զտել անջատված",
+"DEBUG": "ՎԵՐԱԲԵՐՈՒՄ",
+"INFO": "ՏԵՂԵԿՈՒԹՅՈՒՆՆԵՐ",
+"WARN": "ԶԳՈՒՇԱՑՈՒՄ",
+"ERROR": "ՍԽԱԼ",
+"FATAL": "ՃԱԿԱՏԱՌԱԿԱՆ"
 },
 "nplurals=2; plural=n > 1;");

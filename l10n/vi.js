@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Sao chép vào khay nhớ tạm",
     "Detail": "Chi tiết",
     "View detail": "Xem chi tiết",
-    "Search issue of the log entry on the Internet": "Vấn đề tìm kiếm mục nhật ký trên Internet"
+    "Search issue of the log entry on the Internet": "Vấn đề tìm kiếm mục nhật ký trên Internet",
+    "Show filters as": "Hiển thị bộ lọc dưới dạng",
+"variant 1": "biến thể 1",
+"variant 2": "biến thể 2",
+"Filter": "Lọc",
+"off": "tắt",
+"Filter off": "Lọc tắt",
+"DEBUG": "GỠ LỖI",
+"INFO": "THÔNG TIN",
+"WARN": "CẢNH BÁO",
+"ERROR": "LỖI",
+"FATAL": "GÂY TỬ VONG"
 },
 "nplurals=1; plural=0;");

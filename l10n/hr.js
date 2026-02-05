@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Kopiraj u međuspremnik",
     "Detail": "Detalj",
     "View detail": "Pogledaj detalje",
-    "Search issue of the log entry on the Internet": "Pretraga izdanja unosa dnevnika na internetu"
+    "Search issue of the log entry on the Internet": "Pretraga izdanja unosa dnevnika na internetu",
+    "Show filters as": "Prikaži filtre kao",
+"variant 1": "varijanta 1",
+"variant 2": "varijanta 2",
+"Filter": "Filter",
+"off": "isključeno",
+"Filter off": "Filtrirajte",
+"DEBUG": "DEBUG",
+"INFO": "INFO",
+"WARN": "UPOZORITI",
+"ERROR": "POGREŠKA",
+"FATAL": "KOBNO"
 },
 "nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);");

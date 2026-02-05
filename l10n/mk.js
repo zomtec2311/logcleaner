@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Копирај во таблата со исечоци",
     "Detail": "Детал",
     "View detail": "Погледнете ги деталите",
-    "Search issue of the log entry on the Internet": "Барај прашање на записот во дневникот на Интернет"
+    "Search issue of the log entry on the Internet": "Барај прашање на записот во дневникот на Интернет",
+    "Show filters as": "Прикажи ги филтрите како",
+"variant 1": "варијанта 1",
+"variant 2": "варијанта 2",
+"Filter": "Филтер",
+"off": "исклучен",
+"Filter off": "Исклучи филтри",
+"DEBUG": "DEBUG",
+"INFO": "ИНФОРМАЦИИ",
+"WARN": "ПРЕДУПРЕДУВАЈТЕ",
+"ERROR": "ГРЕШКА",
+"FATAL": "ФАТАЛНИ"
 },
 "nplurals=2; plural=(n==1 || n%10==1 ? 0 : 1);");

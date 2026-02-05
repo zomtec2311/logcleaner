@@ -63,6 +63,17 @@
     "Copy to clipboard": "클립보드에 복사",
     "Detail": "세부 사항",
     "View detail": "세부정보 보기",
-    "Search issue of the log entry on the Internet": "인터넷 로그 항목 검색 문제"
+    "Search issue of the log entry on the Internet": "인터넷 로그 항목 검색 문제",
+    "Show filters as": "다음으로 필터 표시",
+"variant 1": "변형 1",
+"variant 2": "변형 2",
+"Filter": "필터",
+"off": "끄다",
+"Filter off": "필터링 해제",
+"DEBUG": "디버그",
+"INFO": "정보",
+"WARN": "경고하다",
+"ERROR": "오류",
+"FATAL": "치명적인"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

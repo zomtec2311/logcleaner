@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "Kopēt starpliktuvē",
     "Detail": "Detaļas",
     "View detail": "Skatīt detalizētu informāciju",
-    "Search issue of the log entry on the Internet": "Meklēt žurnāla ierakstu internetā"
+    "Search issue of the log entry on the Internet": "Meklēt žurnāla ierakstu internetā",
+    "Show filters as": "Rādīt filtrus kā",
+"variant 1": "variants 1",
+"variant 2": "2. variants",
+"Filter": "Filtrs",
+"off": "izslēgts",
+"Filter off": "Filtrs izslēgts",
+"DEBUG": "ATKLĀŠANA",
+"INFO": "INFORMĀCIJA",
+"WARN": "BRĪDINĀT",
+"ERROR": "KĻŪDA",
+"FATAL": "FATAL"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");

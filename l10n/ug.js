@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "چاپلاش تاختىسىغا كۆچۈرۈڭ",
     "Detail": "Detail",
     "View detail": "تەپسىلاتنى كۆرۈڭ",
-    "Search issue of the log entry on the Internet": "تورغا كىرىش خاتىرىسىنىڭ ئىزدەش مەسىلىسى"
+    "Search issue of the log entry on the Internet": "تورغا كىرىش خاتىرىسىنىڭ ئىزدەش مەسىلىسى",
+    "Show filters as": "سۈزگۈچنى كۆرسىتىڭ",
+"variant 1": "variant 1",
+"variant 2": "variant 2",
+"Filter": "سۈزگۈچ",
+"off": "off",
+"Filter off": "سۈزگۈچ",
+"DEBUG": "DEBUG",
+"INFO": "INFO",
+"WARN": "WARN",
+"ERROR": "ERROR",
+"FATAL": "FATAL"
 },
 "nplurals=2; plural=n != 1;");

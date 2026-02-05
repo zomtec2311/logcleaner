@@ -63,6 +63,17 @@
     "Copy to clipboard": "Copiar para a área de transferência",
     "Detail": "Detalhe",
     "View detail": "Ver detalhes",
-    "Search issue of the log entry on the Internet": "Problema de pesquisa da entrada de log na Internet"
+    "Search issue of the log entry on the Internet": "Problema de pesquisa da entrada de log na Internet",
+    "Show filters as": "Mostrar filtros como",
+"variant 1": "variante 1",
+"variant 2": "variante 2",
+"Filter": "Filtro",
+"off": "desligado",
+"Filter off": "Filtrar",
+"DEBUG": "DEPURAR",
+"INFO": "INFORMAÇÕES",
+"WARN": "AVISAR",
+"ERROR": "ERRO",
+"FATAL": "FATAL"
 },"pluralForm" :"nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0) ? 1 : 2);"
 }

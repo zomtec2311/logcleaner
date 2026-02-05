@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "複製到剪貼板",
     "Detail": "細節",
     "View detail": "查看詳情",
-    "Search issue of the log entry on the Internet": "網上搜索該日誌條目的問題"
+    "Search issue of the log entry on the Internet": "網上搜索該日誌條目的問題",
+    "Show filters as": "將過濾器顯示為",
+"variant 1": "變體1",
+"variant 2": "變體2",
+"Filter": "篩選",
+"off": "離開",
+"Filter off": "過濾掉",
+"DEBUG": "偵錯",
+"INFO": "資訊",
+"WARN": "警告",
+"ERROR": "錯誤",
+"FATAL": "致命的"
 },
 "nplurals=1; plural=0;");

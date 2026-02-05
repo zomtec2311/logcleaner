@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "ສຳເນົາໃສ່ຄລິບບອດ",
     "Detail": "ລາຍລະອຽດ",
     "View detail": "ເບິ່ງລາຍລະອຽດ",
-    "Search issue of the log entry on the Internet": "ຄົ້ນຫາບັນຫາການເຂົ້າສູ່ລະບົບໃນອິນເຕີເນັດ"
+    "Search issue of the log entry on the Internet": "ຄົ້ນຫາບັນຫາການເຂົ້າສູ່ລະບົບໃນອິນເຕີເນັດ",
+    "Show filters as": "ສະແດງຕົວກອງເປັນ",
+"variant 1": "variant 1",
+"variant 2": "variant 2",
+"Filter": "ການກັ່ນຕອງ",
+"off": "ປິດ",
+"Filter off": "ປິດການກັ່ນຕອງ",
+"DEBUG": "ດີບັກ",
+"INFO": "ຂໍ້ມູນ",
+"WARN": "ເຕືອນ",
+"ERROR": "ຜິດພາດ",
+"FATAL": "ຕາຍ"
 },
 "nplurals=1; plural=0;");

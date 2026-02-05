@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "კოპირება ბუფერში",
     "Detail": "დეტალი",
     "View detail": "დეტალების ნახვა",
-    "Search issue of the log entry on the Internet": "მოძებნეთ ჟურნალის ჩანაწერის საკითხი ინტერნეტში"
+    "Search issue of the log entry on the Internet": "მოძებნეთ ჟურნალის ჩანაწერის საკითხი ინტერნეტში",
+    "Show filters as": "ფილტრების ჩვენება როგორც",
+"variant 1": "ვარიანტი 1",
+"variant 2": "ვარიანტი 2",
+"Filter": "ფილტრი",
+"off": "გამორთულია",
+"Filter off": "ფილტრი გამორთულია",
+"DEBUG": "გამართვა",
+"INFO": "ინფორმაცია",
+"WARN": "გაფრთხილება",
+"ERROR": "შეცდომა",
+"FATAL": "ფატალური"
 },
 "nplurals=2; plural=n != 1;");

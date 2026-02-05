@@ -65,6 +65,17 @@ OC.L10N.register(
     "Copy to clipboard": "クリップボードにコピー",
     "Detail": "詳細",
     "View detail": "詳細を見る",
-    "Search issue of the log entry on the Internet": "インターネット上のログエントリの検索問題"
+    "Search issue of the log entry on the Internet": "インターネット上のログエントリの検索問題",
+    "Show filters as": "フィルタを次のように表示します",
+"variant 1": "バリエーション 1",
+"variant 2": "バリエーション 2",
+"Filter": "フィルター",
+"off": "オフ",
+"Filter off": "フィルターオフ",
+"DEBUG": "デバッグ",
+"INFO": "情報",
+"WARN": "警告",
+"ERROR": "エラー",
+"FATAL": "致命的"
 },
 "nplurals=1; plural=0;");
