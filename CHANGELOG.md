@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.0
+
+### Fixed
+- Bug fixed duplicate handling
+
 ## 1.2.9
 
 ### Fixed
