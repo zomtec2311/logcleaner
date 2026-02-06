@@ -1,6 +1,7 @@
 OC.L10N.register(
     "logcleaner",
     {
+    "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Xóa mục nhập %n {level}"],
     "no log entries available" : "Không có mục nhật ký có sẵn",
     "Time" : "Thời gian",
     "IP" : "IP",

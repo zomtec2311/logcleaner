@@ -1,6 +1,7 @@
 OC.L10N.register(
     "logcleaner",
     {
+    "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Ta bort %n {level} post","Ta bort %n {level} poster"],
     "no log entries available" : "Inga loggposter tillgängliga",
     "Time" : "Tid",
     "IP" : "IP",

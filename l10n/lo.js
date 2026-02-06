@@ -1,6 +1,7 @@
 OC.L10N.register(
     "logcleaner",
     {
+    "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["ລຶບລາຍການ %n {level} ອອກ"],
     "no log entries available" : "ບໍ່ມີລາຍການບັນທຶກ",
     "Time" : "ເວລາ",
     "IP" : "ອະພິທາ",

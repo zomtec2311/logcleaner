@@ -1,6 +1,7 @@
 OC.L10N.register(
     "logcleaner",
     {
+    "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["%n {level} ප්‍රවේශය මකන්න","%n {level} ඇතුළත් කිරීම් මකන්න"],
     "no log entries available" : "ලොග් ඇතුළත් කිරීම් නොමැත",
     "Time" : "කාලය",
     "IP" : "IP",

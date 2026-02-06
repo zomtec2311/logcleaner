@@ -1,6 +1,7 @@
 OC.L10N.register(
     "logcleaner",
     {
+    "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["%n {level}  نى ئۆچۈرۈڭ","%n {level}  تۈرلىرىنى ئۆچۈرۈڭ"],
     "no log entries available" : "خاتىرە بۇيۇملىرى يوق",
     "Time" : "ۋاقىت",
     "IP" : "Ip",

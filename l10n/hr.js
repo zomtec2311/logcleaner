@@ -1,6 +1,7 @@
 OC.L10N.register(
     "logcleaner",
     {
+    "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Izbriši %n {level} unos","Izbriši %n {level} unosa","Izbriši %n {level} unosa"],
     "no log entries available" : "Nema unosa zapisnika",
     "Time" : "Vrijeme",
     "IP" : "IP",

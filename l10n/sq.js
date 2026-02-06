@@ -1,6 +1,7 @@
 OC.L10N.register(
     "logcleaner",
     {
+    "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Fshi %n hyrje {level}","Fshi %n hyrje {level}"],
     "no log entries available" : "Nuk ka hyrje të regjistrave në dispozicion",
     "Time" : "Kohë",
     "IP" : "Epërsi",
