@@ -1,6 +1,7 @@
 OC.L10N.register(
     "logcleaner",
     {
+    "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Poista %n {level} merkintä","Poista %n {level} merkintää"],
     "no log entries available" : "loki merkintöjä ei käytettävissä",
     "Time" : "Aika",
     "IP" : "IP -IP",

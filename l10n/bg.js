@@ -1,6 +1,7 @@
 OC.L10N.register(
     "logcleaner",
     {
+    "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Изтрийте %n запис от {level}","Изтрийте %n записа от {level}"],
     "no log entries available" : "Няма налични записи в дневника",
     "Time" : "Време",
     "IP" : "IP",

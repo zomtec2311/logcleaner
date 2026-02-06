@@ -1,6 +1,7 @@
 OC.L10N.register(
     "logcleaner",
     {
+    "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Forigu %n {level} eniron","Forigu %n {level} enskribojn"],
     "no log entries available" : "Neniuj enskribaj enskriboj haveblaj",
     "Time" : "Tempo",
     "IP" : "IP",

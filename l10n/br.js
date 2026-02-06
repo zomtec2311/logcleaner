@@ -1,6 +1,7 @@
 OC.L10N.register(
     "logcleaner",
     {
+    "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Dilemel %n {level} enankad","Dilemel %n {level} enskrivadurioù","Dilemel %n {level} enskrivadurioù","Dilemel %n {level} enskrivadurioù","Dilemel %n {level} enskrivadurioù"],
     "no log entries available" : "n'eus ket a enrolladennoù log a c'haller kaout",
     "Time" : "Amzer",
     "IP" : "IP",

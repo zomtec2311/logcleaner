@@ -1,6 +1,7 @@
 OC.L10N.register(
     "logcleaner",
     {
+    "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["%n ورودی {level} را حذف کنید","%n ورودی {level} را حذف کنید"],
     "no log entries available" : "ورود به سیستم موجود نیست",
     "Time" : "زمان",
     "IP" : "با منبت کاری کردن",
