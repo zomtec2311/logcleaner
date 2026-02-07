@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["%n {level} girişini silin","%n {level} girişini silin"],
+    "Delete by error level:": "Hata düzeyine göre sil:",
     "no log entries available" : "Günlük girişi yok",
     "Time" : "Zaman",
     "IP" : "Ivır zıvır",

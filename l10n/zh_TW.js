@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["刪除 %n {level} 條目"],
+    "Delete by error level:": "按錯誤級別刪除：",
     "no log entries available" : "沒有可用的日誌條目",
     "Time" : "時間",
     "IP" : "IP",

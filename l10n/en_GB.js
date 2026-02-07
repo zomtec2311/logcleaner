@@ -5,6 +5,7 @@ OC.L10N.register(
     "How many characters should the error reason display" : "How many characters should the error reason display",
     "_Delete %n duplicate_::_Delete %n duplicates_" : ["Delete %n duplicate","Delete %n duplicates"],
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Delete %n {level} entry","Delete %n {level} entries"],
+    "Delete by error level:": "Delete by error level:",
     "Log entries fetched" : "Log entries fetched",
     "Could not fetch log entries" : "Could not fetch log entries",
     "Could not fetch settings" : "Could not fetch settings",

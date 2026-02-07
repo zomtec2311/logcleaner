@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["%n {level} এন্ট্রি মুছুন","%n {level} এন্ট্রি মুছুন"],
+    "Delete by error level:": "ত্রুটি স্তর দ্বারা মুছুন:",
     "no log entries available" : "কোনও লগ এন্ট্রি উপলব্ধ নেই",
     "Time" : "সময়",
     "IP" : "আইপি",

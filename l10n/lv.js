@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Dzēst %n {level} ierakstu","Dzēst %n {level} ierakstus","Dzēst %n {level} ierakstus"],
+    "Delete by error level:": "Dzēst pēc kļūdu līmeņa:",
     "no log entries available" : "Nav pieejami žurnāla ieraksti",
     "Time" : "Laiks",
     "IP" : "Ip",

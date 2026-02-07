@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["%n {level} ನಮೂದನ್ನು ಅಳಿಸಿ","%n {level} ನಮೂದುಗಳನ್ನು ಅಳಿಸಿ"],
+    "Delete by error level:": "ದೋಷ ಮಟ್ಟದಿಂದ ಅಳಿಸಿ:",
     "no log entries available" : "ಯಾವುದೇ ಲಾಗ್ ನಮೂದುಗಳು ಲಭ್ಯವಿಲ್ಲ",
     "Time" : "ಕಾಲ",
     "IP" : "ಐಪಿ",

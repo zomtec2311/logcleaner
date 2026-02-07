@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Избришите %n унос {level}","Избришите %n уноса {level}","Избришите %n уноса {level}"],
+    "Delete by error level:": "Избриши према нивоу грешке:",
     "no log entries available" : "Није доступно уноси на дневник",
     "Time" : "Време",
     "IP" : "Ип",

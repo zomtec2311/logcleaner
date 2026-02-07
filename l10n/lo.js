@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["ລຶບລາຍການ %n {level} ອອກ"],
+    "Delete by error level:": "ລຶບ​ໂດຍ​ລະ​ດັບ​ຄວາມ​ຜິດ​ພາດ​:",
     "no log entries available" : "ບໍ່ມີລາຍການບັນທຶກ",
     "Time" : "ເວລາ",
     "IP" : "ອະພິທາ",

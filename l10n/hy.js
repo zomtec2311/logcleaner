@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Ջնջել %n {level} գրառումը","Ջնջել %n {level} գրառում"],
+    "Delete by error level:": "Ջնջել ըստ սխալի մակարդակի՝",
     "no log entries available" : "Ոչ մի տեղեկամատյան մուտք չկա",
     "Time" : "Ժամանակ",
     "IP" : "À",

@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Διαγραφή %n καταχώρισης {level}","Διαγράψτε %n καταχωρήσεις {level}"],
+    "Delete by error level:": "Διαγραφή κατά επίπεδο σφάλματος:",
     "no log entries available" : "Δεν υπάρχουν διαθέσιμες καταχωρίσεις καταγραφής",
     "Time" : "Φορά",
     "IP" : "IP",

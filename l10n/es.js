@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Eliminar %n {level} entrada","Eliminar %n {level} entradas"],
+    "Delete by error level:": "Eliminar por nivel de error:",
     "no log entries available" : "No hay entradas de registro disponibles",
     "Time" : "Tiempo",
     "IP" : "IP",

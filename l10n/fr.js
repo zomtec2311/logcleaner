@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Supprimer l'entrée %n {level}","Supprimer %n entrées {level}"],
+    "Delete by error level:": "Supprimer par niveau d'erreur :",
     "How many lines to display" : "Combien de lignes doivent être affichées",
     "How many characters should the error reason display" : "Combien de caractères le motif de l'erreur doit-il afficher",
     "_Delete %n duplicate_::_Delete %n duplicates_" : ["%n Supprimer le doublon","%n Supprimer les doublons"],

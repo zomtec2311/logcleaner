@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["%n {level} bejegyzés törlése","%n {level} bejegyzés törlése"],
+    "Delete by error level:": "Törlés hibaszint szerint:",
     "no log entries available" : "Nincs naplóbejegyzés",
     "Time" : "Idő",
     "IP" : "Ip.",

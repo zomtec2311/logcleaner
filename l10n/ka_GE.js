@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["წაშალეთ %n {level} ჩანაწერი","წაშალეთ %n {level} ჩანაწერი"],
+    "Delete by error level:": "წაშლა შეცდომის დონის მიხედვით:",
     "no log entries available" : "ჟურნალის ჩანაწერები არ არის ხელმისაწვდომი",
     "Time" : "დრო",
     "IP" : "IP",

@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Dileu %n {level} cofnod","Dileu %n {level} cofnod","Dileu %n {level} cofnod","Dileu %n {level} cofnod","Dileu %n {level} cofnod","Dileu %n {level} cofnod"],
+    "Delete by error level:": "Dileu yn ôl lefel gwall:",
     "no log entries available" : "Nid oes unrhyw gofnodion log ar gael",
     "Time" : "Hamser",
     "IP" : "IP",

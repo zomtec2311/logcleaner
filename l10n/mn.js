@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["%n {level} оруулгыг устгана уу","%n {level} оруулгуудыг устгана уу"],
+    "Delete by error level:": "Алдааны түвшингээр устгах:",
     "no log entries available" : "бүртгэл оруулаагүй болно",
     "Time" : "Цаг хугацаа",
     "IP" : "Ip",

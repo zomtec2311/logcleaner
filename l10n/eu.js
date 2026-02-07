@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Ezabatu %n {level} sarrera","Ezabatu %n {level} sarrera"],
+    "Delete by error level:": "Ezabatu errore-mailaren arabera:",
     "no log entries available" : "Ez dago sarrera sarrerarik eskuragarri",
     "Time" : "Denbora",
     "IP" : "Ip",

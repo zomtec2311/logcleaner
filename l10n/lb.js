@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["%n {level} Entrée läschen","%n {level} Entréen läschen"],
+    "Delete by error level:": "Läschen no Feelerniveau:",
     "no log entries available" : "Kee Logrisries verfügbar",
     "Time" : "Zäit",
     "IP" : "Ip",

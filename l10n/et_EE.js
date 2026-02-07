@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Kustuta %n kirje {level}","Kustuta %n {level} kirjet"],
+    "Delete by error level:": "Kustuta veataseme järgi:",
     "no log entries available" : "Logi kanded pole saadaval",
     "Time" : "Aeg",
     "IP" : "Ip",

@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Scrios %n iontráil {level}","Scrios %n {level} iontrálacha","Scrios %n {level} iontrálacha","Scrios %n {level} iontrálacha","Scrios %n {level} iontrálacha"],
+    "Delete by error level:": "Scrios de réir leibhéal earráide:",
     "no log entries available" : "Níl aon iontrálacha logála ar fáil",
     "Time" : "Am",
     "IP" : "Ip",

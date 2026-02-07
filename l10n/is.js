@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Eyða %n {level} færslu","Eyða %n {level} færslum"],
+    "Delete by error level:": "Eyða eftir villustigi:",
     "no log entries available" : "Engar annál færslur í boði",
     "Time" : "Tími",
     "IP" : "IP",

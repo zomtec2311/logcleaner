@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Izbriši %n vnos {level}","Izbriši %n vnosov {level}","Izbriši %n vnosov {level}","Izbriši %n vnosov {level}"],
+    "Delete by error level:": "Izbriši glede na stopnjo napake:",
     "no log entries available" : "Vnosi dnevnika ni na voljo",
     "Time" : "Čas",
     "IP" : "Ip",

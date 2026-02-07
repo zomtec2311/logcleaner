@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["מחק %n ערך {level}","מחק %n ערכים של {level}"],
+    "Delete by error level:": "מחק לפי רמת שגיאה:",
     "no log entries available" : "אין רשומות יומן זמינות",
     "Time" : "זְמַן",
     "IP" : "IP",

@@ -2,6 +2,7 @@ OC.L10N.register(
     "logcleaner",
     {
     "_Delete %n {level} entry_::_Delete %n {level} entries_" : ["Hapus entri %n {level}"],
+    "Delete by error level:": "Hapus berdasarkan tingkat kesalahan:",
     "no log entries available" : "Tidak ada entri log yang tersedia",
     "Time" : "Waktu",
     "IP" : "AKU P",
