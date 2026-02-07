@@ -203,7 +203,7 @@ class SettingsController extends Controller {
 		}
 		return $wtarr;
 	}
-// dieeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeseeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+
 	public function getalllog(?int $logid = null): DataResponse {
 		if ($logid === null) {
 			$logid = null;
@@ -597,6 +597,64 @@ class SettingsController extends Controller {
             ]);
 	}
 	
+	public function delLevel(?int $level = null): DataResponse {
+		if ($level === null) {
+			$level = null;
+		}
+		if (isset($level)) {
+		
+			$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
+			$i = 0;
+			$ii = 0;
+			$key_array = array();
+			$temp_array = array();
+			$new_array = array();
+			$uu = 0;
+			$wtlogfile = $this->config->getSystemValue('logfile');
+			if (!file_exists($wtlogfile)) {
+				$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+			}
+			$filesizebefore = filesize($wtlogfile);
+			$wwt = $this->helper->wtlogtoarr($wtlogfile);		
+			foreach($wwt as $val) {
+				$json = json_decode($val);
+				if (intval($json->level) <> $level) {
+					$temp_array[$i] = $val;
+				}
+				else {
+					$ii++;
+				}
+				$i++;
+			}
+			$new_array = $temp_array;
+			$uu = count($new_array);
+			if($uu > 0) {
+				$file = $wtlogfile;
+				$current = $new_array;
+				file_put_contents($file, $current,LOCK_EX);
+			}
+			clearstatcache();
+			$filesizediff = $this->wtfilesize($filesizebefore - filesize($wtlogfile),2);
+			$obja = new \stdClass();
+			$obja->cntdub = $ii;
+			$obja->sizediff = $filesizediff;
+			if ($wtpara_logmessage===2) {
+				if ($ii===1) $this->logger->info(sprintf('LogCleaner: %d log entry was deleted and %s of disk space were cleared.', $ii, $filesizediff));
+				else $this->logger->info(sprintf('LogCleaner: %d log entries were deleted and %s of disk space were cleared.', $ii, $filesizediff));
+			}
+			return new DataResponse([
+                'cntlevel' => $ii,
+				'sizediff' => $filesizediff,
+            ]);
+		}
+		else {
+			return new DataResponse([
+                'cntlevel' => 0,
+				'sizediff' => 0,
+            ]);
+		}
+	}
+	
 	public function countDub(): DataResponse {
 		$i = 0;
 		$ii = 0;
@@ -625,34 +683,6 @@ class SettingsController extends Controller {
 				'wttext' => $wttext,
 				'wttextinfo' => $wttextinfo,
             ]);
-	}
-
-	public function countDebug() {
-		$i = 0;
-		$ii = 0;
-		$tmp_array = array();
-		$key_array = array();
-		$temp_array = array();
-		$wtlogfile = $this->config->getSystemValue('logfile');
-		if (!file_exists($wtlogfile)) {
-			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-		}
-		$wwt = $this->helper->wtlogtoarr($wtlogfile);
-		foreach ($wwt as $value) {
-			$tmp_array[] = explode(',"', $value);
-		}
-		unset($value);
-		foreach($tmp_array as $val) {
-			if (!in_array($val[1], $key_array)) {
-				$key_array[$i] = $val[1];
-				$temp_array[$i] = $i;
-      }
-			else {
-				$ii++;
-			}
-      $i++;
-    }
-		return $ii;
 	}
 
 	public function logapps(): DataResponse {

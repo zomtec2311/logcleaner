@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.3.1
+
+### Fixed
+- Bug fixed when deleting the last single entry of a filtered view
+
+### Added
+- delete log entries by level within settings
+
+### Changed
+- language files updated
+
 ## 1.3.0
 
 ### Fixed
