@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.2
+
+### Added
+- some extra information within dashboard widget
+
+### Fixed
+- some code fixes
+
 ## 1.3.1
 
 ### Fixed
