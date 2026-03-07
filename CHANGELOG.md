@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.3.3
+
+### Fixed
+- some code cleanups
+
+### Added
+- new template that only shows entries of the desired error level
+
+### Changed
+- dashboard widget can now refer to the new template regarding the display of a certain error level
+
 ## 1.3.2
 
 ### Added
