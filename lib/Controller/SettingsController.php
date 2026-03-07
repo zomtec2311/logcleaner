@@ -28,6 +28,7 @@ namespace OCA\LogCleaner\Controller;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\Attribute\NoAdminRequired;
+use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
 use OCP\AppFramework\Http\Attribute\UseSession;
 use OCP\IL10N;
 use OCP\IRequest;
@@ -62,55 +63,21 @@ class SettingsController extends Controller {
 	public function setSettingZeilen($who,$zeilen): DataResponse {
 		$this->config->setAppValue('logcleaner', $who, $zeilen);
 		return new DataResponse([
+			'wert' => $zeilen,
             ]);
 	}
-
-	public function getAppValueZ($who): DataResponse {
-		$dummy = $this->config->getAppValue('logcleaner', $who);
-		if (empty($dummy)) {
-			switch ($who) {
-				case 'logcleaner_wt_zeilen':
-					$dummy = 5;
-					$this->setSettingZeilen($who,$dummy);
-					break;
-				case 'wtpara_settings_am':
-					$dummy = 2;
-					$this->setSettingZeilen($who,$dummy);
-					break;
-				case 'logcleaner_wt_offset':
-					$dummy = 0;
-					$this->setSettingZeilen($who,$dummy);
-					break;
-				case 'logcleaner_wt_characters':
-					$dummy = 500;
-					$this->setSettingZeilen($who,$dummy);
-					break;
-				case 'wtparam_menue':
-					$dummy = 2;
-					$this->setSettingZeilen($who,$dummy);
-					break;
-				case 'wtparam_logmessage':
-					$dummy = 1;
-					$this->setSettingZeilen($who,$dummy);
-					break;
-				case 'wtparam_filter':
-					$dummy = 1;
-					$this->setSettingZeilen($who,$dummy);
-					break;
-				case 'wtpara_cron_deldub':
-					$dummy = 1;
-					$this->setSettingZeilen($who,$dummy);
-					break;
-			}
-		}
+	
+	public function getAppValueZ(): DataResponse {
 		return new DataResponse([
-								'valuez' => $dummy,
-            ]);
-	}
-
-	public function getLL(): DataResponse {
-		return new DataResponse([
-                'loglevel' => $this->config->getSystemValue('loglevel'),
+			'logcleaner_wt_zeilen' => (empty($this->config->getAppValue('logcleaner', 'logcleaner_wt_zeilen')))?$this->setSettingZeilen('logcleaner_wt_zeilen',5):$this->config->getAppValue('logcleaner', 'logcleaner_wt_zeilen'),
+			'wtpara_settings_am' => (empty($this->config->getAppValue('logcleaner', 'wtpara_settings_am')))?$this->setSettingZeilen('wtpara_settings_am',2):$this->config->getAppValue('logcleaner', 'wtpara_settings_am'),
+			'logcleaner_wt_offset' => (empty($this->config->getAppValue('logcleaner', 'logcleaner_wt_offset')))?$this->setSettingZeilen('logcleaner_wt_offset',0):$this->config->getAppValue('logcleaner', 'logcleaner_wt_offset'),
+			'logcleaner_wt_characters' => (empty($this->config->getAppValue('logcleaner', 'logcleaner_wt_characters')))?$this->setSettingZeilen('logcleaner_wt_characters',500):$this->config->getAppValue('logcleaner', 'logcleaner_wt_characters'),
+			'wtparam_menue' => (empty($this->config->getAppValue('logcleaner', 'wtparam_menue')))?$this->setSettingZeilen('wtparam_menue',2):$this->config->getAppValue('logcleaner', 'wtparam_menue'),
+			'wtparam_logmessage' => (empty($this->config->getAppValue('logcleaner', 'wtparam_logmessage')))?$this->setSettingZeilen('wtparam_logmessage',1):$this->config->getAppValue('logcleaner', 'wtparam_logmessage'),
+			'wtparam_filter' => (empty($this->config->getAppValue('logcleaner', 'wtparam_filter')))?$this->setSettingZeilen('wtparam_filter',1):$this->config->getAppValue('logcleaner', 'wtparam_filter'),
+			'wtpara_cron_deldub' => (empty($this->config->getAppValue('logcleaner', 'wtpara_cron_deldub')))?$this->setSettingZeilen('wtpara_cron_deldub',1):$this->config->getAppValue('logcleaner', 'wtpara_cron_deldub'),
+			'loglevel' => $this->config->getSystemValue('loglevel'),
             ]);
 	}
 

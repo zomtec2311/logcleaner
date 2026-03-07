@@ -58,4 +58,14 @@ class PageController extends Controller {
                 'index',
             );
   }
+  
+  #[NoCSRFRequired]
+  public function show(): TemplateResponse {
+        Util::addStyle(Application::APP_ID, 'logcleaner-main');
+        Util::addScript(Application::APP_ID, 'logcleaner-show');
+        return new TemplateResponse(
+                Application::APP_ID,
+                'show',
+            );
+  }
 }
