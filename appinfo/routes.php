@@ -30,7 +30,7 @@ return [
     ['name' => 'Settings#getalllog', 'url' => '/getalldata', 'verb' => 'GET'],
     ['name' => 'Settings#getallfilteredlog', 'url' => '/getallfiltereddata/{level}', 'verb' => 'GET'],
     ['name' => 'Settings#emptylog', 'url' => '/emptylog', 'verb' => 'GET'],
-    ['name' => 'Settings#getAppValueZ', 'url' => '/getparam/{who}', 'verb' => 'GET'],
+    ['name' => 'Settings#getAppValueZ', 'url' => '/getparam', 'verb' => 'GET'],
     ['name' => 'Settings#getLL', 'url' => '/getll', 'verb' => 'GET'],
     ['name' => 'Settings#setLL', 'url' => '/setll/{who}', 'verb' => 'GET'],
     ['name' => 'Settings#getAll', 'url' => '/getall', 'verb' => 'GET'],
@@ -44,5 +44,6 @@ return [
     ['name' => 'Settings#setSettingZeilen', 'url' => '/setlines/{who}/{zeilen}', 'verb' => 'GET'],
     ['name' => 'Settings#logfileandsize', 'url' => '/logfileandsize', 'verb' => 'GET'],
     ['name' => 'Settings#getcntll', 'url' => '/getcntll', 'verb' => 'GET'],
+    ['name' => 'page#show', 'url' => '/show/{level}', 'verb' => 'GET'],
   ]
 ];
