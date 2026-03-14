@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.3.4
+
+### Fixed
+- dashboard widget updates when duplicates are deleted
+
+### Added
+- new feature that allows you to delete all log entries for apps that caused the log message
+- new feature to filter log entries by apps that caused log messages
+
 ## 1.3.3
 
 ### Fixed
