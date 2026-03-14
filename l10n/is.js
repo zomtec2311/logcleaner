@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "UPPLÝSINGAR",
 "WARN": "VARIÐ",
 "ERROR": "VILLA",
-"FATAL": "FATAL"
+"FATAL": "FATAL",
+"delete all entries of this app": "eyða öllum færslum þessa forrits"
 },
 "nplurals=2; plural=n % 10 != 1 || n % 100 == 11;");

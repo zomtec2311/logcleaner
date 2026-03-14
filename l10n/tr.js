@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "BİLGİ",
 "WARN": "UYARMAK",
 "ERROR": "HATA",
-"FATAL": "ÖLÜMCÜL"
+"FATAL": "ÖLÜMCÜL",
+"delete all entries of this app": "bu uygulamanın tüm girişlerini sil"
 },
 "nplurals=2; plural=n != 1;");

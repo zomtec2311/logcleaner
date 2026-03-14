@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "情報",
 "WARN": "警告",
 "ERROR": "エラー",
-"FATAL": "致命的"
+"FATAL": "致命的",
+"delete all entries of this app": "このアプリのすべてのエントリを削除します"
 },
 "nplurals=1; plural=0;");

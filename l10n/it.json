@@ -72,6 +72,7 @@
 "INFO": "INFORMAZIONI",
 "WARN": "AVVISARE",
 "ERROR": "ERRORE",
-"FATAL": "FATALE"
+"FATAL": "FATALE",
+"delete all entries of this app": "elimina tutte le voci di questa app"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "INFO",
 "WARN": "WARN",
 "ERROR": "ERROR",
-"FATAL": "FATAL"
+"FATAL": "FATAL",
+"delete all entries of this app": "بۇ ئەپنىڭ بارلىق تۈرلىرىنى ئۆچۈرۈڭ"
 },
 "nplurals=2; plural=n != 1;");

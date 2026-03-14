@@ -74,6 +74,7 @@
 "INFO": "INFO",
 "WARN": "WAARSCHUWEN",
 "ERROR": "FOUT",
-"FATAL": "FATAAL"
+"FATAL": "FATAAL",
+"delete all entries of this app": "verwijder alle vermeldingen van deze app"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

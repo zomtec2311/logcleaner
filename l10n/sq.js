@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "INFO",
 "WARN": "PARALAJMËROJ",
 "ERROR": "GABIM",
-"FATAL": "FATAL"
+"FATAL": "FATAL",
+"delete all entries of this app": "fshini të gjitha hyrjet e këtij aplikacioni"
 },
 "nplurals=2; plural=n != 1;");

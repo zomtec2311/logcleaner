@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "ព័ត៌មាន",
 "WARN": "ព្រមាន",
 "ERROR": "កំហុស",
-"FATAL": "ស្លាប់"
+"FATAL": "ស្លាប់",
+"delete all entries of this app": "លុបធាតុទាំងអស់នៃកម្មវិធីនេះ"
 },
 "nplurals=1; plural=0;");

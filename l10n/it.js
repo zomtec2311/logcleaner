@@ -76,6 +76,7 @@ OC.L10N.register(
 "INFO": "INFORMAZIONI",
 "WARN": "AVVISARE",
 "ERROR": "ERRORE",
-"FATAL": "FATALE"
+"FATAL": "FATALE",
+"delete all entries of this app": "elimina tutte le voci di questa app"
 },
 "nplurals=2; plural=(n != 1);");

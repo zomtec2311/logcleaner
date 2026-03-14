@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "МЭДЭЭЛЭЛ",
 "WARN": "АНХААРУУЛГА",
 "ERROR": "АЛДАА",
-"FATAL": "ҮХЭЛТАЙ"
+"FATAL": "ҮХЭЛТАЙ",
+"delete all entries of this app": "энэ програмын бүх оруулгыг устгана уу"
 },
 "nplurals=2; plural=n != 1;");

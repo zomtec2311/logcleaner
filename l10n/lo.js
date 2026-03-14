@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "ຂໍ້ມູນ",
 "WARN": "ເຕືອນ",
 "ERROR": "ຜິດພາດ",
-"FATAL": "ຕາຍ"
+"FATAL": "ຕາຍ",
+"delete all entries of this app": "ລຶບລາຍການທັງໝົດຂອງແອັບນີ້"
 },
 "nplurals=1; plural=0;");

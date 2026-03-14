@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "ՏԵՂԵԿՈՒԹՅՈՒՆՆԵՐ",
 "WARN": "ԶԳՈՒՇԱՑՈՒՄ",
 "ERROR": "ՍԽԱԼ",
-"FATAL": "ՃԱԿԱՏԱՌԱԿԱՆ"
+"FATAL": "ՃԱԿԱՏԱՌԱԿԱՆ",
+"delete all entries of this app": "ջնջել այս հավելվածի բոլոր գրառումները"
 },
 "nplurals=2; plural=n > 1;");

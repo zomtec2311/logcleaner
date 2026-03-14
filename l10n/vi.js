@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "THÔNG TIN",
 "WARN": "CẢNH BÁO",
 "ERROR": "LỖI",
-"FATAL": "GÂY TỬ VONG"
+"FATAL": "GÂY TỬ VONG",
+"delete all entries of this app": "xóa tất cả các mục của ứng dụng này"
 },
 "nplurals=1; plural=0;");

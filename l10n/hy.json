@@ -74,6 +74,7 @@
 "INFO": "ՏԵՂԵԿՈՒԹՅՈՒՆՆԵՐ",
 "WARN": "ԶԳՈՒՇԱՑՈՒՄ",
 "ERROR": "ՍԽԱԼ",
-"FATAL": "ՃԱԿԱՏԱՌԱԿԱՆ"
+"FATAL": "ՃԱԿԱՏԱՌԱԿԱՆ",
+"delete all entries of this app": "ջնջել այս հավելվածի բոլոր գրառումները"
 },"pluralForm" :"nplurals=2; plural=n > 1;"
 }

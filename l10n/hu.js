@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "INFO",
 "WARN": "FIGYELMEZTET",
 "ERROR": "HIBA",
-"FATAL": "HALÁLOS"
+"FATAL": "HALÁLOS",
+"delete all entries of this app": "törölje az alkalmazás összes bejegyzését"
 },
 "nplurals=2; plural=n != 1;");

@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "INFO",
 "WARN": "VARSLE",
 "ERROR": "FEIL",
-"FATAL": "FATAL"
+"FATAL": "FATAL",
+"delete all entries of this app": "slett alle oppføringer i denne appen"
 },
 "nplurals=2; plural=n != 1;");

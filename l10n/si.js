@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "තොරතුරු",
 "WARN": "අනතුරු අඟවන්න",
 "ERROR": "දෝෂයකි",
-"FATAL": "මාරාන්තික"
+"FATAL": "මාරාන්තික",
+"delete all entries of this app": "මෙම යෙදුමේ සියලුම ඇතුළත් කිරීම් මකන්න"
 },
 "nplurals=2; plural=n > 1;");

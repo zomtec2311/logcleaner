@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "資訊",
 "WARN": "警告",
 "ERROR": "錯誤",
-"FATAL": "致命的"
+"FATAL": "致命的",
+"delete all entries of this app": "刪除該應用程式的所有條目"
 },
 "nplurals=1; plural=0;");

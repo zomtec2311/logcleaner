@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "ข้อมูล",
 "WARN": "เตือน",
 "ERROR": "ข้อผิดพลาด",
-"FATAL": "ร้ายแรง"
+"FATAL": "ร้ายแรง",
+"delete all entries of this app": "ลบรายการทั้งหมดของแอพนี้"
 },
 "nplurals=1; plural=0;");

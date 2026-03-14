@@ -74,6 +74,7 @@
 "INFO": "МЭДЭЭЛЭЛ",
 "WARN": "АНХААРУУЛГА",
 "ERROR": "АЛДАА",
-"FATAL": "ҮХЭЛТАЙ"
+"FATAL": "ҮХЭЛТАЙ",
+"delete all entries of this app": "энэ програмын бүх оруулгыг устгана уу"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "ಮಾಹಿತಿ",
 "WARN": "ಎಚ್ಚರಿಕೆ",
 "ERROR": "ದೋಷ",
-"FATAL": "ಮಾರಕ"
+"FATAL": "ಮಾರಕ",
+"delete all entries of this app": "ಈ ಅಪ್ಲಿಕೇಶನ್‌ನ ಎಲ್ಲಾ ನಮೂದುಗಳನ್ನು ಅಳಿಸಿ"
 },
 "nplurals=2; plural=n > 1;");

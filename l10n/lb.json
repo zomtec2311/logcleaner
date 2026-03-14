@@ -74,6 +74,7 @@
 "INFO": "INFO",
 "WARN": "OPGEPASST",
 "ERROR": "ERROR",
-"FATAL": "FATAL"
+"FATAL": "FATAL",
+"delete all entries of this app": "läschen all Entréen vun dëser App"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

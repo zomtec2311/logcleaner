@@ -74,6 +74,7 @@
 "INFO": "ຂໍ້ມູນ",
 "WARN": "ເຕືອນ",
 "ERROR": "ຜິດພາດ",
-"FATAL": "ຕາຍ"
+"FATAL": "ຕາຍ",
+"delete all entries of this app": "ລຶບລາຍການທັງໝົດຂອງແອັບນີ້"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

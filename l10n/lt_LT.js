@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "INFORMACIJA",
 "WARN": "ĮSPĖJIMAS",
 "ERROR": "KLAIDA",
-"FATAL": "MIRTINGAS"
+"FATAL": "MIRTINGAS",
+"delete all entries of this app": "ištrinti visus šios programos įrašus"
 },
 "nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);");

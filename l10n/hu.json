@@ -74,6 +74,7 @@
 "INFO": "INFO",
 "WARN": "FIGYELMEZTET",
 "ERROR": "HIBA",
-"FATAL": "HALÁLOS"
+"FATAL": "HALÁLOS",
+"delete all entries of this app": "törölje az alkalmazás összes bejegyzését"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

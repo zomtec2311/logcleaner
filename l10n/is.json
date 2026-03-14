@@ -74,6 +74,7 @@
 "INFO": "UPPLÝSINGAR",
 "WARN": "VARIÐ",
 "ERROR": "VILLA",
-"FATAL": "FATAL"
+"FATAL": "FATAL",
+"delete all entries of this app": "eyða öllum færslum þessa forrits"
 },"pluralForm" :"nplurals=2; plural=n % 10 != 1 || n % 100 == 11;"
 }

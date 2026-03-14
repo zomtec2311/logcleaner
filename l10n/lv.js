@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "INFORMĀCIJA",
 "WARN": "BRĪDINĀT",
 "ERROR": "KĻŪDA",
-"FATAL": "FATAL"
+"FATAL": "FATAL",
+"delete all entries of this app": "dzēst visus šīs lietotnes ierakstus"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");

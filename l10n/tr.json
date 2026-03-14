@@ -74,6 +74,7 @@
 "INFO": "BİLGİ",
 "WARN": "UYARMAK",
 "ERROR": "HATA",
-"FATAL": "ÖLÜMCÜL"
+"FATAL": "ÖLÜMCÜL",
+"delete all entries of this app": "bu uygulamanın tüm girişlerini sil"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

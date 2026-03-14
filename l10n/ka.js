@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "ინფორმაცია",
 "WARN": "გაფრთხილება",
 "ERROR": "შეცდომა",
-"FATAL": "ფატალური"
+"FATAL": "ფატალური",
+"delete all entries of this app": "წაშალეთ ამ აპლიკაციის ყველა ჩანაწერი"
 },
 "nplurals=2; plural=n != 1;");

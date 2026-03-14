@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "정보",
 "WARN": "경고하다",
 "ERROR": "오류",
-"FATAL": "치명적인"
+"FATAL": "치명적인",
+"delete all entries of this app": "이 앱의 모든 항목을 삭제하세요"
 },
 "nplurals=1; plural=0;");

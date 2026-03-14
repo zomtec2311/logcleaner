@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "INFO",
 "WARN": "UPOZORNENIE",
 "ERROR": "CHYBA",
-"FATAL": "FATAL"
+"FATAL": "FATAL",
+"delete all entries of this app": "odstrániť všetky položky tejto aplikácie"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);");

@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "מידע",
 "WARN": "לְהַזהִיר",
 "ERROR": "שְׁגִיאָה",
-"FATAL": "קָטלָנִי"
+"FATAL": "קָטלָנִי",
+"delete all entries of this app": "למחוק את כל הערכים של האפליקציה הזו"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 2) ? 1 : 2);");

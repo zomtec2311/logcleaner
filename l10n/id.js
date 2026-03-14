@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "INFORMASI",
 "WARN": "MEMPERINGATKAN",
 "ERROR": "KESALAHAN",
-"FATAL": "FATAL"
+"FATAL": "FATAL",
+"delete all entries of this app": "hapus semua entri aplikasi ini"
 },
 "nplurals=1; plural=0;");

@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "INFO",
 "WARN": "VARNA",
 "ERROR": "FEL",
-"FATAL": "FATAL"
+"FATAL": "FATAL",
+"delete all entries of this app": "radera alla poster i denna app"
 },
 "nplurals=2; plural=n != 1;");
