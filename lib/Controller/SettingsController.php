@@ -59,7 +59,6 @@ class SettingsController extends Controller {
 
 	#[NoAdminRequired]
 	#[UseSession]
-
 	public function setSettingZeilen($who,$zeilen): DataResponse {
 		$this->config->setAppValue('logcleaner', $who, $zeilen);
 		return new DataResponse([
@@ -86,9 +85,7 @@ class SettingsController extends Controller {
 		if (!is_int($who) || $who < 0 || $who > 4) {
 				$this->logger->debug('Cannot set loglevel');
 			}
-			// Set backend loglevel directly via system value
 			$this->config->setSystemValue('loglevel', $who);
-		//return;
 			return new DataResponse([
             ]);
 	}
@@ -355,6 +352,106 @@ class SettingsController extends Controller {
 			 	else {
 					$wta = $this->helper->myfilteredoutputdata($a,$wtlogfilezeilen,$wtlogfilezeilen-$i,$wt_characters,$wt_offset, $level);
 					if (intval($wta->level) === intval($level)) {
+					$wtarr []= $wta; 
+					}
+					$array[$i] = $i;
+			 	}
+			}
+		}
+		return new DataResponse([
+                'al' => $wtarr,
+            ]);
+	}
+	
+	public function getallfilteredapplog($key): DataResponse {
+		$wt_out = "";
+		$array = [];
+		$wtarr =[];
+		$wtlogfile = $this->config->getSystemValue('logfile');
+		if (!file_exists($wtlogfile)) {
+			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+				if (!file_exists($wtlogfile)) {
+					$obja = new \stdClass();
+					$obja->all = 0;
+					$obja->zeit = '';
+					$obja->ip = '';
+					$obja->user = '';
+					$obja->app = '';
+					$obja->method = '';
+					$obja->zeit = '';
+					$obja->grund = $this->l->t('log file cannot be located');
+					$wtarr [] = $obja;
+					return new DataResponse([
+                'al' => $wtarr,
+            ]);
+				}
+		}
+		$wwt = $this->helper->wtlogtoarr($wtlogfile);
+		$wt_zeilen = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_zeilen', '5', false);;
+		$wt_offset = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset', '0', false);
+		$wt_art = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_art', '2', false);
+		$wt_characters = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_characters', '500', false);
+		$wtpara_menue = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_menue', '1', false);
+		$wtpara_logmessage = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '2', false);
+		$wtpara_cron_deldub = (int)$this->appConfig->getValueString('logcleaner', 'wtpara_cron_deldub', '1', false);
+
+		if((!isset($wtpara_cron_deldub)) || ($wtpara_cron_deldub === 0)) {
+			$wtpara_cron_deldub = 1;
+			$this->helper->setAppValue('wtpara_cron_deldub', 1);
+		}
+		if((!isset($wtpara_menue)) || ($wtpara_menue === 0)) {
+			$this->helper->setAppValue('wtparam_menue', 1);
+		}
+		if((!isset($wt_zeilen)) || ($wt_zeilen === 0)) {
+			$wt_zeilen = 5;
+			$this->helper->setAppValue('logcleaner_wt_zeilen', 5);
+		}
+		if((!isset($wt_art)) || ($wt_art === 0)) {
+			$wt_art = 2;
+			$this->helper->setAppValue('logcleaner_wt_art', 9);
+		}
+		if((!isset($wtpara_logmessage)) || ($wtpara_logmessage === 0)) {
+			$this->helper->setAppValue('wtparam_logmessage', 2);
+		}
+		if((!isset($wt_characters)) || ($wt_characters === 0)) {
+			$wt_characters = 500;
+			$this->helper->setAppValue('logcleaner_wt_characters', 500);
+		}
+		if (isset($logid)) {
+			$this->helper->wtzeileweg($logid, $wwt, $wtlogfile);
+			$wwt = $this->helper->wtlogtoarr($wtlogfile);
+		}
+		$wtlogfilezeilen = count($wwt);
+		if ($wtlogfilezeilen == 0) {
+			$obja = new \stdClass();
+		  $obja->all = 0;
+		  $obja->zeit = '';
+		  $obja->ip = '';
+		  $obja->user = '';
+		  $obja->app = '';
+		  $obja->method = '';
+		  $obja->zeit = '';
+			$obja->grund = $this->l->t('no log entries available');
+			$wtarr [] = $obja;
+		  return new DataResponse([
+                'al' => $wtarr,
+            ]);
+		}
+		$wt_zeilen = $wtlogfilezeilen;
+		$wwt = array_splice($wwt, -$wt_zeilen);
+		for($i=0; $i < $wt_zeilen; $i++) {
+			$a = (isset($wwt[$wt_zeilen-$i-1])) ? $wwt[$wt_zeilen-$i-1] : null;
+			if ($a) {
+				if ($wt_zeilen >= count($wwt)) {
+					$wta = $this->helper->myfilteredoutputdata($a,$wtlogfilezeilen,$wtlogfilezeilen + $wt_zeilen - count($wwt)-$i-1,$wt_characters,$wt_offset, $key);
+					if ($wta->appraw === $key) {
+						$wtarr []= $wta; 
+					}
+					$array[$i] = $i;
+				}
+			 	else {
+					$wta = $this->helper->myfilteredoutputdata($a,$wtlogfilezeilen,$wtlogfilezeilen-$i,$wt_characters,$wt_offset, $key);
+					if ($wta->appraw === $key) {
 					$wtarr []= $wta; 
 					}
 					$array[$i] = $i;
@@ -651,32 +748,22 @@ class SettingsController extends Controller {
 				'wttextinfo' => $wttextinfo,
             ]);
 	}
-
+	
 	public function logapps(): DataResponse {
 		$i = 0;
-		$ii = 0;
-		$iii = 0;
-		$tmp_array = array();
-		$key_array = array();
-		$temp_array = array();
+		$logapps = array();
 		$wtlogfile = $this->config->getSystemValue('logfile');
 		if (!file_exists($wtlogfile)) {
 			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
 		}
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
-		foreach ($wwt as $value) {
-			$tmp_array[] = explode(',"', $value);
+		foreach($wwt as $val) {			
+			$json = json_decode($val);
+			$logapps[$i] = $json->app;
+			$i++;
 		}
-		unset($value);
-		foreach($tmp_array as $val) {
-			$teil = substr(str_replace('url":"/', "", $val[7]), 0, -1);
-			$teile = explode("/", $teil);
-			if($teile[0] == 'apps') $temp_array[$i] = $teile[1];
-			else $temp_array[$i] = substr(str_replace('app":"', "", $val[5]), 0, -1);
-      $i++;
-    }
-	return new DataResponse([
-                'logapps' => $temp_array,
+		return new DataResponse([
+                'logapps' => $logapps,
             ]);
 	}
 
@@ -692,5 +779,63 @@ class SettingsController extends Controller {
 		}
 		return new DataResponse([
             ]);
+	}
+	
+	public function delapp($app): DataResponse {
+		if ($app === null) {
+			$app = null;
+		}
+		if (isset($app)) {
+		
+			$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
+			$i = 0;
+			$ii = 0;
+			$key_array = array();
+			$temp_array = array();
+			$new_array = array();
+			$uu = 0;
+			$wtlogfile = $this->config->getSystemValue('logfile');
+			if (!file_exists($wtlogfile)) {
+				$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+			}
+			$filesizebefore = filesize($wtlogfile);
+			$wwt = $this->helper->wtlogtoarr($wtlogfile);		
+			foreach($wwt as $val) {
+				$json = json_decode($val);
+				if ($json->app <> $app) {
+					$temp_array[$i] = $val;
+				}
+				else {
+					$ii++;
+				}
+				$i++;
+			}
+			$new_array = $temp_array;
+			$uu = count($new_array);
+			if($uu > 0) {
+				$file = $wtlogfile;
+				$current = $new_array;
+				file_put_contents($file, $current,LOCK_EX);
+			}
+			clearstatcache();
+			$filesizediff = $this->wtfilesize($filesizebefore - filesize($wtlogfile),2);
+			$obja = new \stdClass();
+			$obja->cntdub = $ii;
+			$obja->sizediff = $filesizediff;
+			if ($wtpara_logmessage===2) {
+				if ($ii===1) $this->logger->info(sprintf('LogCleaner: %d log entry was deleted and %s of disk space were cleared.', $ii, $filesizediff));
+				else $this->logger->info(sprintf('LogCleaner: %d log entries were deleted and %s of disk space were cleared.', $ii, $filesizediff));
+			}
+			return new DataResponse([
+                'cntlevel' => $ii,
+				'sizediff' => $filesizediff,
+            ]);
+		}
+		else {
+			return new DataResponse([
+                'cntlevel' => 0,
+				'sizediff' => 0,
+            ]);
+		}
 	}
 }

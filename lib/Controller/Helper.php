@@ -141,6 +141,7 @@ class Helper
         $obja->ip = $this->l->t('IP') . " :". $json->remoteAddr . $trenn;
         $obja->user = $this->l->t('User') . " :".$json->user . $trenn;
         $obja->app = $this->l->t('App') . " :".$json->app . $trenn;
+        $obja->appraw = $json->app;
         $obja->method = $this->l->t('Method') . " :".$json->method . $trenn;
         $obja->url = $this->l->t('URL') . " :".$json->url . $trenn;
         $obja->grund = $this->l->t('Reason') . " :".substr($json->message, 0, $wt_characters);
@@ -164,7 +165,5 @@ class Helper
         }
       $obja->id = $wtlogfilezeilen;
       return $obja;
-      }
-      
-      
+      }      
 }
