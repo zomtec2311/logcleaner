@@ -74,6 +74,7 @@
 "INFO": "INFO",
 "WARN": "HOIATUS",
 "ERROR": "VIGA",
-"FATAL": "SAATUSLIKKUS"
+"FATAL": "SAATUSLIKKUS",
+"delete all entries of this app": "kustutage kõik selle rakenduse kirjed"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

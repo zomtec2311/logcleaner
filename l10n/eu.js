@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "INFO",
 "WARN": "ABISTU",
 "ERROR": "ERROREA",
-"FATAL": "HILTZAILEA"
+"FATAL": "HILTZAILEA",
+"delete all entries of this app": "ezabatu aplikazio honen sarrera guztiak"
 },
 "nplurals=2; plural=n != 1;");

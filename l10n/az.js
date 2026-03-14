@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "MƏLUMAT",
 "WARN": "XƏBƏRDARLIQ",
 "ERROR": "XƏTA",
-"FATAL": "FATAL"
+"FATAL": "FATAL",
+"delete all entries of this app": "bu tətbiqin bütün qeydlərini silin"
 },
 "nplurals=2; plural=n != 1;");

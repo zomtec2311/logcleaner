@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "INFO",
 "WARN": "HOIATUS",
 "ERROR": "VIGA",
-"FATAL": "SAATUSLIKKUS"
+"FATAL": "SAATUSLIKKUS",
+"delete all entries of this app": "kustutage kõik selle rakenduse kirjed"
 },
 "nplurals=2; plural=n != 1;");

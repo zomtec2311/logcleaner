@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "اطلاعات",
 "WARN": "هشدار",
 "ERROR": "خطا",
-"FATAL": "کشنده"
+"FATAL": "کشنده",
+"delete all entries of this app": "تمام ورودی های این برنامه را حذف کنید"
 },
 "nplurals=2; plural=n > 1;");

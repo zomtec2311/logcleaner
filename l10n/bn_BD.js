@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "তথ্য",
 "WARN": "সতর্ক করুন",
 "ERROR": "ত্রুটি",
-"FATAL": "মারাত্মক"
+"FATAL": "মারাত্মক",
+"delete all entries of this app": "এই অ্যাপের সব এন্ট্রি মুছে দিন"
 },
 "nplurals=2; plural=n > 1;");

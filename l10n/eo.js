@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "INFO",
 "WARN": "AVERTU",
 "ERROR": "ERARO",
-"FATAL": "FATALA"
+"FATAL": "FATALA",
+"delete all entries of this app": "forigu ĉiujn enskribojn de ĉi tiu programo"
 },
 "nplurals=2; plural=n != 1;");

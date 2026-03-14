@@ -72,6 +72,7 @@
 "INFO": "INFOS",
 "WARN": "AVERTIR",
 "ERROR": "ERREUR",
-"FATAL": "FATAL"
+"FATAL": "FATAL",
+"delete all entries of this app": "supprimer toutes les entrées de cette application"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

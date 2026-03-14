@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "ИНФО",
 "WARN": "ПРЕДУПРЕЖДЕНИЕ",
 "ERROR": "ГРЕШКА",
-"FATAL": "ФАТАЛНО"
+"FATAL": "ФАТАЛНО",
+"delete all entries of this app": "изтрийте всички записи на това приложение"
 },
 "nplurals=2; plural=n != 1;");

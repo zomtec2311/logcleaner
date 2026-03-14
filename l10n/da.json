@@ -74,6 +74,7 @@
 "INFO": "INFO",
 "WARN": "ADVARE",
 "ERROR": "FEJL",
-"FATAL": "FATAL"
+"FATAL": "FATAL",
+"delete all entries of this app": "slet alle poster i denne app"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "ΠΛΗΡΟΦΟΡΙΕΣ",
 "WARN": "ΠΡΟΕΙΔΟΠΟΙΩ",
 "ERROR": "ΣΦΑΛΜΑ",
-"FATAL": "ΘΑΝΑΤΗΦΟΡΟΣ"
+"FATAL": "ΘΑΝΑΤΗΦΟΡΟΣ",
+"delete all entries of this app": "διαγράψτε όλες τις καταχωρήσεις αυτής της εφαρμογής"
 },
 "nplurals=2; plural=n != 1;");

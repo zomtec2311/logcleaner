@@ -79,6 +79,7 @@ OC.L10N.register(
 "INFO": "INLIGTING",
 "WARN": "WAARSKUW",
 "ERROR": "FOUT",
-"FATAL": "NOODLOTIG"
+"FATAL": "NOODLOTIG",
+"delete all entries of this app": "vee alle inskrywings van hierdie toepassing uit"
 },
 "nplurals=2; plural=n != 1;");

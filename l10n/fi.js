@@ -78,6 +78,7 @@ OC.L10N.register(
 "INFO": "TIEDOT",
 "WARN": "VAROITTAA",
 "ERROR": "VIRHE",
-"FATAL": "KAPPALEEN"
+"FATAL": "KAPPALEEN",
+"delete all entries of this app": "poista kaikki tämän sovelluksen merkinnät"
 },
 "nplurals=2; plural=n != 1;");
