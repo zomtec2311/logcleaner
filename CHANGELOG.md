@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.3.5
+
+### Changed
+- filter updated
+
+### Added
+- some css classes
+- optional footer with helpful buttons
+
 ## 1.3.4
 
 ### Fixed

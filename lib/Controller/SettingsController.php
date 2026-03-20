@@ -77,6 +77,7 @@ class SettingsController extends Controller {
 			'wtparam_filter' => (empty($this->config->getAppValue('logcleaner', 'wtparam_filter')))?$this->setSettingZeilen('wtparam_filter',1):$this->config->getAppValue('logcleaner', 'wtparam_filter'),
 			'wtpara_cron_deldub' => (empty($this->config->getAppValue('logcleaner', 'wtpara_cron_deldub')))?$this->setSettingZeilen('wtpara_cron_deldub',1):$this->config->getAppValue('logcleaner', 'wtpara_cron_deldub'),
 			'loglevel' => $this->config->getSystemValue('loglevel'),
+			'wtpara_show_footer' => (empty($this->config->getAppValue('logcleaner', 'wtpara_show_footer')))?$this->setSettingZeilen('wtpara_show_footer',1):$this->config->getAppValue('logcleaner', 'wtpara_show_footer'),
             ]);
 	}
 
@@ -606,7 +607,7 @@ class SettingsController extends Controller {
 			}
 		}
 
-		$showFilters = ($activeFiltersCount > 1);
+		$showFilters = ($activeFiltersCount > 0);
 
 		return new DataResponse([
 			'wtcntll' => array_values($stats),
@@ -703,8 +704,27 @@ class SettingsController extends Controller {
 			$obja->cntdub = $ii;
 			$obja->sizediff = $filesizediff;
 			if ($wtpara_logmessage===2) {
-				if ($ii===1) $this->logger->info(sprintf('LogCleaner: %d log entry was deleted and %s of disk space were cleared.', $ii, $filesizediff));
-				else $this->logger->info(sprintf('LogCleaner: %d log entries were deleted and %s of disk space were cleared.', $ii, $filesizediff));
+				switch ($level) {
+					case 0:
+						$levelname = 'DEBUG';
+						break;
+					case 1:
+						$levelname = 'INFO';
+						break;
+					case 2:
+						$levelname = 'WARN';
+						break;
+					case 3:
+						$levelname = 'ERROR';
+						break;
+					case 4:
+						$levelname = 'FATAL';
+					break;
+					default:
+						//code block
+				}
+				if ($ii===1) $this->logger->info(sprintf("LogCleaner: %d log entry was deleted from error level $levelname and %s of disk space were cleared.", $ii, $filesizediff));
+				else $this->logger->info(sprintf("LogCleaner: %d log entries were deleted from error level $levelname and %s of disk space were cleared.", $ii, $filesizediff));
 			}
 			return new DataResponse([
                 'cntlevel' => $ii,
@@ -823,8 +843,8 @@ class SettingsController extends Controller {
 			$obja->cntdub = $ii;
 			$obja->sizediff = $filesizediff;
 			if ($wtpara_logmessage===2) {
-				if ($ii===1) $this->logger->info(sprintf('LogCleaner: %d log entry was deleted and %s of disk space were cleared.', $ii, $filesizediff));
-				else $this->logger->info(sprintf('LogCleaner: %d log entries were deleted and %s of disk space were cleared.', $ii, $filesizediff));
+				if ($ii===1) $this->logger->info(sprintf("LogCleaner: %d log entry was deleted from app '$app' and %s of disk space were cleared.", $ii, $filesizediff));
+				else $this->logger->info(sprintf("LogCleaner: %d log entries were deleted from app '$app' and %s of disk space were cleared.", $ii, $filesizediff));
 			}
 			return new DataResponse([
                 'cntlevel' => $ii,
