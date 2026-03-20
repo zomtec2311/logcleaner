@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "هشدار",
 "ERROR": "خطا",
 "FATAL": "کشنده",
-"delete all entries of this app": "تمام ورودی های این برنامه را حذف کنید"
+"delete all entries of this app": "تمام ورودی های این برنامه را حذف کنید",
+"Delete all entries of the app {name}": "تمام ورودی های برنامه {name} را حذف کنید",
+"Delete all entries of error level {name}": "تمام ورودی های سطح خطا {name} را حذف کنید",
+"Shall a footer be displayed with useful buttons?": "آیا پاورقی با دکمه های مفید نمایش داده می شود؟"
 },
 "nplurals=2; plural=n > 1;");

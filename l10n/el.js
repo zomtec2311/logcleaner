@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "ΠΡΟΕΙΔΟΠΟΙΩ",
 "ERROR": "ΣΦΑΛΜΑ",
 "FATAL": "ΘΑΝΑΤΗΦΟΡΟΣ",
-"delete all entries of this app": "διαγράψτε όλες τις καταχωρήσεις αυτής της εφαρμογής"
+"delete all entries of this app": "διαγράψτε όλες τις καταχωρήσεις αυτής της εφαρμογής",
+"Delete all entries of the app {name}": "Διαγράψτε όλες τις καταχωρήσεις της εφαρμογής {name}",
+"Delete all entries of error level {name}": "Διαγράψτε όλες τις καταχωρήσεις του επιπέδου σφάλματος {name}",
+"Shall a footer be displayed with useful buttons?": "Πρέπει να εμφανίζεται ένα υποσέλιδο με χρήσιμα κουμπιά;"
 },
 "nplurals=2; plural=n != 1;");

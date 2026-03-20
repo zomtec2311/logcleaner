@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "RHYBUDD",
 "ERROR": "GWALL",
 "FATAL": "ANgheuol",
-"delete all entries of this app": "dileu pob cofnod o app hwn"
+"delete all entries of this app": "dileu pob cofnod o app hwn",
+"Delete all entries of the app {name}": "Dileu holl gofnodion yr app {name}",
+"Delete all entries of error level {name}": "Dileu pob cofnod o lefel gwall {name}",
+"Shall a footer be displayed with useful buttons?": "A fydd troedyn yn cael ei arddangos gyda botymau defnyddiol?"
 },
 "nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n == 3) ? 3 : ((n == 6) ? 4 : 5))));");

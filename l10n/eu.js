@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "ABISTU",
 "ERROR": "ERROREA",
 "FATAL": "HILTZAILEA",
-"delete all entries of this app": "ezabatu aplikazio honen sarrera guztiak"
+"delete all entries of this app": "ezabatu aplikazio honen sarrera guztiak",
+"Delete all entries of the app {name}": "Ezabatu {name} aplikazioaren sarrera guztiak",
+"Delete all entries of error level {name}": "Ezabatu errore-mailako {name} sarrera guztiak",
+"Shall a footer be displayed with useful buttons?": "Botoi erabilgarriak dituen orri-oin bat bistaratuko al da?"
 },
 "nplurals=2; plural=n != 1;");

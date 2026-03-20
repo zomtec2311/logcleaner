@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "ПРЕДУПРЕЖДЕНИЕ",
 "ERROR": "ГРЕШКА",
 "FATAL": "ФАТАЛНО",
-"delete all entries of this app": "изтрийте всички записи на това приложение"
+"delete all entries of this app": "изтрийте всички записи на това приложение",
+"Delete all entries of the app {name}": "Изтрийте всички записи на приложението {name}",
+"Delete all entries of error level {name}": "Изтрийте всички записи от ниво на грешка {name}",
+"Shall a footer be displayed with useful buttons?": "Трябва ли да се показва долен колонтитул с полезни бутони?"
 },
 "nplurals=2; plural=n != 1;");

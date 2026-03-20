@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "ADVARE",
 "ERROR": "FEJL",
 "FATAL": "FATAL",
-"delete all entries of this app": "slet alle poster i denne app"
+"delete all entries of this app": "slet alle poster i denne app",
+"Delete all entries of the app {name}": "Slet alle poster i appen {name}",
+"Delete all entries of error level {name}": "Slet alle indtastninger af fejlniveau {name}",
+"Shall a footer be displayed with useful buttons?": "Skal der vises en sidefod med nyttige knapper?"
 },
 "nplurals=2; plural=n != 1;");

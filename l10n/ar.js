@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "تحذير",
 "ERROR": "خطأ",
 "FATAL": "مميت",
-"delete all entries of this app": "حذف جميع إدخالات هذا التطبيق"
+"delete all entries of this app": "حذف جميع إدخالات هذا التطبيق",
+"Delete all entries of the app {name}": "احذف جميع إدخالات التطبيق {name}",
+"Delete all entries of error level {name}": "احذف جميع إدخالات مستوى الخطأ {name}",
+"Shall a footer be displayed with useful buttons?": "هل يجب عرض التذييل بأزرار مفيدة؟"
 },
 "nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n % 100 >= 3 && n % 100 <= 10) ? 3 : ((n % 100 >= 11 && n % 100 <= 99) ? 4 : 5))));");

@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "সতর্ক করুন",
 "ERROR": "ত্রুটি",
 "FATAL": "মারাত্মক",
-"delete all entries of this app": "এই অ্যাপের সব এন্ট্রি মুছে দিন"
+"delete all entries of this app": "এই অ্যাপের সব এন্ট্রি মুছে দিন",
+"Delete all entries of the app {name}": "{name} অ্যাপের সমস্ত এন্ট্রি মুছুন",
+"Delete all entries of error level {name}": "ত্রুটি স্তর {name} এর সমস্ত এন্ট্রি মুছুন৷",
+"Shall a footer be displayed with useful buttons?": "একটি ফুটার দরকারী বোতাম সঙ্গে প্রদর্শিত হবে?"
 },
 "nplurals=2; plural=n > 1;");

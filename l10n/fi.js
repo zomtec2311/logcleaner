@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "VAROITTAA",
 "ERROR": "VIRHE",
 "FATAL": "KAPPALEEN",
-"delete all entries of this app": "poista kaikki tämän sovelluksen merkinnät"
+"delete all entries of this app": "poista kaikki tämän sovelluksen merkinnät",
+"Delete all entries of the app {name}": "Poista kaikki sovelluksen {name} merkinnät",
+"Delete all entries of error level {name}": "Poista kaikki virhetason {name} merkinnät",
+"Shall a footer be displayed with useful buttons?": "Näytetäänkö alatunniste hyödyllisillä painikkeilla?"
 },
 "nplurals=2; plural=n != 1;");

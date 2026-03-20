@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "RABHADH",
 "ERROR": "EARRÁID",
 "FATAL": "MARBHACH",
-"delete all entries of this app": "scrios gach iontráil den aip seo"
+"delete all entries of this app": "scrios gach iontráil den aip seo",
+"Delete all entries of the app {name}": "Scrios gach iontráil den aip {name}",
+"Delete all entries of error level {name}": "Scrios gach iontráil den leibhéal earráide {name}",
+"Shall a footer be displayed with useful buttons?": "An dtaispeánfar buntásc le cnaipí úsáideacha?"
 },
 "nplurals=5; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n >= 3 && n <= 6) ? 2 : ((n >= 7 && n <= 10) ? 3 : 4)));");

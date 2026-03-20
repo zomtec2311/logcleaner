@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "HOIATUS",
 "ERROR": "VIGA",
 "FATAL": "SAATUSLIKKUS",
-"delete all entries of this app": "kustutage kõik selle rakenduse kirjed"
+"delete all entries of this app": "kustutage kõik selle rakenduse kirjed",
+"Delete all entries of the app {name}": "Kustutage kõik rakenduse {name} kirjed",
+"Delete all entries of error level {name}": "Kustutage kõik veataseme {name} kirjed",
+"Shall a footer be displayed with useful buttons?": "Kas jalus kuvatakse kasulike nuppudega?"
 },
 "nplurals=2; plural=n != 1;");

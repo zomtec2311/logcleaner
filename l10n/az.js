@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "XƏBƏRDARLIQ",
 "ERROR": "XƏTA",
 "FATAL": "FATAL",
-"delete all entries of this app": "bu tətbiqin bütün qeydlərini silin"
+"delete all entries of this app": "bu tətbiqin bütün qeydlərini silin",
+"Delete all entries of the app {name}": "{name} tətbiqinin bütün qeydlərini silin",
+"Delete all entries of error level {name}": "{name} xəta səviyyəsinin bütün qeydlərini silin",
+"Shall a footer be displayed with useful buttons?": "Faydalı düymələrlə altbilgi göstəriləcəkmi?"
 },
 "nplurals=2; plural=n != 1;");

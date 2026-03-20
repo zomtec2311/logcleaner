@@ -74,6 +74,9 @@
 "WARN": "AVERTU",
 "ERROR": "ERARO",
 "FATAL": "FATALA",
-"delete all entries of this app": "forigu ĉiujn enskribojn de ĉi tiu programo"
+"delete all entries of this app": "forigu ĉiujn enskribojn de ĉi tiu programo",
+"Delete all entries of the app {name}": "Forigu ĉiujn enskribojn de la aplikaĵo {name}",
+"Delete all entries of error level {name}": "Forigu ĉiujn enskribojn de erarnivelo {name}",
+"Shall a footer be displayed with useful buttons?": "Ĉu piedlinio estos montrata kun utilaj butonoj?"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

@@ -76,6 +76,9 @@
 "WARN": "WAARSKUW",
 "ERROR": "FOUT",
 "FATAL": "NOODLOTIG",
-"delete all entries of this app": "vee alle inskrywings van hierdie toepassing uit"
+"delete all entries of this app": "vee alle inskrywings van hierdie toepassing uit",
+"Delete all entries of the app {name}": "Vee alle inskrywings van die toepassing {name} uit",
+"Delete all entries of error level {name}": "Vee alle inskrywings van foutvlak {name} uit",
+"Shall a footer be displayed with useful buttons?": "Sal 'n voetskrif met nuttige knoppies vertoon word?"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "VAROVAT",
 "ERROR": "CHYBA",
 "FATAL": "FATÁLNÍ",
-"delete all entries of this app": "odstranit všechny položky této aplikace"
+"delete all entries of this app": "odstranit všechny položky této aplikace",
+"Delete all entries of the app {name}": "Smažte všechny položky aplikace {name}",
+"Delete all entries of error level {name}": "Smažte všechny položky chybové úrovně {name}",
+"Shall a footer be displayed with useful buttons?": "Bude zápatí zobrazeno s užitečnými tlačítky?"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);");
