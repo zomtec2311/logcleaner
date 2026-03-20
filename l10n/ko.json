@@ -75,6 +75,9 @@
 "WARN": "경고하다",
 "ERROR": "오류",
 "FATAL": "치명적인",
-"delete all entries of this app": "이 앱의 모든 항목을 삭제하세요"
+"delete all entries of this app": "이 앱의 모든 항목을 삭제하세요",
+"Delete all entries of the app {name}": "{name} 앱의 모든 항목 삭제",
+"Delete all entries of error level {name}": "오류 수준 {name}의 모든 항목 삭제",
+"Shall a footer be displayed with useful buttons?": "유용한 버튼이 있는 바닥글을 표시해야 합니까?"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

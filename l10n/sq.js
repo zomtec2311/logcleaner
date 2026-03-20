@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "PARALAJMËROJ",
 "ERROR": "GABIM",
 "FATAL": "FATAL",
-"delete all entries of this app": "fshini të gjitha hyrjet e këtij aplikacioni"
+"delete all entries of this app": "fshini të gjitha hyrjet e këtij aplikacioni",
+"Delete all entries of the app {name}": "Fshi të gjitha hyrjet e aplikacionit {name}",
+"Delete all entries of error level {name}": "Fshini të gjitha hyrjet e nivelit të gabimit {name}",
+"Shall a footer be displayed with useful buttons?": "A duhet të shfaqet një footer me butona të dobishëm?"
 },
 "nplurals=2; plural=n != 1;");

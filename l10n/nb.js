@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "VARSLE",
 "ERROR": "FEIL",
 "FATAL": "FATAL",
-"delete all entries of this app": "slett alle oppføringer i denne appen"
+"delete all entries of this app": "slett alle oppføringer i denne appen",
+"Delete all entries of the app {name}": "Slett alle oppføringer i appen {name}",
+"Delete all entries of error level {name}": "Slett alle oppføringer for feilnivå {name}",
+"Shall a footer be displayed with useful buttons?": "Skal en bunntekst vises med nyttige knapper?"
 },
 "nplurals=2; plural=n != 1;");

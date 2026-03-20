@@ -75,6 +75,9 @@
 "WARN": "UPOZORITI",
 "ERROR": "POGREŠKA",
 "FATAL": "KOBNO",
-"delete all entries of this app": "izbrisati sve unose ove aplikacije"
+"delete all entries of this app": "izbrisati sve unose ove aplikacije",
+"Delete all entries of the app {name}": "Izbrišite sve unose aplikacije {name}",
+"Delete all entries of error level {name}": "Izbrišite sve unose razine pogreške {name}",
+"Shall a footer be displayed with useful buttons?": "Hoće li podnožje biti prikazano s korisnim gumbima?"
 },"pluralForm" :"nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);"
 }

@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "WARN",
 "ERROR": "ERROR",
 "FATAL": "FATAL",
-"delete all entries of this app": "بۇ ئەپنىڭ بارلىق تۈرلىرىنى ئۆچۈرۈڭ"
+"delete all entries of this app": "بۇ ئەپنىڭ بارلىق تۈرلىرىنى ئۆچۈرۈڭ",
+"Delete all entries of the app {name}": "{name} دېتالىنىڭ بارلىق تۈرلىرىنى ئۆچۈرۈڭ",
+"Delete all entries of error level {name}": "خاتالىق دەرىجىسى {name} نىڭ بارلىق تۈرلىرىنى ئۆچۈرۈڭ",
+"Shall a footer be displayed with useful buttons?": "پايدىلىق كۇنۇپكىلار بىلەن بىر بەت ئاستى كۆرۈنەمدۇ؟"
 },
 "nplurals=2; plural=n != 1;");

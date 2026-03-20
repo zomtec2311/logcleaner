@@ -75,6 +75,9 @@
 "WARN": "警告",
 "ERROR": "錯誤",
 "FATAL": "致命的",
-"delete all entries of this app": "刪除該應用程式的所有條目"
+"delete all entries of this app": "刪除該應用程式的所有條目",
+"Delete all entries of the app {name}": "刪除應用程式 {name} 的所有條目",
+"Delete all entries of error level {name}": "刪除錯誤等級 {name} 的所有條目",
+"Shall a footer be displayed with useful buttons?": "頁腳是否應該顯示有用的按鈕？"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

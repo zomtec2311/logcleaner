@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "გაფრთხილება",
 "ERROR": "შეცდომა",
 "FATAL": "ფატალური",
-"delete all entries of this app": "წაშალეთ ამ აპლიკაციის ყველა ჩანაწერი"
+"delete all entries of this app": "წაშალეთ ამ აპლიკაციის ყველა ჩანაწერი",
+"Delete all entries of the app {name}": "წაშალეთ {name} აპის ყველა ჩანაწერი",
+"Delete all entries of error level {name}": "წაშალეთ ყველა ჩანაწერი შეცდომის დონის {name}",
+"Shall a footer be displayed with useful buttons?": "უნდა იყოს ნაჩვენები ქვედა კოლონტიტული სასარგებლო ღილაკებით?"
 },
 "nplurals=2; plural=n != 1;");

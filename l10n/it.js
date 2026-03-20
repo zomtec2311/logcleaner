@@ -77,6 +77,9 @@ OC.L10N.register(
 "WARN": "AVVISARE",
 "ERROR": "ERRORE",
 "FATAL": "FATALE",
-"delete all entries of this app": "elimina tutte le voci di questa app"
+"delete all entries of this app": "elimina tutte le voci di questa app",
+"Delete all entries of the app {name}": "Elimina tutte le voci dell'app {name}",
+"Delete all entries of error level {name}": "Elimina tutte le voci con livello di errore {name}",
+"Shall a footer be displayed with useful buttons?": "Deve essere visualizzato un piè di pagina con pulsanti utili?"
 },
 "nplurals=2; plural=(n != 1);");

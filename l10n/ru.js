@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "ПРЕДУПРЕЖДАТЬ",
 "ERROR": "ОШИБКА",
 "FATAL": "ФАТАЛЬНЫЙ",
-"delete all entries of this app": "удалить все записи этого приложения"
+"delete all entries of this app": "удалить все записи этого приложения",
+"Delete all entries of the app {name}": "Удалить все записи приложения {name}.",
+"Delete all entries of error level {name}": "Удалить все записи уровня ошибки {name}.",
+"Shall a footer be displayed with useful buttons?": "Должен ли футер отображаться с полезными кнопками?"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);");

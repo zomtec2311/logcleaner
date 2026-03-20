@@ -75,6 +75,9 @@
 "WARN": "ព្រមាន",
 "ERROR": "កំហុស",
 "FATAL": "ស្លាប់",
-"delete all entries of this app": "លុបធាតុទាំងអស់នៃកម្មវិធីនេះ"
+"delete all entries of this app": "លុបធាតុទាំងអស់នៃកម្មវិធីនេះ",
+"Delete all entries of the app {name}": "លុបធាតុទាំងអស់នៃកម្មវិធី {name}",
+"Delete all entries of error level {name}": "លុបធាតុទាំងអស់នៃកម្រិតកំហុស {name}",
+"Shall a footer be displayed with useful buttons?": "តើបាតកថាត្រូវបង្ហាញជាមួយប៊ូតុងមានប្រយោជន៍ទេ?"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

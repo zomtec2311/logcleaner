@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "เตือน",
 "ERROR": "ข้อผิดพลาด",
 "FATAL": "ร้ายแรง",
-"delete all entries of this app": "ลบรายการทั้งหมดของแอพนี้"
+"delete all entries of this app": "ลบรายการทั้งหมดของแอพนี้",
+"Delete all entries of the app {name}": "ลบรายการทั้งหมดของแอป {name}",
+"Delete all entries of error level {name}": "ลบรายการทั้งหมดของระดับข้อผิดพลาด {name}",
+"Shall a footer be displayed with useful buttons?": "ส่วนท้ายจะแสดงด้วยปุ่มที่มีประโยชน์หรือไม่?"
 },
 "nplurals=1; plural=0;");

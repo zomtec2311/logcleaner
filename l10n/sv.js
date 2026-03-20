@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "VARNA",
 "ERROR": "FEL",
 "FATAL": "FATAL",
-"delete all entries of this app": "radera alla poster i denna app"
+"delete all entries of this app": "radera alla poster i denna app",
+"Delete all entries of the app {name}": "Ta bort alla poster i appen {name}",
+"Delete all entries of error level {name}": "Ta bort alla poster för felnivå {name}",
+"Shall a footer be displayed with useful buttons?": "Ska en sidfot visas med användbara knappar?"
 },
 "nplurals=2; plural=n != 1;");

@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "ເຕືອນ",
 "ERROR": "ຜິດພາດ",
 "FATAL": "ຕາຍ",
-"delete all entries of this app": "ລຶບລາຍການທັງໝົດຂອງແອັບນີ້"
+"delete all entries of this app": "ລຶບລາຍການທັງໝົດຂອງແອັບນີ້",
+"Delete all entries of the app {name}": "ລຶບລາຍການທັງໝົດຂອງແອັບ {name}",
+"Delete all entries of error level {name}": "ລຶບລາຍການທັງໝົດຂອງລະດັບຄວາມຜິດພາດ {name}",
+"Shall a footer be displayed with useful buttons?": "ຈະສະແດງສ່ວນທ້າຍດ້ວຍປຸ່ມທີ່ເປັນປະໂຫຍດບໍ?"
 },
 "nplurals=1; plural=0;");

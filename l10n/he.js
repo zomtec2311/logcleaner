@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "לְהַזהִיר",
 "ERROR": "שְׁגִיאָה",
 "FATAL": "קָטלָנִי",
-"delete all entries of this app": "למחוק את כל הערכים של האפליקציה הזו"
+"delete all entries of this app": "למחוק את כל הערכים של האפליקציה הזו",
+"Delete all entries of the app {name}": "מחק את כל הערכים של האפליקציה {name}",
+"Delete all entries of error level {name}": "מחק את כל הערכים ברמת השגיאה {name}",
+"Shall a footer be displayed with useful buttons?": "האם תוצג כותרת תחתונה עם כפתורים שימושיים?"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 2) ? 1 : 2);");

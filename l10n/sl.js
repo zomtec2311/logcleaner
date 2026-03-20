@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "OPOZORILO",
 "ERROR": "NAPAKA",
 "FATAL": "USODNO",
-"delete all entries of this app": "izbrišite vse vnose te aplikacije"
+"delete all entries of this app": "izbrišite vse vnose te aplikacije",
+"Delete all entries of the app {name}": "Izbrišite vse vnose aplikacije {name}",
+"Delete all entries of error level {name}": "Izbrišite vse vnose stopnje napake {name}",
+"Shall a footer be displayed with useful buttons?": "Ali naj bo prikazana noga z uporabnimi gumbi?"
 },
 "nplurals=4; plural=(n % 100 == 1) ? 0 : ((n % 100 == 2) ? 1 : ((n % 100 == 3 || n % 100 == 4) ? 2 : 3));");

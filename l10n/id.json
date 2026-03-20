@@ -75,6 +75,9 @@
 "WARN": "MEMPERINGATKAN",
 "ERROR": "KESALAHAN",
 "FATAL": "FATAL",
-"delete all entries of this app": "hapus semua entri aplikasi ini"
+"delete all entries of this app": "hapus semua entri aplikasi ini",
+"Delete all entries of the app {name}": "Hapus semua entri aplikasi {name}",
+"Delete all entries of error level {name}": "Hapus semua entri tingkat kesalahan {name}",
+"Shall a footer be displayed with useful buttons?": "Apakah footer akan ditampilkan dengan tombol yang berguna?"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

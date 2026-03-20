@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "ПРЕДУПРЕДУВАЈТЕ",
 "ERROR": "ГРЕШКА",
 "FATAL": "ФАТАЛНИ",
-"delete all entries of this app": "избришете ги сите записи од оваа апликација"
+"delete all entries of this app": "избришете ги сите записи од оваа апликација",
+"Delete all entries of the app {name}": "Избришете ги сите записи од апликацијата {name}",
+"Delete all entries of error level {name}": "Избришете ги сите записи на ниво на грешка {name}",
+"Shall a footer be displayed with useful buttons?": "Дали ќе се прикаже футер со корисни копчиња?"
 },
 "nplurals=2; plural=(n==1 || n%10==1 ? 0 : 1);");

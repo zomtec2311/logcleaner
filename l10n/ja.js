@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "警告",
 "ERROR": "エラー",
 "FATAL": "致命的",
-"delete all entries of this app": "このアプリのすべてのエントリを削除します"
+"delete all entries of this app": "このアプリのすべてのエントリを削除します",
+"Delete all entries of the app {name}": "アプリ {name} のすべてのエントリを削除します",
+"Delete all entries of error level {name}": "エラーレベル {name} のエントリをすべて削除します",
+"Shall a footer be displayed with useful buttons?": "フッターに便利なボタンを表示しますか?"
 },
 "nplurals=1; plural=0;");

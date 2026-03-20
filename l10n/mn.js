@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "АНХААРУУЛГА",
 "ERROR": "АЛДАА",
 "FATAL": "ҮХЭЛТАЙ",
-"delete all entries of this app": "энэ програмын бүх оруулгыг устгана уу"
+"delete all entries of this app": "энэ програмын бүх оруулгыг устгана уу",
+"Delete all entries of the app {name}": "{name} програмын бүх оруулгыг устгана уу",
+"Delete all entries of error level {name}": "{name} алдааны түвшний бүх оруулгыг устгана уу",
+"Shall a footer be displayed with useful buttons?": "Хэрэгтэй товчлууруудтай хөл хэсгийг харуулах уу?"
 },
 "nplurals=2; plural=n != 1;");

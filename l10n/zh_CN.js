@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "警告",
 "ERROR": "错误",
 "FATAL": "致命的",
-"delete all entries of this app": "删除该应用程序的所有条目"
+"delete all entries of this app": "删除该应用程序的所有条目",
+"Delete all entries of the app {name}": "删除应用程序 {name} 的所有条目",
+"Delete all entries of error level {name}": "删除错误级别 {name} 的所有条目",
+"Shall a footer be displayed with useful buttons?": "页脚是否应该显示有用的按钮？"
 },
 "nplurals=1; plural=0;");

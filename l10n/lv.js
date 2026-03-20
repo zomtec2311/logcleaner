@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "BRĪDINĀT",
 "ERROR": "KĻŪDA",
 "FATAL": "FATAL",
-"delete all entries of this app": "dzēst visus šīs lietotnes ierakstus"
+"delete all entries of this app": "dzēst visus šīs lietotnes ierakstus",
+"Delete all entries of the app {name}": "Dzēsiet visus lietotnes {name} ierakstus",
+"Delete all entries of error level {name}": "Dzēsiet visus {name} kļūdas līmeņa ierakstus",
+"Shall a footer be displayed with useful buttons?": "Vai kājene tiks parādīta ar noderīgām pogām?"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");

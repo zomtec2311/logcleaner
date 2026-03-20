@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "WAARSCHUWEN",
 "ERROR": "FOUT",
 "FATAL": "FATAAL",
-"delete all entries of this app": "verwijder alle vermeldingen van deze app"
+"delete all entries of this app": "verwijder alle vermeldingen van deze app",
+"Delete all entries of the app {name}": "Verwijder alle vermeldingen van de app {name}",
+"Delete all entries of error level {name}": "Verwijder alle vermeldingen met foutniveau {name}",
+"Shall a footer be displayed with useful buttons?": "Zal er een voettekst worden weergegeven met handige knoppen?"
 },
 "nplurals=2; plural=(n != 1);");

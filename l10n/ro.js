@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "AVERTIZA",
 "ERROR": "EROARE",
 "FATAL": "FATAL",
-"delete all entries of this app": "ștergeți toate intrările din această aplicație"
+"delete all entries of this app": "ștergeți toate intrările din această aplicație",
+"Delete all entries of the app {name}": "Ștergeți toate intrările din aplicația {name}",
+"Delete all entries of error level {name}": "Ștergeți toate intrările de nivel de eroare {name}",
+"Shall a footer be displayed with useful buttons?": "Va fi afișat un subsol cu ​​butoane utile?"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 0 || n != 1 && n % 100 >= 1 && n % 100 <= 19) ? 1 : 2);");

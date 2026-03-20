@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "VARIÐ",
 "ERROR": "VILLA",
 "FATAL": "FATAL",
-"delete all entries of this app": "eyða öllum færslum þessa forrits"
+"delete all entries of this app": "eyða öllum færslum þessa forrits",
+"Delete all entries of the app {name}": "Eyða öllum færslum forritsins {name}",
+"Delete all entries of error level {name}": "Eyða öllum færslum á villustigi {name}",
+"Shall a footer be displayed with useful buttons?": "Verður fótur birtur með gagnlegum hnöppum?"
 },
 "nplurals=2; plural=n % 10 != 1 || n % 100 == 11;");

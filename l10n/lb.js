@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "OPGEPASST",
 "ERROR": "ERROR",
 "FATAL": "FATAL",
-"delete all entries of this app": "läschen all Entréen vun dëser App"
+"delete all entries of this app": "läschen all Entréen vun dëser App",
+"Delete all entries of the app {name}": "Läschen all Entréen vun der App {name}",
+"Delete all entries of error level {name}": "Läschen all Entréen vun Feeler Niveau {name}",
+"Shall a footer be displayed with useful buttons?": "Sollt e Fousszeil mat nëtzlechen Knäppercher ugewise ginn?"
 },
 "nplurals=2; plural=n != 1;");

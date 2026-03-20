@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "FIGYELMEZTET",
 "ERROR": "HIBA",
 "FATAL": "HALÁLOS",
-"delete all entries of this app": "törölje az alkalmazás összes bejegyzését"
+"delete all entries of this app": "törölje az alkalmazás összes bejegyzését",
+"Delete all entries of the app {name}": "Törölje az {name} alkalmazás összes bejegyzését",
+"Delete all entries of error level {name}": "Törölje az összes {name} hibaszintű bejegyzést",
+"Shall a footer be displayed with useful buttons?": "Megjelenik a lábléc hasznos gombokkal?"
 },
 "nplurals=2; plural=n != 1;");

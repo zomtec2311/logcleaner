@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "ԶԳՈՒՇԱՑՈՒՄ",
 "ERROR": "ՍԽԱԼ",
 "FATAL": "ՃԱԿԱՏԱՌԱԿԱՆ",
-"delete all entries of this app": "ջնջել այս հավելվածի բոլոր գրառումները"
+"delete all entries of this app": "ջնջել այս հավելվածի բոլոր գրառումները",
+"Delete all entries of the app {name}": "Ջնջել {name} հավելվածի բոլոր գրառումները",
+"Delete all entries of error level {name}": "Ջնջել {name} սխալի մակարդակի բոլոր գրառումները",
+"Shall a footer be displayed with useful buttons?": "Արդյո՞ք ստորագիր կցուցադրվի օգտակար կոճակներով:"
 },
 "nplurals=2; plural=n > 1;");

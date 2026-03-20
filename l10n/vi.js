@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "CẢNH BÁO",
 "ERROR": "LỖI",
 "FATAL": "GÂY TỬ VONG",
-"delete all entries of this app": "xóa tất cả các mục của ứng dụng này"
+"delete all entries of this app": "xóa tất cả các mục của ứng dụng này",
+"Delete all entries of the app {name}": "Xóa tất cả các mục của ứng dụng {name}",
+"Delete all entries of error level {name}": "Xóa tất cả các mục ở mức lỗi {name}",
+"Shall a footer be displayed with useful buttons?": "Chân trang có được hiển thị với các nút hữu ích không?"
 },
 "nplurals=1; plural=0;");

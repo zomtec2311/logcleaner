@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "OSTRZEGAĆ",
 "ERROR": "BŁĄD",
 "FATAL": "ŚMIERTELNY",
-"delete all entries of this app": "usuń wszystkie wpisy tej aplikacji"
+"delete all entries of this app": "usuń wszystkie wpisy tej aplikacji",
+"Delete all entries of the app {name}": "Usuń wszystkie wpisy aplikacji {name}",
+"Delete all entries of error level {name}": "Usuń wszystkie wpisy poziomu błędu {name}",
+"Shall a footer be displayed with useful buttons?": "Czy powinna wyświetlać się stopka z przydatnymi przyciskami?"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);");

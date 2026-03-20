@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "ПОПЕРЕДЖЕННЯ",
 "ERROR": "ПОМИЛКА",
 "FATAL": "ФАТАЛЬНИЙ",
-"delete all entries of this app": "видалити всі записи цієї програми"
+"delete all entries of this app": "видалити всі записи цієї програми",
+"Delete all entries of the app {name}": "Видалити всі записи програми {name}",
+"Delete all entries of error level {name}": "Видалити всі записи рівня помилки {name}",
+"Shall a footer be displayed with useful buttons?": "Чи має відображатися нижній колонтитул із корисними кнопками?"
 },
 "nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);");

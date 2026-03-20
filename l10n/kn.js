@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "ಎಚ್ಚರಿಕೆ",
 "ERROR": "ದೋಷ",
 "FATAL": "ಮಾರಕ",
-"delete all entries of this app": "ಈ ಅಪ್ಲಿಕೇಶನ್‌ನ ಎಲ್ಲಾ ನಮೂದುಗಳನ್ನು ಅಳಿಸಿ"
+"delete all entries of this app": "ಈ ಅಪ್ಲಿಕೇಶನ್‌ನ ಎಲ್ಲಾ ನಮೂದುಗಳನ್ನು ಅಳಿಸಿ",
+"Delete all entries of the app {name}": "{name} ಅಪ್ಲಿಕೇಶನ್‌ನ ಎಲ್ಲಾ ನಮೂದುಗಳನ್ನು ಅಳಿಸಿ",
+"Delete all entries of error level {name}": "ದೋಷ ಮಟ್ಟದ {name} ನ ಎಲ್ಲಾ ನಮೂದುಗಳನ್ನು ಅಳಿಸಿ",
+"Shall a footer be displayed with useful buttons?": "ಉಪಯುಕ್ತ ಬಟನ್‌ಗಳೊಂದಿಗೆ ಅಡಿಟಿಪ್ಪಣಿಯನ್ನು ಪ್ರದರ್ಶಿಸಬೇಕೆ?"
 },
 "nplurals=2; plural=n > 1;");

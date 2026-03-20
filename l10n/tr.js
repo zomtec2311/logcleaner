@@ -79,6 +79,9 @@ OC.L10N.register(
 "WARN": "UYARMAK",
 "ERROR": "HATA",
 "FATAL": "ÖLÜMCÜL",
-"delete all entries of this app": "bu uygulamanın tüm girişlerini sil"
+"delete all entries of this app": "bu uygulamanın tüm girişlerini sil",
+"Delete all entries of the app {name}": "{name} uygulamasının tüm girişlerini silin",
+"Delete all entries of error level {name}": "{name} hata düzeyine ait tüm girişleri silin",
+"Shall a footer be displayed with useful buttons?": "Kullanışlı düğmelerle birlikte bir altbilgi görüntülenecek mi?"
 },
 "nplurals=2; plural=n != 1;");
