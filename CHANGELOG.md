@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.3.6
+
+### Changed
+- settings for logging level: color of radio buttons
+
+### Fixed
+- Bug fixed: Blank lines in the log file caused HTTP error 500 ([#27](https://github.com/zomtec2311/logcleaner/issues/27))
+- Bug fixed: Deleting duplicates did not refresh output
+
 ## 1.3.5
 
 ### Changed
