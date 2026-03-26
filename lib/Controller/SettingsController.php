@@ -82,11 +82,34 @@ class SettingsController extends Controller {
 	}
 
 	public function setLL($who): DataResponse {
+		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
 		$who = intval($who);
 		if (!is_int($who) || $who < 0 || $who > 4) {
 				$this->logger->debug('Cannot set loglevel');
 			}
 			$this->config->setSystemValue('loglevel', $who);
+			if ($wtpara_logmessage===2) {
+				switch ($who) {
+					case 0:
+						$levelname = 'DEBUG';
+						break;
+					case 1:
+						$levelname = 'INFO';
+						break;
+					case 2:
+						$levelname = 'WARN';
+						break;
+					case 3:
+						$levelname = 'ERROR';
+						break;
+					case 4:
+						$levelname = 'FATAL';
+					break;
+					default:
+						//code block
+				}
+				$this->logger->info("LogCleaner: Set log level to $levelname($who). This log entry can be deleted without verification.");
+			}
 			return new DataResponse([
             ]);
 	}
@@ -544,7 +567,7 @@ class SettingsController extends Controller {
 			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
 				if (!file_exists($wtlogfile)) {
 					return new DataResponse([ 
-					 'detail' => $this->l->t('log file cannot be located'),
+					 'det$iiail' => $this->l->t('log file cannot be located'),
             ]);
 				}
 		}
@@ -598,7 +621,6 @@ class SettingsController extends Controller {
 			fclose($handle);
 		}
 		$activeFiltersCount = 0;
-
 		foreach ($stats as $level => $data) {
 			$stats[$level]['level'] = $level;
 			
@@ -631,6 +653,7 @@ class SettingsController extends Controller {
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);		
 		foreach($wwt as $val) {
 			$json = json_decode($val);
+			if (!isset($json->message)) $json->message = 'no message available';
 			if (!in_array($json->message, $key_array)) {
 				$key_array[$i] = $json->message;
 				$temp_array[$i] = $i;
@@ -751,6 +774,7 @@ class SettingsController extends Controller {
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		foreach($wwt as $val) {
 			$json = json_decode($val);
+			//if (!isset($json->message)) $json->message = 'no message available';
 			if (!in_array($json->message, $key_array)) {
 				$key_array[$i] = $json->message;
 				$temp_array[$i] = $i;
@@ -760,6 +784,7 @@ class SettingsController extends Controller {
 			}
       $i++;
     }
+    $ii = $ii;
 		$wttext = $this->l->n('Delete %n duplicate', 'Delete %n duplicates', $ii);
 		$wttextinfo = $this->l->t('This button will delete shown number of duplicates within the error log file');
 		return new DataResponse([
@@ -779,7 +804,8 @@ class SettingsController extends Controller {
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		foreach($wwt as $val) {			
 			$json = json_decode($val);
-			$logapps[$i] = $json->app;
+			if (isset($json->app))$logapps[$i] = $json->app;
+			else $logapps[$i] = 'no app in context';
 			$i++;
 		}
 		return new DataResponse([

@@ -32,6 +32,8 @@ use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
 use OCP\IL10N;
 use OCP\IConfig;
+use OCP\Server;
+use OCP\IRequest;
 
 class Helper
 {
@@ -61,6 +63,58 @@ class Helper
             $wtlog = "";
             return;
         }
+        // ---------------------------------------------- NEW
+        $inputFile  = $wtlog;
+        $outputFile = $wtlog.'.txt';
+
+       $format = $this->config->getSystemValue('logdateformat', \DateTimeInterface::ATOM);
+		$logTimeZone = $this->config->getSystemValue('logtimezone', 'UTC');
+		try {
+			$timezone = new \DateTimeZone($logTimeZone);
+		} catch (\Exception $e) {
+			$timezone = new \DateTimeZone('UTC');
+		}
+		$time = \DateTime::createFromFormat('U.u', number_format(microtime(true), 4, '.', ''));
+		if ($time === false) {
+			$time = new \DateTime('now', $timezone);
+		} else {
+			$time->setTimezone($timezone);
+		}
+		$request = Server::get(IRequest::class);
+		$reqId = $request->getId();
+		$remoteAddr = $request->getRemoteAddress();
+		$time = $time->format($format);
+		$url = ($request->getRequestUri() !== '') ? $request->getRequestUri() : '--';
+		$method = $request->getMethod();
+		if ($this->config->getSystemValue('installed', false)) {
+			$user = \OC_User::getUser() ?: '--';
+		} else {
+			$user = '--';
+		}
+		$userAgent = $request->getHeader('User-Agent');
+		if ($userAgent === '') {
+			$userAgent = '--';
+		}
+		$version = $this->config->getSystemValue('version', '');
+		$scriptName = $request->getScriptName();
+        
+        $replaceWith = '{"reqId": "'.$reqId.'","level": 2,"time": "'.$time.'","remoteAddr": "'.$remoteAddr.'","user": "'.$user.'","app": "logcleaner","method": "'.$method.'","url": "'.$url.'","scriptName": "'.$scriptName.'","message": "Empty line detected within your logfile. LogCleaner has fixed this error.  This log entry can be deleted without verification.","userAgent": "'.$userAgent.'","version": "'.$version.'"}';
+
+        $in  = fopen($inputFile, 'r');
+        $out = fopen($outputFile, 'w');
+
+        while (($line = fgets($in)) !== false) {
+            if (trim($line) === '') {
+                fwrite($out, $replaceWith . PHP_EOL);
+            } else {
+                fwrite($out, $line);
+            }
+        }
+
+        fclose($in);
+        fclose($out);
+        rename($outputFile, $inputFile);     
+        // ---------------------------------------------- NEW
         return file("$wtlog");
     }
 
@@ -83,7 +137,7 @@ class Helper
           $obja->user = '';
           $obja->app = '';
           $obja->method = '';
-          $obja->zeit = '';
+          //$obja->zeit = '';
           $obja->grund = $this->l->t('no log entries available');
           return $obja;
         }
@@ -92,12 +146,11 @@ class Helper
         $obja->all = $wtall;
         $wttimelog = strtotime($json->time) + 3600*$wt_offset;
         $obja->zeit = $this->l->t('Time') . " : " . $this->l->l('date', $wttimelog) . ' - ' . $this->l->l('time', $wttimelog)  . $trenn;
-        $obja->ip = $this->l->t('IP') . " :". $json->remoteAddr . $trenn;
-        $obja->user = $this->l->t('User') . " :".$json->user . $trenn;
-        $obja->app = $this->l->t('App') . " :".$json->app . $trenn;
-        $obja->method = $this->l->t('Method') . " :".$json->method . $trenn;
-        $obja->url = $this->l->t('URL') . " :".$json->url . $trenn;
-        $obja->grund = $this->l->t('Reason') . " :".substr($json->message, 0, $wt_characters);
+        $obja->ip = $this->l->t('IP') . " : ". $json->remoteAddr . $trenn;
+        $obja->user = $this->l->t('User') . " : ".$json->user . $trenn;
+        $obja->method = $this->l->t('Method') . " : ".$json->method . $trenn;
+        $obja->url = $this->l->t('URL') . " : ".$json->url . $trenn;
+        $obja->grund = $this->l->t('Reason') . " : ".substr($json->message, 0, $wt_characters);
         switch ($json->level) {
           case "0":
             $obja->error = "alert alert-level0";
@@ -138,13 +191,13 @@ class Helper
         $obja->all = $wtall;
         $wttimelog = strtotime($json->time) + 3600*$wt_offset;
         $obja->zeit = $this->l->t('Time') . " : " . $this->l->l('date', $wttimelog) . ' - ' . $this->l->l('time', $wttimelog)  . $trenn;
-        $obja->ip = $this->l->t('IP') . " :". $json->remoteAddr . $trenn;
-        $obja->user = $this->l->t('User') . " :".$json->user . $trenn;
-        $obja->app = $this->l->t('App') . " :".$json->app . $trenn;
+        $obja->ip = $this->l->t('IP') . " : ". $json->remoteAddr . $trenn;
+        $obja->user = $this->l->t('User') . " : ".$json->user . $trenn;
+        $obja->app = $this->l->t('App') . " : ".$json->app . $trenn;
         $obja->appraw = $json->app;
-        $obja->method = $this->l->t('Method') . " :".$json->method . $trenn;
-        $obja->url = $this->l->t('URL') . " :".$json->url . $trenn;
-        $obja->grund = $this->l->t('Reason') . " :".substr($json->message, 0, $wt_characters);
+        $obja->method = $this->l->t('Method') . " : ".$json->method . $trenn;
+        $obja->url = $this->l->t('URL') . " : ".$json->url . $trenn;
+        $obja->grund = $this->l->t('Reason') . " : ".substr($json->message, 0, $wt_characters);
         $obja->level = $json->level;
         switch ($json->level) {
           case "0":
