@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.7
+
+### Fixed
+- Fixed a bug in the settings: When settings were opened as accordion, the selected logging level was not recognizable
+- Fixed a bug in output filter off: error-causing app was not displayed
+
 ## 1.3.6
 
 ### Changed
