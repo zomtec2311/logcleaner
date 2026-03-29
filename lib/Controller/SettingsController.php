@@ -567,7 +567,7 @@ class SettingsController extends Controller {
 			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
 				if (!file_exists($wtlogfile)) {
 					return new DataResponse([ 
-					 'det$iiail' => $this->l->t('log file cannot be located'),
+					 'detail' => $this->l->t('log file cannot be located'),
             ]);
 				}
 		}
