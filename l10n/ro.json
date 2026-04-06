@@ -78,6 +78,9 @@
 "delete all entries of this app": "ștergeți toate intrările din această aplicație",
 "Delete all entries of the app {name}": "Ștergeți toate intrările din aplicația {name}",
 "Delete all entries of error level {name}": "Ștergeți toate intrările de nivel de eroare {name}",
-"Shall a footer be displayed with useful buttons?": "Va fi afișat un subsol cu ​​butoane utile?"
+"Shall a footer be displayed with useful buttons?": "Va fi afișat un subsol cu ​​butoane utile?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner va configura rotația fișierului jurnal de la o dimensiune de 100MB în fișierul de configurare config.php al Nextcloud?",
+"display minimized view?": "afișați vizualizarea minimizată?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner va scrie avertismente despre dimensiunea fișierului jurnal în fișierul jurnal?"
 },"pluralForm" :"nplurals=3; plural=(n == 1) ? 0 : ((n == 0 || n != 1 && n % 100 >= 1 && n % 100 <= 19) ? 1 : 2);"
 }

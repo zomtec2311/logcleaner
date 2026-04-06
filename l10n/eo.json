@@ -77,6 +77,9 @@
 "delete all entries of this app": "forigu ĉiujn enskribojn de ĉi tiu programo",
 "Delete all entries of the app {name}": "Forigu ĉiujn enskribojn de la aplikaĵo {name}",
 "Delete all entries of error level {name}": "Forigu ĉiujn enskribojn de erarnivelo {name}",
-"Shall a footer be displayed with useful buttons?": "Ĉu piedlinio estos montrata kun utilaj butonoj?"
+"Shall a footer be displayed with useful buttons?": "Ĉu piedlinio estos montrata kun utilaj butonoj?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Ĉu LogCleaner agordu la rotacion de la protokolo-dosiero de grandeco de 100MB en la agorda dosiero config.php de Nextcloud?",
+"display minimized view?": "montri minimumigitan vidon?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "Ĉu LogCleaner skribos avertojn pri la grandeco de la protokolo-dosiero al la protokolo-dosiero?"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

@@ -78,6 +78,9 @@
 "delete all entries of this app": "энэ програмын бүх оруулгыг устгана уу",
 "Delete all entries of the app {name}": "{name} програмын бүх оруулгыг устгана уу",
 "Delete all entries of error level {name}": "{name} алдааны түвшний бүх оруулгыг устгана уу",
-"Shall a footer be displayed with useful buttons?": "Хэрэгтэй товчлууруудтай хөл хэсгийг харуулах уу?"
+"Shall a footer be displayed with useful buttons?": "Хэрэгтэй товчлууруудтай хөл хэсгийг харуулах уу?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner нь Nextcloud-ийн config.php тохиргооны файлд 100МБ хэмжээтэй бүртгэлийн файлын эргэлтийг тохируулах уу?",
+"display minimized view?": "жижигрүүлсэн харагдацыг харуулах уу?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner нь бүртгэлийн файлд лог файлын хэмжээний талаар анхааруулга бичих үү?"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

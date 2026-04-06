@@ -78,6 +78,9 @@
 "delete all entries of this app": "ezabatu aplikazio honen sarrera guztiak",
 "Delete all entries of the app {name}": "Ezabatu {name} aplikazioaren sarrera guztiak",
 "Delete all entries of error level {name}": "Ezabatu errore-mailako {name} sarrera guztiak",
-"Shall a footer be displayed with useful buttons?": "Botoi erabilgarriak dituen orri-oin bat bistaratuko al da?"
+"Shall a footer be displayed with useful buttons?": "Botoi erabilgarriak dituen orri-oin bat bistaratuko al da?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner-ek konfiguratuko al du erregistro-fitxategiaren biraketa 100MB-ko tamainatik Nextcloud-en config.php konfigurazio fitxategian?",
+"display minimized view?": "ikuspegi minimizatua bistaratu?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner-ek erregistro-fitxategiaren tamainari buruzko abisuak idatziko al ditu erregistro-fitxategian?"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

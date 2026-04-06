@@ -82,6 +82,9 @@ OC.L10N.register(
 "delete all entries of this app": "លុបធាតុទាំងអស់នៃកម្មវិធីនេះ",
 "Delete all entries of the app {name}": "លុបធាតុទាំងអស់នៃកម្មវិធី {name}",
 "Delete all entries of error level {name}": "លុបធាតុទាំងអស់នៃកម្រិតកំហុស {name}",
-"Shall a footer be displayed with useful buttons?": "តើបាតកថាត្រូវបង្ហាញជាមួយប៊ូតុងមានប្រយោជន៍ទេ?"
+"Shall a footer be displayed with useful buttons?": "តើបាតកថាត្រូវបង្ហាញជាមួយប៊ូតុងមានប្រយោជន៍ទេ?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "តើ LogCleaner នឹងរៀបចំការបង្វិលឯកសារកំណត់ហេតុពីទំហំ 100MB នៅក្នុងឯកសារកំណត់រចនាសម្ព័ន្ធ config.php នៃ Nextcloud ដែរឬទេ?",
+"display minimized view?": "បង្ហាញទិដ្ឋភាពបង្រួមអប្បបរមា?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "តើ LogCleaner នឹងសរសេរការព្រមានអំពីទំហំនៃឯកសារកំណត់ហេតុទៅកាន់ឯកសារកំណត់ហេតុដែរឬទេ?"
 },
 "nplurals=1; plural=0;");

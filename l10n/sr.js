@@ -82,6 +82,9 @@ OC.L10N.register(
 "delete all entries of this app": "избришите све уносе ове апликације",
 "Delete all entries of the app {name}": "Избришите све уносе апликације КСИЗНАМЕ",
 "Delete all entries of error level {name}": "Избришите све уносе нивоа грешке КСИЗНАМЕ",
-"Shall a footer be displayed with useful buttons?": "Да ли ће подножје бити приказано са корисним дугмадима?"
+"Shall a footer be displayed with useful buttons?": "Да ли ће подножје бити приказано са корисним дугмадима?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Да ли ће ЛогЦлеанер подесити ротацију датотеке евиденције од величине од 100 МБ у конфигурационој датотеци цонфиг.пхп Нектцлоуда?",
+"display minimized view?": "приказати минимизирани приказ?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "Да ли ће ЛогЦлеанер писати упозорења о величини датотеке евиденције у датотеку евиденције?"
 },
 "nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);");

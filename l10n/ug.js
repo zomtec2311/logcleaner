@@ -82,6 +82,9 @@ OC.L10N.register(
 "delete all entries of this app": "بۇ ئەپنىڭ بارلىق تۈرلىرىنى ئۆچۈرۈڭ",
 "Delete all entries of the app {name}": "{name} دېتالىنىڭ بارلىق تۈرلىرىنى ئۆچۈرۈڭ",
 "Delete all entries of error level {name}": "خاتالىق دەرىجىسى {name} نىڭ بارلىق تۈرلىرىنى ئۆچۈرۈڭ",
-"Shall a footer be displayed with useful buttons?": "پايدىلىق كۇنۇپكىلار بىلەن بىر بەت ئاستى كۆرۈنەمدۇ؟"
+"Shall a footer be displayed with useful buttons?": "پايدىلىق كۇنۇپكىلار بىلەن بىر بەت ئاستى كۆرۈنەمدۇ؟",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner Nextcloud نىڭ سەپلىمە ھۆججىتى config.php دىكى 100MB چوڭلۇقتىكى خاتىرە ھۆججىتىنىڭ ئايلىنىشىنى تەڭشىەمدۇ؟",
+"display minimized view?": "كىچىكلىتىلگەن كۆرۈنۈشنى كۆرسىتىش؟",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner خاتىرە ھۆججىتىگە خاتىرە ھۆججىتىنىڭ چوڭ-كىچىكلىكى توغرىسىدا ئاگاھلاندۇرۇش يازالامدۇ؟"
 },
 "nplurals=2; plural=n != 1;");

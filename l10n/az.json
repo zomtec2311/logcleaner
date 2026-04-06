@@ -78,6 +78,9 @@
 "delete all entries of this app": "bu tətbiqin bütün qeydlərini silin",
 "Delete all entries of the app {name}": "{name} tətbiqinin bütün qeydlərini silin",
 "Delete all entries of error level {name}": "{name} xəta səviyyəsinin bütün qeydlərini silin",
-"Shall a footer be displayed with useful buttons?": "Faydalı düymələrlə altbilgi göstəriləcəkmi?"
+"Shall a footer be displayed with useful buttons?": "Faydalı düymələrlə altbilgi göstəriləcəkmi?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner, Nextcloud-un config.php konfiqurasiya faylında 100MB ölçüsündən log faylının fırlanmasını təyin edəcəkmi?",
+"display minimized view?": "kiçildilmiş görünüşü göstərin?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner log faylına log faylının ölçüsü haqqında xəbərdarlıq yazmalıdır?"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

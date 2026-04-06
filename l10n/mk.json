@@ -78,7 +78,10 @@
 "delete all entries of this app": "избришете ги сите записи од оваа апликација",
 "Delete all entries of the app {name}": "Избришете ги сите записи од апликацијата {name}",
 "Delete all entries of error level {name}": "Избришете ги сите записи на ниво на грешка {name}",
-"Shall a footer be displayed with useful buttons?": "Дали ќе се прикаже футер со корисни копчиња?"
+"Shall a footer be displayed with useful buttons?": "Дали ќе се прикаже футер со корисни копчиња?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Дали LogCleaner ќе ја постави ротацијата на датотеката за евиденција од 100 MB во конфигурациската датотека config.php на Nextcloud?",
+"display minimized view?": "прикаже минимизиран приказ?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "Дали LogCleaner ќе напише предупредувања за големината на датотеката за евиденција во датотеката за евиденција?"
     
 },"pluralForm" :"nplurals=2; plural=(n==1 || n%10==1 ? 0 : 1);"
 }

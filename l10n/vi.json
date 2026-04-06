@@ -78,6 +78,9 @@
 "delete all entries of this app": "xóa tất cả các mục của ứng dụng này",
 "Delete all entries of the app {name}": "Xóa tất cả các mục của ứng dụng {name}",
 "Delete all entries of error level {name}": "Xóa tất cả các mục ở mức lỗi {name}",
-"Shall a footer be displayed with useful buttons?": "Chân trang có được hiển thị với các nút hữu ích không?"
+"Shall a footer be displayed with useful buttons?": "Chân trang có được hiển thị với các nút hữu ích không?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner có nên thiết lập xoay tệp nhật ký từ kích thước 100 MB trong tệp cấu hình config.php của Nextcloud không?",
+"display minimized view?": "hiển thị chế độ xem thu nhỏ?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner có viết cảnh báo về kích thước của tệp nhật ký vào tệp nhật ký không?"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

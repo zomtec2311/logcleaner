@@ -78,6 +78,9 @@
 "delete all entries of this app": "ջնջել այս հավելվածի բոլոր գրառումները",
 "Delete all entries of the app {name}": "Ջնջել {name} հավելվածի բոլոր գրառումները",
 "Delete all entries of error level {name}": "Ջնջել {name} սխալի մակարդակի բոլոր գրառումները",
-"Shall a footer be displayed with useful buttons?": "Արդյո՞ք ստորագիր կցուցադրվի օգտակար կոճակներով:"
+"Shall a footer be displayed with useful buttons?": "Արդյո՞ք ստորագիր կցուցադրվի օգտակար կոճակներով:",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Արդյո՞ք LogCleaner-ը կարգավորի log ֆայլի պտտումը 100 ՄԲ չափից Nextcloud-ի կոնֆիգուրացիայի ֆայլում config.php:",
+"display minimized view?": "ցուցադրե՞լ նվազագույն տեսքը:",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "Արդյո՞ք LogCleaner-ը նախազգուշացումներ գրի log ֆայլի չափի մասին log ֆայլում:"
 },"pluralForm" :"nplurals=2; plural=n > 1;"
 }

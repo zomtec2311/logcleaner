@@ -78,6 +78,9 @@
 "delete all entries of this app": "dileu pob cofnod o app hwn",
 "Delete all entries of the app {name}": "Dileu holl gofnodion yr app {name}",
 "Delete all entries of error level {name}": "Dileu pob cofnod o lefel gwall {name}",
-"Shall a footer be displayed with useful buttons?": "A fydd troedyn yn cael ei arddangos gyda botymau defnyddiol?"
+"Shall a footer be displayed with useful buttons?": "A fydd troedyn yn cael ei arddangos gyda botymau defnyddiol?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "A fydd LogCleaner yn sefydlu cylchdro'r ffeil log o faint o 100MB yn y ffeil ffurfweddu config.php o Nextcloud?",
+"display minimized view?": "arddangos golwg cyn lleied â phosibl?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "A fydd LogCleaner yn ysgrifennu rhybuddion am faint y ffeil log i'r ffeil log?"
 },"pluralForm" :"nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n == 3) ? 3 : ((n == 6) ? 4 : 5))));"
 }

@@ -78,6 +78,9 @@
 "delete all entries of this app": "למחוק את כל הערכים של האפליקציה הזו",
 "Delete all entries of the app {name}": "מחק את כל הערכים של האפליקציה {name}",
 "Delete all entries of error level {name}": "מחק את כל הערכים ברמת השגיאה {name}",
-"Shall a footer be displayed with useful buttons?": "האם תוצג כותרת תחתונה עם כפתורים שימושיים?"
+"Shall a footer be displayed with useful buttons?": "האם תוצג כותרת תחתונה עם כפתורים שימושיים?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "האם LogCleaner יגדיר את הסיבוב של קובץ היומן מגודל של 100MB בקובץ התצורה config.php של Nextcloud?",
+"display minimized view?": "להציג תצוגה ממוזערת?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "האם LogCleaner יכתוב אזהרות לגבי גודל קובץ היומן לקובץ היומן?"
 },"pluralForm" :"nplurals=3; plural=(n == 1) ? 0 : ((n == 2) ? 1 : 2);"
 }

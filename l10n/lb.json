@@ -78,6 +78,9 @@
 "delete all entries of this app": "läschen all Entréen vun dëser App",
 "Delete all entries of the app {name}": "Läschen all Entréen vun der App {name}",
 "Delete all entries of error level {name}": "Läschen all Entréen vun Feeler Niveau {name}",
-"Shall a footer be displayed with useful buttons?": "Sollt e Fousszeil mat nëtzlechen Knäppercher ugewise ginn?"
+"Shall a footer be displayed with useful buttons?": "Sollt e Fousszeil mat nëtzlechen Knäppercher ugewise ginn?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Soll LogCleaner d'Rotatioun vun der Logdatei vun enger Gréisst vun 100MB an der Konfiguratiounsdatei config.php vun Nextcloud opsetzen?",
+"display minimized view?": "miniméiert Vue weisen?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "Soll LogCleaner Warnungen iwwer d'Gréisst vun der Logdatei an d'Logdatei schreiwen?"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

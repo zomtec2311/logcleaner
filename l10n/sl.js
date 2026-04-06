@@ -82,6 +82,9 @@ OC.L10N.register(
 "delete all entries of this app": "izbrišite vse vnose te aplikacije",
 "Delete all entries of the app {name}": "Izbrišite vse vnose aplikacije {name}",
 "Delete all entries of error level {name}": "Izbrišite vse vnose stopnje napake {name}",
-"Shall a footer be displayed with useful buttons?": "Ali naj bo prikazana noga z uporabnimi gumbi?"
+"Shall a footer be displayed with useful buttons?": "Ali naj bo prikazana noga z uporabnimi gumbi?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Ali naj LogCleaner nastavi rotacijo dnevniške datoteke od velikosti 100 MB v konfiguracijski datoteki config.php Nextclouda?",
+"display minimized view?": "prikazati minimiziran pogled?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "Ali naj LogCleaner zapiše opozorila o velikosti dnevniške datoteke v dnevniško datoteko?"
 },
 "nplurals=4; plural=(n % 100 == 1) ? 0 : ((n % 100 == 2) ? 1 : ((n % 100 == 3 || n % 100 == 4) ? 2 : 3));");

@@ -78,6 +78,9 @@
 "delete all entries of this app": "刪除該應用程式的所有條目",
 "Delete all entries of the app {name}": "刪除應用程式 {name} 的所有條目",
 "Delete all entries of error level {name}": "刪除錯誤等級 {name} 的所有條目",
-"Shall a footer be displayed with useful buttons?": "頁腳是否應該顯示有用的按鈕？"
+"Shall a footer be displayed with useful buttons?": "頁腳是否應該顯示有用的按鈕？",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner是否需要在Nextcloud的設定檔config.php中設定從100MB大小開始的日誌檔案輪替？",
+"display minimized view?": "顯示最小化視圖？",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner 是否應該將有關日誌檔案大小的警告寫入日誌檔案？"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

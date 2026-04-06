@@ -82,6 +82,9 @@ OC.L10N.register(
 "delete all entries of this app": "تمام ورودی های این برنامه را حذف کنید",
 "Delete all entries of the app {name}": "تمام ورودی های برنامه {name} را حذف کنید",
 "Delete all entries of error level {name}": "تمام ورودی های سطح خطا {name} را حذف کنید",
-"Shall a footer be displayed with useful buttons?": "آیا پاورقی با دکمه های مفید نمایش داده می شود؟"
+"Shall a footer be displayed with useful buttons?": "آیا پاورقی با دکمه های مفید نمایش داده می شود؟",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "آیا LogCleaner چرخش فایل log را از اندازه 100 مگابایت در فایل پیکربندی config.php Nextcloud تنظیم می کند؟",
+"display minimized view?": "نمایش حداقل نمای؟",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "آیا LogCleaner اخطارهایی در مورد اندازه فایل لاگ در فایل لاگ بنویسد؟"
 },
 "nplurals=2; plural=n > 1;");

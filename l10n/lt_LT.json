@@ -78,6 +78,9 @@
 "delete all entries of this app": "ištrinti visus šios programos įrašus",
 "Delete all entries of the app {name}": "Ištrinkite visus programos {name} įrašus",
 "Delete all entries of error level {name}": "Ištrinkite visus {name} klaidos lygio įrašus",
-"Shall a footer be displayed with useful buttons?": "Ar turi būti rodoma poraštė su naudingais mygtukais?"
+"Shall a footer be displayed with useful buttons?": "Ar turi būti rodoma poraštė su naudingais mygtukais?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Ar „Nextcloud“ konfigūracijos faile config.php „LogCleaner“ turi nustatyti žurnalo failo pasukimą nuo 100 MB?",
+"display minimized view?": "rodyti sumažintą vaizdą?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "Ar „LogCleaner“ turi įrašyti įspėjimus apie žurnalo failo dydį į žurnalo failą?"
 },"pluralForm" :"nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);"
 }

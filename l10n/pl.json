@@ -78,6 +78,9 @@
 "delete all entries of this app": "usuń wszystkie wpisy tej aplikacji",
 "Delete all entries of the app {name}": "Usuń wszystkie wpisy aplikacji {name}",
 "Delete all entries of error level {name}": "Usuń wszystkie wpisy poziomu błędu {name}",
-"Shall a footer be displayed with useful buttons?": "Czy powinna wyświetlać się stopka z przydatnymi przyciskami?"
+"Shall a footer be displayed with useful buttons?": "Czy powinna wyświetlać się stopka z przydatnymi przyciskami?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Czy LogCleaner powinien ustawić rotację pliku dziennika od rozmiaru 100MB w pliku konfiguracyjnym config.php Nextcloud?",
+"display minimized view?": "wyświetlić widok zminimalizowany?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "Czy LogCleaner powinien zapisywać ostrzeżenia dotyczące rozmiaru pliku dziennika w pliku dziennika?"
 },"pluralForm" :"nplurals=3; plural=(n == 1) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);"
 }

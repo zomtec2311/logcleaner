@@ -82,6 +82,9 @@ OC.L10N.register(
 "delete all entries of this app": "이 앱의 모든 항목을 삭제하세요",
 "Delete all entries of the app {name}": "{name} 앱의 모든 항목 삭제",
 "Delete all entries of error level {name}": "오류 수준 {name}의 모든 항목 삭제",
-"Shall a footer be displayed with useful buttons?": "유용한 버튼이 있는 바닥글을 표시해야 합니까?"
+"Shall a footer be displayed with useful buttons?": "유용한 버튼이 있는 바닥글을 표시해야 합니까?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner는 Nextcloud의 구성 파일 config.php에서 로그 파일 크기를 100MB부터 회전하도록 설정해야 합니까?",
+"display minimized view?": "최소화된 보기를 표시하시겠습니까?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner가 로그 파일 크기에 대한 경고를 로그 파일에 기록합니까?"
 },
 "nplurals=1; plural=0;");

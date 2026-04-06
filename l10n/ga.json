@@ -78,6 +78,9 @@
 "delete all entries of this app": "scrios gach iontráil den aip seo",
 "Delete all entries of the app {name}": "Scrios gach iontráil den aip {name}",
 "Delete all entries of error level {name}": "Scrios gach iontráil den leibhéal earráide {name}",
-"Shall a footer be displayed with useful buttons?": "An dtaispeánfar buntásc le cnaipí úsáideacha?"
+"Shall a footer be displayed with useful buttons?": "An dtaispeánfar buntásc le cnaipí úsáideacha?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "An gcuirfidh LogCleaner rothlú an chomhaid loga ar bun ó mhéid 100MB sa chomhad cumraíochta config.php de Nextcloud?",
+"display minimized view?": "taispeáint amharc íoslaghdaithe?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "An scríobhfaidh LogCleaner rabhaidh faoi mhéid an logchomhaid chuig an logchomhad?"
 },"pluralForm" :"nplurals=5; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n >= 3 && n <= 6) ? 2 : ((n >= 7 && n <= 10) ? 3 : 4)));"
 }

@@ -78,6 +78,9 @@
 "delete all entries of this app": "odstranit všechny položky této aplikace",
 "Delete all entries of the app {name}": "Smažte všechny položky aplikace {name}",
 "Delete all entries of error level {name}": "Smažte všechny položky chybové úrovně {name}",
-"Shall a footer be displayed with useful buttons?": "Bude zápatí zobrazeno s užitečnými tlačítky?"
+"Shall a footer be displayed with useful buttons?": "Bude zápatí zobrazeno s užitečnými tlačítky?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Nastaví LogCleaner rotaci log souboru od velikosti 100MB v konfiguračním souboru config.php Nextcloudu?",
+"display minimized view?": "zobrazit minimalizovaný pohled?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "Zapíše LogCleaner varování o velikosti souboru protokolu do souboru protokolu?"
 },"pluralForm" :"nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);"
 }

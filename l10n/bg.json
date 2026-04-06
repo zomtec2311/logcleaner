@@ -78,6 +78,9 @@
 "delete all entries of this app": "изтрийте всички записи на това приложение",
 "Delete all entries of the app {name}": "Изтрийте всички записи на приложението {name}",
 "Delete all entries of error level {name}": "Изтрийте всички записи от ниво на грешка {name}",
-"Shall a footer be displayed with useful buttons?": "Трябва ли да се показва долен колонтитул с полезни бутони?"
+"Shall a footer be displayed with useful buttons?": "Трябва ли да се показва долен колонтитул с полезни бутони?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Трябва ли LogCleaner да настрои ротацията на лог файла от размер 100MB в конфигурационния файл config.php на Nextcloud?",
+"display minimized view?": "показване на минимизиран изглед?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "Трябва ли LogCleaner да записва предупреждения за размера на лог файла в лог файла?"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

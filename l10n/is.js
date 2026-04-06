@@ -82,6 +82,9 @@ OC.L10N.register(
 "delete all entries of this app": "eyða öllum færslum þessa forrits",
 "Delete all entries of the app {name}": "Eyða öllum færslum forritsins {name}",
 "Delete all entries of error level {name}": "Eyða öllum færslum á villustigi {name}",
-"Shall a footer be displayed with useful buttons?": "Verður fótur birtur með gagnlegum hnöppum?"
+"Shall a footer be displayed with useful buttons?": "Verður fótur birtur með gagnlegum hnöppum?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Á LogCleaner að setja upp snúning logskrárinnar úr stærðinni 100MB í stillingarskránni config.php af Nextcloud?",
+"display minimized view?": "sýna lágmarkað útsýni?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "Á LogCleaner að skrifa viðvaranir um stærð annálaskrárinnar í logskrána?"
 },
 "nplurals=2; plural=n % 10 != 1 || n % 100 == 11;");

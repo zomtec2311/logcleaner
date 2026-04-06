@@ -77,6 +77,9 @@
 "delete all entries of this app": "Alle Einträge dieser App löschen",
 "Delete all entries of the app {name}": "Alle Einträge der App {name} löschen",
 "Delete all entries of error level {name}": "Alle Einträge der Fehlerstufe {name} löschen",
-"Shall a footer be displayed with useful buttons?": "Soll eine Fußzeile mit nützlichen Schaltflächen angezeigt werden?"
+"Shall a footer be displayed with useful buttons?": "Soll eine Fußzeile mit nützlichen Schaltflächen angezeigt werden?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Soll LogCleaner die Rotation der Logdatei ab einer Größe von 100MB in der Konfigurationsdatei config.php von Nextcloud einrichten?",
+"display minimized view?": "Miniaturansicht anzeigen?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "Soll LogCleaner Warnungen über die Größe der Protokolldatei in die Protokolldatei schreiben?"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

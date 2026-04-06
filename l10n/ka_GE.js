@@ -82,6 +82,9 @@ OC.L10N.register(
 "delete all entries of this app": "წაშალეთ ამ აპლიკაციის ყველა ჩანაწერი",
 "Delete all entries of the app {name}": "წაშალეთ {name} აპის ყველა ჩანაწერი",
 "Delete all entries of error level {name}": "წაშალეთ ყველა ჩანაწერი შეცდომის დონის {name}",
-"Shall a footer be displayed with useful buttons?": "უნდა იყოს ნაჩვენები ქვედა კოლონტიტული სასარგებლო ღილაკებით?"
+"Shall a footer be displayed with useful buttons?": "უნდა იყოს ნაჩვენები ქვედა კოლონტიტული სასარგებლო ღილაკებით?",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "უნდა დააყენოს LogCleaner log ფაილის როტაცია 100 მბ ზომიდან Nextcloud-ის კონფიგურაციის ფაილში config.php?",
+"display minimized view?": "აჩვენე შემცირებული ხედი?",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "უნდა ჩაწეროს თუ არა LogCleaner-მა გაფრთხილებები ჟურნალის ფაილის ზომის შესახებ ჟურნალის ფაილში?"
 },
 "nplurals=2; plural=n != 1;");

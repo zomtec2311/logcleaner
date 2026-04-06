@@ -78,6 +78,9 @@
 "delete all entries of this app": "حذف جميع إدخالات هذا التطبيق",
 "Delete all entries of the app {name}": "احذف جميع إدخالات التطبيق {name}",
 "Delete all entries of error level {name}": "احذف جميع إدخالات مستوى الخطأ {name}",
-"Shall a footer be displayed with useful buttons?": "هل يجب عرض التذييل بأزرار مفيدة؟"
+"Shall a footer be displayed with useful buttons?": "هل يجب عرض التذييل بأزرار مفيدة؟",
+"Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "هل يجب على LogCleaner إعداد تدوير ملف السجل بحجم 100 ميجابايت في ملف التكوين config.php الخاص بـ Nextcloud؟",
+"display minimized view?": "عرض عرض مصغر؟",
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "هل يجب على LogCleaner كتابة تحذيرات حول حجم ملف السجل إلى ملف السجل؟"
 },"pluralForm" :"nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n % 100 >= 3 && n % 100 <= 10) ? 3 : ((n % 100 >= 11 && n % 100 <= 99) ? 4 : 5))));"
 }
