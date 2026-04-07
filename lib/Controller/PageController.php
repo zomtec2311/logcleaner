@@ -39,7 +39,7 @@ use OCP\Util;
 
 class PageController extends Controller {
 
-    public function __construct(private IConfig $config, IRequest $request, private Helper $helper)
+    public function __construct(private IConfig $config, IRequest $request, private Helper $helper,)
     {
         $this->config = $config;
         $this->helper = $helper;
