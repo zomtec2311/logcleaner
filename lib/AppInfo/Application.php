@@ -35,23 +35,39 @@ use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCP\INavigationManager;
 use OCP\IURLGenerator;
 use OCP\IConfig;
-//use OCP\IAppConfig;
-//use OCP\IServerContainer;
 use Psr\Container\ContainerInterface;
 use OCA\LogCleaner\Dashboard\LogCleanerWidget;
 use OCA\LogCleaner\Dashboard\LogCleanerWidget2;
 
+use Psr\Log\LoggerInterface;
+
 class Application extends App implements IBootstrap {
 	public const APP_ID = 'logcleaner';
 	
-	//public function __construct(private IAppConfig $appConfig,) {
 	public function __construct() {
 		parent::__construct(self::APP_ID);
 	}
 
-	public function register(IRegistrationContext $context): void {
-		$context->registerDashboardWidget(LogCleanerWidget::class);
-		$context->registerDashboardWidget(LogCleanerWidget2::class);
+
+
+
+
+	public function register(\OCP\AppFramework\Bootstrap\IRegistrationContext $context): void {
+        $context->registerDashboardWidget(\OCA\LogCleaner\Dashboard\LogCleanerWidget::class);
+        $context->registerDashboardWidget(\OCA\LogCleaner\Dashboard\LogCleanerWidget2::class);
+
+        $context->registerService('LogService', function($c) {
+			$path = $this->config->getSystemValue('logfile');
+			if (!file_exists($path)) {
+				$path = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+			}
+			try {
+				$inst = new \OCA\LogCleaner\Log\LogService($path);
+				return $inst;
+			} catch (\Throwable $e) {
+				throw $e;
+			}
+		});
 	}
 
 	public function boot(IBootContext $context): void {
@@ -64,11 +80,9 @@ class Application extends App implements IBootstrap {
 
 	private function registerAppsManagementNavigation(IAppManager $appManager): void {
 		$container = $this->getContainer();
-		//$this->config = $config;
 		$config = $this->getContainer()->query(IConfig::class);
 		$appManager->enableAppForGroups(self::APP_ID, array('admin'), false);
 		$wtpara_menue = (int)$config->getAppValue(self::APP_ID, 'wtparam_menue');
-		//$wtpara_menue = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_menue', '1', false);
 		if (!isset($wtpara_menue)) {
 			$wtpara_menue = 1;
 			$this->config->setAppValue(self::APP_ID, 'wtparam_menue', 1);
