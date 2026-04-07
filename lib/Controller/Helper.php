@@ -63,7 +63,6 @@ class Helper
             $wtlog = "";
             return;
         }
-        // ---------------------------------------------- NEW
         $inputFile  = $wtlog;
         $outputFile = $wtlog.'.txt';
 
@@ -99,6 +98,7 @@ class Helper
 		$scriptName = $request->getScriptName();
         
         $replaceWith = '{"reqId": "'.$reqId.'","level": 2,"time": "'.$time.'","remoteAddr": "'.$remoteAddr.'","user": "'.$user.'","app": "logcleaner","method": "'.$method.'","url": "'.$url.'","scriptName": "'.$scriptName.'","message": "Empty line detected within your logfile. LogCleaner has fixed this error.  This log entry can be deleted without verification.","userAgent": "'.$userAgent.'","version": "'.$version.'"}';
+        $replaceWithThis = '{"reqId": "'.$reqId.'","level": 2,"time": "'.$time.'","remoteAddr": "'.$remoteAddr.'","user": "'.$user.'","app": "logcleaner","method": "'.$method.'","url": "'.$url.'","scriptName": "'.$scriptName.'","message": "Corrupted line detected within your logfile. LogCleaner has fixed this error.  This log entry can be deleted without verification.","userAgent": "'.$userAgent.'","version": "'.$version.'"}';
 
         $in  = fopen($inputFile, 'r');
         $out = fopen($outputFile, 'w');
@@ -106,15 +106,18 @@ class Helper
         while (($line = fgets($in)) !== false) {
             if (trim($line) === '') {
                 fwrite($out, $replaceWith . PHP_EOL);
-            } else {
+            }
+
+            elseif (!str_contains(trim($line), 'reqId')) {
+                fwrite($out, $replaceWithThis . PHP_EOL);
+              }
+            else {
                 fwrite($out, $line);
             }
         }
-
         fclose($in);
         fclose($out);
-        rename($outputFile, $inputFile);     
-        // ---------------------------------------------- NEW
+        rename($outputFile, $inputFile);
         return file("$wtlog");
     }
 
@@ -168,11 +171,11 @@ class Helper
             $obja->error = "alert alert-level4";
             break;
         }
-      $obja->id = $wtlogfilezeilen;
-      return $obja;       
-      }
+        $obja->id = $wtlogfilezeilen;
+        return $obja;
+    }
       
-      public function myfilteredoutputdata($wtlog,$wtall,$wtlogfilezeilen,$wt_characters,$wt_offset, $level) {
+    public function myfilteredoutputdata($wtlog,$wtall,$wtlogfilezeilen,$wt_characters,$wt_offset, $level) {
         $wtarr =[];
         $obja = new \stdClass();
         if ($wtall === 0) {
@@ -215,7 +218,7 @@ class Helper
             $obja->error = "alert alert-level4";
             break;
         }
-      $obja->id = $wtlogfilezeilen;
-      return $obja;
-      }      
+        $obja->id = $wtlogfilezeilen;
+        return $obja;
+    }
 }
