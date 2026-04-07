@@ -1,5 +1,23 @@
 # Changelog
 
+## 1.4.0
+
+### Changed
+- Log file handling methods changed for very large files
+- data collection accelerated despite new features
+- language files updated
+- widget code rebuilt for new methods
+
+### Added
+- Additional display of a minimized view
+- new controllers with new methods for capturing very large files
+- additional settings
+- possible warnings about certain log file size exceedances
+
+### Fixed
+- some code cleanup
+- fixed settings accordion style
+
 ## 1.3.7
 
 ### Fixed
