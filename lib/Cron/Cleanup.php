@@ -34,7 +34,7 @@ declare(strict_types=1);
 
 namespace OCA\LogCleaner\Cron;
 
-use OCA\LogCleaner\Controller\SettingsController;
+use OCA\LogCleaner\Controller\LogsController;
 use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\BackgroundJob\TimedJob;
 use Psr\Log\LoggerInterface;
@@ -42,10 +42,10 @@ use OCP\IAppConfig;
 
 class Cleanup extends TimedJob {
 	private LoggerInterface $logger;
-    private SettingsController $setcon;
+    private LogsController $setcon;
 
 	public function __construct(ITimeFactory $time,
-		LoggerInterface $logger, SettingsController $setcon, private IAppConfig $appConfig,) {
+		LoggerInterface $logger, LogsController $setcon, private IAppConfig $appConfig,) {
 		parent::__construct($time);
 		$this->logger = $logger;
         $this->setcon = $setcon;
@@ -59,8 +59,8 @@ class Cleanup extends TimedJob {
 	protected function run($argument): void {
 		$wtpara_cron_deldub = (int)$this->appconfig->getValueString('logcleaner', 'wtpara_cron_deldub', '9', false);
 		if($wtpara_cron_deldub ===2) {
-        $this->setcon->delDub();
-        $this->logger->debug('LogCleaner background job executed!');
+        $this->setcon->removeDub(0);
+        $this->logger->info('LogCleaner background job executed!');
 		}
 	}
 }

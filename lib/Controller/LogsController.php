@@ -1,0 +1,537 @@
+<?php
+/**
+ *
+ * LogCleaner APP (Nextcloud)
+ *
+ * @author Wolfgang Tödt <wtoedt@gmail.com>
+ *
+ * @copyright Copyright (c) 2025 Wolfgang Tödt
+ *
+ * @license GNU AGPL version 3 or any later version
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+declare(strict_types=1);
+
+namespace OCA\LogCleaner\Controller;
+
+use OCP\AppFramework\Http\DataResponse;
+use OCP\AppFramework\Http\JSONResponse;
+use OCP\AppFramework\Controller;
+use OCP\IRequest;
+use OCA\LogCleaner\Log\LogService;
+use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
+use Psr\Log\LoggerInterface;
+use OCP\IConfig;
+use OCP\IL10N;
+
+class LogsController extends Controller {
+    private LogService $logService;
+
+    public function __construct(string $AppName, IRequest $request, LogService $logService, private readonly LoggerInterface $logger, IConfig $config, private Helper $helper, IL10N $l,) {
+        parent::__construct($AppName, $request);
+        $this->logService = $logService;
+        $this->config = $config;
+        $this->helper = $helper;
+        $this->l = $l;
+    }
+
+    #[NoCSRFRequired]
+    public function list(): JSONResponse {
+        $level = $this->request->getParam('level', null);
+        $app = $this->request->getParam('app', null);
+        $message = $this->request->getParam('message', null);
+        $limit = (int) $this->request->getParam('limit', 5);
+        $offset = (int) $this->request->getParam('offset', 2);
+        $wtpara_logmessage_sizewarnings = (int)$this->helper->getAppValue('wtpara_logmessage_sizewarnings');
+
+        $filters = [];
+        if ($level !== null) $filters['level'] = (int)$level;
+        if ($app !== null) $filters['app'] = $app;
+        if ($message !== null) $filters['message'] = $message;
+
+        $snapshot = $this->logService->getSnapshot($filters, $limit, $offset, ['time','level', 'remoteAddr', 'message', 'user', 'app', 'url', 'method']);
+
+        $timestamp = time();
+        $datum = date("d. M Y - H:i:s", $timestamp);
+        $filePath = $this->config->getSystemValue('logfile');
+		if (!file_exists($filePath)) {
+			$filePath = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		}
+
+        $dummy = [];
+
+        $aksize = filesize($filePath);
+        if ($aksize < 52428800) {
+            $this->helper->setAppValue('wtparam_logsize_95', 0);
+            $this->helper->setAppValue('wtparam_logsize_90', 0);
+            $this->helper->setAppValue('wtparam_logsize_85', 0);
+            $this->helper->setAppValue('wtparam_logsize_80', 0);
+            $this->helper->setAppValue('wtparam_logsize_75', 0);
+            $this->helper->setAppValue('wtparam_logsize_50', 0);
+        }
+
+        if ($aksize > 104857600) {
+            $line = '{"id": 1,"formattedtimewithoffset": "'.$datum.'","time": "","level": 5,"remoteAddr": "","message": "<span style=\"font-size: 1.5em;\"><br><br><br><h1 style=\"font-size: 1.1em;\">Oops,</h1> the size of your log file is over <strong>100 MB.</strong><br>This can cause problems with the performance of your system if you want to work with LogCleaner.<br>You should urgently check why your log file is not rotating.<br>In order for LogCleaner to open properly, you should delete, empty or rename the file <strong>'.$filePath.'</strong></span>.","user": "","app": "", "url": "","method": "" }';
+            $trim = rtrim($line, "\r\n");
+            $parsed = json_decode($trim, true);
+            $dummy[0] = $parsed;
+            $snapshot[1] = $dummy;
+        }
+        if (($aksize > 99614720) && ($aksize < (99614720 + 1048576))) {
+            $para = (int)$this->helper->getAppValue('wtparam_logsize_95');
+            if (!isset($para) || ($para === 0)){
+                $this->helper->setAppValue('wtparam_logsize_95', 1);
+                if ($wtpara_logmessage_sizewarnings === 2) $this->logger->error("LogCleaner: Oops, the size of your log file is over ".$this->wtfilesize(99614720, 0).". This can cause problems with the performance of your system if you want to work with LogCleaner. You should urgently check why your log file is not rotating. In order for LogCleaner to open properly, you should delete, empty or rename the file $filePath.");
+            }
+
+        }
+        if (($aksize > 94371840) && ($aksize < (94371840 + 1048576))) {
+            $para = (int)$this->helper->getAppValue('wtparam_logsize_90');
+            $this->helper->setAppValue('wtparam_logsize_95', 0);
+            if (!isset($para) || ($para === 0)){
+                $this->helper->setAppValue('wtparam_logsize_90', 1);
+                if ($wtpara_logmessage_sizewarnings === 2) $this->logger->error("LogCleaner: Oops, the size of your log file is over ".$this->wtfilesize(94371840, 0).". This can cause problems with the performance of your system if you want to work with LogCleaner. You should urgently check why your log file is not rotating. In order for LogCleaner to open properly, you should delete, empty or rename the file $filePath.");
+            }
+
+        }
+        if (($aksize > 89128960) && ($aksize < (89128960 + 1048576))) {
+            $para = (int)$this->helper->getAppValue('wtparam_logsize_85');
+            $this->helper->setAppValue('wtparam_logsize_95', 0);
+            $this->helper->setAppValue('wtparam_logsize_90', 0);
+            if (!isset($para) || ($para === 0)){
+                $this->helper->setAppValue('wtparam_logsize_85', 1);
+                if ($wtpara_logmessage_sizewarnings === 2) $this->logger->error("LogCleaner: Oops, the size of your log file is over ".$this->wtfilesize(89128960, 0).". This can cause problems with the performance of your system if you want to work with LogCleaner. You should urgently check your log file. In order for LogCleaner to open properly, you should delete, empty or rename the file $filePath.");
+            }
+
+        }
+        if (($aksize > 83886080) && ($aksize < (83886080 + 1048576))) {
+            $para = (int)$this->helper->getAppValue('wtparam_logsize_80');
+            $this->helper->setAppValue('wtparam_logsize_95', 0);
+            $this->helper->setAppValue('wtparam_logsize_90', 0);
+            $this->helper->setAppValue('wtparam_logsize_85', 0);
+            if (!isset($para) || ($para === 0)){
+                $this->helper->setAppValue('wtparam_logsize_80', 1);
+                if ($wtpara_logmessage_sizewarnings === 2) $this->logger->error("LogCleaner: Oops, the size of your log file is over ".$this->wtfilesize(83886080, 0).". You should urgently check your log file. In order for LogCleaner to open properly, you should delete, empty or rename the file $filePath.");
+            }
+
+        }
+        if (($aksize > 78643200) && ($aksize < (78643200 + 1048576))) {
+            $para = (int)$this->helper->getAppValue('wtparam_logsize_75');
+            $this->helper->setAppValue('wtparam_logsize_95', 0);
+            $this->helper->setAppValue('wtparam_logsize_90', 0);
+            $this->helper->setAppValue('wtparam_logsize_85', 0);
+            $this->helper->setAppValue('wtparam_logsize_80', 0);
+            if (!isset($para) || ($para === 0)){
+                $this->helper->setAppValue('wtparam_logsize_75', 1);
+                if ($wtpara_logmessage_sizewarnings === 2) $this->logger->error("LogCleaner: Oops, the size of your log file is over ".$this->wtfilesize(78643200, 0).". You should check your log file in order for LogCleaner to open properly.");
+            }
+        }
+        if (($aksize > 52428800) && ($aksize < (52428800 + 1048576))) {
+            $para = (int)$this->helper->getAppValue('wtparam_logsize_50');
+            $this->helper->setAppValue('wtparam_logsize_95', 0);
+            $this->helper->setAppValue('wtparam_logsize_90', 0);
+            $this->helper->setAppValue('wtparam_logsize_85', 0);
+            $this->helper->setAppValue('wtparam_logsize_80', 0);
+            $this->helper->setAppValue('wtparam_logsize_75', 0);
+            if (!isset($para) || ($para === 0)){
+                $this->helper->setAppValue('wtparam_logsize_50', 1);
+                if ($wtpara_logmessage_sizewarnings === 2) $this->logger->info("LogCleaner: Oops, the size of your log file is over ".$this->wtfilesize(52428800, 0).". You should check your log file and cleanup.");
+            }
+        }
+        return new JSONResponse(['ok' => true, 'data' => $snapshot[1], 'total' => $snapshot[0]]);
+    }
+
+    #[NoCSRFRequired]
+    public function listlevel(): JSONResponse {
+        $level = $this->request->getParam('level', null);
+        $app = $this->request->getParam('app', null);
+        $message = $this->request->getParam('message', null);
+        $limit = (int) $this->request->getParam('limit', 5);
+        $offset = (int) $this->request->getParam('offset', 2);
+        $myok = true;
+        $filters = [];
+        if ($level !== null) $filters['level'] = (int)$level;
+        if ($app !== null) $filters['app'] = $app;
+        if ($message !== null) $filters['message'] = $message;
+
+        $snapshot = $this->logService->getSnapshot($filters, $limit, $offset, ['time','level', 'remoteAddr', 'message', 'user', 'app', 'url', 'method']);
+        if (empty($snapshot[0])) {
+            $myok = false;
+            $snapshot[0] = 0;
+            $snapshot[1] = 0;
+        }
+        return new JSONResponse(['ok' => $myok, 'data' => $snapshot[1], 'total' => $snapshot[0], 'all' => $this->logService->count()]);
+    }
+
+    #[NoCSRFRequired]
+    public function listapp(): JSONResponse {
+        $level = $this->request->getParam('level', null);
+        $app = $this->request->getParam('app', null);
+        $message = $this->request->getParam('message', null);
+        $limit = (int) $this->request->getParam('limit', 5);
+        $offset = (int) $this->request->getParam('offset', 2);
+        $myok = true;
+        $filters = [];
+        if ($level !== null) $filters['level'] = (int)$level;
+        if ($app !== null) $filters['app'] = $app;
+        if ($message !== null) $filters['message'] = $message;
+
+        $snapshot = $this->logService->getSnapshot($filters, $limit, $offset, ['time','level', 'remoteAddr', 'message', 'user', 'app', 'url', 'method']);
+        if (empty($snapshot[0])) {
+            $myok = false;
+            $snapshot[0] = 0;
+            $snapshot[1] = 0;
+        }
+        return new JSONResponse(['ok' => $myok, 'data' => $snapshot[1], 'total' => $snapshot[0], 'all' => $this->logService->count()]);
+    }
+
+    public function removeDub(?int $anzahl = 0): DataResponse {
+        $inputFile = $this->config->getSystemValue('logfile');
+        if (!file_exists($inputFile)) {
+			$inputFile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		}
+		$outputLog  = $inputFile.'.cleaned.log';
+        if ($anzahl === 0) {
+            $outputJson = $inputFile.'analysis.json';
+            $json = file_get_contents($outputJson);
+            $array = json_decode($json, true);
+            $anzahl = $array['summary']['removed_duplicates'];
+        }
+		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
+		$i = 0;
+		$ii = 0;
+		$key_array = array();
+		$temp_array = array();
+		$new_array = array();
+		$uu = 0;
+
+		$filesizeoriginal = filesize($inputFile);
+        $filesizecleaned = filesize($outputLog);
+
+        if (file_exists($outputLog)) {
+            unlink($inputFile);
+            rename($outputLog, $inputFile);
+        }
+
+        $filesizediff = $this->wtfilesize($filesizeoriginal - $filesizecleaned,2);
+
+        if ($wtpara_logmessage===2) {
+            if ($ii===1) $this->logger->info(sprintf('LogCleaner: %d duplicate was deleted and %s of disk space were cleared. This log entry can be deleted without verification.', $anzahl, $filesizediff));
+            else $this->logger->info(sprintf('LogCleaner: %d duplicates were deleted and %s of disk space were cleared. This log entry can be deleted without verification.', $anzahl, $filesizediff));
+        }
+        return new DataResponse([
+            'cntdub' => $anzahl,
+            'sizediff' => $filesizediff,
+        ]);
+	}
+
+	public function analyse(): DataResponse {
+        $wtpara_logrotate = (int)$this->helper->getAppValue('wtpara_logrotate');
+        if ($wtpara_logrotate === 2) {
+            if (!$this->config->getSystemValue('log_rotate_size')) { $this->config->setSystemValue('log_rotate_size', 104857600); }
+            if (!$this->config->getSystemValue('log_max_history')) { $this->config->setSystemValue('log_max_history', 5); }
+        }
+
+        try {
+            $inputFile = $this->config->getSystemValue('logfile');
+            if (!file_exists($inputFile)) {
+                $inputFile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+            }
+            $outputLog  = $inputFile.'.cleaned.log';
+            $outputJson = $inputFile.'analysis.json';
+
+            $in = fopen($inputFile, 'r');
+            $out = fopen($outputLog, 'w');
+
+            if (!$in || !$out) {
+                throw new \Exception("LogCleaner error: log file cannot be analized");
+            }
+
+            $stats = [
+                'levels' => [
+                    0 => ['count' => 0, 'lines' => [], 'label' => $this->l->t('DEBUG'), 'color' => '#DFF0D8', 'txtcolor' => '#3C763D', 'level' => 0],
+                    1 => ['count' => 0, 'lines' => [], 'label' => $this->l->t('INFO'),  'color' => '#D9EDF7', 'txtcolor' => '#31708F', 'level' => 1],
+                    2 => ['count' => 0, 'lines' => [], 'label' => $this->l->t('WARN'),  'color' => '#fcf8e3', 'txtcolor' => '#8A6d3B', 'level' => 2],
+                    3 => ['count' => 0, 'lines' => [], 'label' => $this->l->t('ERROR'), 'color' => '#f2dede', 'txtcolor' => '#A94442', 'level' => 3],
+                    4 => ['count' => 0, 'lines' => [], 'label' => $this->l->t('FATAL'), 'color' => '#f9aaf6', 'txtcolor' => '#870482', 'level' => 4]
+                ],
+                'apps' => [],
+                'messages' => [],
+
+            ];
+
+            $seenHashes = [];
+            $appseenHashes = [];
+            $currentLine = 0;
+            $keptLineCount = 0;
+            $wtarr = [];
+            $linelength = [];
+
+            while (($line = fgets($in)) !== false) {
+                $currentLine++;
+                $data = json_decode($line, true);
+
+                if (!$data) {
+                    fwrite($out, $line);
+                    continue;
+                }
+                switch ($data['level']) {
+                    case 0:
+                        $levelcolor = '#DFF0D8';
+                        break;
+                    case 1:
+                        $levelcolor = '#D9EDF7';
+                        break;
+                    case 2:
+                        $levelcolor = '#fcf8e3';
+                        break;
+                    case 3:
+                        $levelcolor = '#f2dede';
+                        break;
+                    case 4:
+                        $levelcolor = '#f9aaf6';
+                    break;
+                    default:
+                }
+                $wtarr[] = $levelcolor;
+                $linelength[] = $currentLine .  ' - ' . $data['level'] . ' - ' . strlen($line);
+
+                $msg = $data['message'] ?? 'No Message';
+                $msgHash = md5($msg);
+
+                $lvl = $data['level'] ?? -1;
+                if (isset($stats['levels'][$lvl])) {
+                    $stats['levels'][$lvl]['count']++;
+                    $stats['levels'][$lvl]['lines'][] = $currentLine;
+                }
+                if (!isset($appseenHashes[$data['app']])) {
+                   if (!isset($stats['apps'][$data['app']]['count'])) { $stats['apps'][$data['app']]['count'] = 1;}
+                   else { $stats['apps'][$data['app']]['count']++;}
+                    $stats['apps'][$data['app']]['lines'][] = $currentLine;
+                }
+                if (!isset($seenHashes[$msgHash])) {
+                    fwrite($out, $line);
+                    $keptLineCount++;
+                    $seenHashes[$msgHash] = true;
+                    $stats['messages'][$msg] = [
+                        'count' => 1,
+                        'first_seen_original_line' => $currentLine,
+                        'new_line' => $keptLineCount
+                    ];
+                } else {
+                    $stats['messages'][$msg]['count']++;
+                }
+            }
+
+            fclose($in);
+            fclose($out);
+
+            uasort($stats['messages'], function($a, $b) {
+                return $b['count'] <=> $a['count'];
+            });
+
+            $vueData = [
+                'levels' => $stats['levels'],
+                'apps' => $stats['apps'],
+                'top_messages' => array_slice($stats['messages'], 0, 100, true),
+                'summary' => [
+                    'original_lines' => $currentLine,
+                    'unique_lines' => $keptLineCount,
+                    'removed_duplicates' => $currentLine - $keptLineCount
+                ]
+            ];
+
+            file_put_contents($outputJson, json_encode($vueData, JSON_PRETTY_PRINT));
+
+            $ii = $vueData['summary']['removed_duplicates'];
+            $wttext = $this->l->n('Delete %n duplicate', 'Delete %n duplicates', $ii);
+            $wttextinfo = $this->l->t('This button will delete shown number of duplicates within the error log file');
+
+            $wtarr = array_reverse($wtarr);
+            $linelength = array_reverse($linelength);
+            return new DataResponse([
+                'status' => 'success',
+                'data' => $vueData,
+                'original_size' => $this->show_filesize($inputFile, 2),
+                'new_size' => $this->show_filesize($outputLog, 2),
+                'cntdub' => $ii,
+				'wttext' => $wttext,
+				'wttextinfo' => $wttextinfo,
+                'showFilters' => (($stats['levels'][0]['count'] + $stats['levels'][1]['count'] + $stats['levels'][2]['count'] + $stats['levels'][3]['count'] + $stats['levels'][4]['count']) > 0),
+                'wtarr' => $wtarr,
+                'linelength' => $linelength,
+                ]);
+        } catch (Exception $e) {
+            http_response_code(400);
+            return new DataResponse([
+                'status' => 'error',
+            ]);
+        }
+    }
+
+    public function dellines(?int $level, ?string $dellines): DataResponse {
+        $linesToDelete = explode(",",$dellines);
+        $file = $this->logService->getlogpath();
+        $filesizebefore = filesize($file);
+        $reversedLines = array_reverse($linesToDelete);
+        $anzahl = count($reversedLines);
+        $deleted = $anzahl;
+        $rows = $linesToDelete;
+        switch ($level) {
+            case 0:
+                $levelname = 'DEBUG';
+                break;
+            case 1:
+                $levelname = 'INFO';
+                break;
+            case 2:
+                $levelname = 'WARN';
+                break;
+            case 3:
+                $levelname = 'ERROR';
+                break;
+            case 4:
+                $levelname = 'FATAL';
+            break;
+            default:
+        }
+        $rowsStr = implode(', ', $rows);
+        $deleteCommands = [];
+        foreach ($reversedLines as $line) {
+            $deleteCommands[] = "{$line}d";
+        }
+        $commandString = implode(';', $deleteCommands);
+        $finalCommand = "sed -i " . escapeshellarg($commandString) . " " . escapeshellarg($file);
+        exec($finalCommand);
+        $filesizeafter = filesize($file);
+        $filesizediff = $this->wtfilesize(($filesizebefore - $filesizeafter),2);
+        $output = ($deleted > 1) ? "LogCleaner: For level $levelname $deleted lines have been deleted. $filesizediff of storage space cleared in the file $file" : "LogCleaner: For level $levelname $deleted line has been deleted. $filesizediff of storage space cleared in the file $file";
+        $this->logger->info($output);
+        return new DataResponse([
+            'status' => 'success'
+        ]);
+    }
+
+    public function dellinesapp(?string $app, ?string $dellines): DataResponse {
+        $linesToDelete = explode(",",$dellines);
+        $file = $this->logService->getlogpath();
+        $filesizebefore = filesize($file);
+        $reversedLines = array_reverse($linesToDelete);
+        $anzahl = count($reversedLines);
+        $deleted = $anzahl;
+        $rows = $linesToDelete;
+        $rowsStr = implode(', ', $rows);
+        $deleteCommands = [];
+        foreach ($reversedLines as $line) {
+            $deleteCommands[] = "{$line}d";
+        }
+        $commandString = implode(';', $deleteCommands);
+        $finalCommand = "sed -i " . escapeshellarg($commandString) . " " . escapeshellarg($file);
+        exec($finalCommand);
+        $filesizeafter = filesize($file);
+        $filesizediff = $this->wtfilesize(($filesizebefore - $filesizeafter),2);
+        $output = ($deleted > 1) ? "LogCleaner: For the app '$app' $deleted lines have been deleted. $filesizediff of storage space cleared in the file $file" : "LogCleaner: For the app '$app' $deleted line has been deleted. $filesizediff of storage space cleared in the file $file";
+        $this->logger->info($output);
+        return new DataResponse([
+            'status' => 'success',
+        ]);
+    }
+
+    public function removelog(string $logid): DataResponse {
+		if ($logid === null) {
+			$logid = null;
+		}
+		$logid = intval($logid) + 1;
+        $file = $this->logService->getlogpath();
+        $deleteCommand = "{$logid} d";
+        $finalCommand = "sed -i " . escapeshellarg($deleteCommand) . " " . escapeshellarg($file);
+        exec($finalCommand);
+        return new DataResponse([
+            'status' => 'success',
+        ]);
+	}
+
+    public function showdetail(string $detail): DataResponse {
+        $detail = (int) $detail + 1;
+        $file = $this->logService->getlogpath();
+        $finalCommand = "sed -n '$detail p' $file";
+        $out = exec($finalCommand);
+        return new DataResponse([
+					 'detail' => $out,
+            ]);
+
+		if ($detail === null) {
+			$detail = null;
+		}
+		$wt_out = "";
+		$array = [];
+		$wtarr =[];
+		$wtlogfile = $this->config->getSystemValue('logfile');
+		if (!file_exists($wtlogfile)) {
+			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+				if (!file_exists($wtlogfile)) {
+					return new DataResponse([
+					 'detail' => $this->l->t('log file cannot be located'),
+            ]);
+				}
+		}
+		$wwt = $this->helper->wtlogtoarr($wtlogfile);
+		if (isset($detail)) {
+			$wtdetail = $wwt[$detail];
+			return new DataResponse([
+					 'detail' => $wtdetail,
+            ]);
+		}
+		return new DataResponse([
+					 'detail' => '',
+            ]);
+	}
+
+	public function getAll(): DataResponse {
+		$wtlogfile = $this->config->getSystemValue('logfile');
+		if (!file_exists($wtlogfile)) {
+			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		}
+
+        if (file_exists($wtlogfile)) {
+            $wtlogfilezeilen = intval(exec("wc -l " . $wtlogfile));
+        } else {
+            $wtlogfilezeilen = 0;
+        }
+		$wttext = $this->l->n('%n log entry', '%n log entries', $wtlogfilezeilen);
+		return new DataResponse([
+                'wtlogfilezeilen' => $wtlogfilezeilen,
+				'wttext' => $wttext,
+            ]);
+	}
+
+    public function show_filesize($filename, $decimalplaces = 0) {
+	  $size = filesize($filename);
+	  $sizes = array('B', 'kB', 'MB', 'GB', 'TB');
+	  for ($i=0; $size > 1024 && $i < count($sizes) - 1; $i++) {
+	     $size /= 1024;
+	  }
+	  return round($size, $decimalplaces).' '.$sizes[$i];
+	}
+
+	public function wtfilesize($size, $decimalplaces = 0) {
+	  $sizes = array('B', 'kB', 'MB', 'GB', 'TB');
+	  for ($i=0; $size > 1024 && $i < count($sizes) - 1; $i++) {
+	     $size /= 1024;
+	  }
+	  return round($size, $decimalplaces).' '.$sizes[$i];
+	}
+}
