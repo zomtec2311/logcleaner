@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.4.1
+
+### Fixed
+- bug fixed minimized view on small size devices
+- bug fixed page changed
+- bug fixed typo in settings 'warning' was displayed as 'arning'
+
+### Changed
+- position of the minimized view
+
+### Added
+- corrupt line detection
+
 ## 1.4.0
 
 ### Changed
