@@ -81,6 +81,7 @@ class SettingsController extends Controller {
 			'wtpara_miniview' => (empty($this->config->getAppValue('logcleaner', 'wtpara_miniview')))?$this->setSettingZeilen('wtpara_miniview',1):$this->config->getAppValue('logcleaner', 'wtpara_miniview'),
 			'wtpara_logmessage_sizewarnings' => (empty($this->config->getAppValue('logcleaner', 'wtpara_logmessage_sizewarnings')))?$this->setSettingZeilen('wtpara_logmessage_sizewarnings',2):$this->config->getAppValue('logcleaner', 'wtpara_logmessage_sizewarnings'),
 			'wtpara_logrotate' => (empty($this->config->getAppValue('logcleaner', 'wtpara_logrotate')))?$this->setSettingZeilen('wtpara_logrotate',1):$this->config->getAppValue('logcleaner', 'wtpara_logrotate'),
+			'wtpara_position_mini' => (empty($this->config->getAppValue('logcleaner', 'wtpara_position_mini')))?$this->setSettingZeilen('wtpara_position_mini',1):$this->config->getAppValue('logcleaner', 'wtpara_position_mini'),
             ]);
 	}
 
