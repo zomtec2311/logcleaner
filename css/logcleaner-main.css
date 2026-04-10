@@ -1,8 +1,5 @@
 .highlighted {
-  /* Rahmen-Optik um die 1px-Linie: Hintergrundstreifen sichtbar machen */
-  /* box-shadow: 0 0 0 2px rgba(0,0,0,0.2); */
   transform: scaleX(1.1); transform-origin: left;
-  /* oder: transform: scaleX(1.1); transform-origin: left; */
 }
 
 .buttonplace {
@@ -10,9 +7,6 @@
   left: 1%;
   bottom: 8px;
   width: 98%;
- /* background-color: grey; */
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  /* color: white; */
   text-align: center;
 }
 
@@ -140,6 +134,13 @@
 	padding-right: 5%;
 }
 
+#logcleaner_mini {
+	justify-content: center;
+    padding-left: 10px;
+	padding-right: 10px;
+    min-height: 150vh;
+}
+
 #logcleaner_logapps {
     float: left;
     margin-top: 20px;
@@ -201,7 +202,7 @@
 	margin: 16px;
 }
 .alert-info {
-		text-align: center;
+    text-align: center;
     border-color: #bce8f1;
     font-size: 1em;
 }
@@ -243,7 +244,7 @@
 }
 .alert {
    /* width: 95%; */
-  display: flex;
+    display: flex;
 	align-items: center;
 	justify-content: left;
     padding: 2px;
