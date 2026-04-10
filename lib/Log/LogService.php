@@ -26,9 +26,9 @@
 namespace OCA\LogCleaner\Log;
 
 use Psr\Log\LoggerInterface;
-use OCP\IAppConfig;
 use OCP\IConfig;
 use OCP\IL10N;
+use OCA\LogCleaner\Controller\Helper;
 
 class LogService {
     private string $path;
@@ -39,8 +39,7 @@ class LogService {
     private int $nextId = 1;
 
 
-    public function __construct(IConfig $config, private readonly LoggerInterface $logger, private IAppConfig $appconfig,IL10N $l, string $filePath='/var/www/html/data/nextcloud.log') {
-        $this->config = $config;
+    public function __construct(private IConfig $config, private readonly LoggerInterface $logger, private IL10N $l, private Helper $helper, string $filePath='/var/www/html/data/nextcloud.log') {
         $filePath = $this->config->getSystemValue('logfile');
 		if (!file_exists($filePath)) {
 			$filePath = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
@@ -58,9 +57,7 @@ class LogService {
         if (class_exists(\Mutex::class)) {
             $this->mutex = new \Mutex();
         }
-        $this->appConfig = $appconfig;
-
-        $this->l = $l;
+        $this->helper = $helper;
     }
 
     public function load(): void {
@@ -89,6 +86,8 @@ class LogService {
         $this->load();
         $result = [];
         $endresult = [];
+        $corruptline = [];
+            $wt_offset = (int)$this->helper->getAppValue('logcleaner_wt_offset');
         foreach ($this->lines as $id => $entry) {
             if ($entry['deleted']) continue;
 
@@ -102,9 +101,6 @@ class LogService {
                 continue;
             }
             $item = ['id' => $id-1];
-                $wt_offset = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset', '0', false);
-                $wttimelog = strtotime($entry['json']['time']) + 3600*$wt_offset;
-            $item['formattedtimewithoffset'] = $this->l->l('date', $wttimelog) . ' - ' . $this->l->l('time', $wttimelog);
             if (empty($fields)) {
                 $item['raw'] = $entry['raw'];
                 $item['json'] = $entry['json'];
@@ -113,6 +109,21 @@ class LogService {
                     $item[$f] = $entry['json'][$f] ?? null;
                 }
             }
+
+            if (isset($item['time'])) {
+            $wttimelog = strtotime($item['time']) + 3600*$wt_offset;
+            $item['formattedtimewithoffset'] = $this->l->l('date', $wttimelog) . ' - ' . $this->l->l('time', $wttimelog);
+            }
+
+            if (!isset($item['reqId']) || !isset($item['message'])) {
+                $endresult[2] = 'corrupt';
+                $corruptline[0] = $this->helper->corruptline($id, $this->path);
+                $wttimelog = strtotime($corruptline[0]['time']) + 3600*$wt_offset;
+                $item['formattedtimewithoffset'] = $this->l->l('date', $wttimelog) . ' - ' . $this->l->l('time', $wttimelog);
+                $item['message'] = 'LogCleaner: Corrupted line detected within your logfile.--------------------------------> Please reload this page.';
+                $item['level'] = 5;
+            }
+
             $result[] = $item;
             $endresult[0] = count($result);
             $endresult[1] = array_slice($result, $offset, $limit);
