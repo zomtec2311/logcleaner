@@ -38,14 +38,10 @@ use OCP\IConfig;
 use OCP\IL10N;
 
 class LogsController extends Controller {
-    private LogService $logService;
 
-    public function __construct(string $AppName, IRequest $request, LogService $logService, private readonly LoggerInterface $logger, IConfig $config, private Helper $helper, IL10N $l,) {
+    public function __construct(string $AppName, IRequest $request, private LogService $logService, private readonly LoggerInterface $logger, private IConfig $config, private Helper $helper, private IL10N $l,) {
         parent::__construct($AppName, $request);
-        $this->logService = $logService;
-        $this->config = $config;
         $this->helper = $helper;
-        $this->l = $l;
     }
 
     #[NoCSRFRequired]
@@ -62,8 +58,7 @@ class LogsController extends Controller {
         if ($app !== null) $filters['app'] = $app;
         if ($message !== null) $filters['message'] = $message;
 
-        $snapshot = $this->logService->getSnapshot($filters, $limit, $offset, ['time','level', 'remoteAddr', 'message', 'user', 'app', 'url', 'method']);
-
+        $snapshot = $this->logService->getSnapshot($filters, $limit, $offset, ['reqId', 'level', 'time', 'remoteAddr', 'user', 'app', 'method', 'url', 'message']);
         $timestamp = time();
         $datum = date("d. M Y - H:i:s", $timestamp);
         $filePath = $this->config->getSystemValue('logfile');
@@ -151,7 +146,13 @@ class LogsController extends Controller {
                 if ($wtpara_logmessage_sizewarnings === 2) $this->logger->info("LogCleaner: Oops, the size of your log file is over ".$this->wtfilesize(52428800, 0).". You should check your log file and cleanup.");
             }
         }
+        if (isset($snapshot[0])) {
+            if (!empty($snapshot[2])) {
+                return new JSONResponse(['ok' => true, 'data' => $snapshot[1], 'total' => $snapshot[0], 'corrupt' => $snapshot[2]]);
+            }
         return new JSONResponse(['ok' => true, 'data' => $snapshot[1], 'total' => $snapshot[0]]);
+        }
+        else return new JSONResponse(['ok' => true, '', 'total' => 0]);
     }
 
     #[NoCSRFRequired]
@@ -167,11 +168,14 @@ class LogsController extends Controller {
         if ($app !== null) $filters['app'] = $app;
         if ($message !== null) $filters['message'] = $message;
 
-        $snapshot = $this->logService->getSnapshot($filters, $limit, $offset, ['time','level', 'remoteAddr', 'message', 'user', 'app', 'url', 'method']);
+        $snapshot = $this->logService->getSnapshot($filters, $limit, $offset, ['reqId', 'level', 'time', 'remoteAddr', 'user', 'app', 'method', 'url', 'message']);
         if (empty($snapshot[0])) {
             $myok = false;
             $snapshot[0] = 0;
             $snapshot[1] = 0;
+        }
+        if (!empty($snapshot[2])) {
+            return new JSONResponse(['ok' => $myok, 'data' => $snapshot[1], 'total' => $snapshot[0], 'all' => $this->logService->count(), 'corrupt' => $snapshot[2]]);
         }
         return new JSONResponse(['ok' => $myok, 'data' => $snapshot[1], 'total' => $snapshot[0], 'all' => $this->logService->count()]);
     }
@@ -189,11 +193,14 @@ class LogsController extends Controller {
         if ($app !== null) $filters['app'] = $app;
         if ($message !== null) $filters['message'] = $message;
 
-        $snapshot = $this->logService->getSnapshot($filters, $limit, $offset, ['time','level', 'remoteAddr', 'message', 'user', 'app', 'url', 'method']);
+        $snapshot = $this->logService->getSnapshot($filters, $limit, $offset, ['reqId', 'level', 'time', 'remoteAddr', 'user', 'app', 'method', 'url', 'message']);
         if (empty($snapshot[0])) {
             $myok = false;
             $snapshot[0] = 0;
             $snapshot[1] = 0;
+        }
+        if (!empty($snapshot[2])) {
+            return new JSONResponse(['ok' => $myok, 'data' => $snapshot[1], 'total' => $snapshot[0], 'all' => $this->logService->count(), 'corrupt' => $snapshot[2]]);
         }
         return new JSONResponse(['ok' => $myok, 'data' => $snapshot[1], 'total' => $snapshot[0], 'all' => $this->logService->count()]);
     }
@@ -211,12 +218,6 @@ class LogsController extends Controller {
             $anzahl = $array['summary']['removed_duplicates'];
         }
 		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
-		$i = 0;
-		$ii = 0;
-		$key_array = array();
-		$temp_array = array();
-		$new_array = array();
-		$uu = 0;
 
 		$filesizeoriginal = filesize($inputFile);
         $filesizecleaned = filesize($outputLog);
@@ -229,7 +230,7 @@ class LogsController extends Controller {
         $filesizediff = $this->wtfilesize($filesizeoriginal - $filesizecleaned,2);
 
         if ($wtpara_logmessage===2) {
-            if ($ii===1) $this->logger->info(sprintf('LogCleaner: %d duplicate was deleted and %s of disk space were cleared. This log entry can be deleted without verification.', $anzahl, $filesizediff));
+            if ($anzahl===1) $this->logger->info(sprintf('LogCleaner: %d duplicate was deleted and %s of disk space were cleared. This log entry can be deleted without verification.', $anzahl, $filesizediff));
             else $this->logger->info(sprintf('LogCleaner: %d duplicates were deleted and %s of disk space were cleared. This log entry can be deleted without verification.', $anzahl, $filesizediff));
         }
         return new DataResponse([
