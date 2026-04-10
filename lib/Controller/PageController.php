@@ -30,19 +30,15 @@ namespace OCA\LogCleaner\Controller;
 use OCA\LogCleaner\AppInfo\Application;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\Attribute\FrontpageRoute;
-//use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
 use OCP\AppFramework\Http\TemplateResponse;
-use OCP\IConfig;
 use OCP\IRequest;
 use OCP\Util;
 
 class PageController extends Controller {
 
-    public function __construct(private IConfig $config, IRequest $request, private Helper $helper,)
+    public function __construct(IRequest $request,)
     {
-        $this->config = $config;
-        $this->helper = $helper;
         parent::__construct(Application::APP_ID, $request);
     }
 
