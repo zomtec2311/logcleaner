@@ -53,15 +53,16 @@ class PageController extends Controller {
                 Application::APP_ID,
                 'index',
             );
-  }
-  
-  #[NoCSRFRequired]
-  public function show(): TemplateResponse {
-        Util::addStyle(Application::APP_ID, 'logcleaner-main');
-        Util::addScript(Application::APP_ID, 'logcleaner-show');
-        return new TemplateResponse(
-                Application::APP_ID,
-                'show',
-            );
-  }
+    }
+
+    #[NoCSRFRequired]
+        public function show(): TemplateResponse {
+            Util::addStyle(Application::APP_ID, 'logcleaner-main');
+            Util::addScript(Application::APP_ID, 'logcleaner-main');
+            return new TemplateResponse(
+                    Application::APP_ID,
+                    'index',
+                );
+    }
+
 }
