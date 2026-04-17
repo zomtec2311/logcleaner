@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.2
+
+### Changed
+- View of entries of the desired error level
+- Template for entries with the desired error level removed
+- Dashboard widget now uses the new view of entries of the desired error level
+
 ## 1.4.1
 
 ### Fixed
