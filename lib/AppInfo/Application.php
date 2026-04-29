@@ -43,7 +43,7 @@ use Psr\Log\LoggerInterface;
 
 class Application extends App implements IBootstrap {
 	public const APP_ID = 'logcleaner';
-	
+
 	public function __construct() {
 		parent::__construct(self::APP_ID);
 	}
@@ -53,21 +53,58 @@ class Application extends App implements IBootstrap {
 
 
 	public function register(\OCP\AppFramework\Bootstrap\IRegistrationContext $context): void {
+
         $context->registerDashboardWidget(\OCA\LogCleaner\Dashboard\LogCleanerWidget::class);
         $context->registerDashboardWidget(\OCA\LogCleaner\Dashboard\LogCleanerWidget2::class);
+        $container = $this->getContainer();
+		$server = $container->getServer();
+		$config = $server->getConfig();
 
-        $context->registerService('LogService', function($c) {
-			$path = $this->config->getSystemValue('logfile');
-			if (!file_exists($path)) {
-				$path = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		$context->registerService(LogService::class, function($c) use ($config) {
+			$path = $config->getSystemValue('logfile');
+			if (!$path || !file_exists($path)) {
+				$path = $config->getSystemValue('datadirectory') . '/nextcloud.log';
 			}
-			try {
-				$inst = new \OCA\LogCleaner\Log\LogService($path);
-				return $inst;
-			} catch (\Throwable $e) {
-				throw $e;
-			}
+			$AuditLogFile = $path;
+			$LogFile = $AuditLogFile;
+			$FlowLogFile = $LogFile;
+			return new \OCA\LogCleaner\Log\LogService(
+				$AuditLogFile,
+				$FlowLogFile,
+				$LogFile,
+				$config,
+				$c->query(\Psr\Log\LoggerInterface::class),
+				$c->query(\OCP\IL10N::class),
+				$c->query(\OCA\LogCleaner\Helper\Helper::class),
+				$path
+			);
 		});
+
+		$context->registerService('AuditLogFile', function($c)  use ($config) {
+			$auditType = $config->getSystemValueString('log_type_audit', 'file');
+			$logFile = $config->getSystemValueString('logfile_audit', '');
+			if ($auditType === 'file' && !$logFile) {
+				$default = $config->getSystemValue('datadirectory', \OC::$SERVERROOT . '/data') . '/audit.log';
+				$logFile = $config->getAppValue('admin_audit', 'logfile', $default);
+			}
+			return $logFile;
+		});
+
+		$context->registerService('FlowLogFile', function($c)  use ($config) {
+			$default = $config->getSystemValue('datadirectory', \OC::$SERVERROOT . '/data') . '/flow.log';
+			$logFile = trim((string)$config->getAppValue('workflowengine', 'logfile', $default));
+			return $logFile;
+		});
+
+		$context->registerService('LogFile', function($c)  use ($config) {
+			$path = $config->getSystemValue('logfile');
+			if (!$path || !file_exists($path)) {
+				$path = $config->getSystemValue('datadirectory') . '/nextcloud.log';
+			}
+			return $path;
+		});
+
+
 	}
 
 	public function boot(IBootContext $context): void {
