@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.3
+
+### Fixed
+- Cronjob with 0 duplicates
+- dashboard widget not changing border color after deleting dublicates
+
 ## 1.4.2
 
 ### Changed
