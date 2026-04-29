@@ -4,7 +4,7 @@
 
 ### Fixed
 - Cronjob with 0 duplicates
-- dashboard widget not changing border color after deleting dublicates
+- dashboard widget not changing border color after deleting duplicates
 
 ## 1.4.2
 
