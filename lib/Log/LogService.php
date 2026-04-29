@@ -31,6 +31,8 @@ use OCP\IL10N;
 use OCA\LogCleaner\Controller\Helper;
 
 class LogService {
+    private string $datei;
+    private string $flowdatei;
     private string $path;
     private array $lines = [];
     private bool $loaded = false;
@@ -39,32 +41,44 @@ class LogService {
     private int $nextId = 1;
 
 
-    public function __construct(private IConfig $config, private readonly LoggerInterface $logger, private IL10N $l, private Helper $helper, string $filePath='/var/www/html/data/nextcloud.log') {
-        $filePath = $this->config->getSystemValue('logfile');
-		if (!file_exists($filePath)) {
-			$filePath = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-		}
-        if (!is_string($filePath) || $filePath === '') {
-            throw new \InvalidArgumentException('LogService: empty filePath');
-        }
-        if (!file_exists($filePath)) {
-            throw new \RuntimeException("LogService: file not found: {$filePath}");
-        }
-        if (!is_readable($filePath)) {
-            throw new \RuntimeException("LogService: file not readable: {$filePath}");
-        }
-        $this->path = $filePath;
+    public function __construct(
+        string $AuditLogFile,
+        string $FlowLogFile,
+        string $LogFile,
+        private IConfig $config,
+        private readonly LoggerInterface $logger,
+        private IL10N $l,
+        private Helper $helper,
+        string $filePath='/var/www/html/data/nextcloud.log',
+    ) {
+        $this->path = $LogFile;
+        $this->datei = $AuditLogFile;
+        $this->flowdatei = $FlowLogFile;
+        $this->logdatei = $LogFile;
+
         if (class_exists(\Mutex::class)) {
             $this->mutex = new \Mutex();
         }
         $this->helper = $helper;
     }
 
+    public function getLogFile(): string {
+        return $this->logdatei;
+    }
+
+    public function getAuditFile(): string {
+        return $this->datei;
+    }
+
+    public function getFlowFile(): string {
+        return $this->flowdatei;
+    }
+
     public function load(): void {
         if ($this->loaded) return;
         $this->lines = [];
         $this->nextId = 1;
-        $fh = fopen($this->path, 'r');
+        $fh = fopen($this->logdatei, 'r');
         if ($fh === false) { $this->loaded = true; return; }
         while (($line = fgets($fh)) !== false) {
             $id = $this->nextId++;
@@ -117,7 +131,7 @@ class LogService {
 
             if (!isset($item['reqId']) || !isset($item['message'])) {
                 $endresult[2] = 'corrupt';
-                $corruptline[0] = $this->helper->corruptline($id, $this->path);
+                $corruptline[0] = $this->helper->corruptline($id, $this->logdatei);
                 $wttimelog = strtotime($corruptline[0]['time']) + 3600*$wt_offset;
                 $item['formattedtimewithoffset'] = $this->l->l('date', $wttimelog) . ' - ' . $this->l->l('time', $wttimelog);
                 $item['message'] = 'LogCleaner: Corrupted line detected within your logfile.--------------------------------> Please reload this page.';
@@ -137,13 +151,5 @@ class LogService {
         $c = 0;
         foreach ($this->lines as $entry) if (!$entry['deleted']) $c++;
         return $c;
-    }
-
-    public function getlogpath() {
-        $filePath = $this->config->getSystemValue('logfile');
-		if (!file_exists($filePath)) {
-			$filePath = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-		}
-        return $filePath;
     }
 }
