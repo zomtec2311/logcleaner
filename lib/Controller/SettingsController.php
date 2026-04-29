@@ -37,6 +37,7 @@ use OCP\AppFramework\Http\DataResponse;
 use Psr\Log\LoggerInterface;
 use OCP\IAppConfig;
 use OCP\App\IAppManager;
+use OCA\LogCleaner\Log\LogService;
 
 class SettingsController extends Controller {
 	private $config;
@@ -48,7 +49,8 @@ class SettingsController extends Controller {
 		private Helper $helper,
 		private readonly LoggerInterface $logger,
 		private IAppManager $appManager,
-		private IAppConfig $appConfig
+		private IAppConfig $appConfig,
+		private LogService $logService,
 	) {
 		parent::__construct('logcleaner', $request);
 		$this->l = $l;
@@ -82,7 +84,10 @@ class SettingsController extends Controller {
 			'wtpara_logmessage_sizewarnings' => (empty($this->config->getAppValue('logcleaner', 'wtpara_logmessage_sizewarnings')))?$this->setSettingZeilen('wtpara_logmessage_sizewarnings',2):$this->config->getAppValue('logcleaner', 'wtpara_logmessage_sizewarnings'),
 			'wtpara_logrotate' => (empty($this->config->getAppValue('logcleaner', 'wtpara_logrotate')))?$this->setSettingZeilen('wtpara_logrotate',1):$this->config->getAppValue('logcleaner', 'wtpara_logrotate'),
 			'wtpara_position_mini' => (empty($this->config->getAppValue('logcleaner', 'wtpara_position_mini')))?$this->setSettingZeilen('wtpara_position_mini',1):$this->config->getAppValue('logcleaner', 'wtpara_position_mini'),
-            ]);
+			'LogFile' => $this->logService->getLogFile(),
+			'AuditFile' => $this->logService->getAuditFile(),
+			'FlowFile' => $this->logService->getFlowFile(),
+		]);
 	}
 
 	public function setLL($who): DataResponse {
@@ -124,24 +129,21 @@ class SettingsController extends Controller {
 		$wt_out = "";
 		$array = [];
 		$wtarr =[];
-		$wtlogfile = $this->config->getSystemValue('logfile');
+		$wtlogfile = $this->logService->getLogFile();
 		if (!file_exists($wtlogfile)) {
-			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-				if (!file_exists($wtlogfile)) {
-					$obja = new \stdClass();
-					$obja->all = 0;
-					$obja->zeit = '';
-					$obja->ip = '';
-					$obja->user = '';
-					$obja->app = '';
-					$obja->method = '';
-					$obja->zeit = '';
-					$obja->grund = $this->l->t('log file cannot be located');
-					$wtarr [] = $obja;
-					return new DataResponse([
-                'al' => $wtarr,
-            ]);
-				}
+			$obja = new \stdClass();
+			$obja->all = 0;
+			$obja->zeit = '';
+			$obja->ip = '';
+			$obja->user = '';
+			$obja->app = '';
+			$obja->method = '';
+			$obja->zeit = '';
+			$obja->grund = $this->l->t('log file cannot be located');
+			$wtarr [] = $obja;
+			return new DataResponse([
+				'al' => $wtarr,
+			]);
 		}
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 
@@ -200,17 +202,17 @@ class SettingsController extends Controller {
 		$wtlogfilezeilen = count($wwt);
 		if ($wtlogfilezeilen == 0) {
 			$obja = new \stdClass();
-		  $obja->all = 0;
-		  $obja->zeit = '';
-		  $obja->ip = '';
-		  $obja->user = '';
-		  $obja->app = '';
-		  $obja->method = '';
-		  $obja->zeit = '';
+			$obja->all = 0;
+			$obja->zeit = '';
+			$obja->ip = '';
+			$obja->user = '';
+			$obja->app = '';
+			$obja->method = '';
+			$obja->zeit = '';
 			$obja->grund = $this->l->t('no log entries available');
 			$wtarr [] = $obja;
-		  return new DataResponse([
-                'al' => $wtarr,
+			return new DataResponse([
+				'al' => $wtarr,
             ]);
 		}
 		$wt_zeilen = $wtlogfilezeilen;
@@ -235,25 +237,23 @@ class SettingsController extends Controller {
 		$wt_out = "";
 		$array = [];
 		$wtarr =[];
-		$wtlogfile = $this->config->getSystemValue('logfile');
+		$wtlogfile = $this->logService->getLogFile();
 		if (!file_exists($wtlogfile)) {
-			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-				if (!file_exists($wtlogfile)) {
-					$obja = new \stdClass();
-					$obja->all = 0;
-					$obja->zeit = '';
-					$obja->ip = '';
-					$obja->user = '';
-					$obja->app = '';
-					$obja->method = '';
-					$obja->zeit = '';
-					$obja->grund = $this->l->t('log file cannot be located');
-					$wtarr [] = $obja;
-					return new DataResponse([
-                'al' => $wtarr,
-            ]);
-				}
+			$obja = new \stdClass();
+			$obja->all = 0;
+			$obja->zeit = '';
+			$obja->ip = '';
+			$obja->user = '';
+			$obja->app = '';
+			$obja->method = '';
+			$obja->zeit = '';
+			$obja->grund = $this->l->t('log file cannot be located');
+			$wtarr [] = $obja;
+			return new DataResponse([
+				'al' => $wtarr,
+			]);
 		}
+
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		$wt_zeilen = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_zeilen', '5', false);;
 		$wt_offset = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset', '0', false);
@@ -309,16 +309,16 @@ class SettingsController extends Controller {
 		$wtlogfilezeilen = count($wwt);
 		if ($wtlogfilezeilen == 0) {
 			$obja = new \stdClass();
-		  $obja->all = 0;
-		  $obja->zeit = '';
-		  $obja->ip = '';
-		  $obja->user = '';
-		  $obja->app = '';
-		  $obja->method = '';
-		  $obja->zeit = '';
+			$obja->all = 0;
+			$obja->zeit = '';
+			$obja->ip = '';
+			$obja->user = '';
+			$obja->app = '';
+			$obja->method = '';
+			$obja->zeit = '';
 			$obja->grund = $this->l->t('no log entries available');
 			$wtarr [] = $obja;
-		  return new DataResponse([
+			return new DataResponse([
                 'al' => $wtarr,
             ]);
 		}
@@ -352,25 +352,23 @@ class SettingsController extends Controller {
 		$wt_out = "";
 		$array = [];
 		$wtarr =[];
-		$wtlogfile = $this->config->getSystemValue('logfile');
+		$wtlogfile = $this->logService->getLogFile();
 		if (!file_exists($wtlogfile)) {
-			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-				if (!file_exists($wtlogfile)) {
-					$obja = new \stdClass();
-					$obja->all = 0;
-					$obja->zeit = '';
-					$obja->ip = '';
-					$obja->user = '';
-					$obja->app = '';
-					$obja->method = '';
-					$obja->zeit = '';
-					$obja->grund = $this->l->t('log file cannot be located');
-					$wtarr [] = $obja;
-					return new DataResponse([
-                'al' => $wtarr,
-            ]);
-				}
+			$obja = new \stdClass();
+			$obja->all = 0;
+			$obja->zeit = '';
+			$obja->ip = '';
+			$obja->user = '';
+			$obja->app = '';
+			$obja->method = '';
+			$obja->zeit = '';
+			$obja->grund = $this->l->t('log file cannot be located');
+			$wtarr [] = $obja;
+			return new DataResponse([
+				'al' => $wtarr,
+			]);
 		}
+
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		$wt_zeilen = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_zeilen', '5', false);;
 		$wt_offset = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset', '0', false);
@@ -427,16 +425,16 @@ class SettingsController extends Controller {
 		$wtlogfilezeilen = count($wwt);
 		if ($wtlogfilezeilen == 0) {
 			$obja = new \stdClass();
-		  $obja->all = 0;
-		  $obja->zeit = '';
-		  $obja->ip = '';
-		  $obja->user = '';
-		  $obja->app = '';
-		  $obja->method = '';
-		  $obja->zeit = '';
+			$obja->all = 0;
+			$obja->zeit = '';
+			$obja->ip = '';
+			$obja->user = '';
+			$obja->app = '';
+			$obja->method = '';
+			$obja->zeit = '';
 			$obja->grund = $this->l->t('no log entries available');
 			$wtarr [] = $obja;
-		  return new DataResponse([
+			return new DataResponse([
                 'al' => $wtarr,
             ]);
 		}
@@ -468,10 +466,7 @@ class SettingsController extends Controller {
 
 	public function logfileandsize(): DataResponse {
 	try {
-		$wtlogfile = $this->config->getSystemValue('logfile');
-		if (!file_exists($wtlogfile)) {
-			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-		}
+		$wtlogfile = $this->logService->getLogFile();
 		if (file_exists($wtlogfile)) {
 			$teile = explode("/", $wtlogfile);
 			$obja = new \stdClass();
@@ -486,13 +481,13 @@ class SettingsController extends Controller {
 			$obja->filearr = [];
 			$obja->filesize = '';
 		}
-	return new DataResponse([
-                'file' => $obja->file,
-				'filearr' => $obja->filearr,
-				'appversion' => $obja->appversion,
-				'filesize' => $obja->filesize,
-				'filesizeraw' => filesize($wtlogfile),
-            ]);
+		return new DataResponse([
+			'file' => $obja->file,
+			'filearr' => $obja->filearr,
+			'appversion' => $obja->appversion,
+			'filesize' => $obja->filesize,
+			'filesizeraw' => filesize($wtlogfile),
+		]);
 
         } catch (\Throwable $e) {
             $this->logger->error(
@@ -532,10 +527,7 @@ class SettingsController extends Controller {
 		}
 		$logid = intval($logid);
 
-		$wtlogfile = $this->config->getSystemValue('logfile');
-		if (!file_exists($wtlogfile)) {
-			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-		}
+		$wtlogfile = $this->logService->getLogFile();
 
 		$filename = $wtlogfile;
 		$lines = file($filename);
@@ -564,15 +556,13 @@ class SettingsController extends Controller {
 		$wt_out = "";
 		$array = [];
 		$wtarr =[];
-		$wtlogfile = $this->config->getSystemValue('logfile');
+		$wtlogfile = $this->logService->getLogFile();
 		if (!file_exists($wtlogfile)) {
-			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-				if (!file_exists($wtlogfile)) {
-					return new DataResponse([
-					 'detail' => $this->l->t('log file cannot be located'),
-            ]);
-				}
+			return new DataResponse([
+				'detail' => $this->l->t('log file cannot be located'),
+			]);
 		}
+
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		if (isset($detail)) {
 			$wtdetail = $wwt[$detail];
@@ -581,15 +571,12 @@ class SettingsController extends Controller {
             ]);
 		}
 		return new DataResponse([
-					 'detail' => '',
-            ]);
+			'detail' => '',
+		]);
 	}
 
 	public function getAll(): DataResponse {
-		$wtlogfile = $this->config->getSystemValue('logfile');
-		if (!file_exists($wtlogfile)) {
-			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-		}
+		$wtlogfile = $this->logService->getLogFile();
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		$wtlogfilezeilen = count($wwt);
 		$wttext = $this->l->n('%n log entry', '%n log entries', $wtlogfilezeilen);
@@ -600,10 +587,7 @@ class SettingsController extends Controller {
 	}
 
 	public function getcntll(): DataResponse {
-		$wtlogfile = $this->config->getSystemValue('logfile');
-		if (!file_exists($wtlogfile)) {
-			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-		}
+		$wtlogfile = $this->logService->getLogFile();
 		$stats = [
 			0 => ['count' => 0, 'label' => $this->l->t('DEBUG'), 'color' => '#DFF0D8', 'txtcolor' => '#3C763D', 'level' => 0],
 			1 => ['count' => 0, 'label' => $this->l->t('INFO'),  'color' => '#D9EDF7', 'txtcolor' => '#31708F', 'level' => 1],
@@ -647,10 +631,7 @@ class SettingsController extends Controller {
 		$temp_array = array();
 		$new_array = array();
 		$uu = 0;
-		$wtlogfile = $this->config->getSystemValue('logfile');
-		if (!file_exists($wtlogfile)) {
-			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-		}
+		$wtlogfile = $this->logService->getLogFile();
 		$filesizebefore = filesize($wtlogfile);
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		foreach($wwt as $val) {
@@ -700,10 +681,7 @@ class SettingsController extends Controller {
 			$temp_array = array();
 			$new_array = array();
 			$uu = 0;
-			$wtlogfile = $this->config->getSystemValue('logfile');
-			if (!file_exists($wtlogfile)) {
-				$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-			}
+			$wtlogfile = $this->logService->getLogFile();
 			$filesizebefore = filesize($wtlogfile);
 			$wwt = $this->helper->wtlogtoarr($wtlogfile);
 			foreach($wwt as $val) {
@@ -769,10 +747,7 @@ class SettingsController extends Controller {
 		$ii = 0;
 		$key_array = array();
 		$temp_array = array();
-		$wtlogfile = $this->config->getSystemValue('logfile');
-		if (!file_exists($wtlogfile)) {
-			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-		}
+		$wtlogfile = $this->logService->getLogFile();
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		foreach($wwt as $val) {
 			$json = json_decode($val);
@@ -799,10 +774,7 @@ class SettingsController extends Controller {
 	public function logapps(): DataResponse {
 		$i = 0;
 		$logapps = array();
-		$wtlogfile = $this->config->getSystemValue('logfile');
-		if (!file_exists($wtlogfile)) {
-			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-		}
+		$wtlogfile = $this->logService->getLogFile();
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		foreach($wwt as $val) {
 			$json = json_decode($val);
@@ -817,10 +789,7 @@ class SettingsController extends Controller {
 
 	public function emptylog(): DataResponse {
 		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
-		$wtlogfile = $this->config->getSystemValue('logfile');
-		if (!file_exists($wtlogfile)) {
-			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-		}
+		$wtlogfile = $this->logService->getLogFile();
 		file_put_contents($wtlogfile, "",LOCK_EX);
 		if ($wtpara_logmessage===2) {
 			$this->logger->info('LogCleaner: log file has been emptied. This log entry can be deleted without verification.');
@@ -842,10 +811,7 @@ class SettingsController extends Controller {
 			$temp_array = array();
 			$new_array = array();
 			$uu = 0;
-			$wtlogfile = $this->config->getSystemValue('logfile');
-			if (!file_exists($wtlogfile)) {
-				$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-			}
+			$wtlogfile = $this->logService->getLogFile();
 			$filesizebefore = filesize($wtlogfile);
 			$wwt = $this->helper->wtlogtoarr($wtlogfile);
 			foreach($wwt as $val) {
