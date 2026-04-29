@@ -61,11 +61,7 @@ class LogsController extends Controller {
         $snapshot = $this->logService->getSnapshot($filters, $limit, $offset, ['reqId', 'level', 'time', 'remoteAddr', 'user', 'app', 'method', 'url', 'message']);
         $timestamp = time();
         $datum = date("d. M Y - H:i:s", $timestamp);
-        $filePath = $this->config->getSystemValue('logfile');
-		if (!file_exists($filePath)) {
-			$filePath = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-		}
-
+        $filePath = $this->logService->getLogFile();
         $dummy = [];
 
         $aksize = filesize($filePath);
@@ -206,16 +202,13 @@ class LogsController extends Controller {
     }
 
     public function removeDub(?int $anzahl = 0): DataResponse {
-        $inputFile = $this->config->getSystemValue('logfile');
-        if (!file_exists($inputFile)) {
-			$inputFile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-		}
+        $inputFile = $this->logService->getLogFile();
 		$outputLog  = $inputFile.'.cleaned.log';
         if ($anzahl === 0) {
             $outputJson = $inputFile.'analysis.json';
             $json = file_get_contents($outputJson);
-            $array = json_decode($json, true);
-            $anzahl = $array['summary']['removed_duplicates'];
+            $analysis_array = json_decode($json, true);
+            $anzahl = $analysis_array['summary']['removed_duplicates'];
         }
 		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
 
@@ -228,6 +221,13 @@ class LogsController extends Controller {
         }
 
         $filesizediff = $this->wtfilesize($filesizeoriginal - $filesizecleaned,2);
+
+        if ($anzahl === 0) {
+            return new DataResponse([
+                'cntdub' => $anzahl,
+                'sizediff' => $filesizediff,
+            ]);
+        }
 
         if ($wtpara_logmessage===2) {
             if ($anzahl===1) $this->logger->info(sprintf('LogCleaner: %d duplicate was deleted and %s of disk space were cleared. This log entry can be deleted without verification.', $anzahl, $filesizediff));
@@ -247,10 +247,7 @@ class LogsController extends Controller {
         }
 
         try {
-            $inputFile = $this->config->getSystemValue('logfile');
-            if (!file_exists($inputFile)) {
-                $inputFile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-            }
+            $inputFile = $this->logService->getLogFile();
             $outputLog  = $inputFile.'.cleaned.log';
             $outputJson = $inputFile.'analysis.json';
 
@@ -385,7 +382,7 @@ class LogsController extends Controller {
 
     public function dellines(?int $level, ?string $dellines): DataResponse {
         $linesToDelete = explode(",",$dellines);
-        $file = $this->logService->getlogpath();
+        $file = $this->logService->getLogFile();
         $filesizebefore = filesize($file);
         $reversedLines = array_reverse($linesToDelete);
         $anzahl = count($reversedLines);
@@ -428,7 +425,7 @@ class LogsController extends Controller {
 
     public function dellinesapp(?string $app, ?string $dellines): DataResponse {
         $linesToDelete = explode(",",$dellines);
-        $file = $this->logService->getlogpath();
+        $file = $this->logService->getLogFile();
         $filesizebefore = filesize($file);
         $reversedLines = array_reverse($linesToDelete);
         $anzahl = count($reversedLines);
@@ -456,7 +453,7 @@ class LogsController extends Controller {
 			$logid = null;
 		}
 		$logid = intval($logid) + 1;
-        $file = $this->logService->getlogpath();
+        $file = $this->logService->getLogFile();
         $deleteCommand = "{$logid} d";
         $finalCommand = "sed -i " . escapeshellarg($deleteCommand) . " " . escapeshellarg($file);
         exec($finalCommand);
@@ -467,7 +464,7 @@ class LogsController extends Controller {
 
     public function showdetail(string $detail): DataResponse {
         $detail = (int) $detail + 1;
-        $file = $this->logService->getlogpath();
+        $file = $this->logService->getLogFile();
         $finalCommand = "sed -n '$detail p' $file";
         $out = exec($finalCommand);
         return new DataResponse([
@@ -480,15 +477,12 @@ class LogsController extends Controller {
 		$wt_out = "";
 		$array = [];
 		$wtarr =[];
-		$wtlogfile = $this->config->getSystemValue('logfile');
-		if (!file_exists($wtlogfile)) {
-			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
+		$wtlogfile = $this->logService->getLogFile();
 				if (!file_exists($wtlogfile)) {
 					return new DataResponse([
 					 'detail' => $this->l->t('log file cannot be located'),
             ]);
 				}
-		}
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		if (isset($detail)) {
 			$wtdetail = $wwt[$detail];
@@ -502,10 +496,7 @@ class LogsController extends Controller {
 	}
 
 	public function getAll(): DataResponse {
-		$wtlogfile = $this->config->getSystemValue('logfile');
-		if (!file_exists($wtlogfile)) {
-			$wtlogfile = $this->config->getSystemValue('datadirectory') . '/nextcloud.log';
-		}
+		$wtlogfile = $this->logService->getLogFile();
 
         if (file_exists($wtlogfile)) {
             $wtlogfilezeilen = intval(exec("wc -l " . $wtlogfile));
