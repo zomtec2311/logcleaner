@@ -34,6 +34,7 @@ class LogService {
     private string $datei;
     private string $flowdatei;
     private string $path;
+    private string $logdatei;
     private array $lines = [];
     private bool $loaded = false;
     private array $pendingDeletes = [];
