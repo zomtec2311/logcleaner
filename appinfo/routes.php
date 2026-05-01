@@ -52,7 +52,7 @@ return [
     ['name' => 'Logs#getAll', 'url' => '/getall', 'verb' => 'GET'],
     ['name' => 'Logs#analyse', 'url' => '/logs/analyse', 'verb' => 'GET'],
     ['name' => 'Logs#removelog', 'url' => '/removelog/{logid}', 'verb' => 'GET'],
-    ['name' => 'Logs#dellines', 'url' => '/logs/dellines/{level}/{dellines}', 'verb' => 'GET'],
-    ['name' => 'Logs#dellinesapp', 'url' => '/logs/dellinesapp/{app}/{dellines}', 'verb' => 'GET'],
+    ['name' => 'Logs#dellines', 'url' => '/logs/dellines', 'verb' => 'POST'],
+    ['name' => 'Logs#dellinesapp', 'url' => '/logs/dellinesapp', 'verb' => 'POST'],
   ]
 ];
