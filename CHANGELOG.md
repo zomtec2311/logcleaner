@@ -2,6 +2,12 @@
 
 ## 1.4.4
 
+### Added
+- Nextcloud 34 compatibility
+
+### Changed
+- changed HTTP methode GET to POST for some routes
+
 ### Fixed
 - dashboard widget not changing border color after deleting duplicates
 
