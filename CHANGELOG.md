@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.4
+
+### Fixed
+- dashboard widget not changing border color after deleting duplicates
+
 ## 1.4.3
 
 ### Fixed
