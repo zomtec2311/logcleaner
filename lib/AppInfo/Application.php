@@ -57,9 +57,7 @@ class Application extends App implements IBootstrap {
 
         $context->registerDashboardWidget(\OCA\LogCleaner\Dashboard\LogCleanerWidget::class);
         $context->registerDashboardWidget(\OCA\LogCleaner\Dashboard\LogCleanerWidget2::class);
-        //$container = $this->getContainer();
-		//$server = $container->getServer();
-		$config = Server::get(IConfig::class); //$server->getConfig();
+		$config = Server::get(IConfig::class);
 		$context->registerService(LogService::class, function($c) use ($config) {
 			$path = $config->getSystemValue('logfile');
 			if (!$path || !file_exists($path)) {
