@@ -380,14 +380,13 @@ class LogsController extends Controller {
         }
     }
 
-    public function dellines(?int $level, ?string $dellines): DataResponse {
-        $linesToDelete = explode(",",$dellines);
+    public function dellines(?int $level, ?array $dellines): DataResponse {
         $file = $this->logService->getLogFile();
         $filesizebefore = filesize($file);
-        $reversedLines = array_reverse($linesToDelete);
+        $reversedLines = array_reverse($dellines);
         $anzahl = count($reversedLines);
         $deleted = $anzahl;
-        $rows = $linesToDelete;
+        $rows = $dellines;
         switch ($level) {
             case 0:
                 $levelname = 'DEBUG';
@@ -423,14 +422,13 @@ class LogsController extends Controller {
         ]);
     }
 
-    public function dellinesapp(?string $app, ?string $dellines): DataResponse {
-        $linesToDelete = explode(",",$dellines);
+    public function dellinesapp(?string $app, ?array $dellines): DataResponse {
         $file = $this->logService->getLogFile();
         $filesizebefore = filesize($file);
-        $reversedLines = array_reverse($linesToDelete);
+        $reversedLines = array_reverse($dellines);
         $anzahl = count($reversedLines);
         $deleted = $anzahl;
-        $rows = $linesToDelete;
+        $rows = $dellines;
         $rowsStr = implode(', ', $rows);
         $deleteCommands = [];
         foreach ($reversedLines as $line) {
