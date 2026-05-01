@@ -28,6 +28,7 @@ declare(strict_types=1);
 namespace OCA\LogCleaner\AppInfo;
 
 use OCP\AppFramework\App;
+use OCP\Server;
 use OCP\App\IAppManager;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
@@ -56,10 +57,9 @@ class Application extends App implements IBootstrap {
 
         $context->registerDashboardWidget(\OCA\LogCleaner\Dashboard\LogCleanerWidget::class);
         $context->registerDashboardWidget(\OCA\LogCleaner\Dashboard\LogCleanerWidget2::class);
-        $container = $this->getContainer();
-		$server = $container->getServer();
-		$config = $server->getConfig();
-
+        //$container = $this->getContainer();
+		//$server = $container->getServer();
+		$config = Server::get(IConfig::class); //$server->getConfig();
 		$context->registerService(LogService::class, function($c) use ($config) {
 			$path = $config->getSystemValue('logfile');
 			if (!$path || !file_exists($path)) {
