@@ -85,6 +85,7 @@ OC.L10N.register(
 "Shall a footer be displayed with useful buttons?": "Hoće li podnožje biti prikazano s korisnim gumbima?",
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Hoće li LogCleaner postaviti rotaciju datoteke zapisa od veličine 100 MB u konfiguracijskoj datoteci config.php Nextclouda?",
 "display minimized view?": "prikazati minimizirani prikaz?",
-"Shall LogCleaner write warnings about the size of the log file to the log file?": "Treba li LogCleaner pisati upozorenja o veličini datoteke dnevnika u datoteku dnevnika?"
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "Treba li LogCleaner pisati upozorenja o veličini datoteke dnevnika u datoteku dnevnika?",
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Očigledno PHP funkcija exec() nije dostupna, zbog čega LogCleaner ne može raditi u turbo modu, već u PHP strujanju. Promjena php.ini u direktivi disable_functions rješava problem."
 },
 "nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);");

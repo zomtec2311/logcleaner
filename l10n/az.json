@@ -81,6 +81,7 @@
 "Shall a footer be displayed with useful buttons?": "Faydalı düymələrlə altbilgi göstəriləcəkmi?",
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner, Nextcloud-un config.php konfiqurasiya faylında 100MB ölçüsündən log faylının fırlanmasını təyin edəcəkmi?",
 "display minimized view?": "kiçildilmiş görünüşü göstərin?",
-"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner log faylına log faylının ölçüsü haqqında xəbərdarlıq yazmalıdır?"
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner log faylına log faylının ölçüsü haqqında xəbərdarlıq yazmalıdır?",
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Göründüyü kimi, PHP funksiyası exec() mövcud deyil, buna görə LogCleaner turbo rejimdə işləyə bilməz, lakin PHP axın rejimində. disable_functions direktivində php.ini-nin dəyişdirilməsi problemi həll edir."
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

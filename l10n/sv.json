@@ -81,6 +81,7 @@
 "Shall a footer be displayed with useful buttons?": "Ska en sidfot visas med användbara knappar?",
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Ska LogCleaner ställa in rotationen av loggfilen från en storlek på 100MB i konfigurationsfilen config.php för Nextcloud?",
 "display minimized view?": "visa minimerad vy?",
-"Shall LogCleaner write warnings about the size of the log file to the log file?": "Ska LogCleaner skriva varningar om storleken på loggfilen till loggfilen?"
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "Ska LogCleaner skriva varningar om storleken på loggfilen till loggfilen?",
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Uppenbarligen är PHP-funktionen exec() inte tillgänglig, varför LogCleaner inte kan fungera i turboläge, utan i PHP-strömningsläge. Att ändra php.ini i direktivet disable_functions löser problemet."
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

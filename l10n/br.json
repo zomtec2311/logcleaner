@@ -81,6 +81,7 @@
 "Shall a footer be displayed with useful buttons?": "Ha diskouezet e vo un traoñ gant boutonoù talvoudus ?",
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Ha lakaat a raio LogCleaner da dreiñ ar restr marilh adalek ur ment a 100MB e restr kefluniañ config.php Nextcloud ?",
 "display minimized view?": "diskouez gwel bihanaet ?",
-"Shall LogCleaner write warnings about the size of the log file to the log file?": "Ha skrivañ a raio LogCleaner evezhiadennoù diwar-benn ment ar restr marilh d'ar restr marilh ?"
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "Ha skrivañ a raio LogCleaner evezhiadennoù diwar-benn ment ar restr marilh d'ar restr marilh ?",
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "War a seblant n'eo ket hegerz an arc'hwel PHP exec(), setu perak ne c'hall ket LogCleaner labourat e mod turbo, met e mod streaming PHP. Kemmañ ar php.ini er c'hemennadenn disable_functions a reizh ar gudenn."
 },"pluralForm" :"nplurals=5; plural=(n % 10 == 1 && n % 100 != 11 && n % 100 != 71 && n % 100 != 91) ? 0 : ((n % 10 == 2 && n % 100 != 12 && n % 100 != 72 && n % 100 != 92) ? 1 : ((((n % 10 == 3 || n % 10 == 4) || n % 10 == 9) && (n % 100 < 10 || n % 100 > 19) && (n % 100 < 70 || n % 100 > 79) && (n % 100 < 90 || n % 100 > 99)) ? 2 : ((n != 0 && n % 1000000 == 0) ? 3 : 4)));"
 }

@@ -81,6 +81,7 @@
 "Shall a footer be displayed with useful buttons?": "Mostrarase un pé de páxina con botóns útiles?",
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner configurará a rotación do ficheiro de rexistro a partir dun tamaño de 100 MB no ficheiro de configuración config.php de Nextcloud?",
 "display minimized view?": "mostrar vista minimizada?",
-"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner escribirá avisos sobre o tamaño do ficheiro de rexistro no ficheiro de rexistro?"
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner escribirá avisos sobre o tamaño do ficheiro de rexistro no ficheiro de rexistro?",
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Ao parecer, a función PHP exec() non está dispoñible, polo que LogCleaner non pode funcionar en modo turbo, senón en modo streaming PHP. Cambiando o php.ini na directiva disable_functions soluciona o problema."
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

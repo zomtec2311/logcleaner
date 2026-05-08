@@ -81,6 +81,7 @@
 "Shall a footer be displayed with useful buttons?": "유용한 버튼이 있는 바닥글을 표시해야 합니까?",
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner는 Nextcloud의 구성 파일 config.php에서 로그 파일 크기를 100MB부터 회전하도록 설정해야 합니까?",
 "display minimized view?": "최소화된 보기를 표시하시겠습니까?",
-"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner가 로그 파일 크기에 대한 경고를 로그 파일에 기록합니까?"
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner가 로그 파일 크기에 대한 경고를 로그 파일에 기록합니까?",
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "분명히 PHP 함수 exec()를 사용할 수 없기 때문에 LogCleaner는 터보 모드에서는 작동할 수 없지만 PHP 스트리밍 모드에서는 작동할 수 있습니다. 비활성화_기능 지시문에서 php.ini를 변경하면 문제가 해결됩니다."
 },"pluralForm" :"nplurals=1; plural=0;"
 }

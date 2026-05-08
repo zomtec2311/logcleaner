@@ -81,6 +81,7 @@
 "Shall a footer be displayed with useful buttons?": "Chân trang có được hiển thị với các nút hữu ích không?",
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner có nên thiết lập xoay tệp nhật ký từ kích thước 100 MB trong tệp cấu hình config.php của Nextcloud không?",
 "display minimized view?": "hiển thị chế độ xem thu nhỏ?",
-"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner có viết cảnh báo về kích thước của tệp nhật ký vào tệp nhật ký không?"
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner có viết cảnh báo về kích thước của tệp nhật ký vào tệp nhật ký không?",
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Rõ ràng hàm PHP exec() không khả dụng, đó là lý do tại sao LogCleaner không thể hoạt động ở chế độ turbo mà ở chế độ phát trực tuyến PHP. Việc thay đổi php.ini trong lệnh vô hiệu hóa_functions sẽ khắc phục được sự cố."
 },"pluralForm" :"nplurals=1; plural=0;"
 }

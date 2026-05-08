@@ -85,6 +85,7 @@ OC.L10N.register(
 "Shall a footer be displayed with useful buttons?": "Botoi erabilgarriak dituen orri-oin bat bistaratuko al da?",
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner-ek konfiguratuko al du erregistro-fitxategiaren biraketa 100MB-ko tamainatik Nextcloud-en config.php konfigurazio fitxategian?",
 "display minimized view?": "ikuspegi minimizatua bistaratu?",
-"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner-ek erregistro-fitxategiaren tamainari buruzko abisuak idatziko al ditu erregistro-fitxategian?"
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner-ek erregistro-fitxategiaren tamainari buruzko abisuak idatziko al ditu erregistro-fitxategian?",
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Antza denez, PHP funtzioa exec() ez dago eskuragarri, horregatik LogCleaner-ek ezin du turbo moduan funtzionatu, PHP streaming moduan baizik. Disable_functions zuzentarauan php.ini aldatzeak arazoa konpontzen du."
 },
 "nplurals=2; plural=n != 1;");

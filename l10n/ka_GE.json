@@ -81,6 +81,7 @@
 "Shall a footer be displayed with useful buttons?": "უნდა იყოს ნაჩვენები ქვედა კოლონტიტული სასარგებლო ღილაკებით?",
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "უნდა დააყენოს LogCleaner log ფაილის როტაცია 100 მბ ზომიდან Nextcloud-ის კონფიგურაციის ფაილში config.php?",
 "display minimized view?": "აჩვენე შემცირებული ხედი?",
-"Shall LogCleaner write warnings about the size of the log file to the log file?": "უნდა ჩაწეროს თუ არა LogCleaner-მა გაფრთხილებები ჟურნალის ფაილის ზომის შესახებ ჟურნალის ფაილში?"
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "უნდა ჩაწეროს თუ არა LogCleaner-მა გაფრთხილებები ჟურნალის ფაილის ზომის შესახებ ჟურნალის ფაილში?",
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "როგორც ჩანს, PHP ფუნქცია exec() არ არის ხელმისაწვდომი, რის გამოც LogCleaner ვერ მუშაობს ტურბო რეჟიმში, მაგრამ PHP ნაკადის რეჟიმში. php.ini-ის შეცვლა დირექტივაში disable_functions აგვარებს პრობლემას."
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

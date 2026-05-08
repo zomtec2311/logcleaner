@@ -81,6 +81,7 @@
 "Shall a footer be displayed with useful buttons?": "页脚是否应该显示有用的按钮？",
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner是否需要在Nextcloud的配置文件config.php中设置从100MB大小开始的日志文件轮换？",
 "display minimized view?": "显示最小化视图？",
-"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner 是否应该将有关日志文件大小的警告写入日志文件？"
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner 是否应该将有关日志文件大小的警告写入日志文件？",
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "显然 PHP 函数 exec() 不可用，这就是为什么 LogCleaner 不能在 Turbo 模式下工作，但在 PHP Streaming 模式下工作。更改指令disable_functions 中的php.ini 可以解决该问题。"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

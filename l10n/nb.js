@@ -85,6 +85,7 @@ OC.L10N.register(
 "Shall a footer be displayed with useful buttons?": "Skal en bunntekst vises med nyttige knapper?",
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Skal LogCleaner sette opp rotasjonen av loggfilen fra en størrelse på 100MB i konfigurasjonsfilen config.php til Nextcloud?",
 "display minimized view?": "vise minimert visning?",
-"Shall LogCleaner write warnings about the size of the log file to the log file?": "Skal LogCleaner skrive advarsler om størrelsen på loggfilen til loggfilen?"
+"Shall LogCleaner write warnings about the size of the log file to the log file?": "Skal LogCleaner skrive advarsler om størrelsen på loggfilen til loggfilen?",
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Tilsynelatende er ikke PHP-funksjonen exec() tilgjengelig, og det er grunnen til at LogCleaner ikke kan fungere i turbomodus, men i PHP-strømmemodus. Å endre php.ini i direktivet disable_functions løser problemet."
 },
 "nplurals=2; plural=n != 1;");
