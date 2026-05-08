@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.4.5
+
+### Changed
+- language files updated
+
+### Added
+- Functionality guarantee even if some hosting providers have blocked the exec() function
+
 ## 1.4.4
 
 ### Added
