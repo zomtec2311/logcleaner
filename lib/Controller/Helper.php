@@ -40,6 +40,7 @@ class Helper
     private IConfig $config;
     private $appName;
     private $l;
+    private LogService $logService;
     #[NoCSRFRequired]
     #[FrontpageRoute(verb: 'POST', url: '/')]
 
@@ -222,66 +223,127 @@ class Helper
         return $obja;
     }
 
-    public function corruptline(?int $zeile, ?string $wtlog): array {
-        $format = $this->config->getSystemValue('logdateformat', \DateTimeInterface::ATOM);
-		$logTimeZone = $this->config->getSystemValue('logtimezone', 'UTC');
-		try {
-			$timezone = new \DateTimeZone($logTimeZone);
-		} catch (\Exception $e) {
-			$timezone = new \DateTimeZone('UTC');
-		}
-		$time = \DateTime::createFromFormat('U.u', number_format(microtime(true), 4, '.', ''));
-		if ($time === false) {
-			$time = new \DateTime('now', $timezone);
-		} else {
-			$time->setTimezone($timezone);
-		}
-		$request = Server::get(IRequest::class);
-		$reqId = $request->getId();
-		$remoteAddr = $request->getRemoteAddress();
-		$time = $time->format($format);
-		$url = ($request->getRequestUri() !== '') ? $request->getRequestUri() : '--';
-		$method = $request->getMethod();
+	public function corruptline(?int $zeile, ?string $wtlog): array {
+      $format = $this->config->getSystemValue('logdateformat', \DateTimeInterface::ATOM);
+      $logTimeZone = $this->config->getSystemValue('logtimezone', 'UTC');
+      try {
+          $timezone = new \DateTimeZone($logTimeZone);
+      } catch (\Exception $e) {
+          $timezone = new \DateTimeZone('UTC');
+      }
 
-        $userAgent = $request->getHeader('User-Agent');
-		if ($userAgent === '') {
-			$userAgent = '--';
-		}
-		$version = $this->config->getSystemValue('version', '');
-		$scriptName = $request->getScriptName();
+      $time = \DateTime::createFromFormat('U.u', number_format(microtime(true), 4, '.', ''));
+      if ($time === false) {
+          $time = new \DateTime('now', $timezone);
+      } else {
+          $time->setTimezone($timezone);
+      }
 
-        $fragment = shell_exec("sed -n '{$zeile}p' {$wtlog}");
+      $request = Server::get(IRequest::class);
+      $reqId = $request->getId();
+      $remoteAddr = $request->getRemoteAddress();
+      $time = $time->format($format);
+      $url = ($request->getRequestUri() !== '') ? $request->getRequestUri() : '--';
+      $method = $request->getMethod();
+      $userAgent = $request->getHeader('User-Agent') ?: '--';
+      $version = $this->config->getSystemValue('version', '');
+      $scriptName = $request->getScriptName();
 
+      $file = $wtlog;
+      $fragment = '';
+      if ($this->isExecAvailable()) {
+          $fragment = exec("sed -n '{$zeile}p' " . escapeshellarg($file));
+      } else {
+          try {
+              $fileObj = new \SplFileObject($file);
+              $fileObj->seek($zeile - 1);
+              $fragment = $fileObj->current();
+          } catch (\Exception $e) {
+              $fragment = 'could not read line';
+          }
+      }
 
-        $fragment = str_replace(array('{', '}'), '', $fragment);
-        $fragment = preg_replace("/[\"'{}\x00-\x1F\x7F]/u", '', $fragment);
-        $fragment = trim($fragment);
-        if ($fragment === '') $fragment = 'empty';
-        $message = "Corrupt line detected within your logfile. LogCleaner has fixed this error. This log entry can be deleted without verification. Corrupt line was: $fragment";
+      $fragment = str_replace(['{', '}'], '', (string)$fragment);
+      $fragment = preg_replace("/[\"'{}\x00-\x1F\x7F]/u", '', $fragment);
+      $fragment = trim($fragment);
+      if ($fragment === '') $fragment = 'empty';
 
-        $replaceWith = '{"reqId": "'.$reqId.'","level": 3,"time": "'.$time.'","remoteAddr": "'.$remoteAddr.'","user": "","app": "logcleaner","method": "'.$method.'","url": "'.$url.'","scriptName": "'.$scriptName.'","message": "'.$message.'","userAgent": "'.$userAgent.'","version": "'.$version.'"}';
-        $neuer = $replaceWith;
-        $file = $wtlog;
-        $tmpNew = tempnam(sys_get_temp_dir(), 'newline_');
-        file_put_contents($tmpNew, $neuer . PHP_EOL);
-        $cmd = sprintf(
-            "awk -v n=%d -v f=%s 'NR==n{while((getline line < f)>0){print line}; close(f); next} {print}' %s > %s && mv %s %s",
-            $zeile,
-            escapeshellarg($tmpNew),
-            escapeshellarg($file),
-            escapeshellarg($file . '.tmp'),
-            escapeshellarg($file . '.tmp'),
-            escapeshellarg($file)
-        );
-        $result = shell_exec($cmd . ' 2>&1');
-        if ($result !== null && $result !== '') {
+      $message = "Corrupt line detected within your logfile. LogCleaner has fixed this error. This log entry can be deleted without verification. Corrupt line was: $fragment";
+
+      $replaceWith = json_encode([
+          'reqId' => $reqId,
+          'level' => 3,
+          'time' => $time,
+          'remoteAddr' => $remoteAddr,
+          'user' => '',
+          'app' => 'logcleaner',
+          'method' => $method,
+          'url' => $url,
+          'scriptName' => $scriptName,
+          'message' => $message,
+          'userAgent' => $userAgent,
+          'version' => $version
+      ]);
+
+      if ($this->isExecAvailable()) {
+          $tmpNew = tempnam(sys_get_temp_dir(), 'newline_');
+          file_put_contents($tmpNew, $replaceWith . PHP_EOL);
+
+          $cmd = sprintf(
+              "awk -v n=%d -v f=%s 'NR==n{while((getline line < f)>0){print line}; close(f); next} {print}' %s > %s && mv %s %s",
+              $zeile,
+              escapeshellarg($tmpNew),
+              escapeshellarg($file),
+              escapeshellarg($file . '.tmp'),
+              escapeshellarg($file . '.tmp'),
+              escapeshellarg($file)
+          );
+          exec($cmd . ' 2>&1');
+          @unlink($tmpNew);
+      } else {
+          $tempFile = $file . '.tmp';
+          $handleIn = fopen($file, 'r');
+          $handleOut = fopen($tempFile, 'w');
+
+          if ($handleIn && $handleOut) {
+              $currentLine = 0;
+              while (($line = fgets($handleIn)) !== false) {
+                  $currentLine++;
+                  if ($currentLine === $zeile) {
+                      fwrite($handleOut, $replaceWith . PHP_EOL);
+                  } else {
+                      fwrite($handleOut, $line);
+                  }
+              }
+              fclose($handleIn);
+              fclose($handleOut);
+              rename($tempFile, $file);
+          }
+      }
+
+      return [
+          'time' => $time,
+          'zeile' => $zeile,
+          'log' => $wtlog,
+          'logger' => $fragment,
+      ];
+  }
+
+  public function isExecAvailable() {
+        if (!function_exists('exec')) {
+            return false;
         }
-        @unlink($tmpNew);
-        return array(
-            'time' => $time,
-            'zeile' => $zeile,
-            'log' => $wtlog,
-            'logger' => $fragment,
-        );
-	}
+        $disabled = explode(',', ini_get('disable_functions'));
+        $disabled = array_map('trim', $disabled);
+
+        if (in_array('exec', $disabled)) {
+            return false;
+        }
+        try {
+            @exec('echo 1', $output, $returnVar);
+            return ($returnVar === 0);
+        } catch (Exception $e) {
+            return false;
+        }
+    }
 }
