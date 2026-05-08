@@ -455,7 +455,7 @@ class LogsController extends Controller {
                 $wtlogfilezeilen = intval(exec("wc -l " . $wtlogfile));
             }
             else {
-                $wtlogfilezeilen = count($this->helper->wtlogtoarr($wtlogfile)) + 1000;
+                $wtlogfilezeilen = count($this->helper->wtlogtoarr($wtlogfile));
             }
         } else {
             $wtlogfilezeilen = 0;
