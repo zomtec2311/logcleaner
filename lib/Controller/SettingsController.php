@@ -87,6 +87,7 @@ class SettingsController extends Controller {
 			'LogFile' => $this->logService->getLogFile(),
 			'AuditFile' => $this->logService->getAuditFile(),
 			'FlowFile' => $this->logService->getFlowFile(),
+			'isExecAvailable' => $this->logService->isExecAvailable(),
 		]);
 	}
 
