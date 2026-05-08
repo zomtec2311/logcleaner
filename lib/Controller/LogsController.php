@@ -383,10 +383,7 @@ class LogsController extends Controller {
     public function dellines(?int $level, ?array $dellines): DataResponse {
         $file = $this->logService->getLogFile();
         $filesizebefore = filesize($file);
-        $reversedLines = array_reverse($dellines);
-        $anzahl = count($reversedLines);
-        $deleted = $anzahl;
-        $rows = $dellines;
+        $deleted = count($dellines);
         switch ($level) {
             case 0:
                 $levelname = 'DEBUG';
@@ -405,17 +402,10 @@ class LogsController extends Controller {
             break;
             default:
         }
-        $rowsStr = implode(', ', $rows);
-        $deleteCommands = [];
-        foreach ($reversedLines as $line) {
-            $deleteCommands[] = "{$line}d";
-        }
-        $commandString = implode(';', $deleteCommands);
-        $finalCommand = "sed -i " . escapeshellarg($commandString) . " " . escapeshellarg($file);
-        exec($finalCommand);
+        $withorwithout = $this->logService->smartDeleteLines($file, $dellines);
         $filesizeafter = filesize($file);
         $filesizediff = $this->wtfilesize(($filesizebefore - $filesizeafter),2);
-        $output = ($deleted > 1) ? "LogCleaner: For level $levelname $deleted lines have been deleted. $filesizediff of storage space cleared in the file $file" : "LogCleaner: For level $levelname $deleted line has been deleted. $filesizediff of storage space cleared in the file $file";
+        $output = ($deleted > 1) ? "LogCleaner $withorwithout: For level $levelname $deleted lines have been deleted. $filesizediff of storage space cleared in the file $file" : "LogCleaner $withorwithout: For level $levelname $deleted line has been deleted. $filesizediff of storage space cleared in the file $file";
         $this->logger->info($output);
         return new DataResponse([
             'status' => 'success'
@@ -425,21 +415,11 @@ class LogsController extends Controller {
     public function dellinesapp(?string $app, ?array $dellines): DataResponse {
         $file = $this->logService->getLogFile();
         $filesizebefore = filesize($file);
-        $reversedLines = array_reverse($dellines);
-        $anzahl = count($reversedLines);
-        $deleted = $anzahl;
-        $rows = $dellines;
-        $rowsStr = implode(', ', $rows);
-        $deleteCommands = [];
-        foreach ($reversedLines as $line) {
-            $deleteCommands[] = "{$line}d";
-        }
-        $commandString = implode(';', $deleteCommands);
-        $finalCommand = "sed -i " . escapeshellarg($commandString) . " " . escapeshellarg($file);
-        exec($finalCommand);
+        $deleted = count($dellines);
+        $withorwithout = $this->logService->smartDeleteLines($file, $dellines);
         $filesizeafter = filesize($file);
         $filesizediff = $this->wtfilesize(($filesizebefore - $filesizeafter),2);
-        $output = ($deleted > 1) ? "LogCleaner: For the app '$app' $deleted lines have been deleted. $filesizediff of storage space cleared in the file $file" : "LogCleaner: For the app '$app' $deleted line has been deleted. $filesizediff of storage space cleared in the file $file";
+        $output = ($deleted > 1) ? "LogCleaner $withorwithout: For the app '$app' $deleted lines have been deleted. $filesizediff of storage space cleared in the file $file" : "LogCleaner $withorwithout: For the app '$app' $deleted line has been deleted. $filesizediff of storage space cleared in the file $file";
         $this->logger->info($output);
         return new DataResponse([
             'status' => 'success',
@@ -450,11 +430,10 @@ class LogsController extends Controller {
 		if ($logid === null) {
 			$logid = null;
 		}
-		$logid = intval($logid) + 1;
+		$logidarray = array();
+        array_push($logidarray, intval($logid) + 1);
         $file = $this->logService->getLogFile();
-        $deleteCommand = "{$logid} d";
-        $finalCommand = "sed -i " . escapeshellarg($deleteCommand) . " " . escapeshellarg($file);
-        exec($finalCommand);
+        $this->logService->smartDeleteLines($file, $logidarray);
         return new DataResponse([
             'status' => 'success',
         ]);
@@ -463,33 +442,8 @@ class LogsController extends Controller {
     public function showdetail(string $detail): DataResponse {
         $detail = (int) $detail + 1;
         $file = $this->logService->getLogFile();
-        $finalCommand = "sed -n '$detail p' $file";
-        $out = exec($finalCommand);
         return new DataResponse([
-					 'detail' => $out,
-            ]);
-
-		if ($detail === null) {
-			$detail = null;
-		}
-		$wt_out = "";
-		$array = [];
-		$wtarr =[];
-		$wtlogfile = $this->logService->getLogFile();
-				if (!file_exists($wtlogfile)) {
-					return new DataResponse([
-					 'detail' => $this->l->t('log file cannot be located'),
-            ]);
-				}
-		$wwt = $this->helper->wtlogtoarr($wtlogfile);
-		if (isset($detail)) {
-			$wtdetail = $wwt[$detail];
-			return new DataResponse([
-					 'detail' => $wtdetail,
-            ]);
-		}
-		return new DataResponse([
-					 'detail' => '',
+					 'detail' => $this->logService->smartDetail($file, $detail),
             ]);
 	}
 
@@ -497,7 +451,12 @@ class LogsController extends Controller {
 		$wtlogfile = $this->logService->getLogFile();
 
         if (file_exists($wtlogfile)) {
-            $wtlogfilezeilen = intval(exec("wc -l " . $wtlogfile));
+            if ($this->logService->isExecAvailable()) {
+                $wtlogfilezeilen = intval(exec("wc -l " . $wtlogfile));
+            }
+            else {
+                $wtlogfilezeilen = count($this->helper->wtlogtoarr($wtlogfile)) + 1000;
+            }
         } else {
             $wtlogfilezeilen = 0;
         }
