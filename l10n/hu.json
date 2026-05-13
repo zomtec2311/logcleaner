@@ -82,6 +82,20 @@
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "A LogCleaner beállítja a naplófájl elforgatását 100 MB-os mérettől a Nextcloud config.php konfigurációs fájljában?",
 "display minimized view?": "kicsinyített nézet megjelenítése?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "A LogCleaner figyelmeztetéseket írjon a naplófájl méretére vonatkozóan a naplófájlba?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Úgy tűnik, a PHP exec() függvény nem elérhető, ezért a LogCleaner nem turbó módban, hanem PHP streaming módban működik. A php.ini módosítása a disable_functions direktívában megoldja a problémát."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Úgy tűnik, a PHP exec() függvény nem elérhető, ezért a LogCleaner nem turbó módban, hanem PHP streaming módban működik. A php.ini módosítása a disable_functions direktívában megoldja a problémát.",
+"Shall a log report be sent by email?": "Naplójelentést kell küldeni e-mailben?",
+"Log Report Sending Frequency": "Napló jelentés küldési gyakorisága",
+"daily": "napi",
+"weekly": "heti",
+"monthly": "havi",
+"To which administrator shall the email be sent?": "Melyik rendszergazdának kell elküldeni az e-mailt?",
+"Choose an Admin": "Válasszon egy rendszergazdát",
+"Test E-Mail": "Teszt e-mail",
+"Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud naplóösszefoglaló (%1$s – %2$s)",
+"Hello %1$s,": "Kedves %1$s!",
+"in the period from %1$s to %2$s new log entries were registered.": "a %1$s és %2$s közötti időszakban új naplóbejegyzések kerültek regisztrálásra.",
+"Distribution by log level:": "Megoszlás naplószint szerint:",
+"Details can be found in the log management of your Nextcloud instance.": "A részleteket a Nextcloud-példány naplókezelésében találja.",
+"This is a test email": "Ez egy teszt e-mail"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

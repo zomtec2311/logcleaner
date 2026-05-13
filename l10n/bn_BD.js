@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "লগক্লিনার কি নেক্সটক্লাউডের কনফিগারেশন ফাইল config.php-এ 100MB সাইজ থেকে লগ ফাইলের ঘূর্ণন সেট আপ করবে?",
 "display minimized view?": "প্রদর্শন মিনিমাইজড ভিউ?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner কি লগ ফাইলে লগ ফাইলের আকার সম্পর্কে সতর্কতা লিখবে?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "স্পষ্টতই PHP ফাংশন exec() উপলব্ধ নেই, যে কারণে LogCleaner টার্বো মোডে কাজ করতে পারে না, কিন্তু PHP স্ট্রিমিং মোডে। disable_functions নির্দেশিকায় php.ini পরিবর্তন করা সমস্যার সমাধান করে।"
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "স্পষ্টতই PHP ফাংশন exec() উপলব্ধ নেই, যে কারণে LogCleaner টার্বো মোডে কাজ করতে পারে না, কিন্তু PHP স্ট্রিমিং মোডে। disable_functions নির্দেশিকায় php.ini পরিবর্তন করা সমস্যার সমাধান করে।",
+                 "Shall a log report be sent by email?": "একটি লগ রিপোর্ট ইমেল দ্বারা পাঠানো হবে?",
+"Log Report Sending Frequency": "লগ রিপোর্ট পাঠানো ফ্রিকোয়েন্সি",
+"daily": "দৈনিক",
+"weekly": "সাপ্তাহিক",
+"monthly": "মাসিক",
+"To which administrator shall the email be sent?": "কোন প্রশাসকের কাছে ইমেল পাঠানো হবে?",
+"Choose an Admin": "একজন অ্যাডমিন বেছে নিন",
+"Test E-Mail": "ই-মেইল পরীক্ষা করুন",
+"Nextcloud Log Summary (%1$s to %2$s)": "নেক্সটক্লাউড লগ সারাংশ (%1$s থেকে %2$s)",
+"Hello %1$s,": "হ্যালো %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "%1$s থেকে %2$s পর্যন্ত সময়ের মধ্যে নতুন লগ এন্ট্রি নিবন্ধিত হয়েছে।",
+"Distribution by log level:": "লগ স্তর দ্বারা বিতরণ:",
+"Details can be found in the log management of your Nextcloud instance.": "আপনার নেক্সটক্লাউড ইনস্ট্যান্সের লগ ম্যানেজমেন্টে বিশদ বিবরণ পাওয়া যাবে।",
+"This is a test email": "এটি একটি পরীক্ষামূলক ইমেল"
 },
 "nplurals=2; plural=n > 1;");

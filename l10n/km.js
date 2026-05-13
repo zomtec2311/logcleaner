@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "តើ LogCleaner នឹងរៀបចំការបង្វិលឯកសារកំណត់ហេតុពីទំហំ 100MB នៅក្នុងឯកសារកំណត់រចនាសម្ព័ន្ធ config.php នៃ Nextcloud ដែរឬទេ?",
 "display minimized view?": "បង្ហាញទិដ្ឋភាពបង្រួមអប្បបរមា?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "តើ LogCleaner នឹងសរសេរការព្រមានអំពីទំហំនៃឯកសារកំណត់ហេតុទៅកាន់ឯកសារកំណត់ហេតុដែរឬទេ?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "ជាក់ស្តែង មុខងារ PHP exec() មិនមានទេ ដែលនេះជាមូលហេតុដែល LogCleaner មិនអាចដំណើរការក្នុងរបៀប turbo ប៉ុន្តែនៅក្នុងរបៀបស្ទ្រីម PHP ។ ការផ្លាស់ប្តូរ php.ini នៅក្នុងការណែនាំ disable_functions ដោះស្រាយបញ្ហា។"
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "ជាក់ស្តែង មុខងារ PHP exec() មិនមានទេ ដែលនេះជាមូលហេតុដែល LogCleaner មិនអាចដំណើរការក្នុងរបៀប turbo ប៉ុន្តែនៅក្នុងរបៀបស្ទ្រីម PHP ។ ការផ្លាស់ប្តូរ php.ini នៅក្នុងការណែនាំ disable_functions ដោះស្រាយបញ្ហា។",
+                 "Shall a log report be sent by email?": "តើរបាយការណ៍កំណត់ហេតុត្រូវផ្ញើតាមអ៊ីមែលទេ?",
+"Log Report Sending Frequency": "កំណត់ហេតុនៃការបញ្ជូនប្រេកង់",
+"daily": "ប្រចាំថ្ងៃ",
+"weekly": "ប្រចាំសប្តាហ៍",
+"monthly": "ប្រចាំខែ",
+"To which administrator shall the email be sent?": "តើអ៊ីមែលត្រូវផ្ញើទៅអ្នកគ្រប់គ្រងណា?",
+"Choose an Admin": "ជ្រើសរើសអ្នកគ្រប់គ្រង",
+"Test E-Mail": "សាកល្បងអ៊ីមែល",
+"Nextcloud Log Summary (%1$s to %2$s)": "សង្ខេបកំណត់ហេតុ Nextcloud (%1$s ទៅ %2$s)",
+"Hello %1$s,": "សួស្តី %1$s",
+"in the period from %1$s to %2$s new log entries were registered.": "ក្នុងរយៈពេលពី %1$s ទៅ %2$s ធាតុកំណត់ហេតុថ្មីត្រូវបានចុះឈ្មោះ។",
+"Distribution by log level:": "ការចែកចាយតាមកម្រិតកំណត់ហេតុ៖",
+"Details can be found in the log management of your Nextcloud instance.": "ព័ត៌មានលម្អិតអាចរកបាននៅក្នុងការគ្រប់គ្រងកំណត់ហេតុនៃឧទាហរណ៍ Nextcloud របស់អ្នក។",
+"This is a test email": "នេះគឺជាអ៊ីមែលសាកល្បង"
 },
 "nplurals=1; plural=0;");

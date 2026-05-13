@@ -82,6 +82,20 @@
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner ನೆಕ್ಸ್ಟ್‌ಕ್ಲೌಡ್‌ನ ಕಾನ್ಫಿಗರೇಶನ್ ಫೈಲ್ config.php ನಲ್ಲಿ 100MB ಗಾತ್ರದಿಂದ ಲಾಗ್ ಫೈಲ್‌ನ ತಿರುಗುವಿಕೆಯನ್ನು ಹೊಂದಿಸಬಹುದೇ?",
 "display minimized view?": "ಕಡಿಮೆಗೊಳಿಸಿದ ವೀಕ್ಷಣೆಯನ್ನು ಪ್ರದರ್ಶಿಸುವುದೇ?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "ಲಾಗ್ ಫೈಲ್‌ನ ಗಾತ್ರದ ಕುರಿತು ಲಾಗ್‌ಕ್ಲೀನರ್ ಎಚ್ಚರಿಕೆಗಳನ್ನು ಲಾಗ್ ಫೈಲ್‌ಗೆ ಬರೆಯಬಹುದೇ?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "ಸ್ಪಷ್ಟವಾಗಿ PHP ಫಂಕ್ಷನ್ ಎಕ್ಸಿಕ್() ಲಭ್ಯವಿಲ್ಲ, ಅದಕ್ಕಾಗಿಯೇ LogCleaner ಟರ್ಬೊ ಮೋಡ್‌ನಲ್ಲಿ ಕಾರ್ಯನಿರ್ವಹಿಸುವುದಿಲ್ಲ, ಆದರೆ PHP ಸ್ಟ್ರೀಮಿಂಗ್ ಮೋಡ್‌ನಲ್ಲಿ. ಡೈರೆಕ್ಟಿವ್ disable_functions ನಲ್ಲಿ php.ini ಅನ್ನು ಬದಲಾಯಿಸುವುದು ಸಮಸ್ಯೆಯನ್ನು ಪರಿಹರಿಸುತ್ತದೆ."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "ಸ್ಪಷ್ಟವಾಗಿ PHP ಫಂಕ್ಷನ್ ಎಕ್ಸಿಕ್() ಲಭ್ಯವಿಲ್ಲ, ಅದಕ್ಕಾಗಿಯೇ LogCleaner ಟರ್ಬೊ ಮೋಡ್‌ನಲ್ಲಿ ಕಾರ್ಯನಿರ್ವಹಿಸುವುದಿಲ್ಲ, ಆದರೆ PHP ಸ್ಟ್ರೀಮಿಂಗ್ ಮೋಡ್‌ನಲ್ಲಿ. ಡೈರೆಕ್ಟಿವ್ disable_functions ನಲ್ಲಿ php.ini ಅನ್ನು ಬದಲಾಯಿಸುವುದು ಸಮಸ್ಯೆಯನ್ನು ಪರಿಹರಿಸುತ್ತದೆ.",
+"Shall a log report be sent by email?": "ಲಾಗ್ ವರದಿಯನ್ನು ಇಮೇಲ್ ಮೂಲಕ ಕಳುಹಿಸಬೇಕೆ?",
+"Log Report Sending Frequency": "ಲಾಗ್ ವರದಿ ಕಳುಹಿಸುವ ಆವರ್ತನ",
+"daily": "ಪ್ರತಿದಿನ",
+"weekly": "ವಾರಕ್ಕೊಮ್ಮೆ",
+"monthly": "ಮಾಸಿಕ",
+"To which administrator shall the email be sent?": "ಇಮೇಲ್ ಅನ್ನು ಯಾವ ನಿರ್ವಾಹಕರಿಗೆ ಕಳುಹಿಸಬೇಕು?",
+"Choose an Admin": "ನಿರ್ವಾಹಕರನ್ನು ಆಯ್ಕೆ ಮಾಡಿ",
+"Test E-Mail": "ಇ-ಮೇಲ್ ಅನ್ನು ಪರೀಕ್ಷಿಸಿ",
+"Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud ಲಾಗ್ ಸಾರಾಂಶ (%1$s ರಿಂದ %2$s)",
+"Hello %1$s,": "ನಮಸ್ಕಾರ %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "%1$s ನಿಂದ %2$s ವರೆಗಿನ ಅವಧಿಯಲ್ಲಿ ಹೊಸ ಲಾಗ್ ನಮೂದುಗಳನ್ನು ನೋಂದಾಯಿಸಲಾಗಿದೆ.",
+"Distribution by log level:": "ಲಾಗ್ ಮಟ್ಟದ ಮೂಲಕ ವಿತರಣೆ:",
+"Details can be found in the log management of your Nextcloud instance.": "ನಿಮ್ಮ Nextcloud ನಿದರ್ಶನದ ಲಾಗ್ ನಿರ್ವಹಣೆಯಲ್ಲಿ ವಿವರಗಳನ್ನು ಕಾಣಬಹುದು.",
+"This is a test email": "ಇದು ಪರೀಕ್ಷಾ ಇಮೇಲ್ ಆಗಿದೆ"
 },"pluralForm" :"nplurals=2; plural=n > 1;"
 }

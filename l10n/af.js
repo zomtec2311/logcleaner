@@ -87,6 +87,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Sal LogCleaner die rotasie van die loglêer vanaf 'n grootte van 100MB in die konfigurasielêer config.php van Nextcloud opstel?",
 "display minimized view?": "geminimaliseerde aansig vertoon?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "Sal LogCleaner waarskuwings oor die grootte van die loglêer na die loglêer skryf?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Blykbaar is die PHP-funksie exec() nie beskikbaar nie, en daarom kan LogCleaner nie in turbomodus werk nie, maar in PHP-stroommodus. Die verandering van die php.ini in die richtlijn disable_functions los die probleem op."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Blykbaar is die PHP-funksie exec() nie beskikbaar nie, en daarom kan LogCleaner nie in turbomodus werk nie, maar in PHP-stroommodus. Die verandering van die php.ini in die richtlijn disable_functions los die probleem op.",
+                 "Shall a log report be sent by email?": "Sal 'n logverslag per e-pos gestuur word?",
+"Log Report Sending Frequency": "Log Verslag Stuur Frekwensie",
+"daily": "daagliks",
+"weekly": "weekliks",
+"monthly": "maandeliks",
+"To which administrator shall the email be sent?": "Aan watter administrateur sal die e-pos gestuur word?",
+"Choose an Admin": "Kies 'n Admin",
+"Test E-Mail": "Toets e-pos",
+"Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud Log Opsomming (%1$s na %2$s)",
+"Hello %1$s,": "Hallo %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "in die tydperk vanaf %1$s tot %2$s is nuwe loginskrywings geregistreer.",
+"Distribution by log level:": "Verspreiding volgens logvlak:",
+"Details can be found in the log management of your Nextcloud instance.": "Besonderhede kan gevind word in die logbestuur van u Nextcloud-instansie.",
+"This is a test email": "Dit is 'n toets-e-pos"
 },
 "nplurals=2; plural=n != 1;");

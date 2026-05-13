@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner có nên thiết lập xoay tệp nhật ký từ kích thước 100 MB trong tệp cấu hình config.php của Nextcloud không?",
 "display minimized view?": "hiển thị chế độ xem thu nhỏ?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner có viết cảnh báo về kích thước của tệp nhật ký vào tệp nhật ký không?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Rõ ràng hàm PHP exec() không khả dụng, đó là lý do tại sao LogCleaner không thể hoạt động ở chế độ turbo mà ở chế độ phát trực tuyến PHP. Việc thay đổi php.ini trong lệnh vô hiệu hóa_functions sẽ khắc phục được sự cố."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Rõ ràng hàm PHP exec() không khả dụng, đó là lý do tại sao LogCleaner không thể hoạt động ở chế độ turbo mà ở chế độ phát trực tuyến PHP. Việc thay đổi php.ini trong lệnh vô hiệu hóa_functions sẽ khắc phục được sự cố.",
+                 "Shall a log report be sent by email?": "Báo cáo nhật ký có được gửi qua email không?",
+"Log Report Sending Frequency": "Tần suất gửi báo cáo nhật ký",
+"daily": "hằng ngày",
+"weekly": "hàng tuần",
+"monthly": "hàng tháng",
+"To which administrator shall the email be sent?": "Email sẽ được gửi đến quản trị viên nào?",
+"Choose an Admin": "Chọn một quản trị viên",
+"Test E-Mail": "Kiểm tra email",
+"Nextcloud Log Summary (%1$s to %2$s)": "Tóm tắt nhật ký Nextcloud (%1$s đến %2$s)",
+"Hello %1$s,": "Xin chào NAMEINS,",
+"in the period from %1$s to %2$s new log entries were registered.": "trong khoảng thời gian từ %1$s đến %2$s, các mục nhật ký mới đã được đăng ký.",
+"Distribution by log level:": "Phân phối theo cấp độ nhật ký:",
+"Details can be found in the log management of your Nextcloud instance.": "Bạn có thể tìm thấy thông tin chi tiết trong phần quản lý nhật ký của phiên bản Nextcloud của bạn.",
+"This is a test email": "Đây là một email thử nghiệm"
 },
 "nplurals=1; plural=0;");

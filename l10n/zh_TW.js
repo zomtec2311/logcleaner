@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner是否需要在Nextcloud的設定檔config.php中設定從100MB大小開始的日誌檔案輪替？",
 "display minimized view?": "顯示最小化視圖？",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner 是否應該將有關日誌檔案大小的警告寫入日誌檔案？",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "顯然 PHP 函數 exec() 不可用，這就是為什麼 LogCleaner 不能在 Turbo 模式下運作，但在 PHP Streaming 模式下運作。更改指令disable_functions 中的php.ini 可以解決該問題。"
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "顯然 PHP 函數 exec() 不可用，這就是為什麼 LogCleaner 不能在 Turbo 模式下運作，但在 PHP Streaming 模式下運作。更改指令disable_functions 中的php.ini 可以解決該問題。",
+                 "Shall a log report be sent by email?": "日誌報告應該透過電子郵件發送嗎？",
+"Log Report Sending Frequency": "日誌報告發送頻率",
+"daily": "日常的",
+"weekly": "每週",
+"monthly": "每月",
+"To which administrator shall the email be sent?": "電子郵件應發送給哪個管理員？",
+"Choose an Admin": "選擇管理員",
+"Test E-Mail": "測試電子郵件",
+"Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud 日誌摘要（%1$s 到 %2$s）",
+"Hello %1$s,": "你好，納梅恩斯，",
+"in the period from %1$s to %2$s new log entries were registered.": "從 %1$s 到 %2$s 期間，註冊了新的日誌條目。",
+"Distribution by log level:": "按日誌等級分佈：",
+"Details can be found in the log management of your Nextcloud instance.": "詳細資訊可以在 Nextcloud 實例的日誌管理中找到。",
+"This is a test email": "這是一封測試電子郵件"
 },
 "nplurals=1; plural=0;");

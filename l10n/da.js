@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Skal LogCleaner indstille rotationen af ​​logfilen fra en størrelse på 100MB i konfigurationsfilen config.php i Nextcloud?",
 "display minimized view?": "vise minimeret visning?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "Skal LogCleaner skrive advarsler om størrelsen af ​​logfilen til logfilen?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Tilsyneladende er PHP-funktionen exec() ikke tilgængelig, hvorfor LogCleaner ikke kan fungere i turbo-tilstand, men i PHP-streaming-tilstand. Ændring af php.ini i direktivet disable_functions løser problemet."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Tilsyneladende er PHP-funktionen exec() ikke tilgængelig, hvorfor LogCleaner ikke kan fungere i turbo-tilstand, men i PHP-streaming-tilstand. Ændring af php.ini i direktivet disable_functions løser problemet.",
+                 "Shall a log report be sent by email?": "Skal der sendes en lograpport på e-mail?",
+"Log Report Sending Frequency": "Log Rapport Send Frekvens",
+"daily": "daglig",
+"weekly": "ugentlig",
+"monthly": "månedlig",
+"To which administrator shall the email be sent?": "Hvilken administrator skal e-mailen sendes til?",
+"Choose an Admin": "Vælg en administrator",
+"Test E-Mail": "Test e-mail",
+"Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud-logoversigt (%1$s til %2$s)",
+"Hello %1$s,": "Hej %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "i perioden fra %1$s til %2$s blev der registreret nye logposter.",
+"Distribution by log level:": "Fordeling efter logniveau:",
+"Details can be found in the log management of your Nextcloud instance.": "Detaljer kan findes i logstyringen af ​​din Nextcloud-instans.",
+"This is a test email": "Dette er en test-e-mail"
 },
 "nplurals=2; plural=n != 1;");

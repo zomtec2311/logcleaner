@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Дали LogCleaner ќе ја постави ротацијата на датотеката за евиденција од 100 MB во конфигурациската датотека config.php на Nextcloud?",
 "display minimized view?": "прикаже минимизиран приказ?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "Дали LogCleaner ќе напише предупредувања за големината на датотеката за евиденција во датотеката за евиденција?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Очигледно PHP функцијата exec() не е достапна, поради што LogCleaner не може да работи во турбо режим, туку во режим на стриминг на PHP. Промената на php.ini во директивата disable_functions го решава проблемот."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Очигледно PHP функцијата exec() не е достапна, поради што LogCleaner не може да работи во турбо режим, туку во режим на стриминг на PHP. Промената на php.ini во директивата disable_functions го решава проблемот.",
+                 "Shall a log report be sent by email?": "Дали ќе се испрати извештај за е-пошта?",
+"Log Report Sending Frequency": "Фреквенција на испраќање на извештај за евиденција",
+"daily": "дневно",
+"weekly": "неделно",
+"monthly": "месечно",
+"To which administrator shall the email be sent?": "До кој администратор ќе се испрати е-поштата?",
+"Choose an Admin": "Изберете администратор",
+"Test E-Mail": "Тест на е-пошта",
+"Nextcloud Log Summary (%1$s to %2$s)": "Резиме на евиденција на Nextcloud (%1$s до %2$s)",
+"Hello %1$s,": "Здраво %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "во периодот од %1$s до %2$s беа регистрирани нови записи во дневникот.",
+"Distribution by log level:": "Дистрибуција по ниво на дневник:",
+"Details can be found in the log management of your Nextcloud instance.": "Деталите може да се најдат во управувањето со дневници на вашиот пример на Nextcloud.",
+"This is a test email": "Ова е тест е-пошта"
 },
 "nplurals=2; plural=(n==1 || n%10==1 ? 0 : 1);");

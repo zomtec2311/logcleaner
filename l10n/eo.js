@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Ĉu LogCleaner agordu la rotacion de la protokolo-dosiero de grandeco de 100MB en la agorda dosiero config.php de Nextcloud?",
 "display minimized view?": "montri minimumigitan vidon?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "Ĉu LogCleaner skribos avertojn pri la grandeco de la protokolo-dosiero al la protokolo-dosiero?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Ŝajne la PHP-funkcio exec() ne disponeblas, tial LogCleaner ne povas funkcii en turba reĝimo, sed en PHP-flua reĝimo. Ŝanĝi la php.ini en la direktivo disable_functions riparas la problemon."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Ŝajne la PHP-funkcio exec() ne disponeblas, tial LogCleaner ne povas funkcii en turba reĝimo, sed en PHP-flua reĝimo. Ŝanĝi la php.ini en la direktivo disable_functions riparas la problemon.",
+                 "Shall a log report be sent by email?": "Ĉu registrilo-raporto estos sendita retpoŝte?",
+"Log Report Sending Frequency": "Log Raporto Sendanta Ofteco",
+"daily": "ĉiutage",
+"weekly": "ĉiusemajne",
+"monthly": "ĉiumonate",
+"To which administrator shall the email be sent?": "Al kiu administranto oni sendos la retpoŝton?",
+"Choose an Admin": "Elektu Administranton",
+"Test E-Mail": "Testa Retpoŝto",
+"Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud Protokolo-Resumo (%1$s al %2$s)",
+"Hello %1$s,": "Saluton %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "en la periodo de %1$s ĝis %2$s novaj protokolaj enskriboj estis registritaj.",
+"Distribution by log level:": "Distribuo laŭ lognivelo:",
+"Details can be found in the log management of your Nextcloud instance.": "Detaloj troveblas en la protokolo-administrado de via Nextcloud-instanco.",
+"This is a test email": "Ĉi tio estas prova retpoŝto"
 },
 "nplurals=2; plural=n != 1;");

@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Á LogCleaner að setja upp snúning logskrárinnar úr stærðinni 100MB í stillingarskránni config.php af Nextcloud?",
 "display minimized view?": "sýna lágmarkað útsýni?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "Á LogCleaner að skrifa viðvaranir um stærð annálaskrárinnar í logskrána?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Svo virðist sem PHP aðgerðin exec() er ekki tiltæk, þess vegna getur LogCleaner ekki virkað í turbo ham, heldur í PHP streymisham. Að breyta php.ini í tilskipuninni disable_functions lagar vandamálið."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Svo virðist sem PHP aðgerðin exec() er ekki tiltæk, þess vegna getur LogCleaner ekki virkað í turbo ham, heldur í PHP streymisham. Að breyta php.ini í tilskipuninni disable_functions lagar vandamálið.",
+                 "Shall a log report be sent by email?": "Á að senda dagbókarskýrslu með tölvupósti?",
+"Log Report Sending Frequency": "Sendingartíðni logskýrslu",
+"daily": "daglega",
+"weekly": "vikulega",
+"monthly": "mánaðarlega",
+"To which administrator shall the email be sent?": "Til hvaða stjórnanda á að senda tölvupóstinn?",
+"Choose an Admin": "Veldu stjórnanda",
+"Test E-Mail": "Prófaðu tölvupóst",
+"Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud Log Yfirlit (%1$s til %2$s)",
+"Hello %1$s,": "Halló %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "á tímabilinu frá %1$s til %2$s voru nýjar annálarfærslur skráðar.",
+"Distribution by log level:": "Dreifing eftir skráarstigi:",
+"Details can be found in the log management of your Nextcloud instance.": "Upplýsingar er að finna í annálastjórnun Nextcloud tilviksins þíns.",
+"This is a test email": "Þetta er prófpóstur"
 },
 "nplurals=2; plural=n % 10 != 1 || n % 100 == 11;");

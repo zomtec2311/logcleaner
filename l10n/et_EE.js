@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Kas LogCleaner seadistab Nextcloudi konfiguratsioonifailis config.php logifaili pööramise alates 100 MB suurusest?",
 "display minimized view?": "kuva minimeeritud vaade?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "Kas LogCleaner kirjutab logifaili hoiatused logifaili suuruse kohta?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Ilmselt pole PHP funktsioon exec() saadaval, mistõttu ei saa LogCleaner töötada turborežiimis, vaid PHP voogedastusrežiimis. Probleemi lahendab php.ini muutmine direktiivis disable_functions."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Ilmselt pole PHP funktsioon exec() saadaval, mistõttu ei saa LogCleaner töötada turborežiimis, vaid PHP voogedastusrežiimis. Probleemi lahendab php.ini muutmine direktiivis disable_functions.",
+                 "Shall a log report be sent by email?": "Kas logiaruanne tuleb saata meili teel?",
+"Log Report Sending Frequency": "Logiaruande saatmise sagedus",
+"daily": "iga päev",
+"weekly": "iganädalane",
+"monthly": "igakuine",
+"To which administrator shall the email be sent?": "Millisele administraatorile kiri saadetakse?",
+"Choose an Admin": "Valige administraator",
+"Test E-Mail": "Testi e-posti",
+"Nextcloud Log Summary (%1$s to %2$s)": "Nextcloudi logi kokkuvõte (%1$s kuni %2$s)",
+"Hello %1$s,": "Tere, %1$s",
+"in the period from %1$s to %2$s new log entries were registered.": "perioodil %1$s kuni %2$s registreeriti uued logikirjed.",
+"Distribution by log level:": "Jaotus logitaseme järgi:",
+"Details can be found in the log management of your Nextcloud instance.": "Üksikasjad leiate oma Nextcloudi eksemplari logihaldust.",
+"This is a test email": "See on testmeil"
 },
 "nplurals=2; plural=n != 1;");

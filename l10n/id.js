@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Haruskah LogCleaner mengatur rotasi file log dari ukuran 100MB di file konfigurasi config.php Nextcloud?",
 "display minimized view?": "menampilkan tampilan yang diperkecil?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "Haruskah LogCleaner menulis peringatan tentang ukuran file log ke file log?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Tampaknya fungsi PHP exec() tidak tersedia, itulah sebabnya LogCleaner tidak dapat bekerja dalam mode turbo, tetapi dalam mode streaming PHP. Mengubah php.ini di direktifdisable_functions memperbaiki masalah."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Tampaknya fungsi PHP exec() tidak tersedia, itulah sebabnya LogCleaner tidak dapat bekerja dalam mode turbo, tetapi dalam mode streaming PHP. Mengubah php.ini di direktifdisable_functions memperbaiki masalah.",
+                 "Shall a log report be sent by email?": "Apakah laporan log akan dikirim melalui email?",
+"Log Report Sending Frequency": "Frekuensi Pengiriman Laporan Log",
+"daily": "sehari-hari",
+"weekly": "mingguan",
+"monthly": "bulanan",
+"To which administrator shall the email be sent?": "Ke administrator manakah email tersebut akan dikirim?",
+"Choose an Admin": "Pilih Admin",
+"Test E-Mail": "Uji Email",
+"Nextcloud Log Summary (%1$s to %2$s)": "Ringkasan Log Nextcloud (%1$s ke %2$s)",
+"Hello %1$s,": "Halo NAMAEIN,",
+"in the period from %1$s to %2$s new log entries were registered.": "dalam periode dari %1$s hingga %2$s entri log baru telah didaftarkan.",
+"Distribution by log level:": "Distribusi berdasarkan tingkat log:",
+"Details can be found in the log management of your Nextcloud instance.": "Detailnya dapat ditemukan di manajemen log instance Nextcloud Anda.",
+"This is a test email": "Ini adalah email percobaan"
 },
 "nplurals=1; plural=0;");

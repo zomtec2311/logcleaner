@@ -82,6 +82,20 @@
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "A do të vendosë LogCleaner rrotullimin e skedarit të regjistrit nga një madhësi prej 100 MB në skedarin e konfigurimit config.php të Nextcloud?",
 "display minimized view?": "shfaq pamjen e minimizuar?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "A duhet të shkruajë LogCleaner paralajmërime për madhësinë e skedarit të regjistrit në skedarin e regjistrit?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Me sa duket funksioni PHP exec() nuk është i disponueshëm, prandaj LogCleaner nuk mund të funksionojë në modalitetin turbo, por në modalitetin e transmetimit PHP. Ndryshimi i php.ini në direktivën disable_functions rregullon problemin."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Me sa duket funksioni PHP exec() nuk është i disponueshëm, prandaj LogCleaner nuk mund të funksionojë në modalitetin turbo, por në modalitetin e transmetimit PHP. Ndryshimi i php.ini në direktivën disable_functions rregullon problemin.",
+"Shall a log report be sent by email?": "A duhet të dërgohet një raport i regjistrit me email?",
+"Log Report Sending Frequency": "Frekuenca e dërgimit të raportit të regjistrit",
+"daily": "çdo ditë",
+"weekly": "javore",
+"monthly": "mujore",
+"To which administrator shall the email be sent?": "Cilit administrator do t'i dërgohet emaili?",
+"Choose an Admin": "Zgjidhni një administrator",
+"Test E-Mail": "Test E-Mail",
+"Nextcloud Log Summary (%1$s to %2$s)": "Përmbledhja e regjistrit Nextcloud (%1$s në %2$s)",
+"Hello %1$s,": "Përshëndetje %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "në periudhën nga %1$s në %2$s u regjistruan regjistrime të reja në regjistër.",
+"Distribution by log level:": "Shpërndarja sipas nivelit të regjistrit:",
+"Details can be found in the log management of your Nextcloud instance.": "Detajet mund të gjenden në menaxhimin e regjistrave të shembullit tuaj Nextcloud.",
+"This is a test email": "Ky është një email provë"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

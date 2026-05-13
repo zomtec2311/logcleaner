@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner va configura rotația fișierului jurnal de la o dimensiune de 100MB în fișierul de configurare config.php al Nextcloud?",
 "display minimized view?": "afișați vizualizarea minimizată?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner va scrie avertismente despre dimensiunea fișierului jurnal în fișierul jurnal?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Aparent, funcția PHP exec() nu este disponibilă, motiv pentru care LogCleaner nu poate funcționa în modul turbo, ci în modul de streaming PHP. Schimbarea php.ini în directiva disable_functions rezolvă problema."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Aparent, funcția PHP exec() nu este disponibilă, motiv pentru care LogCleaner nu poate funcționa în modul turbo, ci în modul de streaming PHP. Schimbarea php.ini în directiva disable_functions rezolvă problema.",
+                 "Shall a log report be sent by email?": "Va fi trimis un raport de jurnal prin e-mail?",
+"Log Report Sending Frequency": "Frecvența de trimitere a raportului de jurnal",
+"daily": "zilnic",
+"weekly": "săptămânal",
+"monthly": "lunar",
+"To which administrator shall the email be sent?": "Cărui administrator i se va trimite e-mailul?",
+"Choose an Admin": "Alegeți un administrator",
+"Test E-Mail": "Test e-mail",
+"Nextcloud Log Summary (%1$s to %2$s)": "Rezumatul jurnalului Nextcloud (%1$s la %2$s)",
+"Hello %1$s,": "Bună %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "în perioada de la %1$s la %2$s au fost înregistrate noi intrări în jurnal.",
+"Distribution by log level:": "Distribuție după nivel de jurnal:",
+"Details can be found in the log management of your Nextcloud instance.": "Detalii pot fi găsite în gestionarea jurnalului instanței dvs. Nextcloud.",
+"This is a test email": "Acesta este un e-mail de testare"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 0 || n != 1 && n % 100 >= 1 && n % 100 <= 19) ? 1 : 2);");

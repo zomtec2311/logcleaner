@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Θα πρέπει το LogCleaner να ρυθμίσει την περιστροφή του αρχείου καταγραφής από ένα μέγεθος 100 MB στο αρχείο διαμόρφωσης config.php του Nextcloud;",
 "display minimized view?": "εμφάνιση ελαχιστοποιημένης προβολής;",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "Θα πρέπει το LogCleaner να γράψει προειδοποιήσεις σχετικά με το μέγεθος του αρχείου καταγραφής στο αρχείο καταγραφής;",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Προφανώς η συνάρτηση PHP exec() δεν είναι διαθέσιμη, γι' αυτό το LogCleaner δεν μπορεί να λειτουργήσει σε λειτουργία turbo, αλλά σε λειτουργία ροής PHP. Η αλλαγή του php.ini στην οδηγία disable_functions διορθώνει το πρόβλημα."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Προφανώς η συνάρτηση PHP exec() δεν είναι διαθέσιμη, γι' αυτό το LogCleaner δεν μπορεί να λειτουργήσει σε λειτουργία turbo, αλλά σε λειτουργία ροής PHP. Η αλλαγή του php.ini στην οδηγία disable_functions διορθώνει το πρόβλημα.",
+                 "Shall a log report be sent by email?": "Θα πρέπει να σταλεί μια αναφορά καταγραφής μέσω email;",
+"Log Report Sending Frequency": "Συχνότητα αποστολής αναφοράς καταγραφής",
+"daily": "καθημερινά",
+"weekly": "εβδομαδιαίος",
+"monthly": "μηνιαίος",
+"To which administrator shall the email be sent?": "Σε ποιον διαχειριστή θα σταλεί το email;",
+"Choose an Admin": "Επιλέξτε Διαχειριστή",
+"Test E-Mail": "Δοκιμαστικό E-Mail",
+"Nextcloud Log Summary (%1$s to %2$s)": "Σύνοψη καταγραφής Nextcloud (%1$s σε %2$s)",
+"Hello %1$s,": "Γεια σας %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "κατά την περίοδο από %1$s έως %2$s καταχωρήθηκαν νέες εγγραφές στο ημερολόγιο.",
+"Distribution by log level:": "Κατανομή ανά επίπεδο καταγραφής:",
+"Details can be found in the log management of your Nextcloud instance.": "Μπορείτε να βρείτε λεπτομέρειες στη διαχείριση αρχείων καταγραφής της παρουσίας σας στο Nextcloud.",
+"This is a test email": "Αυτό είναι ένα δοκιμαστικό email"
 },
 "nplurals=2; plural=n != 1;");

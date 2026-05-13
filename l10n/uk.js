@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Чи має LogCleaner налаштувати ротацію файлу журналу розміром 100 МБ у файлі конфігурації config.php Nextcloud?",
 "display minimized view?": "відобразити згорнутий вигляд?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "Чи повинен LogCleaner записувати попередження про розмір файлу журналу в файл журналу?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Мабуть, функція PHP exec() недоступна, тому LogCleaner не може працювати в турбо-режимі, але в режимі потокової передачі PHP. Зміна php.ini в директиві disable_functions вирішує проблему."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Мабуть, функція PHP exec() недоступна, тому LogCleaner не може працювати в турбо-режимі, але в режимі потокової передачі PHP. Зміна php.ini в директиві disable_functions вирішує проблему.",
+                 "Shall a log report be sent by email?": "Чи надсилати звіт про журнал електронною поштою?",
+"Log Report Sending Frequency": "Частота надсилання звіту журналу",
+"daily": "щодня",
+"weekly": "щотижня",
+"monthly": "щомісяця",
+"To which administrator shall the email be sent?": "Кому адміністратору надіслати електронний лист?",
+"Choose an Admin": "Виберіть адміністратора",
+"Test E-Mail": "Тест E-Mail",
+"Nextcloud Log Summary (%1$s to %2$s)": "Резюме журналу Nextcloud (%1$s до %2$s)",
+"Hello %1$s,": "Привіт, %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "у період від %1$s до %2$s було зареєстровано нові записи в журналі.",
+"Distribution by log level:": "Розподіл за рівнем журналу:",
+"Details can be found in the log management of your Nextcloud instance.": "Подробиці можна знайти в журналі керування вашим екземпляром Nextcloud.",
+"This is a test email": "Це тестовий електронний лист"
 },
 "nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);");

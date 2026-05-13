@@ -82,6 +82,20 @@
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner Nextcloud نىڭ سەپلىمە ھۆججىتى config.php دىكى 100MB چوڭلۇقتىكى خاتىرە ھۆججىتىنىڭ ئايلىنىشىنى تەڭشىەمدۇ؟",
 "display minimized view?": "كىچىكلىتىلگەن كۆرۈنۈشنى كۆرسىتىش؟",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner خاتىرە ھۆججىتىگە خاتىرە ھۆججىتىنىڭ چوڭ-كىچىكلىكى توغرىسىدا ئاگاھلاندۇرۇش يازالامدۇ؟",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "ئېنىقكى PHP فۇنكسىيە exec () نى ئىشلەتكىلى بولمايدۇ ، شۇڭلاشقا LogCleaner تۇربىنىلىق ھالەتتە ئىشلىيەلمەيدۇ ، ئەمما PHP ئاقما ھالەتتە. Disable_functions دىكى php.ini نى ئۆزگەرتىش مەسىلىنى ھەل قىلىدۇ."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "ئېنىقكى PHP فۇنكسىيە exec () نى ئىشلەتكىلى بولمايدۇ ، شۇڭلاشقا LogCleaner تۇربىنىلىق ھالەتتە ئىشلىيەلمەيدۇ ، ئەمما PHP ئاقما ھالەتتە. Disable_functions دىكى php.ini نى ئۆزگەرتىش مەسىلىنى ھەل قىلىدۇ.",
+"Shall a log report be sent by email?": "خاتىرە دوكلاتىنى ئېلېكترونلۇق خەت ئارقىلىق ئەۋەتەمدۇ؟",
+"Log Report Sending Frequency": "خاتىرە دوكلاتى ئەۋەتىش چاستوتىسى",
+"daily": "ھەر كۈنى",
+"weekly": "ھەپتىلىك",
+"monthly": "ئايلىق",
+"To which administrator shall the email be sent?": "ئېلېكترونلۇق خەت قايسى باشقۇرغۇچىغا ئەۋەتىلىدۇ؟",
+"Choose an Admin": "باشقۇرغۇچىنى تاللاڭ",
+"Test E-Mail": "سىناق ئېلېكترونلۇق خەت",
+"Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud خاتىرە خۇلاسىسى (%1$s دىن %2$s)",
+"Hello %1$s,": "ياخشىمۇسىز %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "%1$s دىن %2$s غىچە بولغان ئارىلىقتا يېڭى خاتىرە تۈرلىرى تىزىمغا ئېلىنغان.",
+"Distribution by log level:": "خاتىرە دەرىجىسى بويىچە تارقىتىش:",
+"Details can be found in the log management of your Nextcloud instance.": "تەپسىلاتىنى Nextcloud مىسالىڭىزنىڭ خاتىرە باشقۇرۇشتىن تاپالايسىز.",
+"This is a test email": "بۇ بىر سىناق ئېلېكترونلۇق خەت"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

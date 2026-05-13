@@ -82,6 +82,20 @@
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner විසින් Nextcloud හි config.php වින්‍යාස ගොනුවේ 100MB ප්‍රමාණයකින් ලොග් ගොනුවේ භ්‍රමණය සකසන්නේද?",
 "display minimized view?": "අවම කළ දසුන පෙන්වන්නද?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner ලොග් ගොනුවේ ප්‍රමාණය ගැන අනතුරු ඇඟවීම් ලොග් ගොනුවට ලිවිය යුතුද?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "පෙනෙන විදිහට PHP ශ්‍රිතය exec() ලබා ගත නොහැක, ඒ නිසා LogCleaner හට ටර්බෝ මාදිලියේ ක්‍රියා කළ නොහැක, නමුත් PHP ප්‍රවාහ මාදිලියේ. disable_functions විධානය තුළ php.ini වෙනස් කිරීම ගැටළුව විසඳයි."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "පෙනෙන විදිහට PHP ශ්‍රිතය exec() ලබා ගත නොහැක, ඒ නිසා LogCleaner හට ටර්බෝ මාදිලියේ ක්‍රියා කළ නොහැක, නමුත් PHP ප්‍රවාහ මාදිලියේ. disable_functions විධානය තුළ php.ini වෙනස් කිරීම ගැටළුව විසඳයි.",
+"Shall a log report be sent by email?": "ලොග් වාර්තාවක් විද්‍යුත් තැපෑලෙන් එවිය යුතුද?",
+"Log Report Sending Frequency": "ලොග් වාර්තාව යැවීමේ වාර ගණන",
+"daily": "දිනපතා",
+"weekly": "සතිපතා",
+"monthly": "මාසිකව",
+"To which administrator shall the email be sent?": "විද්‍යුත් තැපෑල යැවිය යුත්තේ කුමන පරිපාලකයාටද?",
+"Choose an Admin": "පරිපාලකයෙකු තෝරන්න",
+"Test E-Mail": "විද්‍යුත් තැපෑල පරීක්ෂා කරන්න",
+"Nextcloud Log Summary (%1$s to %2$s)": "NextCloud ලොග් සාරාංශය (%1$s සිට %2$s දක්වා)",
+"Hello %1$s,": "ආයුබෝවන් %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "%1$s සිට %2$s දක්වා කාලය තුළ නව ලොග් ඇතුළත් කිරීම් ලියාපදිංචි කරන ලදී.",
+"Distribution by log level:": "ලොග් මට්ටම අනුව බෙදා හැරීම:",
+"Details can be found in the log management of your Nextcloud instance.": "ඔබගේ Nextcloud උදාහරණයේ ලොග් කළමනාකරණයෙන් විස්තර සොයා ගත හැක.",
+"This is a test email": "මෙය පරීක්ෂණ විද්‍යුත් තැපෑලකි"
 },"pluralForm" :"nplurals=2; plural=n > 1;"
 }

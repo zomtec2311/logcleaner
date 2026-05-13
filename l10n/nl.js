@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Zal LogCleaner de rotatie van het logbestand vanaf een grootte van 100MB instellen in het configuratiebestand config.php van Nextcloud?",
 "display minimized view?": "geminimaliseerde weergave weergeven?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "Zal LogCleaner waarschuwingen over de grootte van het logbestand naar het logbestand schrijven?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Blijkbaar is de PHP-functie exec() niet beschikbaar, daarom kan LogCleaner niet in de turbomodus werken, maar in de PHP-streamingmodus. Het wijzigen van php.ini in de richtlijn Disable_functions lost het probleem op."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Blijkbaar is de PHP-functie exec() niet beschikbaar, daarom kan LogCleaner niet in de turbomodus werken, maar in de PHP-streamingmodus. Het wijzigen van php.ini in de richtlijn Disable_functions lost het probleem op.",
+                 "Shall a log report be sent by email?": "Moet er een lograpport per e-mail worden verzonden?",
+"Log Report Sending Frequency": "Lograpport Verzendfrequentie",
+"daily": "dagelijks",
+"weekly": "wekelijks",
+"monthly": "maandelijks",
+"To which administrator shall the email be sent?": "Naar welke beheerder wordt de e-mail verzonden?",
+"Choose an Admin": "Kies een beheerder",
+"Test E-Mail": "E-mail testen",
+"Nextcloud Log Summary (%1$s to %2$s)": "Samenvatting van Nextcloud-logboek (%1$s naar %2$s)",
+"Hello %1$s,": "Hallo NAMENS,",
+"in the period from %1$s to %2$s new log entries were registered.": "in de periode van %1$s tot %2$s zijn nieuwe loggegevens geregistreerd.",
+"Distribution by log level:": "Verdeling per logniveau:",
+"Details can be found in the log management of your Nextcloud instance.": "Details vindt u in het logbeheer van uw Nextcloud-instantie.",
+"This is a test email": "Dit is een test-e-mail"
 },
 "nplurals=2; plural=(n != 1);");

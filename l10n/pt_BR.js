@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "O LogCleaner deve configurar a rotação do arquivo de log de um tamanho de 100 MB no arquivo de configuração config.php do Nextcloud?",
 "display minimized view?": "exibir visualização minimizada?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "O LogCleaner deve escrever avisos sobre o tamanho do arquivo de log no arquivo de log?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Aparentemente a função PHP exec() não está disponível, por isso o LogCleaner não pode funcionar no modo turbo, mas sim no modo streaming do PHP. Alterar o php.ini na diretiva disable_functions corrige o problema."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Aparentemente a função PHP exec() não está disponível, por isso o LogCleaner não pode funcionar no modo turbo, mas sim no modo streaming do PHP. Alterar o php.ini na diretiva disable_functions corrige o problema.",
+                 "Shall a log report be sent by email?": "Um relatório de registro será enviado por e-mail?",
+"Log Report Sending Frequency": "Frequência de envio de relatório de log",
+"daily": "diário",
+"weekly": "semanalmente",
+"monthly": "mensal",
+"To which administrator shall the email be sent?": "Para qual administrador o email será enviado?",
+"Choose an Admin": "Escolha um administrador",
+"Test E-Mail": "E-mail de teste",
+"Nextcloud Log Summary (%1$s to %2$s)": "Resumo do registro Nextcloud (%1$s para %2$s)",
+"Hello %1$s,": "Olá %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "no período de %1$s a %2$s novas entradas de log foram registradas.",
+"Distribution by log level:": "Distribuição por nível de log:",
+"Details can be found in the log management of your Nextcloud instance.": "Os detalhes podem ser encontrados no gerenciamento de log de sua instância Nextcloud.",
+"This is a test email": "Este é um e-mail de teste"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : ((n != 0 && n % 1000000 == 0) ? 1 : 2);");

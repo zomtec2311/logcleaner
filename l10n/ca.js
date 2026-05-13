@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner configurarà la rotació del fitxer de registre des d'una mida de 100 MB al fitxer de configuració config.php de Nextcloud?",
 "display minimized view?": "mostrar la vista minimitzada?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner escriurà avisos sobre la mida del fitxer de registre al fitxer de registre?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Aparentment, la funció PHP exec() no està disponible, per això LogCleaner no pot funcionar en mode turbo, sinó en mode streaming PHP. Canviar el php.ini a la directiva disable_functions soluciona el problema."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Aparentment, la funció PHP exec() no està disponible, per això LogCleaner no pot funcionar en mode turbo, sinó en mode streaming PHP. Canviar el php.ini a la directiva disable_functions soluciona el problema.",
+                 "Shall a log report be sent by email?": "S'enviarà un informe de registre per correu electrònic?",
+"Log Report Sending Frequency": "Freqüència d'enviament d'informes de registre",
+"daily": "diàriament",
+"weekly": "setmanalment",
+"monthly": "mensual",
+"To which administrator shall the email be sent?": "A quin administrador s'enviarà el correu electrònic?",
+"Choose an Admin": "Trieu un administrador",
+"Test E-Mail": "Correu electrònic de prova",
+"Nextcloud Log Summary (%1$s to %2$s)": "Resum del registre de Nextcloud (%1$s a %2$s)",
+"Hello %1$s,": "Hola %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "durant el període de %1$s a %2$s es van registrar noves entrades de registre.",
+"Distribution by log level:": "Distribució per nivell de registre:",
+"Details can be found in the log management of your Nextcloud instance.": "Els detalls es poden trobar a la gestió del registre de la vostra instància de Nextcloud.",
+"This is a test email": "Aquest és un correu electrònic de prova"
 },
 "nplurals=2; plural=(n != 1);");

@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Nastaví LogCleaner rotaci log souboru od velikosti 100MB v konfiguračním souboru config.php Nextcloudu?",
 "display minimized view?": "zobrazit minimalizovaný pohled?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "Zapíše LogCleaner varování o velikosti souboru protokolu do souboru protokolu?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "PHP funkce exec() zřejmě není k dispozici, a proto LogCleaner nemůže pracovat v turbo režimu, ale v PHP streamovacím režimu. Změna php.ini v direktivě disable_functions problém řeší."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "PHP funkce exec() zřejmě není k dispozici, a proto LogCleaner nemůže pracovat v turbo režimu, ale v PHP streamovacím režimu. Změna php.ini v direktivě disable_functions problém řeší.",
+                 "Shall a log report be sent by email?": "Má být protokolová zpráva zaslána e-mailem?",
+"Log Report Sending Frequency": "Zaznamenat frekvenci odesílání zpráv",
+"daily": "denní",
+"weekly": "týdně",
+"monthly": "měsíční",
+"To which administrator shall the email be sent?": "Kterému správci má být email zaslán?",
+"Choose an Admin": "Vyberte správce",
+"Test E-Mail": "Testovací e-mail",
+"Nextcloud Log Summary (%1$s to %2$s)": "Souhrn protokolu Nextcloud (%1$s až %2$s)",
+"Hello %1$s,": "Dobrý den, %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "v období od %1$s do %2$s byly zaregistrovány nové položky protokolu.",
+"Distribution by log level:": "Distribuce podle úrovně protokolu:",
+"Details can be found in the log management of your Nextcloud instance.": "Podrobnosti naleznete ve správě protokolů vaší instance Nextcloud.",
+"This is a test email": "Toto je testovací e-mail"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);");

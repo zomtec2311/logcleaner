@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner нь Nextcloud-ийн config.php тохиргооны файлд 100МБ хэмжээтэй бүртгэлийн файлын эргэлтийг тохируулах уу?",
 "display minimized view?": "жижигрүүлсэн харагдацыг харуулах уу?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner нь бүртгэлийн файлд лог файлын хэмжээний талаар анхааруулга бичих үү?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "PHP функц exec() байхгүй байгаа тул LogCleaner турбо горимд ажиллах боломжгүй, харин PHP урсгал горимд ажиллах боломжтой. disable_functions удирдамжийн php.ini-г өөрчилснөөр асуудал шийдэгдэнэ."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "PHP функц exec() байхгүй байгаа тул LogCleaner турбо горимд ажиллах боломжгүй, харин PHP урсгал горимд ажиллах боломжтой. disable_functions удирдамжийн php.ini-г өөрчилснөөр асуудал шийдэгдэнэ.",
+                 "Shall a log report be sent by email?": "Бүртгэлийн тайланг имэйлээр илгээх үү?",
+"Log Report Sending Frequency": "Тайлан илгээх давтамжийг бүртгэх",
+"daily": "өдөр бүр",
+"weekly": "долоо хоног бүр",
+"monthly": "сар бүр",
+"To which administrator shall the email be sent?": "Имэйлийг аль админ руу илгээх вэ?",
+"Choose an Admin": "Админаа сонгоно уу",
+"Test E-Mail": "Туршилтын цахим шуудан",
+"Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud бүртгэлийн хураангуй (%1$s-с %2$s)",
+"Hello %1$s,": "Сайн уу %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "%1$s-ээс %2$s хүртэлх хугацаанд шинэ бүртгэлийн бичилтүүд бүртгэгдсэн.",
+"Distribution by log level:": "Бүртгэлийн түвшингээр хуваарилалт:",
+"Details can be found in the log management of your Nextcloud instance.": "Дэлгэрэнгүй мэдээллийг Nextcloud instance-ийн бүртгэлийн удирдлагаас олж болно.",
+"This is a test email": "Энэ бол туршилтын имэйл юм"
 },
 "nplurals=2; plural=n != 1;");

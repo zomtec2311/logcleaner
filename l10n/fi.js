@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Pitääkö LogCleaner määrittää lokitiedoston kierto 100 megatavun kokoisesta Nextcloudin konfiguraatiotiedostossa config.php?",
 "display minimized view?": "näyttää pienennetty näkymä?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "Pitääkö LogCleaner kirjoittaa varoituksia lokitiedoston koosta lokitiedostoon?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Ilmeisesti PHP-funktio exec() ei ole käytettävissä, minkä vuoksi LogCleaner ei voi toimia turbotilassa, vaan PHP-suoratoistotilassa. php.ini-tiedoston muuttaminen direktiivissä disable_functions korjaa ongelman."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Ilmeisesti PHP-funktio exec() ei ole käytettävissä, minkä vuoksi LogCleaner ei voi toimia turbotilassa, vaan PHP-suoratoistotilassa. php.ini-tiedoston muuttaminen direktiivissä disable_functions korjaa ongelman.",
+     "Shall a log report be sent by email?": "Lähetetäänkö lokiraportti sähköpostitse?",
+"Log Report Sending Frequency": "Lokiraportin lähetystiheys",
+"daily": "päivittäin",
+"weekly": "viikoittain",
+"monthly": "kuukausittain",
+"To which administrator shall the email be sent?": "Kenelle ylläpitäjälle sähköposti lähetetään?",
+"Choose an Admin": "Valitse järjestelmänvalvoja",
+"Test E-Mail": "Testaa sähköposti",
+"Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud-lokin yhteenveto (%1$s - %2$s)",
+"Hello %1$s,": "Hei %1$s",
+"in the period from %1$s to %2$s new log entries were registered.": "ajanjaksolla %1$s–%2$s rekisteröitiin uusia lokimerkintöjä.",
+"Distribution by log level:": "Jakauma lokitason mukaan:",
+"Details can be found in the log management of your Nextcloud instance.": "Yksityiskohdat löytyvät Nextcloud-instanssisi lokinhallinnasta.",
+"This is a test email": "Tämä on testisähköposti"
 },
 "nplurals=2; plural=n != 1;");

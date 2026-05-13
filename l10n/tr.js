@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner, Nextcloud'un config.php yapılandırma dosyasındaki 100 MB boyutundan itibaren günlük dosyasının dönüşünü ayarlayacak mı?",
 "display minimized view?": "simge durumuna küçültülmüş görünüm gösterilsin mi?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner log dosyasının boyutuyla ilgili uyarıları log dosyasına yazacak mı?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Görünüşe göre PHP işlevi exec() mevcut değil, bu nedenle LogCleaner turbo modunda çalışamıyor, ancak PHP akış modunda çalışıyor. Disable_functions yönergesindeki php.ini dosyasını değiştirmek sorunu çözer."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Görünüşe göre PHP işlevi exec() mevcut değil, bu nedenle LogCleaner turbo modunda çalışamıyor, ancak PHP akış modunda çalışıyor. Disable_functions yönergesindeki php.ini dosyasını değiştirmek sorunu çözer.",
+                 "Shall a log report be sent by email?": "Bir günlük raporu e-postayla gönderilecek mi?",
+"Log Report Sending Frequency": "Günlük Raporu Gönderme Sıklığı",
+"daily": "günlük",
+"weekly": "haftalık",
+"monthly": "aylık",
+"To which administrator shall the email be sent?": "E-posta hangi yöneticiye gönderilecek?",
+"Choose an Admin": "Bir Yönetici seçin",
+"Test E-Mail": "E-postayı Test Et",
+"Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud Günlük Özeti (%1$s'den %2$s'ye)",
+"Hello %1$s,": "Merhaba %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "%1$s ile %2$s arasındaki dönemde yeni günlük girişleri kaydedildi.",
+"Distribution by log level:": "Günlük düzeyine göre dağılım:",
+"Details can be found in the log management of your Nextcloud instance.": "Ayrıntıları Nextcloud örneğinizin günlük yönetiminde bulabilirsiniz.",
+"This is a test email": "Bu bir deneme e-postasıdır"
 },
 "nplurals=2; plural=n != 1;");

@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner는 Nextcloud의 구성 파일 config.php에서 로그 파일 크기를 100MB부터 회전하도록 설정해야 합니까?",
 "display minimized view?": "최소화된 보기를 표시하시겠습니까?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner가 로그 파일 크기에 대한 경고를 로그 파일에 기록합니까?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "분명히 PHP 함수 exec()를 사용할 수 없기 때문에 LogCleaner는 터보 모드에서는 작동할 수 없지만 PHP 스트리밍 모드에서는 작동할 수 있습니다. 비활성화_기능 지시문에서 php.ini를 변경하면 문제가 해결됩니다."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "분명히 PHP 함수 exec()를 사용할 수 없기 때문에 LogCleaner는 터보 모드에서는 작동할 수 없지만 PHP 스트리밍 모드에서는 작동할 수 있습니다. 비활성화_기능 지시문에서 php.ini를 변경하면 문제가 해결됩니다.",
+                 "Shall a log report be sent by email?": "로그 보고서를 이메일로 보내드릴까요?",
+"Log Report Sending Frequency": "로그 보고서 전송 빈도",
+"daily": "일일",
+"weekly": "주간",
+"monthly": "월간 간행물",
+"To which administrator shall the email be sent?": "이메일은 어느 관리자에게 전송되나요?",
+"Choose an Admin": "관리자 선택",
+"Test E-Mail": "테스트 이메일",
+"Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud 로그 요약(%1$s - %2$s)",
+"Hello %1$s,": "안녕하세요 %1$s 님,",
+"in the period from %1$s to %2$s new log entries were registered.": "%1$s에서 %2$s까지의 기간 동안 새 로그 항목이 등록되었습니다.",
+"Distribution by log level:": "로그 수준별 분포:",
+"Details can be found in the log management of your Nextcloud instance.": "자세한 내용은 Nextcloud 인스턴스의 로그 관리에서 확인할 수 있습니다.",
+"This is a test email": "테스트 이메일입니다"
 },
 "nplurals=1; plural=0;");

@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Shall LogCleaner ຕັ້ງຄ່າການຫມຸນຂອງໄຟລ໌ບັນທຶກຈາກຂະຫນາດ 100MB ໃນໄຟລ໌ການຕັ້ງຄ່າ config.php ຂອງ Nextcloud?",
 "display minimized view?": "ສະແດງມຸມເບິ່ງໜ້ອຍສຸດບໍ?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner ຈະຂຽນຄໍາເຕືອນກ່ຽວກັບຂະຫນາດຂອງໄຟລ໌ບັນທຶກກັບໄຟລ໌ບັນທຶກບໍ?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "ເບິ່ງຄືວ່າ PHP function exec() ບໍ່ສາມາດໃຊ້ໄດ້, ນັ້ນແມ່ນເຫດຜົນທີ່ LogCleaner ບໍ່ສາມາດເຮັດວຽກຢູ່ໃນໂຫມດ turbo, ແຕ່ໃນໂຫມດ PHP streaming. ການປ່ຽນແປງ php.ini ໃນຄໍາສັ່ງ disable_functions ແກ້ໄຂບັນຫາ."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "ເບິ່ງຄືວ່າ PHP function exec() ບໍ່ສາມາດໃຊ້ໄດ້, ນັ້ນແມ່ນເຫດຜົນທີ່ LogCleaner ບໍ່ສາມາດເຮັດວຽກຢູ່ໃນໂຫມດ turbo, ແຕ່ໃນໂຫມດ PHP streaming. ການປ່ຽນແປງ php.ini ໃນຄໍາສັ່ງ disable_functions ແກ້ໄຂບັນຫາ.",
+                 "Shall a log report be sent by email?": "ບົດລາຍງານບັນທຶກຈະຖືກສົ່ງໄປທາງອີເມວບໍ?",
+"Log Report Sending Frequency": "ບັນທຶກລາຍງານຄວາມຖີ່ຂອງການສົ່ງ",
+"daily": "ປະຈໍາວັນ",
+"weekly": "ປະຈໍາອາທິດ",
+"monthly": "ປະຈໍາເດືອນ",
+"To which administrator shall the email be sent?": "ຈະສົ່ງອີເມວໄປຫາຜູ້ເບິ່ງແຍງລະບົບໃດ?",
+"Choose an Admin": "ເລືອກຜູ້ເບິ່ງແຍງລະບົບ",
+"Test E-Mail": "ທົດສອບອີເມລ",
+"Nextcloud Log Summary (%1$s to %2$s)": "ສະຫຼຸບບັນທຶກ Nextcloud (%1$s ຫາ %2$s)",
+"Hello %1$s,": "ສະບາຍດີ %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "ໃນໄລຍະເວລາຈາກ %1$s ຫາ %2$s ບັນທຶກຂໍ້ມູນໃຫມ່ໄດ້ຖືກລົງທະບຽນ.",
+"Distribution by log level:": "ການແຜ່ກະຈາຍຕາມລະດັບບັນທຶກ:",
+"Details can be found in the log management of your Nextcloud instance.": "ລາຍລະອຽດສາມາດພົບໄດ້ໃນການຈັດການບັນທຶກຂອງ Nextcloud instance ຂອງທ່ານ.",
+"This is a test email": "ນີ້ແມ່ນອີເມວທົດສອບ"
 },
 "nplurals=1; plural=0;");

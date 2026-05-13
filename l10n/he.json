@@ -82,6 +82,20 @@
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "האם LogCleaner יגדיר את הסיבוב של קובץ היומן מגודל של 100MB בקובץ התצורה config.php של Nextcloud?",
 "display minimized view?": "להציג תצוגה ממוזערת?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "האם LogCleaner יכתוב אזהרות לגבי גודל קובץ היומן לקובץ היומן?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "כנראה שפונקציית PHP exec() אינה זמינה, וזו הסיבה ש-LogCleaner לא יכול לעבוד במצב טורבו, אלא במצב סטרימינג של PHP. שינוי ה-php.ini בהנחיה disable_functions פותר את הבעיה."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "כנראה שפונקציית PHP exec() אינה זמינה, וזו הסיבה ש-LogCleaner לא יכול לעבוד במצב טורבו, אלא במצב סטרימינג של PHP. שינוי ה-php.ini בהנחיה disable_functions פותר את הבעיה.",
+"Shall a log report be sent by email?": "האם ישלח דוח יומן בדוא\"ל?",
+"Log Report Sending Frequency": "תדירות שליחת דוח יומן",
+"daily": "יוֹמִי",
+"weekly": "שְׁבוּעִי",
+"monthly": "יַרחוֹן",
+"To which administrator shall the email be sent?": "לאיזה מנהל יישלח המייל?",
+"Choose an Admin": "בחר מנהל מערכת",
+"Test E-Mail": "בדיקת דואר אלקטרוני",
+"Nextcloud Log Summary (%1$s to %2$s)": "סיכום יומן Nextcloud (%1$s ל-%2$s)",
+"Hello %1$s,": "שלום %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "בתקופה מ-%1$s ל-%2$s נרשמו רשומות יומן חדשות.",
+"Distribution by log level:": "התפלגות לפי רמת יומן:",
+"Details can be found in the log management of your Nextcloud instance.": "ניתן למצוא פרטים בניהול היומן של מופע Nextcloud שלך.",
+"This is a test email": "זהו מייל לבדיקה"
 },"pluralForm" :"nplurals=3; plural=(n == 1) ? 0 : ((n == 2) ? 1 : 2);"
 }

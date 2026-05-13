@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleaner จะตั้งค่าการหมุนไฟล์บันทึกจากขนาด 100MB ในไฟล์กำหนดค่า config.php ของ Nextcloud หรือไม่",
 "display minimized view?": "แสดงมุมมองที่ย่อเล็กสุด?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner จะเขียนคำเตือนเกี่ยวกับขนาดของไฟล์บันทึกลงในไฟล์บันทึกหรือไม่",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "เห็นได้ชัดว่าฟังก์ชัน PHP exec() ไม่พร้อมใช้งาน ซึ่งเป็นสาเหตุที่ LogCleaner ไม่สามารถทำงานได้ในโหมดเทอร์โบ แต่ในโหมดสตรีมมิ่ง PHP การเปลี่ยน php.ini ในคำสั่งdisable_functionsจะช่วยแก้ไขปัญหาได้"
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "เห็นได้ชัดว่าฟังก์ชัน PHP exec() ไม่พร้อมใช้งาน ซึ่งเป็นสาเหตุที่ LogCleaner ไม่สามารถทำงานได้ในโหมดเทอร์โบ แต่ในโหมดสตรีมมิ่ง PHP การเปลี่ยน php.ini ในคำสั่งdisable_functionsจะช่วยแก้ไขปัญหาได้",
+                 "Shall a log report be sent by email?": "รายงานบันทึกจะถูกส่งทางอีเมลหรือไม่",
+"Log Report Sending Frequency": "บันทึกความถี่ในการส่งรายงาน",
+"daily": "รายวัน",
+"weekly": "รายสัปดาห์",
+"monthly": "รายเดือน",
+"To which administrator shall the email be sent?": "ผู้ดูแลระบบคนไหนที่จะส่งอีเมลถึง?",
+"Choose an Admin": "เลือกผู้ดูแลระบบ",
+"Test E-Mail": "ทดสอบอีเมล",
+"Nextcloud Log Summary (%1$s to %2$s)": "สรุปบันทึก Nextcloud (%1$s ถึง %2$s)",
+"Hello %1$s,": "สวัสดี %1$s",
+"in the period from %1$s to %2$s new log entries were registered.": "ในช่วงตั้งแต่ %1$s ถึง %2$s รายการบันทึกใหม่ได้รับการลงทะเบียนแล้ว",
+"Distribution by log level:": "การกระจายตามระดับบันทึก:",
+"Details can be found in the log management of your Nextcloud instance.": "ดูรายละเอียดได้ในการจัดการบันทึกของอินสแตนซ์ Nextcloud ของคุณ",
+"This is a test email": "นี่คืออีเมลทดสอบ"
 },
 "nplurals=1; plural=0;");

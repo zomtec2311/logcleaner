@@ -85,6 +85,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?",
 "display minimized view?": "display minimized view?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "Shall LogCleaner write warnings about the size of the log file to the log file?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Apparently the PHP function exec() is not available, which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Apparently the PHP function exec() is not available, which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.",
+                 "Shall a log report be sent by email?": "Shall a log report be sent by email?",
+"Log Report Sending Frequency": "Log Report Sending Frequency",
+"daily": "daily",
+"weekly": "weekly",
+"monthly": "monthly",
+"To which administrator shall the email be sent?": "To which administrator shall the email be sent?",
+"Choose an Admin": "Choose an Admin",
+"Test E-Mail": "Test E-Mail",
+"Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud Log Summary (%1$s to %2$s)",
+"Hello %1$s,": "Hello %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "in the period from %1$s to %2$s new log entries were registered.",
+"Distribution by log level:": "Distribution by log level:",
+"Details can be found in the log management of your Nextcloud instance.": "Details can be found in the log management of your Nextcloud instance.",
+"This is a test email": "This is a test email"
 },
 "nplurals=2; plural=(n != 1);");

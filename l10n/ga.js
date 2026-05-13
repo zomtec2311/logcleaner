@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "An gcuirfidh LogCleaner rothlú an chomhaid loga ar bun ó mhéid 100MB sa chomhad cumraíochta config.php de Nextcloud?",
 "display minimized view?": "taispeáint amharc íoslaghdaithe?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "An scríobhfaidh LogCleaner rabhaidh faoi mhéid an logchomhaid chuig an logchomhad?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Is cosúil nach bhfuil an fheidhm PHP exec() ar fáil, agus is é sin an fáth nach féidir le LogCleaner oibriú i mód turbo, ach i mód sruthú PHP. Trí php.ini a athrú sa treoir disable_functions réitíonn sé an fhadhb."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Is cosúil nach bhfuil an fheidhm PHP exec() ar fáil, agus is é sin an fáth nach féidir le LogCleaner oibriú i mód turbo, ach i mód sruthú PHP. Trí php.ini a athrú sa treoir disable_functions réitíonn sé an fhadhb.",
+                 "Shall a log report be sent by email?": "An seolfar tuairisc loga trí ríomhphost?",
+"Log Report Sending Frequency": "Minicíocht Seolta Tuairisce Loga",
+"daily": "laethúil",
+"weekly": "seachtainiúil",
+"monthly": "míosúil",
+"To which administrator shall the email be sent?": "Cén riarthóir a seolfar an ríomhphost chuige?",
+"Choose an Admin": "Roghnaigh Riarachán",
+"Test E-Mail": "Tástáil R-phost",
+"Nextcloud Log Summary (%1$s to %2$s)": "Achoimre Loga Nextcloud (%1$s go %2$s)",
+"Hello %1$s,": "Dia duit %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "sa tréimhse ó %1$s go %2$s cláraíodh iontrálacha loga nua.",
+"Distribution by log level:": "Dáileadh de réir leibhéal loga:",
+"Details can be found in the log management of your Nextcloud instance.": "Is féidir sonraí a fháil i mbainistíocht logála do shampla Nextcloud.",
+"This is a test email": "Is ríomhphost tástála é seo"
 },
 "nplurals=5; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n >= 3 && n <= 6) ? 2 : ((n >= 7 && n <= 10) ? 3 : 4)));");

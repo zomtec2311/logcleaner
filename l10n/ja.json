@@ -82,6 +82,20 @@
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "LogCleanerはNextcloudの設定ファイルconfig.phpでログファイルのローテーションを100MBから設定するのでしょうか？",
 "display minimized view?": "最小化されたビューを表示しますか?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "LogCleaner はログ ファイルのサイズに関する警告をログ ファイルに書き込みますか?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "どうやら、PHP 関数 exec() が利用できないため、LogCleaner はターボ モードでは動作できず、PHP ストリーミング モードでは動作しません。 disable_functions ディレクティブの php.ini を変更すると、問題が解決します。"
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "どうやら、PHP 関数 exec() が利用できないため、LogCleaner はターボ モードでは動作できず、PHP ストリーミング モードでは動作しません。 disable_functions ディレクティブの php.ini を変更すると、問題が解決します。",
+"Shall a log report be sent by email?": "ログレポートは電子メールで送信されますか?",
+"Log Report Sending Frequency": "ログレポートの送信頻度",
+"daily": "毎日",
+"weekly": "毎週",
+"monthly": "毎月",
+"To which administrator shall the email be sent?": "電子メールはどの管理者に送信されますか?",
+"Choose an Admin": "管理者を選択してください",
+"Test E-Mail": "テストメール",
+"Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud ログの概要 (%1$s から %2$s)",
+"Hello %1$s,": "%1$s さん、こんにちは。",
+"in the period from %1$s to %2$s new log entries were registered.": "%1$s から %2$s までの期間に、新しいログ エントリが登録されました。",
+"Distribution by log level:": "ログレベルごとの分布:",
+"Details can be found in the log management of your Nextcloud instance.": "詳細については、Nextcloud インスタンスのログ管理をご覧ください。",
+"This is a test email": "これはテストメールです"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "A fydd LogCleaner yn sefydlu cylchdro'r ffeil log o faint o 100MB yn y ffeil ffurfweddu config.php o Nextcloud?",
 "display minimized view?": "arddangos golwg cyn lleied â phosibl?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "A fydd LogCleaner yn ysgrifennu rhybuddion am faint y ffeil log i'r ffeil log?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Mae'n debyg nad yw'r swyddogaeth PHP exec () ar gael, a dyna pam na all LogCleaner weithio yn y modd turbo, ond yn y modd ffrydio PHP. Mae newid y php.ini yn y gyfarwyddeb disable_functions yn trwsio'r broblem."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Mae'n debyg nad yw'r swyddogaeth PHP exec () ar gael, a dyna pam na all LogCleaner weithio yn y modd turbo, ond yn y modd ffrydio PHP. Mae newid y php.ini yn y gyfarwyddeb disable_functions yn trwsio'r broblem.",
+                 "Shall a log report be sent by email?": "A fydd adroddiad log yn cael ei anfon trwy e-bost?",
+"Log Report Sending Frequency": "Cofnodi Amlder Anfon Adroddiad",
+"daily": "dyddiol",
+"weekly": "wythnosol",
+"monthly": "yn fisol",
+"To which administrator shall the email be sent?": "At ba weinyddwr yr anfonir yr e-bost?",
+"Choose an Admin": "Dewiswch Weinyddwr",
+"Test E-Mail": "Prawf E-bost",
+"Nextcloud Log Summary (%1$s to %2$s)": "Crynodeb Log Nextcloud (%1$s i %2$s)",
+"Hello %1$s,": "Helo %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "yn y cyfnod o %1$s i %2$s cofrestrwyd cofnodion log newydd.",
+"Distribution by log level:": "Dosbarthiad yn ôl lefel log:",
+"Details can be found in the log management of your Nextcloud instance.": "Gellir dod o hyd i fanylion yn rheolaeth log eich enghraifft Nextcloud.",
+"This is a test email": "E-bost prawf yw hwn"
 },
 "nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n == 3) ? 3 : ((n == 6) ? 4 : 5))));");

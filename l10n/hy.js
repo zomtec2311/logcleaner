@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Արդյո՞ք LogCleaner-ը կարգավորի log ֆայլի պտտումը 100 ՄԲ չափից Nextcloud-ի կոնֆիգուրացիայի ֆայլում config.php:",
 "display minimized view?": "ցուցադրե՞լ նվազագույն տեսքը:",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "Արդյո՞ք LogCleaner-ը նախազգուշացումներ գրի log ֆայլի չափի մասին log ֆայլում:",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Ըստ երևույթին, PHP ֆունկցիան exec() հասանելի չէ, այդ իսկ պատճառով LogCleaner-ը չի կարող աշխատել տուրբո ռեժիմում, այլ PHP հոսքային ռեժիմում։ Փոփոխելով php.ini-ն disable_functions հրահանգում, խնդիրը կլուծվի:"
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Ըստ երևույթին, PHP ֆունկցիան exec() հասանելի չէ, այդ իսկ պատճառով LogCleaner-ը չի կարող աշխատել տուրբո ռեժիմում, այլ PHP հոսքային ռեժիմում։ Փոփոխելով php.ini-ն disable_functions հրահանգում, խնդիրը կլուծվի:",
+                 "Shall a log report be sent by email?": "Արդյո՞ք գրանցամատյանի հաշվետվությունն ուղարկվի էլեկտրոնային փոստով:",
+"Log Report Sending Frequency": "Մատյան Հաշվետվության ուղարկման հաճախականությունը",
+"daily": "օրական",
+"weekly": "շաբաթական",
+"monthly": "ամսական",
+"To which administrator shall the email be sent?": "Ո՞ր ադմինիստրատորին պետք է ուղարկվի էլ.",
+"Choose an Admin": "Ընտրեք ադմինիստրատոր",
+"Test E-Mail": "Փորձնական էլ. փոստ",
+"Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud մատյան ամփոփում (%1$s-ից %2$s)",
+"Hello %1$s,": "Բարև %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "%1$s-ից մինչև %2$s ընկած ժամանակահատվածում գրանցվել են գրանցամատյանում նոր գրառումներ:",
+"Distribution by log level:": "Բաշխում ըստ գրանցամատյանների մակարդակի.",
+"Details can be found in the log management of your Nextcloud instance.": "Մանրամասները կարելի է գտնել ձեր Nextcloud օրինակի գրանցամատյանի կառավարման մեջ:",
+"This is a test email": "Սա փորձնական նամակ է"
 },
 "nplurals=2; plural=n > 1;");

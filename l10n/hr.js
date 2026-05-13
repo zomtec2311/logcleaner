@@ -86,6 +86,20 @@ OC.L10N.register(
 "Shall LogCleaner set up the rotation of the log file from a size of 100MB in the configuration file config.php of Nextcloud?": "Hoće li LogCleaner postaviti rotaciju datoteke zapisa od veličine 100 MB u konfiguracijskoj datoteci config.php Nextclouda?",
 "display minimized view?": "prikazati minimizirani prikaz?",
 "Shall LogCleaner write warnings about the size of the log file to the log file?": "Treba li LogCleaner pisati upozorenja o veličini datoteke dnevnika u datoteku dnevnika?",
-"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Očigledno PHP funkcija exec() nije dostupna, zbog čega LogCleaner ne može raditi u turbo modu, već u PHP strujanju. Promjena php.ini u direktivi disable_functions rješava problem."
+"Apparently the PHP function exec() is not available which is why LogCleaner cannot work in turbo mode, but in PHP streaming mode. Changing the php.ini in the directive disable_functions fixes the problem.": "Očigledno PHP funkcija exec() nije dostupna, zbog čega LogCleaner ne može raditi u turbo modu, već u PHP strujanju. Promjena php.ini u direktivi disable_functions rješava problem.",
+                 "Shall a log report be sent by email?": "Hoće li se izvješće o zapisniku poslati e-poštom?",
+"Log Report Sending Frequency": "Učestalost slanja izvješća zapisnika",
+"daily": "dnevno",
+"weekly": "tjedno",
+"monthly": "mjesečno",
+"To which administrator shall the email be sent?": "Kojem administratoru poslati e-mail?",
+"Choose an Admin": "Odaberite Administratora",
+"Test E-Mail": "Testirajte e-poštu",
+"Nextcloud Log Summary (%1$s to %2$s)": "Sažetak dnevnika Nextcloud (%1$s do %2$s)",
+"Hello %1$s,": "Pozdrav %1$s,",
+"in the period from %1$s to %2$s new log entries were registered.": "u razdoblju od %1$s do %2$s registrirani su novi unosi u dnevnik.",
+"Distribution by log level:": "Distribucija prema razini dnevnika:",
+"Details can be found in the log management of your Nextcloud instance.": "Pojedinosti se mogu pronaći u upravljanju zapisnicima vaše Nextcloud instance.",
+"This is a test email": "Ovo je testna e-pošta"
 },
 "nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);");
