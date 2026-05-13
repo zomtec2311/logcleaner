@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.4.6
+
+### Added
+- new feature sending log reports with email daily, weekly or monthly
+- new settings
+
+### Changed
+- language files updated
+
 ## 1.4.5
 
 ### Changed

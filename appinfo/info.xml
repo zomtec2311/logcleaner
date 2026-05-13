@@ -14,7 +14,7 @@
 - 🗑️ Empty the log file without using shell commands.
 - 📜 View datails of log entries.
 - 🔍 Find solutions on the internet by various search engines.]]></description>
-	<version>1.4.5</version>
+	<version>1.4.6</version>
 	<licence>agpl</licence>
 	<author mail="wtoedt@gmail.com" homepage="https://github.com/zomtec2311/logcleaner">Wolfgang Tödt</author>
 	<documentation>
@@ -31,6 +31,7 @@
 	<repository type="git">https://github.com/zomtec2311/logcleaner</repository>
     <background-jobs>
         <job>OCA\LogCleaner\Cron\Cleanup</job>
+		<job>OCA\LogCleaner\Cron\LogReportJob</job>
     </background-jobs>
 	<dependencies>
 		<nextcloud min-version="31" max-version="34"/>
