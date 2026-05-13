@@ -88,6 +88,12 @@ class SettingsController extends Controller {
 			'AuditFile' => $this->logService->getAuditFile(),
 			'FlowFile' => $this->logService->getFlowFile(),
 			'isExecAvailable' => $this->logService->isExecAvailable(),
+			'email_notification_enabled' => (empty($this->config->getAppValue('logcleaner', 'email_notification_enabled')))?$this->setSettingZeilen('email_notification_enabled','no'):$this->config->getAppValue('logcleaner', 'email_notification_enabled'),
+			'last_email_timestamp' => $this->config->getAppValue('logcleaner', 'last_email_timestamp'),
+			'email_interval' => (empty($this->config->getAppValue('logcleaner', 'email_interval')))?$this->setSettingZeilen('email_interval','daily'):$this->config->getAppValue('logcleaner', 'email_interval'),
+			'admin_email' => $this->config->getAppValue('logcleaner', 'admin_email'),
+			'admin_email_name' => $this->config->getAppValue('logcleaner', 'admin_email_name'),
+
 		]);
 	}
 

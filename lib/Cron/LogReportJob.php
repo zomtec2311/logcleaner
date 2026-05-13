@@ -39,28 +39,44 @@ use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\BackgroundJob\TimedJob;
 use Psr\Log\LoggerInterface;
 use OCP\IAppConfig;
+use OCA\LogCleaner\Service\LogNotificationService;
 
-class Cleanup extends TimedJob {
+class LogReportJob extends TimedJob {
 	private LoggerInterface $logger;
     private LogsController $setcon;
+	 private $logService;
 
 	public function __construct(ITimeFactory $time,
-		LoggerInterface $logger, LogsController $setcon, private IAppConfig $appConfig,) {
+		LoggerInterface $logger, LogsController $setcon, private IAppConfig $appConfig, LogNotificationService $logService) {
 		parent::__construct($time);
 		$this->logger = $logger;
         $this->setcon = $setcon;
-		$this->setInterval(3600*24);
+        $this->setInterval(3600);
 		$this->appconfig = $appConfig;
+		$this->logService = $logService;
 	}
 
-	/**
-	 * @param array $argument
-	 */
-	protected function run($argument): void {
-		$wtpara_cron_deldub = (int)$this->appconfig->getValueString('logcleaner', 'wtpara_cron_deldub', '9', false);
-		if($wtpara_cron_deldub ===2) {
-        $this->setcon->removeDub(0);
-        $this->logger->info('LogCleaner background job to delete duplicates in the log file executed!');
-		}
-	}
+	protected function run($arguments) {
+        $enabled = $this->appconfig->getValueString('logcleaner', 'email_notification_enabled', 'no');
+        if ($enabled !== 'yes') {
+            $this->logger->info("Abbruch");
+            return;
+        }
+
+
+        $interval = $this->appconfig->getValueString('logcleaner', 'email_interval', 'daily');
+        $lastSent = $this->appconfig->getValueInt('logcleaner', 'last_email_timestamp', 0);
+        $now = time();
+
+        $secondsNeeded = [
+            'daily' => 86400,
+            'weekly' => 604800,
+            'monthly' => 2592000
+        ][$interval] ?? 86400;
+        if (($now - $lastSent) >= $secondsNeeded) {
+            $this->logService->sendSummaryEmail();
+            $this->appconfig->setValueInt('logcleaner', 'last_email_timestamp', $now);
+			$this->logger->info('LogCleaner background job to report logs executed!');
+        }
+    }
 }

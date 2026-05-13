@@ -35,13 +35,17 @@ use OCA\LogCleaner\Log\LogService;
 use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
 use Psr\Log\LoggerInterface;
 use OCP\IConfig;
+use OCP\IGroupManager;
 use OCP\IL10N;
+use OCA\LogCleaner\Service\LogNotificationService;
 
 class LogsController extends Controller {
+    private $groupManager;
 
-    public function __construct(string $AppName, IRequest $request, private LogService $logService, private readonly LoggerInterface $logger, private IConfig $config, private Helper $helper, private IL10N $l,) {
+    public function __construct(string $AppName, IRequest $request, private LogService $logService, private LogNotificationService $logNotificationService, IGroupManager $groupManager, private readonly LoggerInterface $logger, private IConfig $config, private Helper $helper, private IL10N $l,) {
         parent::__construct($AppName, $request);
         $this->helper = $helper;
+        $this->groupManager = $groupManager;
     }
 
     #[NoCSRFRequired]
@@ -205,6 +209,7 @@ class LogsController extends Controller {
         $inputFile = $this->logService->getLogFile();
 		$outputLog  = $inputFile.'.cleaned.log';
         if ($anzahl === 0) {
+            $this->analyse();
             $outputJson = $inputFile.'analysis.json';
             $json = file_get_contents($outputJson);
             $analysis_array = json_decode($json, true);
@@ -466,6 +471,24 @@ class LogsController extends Controller {
 				'wttext' => $wttext,
             ]);
 	}
+
+	public function getAdmins(): DataResponse {
+        $admins = $this->groupManager->get('admin')->getUsers();
+        $admins_email = [];
+        $i = 0;
+        foreach ($admins as $admin) {
+            $admins_email[$i]['name'] = $admin->getDisplayName();
+            $admins_email[$i]['email'] = $admin->getEMailAddress();
+            $i++;
+        }
+		return new DataResponse([
+                'admins' => $admins_email,
+            ]);
+	}
+
+	public function testLogEmail() {
+        $this->logNotificationService->sendTestEmail();
+    }
 
     public function show_filesize($filename, $decimalplaces = 0) {
 	  $size = filesize($filename);

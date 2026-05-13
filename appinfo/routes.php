@@ -54,5 +54,7 @@ return [
     ['name' => 'Logs#removelog', 'url' => '/removelog/{logid}', 'verb' => 'GET'],
     ['name' => 'Logs#dellines', 'url' => '/logs/dellines', 'verb' => 'POST'],
     ['name' => 'Logs#dellinesapp', 'url' => '/logs/dellinesapp', 'verb' => 'POST'],
+    ['name' => 'Logs#getAdmins', 'url' => '/getadmins', 'verb' => 'GET'],
+    ['name' => 'Logs#testLogEmail', 'url' => '/testlogemail', 'verb' => 'GET'],
   ]
 ];
