@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.8
+
+### Fixed
+- Bug fixed: Filters do not work if Nextcloud is installed in a subdirectory ([#43](https://github.com/zomtec2311/logcleaner/issues/43)) @davie2000
+
 ## 1.4.7
 
 ### Fixed
