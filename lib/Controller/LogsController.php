@@ -473,18 +473,23 @@ class LogsController extends Controller {
 	}
 
 	public function getAdmins(): DataResponse {
-        $admins = $this->groupManager->get('admin')->getUsers();
-        $admins_email = [];
-        $i = 0;
-        foreach ($admins as $admin) {
-            $admins_email[$i]['name'] = $admin->getDisplayName();
-            $admins_email[$i]['email'] = $admin->getEMailAddress();
-            $i++;
-        }
-		return new DataResponse([
-                'admins' => $admins_email,
-            ]);
-	}
+    $admins = $this->groupManager->get('admin')->getUsers();
+    $admins_email = [];
+
+    foreach ($admins as $admin) {
+        $email = $admin->getEMailAddress();
+        $admins_email[$email] = [
+            'name'  => $admin->getDisplayName(),
+            'email' => $email,
+        ];
+    }
+    if (count($admins) != count($admins_email)) $this->logger->info("LogCleaner: Due to identical email addresses, admins are hidden in the LogCleaner settings. This information no longer appears as soon as different email addresses are assigned to administrators.");
+
+    return new DataResponse([
+        'admins' => array_values($admins_email),
+    ]);
+}
+
 
 	public function testLogEmail() {
         $this->logNotificationService->sendTestEmail();
