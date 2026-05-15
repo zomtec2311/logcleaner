@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.7
+
+### Fixed
+- l10n: some language files were broken
+- send log report: duplicate keys when identical email addresses are assigned multiple times for admins
+
 ## 1.4.6
 
 ### Added
