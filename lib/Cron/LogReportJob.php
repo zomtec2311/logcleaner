@@ -59,7 +59,6 @@ class LogReportJob extends TimedJob {
 	protected function run($arguments) {
         $enabled = $this->appconfig->getValueString('logcleaner', 'email_notification_enabled', 'no');
         if ($enabled !== 'yes') {
-            $this->logger->info("Abbruch");
             return;
         }
 
