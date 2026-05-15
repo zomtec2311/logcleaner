@@ -94,10 +94,10 @@ OC.L10N.register(
 "To which administrator shall the email be sent?": "An welchen Administrator soll die E-Mail gesendet werden?",
 "Choose an Admin": "Wähle einen Administrator",
 "Test E-Mail": "Test-E-Mail",
-"Nextcloud Log Summary (%1$s to %2$s)": "Zusammenfassung des Nextcloud-Protokolls (%1$s bis %2$s)",
+"Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud Log Zusammenfassung (%1$s bis %2$s)",
 "Hello %1$s,": "Hallo %1$s,",
-"in the period from %1$s to %2$s new log entries were registered.": "Im Zeitraum von %1$s bis %2$s wurden neue Logeinträge registriert.",
-"Distribution by log level:": "Verteilung nach Protokollebene:",
+"in the period from %1$s to %2$s new log entries were registered.": "Im Zeitraum vom %1$s bis zum %2$s wurden neue Logeinträge registriert.",
+"Distribution by log level:": "Verteilung nach Loglevel:",
 "Details can be found in the log management of your Nextcloud instance.": "Details findest Du in der Logverwaltung Deiner Nextcloud-Instanz.",
 "This is a test email": "Dies ist eine Test-E-Mail"
 },
