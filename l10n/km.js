@@ -100,6 +100,12 @@ OC.L10N.register(
 "in the period from %1$s to %2$s new log entries were registered.": "ក្នុងរយៈពេលពី %1$s ទៅ %2$s ធាតុកំណត់ហេតុថ្មីត្រូវបានចុះឈ្មោះ។",
 "Distribution by log level:": "ការចែកចាយតាមកម្រិតកំណត់ហេតុ៖",
 "Details can be found in the log management of your Nextcloud instance.": "ព័ត៌មានលម្អិតអាចរកបាននៅក្នុងការគ្រប់គ្រងកំណត់ហេតុនៃឧទាហរណ៍ Nextcloud របស់អ្នក។",
-"This is a test email": "នេះគឺជាអ៊ីមែលសាកល្បង"
+"This is a test email": "នេះគឺជាអ៊ីមែលសាកល្បង",
+"Shall a log report be sent by notification?": "តើរបាយការណ៍កំណត់ហេតុត្រូវផ្ញើដោយការជូនដំណឹងទេ?",
+"last report: {when}": "របាយការណ៍ចុងក្រោយ៖ {when}",
+"next report: {when}": "របាយការណ៍បន្ទាប់៖ {when}",
+"To which administrator shall the notification be sent?": "តើ​ការ​ជូន​ដំណឹង​ត្រូវ​ផ្ញើ​ទៅ​អ្នក​គ្រប់គ្រង​ណា?",
+"Test notification": "ការជូនដំណឹងសាកល្បង",
+"This is a test notification": "នេះគឺជាការជូនដំណឹងអំពីការសាកល្បង"
 },
 "nplurals=1; plural=0;");

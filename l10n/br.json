@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "e-kerzh ar prantad eus %1$s da %2$s e oa bet enrollet enrolladennoù marilh nevez.",
 "Distribution by log level:": "Dasparzh dre live marilh :",
 "Details can be found in the log management of your Nextcloud instance.": "Kavout a reer munudoù e merañ marilh ho skouerenn Nextcloud.",
-"This is a test email": "Ur postel amprouiñ eo hemañ"
+"This is a test email": "Ur postel amprouiñ eo hemañ",
+"Shall a log report be sent by notification?": "Ha kaset e vo un danevell marilh dre gemennadenn ?",
+"last report: {when}": "danevell ziwezhañ : {when}",
+"next report: {when}": "danevell da heul : {when}",
+"To which administrator shall the notification be sent?": "Da be merour e vo kaset ar gemennadenn ?",
+"Test notification": "Kemennadenn amprouiñ",
+"This is a test notification": "Ur gemennadenn amprouiñ eo hemañ"
 },"pluralForm" :"nplurals=5; plural=(n % 10 == 1 && n % 100 != 11 && n % 100 != 71 && n % 100 != 91) ? 0 : ((n % 10 == 2 && n % 100 != 12 && n % 100 != 72 && n % 100 != 92) ? 1 : ((((n % 10 == 3 || n % 10 == 4) || n % 10 == 9) && (n % 100 < 10 || n % 100 > 19) && (n % 100 < 70 || n % 100 > 79) && (n % 100 < 90 || n % 100 > 99)) ? 2 : ((n != 0 && n % 1000000 == 0) ? 3 : 4)));"
 }

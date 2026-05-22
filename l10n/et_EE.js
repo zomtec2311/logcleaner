@@ -100,6 +100,12 @@ OC.L10N.register(
 "in the period from %1$s to %2$s new log entries were registered.": "perioodil %1$s kuni %2$s registreeriti uued logikirjed.",
 "Distribution by log level:": "Jaotus logitaseme järgi:",
 "Details can be found in the log management of your Nextcloud instance.": "Üksikasjad leiate oma Nextcloudi eksemplari logihaldust.",
-"This is a test email": "See on testmeil"
+"This is a test email": "See on testmeil",
+"Shall a log report be sent by notification?": "Kas logiaruanne tuleb saata teatega?",
+"last report: {when}": "viimane aruanne: {when}",
+"next report: {when}": "järgmine aruanne: {when}",
+"To which administrator shall the notification be sent?": "Millisele haldajale tuleb teade saata?",
+"Test notification": "Testi teatis",
+"This is a test notification": "See on testteatis"
 },
 "nplurals=2; plural=n != 1;");

@@ -100,6 +100,12 @@ OC.L10N.register(
 "in the period from %1$s to %2$s new log entries were registered.": "v období od %1$s do %2$s byly zaregistrovány nové položky protokolu.",
 "Distribution by log level:": "Distribuce podle úrovně protokolu:",
 "Details can be found in the log management of your Nextcloud instance.": "Podrobnosti naleznete ve správě protokolů vaší instance Nextcloud.",
-"This is a test email": "Toto je testovací e-mail"
+"This is a test email": "Toto je testovací e-mail",
+"Shall a log report be sent by notification?": "Má být zpráva protokolu zaslána oznámením?",
+"last report: {when}": "poslední zpráva: {when}",
+"next report: {when}": "další zpráva: {when}",
+"To which administrator shall the notification be sent?": "Kterému správci má být oznámení zasláno?",
+"Test notification": "Oznámení o testu",
+"This is a test notification": "Toto je testovací oznámení"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);");

@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "در دوره از %1$s تا %2$s ورودی های جدید ثبت شد.",
 "Distribution by log level:": "توزیع بر اساس سطح گزارش:",
 "Details can be found in the log management of your Nextcloud instance.": "جزئیات را می توان در مدیریت گزارش نمونه Nextcloud خود یافت.",
-"This is a test email": "این یک ایمیل آزمایشی است"
+"This is a test email": "این یک ایمیل آزمایشی است",
+"Shall a log report be sent by notification?": "آیا گزارش گزارش از طریق اطلاع رسانی ارسال می شود؟",
+"last report: {when}": "آخرین گزارش: {when}",
+"next report: {when}": "گزارش بعدی: {when}",
+"To which administrator shall the notification be sent?": "اعلان برای کدام مدیر ارسال شود؟",
+"Test notification": "اطلاعیه تست",
+"This is a test notification": "این یک اطلاعیه آزمایشی است"
 },"pluralForm" :"nplurals=2; plural=n > 1;"
 }

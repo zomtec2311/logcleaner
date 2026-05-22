@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "в периода от %1$s до %2$s бяха регистрирани нови записи в журнала.",
 "Distribution by log level:": "Разпределение по ниво на дневник:",
 "Details can be found in the log management of your Nextcloud instance.": "Подробности могат да бъдат намерени в управлението на регистрационните файлове на вашия екземпляр на Nextcloud.",
-"This is a test email": "Това е тестов имейл"
+"This is a test email": "Това е тестов имейл",
+"Shall a log report be sent by notification?": "Трябва ли да се изпрати отчет за регистрационния файл чрез известие?",
+"last report: {when}": "последен отчет: {when}",
+"next report: {when}": "следващ доклад: {when}",
+"To which administrator shall the notification be sent?": "До кой администратор да бъде изпратено уведомлението?",
+"Test notification": "Тестово известие",
+"This is a test notification": "Това е тестово известие"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

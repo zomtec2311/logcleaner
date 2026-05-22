@@ -100,6 +100,12 @@ OC.L10N.register(
 "in the period from %1$s to %2$s new log entries were registered.": "u razdoblju od %1$s do %2$s registrirani su novi unosi u dnevnik.",
 "Distribution by log level:": "Distribucija prema razini dnevnika:",
 "Details can be found in the log management of your Nextcloud instance.": "Pojedinosti se mogu pronaći u upravljanju zapisnicima vaše Nextcloud instance.",
-"This is a test email": "Ovo je testna e-pošta"
+"This is a test email": "Ovo je testna e-pošta",
+"Shall a log report be sent by notification?": "Hoće li se izvješće o zapisniku poslati putem obavijesti?",
+"last report: {when}": "zadnji izvještaj: {when}",
+"next report: {when}": "sljedeći izvještaj: {when}",
+"To which administrator shall the notification be sent?": "Kojem administratoru poslati obavijest?",
+"Test notification": "Obavijest o testu",
+"This is a test notification": "Ovo je testna obavijest"
 },
 "nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);");

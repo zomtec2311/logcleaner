@@ -100,6 +100,12 @@ OC.L10N.register(
 "in the period from %1$s to %2$s new log entries were registered.": "κατά την περίοδο από %1$s έως %2$s καταχωρήθηκαν νέες εγγραφές στο ημερολόγιο.",
 "Distribution by log level:": "Κατανομή ανά επίπεδο καταγραφής:",
 "Details can be found in the log management of your Nextcloud instance.": "Μπορείτε να βρείτε λεπτομέρειες στη διαχείριση αρχείων καταγραφής της παρουσίας σας στο Nextcloud.",
-"This is a test email": "Αυτό είναι ένα δοκιμαστικό email"
+"This is a test email": "Αυτό είναι ένα δοκιμαστικό email",
+"Shall a log report be sent by notification?": "Θα πρέπει να σταλεί μια αναφορά ημερολογίου με ειδοποίηση;",
+"last report: {when}": "τελευταία αναφορά: {when}",
+"next report: {when}": "επόμενη αναφορά: {when}",
+"To which administrator shall the notification be sent?": "Σε ποιον διαχειριστή θα σταλεί η ειδοποίηση;",
+"Test notification": "Ειδοποίηση δοκιμής",
+"This is a test notification": "Αυτή είναι μια δοκιμαστική ειδοποίηση"
 },
 "nplurals=2; plural=n != 1;");

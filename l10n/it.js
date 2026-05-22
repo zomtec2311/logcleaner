@@ -92,12 +92,18 @@ OC.L10N.register(
 "monthly": "mensile",
 "To which administrator shall the email be sent?": "A quale amministratore deve essere inviata l'e-mail?",
 "Choose an Admin": "Scegli un amministratore",
-"Test E-Mail": "Prova la posta elettronica",
+"Test E-Mail": "E-mail di prova",
 "Nextcloud Log Summary (%1$s to %2$s)": "Riepilogo registro Nextcloud (da %1$s a %2$s)",
 "Hello %1$s,": "Ciao %1$s,",
 "in the period from %1$s to %2$s new log entries were registered.": "in the period from %1$s to %2$s new log entries were registered.",
 "Distribution by log level:": "Distribuzione per livello di registro:",
 "Details can be found in the log management of your Nextcloud instance.": "I dettagli possono essere trovati nella gestione dei log della tua istanza Nextcloud.",
-"This is a test email": "This is a test email"
+"This is a test email": "This is a test email",
+"Shall a log report be sent by notification?": "Deve essere inviato un rapporto di registro tramite notifica?",
+"last report: {when}": "ultimo rapporto: {when}",
+"next report: {when}": "prossimo rapporto: {when}",
+"To which administrator shall the notification be sent?": "A quale amministratore deve essere inviata la notifica?",
+"Test notification": "Notifica di prova",
+"This is a test notification": "Questa è una notifica di prova"
 },
 "nplurals=2; plural=(n != 1);");

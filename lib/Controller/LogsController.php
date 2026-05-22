@@ -490,9 +490,28 @@ class LogsController extends Controller {
     ]);
 }
 
+public function getNotiAdmins(): DataResponse {
+    $admins = $this->groupManager->get('admin')->getUsers();
+
+    foreach ($admins as $admin) {
+        $admins_email[] = [
+            'name'  => $admin->getUID(),
+            'displayname'  => $admin->getDisplayName(),
+        ];
+    }
+
+    return new DataResponse([
+        'notiadmins' => array_values($admins_email),
+    ]);
+}
+
 
 	public function testLogEmail() {
         $this->logNotificationService->sendTestEmail();
+    }
+
+    public function testLogNotification() {
+        $this->logNotificationService->sendTestNotification();
     }
 
     public function show_filesize($filename, $decimalplaces = 0) {

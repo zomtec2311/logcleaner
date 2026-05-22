@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "yn y cyfnod o %1$s i %2$s cofrestrwyd cofnodion log newydd.",
 "Distribution by log level:": "Dosbarthiad yn ôl lefel log:",
 "Details can be found in the log management of your Nextcloud instance.": "Gellir dod o hyd i fanylion yn rheolaeth log eich enghraifft Nextcloud.",
-"This is a test email": "E-bost prawf yw hwn"
+"This is a test email": "E-bost prawf yw hwn",
+"Shall a log report be sent by notification?": "A fydd adroddiad log yn cael ei anfon trwy hysbysiad?",
+"last report: {when}": "adroddiad diwethaf: {when}",
+"next report: {when}": "adroddiad nesaf: {when}",
+"To which administrator shall the notification be sent?": "At ba weinyddwr yr anfonir yr hysbysiad?",
+"Test notification": "Hysbysiad prawf",
+"This is a test notification": "Hysbysiad prawf yw hwn"
 },"pluralForm" :"nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n == 3) ? 3 : ((n == 6) ? 4 : 5))));"
 }

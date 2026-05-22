@@ -57,6 +57,10 @@ class LogReportJob extends TimedJob {
 	}
 
 	protected function run($arguments) {
+        $notienabled = $this->appconfig->getValueString('logcleaner', 'notification_enabled', 'no');
+        if ($notienabled === 'yes') {
+            $this->runnotify();
+        }
         $enabled = $this->appconfig->getValueString('logcleaner', 'email_notification_enabled', 'no');
         if ($enabled !== 'yes') {
             return;
@@ -75,7 +79,26 @@ class LogReportJob extends TimedJob {
         if (($now - $lastSent) >= $secondsNeeded) {
             $this->logService->sendSummaryEmail();
             $this->appconfig->setValueInt('logcleaner', 'last_email_timestamp', $now);
-			$this->logger->info('LogCleaner background job to report logs executed!');
+			$this->logger->info('LogCleaner background job to report logs by email executed!');
         }
+    }
+
+    public function runnotify() {
+        $interval = $this->appconfig->getValueString('logcleaner', 'noti_interval', 'daily');
+        $lastSent = $this->appconfig->getValueInt('logcleaner', 'last_noti_timestamp', 0);
+        $now = time();
+
+        $secondsNeeded = [
+            'daily' => 86400,
+            'weekly' => 604800,
+            'monthly' => 2592000
+        ][$interval] ?? 86400;
+
+        if (($now - $lastSent) >= $secondsNeeded) {
+            $this->logService->sendSummaryNotification();
+            $this->appconfig->setValueInt('logcleaner', 'last_noti_timestamp', $now);
+			$this->logger->info('LogCleaner background job to report logs by notification executed!');
+        }
+
     }
 }

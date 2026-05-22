@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "ໃນໄລຍະເວລາຈາກ %1$s ຫາ %2$s ບັນທຶກຂໍ້ມູນໃຫມ່ໄດ້ຖືກລົງທະບຽນ.",
 "Distribution by log level:": "ການແຜ່ກະຈາຍຕາມລະດັບບັນທຶກ:",
 "Details can be found in the log management of your Nextcloud instance.": "ລາຍລະອຽດສາມາດພົບໄດ້ໃນການຈັດການບັນທຶກຂອງ Nextcloud instance ຂອງທ່ານ.",
-"This is a test email": "ນີ້ແມ່ນອີເມວທົດສອບ"
+"This is a test email": "ນີ້ແມ່ນອີເມວທົດສອບ",
+"Shall a log report be sent by notification?": "ລາຍງານບັນທຶກຈະຖືກສົ່ງໂດຍການແຈ້ງເຕືອນບໍ?",
+"last report: {when}": "ບົດລາຍງານຫຼ້າສຸດ: {when}",
+"next report: {when}": "ບົດລາຍງານຕໍ່ໄປ: {when}",
+"To which administrator shall the notification be sent?": "ຈະ​ສົ່ງ​ການ​ແຈ້ງ​ເຕືອນ​ໄປ​ຫາ​ຜູ້​ບໍ​ລິ​ຫານ?",
+"Test notification": "ການແຈ້ງເຕືອນການທົດສອບ",
+"This is a test notification": "ນີ້ແມ່ນການແຈ້ງເຕືອນການທົດສອບ"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

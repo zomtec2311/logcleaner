@@ -39,6 +39,8 @@ use OCP\IConfig;
 use Psr\Container\ContainerInterface;
 use OCA\LogCleaner\Dashboard\LogCleanerWidget;
 use OCA\LogCleaner\Dashboard\LogCleanerWidget2;
+//use OCA\Notifications\Notifier\AdminNotifications;
+use OCA\LogCleaner\Notification\Notifier;
 
 use Psr\Log\LoggerInterface;
 
@@ -57,6 +59,7 @@ class Application extends App implements IBootstrap {
 
         $context->registerDashboardWidget(\OCA\LogCleaner\Dashboard\LogCleanerWidget::class);
         $context->registerDashboardWidget(\OCA\LogCleaner\Dashboard\LogCleanerWidget2::class);
+		$context->registerNotifierService(Notifier::class);
 		$config = Server::get(IConfig::class);
 		$context->registerService(LogService::class, function($c) use ($config) {
 			$path = $config->getSystemValue('logfile');

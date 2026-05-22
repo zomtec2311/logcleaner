@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "%1$s-tik %2$s-ra bitarteko epean erregistro-sarrera berriak erregistratu ziren.",
 "Distribution by log level:": "Log-mailaren araberako banaketa:",
 "Details can be found in the log management of your Nextcloud instance.": "Xehetasunak zure Nextcloud instantziaren erregistro-kudeaketan aurki daitezke.",
-"This is a test email": "Hau probako mezu elektroniko bat da"
+"This is a test email": "Hau probako mezu elektroniko bat da",
+"Shall a log report be sent by notification?": "Jakinarazpen bidez bidaliko al da erregistro-txostena?",
+"last report: {when}": "azken txostena: {when}",
+"next report: {when}": "hurrengo txostena: {when}",
+"To which administrator shall the notification be sent?": "Zein administratzaileri bidaliko zaio jakinarazpena?",
+"Test notification": "Proba jakinarazpena",
+"This is a test notification": "Hau probaren jakinarazpena da"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

@@ -100,6 +100,12 @@ OC.L10N.register(
 "in the period from %1$s to %2$s new log entries were registered.": "%1$s-დან %2$s-მდე პერიოდში დარეგისტრირდა ახალი ჩანაწერები ჟურნალში.",
 "Distribution by log level:": "განაწილება ჟურნალის დონის მიხედვით:",
 "Details can be found in the log management of your Nextcloud instance.": "დეტალები შეგიძლიათ იხილოთ თქვენი Nextcloud ინსტანციის ჟურნალის მენეჯმენტში.",
-"This is a test email": "ეს არის სატესტო ელ.წერილი"
+"This is a test email": "ეს არის სატესტო ელ.წერილი",
+"Shall a log report be sent by notification?": "უნდა გაიგზავნოს ჟურნალის ანგარიში შეტყობინებებით?",
+"last report: {when}": "ბოლო ანგარიში: {when}",
+"next report: {when}": "შემდეგი ანგარიში: {when}",
+"To which administrator shall the notification be sent?": "რომელ ადმინისტრატორს უნდა გაეგზავნოს შეტყობინება?",
+"Test notification": "ტესტის შეტყობინება",
+"This is a test notification": "ეს არის ტესტის შეტყობინება"
 },
 "nplurals=2; plural=n != 1;");

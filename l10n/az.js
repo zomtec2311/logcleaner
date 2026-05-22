@@ -100,6 +100,12 @@ OC.L10N.register(
 "in the period from %1$s to %2$s new log entries were registered.": "%1$s-dən %2$s-ə qədər olan dövrdə yeni jurnal qeydləri qeydə alınıb.",
 "Distribution by log level:": "Log səviyyəsinə görə paylanma:",
 "Details can be found in the log management of your Nextcloud instance.": "Təfərrüatlar Nextcloud instansiyanızın jurnal idarəsində tapıla bilər.",
-"This is a test email": "Bu test e-poçtudur"
+"This is a test email": "Bu test e-poçtudur",
+"Shall a log report be sent by notification?": "Bildirişlə jurnal hesabatı göndəriləcəkmi?",
+"last report: {when}": "son hesabat: {when}",
+"next report: {when}": "növbəti hesabat: {when}",
+"To which administrator shall the notification be sent?": "Bildiriş hansı administratora göndərilməlidir?",
+"Test notification": "Test bildirişi",
+"This is a test notification": "Bu sınaq bildirişidir"
 },
 "nplurals=2; plural=n != 1;");

@@ -100,6 +100,12 @@ OC.L10N.register(
 "in the period from %1$s to %2$s new log entries were registered.": "從 %1$s 到 %2$s 期間，註冊了新的日誌條目。",
 "Distribution by log level:": "按日誌等級分佈：",
 "Details can be found in the log management of your Nextcloud instance.": "詳細資訊可以在 Nextcloud 實例的日誌管理中找到。",
-"This is a test email": "這是一封測試電子郵件"
+"This is a test email": "這是一封測試電子郵件",
+"Shall a log report be sent by notification?": "是否應透過通知發送日誌報告？",
+"last report: {when}": "上次報告：{when}",
+"next report: {when}": "下一份報告：{when}",
+"To which administrator shall the notification be sent?": "通知應發送給哪位管理員？",
+"Test notification": "測試通知",
+"This is a test notification": "這是測試通知"
 },
 "nplurals=1; plural=0;");

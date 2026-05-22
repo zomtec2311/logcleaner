@@ -100,6 +100,12 @@ OC.L10N.register(
 "in the period from %1$s to %2$s new log entries were registered.": "ในช่วงตั้งแต่ %1$s ถึง %2$s รายการบันทึกใหม่ได้รับการลงทะเบียนแล้ว",
 "Distribution by log level:": "การกระจายตามระดับบันทึก:",
 "Details can be found in the log management of your Nextcloud instance.": "ดูรายละเอียดได้ในการจัดการบันทึกของอินสแตนซ์ Nextcloud ของคุณ",
-"This is a test email": "นี่คืออีเมลทดสอบ"
+"This is a test email": "นี่คืออีเมลทดสอบ",
+"Shall a log report be sent by notification?": "รายงานบันทึกจะถูกส่งโดยการแจ้งเตือนหรือไม่",
+"last report: {when}": "รายงานล่าสุด: {when}",
+"next report: {when}": "รายงานถัดไป: {when}",
+"To which administrator shall the notification be sent?": "ผู้ดูแลระบบคนไหนที่จะส่งการแจ้งเตือน?",
+"Test notification": "การแจ้งเตือนการทดสอบ",
+"This is a test notification": "นี่คือการแจ้งเตือนการทดสอบ"
 },
 "nplurals=1; plural=0;");

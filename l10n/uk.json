@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "у період від %1$s до %2$s було зареєстровано нові записи в журналі.",
 "Distribution by log level:": "Розподіл за рівнем журналу:",
 "Details can be found in the log management of your Nextcloud instance.": "Подробиці можна знайти в журналі керування вашим екземпляром Nextcloud.",
-"This is a test email": "Це тестовий електронний лист"
+"This is a test email": "Це тестовий електронний лист",
+"Shall a log report be sent by notification?": "Чи надсилати звіт журналу сповіщенням?",
+"last report: {when}": "останній звіт: {when}",
+"next report: {when}": "наступний звіт: {when}",
+"To which administrator shall the notification be sent?": "Кому адміністратору надсилати повідомлення?",
+"Test notification": "Тестове сповіщення",
+"This is a test notification": "Це тестове сповіщення"
 },"pluralForm" :"nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);"
 }

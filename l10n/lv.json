@@ -109,7 +109,13 @@
 "in the period from %1$s to %2$s new log entries were registered.": "laika posmā no %1$s līdz %2$s tika reģistrēti jauni žurnāla ieraksti.",
 "Distribution by log level:": "Sadalījums pēc žurnāla līmeņa:",
 "Details can be found in the log management of your Nextcloud instance.": "Detalizētu informāciju var atrast jūsu Nextcloud instances žurnālu pārvaldībā.",
-"This is a test email": "Šis ir testa e-pasts"
+"This is a test email": "Šis ir testa e-pasts",
+"Shall a log report be sent by notification?": "Vai žurnāla atskaite jānosūta ar paziņojumu?",
+"last report: {when}": "pēdējais ziņojums: {when}",
+"next report: {when}": "nākamais ziņojums: {when}",
+"To which administrator shall the notification be sent?": "Kuram administratoram jānosūta paziņojums?",
+"Test notification": "Testa paziņojums",
+"This is a test notification": "Šis ir testa paziņojums"
 },
 "pluralForm": "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);"
 }

@@ -32,6 +32,14 @@ use OCA\LogCleaner\Log\LogService;
 use Psr\Log\LoggerInterface;
 use OCP\IUserManager;
 use OCP\L10N\IFactory;
+use OCP\Notification\IManager;
+
+
+use OCA\LogCleaner\AppInfo\Application;
+use OCP\IURLGenerator;
+use OCP\IDb;
+use OCP\ILogger;
+use OCP\Notification\INotificationManager;
 
 class LogNotificationService {
 
@@ -39,7 +47,18 @@ class LogNotificationService {
     private $mailer;
     private $timeFactory;
 
-    public function __construct(IConfig $config, IMailer $mailer, ITimeFactory $timeFactory, private LogService $logService, private readonly LoggerInterface $logger, private IFactory $l10nFactory, private IUserManager $userManager,) {
+
+    public function __construct(
+        IConfig $config,
+        IMailer $mailer,
+        ITimeFactory $timeFactory,
+        private LogService $logService,
+        private readonly LoggerInterface $logger,
+        private IFactory $l10nFactory,
+        private IUserManager $userManager,
+        protected IManager $notificationManager,
+        private IURLGenerator $url,
+    ) {
         $this->config = $config;
         $this->mailer = $mailer;
         $this->timeFactory = $timeFactory;
@@ -55,7 +74,6 @@ class LogNotificationService {
         $stats = $this->getLogStats($lastSent, $minLevel);
 
         if (array_sum($stats['counts']) === 0) {
-            $this->logger->info("LogCleaner: No new log entries available. Therefore, no sending of a log report");
             return;
         }
 
@@ -79,7 +97,7 @@ class LogNotificationService {
         $body = $l->t('Hello %1$s,', [$adminName]) . "\n\n";
         $body .= $l->t('in the period from %1$s to %2$s new log entries were registered.', [$fromDate, $toDate]) . "\n\n";
 
-        $body = $l->t('Distribution by log level:') . "\n";
+        $body .= $l->t('Distribution by log level:') . "\n";
         $body .= "--------------------------\n";
 
         foreach ($stats['counts'] as $level => $count) {
@@ -122,6 +140,15 @@ class LogNotificationService {
         $body = $l->t('Hello %1$s,', [$adminName]) . "\n\n";
         $body .= $l->t('in the period from %1$s to %2$s new log entries were registered.', [$fromDate, $toDate]) . "\n\n";
 
+        $body .= $l->t('Distribution by log level:') . "\n";
+        $body .= "--------------------------\n";
+
+        foreach ($stats['counts'] as $level => $count) {
+            if ($count > 0) {
+                $body .= sprintf("%-10s: %d\n", $l->t($this->getLevelName($level)), $count);
+            }
+        }
+
         $body .= $l->t('This is a test email') . "\n";
 
 
@@ -129,14 +156,185 @@ class LogNotificationService {
         $this->mailer->send($message);
     }
 
+    public function sendSummaryNotification() {
+        $datetime = $this->timeFactory->getDateTime();
+        $lastSent = (int)$this->config->getAppValue('logcleaner', 'last_noti_timestamp', 0);
+        $minLevel = (int)$this->config->getSystemValue('loglevel', 2);
+        $offset = (int)$this->config->getAppValue('logcleaner', 'logcleaner_wt_offset', 0);
+        $stats = $this->getLogStats($lastSent, $minLevel);
+
+        if (array_sum($stats['counts']) === 0) {
+            $this->logger->info("LogCleaner: No new log entries available. Therefore, no sending of a log report by notification");
+            return;
+        }
+
+        $adminName = $this->config->getAppValue('logcleaner', 'admin_noti', '');
+        $user = $this->userManager->get($adminName);
+
+        $lang = $this->l10nFactory->getUserLanguage($user);
+
+        $l = $this->l10nFactory->get('logcleaner', $lang);
+
+        $fromDate = date('d.m.Y H:i', strtotime("$offset hours", $stats['oldest']));
+
+        $toDate = date('d.m.Y H:i', strtotime("$offset hours", $stats['newest']));
+
+        $translatedSubject = $l->t('Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]);
+
+        $mysubject = $translatedSubject;
+
+        $targetUrl = $this->url->linkToRouteAbsolute('logcleaner.page.index');
+
+        $plainMessage = $l->t('Hello %1$s,', [$adminName]) . "\n\n" .
+
+                        $l->t('in the period from %1$s to %2$s new log entries were registered.', [$fromDate, $toDate]) . "\n\n";
+
+        $plainMessage .= $l->t('Distribution by log level:') . "\n";
+        $plainMessage .= "--------------------------\n";
+
+        foreach ($stats['counts'] as $level => $count) {
+            if ($count > 0) {
+                $plainMessage .= sprintf("%-10s: %d\n", $l->t($this->getLevelName($level)), $count);
+            }
+        }
+
+        $plainMessage .= $l->t('Details can be found in the log management of your Nextcloud instance.');
+
+        $targetUrl = $this->url->linkToRouteAbsolute('logcleaner.page.index');
+
+        $para = [
+            'richSubject' => $mysubject,
+            'richSubjectParameters' => [],
+
+            'richMessage' => $plainMessage,
+            'richMessageParameters' => [],
+
+            'parsedSubject' => $mysubject,
+            'parsedMessage' => $plainMessage . "\n\n" . $targetUrl,
+
+            'actions' => [
+                [
+                    'type' => 'link',
+                    'id'   => 'open',
+                    'label' => $l->t('open'),
+                    'link' => $targetUrl,
+                    'icon' => 'icon-confirm'
+                ]
+            ]
+        ];
+
+        $notification = $this->notificationManager->createNotification();
+
+        $notification->setApp('logcleaner')
+            ->setUser($adminName)
+            ->setDateTime($datetime)
+            ->setObject('remote', '1123')
+            ->setSubject('logcleaner', $para);
+
+        $this->notificationManager->notify($notification);
+
+        return true;
+
+    }
+
+    public function sendTestNotification() {
+        $now = time();
+        $datetime = $this->timeFactory->getDateTime();
+        $lastSent = (int)$this->config->getAppValue('logcleaner', 'last_noti_test_timestamp', 0);
+        $minLevel = (int)$this->config->getSystemValue('loglevel', 2);
+        $offset = (int)$this->config->getAppValue('logcleaner', 'logcleaner_wt_offset', 0);
+        $stats = $this->getLogStats($lastSent, $minLevel);
+        $adminName = $this->config->getAppValue('logcleaner', 'admin_noti', '');
+        $user = $this->userManager->get($adminName);
+
+        $lang = $this->l10nFactory->getUserLanguage($user);
+
+        $l = $this->l10nFactory->get('logcleaner', $lang);
+
+        $fromDate = date('d.m.Y H:i', strtotime("$offset hours", $stats['oldest']));
+
+        $toDate = date('d.m.Y H:i', strtotime("$offset hours", $stats['newest']));
+
+        $translatedSubject = $l->t('Test notification');
+
+        $mysubject = $translatedSubject;
+
+        $targetUrl = $this->url->linkToRouteAbsolute('logcleaner.page.index');
+
+        $plainMessage = $l->t('Hello %1$s,', [$adminName]) . "\n\n";
+
+
+
+        if (array_sum($stats['counts']) !== 0) {
+            $plainMessage .= $l->t('in the period from %1$s to %2$s new log entries were registered.', [$fromDate, $toDate]) . "\n\n";
+            $plainMessage .= $l->t('Distribution by log level:') . "\n";
+            $plainMessage .= "--------------------------\n";
+
+            foreach ($stats['counts'] as $level => $count) {
+                if ($count > 0) {
+                    $plainMessage .= sprintf("%-10s: %d\n", $l->t($this->getLevelName($level)), $count);
+                }
+            }
+        }
+
+        $plainMessage .= $l->t('This is a test notification') . "\n\n";
+
+        $targetUrl = $this->url->linkToRouteAbsolute('logcleaner.page.index');
+
+        $para = [
+            'richSubject' => $mysubject,
+            'richSubjectParameters' => [],
+
+            'richMessage' => $plainMessage,
+            'richMessageParameters' => [],
+
+            'parsedSubject' => $mysubject,
+            'parsedMessage' => $plainMessage . "\n\n" . $targetUrl,
+
+
+            'actions' => [
+                [
+                    'type' => 'link',
+                    'id'   => 'open',
+                    'label' => $l->t('open'),
+                    'link' => $targetUrl,
+                    'icon' => 'icon-confirm'
+                ]
+            ]
+        ];
+
+        $notification = $this->notificationManager->createNotification();
+
+        $notification->setApp('logcleaner')
+            ->setUser($adminName)
+            ->setDateTime($datetime)
+            ->setObject('remote', '1123')
+            ->setSubject('logcleaner', $para);
+
+        $this->notificationManager->notify($notification);
+
+        $this->config->setAppValue('logcleaner', 'last_noti_test_timestamp', $now);
+
+        return true;
+
+    }
+
     private function getLogStats(int $lastRun, int $minLevel): array {
         $stats = ['counts' => [0 => 0, 1 => 0, 2 => 0, 3 => 0, 4 => 0], 'oldest' => null, 'newest' => null];
+        $interval = (string)$this->config->getAppValue('logcleaner', 'email_interval', 'daily');
+
+        $secondsNeeded = [
+            'daily' => 86400,
+            'weekly' => 604800,
+            'monthly' => 2592000
+        ][$interval] ?? 86400;
+
+        $filetime = $lastRun - $secondsNeeded;
 
         $logFile = $this->logService->getLogFile();
         $filesToProcess = [$logFile, $logFile . '.1'];
-
         foreach ($filesToProcess as $file) {
-            if (!file_exists($file) || filemtime($file) < $lastRun) {
+                if (!file_exists($file) || filemtime($file) < $filetime) {
                 continue;
             }
 

@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "a %1$s és %2$s közötti időszakban új naplóbejegyzések kerültek regisztrálásra.",
 "Distribution by log level:": "Megoszlás naplószint szerint:",
 "Details can be found in the log management of your Nextcloud instance.": "A részleteket a Nextcloud-példány naplókezelésében találja.",
-"This is a test email": "Ez egy teszt e-mail"
+"This is a test email": "Ez egy teszt e-mail",
+"Shall a log report be sent by notification?": "Értesítéssel kell naplójelentést küldeni?",
+"last report: {when}": "utolsó jelentés: {when}",
+"next report: {when}": "következő jelentés: {when}",
+"To which administrator shall the notification be sent?": "Melyik adminisztrátornak kell megküldeni az értesítést?",
+"Test notification": "Teszt értesítés",
+"This is a test notification": "Ez egy tesztértesítés"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

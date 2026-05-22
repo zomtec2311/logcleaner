@@ -69,10 +69,11 @@ class SettingsController extends Controller {
 	}
 
 	public function getAppValueZ(): DataResponse {
+
 		return new DataResponse([
 			'logcleaner_wt_zeilen' => (empty($this->config->getAppValue('logcleaner', 'logcleaner_wt_zeilen')))?$this->setSettingZeilen('logcleaner_wt_zeilen',5):$this->config->getAppValue('logcleaner', 'logcleaner_wt_zeilen'),
 			'wtpara_settings_am' => (empty($this->config->getAppValue('logcleaner', 'wtpara_settings_am')))?$this->setSettingZeilen('wtpara_settings_am',2):$this->config->getAppValue('logcleaner', 'wtpara_settings_am'),
-			'logcleaner_wt_offset' => (empty($this->config->getAppValue('logcleaner', 'logcleaner_wt_offset')))?$this->setSettingZeilen('logcleaner_wt_offset',0):$this->config->getAppValue('logcleaner', 'logcleaner_wt_offset'),
+			'logcleaner_wt_offset' => (empty($this->config->getAppValue('logcleaner', 'logcleaner_wt_offset')))?'0':$this->config->getAppValue('logcleaner', 'logcleaner_wt_offset'),
 			'logcleaner_wt_characters' => (empty($this->config->getAppValue('logcleaner', 'logcleaner_wt_characters')))?$this->setSettingZeilen('logcleaner_wt_characters',500):$this->config->getAppValue('logcleaner', 'logcleaner_wt_characters'),
 			'wtparam_menue' => (empty($this->config->getAppValue('logcleaner', 'wtparam_menue')))?$this->setSettingZeilen('wtparam_menue',2):$this->config->getAppValue('logcleaner', 'wtparam_menue'),
 			'wtparam_logmessage' => (empty($this->config->getAppValue('logcleaner', 'wtparam_logmessage')))?$this->setSettingZeilen('wtparam_logmessage',1):$this->config->getAppValue('logcleaner', 'wtparam_logmessage'),
@@ -89,11 +90,14 @@ class SettingsController extends Controller {
 			'FlowFile' => $this->logService->getFlowFile(),
 			'isExecAvailable' => $this->logService->isExecAvailable(),
 			'email_notification_enabled' => (empty($this->config->getAppValue('logcleaner', 'email_notification_enabled')))?$this->setSettingZeilen('email_notification_enabled','no'):$this->config->getAppValue('logcleaner', 'email_notification_enabled'),
-			'last_email_timestamp' => $this->config->getAppValue('logcleaner', 'last_email_timestamp'),
+			'last_email_timestamp' => $this->config->getAppValue('logcleaner', 'last_email_timestamp', '0'),
+			'last_noti_timestamp' => $this->config->getAppValue('logcleaner', 'last_noti_timestamp', '0'),
 			'email_interval' => (empty($this->config->getAppValue('logcleaner', 'email_interval')))?$this->setSettingZeilen('email_interval','daily'):$this->config->getAppValue('logcleaner', 'email_interval'),
 			'admin_email' => $this->config->getAppValue('logcleaner', 'admin_email'),
 			'admin_email_name' => $this->config->getAppValue('logcleaner', 'admin_email_name'),
-
+			'notification_enabled' => (empty($this->config->getAppValue('logcleaner', 'notification_enabled')))?$this->setSettingZeilen('notification_enabled','no'):$this->config->getAppValue('logcleaner', 'notification_enabled'),
+			'noti_interval' => (empty($this->config->getAppValue('logcleaner', 'noti_interval')))?$this->setSettingZeilen('noti_interval','daily'):$this->config->getAppValue('logcleaner', 'noti_interval'),
+			'admin_noti' => $this->config->getAppValue('logcleaner', 'admin_noti'),
 		]);
 	}
 
@@ -859,4 +863,19 @@ class SettingsController extends Controller {
             ]);
 		}
 	}
+
+	public function isnoti(): DataResponse {
+
+            $enabledapps = $this->appManager->getEnabledApps();
+
+            if (in_array('notifications', $enabledapps)) {
+                $isnoti = true;
+            }
+            else { $isnoti = false; }
+
+            return new DataResponse([
+            'isnoti' => $isnoti,
+        ]);
+
+    }
 }

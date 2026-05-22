@@ -100,6 +100,12 @@ OC.L10N.register(
 "in the period from %1$s to %2$s new log entries were registered.": "ajanjaksolla %1$s–%2$s rekisteröitiin uusia lokimerkintöjä.",
 "Distribution by log level:": "Jakauma lokitason mukaan:",
 "Details can be found in the log management of your Nextcloud instance.": "Yksityiskohdat löytyvät Nextcloud-instanssisi lokinhallinnasta.",
-"This is a test email": "Tämä on testisähköposti"
+"This is a test email": "Tämä on testisähköposti",
+"Shall a log report be sent by notification?": "Lähetetäänkö lokiraportti ilmoituksella?",
+"last report: {when}": "viimeisin raportti: {when}",
+"next report: {when}": "seuraava raportti: {when}",
+"To which administrator shall the notification be sent?": "Kenelle ylläpitäjälle ilmoitus lähetetään?",
+"Test notification": "Testiilmoitus",
+"This is a test notification": "Tämä on testiilmoitus"
 },
 "nplurals=2; plural=n != 1;");

@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "no período de %1$s a %2$s novas entradas de log foram registradas.",
 "Distribution by log level:": "Distribuição por nível de log:",
 "Details can be found in the log management of your Nextcloud instance.": "Os detalhes podem ser encontrados no gerenciamento de log de sua instância Nextcloud.",
-"This is a test email": "Este é um e-mail de teste"
+"This is a test email": "Este é um e-mail de teste",
+"Shall a log report be sent by notification?": "Um relatório de registro deve ser enviado por notificação?",
+"last report: {when}": "último relatório: {when}",
+"next report: {when}": "próximo relatório: {when}",
+"To which administrator shall the notification be sent?": "Para qual administrador será enviada a notificação?",
+"Test notification": "Notificação de teste",
+"This is a test notification": "Esta é uma notificação de teste"
 },"pluralForm" :"nplurals=3; plural=(n == 0 || n == 1) ? 0 : ((n != 0 && n % 1000000 == 0) ? 1 : 2);"
 }

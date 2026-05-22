@@ -100,6 +100,12 @@ OC.L10N.register(
 "in the period from %1$s to %2$s new log entries were registered.": "en la periodo de %1$s ĝis %2$s novaj protokolaj enskriboj estis registritaj.",
 "Distribution by log level:": "Distribuo laŭ lognivelo:",
 "Details can be found in the log management of your Nextcloud instance.": "Detaloj troveblas en la protokolo-administrado de via Nextcloud-instanco.",
-"This is a test email": "Ĉi tio estas prova retpoŝto"
+"This is a test email": "Ĉi tio estas prova retpoŝto",
+"Shall a log report be sent by notification?": "Ĉu registro-raporto estos sendita per sciigo?",
+"last report: {when}": "lasta raporto: {when}",
+"next report: {when}": "sekva raporto: {when}",
+"To which administrator shall the notification be sent?": "Al kiu administranto estu sendita la sciigo?",
+"Test notification": "Testa sciigo",
+"This is a test notification": "Ĉi tio estas testa sciigo"
 },
 "nplurals=2; plural=n != 1;");

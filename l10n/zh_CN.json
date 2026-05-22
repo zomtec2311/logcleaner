@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "从 %1$s 到 %2$s 期间，注册了新的日志条目。",
 "Distribution by log level:": "按日志级别分布：",
 "Details can be found in the log management of your Nextcloud instance.": "详细信息可以在 Nextcloud 实例的日志管理中找到。",
-"This is a test email": "这是一封测试电子邮件"
+"This is a test email": "这是一封测试电子邮件",
+"Shall a log report be sent by notification?": "是否应通过通知发送日志报告？",
+"last report: {when}": "上次报告：{when}",
+"next report: {when}": "下一份报告：{when}",
+"To which administrator shall the notification be sent?": "通知应发送给哪位管理员？",
+"Test notification": "测试通知",
+"This is a test notification": "这是测试通知"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

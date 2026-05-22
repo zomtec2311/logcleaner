@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "sa tréimhse ó %1$s go %2$s cláraíodh iontrálacha loga nua.",
 "Distribution by log level:": "Dáileadh de réir leibhéal loga:",
 "Details can be found in the log management of your Nextcloud instance.": "Is féidir sonraí a fháil i mbainistíocht logála do shampla Nextcloud.",
-"This is a test email": "Is ríomhphost tástála é seo"
+"This is a test email": "Is ríomhphost tástála é seo",
+"Shall a log report be sent by notification?": "An seolfar logthuairisc trí fhógra?",
+"last report: {when}": "tuairisc dheireanach: {when}",
+"next report: {when}": "an chéad tuairisc eile: {when}",
+"To which administrator shall the notification be sent?": "Cén riarthóir a sheolfar an fógra?",
+"Test notification": "Fógra tástála",
+"This is a test notification": "Is fógra tástála é seo"
 },"pluralForm" :"nplurals=5; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n >= 3 && n <= 6) ? 2 : ((n >= 7 && n <= 10) ? 3 : 4)));"
 }

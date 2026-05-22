@@ -100,6 +100,12 @@ OC.L10N.register(
 "in the period from %1$s to %2$s new log entries were registered.": "á tímabilinu frá %1$s til %2$s voru nýjar annálarfærslur skráðar.",
 "Distribution by log level:": "Dreifing eftir skráarstigi:",
 "Details can be found in the log management of your Nextcloud instance.": "Upplýsingar er að finna í annálastjórnun Nextcloud tilviksins þíns.",
-"This is a test email": "Þetta er prófpóstur"
+"This is a test email": "Þetta er prófpóstur",
+"Shall a log report be sent by notification?": "Á að senda dagbókarskýrslu með tilkynningu?",
+"last report: {when}": "síðasta skýrsla: {when}",
+"next report: {when}": "næsta skýrsla: {when}",
+"To which administrator shall the notification be sent?": "Til hvaða stjórnanda á að senda tilkynninguna?",
+"Test notification": "Tilkynning um próf",
+"This is a test notification": "Þetta er próftilkynning"
 },
 "nplurals=2; plural=n % 10 != 1 || n % 100 == 11;");

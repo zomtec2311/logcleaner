@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "dalam periode dari %1$s hingga %2$s entri log baru telah didaftarkan.",
 "Distribution by log level:": "Distribusi berdasarkan tingkat log:",
 "Details can be found in the log management of your Nextcloud instance.": "Detailnya dapat ditemukan di manajemen log instance Nextcloud Anda.",
-"This is a test email": "Ini adalah email percobaan"
+"This is a test email": "Ini adalah email percobaan",
+"Shall a log report be sent by notification?": "Apakah laporan log akan dikirim melalui pemberitahuan?",
+"last report: {when}": "laporan terakhir: {when}",
+"next report: {when}": "laporan selanjutnya: {when}",
+"To which administrator shall the notification be sent?": "Kepada administrator manakah pemberitahuan tersebut dikirimkan?",
+"Test notification": "Pemberitahuan pengujian",
+"This is a test notification": "Ini adalah pemberitahuan tes"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

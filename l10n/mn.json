@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "%1$s-ээс %2$s хүртэлх хугацаанд шинэ бүртгэлийн бичилтүүд бүртгэгдсэн.",
 "Distribution by log level:": "Бүртгэлийн түвшингээр хуваарилалт:",
 "Details can be found in the log management of your Nextcloud instance.": "Дэлгэрэнгүй мэдээллийг Nextcloud instance-ийн бүртгэлийн удирдлагаас олж болно.",
-"This is a test email": "Энэ бол туршилтын имэйл юм"
+"This is a test email": "Энэ бол туршилтын имэйл юм",
+"Shall a log report be sent by notification?": "Бүртгэлийн тайланг мэдэгдлээр илгээх үү?",
+"last report: {when}": "Сүүлийн тайлан: {when}",
+"next report: {when}": "дараагийн тайлан: {when}",
+"To which administrator shall the notification be sent?": "Мэдэгдэлийг аль админ руу илгээх вэ?",
+"Test notification": "Туршилтын мэдэгдэл",
+"This is a test notification": "Энэ бол туршилтын мэдэгдэл юм"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

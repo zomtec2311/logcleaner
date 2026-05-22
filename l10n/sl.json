@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "v obdobju od %1$s do %2$s so bili registrirani novi vnosi v dnevnik.",
 "Distribution by log level:": "Porazdelitev po ravni dnevnika:",
 "Details can be found in the log management of your Nextcloud instance.": "Podrobnosti najdete v upravljanju dnevnika vašega primerka Nextcloud.",
-"This is a test email": "To je testno e-poštno sporočilo"
+"This is a test email": "To je testno e-poštno sporočilo",
+"Shall a log report be sent by notification?": "Ali se poročilo o dnevniku pošlje z obvestilom?",
+"last report: {when}": "zadnje poročilo: {when}",
+"next report: {when}": "naslednje poročilo: {when}",
+"To which administrator shall the notification be sent?": "Komu skrbniku poslati obvestilo?",
+"Test notification": "Testno obvestilo",
+"This is a test notification": "To je testno obvestilo"
 },"pluralForm" :"nplurals=4; plural=(n % 100 == 1) ? 0 : ((n % 100 == 2) ? 1 : ((n % 100 == 3 || n % 100 == 4) ? 2 : 3));"
 }

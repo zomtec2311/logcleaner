@@ -100,6 +100,12 @@ OC.L10N.register(
 "in the period from %1$s to %2$s new log entries were registered.": "trong khoảng thời gian từ %1$s đến %2$s, các mục nhật ký mới đã được đăng ký.",
 "Distribution by log level:": "Phân phối theo cấp độ nhật ký:",
 "Details can be found in the log management of your Nextcloud instance.": "Bạn có thể tìm thấy thông tin chi tiết trong phần quản lý nhật ký của phiên bản Nextcloud của bạn.",
-"This is a test email": "Đây là một email thử nghiệm"
+"This is a test email": "Đây là một email thử nghiệm",
+"Shall a log report be sent by notification?": "Báo cáo nhật ký có được gửi bằng thông báo không?",
+"last report: {when}": "báo cáo cuối cùng: {when}",
+"next report: {when}": "báo cáo tiếp theo: {when}",
+"To which administrator shall the notification be sent?": "Thông báo sẽ được gửi đến quản trị viên nào?",
+"Test notification": "Thông báo kiểm tra",
+"This is a test notification": "Đây là thông báo thử nghiệm"
 },
 "nplurals=1; plural=0;");

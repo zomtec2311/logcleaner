@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "%1$s ನಿಂದ %2$s ವರೆಗಿನ ಅವಧಿಯಲ್ಲಿ ಹೊಸ ಲಾಗ್ ನಮೂದುಗಳನ್ನು ನೋಂದಾಯಿಸಲಾಗಿದೆ.",
 "Distribution by log level:": "ಲಾಗ್ ಮಟ್ಟದ ಮೂಲಕ ವಿತರಣೆ:",
 "Details can be found in the log management of your Nextcloud instance.": "ನಿಮ್ಮ Nextcloud ನಿದರ್ಶನದ ಲಾಗ್ ನಿರ್ವಹಣೆಯಲ್ಲಿ ವಿವರಗಳನ್ನು ಕಾಣಬಹುದು.",
-"This is a test email": "ಇದು ಪರೀಕ್ಷಾ ಇಮೇಲ್ ಆಗಿದೆ"
+"This is a test email": "ಇದು ಪರೀಕ್ಷಾ ಇಮೇಲ್ ಆಗಿದೆ",
+"Shall a log report be sent by notification?": "ಅಧಿಸೂಚನೆಯ ಮೂಲಕ ಲಾಗ್ ವರದಿಯನ್ನು ಕಳುಹಿಸಬೇಕೇ?",
+"last report: {when}": "ಕೊನೆಯ ವರದಿ: {when}",
+"next report: {when}": "ಮುಂದಿನ ವರದಿ: {when}",
+"To which administrator shall the notification be sent?": "ಅಧಿಸೂಚನೆಯನ್ನು ಯಾವ ನಿರ್ವಾಹಕರಿಗೆ ಕಳುಹಿಸಬೇಕು?",
+"Test notification": "ಪರೀಕ್ಷಾ ಅಧಿಸೂಚನೆ",
+"This is a test notification": "ಇದು ಪರೀಕ್ಷಾ ಅಧಿಸೂಚನೆಯಾಗಿದೆ"
 },"pluralForm" :"nplurals=2; plural=n > 1;"
 }

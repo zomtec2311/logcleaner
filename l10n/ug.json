@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "%1$s دىن %2$s غىچە بولغان ئارىلىقتا يېڭى خاتىرە تۈرلىرى تىزىمغا ئېلىنغان.",
 "Distribution by log level:": "خاتىرە دەرىجىسى بويىچە تارقىتىش:",
 "Details can be found in the log management of your Nextcloud instance.": "تەپسىلاتىنى Nextcloud مىسالىڭىزنىڭ خاتىرە باشقۇرۇشتىن تاپالايسىز.",
-"This is a test email": "بۇ بىر سىناق ئېلېكترونلۇق خەت"
+"This is a test email": "بۇ بىر سىناق ئېلېكترونلۇق خەت",
+"Shall a log report be sent by notification?": "خاتىرە دوكلاتى ئۇقتۇرۇش ئارقىلىق ئەۋەتىلەمدۇ؟",
+"last report: {when}": "ئاخىرقى دوكلات: {when}",
+"next report: {when}": "كېيىنكى دوكلات: {when}",
+"To which administrator shall the notification be sent?": "ئۇقتۇرۇش قايسى باشقۇرغۇچىغا ئەۋەتىلىدۇ؟",
+"Test notification": "سىناق ئۇقتۇرۇشى",
+"This is a test notification": "بۇ بىر سىناق ئۇقتۇرۇشى"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

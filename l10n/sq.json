@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "në periudhën nga %1$s në %2$s u regjistruan regjistrime të reja në regjistër.",
 "Distribution by log level:": "Shpërndarja sipas nivelit të regjistrit:",
 "Details can be found in the log management of your Nextcloud instance.": "Detajet mund të gjenden në menaxhimin e regjistrave të shembullit tuaj Nextcloud.",
-"This is a test email": "Ky është një email provë"
+"This is a test email": "Ky është një email provë",
+"Shall a log report be sent by notification?": "A duhet të dërgohet një raport regjistri me njoftim?",
+"last report: {when}": "raporti i fundit: {when}",
+"next report: {when}": "raporti tjetër: {when}",
+"To which administrator shall the notification be sent?": "Cilit administrator do t'i dërgohet njoftimi?",
+"Test notification": "Njoftimi i testit",
+"This is a test notification": "Ky është një njoftim testimi"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

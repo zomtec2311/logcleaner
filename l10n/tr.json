@@ -96,6 +96,12 @@
 "in the period from %1$s to %2$s new log entries were registered.": "%1$s ile %2$s arasındaki dönemde yeni günlük girişleri kaydedildi.",
 "Distribution by log level:": "Günlük düzeyine göre dağılım:",
 "Details can be found in the log management of your Nextcloud instance.": "Ayrıntıları Nextcloud örneğinizin günlük yönetiminde bulabilirsiniz.",
-"This is a test email": "Bu bir deneme e-postasıdır"
+"This is a test email": "Bu bir deneme e-postasıdır",
+"Shall a log report be sent by notification?": "Bildirim yoluyla log raporu gönderilecek mi?",
+"last report: {when}": "son rapor: {when}",
+"next report: {when}": "sonraki rapor: {when}",
+"To which administrator shall the notification be sent?": "Bildirim hangi yöneticiye gönderilecek?",
+"Test notification": "Test bildirimi",
+"This is a test notification": "Bu bir deneme bildirimidir"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

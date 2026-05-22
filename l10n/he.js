@@ -100,6 +100,12 @@ OC.L10N.register(
 "in the period from %1$s to %2$s new log entries were registered.": "בתקופה מ-%1$s ל-%2$s נרשמו רשומות יומן חדשות.",
 "Distribution by log level:": "התפלגות לפי רמת יומן:",
 "Details can be found in the log management of your Nextcloud instance.": "ניתן למצוא פרטים בניהול היומן של מופע Nextcloud שלך.",
-"This is a test email": "זהו מייל לבדיקה"
+"This is a test email": "זהו מייל לבדיקה",
+"Shall a log report be sent by notification?": "האם ישלח דוח יומן בהתראה?",
+"last report: {when}": "דוח אחרון: {when}",
+"next report: {when}": "הדוח הבא: {when}",
+"To which administrator shall the notification be sent?": "לאיזה מנהל תישלח ההודעה?",
+"Test notification": "הודעת בדיקה",
+"This is a test notification": "זו הודעת בדיקה"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 2) ? 1 : 2);");

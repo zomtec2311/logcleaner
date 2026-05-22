@@ -99,6 +99,12 @@ OC.L10N.register(
 "in the period from %1$s to %2$s new log entries were registered.": "in the period from %1$s to %2$s new log entries were registered.",
 "Distribution by log level:": "Distribution by log level:",
 "Details can be found in the log management of your Nextcloud instance.": "Details can be found in the log management of your Nextcloud instance.",
-"This is a test email": "This is a test email"
+"This is a test email": "This is a test email",
+"Shall a log report be sent by notification?": "Shall a log report be sent by notification?",
+"last report: {when}": "last report: {when}",
+"next report: {when}": "next report: {when}",
+"To which administrator shall the notification be sent?": "To which administrator shall the notification be sent?",
+"Test notification": "Test notification",
+"This is a test notification": "This is a test notification"
 },
 "nplurals=2; plural=(n != 1);");

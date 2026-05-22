@@ -100,6 +100,12 @@ OC.L10N.register(
 "in the period from %1$s to %2$s new log entries were registered.": "i perioden fra %1$s til %2$s blev der registreret nye logposter.",
 "Distribution by log level:": "Fordeling efter logniveau:",
 "Details can be found in the log management of your Nextcloud instance.": "Detaljer kan findes i logstyringen af ​​din Nextcloud-instans.",
-"This is a test email": "Dette er en test-e-mail"
+"This is a test email": "Dette er en test-e-mail",
+"Shall a log report be sent by notification?": "Skal der sendes en lograpport ved meddelelse?",
+"last report: {when}": "sidste rapport: {when}",
+"next report: {when}": "næste rapport: {when}",
+"To which administrator shall the notification be sent?": "Hvilken administrator skal meddelelsen sendes til?",
+"Test notification": "Testmeddelelse",
+"This is a test notification": "Dette er en testmeddelelse"
 },
 "nplurals=2; plural=n != 1;");
