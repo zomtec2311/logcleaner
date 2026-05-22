@@ -44,6 +44,7 @@ return [
     ['name' => 'Settings#logfileandsize', 'url' => '/logfileandsize', 'verb' => 'GET'],
     ['name' => 'Settings#getcntll', 'url' => '/getcntll', 'verb' => 'GET'],
     ['name' => 'Settings#delapp', 'url' => '/delapp/{app}', 'verb' => 'GET'],
+    ['name' => 'Settings#isnoti', 'url' => '/isnoti', 'verb' => 'GET'],
     ['name' => 'Logs#list', 'url' => '/logs/list/{limit}/{offset}', 'verb' => 'GET'],
     ['name' => 'Logs#listlevel', 'url' => '/logs/list/level/{limit}/{offset}/{level}', 'verb' => 'GET'],
     ['name' => 'Logs#listapp', 'url' => '/logs/list/app/{limit}/{offset}/{app}', 'verb' => 'GET'],
@@ -55,6 +56,8 @@ return [
     ['name' => 'Logs#dellines', 'url' => '/logs/dellines', 'verb' => 'POST'],
     ['name' => 'Logs#dellinesapp', 'url' => '/logs/dellinesapp', 'verb' => 'POST'],
     ['name' => 'Logs#getAdmins', 'url' => '/getadmins', 'verb' => 'GET'],
+    ['name' => 'Logs#getNotiAdmins', 'url' => '/getnotiadmins', 'verb' => 'GET'],
     ['name' => 'Logs#testLogEmail', 'url' => '/testlogemail', 'verb' => 'GET'],
+    ['name' => 'Logs#testLogNotification', 'url' => '/testlognoti', 'verb' => 'GET'],
   ]
 ];
