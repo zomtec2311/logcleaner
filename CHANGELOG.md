@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.9
+
+## Added
+- display last and next report date
+- sending Log report via notifications if notifications app is enabled
+
 ## 1.4.8
 
 ### Fixed
