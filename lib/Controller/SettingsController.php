@@ -98,6 +98,7 @@ class SettingsController extends Controller {
 			'notification_enabled' => (empty($this->config->getAppValue('logcleaner', 'notification_enabled')))?$this->setSettingZeilen('notification_enabled','no'):$this->config->getAppValue('logcleaner', 'notification_enabled'),
 			'noti_interval' => (empty($this->config->getAppValue('logcleaner', 'noti_interval')))?$this->setSettingZeilen('noti_interval','daily'):$this->config->getAppValue('logcleaner', 'noti_interval'),
 			'admin_noti' => $this->config->getAppValue('logcleaner', 'admin_noti'),
+			'last_noti_test_timestamp' => (int)$this->config->getAppValue('logcleaner', 'last_noti_test_timestamp', 0)
 		]);
 	}
 
