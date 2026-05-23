@@ -79,7 +79,7 @@ class LogReportJob extends TimedJob {
         if (($now - $lastSent) >= $secondsNeeded) {
             $this->logService->sendSummaryEmail();
             $this->appconfig->setValueInt('logcleaner', 'last_email_timestamp', $now);
-			$this->logger->info('LogCleaner background job to report logs by email executed!');
+			if ( $this->appconfig->getValueInt('logcleaner', 'wtparam_logmessage', 2) === 2 ) $this->logger->info('LogCleaner background job to report logs by email executed!');
         }
     }
 
@@ -97,7 +97,7 @@ class LogReportJob extends TimedJob {
         if (($now - $lastSent) >= $secondsNeeded) {
             $this->logService->sendSummaryNotification();
             $this->appconfig->setValueInt('logcleaner', 'last_noti_timestamp', $now);
-			$this->logger->info('LogCleaner background job to report logs by notification executed!');
+			if ( $this->appconfig->getValueInt('logcleaner', 'wtparam_logmessage', 2) === 2 ) $this->logger->info('LogCleaner background job to report logs by notification executed!');
         }
 
     }
