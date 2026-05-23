@@ -102,6 +102,9 @@
 "next report: {when}": "sljedeći izvještaj: {when}",
 "To which administrator shall the notification be sent?": "Kojem administratoru poslati obavijest?",
 "Test notification": "Obavijest o testu",
-"This is a test notification": "Ovo je testna obavijest"
+"This is a test notification": "Ovo je testna obavijest",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Sažetak dnevnika dnevnog Nextclouda (%1$s do %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Tjedni sažetak dnevnika Nextcloud (%1$s do %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Sažetak mjesečnog dnevnika Nextcloud (%1$s do %2$s)"
 },"pluralForm" :"nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);"
 }

@@ -106,6 +106,9 @@ OC.L10N.register(
 "next report: {when}": "nākamais ziņojums: {when}",
 "To which administrator shall the notification be sent?": "Kuram administratoram jānosūta paziņojums?",
 "Test notification": "Testa paziņojums",
-"This is a test notification": "Šis ir testa paziņojums"
+"This is a test notification": "Šis ir testa paziņojums",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Dienas Nextcloud žurnāla kopsavilkums (%1$s–%2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Iknedēļas Nextcloud žurnāla kopsavilkums (%1$s–%2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Ikmēneša Nextcloud žurnāla kopsavilkums (%1$s–%2$s)"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");

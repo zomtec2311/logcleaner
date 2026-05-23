@@ -102,6 +102,9 @@
 "next report: {when}": "adroddiad nesaf: {when}",
 "To which administrator shall the notification be sent?": "At ba weinyddwr yr anfonir yr hysbysiad?",
 "Test notification": "Hysbysiad prawf",
-"This is a test notification": "Hysbysiad prawf yw hwn"
+"This is a test notification": "Hysbysiad prawf yw hwn",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Crynodeb Log Daily Nextcloud (%1$s i %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Crynodeb o Log Wythnosol Nextcloud (%1$s i %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Crynodeb Log Misol Nextcloud (%1$s i %2$s)"
 },"pluralForm" :"nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n == 3) ? 3 : ((n == 6) ? 4 : 5))));"
 }

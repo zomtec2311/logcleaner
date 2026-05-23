@@ -106,6 +106,9 @@ OC.L10N.register(
 "next report: {when}": "sekva raporto: {when}",
 "To which administrator shall the notification be sent?": "Al kiu administranto estu sendita la sciigo?",
 "Test notification": "Testa sciigo",
-"This is a test notification": "Ĉi tio estas testa sciigo"
+"This is a test notification": "Ĉi tio estas testa sciigo",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Ĉiutaga Nextcloud Protokolo-Resumo (%1$s al %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Semajna Protokolo-Resumo de Nextcloud (%1$s al %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Monata Protokolo-Resumo de Nextcloud (%1$s al %2$s)"
 },
 "nplurals=2; plural=n != 1;");

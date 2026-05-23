@@ -106,6 +106,9 @@ OC.L10N.register(
 "next report: {when}": "báo cáo tiếp theo: {when}",
 "To which administrator shall the notification be sent?": "Thông báo sẽ được gửi đến quản trị viên nào?",
 "Test notification": "Thông báo kiểm tra",
-"This is a test notification": "Đây là thông báo thử nghiệm"
+"This is a test notification": "Đây là thông báo thử nghiệm",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Tóm tắt nhật ký Nextcloud hàng ngày (%1$s đến %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Tóm tắt nhật ký Nextcloud hàng tuần (%1$s đến %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Tóm tắt nhật ký Nextcloud hàng tháng (%1$s đến %2$s)"
 },
 "nplurals=1; plural=0;");

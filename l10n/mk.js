@@ -106,6 +106,9 @@ OC.L10N.register(
 "next report: {when}": "следен извештај: {when}",
 "To which administrator shall the notification be sent?": "До кој администратор ќе се испрати известувањето?",
 "Test notification": "Известување за тестирање",
-"This is a test notification": "Ова е известување за тестирање"
+"This is a test notification": "Ова е известување за тестирање",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Дневен преглед на дневникот на Nextcloud (%1$s до %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Неделно резиме на дневникот на Nextcloud (%1$s до %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Месечен преглед на дневникот на Nextcloud (%1$s до %2$s)"
 },
 "nplurals=2; plural=(n==1 || n%10==1 ? 0 : 1);");

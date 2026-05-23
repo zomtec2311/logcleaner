@@ -102,6 +102,9 @@
 "next report: {when}": "næsta skýrsla: {when}",
 "To which administrator shall the notification be sent?": "Til hvaða stjórnanda á að senda tilkynninguna?",
 "Test notification": "Tilkynning um próf",
-"This is a test notification": "Þetta er próftilkynning"
+"This is a test notification": "Þetta er próftilkynning",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Daglegt yfirlit yfir Nextcloud log (%1$s til %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Vikuleg samantekt Nextcloud log (%1$s til %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Mánaðarleg Nextcloud Log Yfirlit (%1$s til %2$s)"
 },"pluralForm" :"nplurals=2; plural=n % 10 != 1 || n % 100 == 11;"
 }

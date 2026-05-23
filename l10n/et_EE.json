@@ -102,6 +102,9 @@
 "next report: {when}": "järgmine aruanne: {when}",
 "To which administrator shall the notification be sent?": "Millisele haldajale tuleb teade saata?",
 "Test notification": "Testi teatis",
-"This is a test notification": "See on testteatis"
+"This is a test notification": "See on testteatis",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Igapäevane Nextcloudi logi kokkuvõte (%1$s kuni %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Nädala Nextcloudi logi kokkuvõte (%1$s kuni %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Kuu Nextcloudi logi kokkuvõte (%1$s kuni %2$s)"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

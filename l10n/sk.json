@@ -102,6 +102,9 @@
 "next report: {when}": "ďalšia správa: {when}",
 "To which administrator shall the notification be sent?": "Ktorému správcovi sa má zaslať oznámenie?",
 "Test notification": "Oznámenie o teste",
-"This is a test notification": "Toto je testovacie oznámenie"
+"This is a test notification": "Toto je testovacie oznámenie",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Denný súhrn denníka Nextcloud (%1$s až %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Týždenný súhrn denníka Nextcloud (%1$s až %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Mesačný súhrn denníka Nextcloud (%1$s až %2$s)"
 },"pluralForm" :"nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);"
 }

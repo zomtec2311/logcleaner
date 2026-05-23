@@ -106,6 +106,9 @@ OC.L10N.register(
 "next report: {when}": "下一份报告：{when}",
 "To which administrator shall the notification be sent?": "通知应发送给哪位管理员？",
 "Test notification": "测试通知",
-"This is a test notification": "这是测试通知"
+"This is a test notification": "这是测试通知",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "每日 Nextcloud 日志摘要（%1$s 到 %2$s）",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "每周 Nextcloud 日志摘要（%1$s 到 %2$s）",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "每月 Nextcloud 日志摘要（%1$s 到 %2$s）"
 },
 "nplurals=1; plural=0;");

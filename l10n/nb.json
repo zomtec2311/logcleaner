@@ -102,6 +102,9 @@
 "next report: {when}": "neste rapport: {when}",
 "To which administrator shall the notification be sent?": "Hvilken administrator skal meldingen sendes til?",
 "Test notification": "Testvarsling",
-"This is a test notification": "Dette er et testvarsel"
+"This is a test notification": "Dette er et testvarsel",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Daglig Nextcloud-loggsammendrag (%1$s til %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Ukentlig Nextcloud-loggsammendrag (%1$s til %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Månedlig Nextcloud-loggsammendrag (%1$s til %2$s)"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

@@ -106,6 +106,9 @@ OC.L10N.register(
 "next report: {when}": "كېيىنكى دوكلات: {when}",
 "To which administrator shall the notification be sent?": "ئۇقتۇرۇش قايسى باشقۇرغۇچىغا ئەۋەتىلىدۇ؟",
 "Test notification": "سىناق ئۇقتۇرۇشى",
-"This is a test notification": "بۇ بىر سىناق ئۇقتۇرۇشى"
+"This is a test notification": "بۇ بىر سىناق ئۇقتۇرۇشى",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "كۈندىلىك Nextcloud خاتىرە خۇلاسىسى (%1$s دىن %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "ھەپتىلىك Nextcloud خاتىرە خۇلاسىسى (%1$s دىن %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "ئايلىق Nextcloud خاتىرە خۇلاسىسى (%1$s دىن %2$s)"
 },
 "nplurals=2; plural=n != 1;");

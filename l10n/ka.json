@@ -102,6 +102,9 @@
 "next report: {when}": "შემდეგი ანგარიში: {when}",
 "To which administrator shall the notification be sent?": "რომელ ადმინისტრატორს უნდა გაეგზავნოს შეტყობინება?",
 "Test notification": "ტესტის შეტყობინება",
-"This is a test notification": "ეს არის ტესტის შეტყობინება"
+"This is a test notification": "ეს არის ტესტის შეტყობინება",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "ყოველდღიური Nextcloud ჟურნალის შეჯამება (%1$s-დან %2$s-მდე)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "ყოველკვირეული Nextcloud ჟურნალის შეჯამება (%1$s-დან %2$s-მდე)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "ყოველთვიური Nextcloud ჟურნალის შეჯამება (%1$s-დან %2$s-მდე)"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

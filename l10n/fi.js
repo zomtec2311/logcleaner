@@ -106,6 +106,9 @@ OC.L10N.register(
 "next report: {when}": "seuraava raportti: {when}",
 "To which administrator shall the notification be sent?": "Kenelle ylläpitäjälle ilmoitus lähetetään?",
 "Test notification": "Testiilmoitus",
-"This is a test notification": "Tämä on testiilmoitus"
+"This is a test notification": "Tämä on testiilmoitus",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Päivittäinen Nextcloud-lokin yhteenveto (%1$s - %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Viikoittainen Nextcloud-lokin yhteenveto (%1$s–%2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Kuukausittainen Nextcloud-lokin yhteenveto (%1$s–%2$s)"
 },
 "nplurals=2; plural=n != 1;");

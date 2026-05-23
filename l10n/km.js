@@ -106,6 +106,9 @@ OC.L10N.register(
 "next report: {when}": "របាយការណ៍បន្ទាប់៖ {when}",
 "To which administrator shall the notification be sent?": "តើ​ការ​ជូន​ដំណឹង​ត្រូវ​ផ្ញើ​ទៅ​អ្នក​គ្រប់គ្រង​ណា?",
 "Test notification": "ការជូនដំណឹងសាកល្បង",
-"This is a test notification": "នេះគឺជាការជូនដំណឹងអំពីការសាកល្បង"
+"This is a test notification": "នេះគឺជាការជូនដំណឹងអំពីការសាកល្បង",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "សង្ខេបកំណត់ហេតុប្រចាំថ្ងៃ Nextcloud (%1$s ដល់ %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "សង្ខេបកំណត់ហេតុប្រចាំសប្តាហ៍ Nextcloud (%1$s ដល់ %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "សង្ខេបកំណត់ហេតុប្រចាំខែ Nextcloud (%1$s ដល់ %2$s)"
 },
 "nplurals=1; plural=0;");

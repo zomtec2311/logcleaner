@@ -106,6 +106,9 @@ OC.L10N.register(
 "next report: {when}": "επόμενη αναφορά: {when}",
 "To which administrator shall the notification be sent?": "Σε ποιον διαχειριστή θα σταλεί η ειδοποίηση;",
 "Test notification": "Ειδοποίηση δοκιμής",
-"This is a test notification": "Αυτή είναι μια δοκιμαστική ειδοποίηση"
+"This is a test notification": "Αυτή είναι μια δοκιμαστική ειδοποίηση",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Ημερήσια σύνοψη καταγραφής Nextcloud (%1$s σε %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Εβδομαδιαία σύνοψη καταγραφής Nextcloud (%1$s σε %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Μηνιαία σύνοψη καταγραφής Nextcloud (%1$s σε %2$s)"
 },
 "nplurals=2; plural=n != 1;");

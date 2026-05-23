@@ -106,6 +106,9 @@ OC.L10N.register(
 "next report: {when}": "次のレポート: {when}",
 "To which administrator shall the notification be sent?": "通知はどの管理者に送信されますか?",
 "Test notification": "テスト通知",
-"This is a test notification": "テストのお知らせです"
+"This is a test notification": "テストのお知らせです",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "毎日の Nextcloud ログの概要 (%1$s から %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "毎週の Nextcloud ログの概要 (%1$s から %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "毎月の Nextcloud ログの概要 (%1$s から %2$s)"
 },
 "nplurals=1; plural=0;");

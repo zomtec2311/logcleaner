@@ -104,6 +104,9 @@ OC.L10N.register(
 "next report: {when}": "prochain rapport : {when}",
 "To which administrator shall the notification be sent?": "À quel administrateur la notification doit-elle être envoyée ?",
 "Test notification": "Notification de test",
-"This is a test notification": "Ceci est une notification de test"
+"This is a test notification": "Ceci est une notification de test",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Résumé quotidien du journal Nextcloud (%1$s à %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Résumé hebdomadaire du journal Nextcloud (%1$s à %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Résumé mensuel du journal Nextcloud (%1$s à %2$s)"
 },
 "nplurals=2; plural=(n != 1);");

@@ -106,6 +106,9 @@ OC.L10N.register(
 "next report: {when}": "পরবর্তী রিপোর্ট: {when}",
 "To which administrator shall the notification be sent?": "কোন প্রশাসকের কাছে বিজ্ঞপ্তি পাঠানো হবে?",
 "Test notification": "পরীক্ষার বিজ্ঞপ্তি",
-"This is a test notification": "এটি একটি পরীক্ষার বিজ্ঞপ্তি"
+"This is a test notification": "এটি একটি পরীক্ষার বিজ্ঞপ্তি",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "দৈনিক নেক্সটক্লাউড লগ সারাংশ (%1$s থেকে %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "সাপ্তাহিক নেক্সটক্লাউড লগ সারাংশ (%1$s থেকে %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "মাসিক নেক্সটক্লাউড লগ সারাংশ (%1$s থেকে %2$s)"
 },
 "nplurals=2; plural=n > 1;");

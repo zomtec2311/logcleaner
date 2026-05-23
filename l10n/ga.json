@@ -102,6 +102,9 @@
 "next report: {when}": "an chéad tuairisc eile: {when}",
 "To which administrator shall the notification be sent?": "Cén riarthóir a sheolfar an fógra?",
 "Test notification": "Fógra tástála",
-"This is a test notification": "Is fógra tástála é seo"
+"This is a test notification": "Is fógra tástála é seo",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Achoimre ar Logchomhad Daily Nextcloud (%1$s go %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Achoimre ar Logchomhad Seachtainiúil Nextcloud (%1$s go %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Achoimre ar Logchomhad Míosúil Nextcloud (%1$s go %2$s)"
 },"pluralForm" :"nplurals=5; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n >= 3 && n <= 6) ? 2 : ((n >= 7 && n <= 10) ? 3 : 4)));"
 }

@@ -106,6 +106,9 @@ OC.L10N.register(
 "next report: {when}": "nästa rapport: {when}",
 "To which administrator shall the notification be sent?": "Till vilken handläggare ska anmälan skickas?",
 "Test notification": "Testavisering",
-"This is a test notification": "Detta är ett testmeddelande"
+"This is a test notification": "Detta är ett testmeddelande",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Daglig Nextcloud-loggsammanfattning (%1$s till %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Weekly Nextcloud Log Summary (%1$s till %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Månatlig Nextcloud-loggsammanfattning (%1$s till %2$s)"
 },
 "nplurals=2; plural=n != 1;");

@@ -106,6 +106,9 @@ OC.L10N.register(
 "next report: {when}": "következő jelentés: {when}",
 "To which administrator shall the notification be sent?": "Melyik adminisztrátornak kell megküldeni az értesítést?",
 "Test notification": "Teszt értesítés",
-"This is a test notification": "Ez egy tesztértesítés"
+"This is a test notification": "Ez egy tesztértesítés",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Napi Nextcloud-napló-összefoglaló (%1$s–%2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Heti Nextcloud naplóösszegzés (%1$s–%2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Havi Nextcloud-napló-összefoglaló (%1$s–%2$s)"
 },
 "nplurals=2; plural=n != 1;");

@@ -106,6 +106,6 @@ OC.L10N.register(
 "next report: {when}": "التقرير التالي: {when}",
 "To which administrator shall the notification be sent?": "إلى أي مسؤول يجب إرسال الإخطار؟",
 "Test notification": "إشعار الاختبار",
-"This is a test notification": "هذا إشعار اختباري"
+"This is a test notification": "هذا إشعار اختباري",
 },
 "nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n % 100 >= 3 && n % 100 <= 10) ? 3 : ((n % 100 >= 11 && n % 100 <= 99) ? 4 : 5))));");

@@ -107,6 +107,9 @@ OC.L10N.register(
 "next report: {when}": "volgende verslag: {when}",
 "To which administrator shall the notification be sent?": "Aan watter administrateur sal die kennisgewing gestuur word?",
 "Test notification": "Toetskennisgewing",
-"This is a test notification": "Dit is 'n toetskennisgewing"
+"This is a test notification": "Dit is 'n toetskennisgewing",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Daaglikse Nextcloud-logopsomming (%1$s tot %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Weeklikse Nextcloud-logopsomming (%1$s tot %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Maandelikse Nextcloud-logopsomming (%1$s tot %2$s)"
 },
 "nplurals=2; plural=n != 1;");

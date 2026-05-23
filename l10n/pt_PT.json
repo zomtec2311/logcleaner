@@ -102,6 +102,9 @@
 "next report: {when}": "próximo relatório: {when}",
 "To which administrator shall the notification be sent?": "Para qual administrador será enviada a notificação?",
 "Test notification": "Notificação de teste",
-"This is a test notification": "Esta é uma notificação de teste"
+"This is a test notification": "Esta é uma notificação de teste",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Resumo diário do registro Nextcloud (%1$s para %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Resumo semanal do log Nextcloud (%1$s para %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Resumo mensal do log Nextcloud (%1$s para %2$s)"
 },"pluralForm" :"nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0) ? 1 : 2);"
 }

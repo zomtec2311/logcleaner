@@ -102,6 +102,9 @@
 "next report: {when}": "다음 보고서: {when}",
 "To which administrator shall the notification be sent?": "어느 관리자에게 알림이 전송되나요?",
 "Test notification": "테스트 알림",
-"This is a test notification": "테스트 알림입니다."
+"This is a test notification": "테스트 알림입니다.",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "일일 Nextcloud 로그 요약(%1$s - %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "주간 Nextcloud 로그 요약(%1$s - %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "월간 Nextcloud 로그 요약(%1$s - %2$s)"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

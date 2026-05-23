@@ -102,6 +102,9 @@
 "next report: {when}": "raporti tjetër: {when}",
 "To which administrator shall the notification be sent?": "Cilit administrator do t'i dërgohet njoftimi?",
 "Test notification": "Njoftimi i testit",
-"This is a test notification": "Ky është një njoftim testimi"
+"This is a test notification": "Ky është një njoftim testimi",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Përmbledhja ditore e regjistrit të Nextcloud (%1$s në %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Përmbledhja javore e regjistrit të Nextcloud (%1$s në %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Përmbledhja mujore e regjistrit të Nextcloud (%1$s në %2$s)"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

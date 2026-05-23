@@ -91,17 +91,20 @@
 "To which administrator shall the email be sent?": "Ком администратору ће се послати е-маил?",
 "Choose an Admin": "Изаберите администратора",
 "Test E-Mail": "Тест е-поште",
-"Nextcloud Log Summary (%1$s to %2$s)": "Нектцлоуд резиме дневника (НАМЕЕИНС до НАМЕЗВЕИ)",
+"Nextcloud Log Summary (%1$s to %2$s)": "Нектцлоуд резиме дневника (%1$s до %2$s)",
 "Hello %1$s,": "Здраво НАМЕЕИНС,",
-"in the period from %1$s to %2$s new log entries were registered.": "у периоду од НАМЕЕИНС до НАМЕЗВЕИ регистровани су нови уноси у дневник.",
+"in the period from %1$s to %2$s new log entries were registered.": "у периоду од %1$s до %2$s регистровани су нови уноси у дневник.",
 "Distribution by log level:": "Дистрибуција према нивоу евиденције:",
 "Details can be found in the log management of your Nextcloud instance.": "Детаљи се могу наћи у управљању евиденцијом ваше Нектцлоуд инстанце.",
 "This is a test email": "Ово је пробни емаил",
 "Shall a log report be sent by notification?": "Да ли се извештај дневника шаље обавештењем?",
-"last report: {when}": "последњи извештај: КСИЗ",
-"next report: {when}": "следећи извештај: КСИЗ",
+"last report: {when}": "последњи извештај: {when}",
+"next report: {when}": "следећи извештај: {when}",
 "To which administrator shall the notification be sent?": "Ком администратору ће се послати обавештење?",
 "Test notification": "Тестно обавештење",
-"This is a test notification": "Ово је обавештење о тесту"
+"This is a test notification": "Ово је обавештење о тесту",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Дневни сажетак дневника Нектцлоуд (%1$s до %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Недељни сажетак дневника Нектцлоуд (%1$s до %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Месечни Нектцлоуд резиме (%1$s до %2$s)"
 },"pluralForm" :"nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);"
 }

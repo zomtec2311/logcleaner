@@ -106,6 +106,9 @@ OC.L10N.register(
 "next report: {when}": "další zpráva: {when}",
 "To which administrator shall the notification be sent?": "Kterému správci má být oznámení zasláno?",
 "Test notification": "Oznámení o testu",
-"This is a test notification": "Toto je testovací oznámení"
+"This is a test notification": "Toto je testovací oznámení",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Denní shrnutí protokolu Nextcloud (%1$s až %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "Týdenní shrnutí protokolu Nextcloud (%1$s až %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Přehled měsíčního protokolu Nextcloud (%1$s až %2$s)"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);");

@@ -102,6 +102,9 @@
 "next report: {when}": "ಮುಂದಿನ ವರದಿ: {when}",
 "To which administrator shall the notification be sent?": "ಅಧಿಸೂಚನೆಯನ್ನು ಯಾವ ನಿರ್ವಾಹಕರಿಗೆ ಕಳುಹಿಸಬೇಕು?",
 "Test notification": "ಪರೀಕ್ಷಾ ಅಧಿಸೂಚನೆ",
-"This is a test notification": "ಇದು ಪರೀಕ್ಷಾ ಅಧಿಸೂಚನೆಯಾಗಿದೆ"
+"This is a test notification": "ಇದು ಪರೀಕ್ಷಾ ಅಧಿಸೂಚನೆಯಾಗಿದೆ",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "ಡೈಲಿ ನೆಕ್ಸ್ಟ್‌ಕ್ಲೌಡ್ ಲಾಗ್ ಸಾರಾಂಶ (%1$s ನಿಂದ %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "ಸಾಪ್ತಾಹಿಕ Nextcloud ಲಾಗ್ ಸಾರಾಂಶ (%1$s ನಿಂದ %2$s)",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "ಮಾಸಿಕ Nextcloud ಲಾಗ್ ಸಾರಾಂಶ (%1$s ನಿಂದ %2$s)"
 },"pluralForm" :"nplurals=2; plural=n > 1;"
 }

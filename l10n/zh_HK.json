@@ -102,6 +102,9 @@
 "next report: {when}": "下一份報告：{when}",
 "To which administrator shall the notification be sent?": "通知應發送給哪位管理員？",
 "Test notification": "測試通知",
-"This is a test notification": "這是測試通知"
+"This is a test notification": "這是測試通知",
+"Daily Nextcloud Log Summary (%1$s to %2$s)": "Daily Nextcloud Log Summary (%1$s to %2$s)",
+"Weekly Nextcloud Log Summary (%1$s to %2$s)": "每週 Nextcloud 日誌摘要（%1$s 到 %2$s）",
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "每月 Nextcloud 日誌摘要（%1$s 到 %2$s）"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
