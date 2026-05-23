@@ -60,7 +60,7 @@ class Cleanup extends TimedJob {
 		$wtpara_cron_deldub = (int)$this->appconfig->getValueString('logcleaner', 'wtpara_cron_deldub', '9', false);
 		if($wtpara_cron_deldub ===2) {
         $this->setcon->removeDub(0);
-        $this->logger->info('LogCleaner background job to delete duplicates in the log file executed!');
+        if ( $this->appconfig->getValueInt('logcleaner', 'wtparam_logmessage', 2) === 2 ) $this->logger->info('LogCleaner background job to delete duplicates in the log file executed!');
 		}
 	}
 }
