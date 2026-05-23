@@ -76,35 +76,26 @@ class Notifier implements INotifier {
 			throw new UnknownNotificationException();
 		}
 
-        switch ($notification->getSubject()) {
+		switch ($notification->getSubject()) {
 			case 'logcleaner':
 				$parameters = $notification->getSubjectParameters() ?? [];
 
-				$notification->setIcon($this->url->getAbsoluteURL($this->url->imagePath('logcleaner', 'logcleaner-dark.svg')))
-				->setLink($this->url->linkToRouteAbsolute('logcleaner.page.index'));
+				$notification->setIcon($this->url->getAbsoluteURL($this->url->imagePath('logcleaner', 'logcleaner-dark.svg')));
+
+				$notification->setLink($this->url->linkToRouteAbsolute('logcleaner.page.index'));
 
 				if (!empty($parameters['richSubject'])) {
-				$subjectParams = $parameters['richSubjectParameters'] ?? [];
-				$notification->setRichSubject($parameters['richSubject'], $subjectParams);
+					$notification->setRichSubject($parameters['richSubject'], $parameters['richSubjectParameters'] ?? []);
 				} else {
-				$notification->setParsedSubject($parameters['parsedSubject'] ?? 'Log Summary');
-				}
-				if (!empty($parameters['richMessage'])) {
-				$messageParams = $parameters['richMessageParameters'] ?? [];
-				$notification->setRichMessage($parameters['richMessage'], $messageParams);
-				} else {
-				$notification->setParsedMessage($parameters['parsedMessage'] ?? '');
+					$notification->setParsedSubject($parameters['parsedSubject'] ?? 'Log Summary');
 				}
 
-				if (!empty($parameters['actions'])) {
-					foreach ($parameters['actions'] as $actionData) {
-						$action = $notification->createAction();
-						$action->setLabel($actionData['label'])
-						->setLink($actionData['link'], 'GET')
-						->setPrimary(true);
-						$notification->addAction($action);
-					}
+				if (!empty($parameters['richMessage'])) {
+					$notification->setRichMessage($parameters['richMessage'], $parameters['richMessageParameters'] ?? []);
+				} else {
+					$notification->setParsedMessage($parameters['parsedMessage'] ?? '');
 				}
+
 				return $notification;
 
 			case 'cli':
@@ -112,19 +103,16 @@ class Notifier implements INotifier {
 			case 'self':
 				$subjectParams = $notification->getSubjectParameters();
 				if (isset($subjectParams['subject'])) {
-
 					$notification->setRichSubject($subjectParams['subject'], $subjectParams['parameters']);
 				} else {
-
 					$notification->setParsedSubject($subjectParams[0]);
 				}
+
 				$messageParams = $notification->getMessageParameters();
 				if (!empty($messageParams)) {
 					if (!empty($messageParams['message'])) {
-
 						$notification->setRichMessage($messageParams['message'], $messageParams['parameters']);
 					} elseif (!empty($messageParams[0])) {
-
 						$notification->setParsedMessage($messageParams[0]);
 					}
 				}
@@ -136,6 +124,8 @@ class Notifier implements INotifier {
 				throw new UnknownNotificationException('subject');
 		}
 	}
+
+
 
 	/**
 	 * This is a little helper function which automatically sets the simple parsed subject
