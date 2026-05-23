@@ -92,7 +92,23 @@ class LogNotificationService {
 
         $message = $this->mailer->createMessage();
         $message->setTo([$adminEmail]);
-        $message->setSubject($l->t('Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]));
+
+         switch ($this->config->getAppValue('logcleaner', 'email_interval', 'daily')) {
+			case 'daily':
+				$message->setSubject($l->t('Daily Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]));
+                break;
+
+			case 'weekly':
+                $message->setSubject($l->t('Weekly Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]));
+                break;
+
+			case 'monthly':
+                $message->setSubject($l->t('Monthly Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]));
+                break;
+
+			default:
+				$message->setSubject($l->t('Daily Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]));
+		}
 
         $body = $l->t('Hello %1$s,', [$adminName]) . "\n\n";
         $body .= $l->t('in the period from %1$s to %2$s new log entries were registered.', [$fromDate, $toDate]) . "\n\n";
@@ -106,6 +122,8 @@ class LogNotificationService {
             }
         }
 
+        $body .= "--------------------------\n";
+
         $body .= "\n" . $l->t('Details can be found in the log management of your Nextcloud instance.');
 
 
@@ -118,7 +136,7 @@ class LogNotificationService {
         $lastSent = (int)$this->config->getAppValue('logcleaner', 'last_email_timestamp', 0);
         $minLevel = (int)$this->config->getSystemValue('loglevel', 2);
         $offset = (int)$this->config->getAppValue('logcleaner', 'logcleaner_wt_offset', 0);
-        $stats = $this->getLogStats($lastSent, $minLevel);
+        $stats = $this->getLogStats($lastSent, $minLevel, true);
 
         $adminEmail = $this->config->getAppValue('logcleaner', 'admin_email', '');
         $adminName = $this->config->getAppValue('logcleaner', 'admin_email_name', '');
@@ -149,6 +167,8 @@ class LogNotificationService {
             }
         }
 
+        $body .= "--------------------------\n";
+
         $body .= $l->t('This is a test email') . "\n";
 
 
@@ -164,7 +184,7 @@ class LogNotificationService {
         $stats = $this->getLogStats($lastSent, $minLevel);
 
         if (array_sum($stats['counts']) === 0) {
-            $this->logger->info("LogCleaner: No new log entries available. Therefore, no sending of a log report by notification");
+            if( (int)$this->config->getAppValue('logcleaner', 'wtparam_logmessage') === 2 ) $this->logger->info("LogCleaner: No new log entries available. Therefore, no sending of a log report by notification");
             return;
         }
 
@@ -179,7 +199,22 @@ class LogNotificationService {
 
         $toDate = date('d.m.Y H:i', strtotime("$offset hours", $stats['newest']));
 
-        $translatedSubject = $l->t('Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]);
+        switch ($this->config->getAppValue('logcleaner', 'noti_interval', 'daily')) {
+			case 'daily':
+				$translatedSubject = $l->t('Daily Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]);
+                break;
+
+			case 'weekly':
+                $translatedSubject = $l->t('Weekly Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]);
+                break;
+
+			case 'monthly':
+                $translatedSubject = $l->t('Monthly Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]);
+                break;
+
+			default:
+				$translatedSubject = $l->t('Daily Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]);
+		}
 
         $mysubject = $translatedSubject;
 
@@ -198,29 +233,26 @@ class LogNotificationService {
             }
         }
 
-        $plainMessage .= $l->t('Details can be found in the log management of your Nextcloud instance.');
+        $plainMessage .= "--------------------------\n\n";
 
-        $targetUrl = $this->url->linkToRouteAbsolute('logcleaner.page.index');
+        $plainMessage .= "{applink}";
 
         $para = [
             'richSubject' => $mysubject,
             'richSubjectParameters' => [],
 
             'richMessage' => $plainMessage,
-            'richMessageParameters' => [],
+            'richMessageParameters' => [
+                'applink' => [
+                    'type' => 'highlight',
+                    'id'   => 'logcleaner_highlight_link',
+                    'name' => $l->t('Details can be found in the log management of your Nextcloud instance.'),
+                    'link' => $targetUrl
+                ]
+            ],
 
             'parsedSubject' => $mysubject,
-            'parsedMessage' => $plainMessage . "\n\n" . $targetUrl,
-
-            'actions' => [
-                [
-                    'type' => 'link',
-                    'id'   => 'open',
-                    'label' => $l->t('open'),
-                    'link' => $targetUrl,
-                    'icon' => 'icon-confirm'
-                ]
-            ]
+            'parsedMessage' => $plainMessage
         ];
 
         $notification = $this->notificationManager->createNotification();
@@ -243,27 +275,22 @@ class LogNotificationService {
         $lastSent = (int)$this->config->getAppValue('logcleaner', 'last_noti_test_timestamp', 0);
         $minLevel = (int)$this->config->getSystemValue('loglevel', 2);
         $offset = (int)$this->config->getAppValue('logcleaner', 'logcleaner_wt_offset', 0);
-        $stats = $this->getLogStats($lastSent, $minLevel);
+        $stats = $this->getLogStats($lastSent, $minLevel, true);
         $adminName = $this->config->getAppValue('logcleaner', 'admin_noti', '');
         $user = $this->userManager->get($adminName);
 
         $lang = $this->l10nFactory->getUserLanguage($user);
-
         $l = $this->l10nFactory->get('logcleaner', $lang);
 
         $fromDate = date('d.m.Y H:i', strtotime("$offset hours", $stats['oldest']));
-
         $toDate = date('d.m.Y H:i', strtotime("$offset hours", $stats['newest']));
 
         $translatedSubject = $l->t('Test notification');
-
         $mysubject = $translatedSubject;
 
         $targetUrl = $this->url->linkToRouteAbsolute('logcleaner.page.index');
 
         $plainMessage = $l->t('Hello %1$s,', [$adminName]) . "\n\n";
-
-
 
         if (array_sum($stats['counts']) !== 0) {
             $plainMessage .= $l->t('in the period from %1$s to %2$s new log entries were registered.', [$fromDate, $toDate]) . "\n\n";
@@ -275,32 +302,32 @@ class LogNotificationService {
                     $plainMessage .= sprintf("%-10s: %d\n", $l->t($this->getLevelName($level)), $count);
                 }
             }
+            $plainMessage .= "\n";
+
+            $plainMessage .= "--------------------------\n";
         }
 
         $plainMessage .= $l->t('This is a test notification') . "\n\n";
 
-        $targetUrl = $this->url->linkToRouteAbsolute('logcleaner.page.index');
+        //$plainMessage .= "🔗 " . "{applink}" . " 👉";
+         $plainMessage .= "{applink}";
 
         $para = [
             'richSubject' => $mysubject,
             'richSubjectParameters' => [],
 
             'richMessage' => $plainMessage,
-            'richMessageParameters' => [],
+            'richMessageParameters' => [
+                'applink' => [
+                    'type' => 'highlight',
+                    'id'   => 'logcleaner_highlight_link',
+                    'name' => $l->t('Details can be found in the log management of your Nextcloud instance.'),
+                    'link' => $targetUrl
+                ]
+            ],
 
             'parsedSubject' => $mysubject,
-            'parsedMessage' => $plainMessage . "\n\n" . $targetUrl,
-
-
-            'actions' => [
-                [
-                    'type' => 'link',
-                    'id'   => 'open',
-                    'label' => $l->t('open'),
-                    'link' => $targetUrl,
-                    'icon' => 'icon-confirm'
-                ]
-            ]
+            'parsedMessage' => $plainMessage
         ];
 
         $notification = $this->notificationManager->createNotification();
@@ -316,10 +343,9 @@ class LogNotificationService {
         $this->config->setAppValue('logcleaner', 'last_noti_test_timestamp', $now);
 
         return true;
-
     }
 
-    private function getLogStats(int $lastRun, int $minLevel): array {
+    private function getLogStats(int $lastRun, int $minLevel, bool $test = false): array {
         $stats = ['counts' => [0 => 0, 1 => 0, 2 => 0, 3 => 0, 4 => 0], 'oldest' => null, 'newest' => null];
         $interval = (string)$this->config->getAppValue('logcleaner', 'email_interval', 'daily');
 
@@ -332,7 +358,9 @@ class LogNotificationService {
         $filetime = $lastRun - $secondsNeeded;
 
         $logFile = $this->logService->getLogFile();
-        $filesToProcess = [$logFile, $logFile . '.1'];
+
+        if ($test === true) $filesToProcess = [$logFile];
+        else $filesToProcess = [$logFile, $logFile . '.1'];
         foreach ($filesToProcess as $file) {
                 if (!file_exists($file) || filemtime($file) < $filetime) {
                 continue;
