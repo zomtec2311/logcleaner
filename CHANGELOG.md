@@ -1,8 +1,19 @@
 # Changelog
 
+## 1.5.0
+
+### Added
+- link to LogCleaner within log report notifications
+
+### Fixed
+- some Logleaner information were written to the log file, even though it was turned off in the settings
+
+### Changed
+- language files updated
+
 ## 1.4.9
 
-## Added
+### Added
 - display last and next report date
 - sending Log report via notifications if notifications app is enabled
 
