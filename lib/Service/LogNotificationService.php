@@ -119,15 +119,27 @@ class LogNotificationService {
         $body .= $l->t('in the period from %1$s to %2$s new log entries were registered.', ['<strong>'.$fromDate.'</strong>', '<strong>'.$toDate.'</strong>']) . "<br><br>";
 
         $body .= $l->t('Distribution by log level:') . "<br>";
-        $body .= "--------------------------<br>";
-
+        $body .= '<table style="border-collapse:collapse;border-spacing:0;">';
+        $body .= '<tbody>';
+        $body .= '<tr style="height: 1px;"><td style="background: black;" colspan="3"></td></tr>';
+        $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
+        $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
+        $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
+        $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
         foreach ($stats['counts'] as $level => $count) {
-            if ($count > 0) {
-                $body .= sprintf("%-10s: %d", '<strong>'.$l->t($this->getLevelName($level)).'</strong>', $count) . "<br>";
+                if ($count > 0) {
+                    $body .= '<tr style="background: '.$this->getLevelBackground($level).'; color: '.$this->getLevelColor($level).';"><td style="padding: 6px; text-align:right;"><strong>' . $l->t($this->getLevelName($level)) . '</strong></td><td>:</td><td style="padding: 6px; text-align:right;">' . $count . '</td></tr>';
+                    $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
+                }
             }
-        }
-
-        $body .= "--------------------------";
+        $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
+        $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
+        $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
+        $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
+        $body .= '<tr style="height: 1px;"><td style="background: black;" colspan="3"></td></tr>';
+        $body .= '</tbody>';
+        $body .= '</table>';
+        $body .= '<p style="font-size: 0.8em;">Ⓒ LogCleaner <img width="14px" src="'.$this->url->getBaseUrl() . $this->url->imagePath('logcleaner', 'logcleaner-dark.svg').'"></p>';
 
         $message = $this->mailer->createMessage();
 
@@ -162,18 +174,37 @@ class LogNotificationService {
         $toDate = date('d.m.Y H:i', strtotime("$offset hours", $stats['newest']));
 
         $body = $l->t('Hello %1$s,', ['<strong>'.$adminDisplayname.'</strong>']) . "<br><br>";
-        $body .= $l->t('in the period from %1$s to %2$s new log entries were registered.', ['<strong>'.$fromDate.'</strong>', '<strong>'.$toDate.'</strong>']) . "<br><br>";
 
-        $body .= $l->t('Distribution by log level:') . "<br>";
-        $body .= "--------------------------<br>";
 
-        foreach ($stats['counts'] as $level => $count) {
-            if ($count > 0) {
-                $body .= sprintf("%-10s: %d", '<strong>'.$l->t($this->getLevelName($level)).'</strong>', $count) . "<br>";
-            }
+        if (array_sum($stats['counts']) !== 0) {
+
+            $body .= $l->t('in the period from %1$s to %2$s new log entries were registered.', ['<strong>'.$fromDate.'</strong>', '<strong>'.$toDate.'</strong>']) . "<br><br>";
+
+            $body .= $l->t('Distribution by log level:') . "<br>";
+
+            $body .= '<table style="border-collapse:collapse;border-spacing:0;">';
+            $body .= '<tbody>';
+            $body .= '<tr style="height: 1px;"><td style="background: black;" colspan="3"></td></tr>';
+            $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
+            $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
+            $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
+            $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
+            foreach ($stats['counts'] as $level => $count) {
+                    if ($count > 0) {
+                        $body .= '<tr style="background: '.$this->getLevelBackground($level).'; color: '.$this->getLevelColor($level).';"><td style="padding: 6px; text-align:right;"><strong>' . $l->t($this->getLevelName($level)) . '</strong></td><td>:</td><td style="padding: 6px; text-align:right;">' . $count . '</td></tr>';
+                        $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
+                    }
+                }
+            $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
+            $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
+            $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
+            $body .= '<tr style="height: 3px;"><td></td><td></td><td></td></tr>';
+            $body .= '<tr style="height: 1px;"><td style="background: black;" colspan="3"></td></tr>';
+            $body .= '</tbody>';
+            $body .= '</table>';
+
         }
-
-        $body .= "--------------------------";
+        $body .= '<p style="font-size: 0.8em;">Ⓒ LogCleaner <img width="14px" src="'.$this->url->getBaseUrl() . $this->url->imagePath('logcleaner', 'logcleaner-dark.svg').'"></p>';
 
         $message = $this->mailer->createMessage();
 
@@ -432,10 +463,16 @@ class LogNotificationService {
         return [0 => 'debug', 1 => 'info', 2 => 'warning', 3 => 'error', 4 => 'fatal'][$level] ?? 'Unknown';
     }
 
+    private function getLevelBackground(int $level): string {
+        return [0 => '#DFF0D8', 1 => '#D9EDF7', 2 => '#fcf8e3', 3 => '#f2dede', 4 => '#f9aaf6'][$level] ?? 'Unknown';
+    }
+
+    private function getLevelColor(int $level): string {
+        return [0 => '#3C763D', 1 => '#31708F', 2 => '#8A6d3B', 3 => '#A94442', 4 => '#870482'][$level] ?? 'Unknown';
+    }
+
     private function generateEmailTemplate($subject, $text, $link, $user, $buttontext) {
         $text = '<p style="width: 100%;">' . $text . '</p>';
-        //$lang = $this->l10nFactory->getUserLanguage($user);
-        //$l = $this->l10nFactory->get('logcleaner', $lang);
 		$emailTemplate = $this->mailer->createEMailTemplate(
 			'logcleaner.LogNotification', [
 			]
@@ -449,7 +486,7 @@ class LogNotificationService {
 		$emailTemplate->addBodyButton(
 			$buttontext, $link
 		);
-        $emailTemplate->addFooter('Ⓒ LogCleaner');
+        $emailTemplate->addFooter();
 
 		return $emailTemplate;
 	}
