@@ -10,7 +10,8 @@
 
 ### Changed
 - language files updated
-- log report emails changed from text emails to HTML emails using system template
+- added report interval to log report email subject
+- log report emails changed from text emails to HTML emails using system email template
 
 ## 1.4.9
 
