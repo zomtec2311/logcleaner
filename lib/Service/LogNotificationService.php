@@ -26,6 +26,7 @@
 namespace OCA\LogCleaner\Service;
 
 use OCP\IConfig;
+use OCP\Mail\IEMailTemplate;
 use OCP\Mail\IMailer;
 use OCP\AppFramework\Utility\ITimeFactory;
 use OCA\LogCleaner\Log\LogService;
@@ -40,6 +41,9 @@ use OCP\IURLGenerator;
 use OCP\IDb;
 use OCP\ILogger;
 use OCP\Notification\INotificationManager;
+
+
+//use OCP\Mail\IMessage;
 
 class LogNotificationService {
 
@@ -70,7 +74,7 @@ class LogNotificationService {
         $lastSent = (int)$this->config->getAppValue('logcleaner', 'last_email_timestamp', 0);
         $minLevel = (int)$this->config->getSystemValue('loglevel', 2);
         $offset = (int)$this->config->getAppValue('logcleaner', 'logcleaner_wt_offset', 0);
-
+        $targetUrl = $this->url->linkToRouteAbsolute('logcleaner.page.index');
         $stats = $this->getLogStats($lastSent, $minLevel);
 
         if (array_sum($stats['counts']) === 0) {
@@ -81,6 +85,7 @@ class LogNotificationService {
         $adminName = $this->config->getAppValue('logcleaner', 'admin_email_name', '');
         $user = $this->userManager->get($adminName);
         $lang = $this->l10nFactory->getUserLanguage($user);
+        $adminDisplayname = $user->getDisplayName();
         $l = $this->l10nFactory->get('logcleaner', $lang);
         if (empty($adminEmail)) {
             $this->logger->error("LogCleaner: No administrator selected to send a log report or the selected administrator does not have a valid email address");
@@ -95,53 +100,58 @@ class LogNotificationService {
 
          switch ($this->config->getAppValue('logcleaner', 'email_interval', 'daily')) {
 			case 'daily':
-				$message->setSubject($l->t('Daily Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]));
+				$subject = $l->t('Daily Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]);
                 break;
 
 			case 'weekly':
-                $message->setSubject($l->t('Weekly Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]));
+                $subject = $l->t('Weekly Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]);
                 break;
 
 			case 'monthly':
-                $message->setSubject($l->t('Monthly Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]));
+                $subject = $l->t('Monthly Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]);
                 break;
 
 			default:
-				$message->setSubject($l->t('Daily Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]));
+				$subject = $l->t('Daily Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]);
 		}
 
-        $body = $l->t('Hello %1$s,', [$adminName]) . "\n\n";
-        $body .= $l->t('in the period from %1$s to %2$s new log entries were registered.', [$fromDate, $toDate]) . "\n\n";
+        $body = $l->t('Hello %1$s,', ['<strong>'.$adminDisplayname.'</strong>']) . "<br><br>";
+        $body .= $l->t('in the period from %1$s to %2$s new log entries were registered.', ['<strong>'.$fromDate.'</strong>', '<strong>'.$toDate.'</strong>']) . "<br><br>";
 
-        $body .= $l->t('Distribution by log level:') . "\n";
-        $body .= "--------------------------\n";
+        $body .= $l->t('Distribution by log level:') . "<br>";
+        $body .= "--------------------------<br>";
 
         foreach ($stats['counts'] as $level => $count) {
             if ($count > 0) {
-                $body .= sprintf("%-10s: %d\n", $l->t($this->getLevelName($level)), $count);
+                $body .= sprintf("%-10s: %d", '<strong>'.$l->t($this->getLevelName($level)).'</strong>', $count) . "<br>";
             }
         }
 
-        $body .= "--------------------------\n";
+        $body .= "--------------------------";
 
-        $body .= "\n" . $l->t('Details can be found in the log management of your Nextcloud instance.');
+        $message = $this->mailer->createMessage();
 
+		$emailTemplate = $this->generateEmailTemplate($subject, $body, $targetUrl, $user, $l->t('Details can be found in the log management of your Nextcloud instance.'));
 
-        $message->setPlainBody($body);
-        $this->mailer->send($message);
+		$emailTemplate->setSubject($subject);
+		$message->useTemplate($emailTemplate);
+		$message->setTo([$adminEmail]);
+
+		$this->mailer->send($message);
     }
 
-    public function sendTestEmail() {
+     public function sendTestEmail() {
 
         $lastSent = (int)$this->config->getAppValue('logcleaner', 'last_email_timestamp', 0);
         $minLevel = (int)$this->config->getSystemValue('loglevel', 2);
         $offset = (int)$this->config->getAppValue('logcleaner', 'logcleaner_wt_offset', 0);
         $stats = $this->getLogStats($lastSent, $minLevel, true);
-
+        $targetUrl = $this->url->linkToRouteAbsolute('logcleaner.page.index');
         $adminEmail = $this->config->getAppValue('logcleaner', 'admin_email', '');
         $adminName = $this->config->getAppValue('logcleaner', 'admin_email_name', '');
         $user = $this->userManager->get($adminName);
         $lang = $this->l10nFactory->getUserLanguage($user);
+        $adminDisplayname = $user->getDisplayName();
         $l = $this->l10nFactory->get('logcleaner', $lang);
         if (empty($adminEmail)) {
             $this->logger->error("LogCleaner: No administrator selected to send a log report or the selected administrator does not have a valid email address");
@@ -151,29 +161,31 @@ class LogNotificationService {
         $fromDate = date('d.m.Y H:i', strtotime("$offset hours", $stats['oldest']));
         $toDate = date('d.m.Y H:i', strtotime("$offset hours", $stats['newest']));
 
-        $message = $this->mailer->createMessage();
-        $message->setTo([$adminEmail]);
-        $message->setSubject($l->t('Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]));
+        $body = $l->t('Hello %1$s,', ['<strong>'.$adminDisplayname.'</strong>']) . "<br><br>";
+        $body .= $l->t('in the period from %1$s to %2$s new log entries were registered.', ['<strong>'.$fromDate.'</strong>', '<strong>'.$toDate.'</strong>']) . "<br><br>";
 
-        $body = $l->t('Hello %1$s,', [$adminName]) . "\n\n";
-        $body .= $l->t('in the period from %1$s to %2$s new log entries were registered.', [$fromDate, $toDate]) . "\n\n";
-
-        $body .= $l->t('Distribution by log level:') . "\n";
-        $body .= "--------------------------\n";
+        $body .= $l->t('Distribution by log level:') . "<br>";
+        $body .= "--------------------------<br>";
 
         foreach ($stats['counts'] as $level => $count) {
             if ($count > 0) {
-                $body .= sprintf("%-10s: %d\n", $l->t($this->getLevelName($level)), $count);
+                $body .= sprintf("%-10s: %d", '<strong>'.$l->t($this->getLevelName($level)).'</strong>', $count) . "<br>";
             }
         }
 
-        $body .= "--------------------------\n";
+        $body .= "--------------------------";
 
-        $body .= $l->t('This is a test email') . "\n";
+        $message = $this->mailer->createMessage();
 
+		$subject = $l->t('Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]);
 
-        $message->setPlainBody($body);
-        $this->mailer->send($message);
+		$emailTemplate = $this->generateEmailTemplate($subject, $body, $targetUrl, $user, $l->t('This is a test email'));
+
+		$emailTemplate->setSubject($subject);
+		$message->useTemplate($emailTemplate);
+		$message->setTo([$adminEmail]);
+
+		$this->mailer->send($message);
     }
 
     public function sendSummaryNotification() {
@@ -192,6 +204,8 @@ class LogNotificationService {
         $user = $this->userManager->get($adminName);
 
         $lang = $this->l10nFactory->getUserLanguage($user);
+
+        $adminDisplayname = $user->getDisplayName();
 
         $l = $this->l10nFactory->get('logcleaner', $lang);
 
@@ -220,7 +234,7 @@ class LogNotificationService {
 
         $targetUrl = $this->url->linkToRouteAbsolute('logcleaner.page.index');
 
-        $plainMessage = $l->t('Hello %1$s,', [$adminName]) . "\n\n" .
+        $plainMessage = $l->t('Hello %1$s,', [$adminDisplayname]) . "\n\n" .
 
                         $l->t('in the period from %1$s to %2$s new log entries were registered.', [$fromDate, $toDate]) . "\n\n";
 
@@ -280,6 +294,7 @@ class LogNotificationService {
         $user = $this->userManager->get($adminName);
 
         $lang = $this->l10nFactory->getUserLanguage($user);
+        $adminDisplayname = $user->getDisplayName();
         $l = $this->l10nFactory->get('logcleaner', $lang);
 
         $fromDate = date('d.m.Y H:i', strtotime("$offset hours", $stats['oldest']));
@@ -290,7 +305,7 @@ class LogNotificationService {
 
         $targetUrl = $this->url->linkToRouteAbsolute('logcleaner.page.index');
 
-        $plainMessage = $l->t('Hello %1$s,', [$adminName]) . "\n\n";
+        $plainMessage = $l->t('Hello %1$s,', [$adminDisplayname]) . "\n\n";
 
         if (array_sum($stats['counts']) !== 0) {
             $plainMessage .= $l->t('in the period from %1$s to %2$s new log entries were registered.', [$fromDate, $toDate]) . "\n\n";
@@ -416,4 +431,26 @@ class LogNotificationService {
     private function getLevelName(int $level): string {
         return [0 => 'debug', 1 => 'info', 2 => 'warning', 3 => 'error', 4 => 'fatal'][$level] ?? 'Unknown';
     }
+
+    private function generateEmailTemplate($subject, $text, $link, $user, $buttontext) {
+        $text = '<p style="width: 100%;">' . $text . '</p>';
+        //$lang = $this->l10nFactory->getUserLanguage($user);
+        //$l = $this->l10nFactory->get('logcleaner', $lang);
+		$emailTemplate = $this->mailer->createEMailTemplate(
+			'logcleaner.LogNotification', [
+			]
+		);
+
+		$emailTemplate->addHeader();
+		$emailTemplate->addHeading($subject, false);
+		$emailTemplate->addBodyText(
+			$text, $text
+		);
+		$emailTemplate->addBodyButton(
+			$buttontext, $link
+		);
+        $emailTemplate->addFooter('Ⓒ LogCleaner');
+
+		return $emailTemplate;
+	}
 }
