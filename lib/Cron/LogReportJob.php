@@ -51,7 +51,7 @@ class LogReportJob extends TimedJob {
 		parent::__construct($time);
 		$this->logger = $logger;
         $this->setcon = $setcon;
-        $this->setInterval(10);
+        $this->setInterval(3600);
 		$this->appconfig = $appConfig;
 		$this->logService = $logService;
 	}
