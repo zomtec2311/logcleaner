@@ -35,6 +35,7 @@ use OCA\LogCleaner\Log\LogService;
 use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
 use Psr\Log\LoggerInterface;
 use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\IGroupManager;
 use OCP\IL10N;
 use OCA\LogCleaner\Service\LogNotificationService;
@@ -42,7 +43,7 @@ use OCA\LogCleaner\Service\LogNotificationService;
 class LogsController extends Controller {
     private $groupManager;
 
-    public function __construct(string $AppName, IRequest $request, private LogService $logService, private LogNotificationService $logNotificationService, IGroupManager $groupManager, private readonly LoggerInterface $logger, private IConfig $config, private Helper $helper, private IL10N $l,) {
+    public function __construct(string $AppName, IRequest $request, private LogService $logService, private LogNotificationService $logNotificationService, IGroupManager $groupManager, private readonly LoggerInterface $logger, private IConfig $config, private IAppConfig $appConfig, private Helper $helper, private IL10N $l,) {
         parent::__construct($AppName, $request);
         $this->helper = $helper;
         $this->groupManager = $groupManager;
@@ -55,7 +56,7 @@ class LogsController extends Controller {
         $message = $this->request->getParam('message', null);
         $limit = (int) $this->request->getParam('limit', 5);
         $offset = (int) $this->request->getParam('offset', 2);
-        $wtpara_logmessage_sizewarnings = (int)$this->helper->getAppValue('wtpara_logmessage_sizewarnings');
+        $wtpara_logmessage_sizewarnings = (int)$this->appConfig->getValueString('logcleaner', 'wtpara_logmessage_sizewarnings', '2');
 
         $filters = [];
         if ($level !== null) $filters['level'] = (int)$level;
@@ -70,12 +71,12 @@ class LogsController extends Controller {
 
         $aksize = filesize($filePath);
         if ($aksize < 52428800) {
-            $this->helper->setAppValue('wtparam_logsize_95', 0);
-            $this->helper->setAppValue('wtparam_logsize_90', 0);
-            $this->helper->setAppValue('wtparam_logsize_85', 0);
-            $this->helper->setAppValue('wtparam_logsize_80', 0);
-            $this->helper->setAppValue('wtparam_logsize_75', 0);
-            $this->helper->setAppValue('wtparam_logsize_50', 0);
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_95','0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_90','0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_85','0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_80','0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_75','0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_50','0');
         }
 
         if ($aksize > 104857600) {
@@ -86,63 +87,63 @@ class LogsController extends Controller {
             $snapshot[1] = $dummy;
         }
         if (($aksize > 99614720) && ($aksize < (99614720 + 1048576))) {
-            $para = (int)$this->helper->getAppValue('wtparam_logsize_95');
+            $para = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logsize_95', '0');
             if (!isset($para) || ($para === 0)){
-                $this->helper->setAppValue('wtparam_logsize_95', 1);
+                $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_95','1');
                 if ($wtpara_logmessage_sizewarnings === 2) $this->logger->error("LogCleaner: Oops, the size of your log file is over ".$this->wtfilesize(99614720, 0).". This can cause problems with the performance of your system if you want to work with LogCleaner. You should urgently check why your log file is not rotating. In order for LogCleaner to open properly, you should delete, empty or rename the file $filePath.");
             }
 
         }
         if (($aksize > 94371840) && ($aksize < (94371840 + 1048576))) {
-            $para = (int)$this->helper->getAppValue('wtparam_logsize_90');
-            $this->helper->setAppValue('wtparam_logsize_95', 0);
+            $para = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logsize_90', '0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_95','0');
             if (!isset($para) || ($para === 0)){
-                $this->helper->setAppValue('wtparam_logsize_90', 1);
+                $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_90','1');
                 if ($wtpara_logmessage_sizewarnings === 2) $this->logger->error("LogCleaner: Oops, the size of your log file is over ".$this->wtfilesize(94371840, 0).". This can cause problems with the performance of your system if you want to work with LogCleaner. You should urgently check why your log file is not rotating. In order for LogCleaner to open properly, you should delete, empty or rename the file $filePath.");
             }
 
         }
         if (($aksize > 89128960) && ($aksize < (89128960 + 1048576))) {
-            $para = (int)$this->helper->getAppValue('wtparam_logsize_85');
-            $this->helper->setAppValue('wtparam_logsize_95', 0);
-            $this->helper->setAppValue('wtparam_logsize_90', 0);
+            $para = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logsize_85', '0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_95','0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_90','0');
             if (!isset($para) || ($para === 0)){
-                $this->helper->setAppValue('wtparam_logsize_85', 1);
+                $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_85','1');
                 if ($wtpara_logmessage_sizewarnings === 2) $this->logger->error("LogCleaner: Oops, the size of your log file is over ".$this->wtfilesize(89128960, 0).". This can cause problems with the performance of your system if you want to work with LogCleaner. You should urgently check your log file. In order for LogCleaner to open properly, you should delete, empty or rename the file $filePath.");
             }
 
         }
         if (($aksize > 83886080) && ($aksize < (83886080 + 1048576))) {
-            $para = (int)$this->helper->getAppValue('wtparam_logsize_80');
-            $this->helper->setAppValue('wtparam_logsize_95', 0);
-            $this->helper->setAppValue('wtparam_logsize_90', 0);
-            $this->helper->setAppValue('wtparam_logsize_85', 0);
+            $para = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logsize_80', '0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_95','0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_90','0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_85','0');
             if (!isset($para) || ($para === 0)){
-                $this->helper->setAppValue('wtparam_logsize_80', 1);
+                $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_80','1');
                 if ($wtpara_logmessage_sizewarnings === 2) $this->logger->error("LogCleaner: Oops, the size of your log file is over ".$this->wtfilesize(83886080, 0).". You should urgently check your log file. In order for LogCleaner to open properly, you should delete, empty or rename the file $filePath.");
             }
 
         }
         if (($aksize > 78643200) && ($aksize < (78643200 + 1048576))) {
-            $para = (int)$this->helper->getAppValue('wtparam_logsize_75');
-            $this->helper->setAppValue('wtparam_logsize_95', 0);
-            $this->helper->setAppValue('wtparam_logsize_90', 0);
-            $this->helper->setAppValue('wtparam_logsize_85', 0);
-            $this->helper->setAppValue('wtparam_logsize_80', 0);
+            $para = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logsize_75', '0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_95','0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_90','0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_85','0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_80','0');
             if (!isset($para) || ($para === 0)){
-                $this->helper->setAppValue('wtparam_logsize_75', 1);
+                $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_75','1');
                 if ($wtpara_logmessage_sizewarnings === 2) $this->logger->error("LogCleaner: Oops, the size of your log file is over ".$this->wtfilesize(78643200, 0).". You should check your log file in order for LogCleaner to open properly.");
             }
         }
         if (($aksize > 52428800) && ($aksize < (52428800 + 1048576))) {
-            $para = (int)$this->helper->getAppValue('wtparam_logsize_50');
-            $this->helper->setAppValue('wtparam_logsize_95', 0);
-            $this->helper->setAppValue('wtparam_logsize_90', 0);
-            $this->helper->setAppValue('wtparam_logsize_85', 0);
-            $this->helper->setAppValue('wtparam_logsize_80', 0);
-            $this->helper->setAppValue('wtparam_logsize_75', 0);
+            $para = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logsize_50', '0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_95','0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_90','0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_85','0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_80','0');
+            $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_75','0');
             if (!isset($para) || ($para === 0)){
-                $this->helper->setAppValue('wtparam_logsize_50', 1);
+                $this->appConfig->setValueString('logcleaner', 'wtparam_logsize_50','1');
                 if ($wtpara_logmessage_sizewarnings === 2) $this->logger->info("LogCleaner: Oops, the size of your log file is over ".$this->wtfilesize(52428800, 0).". You should check your log file and cleanup.");
             }
         }
@@ -215,7 +216,7 @@ class LogsController extends Controller {
             $analysis_array = json_decode($json, true);
             $anzahl = $analysis_array['summary']['removed_duplicates'];
         }
-		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
+		$wtpara_logmessage = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '1');
 
 		$filesizeoriginal = filesize($inputFile);
         $filesizecleaned = filesize($outputLog);
@@ -245,7 +246,7 @@ class LogsController extends Controller {
 	}
 
 	public function analyse(): DataResponse {
-        $wtpara_logrotate = (int)$this->helper->getAppValue('wtpara_logrotate');
+        $wtpara_logrotate = (int)$this->appConfig->getValueString('logcleaner', 'wtpara_logrotate', '1');
         if ($wtpara_logrotate === 2) {
             if (!$this->config->getSystemValue('log_rotate_size')) { $this->config->setSystemValue('log_rotate_size', 104857600); }
             if (!$this->config->getSystemValue('log_max_history')) { $this->config->setSystemValue('log_max_history', 5); }
