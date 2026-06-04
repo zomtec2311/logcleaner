@@ -32,6 +32,7 @@ use OCP\AppFramework\Http\Attribute\NoAdminRequired;
 use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
 use OCP\IL10N;
 use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\Server;
 use OCP\IRequest;
 
@@ -44,12 +45,12 @@ class Helper
     #[NoCSRFRequired]
     #[FrontpageRoute(verb: 'POST', url: '/')]
 
-   public function __construct(IConfig $config, IL10N $l, $appName){
+   public function __construct(IConfig $config, private IAppConfig $appConfig, IL10N $l, $appName){
         $this->config = $config;
         $this->l = $l;
         $this->appName = $appName;
     }
-
+/*
     public function getAppValue($key) {
         return $this->config->getAppValue($this->appName, $key);
     }
@@ -57,6 +58,7 @@ class Helper
     public function setAppValue($key, $value) {
         return $this->config->setAppValue($this->appName, $key, $value);
     }
+*/
 
     public function wtlogtoarr(?string $wtlog)
     {
