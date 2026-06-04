@@ -26,6 +26,7 @@
 namespace OCA\LogCleaner\Service;
 
 use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\Mail\IEMailTemplate;
 use OCP\Mail\IMailer;
 use OCP\AppFramework\Utility\ITimeFactory;
@@ -51,6 +52,7 @@ class LogNotificationService {
         IConfig $config,
         IMailer $mailer,
         ITimeFactory $timeFactory,
+        private IAppConfig $appConfig,
         private LogService $logService,
         private readonly LoggerInterface $logger,
         private IFactory $l10nFactory,
@@ -66,16 +68,16 @@ class LogNotificationService {
     }
 
     public function sendSummaryEmail() {
-        $lastSent = (int)$this->config->getAppValue('logcleaner', 'last_email_timestamp', 0);
+        $lastSent = $this->appConfig->getValueInt('logcleaner', 'last_email_timestamp', 0);
         $minLevel = (int)$this->config->getSystemValue('loglevel', 2);
-        $offset = (int)$this->config->getAppValue('logcleaner', 'logcleaner_wt_offset', 0);
+        $offset = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset', '0');
         $targetUrl = $this->url->linkToRouteAbsolute('logcleaner.page.index');
         $stats = $this->getLogStats($lastSent, $minLevel);
         if (array_sum($stats['counts']) === 0) {
             return;
         }
-        $adminEmail = $this->config->getAppValue('logcleaner', 'admin_email', '');
-        $adminName = $this->config->getAppValue('logcleaner', 'admin_email_name', '');
+        $adminEmail = $this->appConfig->getValueString('logcleaner', 'admin_email', '');
+        $adminName = $this->appConfig->getValueString('logcleaner', 'admin_email_name', '');
         $user = $this->userManager->get($adminName);
         $lang = $this->l10nFactory->getUserLanguage($user);
         $adminDisplayname = $user->getDisplayName();
@@ -88,7 +90,7 @@ class LogNotificationService {
         $toDate = date('d.m.Y H:i', strtotime("$offset hours", $stats['newest']));
         $message = $this->mailer->createMessage();
         $message->setTo([$adminEmail]);
-         switch ($this->config->getAppValue('logcleaner', 'email_interval', 'daily')) {
+         switch ($this->appConfig->getValueString('logcleaner', 'email_interval', 'daily')) {
 			case 'daily':
 				$subject = $l->t('Daily Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]);
                 break;
@@ -135,13 +137,13 @@ class LogNotificationService {
     }
 
      public function sendTestEmail() {
-        $lastSent = (int)$this->config->getAppValue('logcleaner', 'last_email_timestamp', 0);
+        $lastSent = $this->appConfig->getValueInt('logcleaner', 'last_email_timestamp', 0);
         $minLevel = (int)$this->config->getSystemValue('loglevel', 2);
-        $offset = (int)$this->config->getAppValue('logcleaner', 'logcleaner_wt_offset', 0);
+        $offset = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset', '0');
         $stats = $this->getLogStats($lastSent, $minLevel, true);
         $targetUrl = $this->url->linkToRouteAbsolute('logcleaner.page.index');
-        $adminEmail = $this->config->getAppValue('logcleaner', 'admin_email', '');
-        $adminName = $this->config->getAppValue('logcleaner', 'admin_email_name', '');
+        $adminEmail = $this->appConfig->getValueString('logcleaner', 'admin_email', '');
+        $adminName = $this->appConfig->getValueString('logcleaner', 'admin_email_name', '');
         $user = $this->userManager->get($adminName);
         $lang = $this->l10nFactory->getUserLanguage($user);
         $adminDisplayname = $user->getDisplayName();
@@ -190,22 +192,22 @@ class LogNotificationService {
 
     public function sendSummaryNotification() {
         $datetime = $this->timeFactory->getDateTime();
-        $lastSent = (int)$this->config->getAppValue('logcleaner', 'last_noti_timestamp', 0);
+        $lastSent = $this->appConfig->getValueInt('logcleaner', 'last_noti_timestamp', 0);
         $minLevel = (int)$this->config->getSystemValue('loglevel', 2);
-        $offset = (int)$this->config->getAppValue('logcleaner', 'logcleaner_wt_offset', 0);
+        $offset = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset', '0');
         $stats = $this->getLogStats($lastSent, $minLevel);
         if (array_sum($stats['counts']) === 0) {
-            if( (int)$this->config->getAppValue('logcleaner', 'wtparam_logmessage') === 2 ) $this->logger->info("LogCleaner: No new log entries available. Therefore, no sending of a log report by notification");
+            if( (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '2') === 2 ) $this->logger->info("LogCleaner: No new log entries available. Therefore, no sending of a log report by notification");
             return;
         }
-        $adminName = $this->config->getAppValue('logcleaner', 'admin_noti', '');
+        $adminName = $this->appConfig->getValueString('logcleaner', 'admin_noti', '');
         $user = $this->userManager->get($adminName);
         $lang = $this->l10nFactory->getUserLanguage($user);
         $adminDisplayname = $user->getDisplayName();
         $l = $this->l10nFactory->get('logcleaner', $lang);
         $fromDate = date('d.m.Y H:i', strtotime("$offset hours", $stats['oldest']));
         $toDate = date('d.m.Y H:i', strtotime("$offset hours", $stats['newest']));
-        switch ($this->config->getAppValue('logcleaner', 'noti_interval', 'daily')) {
+        switch ($this->appConfig->getValueString('logcleaner', 'noti_interval', 'daily')) {
 			case 'daily':
 				$translatedSubject = $l->t('Daily Nextcloud Log Summary (%1$s to %2$s)', [$fromDate, $toDate]);
                 break;
@@ -258,11 +260,11 @@ class LogNotificationService {
     public function sendTestNotification() {
         $now = time();
         $datetime = $this->timeFactory->getDateTime();
-        $lastSent = (int)$this->config->getAppValue('logcleaner', 'last_noti_test_timestamp', 0);
+        $lastSent = $this->appConfig->getValueInt('logcleaner', 'last_noti_test_timestamp', 0);
         $minLevel = (int)$this->config->getSystemValue('loglevel', 2);
-        $offset = (int)$this->config->getAppValue('logcleaner', 'logcleaner_wt_offset', 0);
+        $offset = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset', '0');
         $stats = $this->getLogStats($lastSent, $minLevel, true);
-        $adminName = $this->config->getAppValue('logcleaner', 'admin_noti', '');
+        $adminName = $this->appConfig->getValueString('logcleaner', 'admin_noti', '');
         $user = $this->userManager->get($adminName);
         $lang = $this->l10nFactory->getUserLanguage($user);
         $adminDisplayname = $user->getDisplayName();
@@ -309,13 +311,13 @@ class LogNotificationService {
             ->setObject('remote', '1123')
             ->setSubject('logcleaner', $para);
         $this->notificationManager->notify($notification);
-        $this->config->setAppValue('logcleaner', 'last_noti_test_timestamp', $now);
+        $this->appConfig->setValueInt('logcleaner', 'last_noti_test_timestamp', $now);
         return true;
     }
 
     private function getLogStats(int $lastRun, int $minLevel, bool $test = false): array {
         $stats = ['counts' => [0 => 0, 1 => 0, 2 => 0, 3 => 0, 4 => 0], 'oldest' => null, 'newest' => null];
-        $interval = (string)$this->config->getAppValue('logcleaner', 'email_interval', 'daily');
+        $interval = $this->appConfig->getValueString('logcleaner', 'email_interval', 'daily');
         $secondsNeeded = [
             'daily' => 86400,
             'weekly' => 604800,
