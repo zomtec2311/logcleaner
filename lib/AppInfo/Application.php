@@ -36,10 +36,10 @@ use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCP\INavigationManager;
 use OCP\IURLGenerator;
 use OCP\IConfig;
+use OCP\IAppConfig;
 use Psr\Container\ContainerInterface;
 use OCA\LogCleaner\Dashboard\LogCleanerWidget;
 use OCA\LogCleaner\Dashboard\LogCleanerWidget2;
-//use OCA\Notifications\Notifier\AdminNotifications;
 use OCA\LogCleaner\Notification\Notifier;
 
 use Psr\Log\LoggerInterface;
@@ -61,6 +61,7 @@ class Application extends App implements IBootstrap {
         $context->registerDashboardWidget(\OCA\LogCleaner\Dashboard\LogCleanerWidget2::class);
 		$context->registerNotifierService(Notifier::class);
 		$config = Server::get(IConfig::class);
+		$appConfig = Server::get(IAppConfig::class);
 		$context->registerService(LogService::class, function($c) use ($config) {
 			$path = $config->getSystemValue('logfile');
 			if (!$path || !file_exists($path)) {
@@ -74,6 +75,7 @@ class Application extends App implements IBootstrap {
 				$FlowLogFile,
 				$LogFile,
 				$config,
+				$appConfig,
 				$c->query(\Psr\Log\LoggerInterface::class),
 				$c->query(\OCP\IL10N::class),
 				$c->query(\OCA\LogCleaner\Helper\Helper::class),
@@ -81,19 +83,19 @@ class Application extends App implements IBootstrap {
 			);
 		});
 
-		$context->registerService('AuditLogFile', function($c)  use ($config) {
+		$context->registerService('AuditLogFile', function($c)  use ($config, $appConfig) {
 			$auditType = $config->getSystemValueString('log_type_audit', 'file');
 			$logFile = $config->getSystemValueString('logfile_audit', '');
 			if ($auditType === 'file' && !$logFile) {
 				$default = $config->getSystemValue('datadirectory', \OC::$SERVERROOT . '/data') . '/audit.log';
-				$logFile = $config->getAppValue('admin_audit', 'logfile', $default);
+				$logFile = $appConfig->getValueString('admin_audit', 'logfile', $default);
 			}
 			return $logFile;
 		});
 
-		$context->registerService('FlowLogFile', function($c)  use ($config) {
+		$context->registerService('FlowLogFile', function($c)  use ($config, $appConfig) {
 			$default = $config->getSystemValue('datadirectory', \OC::$SERVERROOT . '/data') . '/flow.log';
-			$logFile = trim((string)$config->getAppValue('workflowengine', 'logfile', $default));
+			$logFile = trim($appConfig->getValueString('workflowengine', 'logfile', $default));
 			return $logFile;
 		});
 
@@ -119,11 +121,12 @@ class Application extends App implements IBootstrap {
 	private function registerAppsManagementNavigation(IAppManager $appManager): void {
 		$container = $this->getContainer();
 		$config = $this->getContainer()->query(IConfig::class);
+		$appConfig = $this->getContainer()->query(IAppConfig::class);
 		$appManager->enableAppForGroups(self::APP_ID, array('admin'), false);
-		$wtpara_menue = (int)$config->getAppValue(self::APP_ID, 'wtparam_menue');
+		$wtpara_menue = (int)$appConfig->getValueString(self::APP_ID, 'wtparam_menue');
 		if (!isset($wtpara_menue)) {
 			$wtpara_menue = 1;
-			$this->config->setAppValue(self::APP_ID, 'wtparam_menue', 1);
+			$appConfig->setValueString(self::APP_ID, 'wtparam_menue', '1');
 		}
 		if ($wtpara_menue == 1) { // right
 			$container->get(INavigationManager::class)->add(function () use ($container) {
