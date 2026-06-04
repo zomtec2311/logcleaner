@@ -27,6 +27,7 @@ namespace OCA\LogCleaner\Log;
 
 use Psr\Log\LoggerInterface;
 use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\IL10N;
 use OCA\LogCleaner\Controller\Helper;
 
@@ -47,6 +48,7 @@ class LogService {
         string $FlowLogFile,
         string $LogFile,
         private IConfig $config,
+        private IAppConfig $appConfig,
         private readonly LoggerInterface $logger,
         private IL10N $l,
         private Helper $helper,
@@ -102,7 +104,7 @@ class LogService {
         $result = [];
         $endresult = [];
         $corruptline = [];
-            $wt_offset = (int)$this->helper->getAppValue('logcleaner_wt_offset');
+        $wt_offset = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset', '0');
         foreach ($this->lines as $id => $entry) {
             if ($entry['deleted']) continue;
 
