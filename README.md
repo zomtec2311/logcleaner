@@ -37,7 +37,8 @@ ff you are unsure and don't know exactly how to work with LogCleaner, feel free 
 ## 🙏 Thanks to
 
 - [rakekniven](https://github.com/rakekniven) for improving grammar and fixing typos
-- [maghog](https://github.com/maghog) for the revision of the swedish language files
+- [maghog](https://github.com/maghog) and [Leffe64](https://github.com/Leffe64)  for the revision of the swedish language files
+- [haringk](https://github.com/haringk) for the translation of the italian language files
 
 ## 📘 F.A.Q.
 
@@ -85,7 +86,7 @@ ff you are unsure and don't know exactly how to work with LogCleaner, feel free 
   </p>
   <br><br>
   <b>New features since LogCleaner 1.2.8: View Details and search for solutions on the internet</b><br>
-  
+
 
 https://github.com/user-attachments/assets/cdf10eac-e3ff-4816-aa37-73994dfbeb02
 
