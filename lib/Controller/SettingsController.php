@@ -33,9 +33,9 @@ use OCP\AppFramework\Http\Attribute\UseSession;
 use OCP\IL10N;
 use OCP\IRequest;
 use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\AppFramework\Http\DataResponse;
 use Psr\Log\LoggerInterface;
-use OCP\IAppConfig;
 use OCP\App\IAppManager;
 use OCA\LogCleaner\Log\LogService;
 
@@ -59,54 +59,65 @@ class SettingsController extends Controller {
 		$this->appManager = $appManager;
 	}
 
-	#[NoAdminRequired]
-	#[UseSession]
+	//#[NoAdminRequired]
+	//#[UseSession]
 	public function setSettingZeilen($who,$zeilen): DataResponse {
-		$this->config->setAppValue('logcleaner', $who, $zeilen);
+		if (is_int($zeilen)) {
+			$this->appConfig->setValueInt('logcleaner', $who, $zeilen);
+			if ( $this->appConfig->getValueInt('logcleaner', 'wtparam_logmessage', 2) === 2 ) $this->logger->debug("LogCleaner: $who set to $zeilen");
+		}
+		if (is_string($zeilen)) {
+			$this->appConfig->setValueString('logcleaner', $who, $zeilen);
+			if ( $this->appConfig->getValueInt('logcleaner', 'wtparam_logmessage', 2) === 2 ) $this->logger->debug("LogCleaner: $who set to '$zeilen'");
+		}
+		if (is_bool($zeilen)) {
+			$this->appConfig->setValueBool('logcleaner', $who, $zeilen);
+			if ( $this->appConfig->getValueInt('logcleaner', 'wtparam_logmessage', 2) === 2 ) $this->logger->debug("LogCleaner: $who set to $zeilen");
+		}
 		return new DataResponse([
 			'wert' => $zeilen,
-            ]);
+		]);
 	}
 
 	public function getAppValueZ(): DataResponse {
 
 		return new DataResponse([
-			'logcleaner_wt_zeilen' => (empty($this->config->getAppValue('logcleaner', 'logcleaner_wt_zeilen')))?$this->setSettingZeilen('logcleaner_wt_zeilen',5):$this->config->getAppValue('logcleaner', 'logcleaner_wt_zeilen'),
-			'wtpara_settings_am' => (empty($this->config->getAppValue('logcleaner', 'wtpara_settings_am')))?$this->setSettingZeilen('wtpara_settings_am',2):$this->config->getAppValue('logcleaner', 'wtpara_settings_am'),
-			'logcleaner_wt_offset' => (empty($this->config->getAppValue('logcleaner', 'logcleaner_wt_offset')))?'0':$this->config->getAppValue('logcleaner', 'logcleaner_wt_offset'),
-			'logcleaner_wt_characters' => (empty($this->config->getAppValue('logcleaner', 'logcleaner_wt_characters')))?$this->setSettingZeilen('logcleaner_wt_characters',500):$this->config->getAppValue('logcleaner', 'logcleaner_wt_characters'),
-			'wtparam_menue' => (empty($this->config->getAppValue('logcleaner', 'wtparam_menue')))?$this->setSettingZeilen('wtparam_menue',2):$this->config->getAppValue('logcleaner', 'wtparam_menue'),
-			'wtparam_logmessage' => (empty($this->config->getAppValue('logcleaner', 'wtparam_logmessage')))?$this->setSettingZeilen('wtparam_logmessage',1):$this->config->getAppValue('logcleaner', 'wtparam_logmessage'),
-			'wtparam_filter' => (empty($this->config->getAppValue('logcleaner', 'wtparam_filter')))?$this->setSettingZeilen('wtparam_filter',1):$this->config->getAppValue('logcleaner', 'wtparam_filter'),
-			'wtpara_cron_deldub' => (empty($this->config->getAppValue('logcleaner', 'wtpara_cron_deldub')))?$this->setSettingZeilen('wtpara_cron_deldub',1):$this->config->getAppValue('logcleaner', 'wtpara_cron_deldub'),
+			'logcleaner_wt_zeilen' => $this->appConfig->getValueString('logcleaner', 'logcleaner_wt_zeilen') ?: $this->setSettingZeilen('logcleaner_wt_zeilen','5'),
+			'wtpara_settings_am' => $this->appConfig->getValueString('logcleaner', 'wtpara_settings_am') ?: $this->setSettingZeilen('wtpara_settings_am','2'),
+			'logcleaner_wt_offset' => $this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset') ?: $this->setSettingZeilen('logcleaner_wt_offset','0'),
+			'logcleaner_wt_characters' => $this->appConfig->getValueString('logcleaner', 'logcleaner_wt_characters') ?: $this->setSettingZeilen('logcleaner_wt_characters','500'),
+			'wtparam_menue' => $this->appConfig->getValueString('logcleaner', 'wtparam_menue') ?: $this->setSettingZeilen('wtparam_menue','2'),
+			'wtparam_logmessage' => $this->appConfig->getValueString('logcleaner', 'wtparam_logmessage') ?: $this->setSettingZeilen('wtparam_logmessage','1'),
+			'wtparam_filter' => $this->appConfig->getValueString('logcleaner', 'wtparam_filter') ?: $this->setSettingZeilen('wtparam_filter','1'),
+			'wtpara_cron_deldub' => $this->appConfig->getValueString('logcleaner', 'wtpara_cron_deldub') ?: $this->setSettingZeilen('wtpara_cron_deldub','1'),
 			'loglevel' => $this->config->getSystemValue('loglevel'),
-			'wtpara_show_footer' => (empty($this->config->getAppValue('logcleaner', 'wtpara_show_footer')))?$this->setSettingZeilen('wtpara_show_footer',1):$this->config->getAppValue('logcleaner', 'wtpara_show_footer'),
-			'wtpara_miniview' => (empty($this->config->getAppValue('logcleaner', 'wtpara_miniview')))?$this->setSettingZeilen('wtpara_miniview',1):$this->config->getAppValue('logcleaner', 'wtpara_miniview'),
-			'wtpara_logmessage_sizewarnings' => (empty($this->config->getAppValue('logcleaner', 'wtpara_logmessage_sizewarnings')))?$this->setSettingZeilen('wtpara_logmessage_sizewarnings',2):$this->config->getAppValue('logcleaner', 'wtpara_logmessage_sizewarnings'),
-			'wtpara_logrotate' => (empty($this->config->getAppValue('logcleaner', 'wtpara_logrotate')))?$this->setSettingZeilen('wtpara_logrotate',1):$this->config->getAppValue('logcleaner', 'wtpara_logrotate'),
-			'wtpara_position_mini' => (empty($this->config->getAppValue('logcleaner', 'wtpara_position_mini')))?$this->setSettingZeilen('wtpara_position_mini',1):$this->config->getAppValue('logcleaner', 'wtpara_position_mini'),
+			'wtpara_show_footer' => $this->appConfig->getValueString('logcleaner', 'wtpara_show_footer') ?: $this->setSettingZeilen('wtpara_show_footer','1'),
+			'wtpara_miniview' => $this->appConfig->getValueString('logcleaner', 'wtpara_miniview') ?: $this->setSettingZeilen('wtpara_miniview','1'),
+			'wtpara_logmessage_sizewarnings' => $this->appConfig->getValueString('logcleaner', 'wtpara_logmessage_sizewarnings') ?: $this->setSettingZeilen('wtpara_logmessage_sizewarnings','2'),
+			'wtpara_logrotate' => $this->appConfig->getValueString('logcleaner', 'wtpara_logrotate') ?: $this->setSettingZeilen('wtpara_logrotate','1'),
+			'wtpara_position_mini' => $this->appConfig->getValueString('logcleaner', 'wtpara_position_mini') ?: $this->setSettingZeilen('wtpara_position_mini','1'),
 			'LogFile' => $this->logService->getLogFile(),
 			'AuditFile' => $this->logService->getAuditFile(),
 			'FlowFile' => $this->logService->getFlowFile(),
 			'isExecAvailable' => $this->logService->isExecAvailable(),
-			'email_notification_enabled' => (empty($this->config->getAppValue('logcleaner', 'email_notification_enabled')))?$this->setSettingZeilen('email_notification_enabled','no'):$this->config->getAppValue('logcleaner', 'email_notification_enabled'),
-			'last_email_timestamp' => (int)$this->config->getAppValue('logcleaner', 'last_email_timestamp', 0),
-			'last_noti_timestamp' => (int)$this->config->getAppValue('logcleaner', 'last_noti_timestamp', 0),
-			'email_interval' => (empty($this->config->getAppValue('logcleaner', 'email_interval')))?$this->setSettingZeilen('email_interval','daily'):$this->config->getAppValue('logcleaner', 'email_interval'),
-			'admin_email' => $this->config->getAppValue('logcleaner', 'admin_email'),
-			'admin_email_name' => $this->config->getAppValue('logcleaner', 'admin_email_name'),
-			'notification_enabled' => (empty($this->config->getAppValue('logcleaner', 'notification_enabled')))?$this->setSettingZeilen('notification_enabled','no'):$this->config->getAppValue('logcleaner', 'notification_enabled'),
-			'noti_interval' => (empty($this->config->getAppValue('logcleaner', 'noti_interval')))?$this->setSettingZeilen('noti_interval','daily'):$this->config->getAppValue('logcleaner', 'noti_interval'),
-			'admin_noti' => $this->config->getAppValue('logcleaner', 'admin_noti'),
-			'last_noti_test_timestamp' => (int)$this->config->getAppValue('logcleaner', 'last_noti_test_timestamp', 0),
+			'email_notification_enabled' => $this->appConfig->getValueString('logcleaner', 'email_notification_enabled') ?: $this->setSettingZeilen('email_notification_enabled','no'),
+			'last_email_timestamp' => $this->appConfig->getValueInt('logcleaner', 'last_email_timestamp', 0),
+			'last_noti_timestamp' => $this->appConfig->getValueInt('logcleaner', 'last_noti_timestamp', 0),
+			'email_interval' => $this->appConfig->getValueString('logcleaner', 'email_interval') ?: $this->setSettingZeilen('email_interval','daily'),
+			'admin_email' => $this->appConfig->getValueString('logcleaner', 'admin_email',''),
+			'admin_email_name' => $this->appConfig->getValueString('logcleaner', 'admin_email_name',''),
+			'notification_enabled' => $this->appConfig->getValueString('logcleaner', 'notification_enabled') ?: $this->setSettingZeilen('notification_enabled','no'),
+			'noti_interval' => $this->appConfig->getValueString('logcleaner', 'noti_interval') ?: $this->setSettingZeilen('noti_interval','daily'),
+			'admin_noti' => $this->appConfig->getValueString('logcleaner', 'admin_noti',''),
+			'last_noti_test_timestamp' => $this->appConfig->getValueInt('logcleaner', 'last_noti_test_timestamp', 0),
 		]);
 	}
 
 	public function setLL($who): DataResponse {
-		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
+		$wtpara_logmessage = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '1');
 		$who = intval($who);
 		if (!is_int($who) || $who < 0 || $who > 4) {
-				$this->logger->debug('Cannot set loglevel');
+				$this->logger->debug('LogCleaner: Cannot set loglevel');
 			}
 			$this->config->setSystemValue('loglevel', $who);
 			if ($wtpara_logmessage===2) {
@@ -128,7 +139,7 @@ class SettingsController extends Controller {
 					break;
 					default:
 				}
-				$this->logger->info("LogCleaner: Set log level to $levelname($who). This log entry can be deleted without verification.");
+				if ( (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '2') === 2 ) $this->logger->info("LogCleaner: Set log level to $levelname($who). This log entry can be deleted without verification.");
 			}
 			return new DataResponse([
             ]);
@@ -159,7 +170,7 @@ class SettingsController extends Controller {
 		}
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 
-		$wt_zeilen = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_zeilen', '5', false);;
+		$wt_zeilen = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_zeilen', '5', false);
 		$wt_offset = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset', '0', false);
 		$wt_art = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_art', '2', false);
 		$wt_characters = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_characters', '500', false);
@@ -172,40 +183,40 @@ class SettingsController extends Controller {
 
 		if((!isset($wtpara_logrotate)) || ($wtpara_logrotate === 0)) {
 			$wtpara_logrotate = 1;
-			$this->helper->setAppValue('wtpara_logrotate', 1);
+			$this->setSettingZeilen('wtpara_logrotate','1');
 		}
 
 		if((!isset($wtpara_miniview)) || ($wtpara_miniview === 0)) {
 			$wtpara_miniview = 1;
-			$this->helper->setAppValue('wtpara_miniview', 1);
+			$this->setSettingZeilen('wtpara_miniview','1');
 		}
 
 		if((!isset($wtpara_logmessage_sizewarnings)) || ($wtpara_logmessage_sizewarnings === 0)) {
 			$wtpara_logmessage_sizewarnings = 2;
-			$this->helper->setAppValue('logmessage_sizewarnings', 2);
+			$this->setSettingZeilen('logmessage_sizewarnings','2');
 		}
 
 		if((!isset($wtpara_cron_deldub)) || ($wtpara_cron_deldub === 0)) {
 			$wtpara_cron_deldub = 1;
-			$this->helper->setAppValue('wtpara_cron_deldub', 1);
+			$this->setSettingZeilen('wtpara_cron_deldub','1');
 		}
 		if((!isset($wtpara_menue)) || ($wtpara_menue === 0)) {
-			$this->helper->setAppValue('wtparam_menue', 1);
+			$this->setSettingZeilen('wtpara_menue','1');
 		}
 		if((!isset($wt_zeilen)) || ($wt_zeilen === 0)) {
 			$wt_zeilen = 5;
-			$this->helper->setAppValue('logcleaner_wt_zeilen', 5);
+			$this->setSettingZeilen('logcleaner_wt_zeilen','5');
 		}
 		if((!isset($wt_art)) || ($wt_art === 0)) {
 			$wt_art = 2;
-			$this->helper->setAppValue('logcleaner_wt_art', 9);
+			$this->setSettingZeilen('logcleaner_wt_art','9');
 		}
 		if((!isset($wtpara_logmessage)) || ($wtpara_logmessage === 0)) {
-			$this->helper->setAppValue('wtparam_logmessage', 2);
+			$this->setSettingZeilen('wtparam_logmessage','2');
 		}
 		if((!isset($wt_characters)) || ($wt_characters === 0)) {
 			$wt_characters = 500;
-			$this->helper->setAppValue('logcleaner_wt_characters', 500);
+			$this->setSettingZeilen('logcleaner_wt_characters','500');
 		}
 		if (isset($logid)) {
 			$this->helper->wtzeileweg($logid, $wwt, $wtlogfile);
@@ -267,7 +278,7 @@ class SettingsController extends Controller {
 		}
 
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
-		$wt_zeilen = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_zeilen', '5', false);;
+		$wt_zeilen = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_zeilen', '5', false);
 		$wt_offset = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset', '0', false);
 		$wt_art = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_art', '2', false);
 		$wt_characters = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_characters', '500', false);
@@ -280,39 +291,39 @@ class SettingsController extends Controller {
 
 		if((!isset($wtpara_logrotate)) || ($wtpara_logrotate === 0)) {
 			$wtpara_logrotate = 1;
-			$this->helper->setAppValue('wtpara_logrotate', 1);
+			$this->setSettingZeilen('wtpara_logrotate','1');
 		}
 
 		if((!isset($wtpara_miniview)) || ($wtpara_miniview === 0)) {
 			$wtpara_miniview = 1;
-			$this->helper->setAppValue('wtpara_miniview', 1);
+			$this->setSettingZeilen('wtpara_miniview','1');
 		}
 		if((!isset($wtpara_logmessage_sizewarnings)) || ($wtpara_logmessage_sizewarnings === 0)) {
 			$wtpara_logmessage_sizewarnings = 2;
-			$this->helper->setAppValue('logmessage_sizewarnings', 2);
+			$this->setSettingZeilen('logmessage_sizewarnings','2');
 		}
 
 		if((!isset($wtpara_cron_deldub)) || ($wtpara_cron_deldub === 0)) {
 			$wtpara_cron_deldub = 1;
-			$this->helper->setAppValue('wtpara_cron_deldub', 1);
+			$this->setSettingZeilen('wtpara_cron_deldub','1');
 		}
 		if((!isset($wtpara_menue)) || ($wtpara_menue === 0)) {
-			$this->helper->setAppValue('wtparam_menue', 1);
+			$this->setSettingZeilen('wtparam_menue','1');
 		}
 		if((!isset($wt_zeilen)) || ($wt_zeilen === 0)) {
 			$wt_zeilen = 5;
-			$this->helper->setAppValue('logcleaner_wt_zeilen', 5);
+			$this->setSettingZeilen('logcleaner_wt_zeilen','5');
 		}
 		if((!isset($wt_art)) || ($wt_art === 0)) {
 			$wt_art = 2;
-			$this->helper->setAppValue('logcleaner_wt_art', 9);
+			$this->setSettingZeilen('logcleaner_wt_art','9');
 		}
 		if((!isset($wtpara_logmessage)) || ($wtpara_logmessage === 0)) {
-			$this->helper->setAppValue('wtparam_logmessage', 2);
+			$this->setSettingZeilen('wtparam_logmessage','2');
 		}
 		if((!isset($wt_characters)) || ($wt_characters === 0)) {
 			$wt_characters = 500;
-			$this->helper->setAppValue('logcleaner_wt_characters', 500);
+			$this->setSettingZeilen('logcleaner_wt_characters','500');
 		}
 		if (isset($logid)) {
 			$this->helper->wtzeileweg($logid, $wwt, $wtlogfile);
@@ -382,7 +393,7 @@ class SettingsController extends Controller {
 		}
 
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
-		$wt_zeilen = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_zeilen', '5', false);;
+		$wt_zeilen = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_zeilen', '5', false);
 		$wt_offset = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset', '0', false);
 		$wt_art = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_art', '2', false);
 		$wt_characters = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_characters', '500', false);
@@ -395,40 +406,40 @@ class SettingsController extends Controller {
 
 		if((!isset($wtpara_logrotate)) || ($wtpara_logrotate === 0)) {
 			$wtpara_logrotate = 1;
-			$this->helper->setAppValue('wtpara_logrotate', 1);
+			$this->setSettingZeilen('wtpara_logrotate','1');
 		}
 
 		if((!isset($wtpara_miniview)) || ($wtpara_miniview === 0)) {
 			$wtpara_miniview = 1;
-			$this->helper->setAppValue('wtpara_miniview', 1);
+			$this->setSettingZeilen('wtpara_miniview','1');
 		}
 
 		if((!isset($wtpara_logmessage_sizewarnings)) || ($wtpara_logmessage_sizewarnings === 0)) {
 			$wtpara_logmessage_sizewarnings = 2;
-			$this->helper->setAppValue('logmessage_sizewarnings', 2);
+			$this->setSettingZeilen('logmessage_sizewarnings','2');
 		}
 
 		if((!isset($wtpara_cron_deldub)) || ($wtpara_cron_deldub === 0)) {
 			$wtpara_cron_deldub = 1;
-			$this->helper->setAppValue('wtpara_cron_deldub', 1);
+			$this->setSettingZeilen('wtpara_cron_deldub','1');
 		}
 		if((!isset($wtpara_menue)) || ($wtpara_menue === 0)) {
-			$this->helper->setAppValue('wtparam_menue', 1);
+			$this->setSettingZeilen('wtparam_menue','1');
 		}
 		if((!isset($wt_zeilen)) || ($wt_zeilen === 0)) {
 			$wt_zeilen = 5;
-			$this->helper->setAppValue('logcleaner_wt_zeilen', 5);
+			$this->setSettingZeilen('logcleaner_wt_zeilen','5');
 		}
 		if((!isset($wt_art)) || ($wt_art === 0)) {
 			$wt_art = 2;
-			$this->helper->setAppValue('logcleaner_wt_art', 9);
+			$this->setSettingZeilen('logcleaner_wt_art','9');
 		}
 		if((!isset($wtpara_logmessage)) || ($wtpara_logmessage === 0)) {
-			$this->helper->setAppValue('wtparam_logmessage', 2);
+			$this->setSettingZeilen('wtparam_logmessage','2');
 		}
 		if((!isset($wt_characters)) || ($wt_characters === 0)) {
 			$wt_characters = 500;
-			$this->helper->setAppValue('logcleaner_wt_characters', 500);
+			$this->setSettingZeilen('logcleaner_wt_characters','500');
 		}
 		if (isset($logid)) {
 			$this->helper->wtzeileweg($logid, $wwt, $wtlogfile);
@@ -636,7 +647,7 @@ class SettingsController extends Controller {
 	}
 
 	public function delDub(): DataResponse {
-		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
+		$wtpara_logmessage = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '1');
 		$i = 0;
 		$ii = 0;
 		$key_array = array();
@@ -685,8 +696,7 @@ class SettingsController extends Controller {
 			$level = null;
 		}
 		if (isset($level)) {
-
-			$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
+			$wtpara_logmessage = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '1');
 			$i = 0;
 			$ii = 0;
 			$key_array = array();
@@ -763,7 +773,6 @@ class SettingsController extends Controller {
 		$wwt = $this->helper->wtlogtoarr($wtlogfile);
 		foreach($wwt as $val) {
 			$json = json_decode($val);
-			//if (!isset($json->message)) $json->message = 'no message available';
 			if (!in_array($json->message, $key_array)) {
 				$key_array[$i] = $json->message;
 				$temp_array[$i] = $i;
@@ -800,7 +809,7 @@ class SettingsController extends Controller {
 	}
 
 	public function emptylog(): DataResponse {
-		$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
+		$wtpara_logmessage = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '1');
 		$wtlogfile = $this->logService->getLogFile();
 		file_put_contents($wtlogfile, "",LOCK_EX);
 		if ($wtpara_logmessage===2) {
@@ -816,7 +825,7 @@ class SettingsController extends Controller {
 		}
 		if (isset($app)) {
 
-			$wtpara_logmessage = (int)$this->helper->getAppValue('wtparam_logmessage');
+			$wtpara_logmessage = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '1');
 			$i = 0;
 			$ii = 0;
 			$key_array = array();
