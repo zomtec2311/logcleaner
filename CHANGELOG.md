@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.5.1
+
+### Changed
+- italian language files new translated. Thanks to @haringk
+- log report emails updated
+- set and get app parameters due to depricated methods in IConfig
+- swedish language files new translated by @Leffe64
+
+### Fixed
+- data did not always update when deleting log entries
+- some code cleanup
+
 ## 1.5.0
 
 ### Added
