@@ -73,7 +73,7 @@ OC.L10N.register(
 "variant 2": "variant 2",
 "Filter": "Filtrera",
 "off": "av",
-"Filter off": "Filtrer av",
+"Filter off": "Filter av",
 "DEBUG": "DEBUG",
 "INFO": "INFO",
 "WARN": "VARNING",
