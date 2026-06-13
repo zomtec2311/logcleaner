@@ -197,7 +197,7 @@ class LogNotificationService {
         $offset = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset', '0');
         $stats = $this->getLogStats($lastSent, $minLevel);
         if (array_sum($stats['counts']) === 0) {
-            if( (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '2') === 2 ) $this->logger->info("LogCleaner: No new log entries available. Therefore, no sending of a log report by notification");
+            if( $this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '2') === '2' ) $this->logger->info("LogCleaner: No new log entries available. Therefore, no sending of a log report by notification");
             return;
         }
         $adminName = $this->appConfig->getValueString('logcleaner', 'admin_noti', '');
