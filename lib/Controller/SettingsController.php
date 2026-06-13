@@ -64,16 +64,25 @@ class SettingsController extends Controller {
 	public function setSettingZeilen($who,$zeilen): DataResponse {
 		if (is_int($zeilen)) {
 			$this->appConfig->setValueInt('logcleaner', $who, $zeilen);
-			if ( $this->appConfig->getValueInt('logcleaner', 'wtparam_logmessage', 2) === 2 ) $this->logger->debug("LogCleaner: $who set to $zeilen");
+			if ( $this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '2') === '2' ) $this->logger->debug("LogCleaner: $who set to $zeilen");
 		}
 		if (is_string($zeilen)) {
 			$this->appConfig->setValueString('logcleaner', $who, $zeilen);
-			if ( $this->appConfig->getValueInt('logcleaner', 'wtparam_logmessage', 2) === 2 ) $this->logger->debug("LogCleaner: $who set to '$zeilen'");
+			if ( $this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '2') === '2' ) $this->logger->debug("LogCleaner: $who set to $zeilen");
 		}
 		if (is_bool($zeilen)) {
 			$this->appConfig->setValueBool('logcleaner', $who, $zeilen);
-			if ( $this->appConfig->getValueInt('logcleaner', 'wtparam_logmessage', 2) === 2 ) $this->logger->debug("LogCleaner: $who set to $zeilen");
+			if ( $this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '2') === '2' ) $this->logger->debug("LogCleaner: $who set to $zeilen");
 		}
+		return new DataResponse([
+			'wert' => $zeilen,
+		]);
+	}
+
+	public function setViewed($zeilen): DataResponse {
+		if ($zeilen > 10) $zeilen = 0;
+			$this->appConfig->setValueString('logcleaner', 'viewed', $zeilen);
+
 		return new DataResponse([
 			'wert' => $zeilen,
 		]);
@@ -110,6 +119,7 @@ class SettingsController extends Controller {
 			'noti_interval' => $this->appConfig->getValueString('logcleaner', 'noti_interval') ?: $this->setSettingZeilen('noti_interval','daily'),
 			'admin_noti' => $this->appConfig->getValueString('logcleaner', 'admin_noti',''),
 			'last_noti_test_timestamp' => $this->appConfig->getValueInt('logcleaner', 'last_noti_test_timestamp', 0),
+			'viewed' => (int)$this->appConfig->getValue('logcleaner', 'viewed', 0),
 		]);
 	}
 
