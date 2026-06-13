@@ -253,11 +253,11 @@
     border-radius: 8px;
 }
 .insettings {
+    box-sizing: border-box;
     width: 100%;
-    height: max-content;
-    float: left;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    display: block;
+    padding-left: 20px;
+    margin-bottom: 5px;
 }
 .outsettings {
     width: 400px;
