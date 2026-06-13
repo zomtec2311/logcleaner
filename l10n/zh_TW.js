@@ -109,6 +109,11 @@ OC.L10N.register(
 "This is a test notification": "這是測試通知",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "每日 Nextcloud 日誌摘要（%1$s 到 %2$s）",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "每週 Nextcloud 日誌摘要（%1$s 到 %2$s）",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "每月 Nextcloud 日誌摘要（%1$s 到 %2$s）"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "每月 Nextcloud 日誌摘要（%1$s 到 %2$s）",
+                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "如果您喜歡 {name}，請在 {where} 中對 {name} 進行 ⭐ 評分和/或 💬 評論",
+                 "Basic Settings": "基本設定",
+"Appearance": "外貌",
+"Actions": "行動",
+"Automatic": "自動的"
 },
 "nplurals=1; plural=0;");

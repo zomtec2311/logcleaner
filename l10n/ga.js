@@ -109,6 +109,11 @@ OC.L10N.register(
 "This is a test notification": "Is fógra tástála é seo",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Achoimre ar Logchomhad Daily Nextcloud (%1$s go %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Achoimre ar Logchomhad Seachtainiúil Nextcloud (%1$s go %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Achoimre ar Logchomhad Míosúil Nextcloud (%1$s go %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Achoimre ar Logchomhad Míosúil Nextcloud (%1$s go %2$s)",
+                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "más maith leat {name}, ⭐ ráta agus/nó 💬 déan trácht ar {name} sa {where}",
+                 "Basic Settings": "Socruithe Bunúsacha",
+"Appearance": "Dealramh",
+"Actions": "Gníomhartha",
+"Automatic": "Uathoibríoch"
 },
 "nplurals=5; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n >= 3 && n <= 6) ? 2 : ((n >= 7 && n <= 10) ? 3 : 4)));");

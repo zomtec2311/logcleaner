@@ -109,6 +109,11 @@ OC.L10N.register(
 "This is a test notification": "Սա թեստային ծանուցում է",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Daily Nextcloud Log ամփոփում (%1$s-ից %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Շաբաթական Nextcloud մատյան ամփոփում (%1$s-ից %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud ամսական ամփոփագիր (%1$s-ից %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Nextcloud ամսական ամփոփագիր (%1$s-ից %2$s)",
+                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "եթե ձեզ դուր է գալիս {name}, ⭐ գնահատեք և/կամ 💬 մեկնաբանեք {name}-ն {where}-ում",
+                 "Basic Settings": "Հիմնական կարգավորումներ",
+"Appearance": "Արտաքին տեսք",
+"Actions": "Գործողություններ",
+"Automatic": "Ավտոմատ"
 },
 "nplurals=2; plural=n > 1;");

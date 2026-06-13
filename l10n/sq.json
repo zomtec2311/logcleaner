@@ -105,6 +105,11 @@
 "This is a test notification": "Ky është një njoftim testimi",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Përmbledhja ditore e regjistrit të Nextcloud (%1$s në %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Përmbledhja javore e regjistrit të Nextcloud (%1$s në %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Përmbledhja mujore e regjistrit të Nextcloud (%1$s në %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Përmbledhja mujore e regjistrit të Nextcloud (%1$s në %2$s)",
+"if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "nëse ju pëlqen {name}, ⭐ vlerësoni dhe/ose 💬 komentoni për {name} në {where}",
+"Basic Settings": "Cilësimet bazë",
+"Appearance": "Pamja e jashtme",
+"Actions": "Veprimet",
+"Automatic": "Automatik"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

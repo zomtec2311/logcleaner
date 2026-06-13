@@ -108,6 +108,11 @@ OC.L10N.register(
 "This is a test notification": "Dies ist eine Testbenachrichtigung",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Tägliche Nextcloud Log Zusammenfassung (%1$s bis %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Wöchentliche Nextcloud Log Zusammenfassung (%1$s bis %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Monatliche Nextcloud Log Zusammenfassung (%1$s bis %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Monatliche Nextcloud Log Zusammenfassung (%1$s bis %2$s)",
+"if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "Wenn dir {name} gefällt, ⭐ bewerte und/oder 💬 kommentiere {name} im {where}",
+"Basic Settings": "Grundeinstellungen",
+"Appearance": "Aussehen",
+"Actions": "Aktionen",
+"Automatic": "Automatik"
 },
 "nplurals=2; plural=(n != 1);");

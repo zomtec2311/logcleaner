@@ -105,6 +105,11 @@
 "This is a test notification": "Hau probaren jakinarazpena da",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Eguneko Nextcloud egunkariaren laburpena (%1$stik %2$sra)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Asteko Nextcloud erregistroaren laburpena (%1$stik %2$sra)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Hileroko Nextcloud erregistroaren laburpena (%1$stik %2$sra)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Hileroko Nextcloud erregistroaren laburpena (%1$stik %2$sra)",
+"if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "{name} gustatzen bazaizu, ⭐ baloratu eta/edo 💬 komentatu {name} {where}-en",
+"Basic Settings": "Oinarrizko ezarpenak",
+"Appearance": "Itxura",
+"Actions": "Ekintzak",
+"Automatic": "Automatikoa"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

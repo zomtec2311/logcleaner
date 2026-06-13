@@ -109,6 +109,11 @@ OC.L10N.register(
 "This is a test notification": "See on testteatis",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Igapäevane Nextcloudi logi kokkuvõte (%1$s kuni %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Nädala Nextcloudi logi kokkuvõte (%1$s kuni %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Kuu Nextcloudi logi kokkuvõte (%1$s kuni %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Kuu Nextcloudi logi kokkuvõte (%1$s kuni %2$s)",
+                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "kui teile meeldib {name}, ⭐ hinnake ja/või 💬 kommenteerige {name}t {where}-is",
+                 "Basic Settings": "Põhiseaded",
+"Appearance": "Välimus",
+"Actions": "Tegevused",
+"Automatic": "Automaatne"
 },
 "nplurals=2; plural=n != 1;");

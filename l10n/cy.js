@@ -109,6 +109,11 @@ OC.L10N.register(
 "This is a test notification": "Hysbysiad prawf yw hwn",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Crynodeb Log Daily Nextcloud (%1$s i %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Crynodeb o Log Wythnosol Nextcloud (%1$s i %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Crynodeb Log Misol Nextcloud (%1$s i %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Crynodeb Log Misol Nextcloud (%1$s i %2$s)",
+                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "os ydych yn hoffi {name}, ⭐ cyfradd a/neu 💬 sylw ar {name} yn y {where}",
+                 "Basic Settings": "Gosodiadau Sylfaenol",
+"Appearance": "Ymddangosiad",
+"Actions": "Gweithredoedd",
+"Automatic": "Awtomatig"
 },
 "nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n == 3) ? 3 : ((n == 6) ? 4 : 5))));");

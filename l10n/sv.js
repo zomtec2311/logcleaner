@@ -109,6 +109,11 @@ OC.L10N.register(
 "This is a test notification": "Detta är ett testmeddelande",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Daglig Nextcloud-loggsammanfattning (%1$s till %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Veckovis Nextcloud-loggsammanfattning (%1$s till %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Månatlig Nextcloud-loggsammanfattning (%1$s till %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Månatlig Nextcloud-loggsammanfattning (%1$s till %2$s)",
+                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "om du gillar {name}, ⭐ betygsätt och/eller 💬 kommentera {name} i {where}",
+                 "Basic Settings": "Grundinställningar",
+"Appearance": "Utseende",
+"Actions": "Åtgärder",
+"Automatic": "Automatisk"
 },
 "nplurals=2; plural=n != 1;");

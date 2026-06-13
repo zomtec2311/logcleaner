@@ -109,6 +109,11 @@ OC.L10N.register(
 "This is a test notification": "To je testno obvestilo",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Dnevni povzetek dnevnika Nextcloud (%1$s do %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Tedenski povzetek dnevnika Nextcloud (%1$s do %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Mesečni povzetek dnevnika Nextcloud (%1$s do %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Mesečni povzetek dnevnika Nextcloud (%1$s do %2$s)",
+                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "če vam je všeč {name}, ⭐ ocenite in/ali 💬 komentirajte {name} v {where}",
+                 "Basic Settings": "Osnovne nastavitve",
+"Appearance": "Videz",
+"Actions": "Dejanja",
+"Automatic": "Samodejno"
 },
 "nplurals=4; plural=(n % 100 == 1) ? 0 : ((n % 100 == 2) ? 1 : ((n % 100 == 3 || n % 100 == 4) ? 2 : 3));");

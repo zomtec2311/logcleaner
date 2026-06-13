@@ -105,6 +105,11 @@
 "This is a test notification": "Bu sınaq bildirişidir",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Gündəlik Nextcloud Log xülasəsi (%1$s - %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Həftəlik Nextbulud Girişi Xülasəsi (%1$s - %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Aylıq Nextbulud Girişi Xülasəsi (%1$s-dan %2$s-yə qədər)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Aylıq Nextbulud Girişi Xülasəsi (%1$s-dan %2$s-yə qədər)",
+"if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "{name}-nı bəyənirsinizsə, {where}-də {name}-nı ⭐ qiymətləndirin və/və ya 💬 şərh edin",
+"Basic Settings": "Əsas Parametrlər",
+"Appearance": "Görünüş",
+"Actions": "Fəaliyyətlər",
+"Automatic": "Avtomatik"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

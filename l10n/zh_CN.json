@@ -105,6 +105,11 @@
 "This is a test notification": "这是测试通知",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "每日 Nextcloud 日志摘要（%1$s 到 %2$s）",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "每周 Nextcloud 日志摘要（%1$s 到 %2$s）",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "每月 Nextcloud 日志摘要（%1$s 到 %2$s）"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "每月 Nextcloud 日志摘要（%1$s 到 %2$s）",
+"if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "如果您喜欢 {name}，请在 {where} 中对 {name} 进行 ⭐ 评分和/或 💬 评论",
+"Basic Settings": "基本设置",
+"Appearance": "外貌",
+"Actions": "行动",
+"Automatic": "自动的"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

@@ -104,6 +104,11 @@
 "This is a test notification": "Ĉi tio estas testa sciigo",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Ĉiutaga Nextcloud Protokolo-Resumo (%1$s al %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Semajna Protokolo-Resumo de Nextcloud (%1$s al %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Monata Protokolo-Resumo de Nextcloud (%1$s al %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Monata Protokolo-Resumo de Nextcloud (%1$s al %2$s)",
+"if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "se vi ŝatas {name}, ⭐ taksu kaj/aŭ 💬 komentu {name} en la {where}",
+"Basic Settings": "Bazaj Agordoj",
+"Appearance": "Aspekto",
+"Actions": "Agoj",
+"Automatic": "Aŭtomata"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

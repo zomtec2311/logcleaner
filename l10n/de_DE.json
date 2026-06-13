@@ -104,6 +104,11 @@
 "This is a test notification": "Dies ist eine Testbenachrichtigung",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Tägliche Nextcloud Log Zusammenfassung (%1$s bis %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Wöchentliche Nextcloud Log Zusammenfassung (%1$s bis %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Monatliche Nextcloud Log Zusammenfassung (%1$s bis %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Monatliche Nextcloud Log Zusammenfassung (%1$s bis %2$s)",
+"if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "Wenn Ihnen {name} gefällt, ⭐ bewerten und/oder 💬 kommentieren Sie {name} im {where}",
+"Basic Settings": "Grundeinstellungen",
+"Appearance": "Aussehen",
+"Actions": "Aktionen",
+"Automatic": "Automatik"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

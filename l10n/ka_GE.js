@@ -109,6 +109,11 @@ OC.L10N.register(
 "This is a test notification": "ეს არის ტესტის შეტყობინება",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "ყოველდღიური Nextcloud ჟურნალის შეჯამება (%1$s-დან %2$s-მდე)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "ყოველკვირეული Nextcloud ჟურნალის შეჯამება (%1$s-დან %2$s-მდე)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "ყოველთვიური Nextcloud ჟურნალის შეჯამება (%1$s-დან %2$s-მდე)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "ყოველთვიური Nextcloud ჟურნალის შეჯამება (%1$s-დან %2$s-მდე)",
+                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "თუ მოგწონთ {name}, ⭐ შეაფასეთ და/ან 💬 კომენტარი გააკეთეთ {name}-ზე {where}-ში",
+                 "Basic Settings": "ძირითადი პარამეტრები",
+"Appearance": "გარეგნობა",
+"Actions": "მოქმედებები",
+"Automatic": "ავტომატური"
 },
 "nplurals=2; plural=n != 1;");

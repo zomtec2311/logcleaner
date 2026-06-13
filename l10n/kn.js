@@ -109,6 +109,11 @@ OC.L10N.register(
 "This is a test notification": "ಇದು ಪರೀಕ್ಷಾ ಅಧಿಸೂಚನೆಯಾಗಿದೆ",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "ಡೈಲಿ ನೆಕ್ಸ್ಟ್‌ಕ್ಲೌಡ್ ಲಾಗ್ ಸಾರಾಂಶ (%1$s ನಿಂದ %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "ಸಾಪ್ತಾಹಿಕ Nextcloud ಲಾಗ್ ಸಾರಾಂಶ (%1$s ನಿಂದ %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "ಮಾಸಿಕ Nextcloud ಲಾಗ್ ಸಾರಾಂಶ (%1$s ನಿಂದ %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "ಮಾಸಿಕ Nextcloud ಲಾಗ್ ಸಾರಾಂಶ (%1$s ನಿಂದ %2$s)",
+                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "ನೀವು {name} ಬಯಸಿದರೆ, ⭐ ದರ ಮತ್ತು/ಅಥವಾ 💬 XYZN ನಲ್ಲಿ {name} ಕಾಮೆಂಟ್ ಮಾಡಿ",
+                 "Basic Settings": "ಮೂಲ ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+"Appearance": "ಗೋಚರತೆ",
+"Actions": "ಕ್ರಿಯೆಗಳು",
+"Automatic": "ಸ್ವಯಂಚಾಲಿತ"
 },
 "nplurals=2; plural=n > 1;");

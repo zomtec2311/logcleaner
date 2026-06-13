@@ -105,6 +105,11 @@
 "This is a test notification": "Энэ бол туршилтын мэдэгдэл юм",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Өдөр тутмын NextCloud бүртгэлийн хураангуй (%1$s-аас %2$s хүртэл)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Долоо хоног тутмын NextCloud бүртгэлийн хураангуй (%1$s-аас %2$s хүртэл)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Сар бүрийн NextCloud бүртгэлийн хураангуй (%1$s-аас %2$s хүртэл)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Сар бүрийн NextCloud бүртгэлийн хураангуй (%1$s-аас %2$s хүртэл)",
+"if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "Хэрэв та {name}-д дуртай бол {where} дээр ⭐ үнэлгээ өгөх ба/эсвэл 💬 сэтгэгдэл бичих",
+"Basic Settings": "Үндсэн тохиргоо",
+"Appearance": "Гадаад төрх",
+"Actions": "Үйлдлүүд",
+"Automatic": "Автомат"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

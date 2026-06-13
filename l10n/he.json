@@ -105,6 +105,11 @@
 "This is a test notification": "זו הודעת בדיקה",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "סיכום יומן Nextcloud יומי (%1$s ל-%2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "סיכום יומן Nextcloud שבועי (%1$s ל-%2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "סיכום יומן Nextcloud חודשי (%1$s ל-%2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "סיכום יומן Nextcloud חודשי (%1$s ל-%2$s)",
+"if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "אם אתה אוהב {name}, דרג ו/או 💬 הגיב על {name} ב-{where}",
+"Basic Settings": "הגדרות בסיסיות",
+"Appearance": "הוֹפָעָה",
+"Actions": "פעולות",
+"Automatic": "אוֹטוֹמָטִי"
 },"pluralForm" :"nplurals=3; plural=(n == 1) ? 0 : ((n == 2) ? 1 : 2);"
 }

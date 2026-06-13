@@ -105,6 +105,11 @@
 "This is a test notification": "Dette er en testmeddelelse",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Daglig Nextcloud-logoversigt (%1$s til %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Ugentlig Nextcloud-logoversigt (%1$s til %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Månedlig Nextcloud-logoversigt (%1$s til %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Månedlig Nextcloud-logoversigt (%1$s til %2$s)",
+"if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "hvis du kan lide {name}, ⭐ bedøm og/eller 💬 kommenter {name} i {where}",
+"Basic Settings": "Grundlæggende indstillinger",
+"Appearance": "Udseende",
+"Actions": "Handlinger",
+"Automatic": "Automatisk"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

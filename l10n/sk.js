@@ -109,6 +109,11 @@ OC.L10N.register(
 "This is a test notification": "Toto je testovacie oznámenie",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Denný súhrn denníka Nextcloud (%1$s až %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Týždenný súhrn denníka Nextcloud (%1$s až %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Mesačný súhrn denníka Nextcloud (%1$s až %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Mesačný súhrn denníka Nextcloud (%1$s až %2$s)",
+                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "ak sa vám páči {name}, ⭐ ohodnoťte a/alebo 💬 komentujte {name} v {where}",
+                 "Basic Settings": "Základné nastavenia",
+"Appearance": "Vzhľad",
+"Actions": "Akcie",
+"Automatic": "Automaticky"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);");

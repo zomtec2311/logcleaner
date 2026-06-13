@@ -105,6 +105,11 @@
 "This is a test notification": "Ово је обавештење о тесту",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Дневни сажетак дневника Нектцлоуд (%1$s до %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Недељни сажетак дневника Нектцлоуд (%1$s до %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Месечни Нектцлоуд резиме (%1$s до %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Месечни Нектцлоуд резиме (%1$s до %2$s)",
+"if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "ако вам се свиђа {name}, ⭐ оцените и/или 💬 коментаришите {name} у {where}",
+"Basic Settings": "Основна подешавања",
+"Appearance": "Изглед",
+"Actions": "Акције",
+"Automatic": "Аутоматски"
 },"pluralForm" :"nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);"
 }

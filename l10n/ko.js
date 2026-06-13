@@ -109,6 +109,11 @@ OC.L10N.register(
 "This is a test notification": "테스트 알림입니다.",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "일일 Nextcloud 로그 요약(%1$s - %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "주간 Nextcloud 로그 요약(%1$s - %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "월간 Nextcloud 로그 요약(%1$s - %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "월간 Nextcloud 로그 요약(%1$s - %2$s)",
+                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "{name}가 마음에 드신다면 {where}의 {name}에 대해 ⭐평가 및/또는 💬댓글을 남겨주세요.",
+                 "Basic Settings": "기본 설정",
+"Appearance": "모습",
+"Actions": "행위",
+"Automatic": "오토매틱"
 },
 "nplurals=1; plural=0;");

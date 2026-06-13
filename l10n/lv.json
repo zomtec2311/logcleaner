@@ -118,7 +118,12 @@
 "This is a test notification": "Šis ir testa paziņojums",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Dienas Nextcloud žurnāla kopsavilkums (%1$s–%2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Iknedēļas Nextcloud žurnāla kopsavilkums (%1$s–%2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Ikmēneša Nextcloud žurnāla kopsavilkums (%1$s–%2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Ikmēneša Nextcloud žurnāla kopsavilkums (%1$s–%2$s)",
+"if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "ja jums patīk {name}, ⭐ novērtējiet un/vai 💬 komentējiet {name} sadaļā {where}",
+"Basic Settings": "Pamatiestatījumi",
+"Appearance": "Izskats",
+"Actions": "Darbības",
+"Automatic": "Automātiski"
 },
 "pluralForm": "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);"
 }

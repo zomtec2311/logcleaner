@@ -109,6 +109,11 @@ OC.L10N.register(
 "This is a test notification": "Ова е известување за тестирање",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Дневен преглед на дневникот на Nextcloud (%1$s до %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Неделно резиме на дневникот на Nextcloud (%1$s до %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Месечен преглед на дневникот на Nextcloud (%1$s до %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Месечен преглед на дневникот на Nextcloud (%1$s до %2$s)",
+                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "ако ви се допаѓа {name}, ⭐ оценете и/или 💬 коментирајте за {name} во {where}",
+                 "Basic Settings": "Основни поставки",
+"Appearance": "Изглед",
+"Actions": "Акции",
+"Automatic": "Автоматски"
 },
 "nplurals=2; plural=(n==1 || n%10==1 ? 0 : 1);");

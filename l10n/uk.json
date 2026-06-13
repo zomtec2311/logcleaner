@@ -105,6 +105,11 @@
 "This is a test notification": "Це тестове сповіщення",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Щоденний звіт журналу Nextcloud (%1$s до %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Щотижневий звіт журналу Nextcloud (%1$s до %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Щомісячний звіт журналу Nextcloud (%1$s до %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Щомісячний звіт журналу Nextcloud (%1$s до %2$s)",
+"if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "якщо вам подобається {name}, ⭐ оцініть та/або 💬 прокоментуйте {name} в {where}",
+"Basic Settings": "Основні налаштування",
+"Appearance": "Зовнішній вигляд",
+"Actions": "Дії",
+"Automatic": "Автоматичний"
 },"pluralForm" :"nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);"
 }

@@ -109,6 +109,11 @@ OC.L10N.register(
 "This is a test notification": "นี่คือการแจ้งเตือนการทดสอบ",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "สรุปบันทึก Nextcloud รายวัน (%1$s ถึง %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "สรุปบันทึก Nextcloud รายสัปดาห์ (%1$s ถึง %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "สรุปบันทึก Nextcloud รายเดือน (%1$s ถึง %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "สรุปบันทึก Nextcloud รายเดือน (%1$s ถึง %2$s)",
+                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "หากคุณชอบ {name} ⭐ ให้คะแนน และ/หรือ 💬 แสดงความคิดเห็นเกี่ยวกับ {name} ใน {where}",
+                 "Basic Settings": "การตั้งค่าพื้นฐาน",
+"Appearance": "รูปร่าง",
+"Actions": "การดำเนินการ",
+"Automatic": "อัตโนมัติ"
 },
 "nplurals=1; plural=0;");

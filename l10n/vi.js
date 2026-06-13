@@ -109,6 +109,11 @@ OC.L10N.register(
 "This is a test notification": "Đây là thông báo thử nghiệm",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Tóm tắt nhật ký Nextcloud hàng ngày (%1$s đến %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Tóm tắt nhật ký Nextcloud hàng tuần (%1$s đến %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Tóm tắt nhật ký Nextcloud hàng tháng (%1$s đến %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Tóm tắt nhật ký Nextcloud hàng tháng (%1$s đến %2$s)",
+                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "nếu bạn thích {name}, ⭐ xếp hạng và/hoặc 💬 nhận xét về {name} trong {where}",
+                 "Basic Settings": "Cài đặt cơ bản",
+"Appearance": "Vẻ bề ngoài",
+"Actions": "hành động",
+"Automatic": "Tự động"
 },
 "nplurals=1; plural=0;");

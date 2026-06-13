@@ -109,6 +109,11 @@ OC.L10N.register(
 "This is a test notification": "テストのお知らせです",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "毎日の Nextcloud ログの概要 (%1$s から %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "毎週の Nextcloud ログの概要 (%1$s から %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "毎月の Nextcloud ログの概要 (%1$s から %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "毎月の Nextcloud ログの概要 (%1$s から %2$s)",
+                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "{name} が気に入ったら、{where} で {name} に ⭐ 評価や 💬 コメントをしてください",
+                 "Basic Settings": "基本設定",
+"Appearance": "外観",
+"Actions": "アクション",
+"Automatic": "自動"
 },
 "nplurals=1; plural=0;");

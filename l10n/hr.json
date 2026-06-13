@@ -105,6 +105,11 @@
 "This is a test notification": "Ovo je testna obavijest",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Sažetak dnevnika dnevnog Nextclouda (%1$s do %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Tjedni sažetak dnevnika Nextcloud (%1$s do %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Sažetak mjesečnog dnevnika Nextcloud (%1$s do %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Sažetak mjesečnog dnevnika Nextcloud (%1$s do %2$s)",
+"if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "ako vam se sviđa {name}, ⭐ ocijenite i/ili 💬 komentirajte {name} u {where}-u",
+"Basic Settings": "Osnovne postavke",
+"Appearance": "Izgled",
+"Actions": "Radnje",
+"Automatic": "Automatski"
 },"pluralForm" :"nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);"
 }

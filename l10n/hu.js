@@ -109,6 +109,11 @@ OC.L10N.register(
 "This is a test notification": "Ez egy tesztértesítés",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Napi Nextcloud-napló-összefoglaló (%1$s–%2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Heti Nextcloud naplóösszegzés (%1$s–%2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Havi Nextcloud-napló-összefoglaló (%1$s–%2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Havi Nextcloud-napló-összefoglaló (%1$s–%2$s)",
+                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "ha szereted az {name}-t, ⭐ értékeld és/vagy 💬 kommenteld az {name}-t az {where}-ben",
+                 "Basic Settings": "Alapbeállítások",
+"Appearance": "Megjelenés",
+"Actions": "Akciók",
+"Automatic": "Automatikus"
 },
 "nplurals=2; plural=n != 1;");

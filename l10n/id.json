@@ -105,6 +105,11 @@
 "This is a test notification": "Ini adalah pemberitahuan tes",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Ringkasan Log Nextcloud Harian (%1$s hingga %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Ringkasan Log Nextcloud Mingguan (%1$s hingga %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Ringkasan Log Nextcloud Bulanan (%1$s hingga %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Ringkasan Log Nextcloud Bulanan (%1$s hingga %2$s)",
+"if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "jika Anda menyukai {name}, ⭐ beri peringkat dan/atau 💬 komentari {name} di {where}",
+"Basic Settings": "Pengaturan Dasar",
+"Appearance": "Penampilan",
+"Actions": "Tindakan",
+"Automatic": "Otomatis"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

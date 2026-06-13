@@ -105,6 +105,11 @@
 "This is a test notification": "នេះគឺជាការជូនដំណឹងអំពីការសាកល្បង",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "សង្ខេបកំណត់ហេតុប្រចាំថ្ងៃ Nextcloud (%1$s ដល់ %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "សង្ខេបកំណត់ហេតុប្រចាំសប្តាហ៍ Nextcloud (%1$s ដល់ %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "សង្ខេបកំណត់ហេតុប្រចាំខែ Nextcloud (%1$s ដល់ %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "សង្ខេបកំណត់ហេតុប្រចាំខែ Nextcloud (%1$s ដល់ %2$s)",
+"if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "ប្រសិនបើអ្នកចូលចិត្ត {name} ⭐អត្រា និង/ឬ 💬 មតិយោបល់លើ {name} នៅក្នុង {where}",
+"Basic Settings": "ការកំណត់មូលដ្ឋាន",
+"Appearance": "រូបរាង",
+"Actions": "សកម្មភាព",
+"Automatic": "ស្វ័យប្រវត្តិ"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

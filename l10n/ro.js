@@ -109,6 +109,11 @@ OC.L10N.register(
 "This is a test notification": "Aceasta este o notificare de testare",
 "Daily Nextcloud Log Summary (%1$s to %2$s)": "Rezumatul jurnalului zilnic Nextcloud (%1$s în %2$s)",
 "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Rezumatul săptămânal al jurnalului Nextcloud (%1$s în %2$s)",
-"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Rezumatul jurnalului lunar Nextcloud (%1$s în %2$s)"
+"Monthly Nextcloud Log Summary (%1$s to %2$s)": "Rezumatul jurnalului lunar Nextcloud (%1$s în %2$s)",
+                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "dacă vă place {name}, ⭐ evaluează și/sau 💬 comentați {name} în {where}",
+                 "Basic Settings": "Setări de bază",
+"Appearance": "Aspect",
+"Actions": "Acțiuni",
+"Automatic": "Automat"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 0 || n != 1 && n % 100 >= 1 && n % 100 <= 19) ? 1 : 2);");
