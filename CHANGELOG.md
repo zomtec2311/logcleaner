@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.5.2
+
+### Changed
+- swedish language files corrected by @Leffe64
+- delete entries by error level removed from settings
+- language files updated
+- view of settings changed to chapters for a better overview
+
+
 ## 1.5.1
 
 ### Changed
