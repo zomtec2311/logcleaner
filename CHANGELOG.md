@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.3
+
+### Fixed
+- logcleaner files did not pass integrity check
+
 ## 1.5.2
 
 ### Changed
