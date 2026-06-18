@@ -99,6 +99,7 @@ class LogReportJob extends TimedJob {
             $this->appconfig->setValueInt('logcleaner', 'last_noti_timestamp', $now);
 			if ( $this->appconfig->getValueString('logcleaner', 'wtparam_logmessage', '2') === '2' ) $this->logger->info('LogCleaner background job to report logs by notification executed!');
         }
+        return;
 
     }
 }
