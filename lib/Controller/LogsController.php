@@ -480,7 +480,8 @@ class LogsController extends Controller {
     foreach ($admins as $admin) {
         $email = $admin->getEMailAddress();
         $admins_email[$email] = [
-            'name'  => $admin->getDisplayName(),
+            'name'  => $admin->getUID(),
+            'displayname'  => $admin->getDisplayName(),
             'email' => $email,
         ];
     }
