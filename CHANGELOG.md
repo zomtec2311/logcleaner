@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.4
+
+### Fixed
+- Bug fixed: email notification and test email notification did not work due to confusion admin name/displayname ([#54](https://github.com/zomtec2311/logcleaner/issues/54)) @kmorber
+
 ## 1.5.3
 
 ### Fixed
