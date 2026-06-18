@@ -76,11 +76,16 @@ class LogNotificationService {
         if (array_sum($stats['counts']) === 0) {
             return;
         }
-        $adminEmail = $this->appConfig->getValueString('logcleaner', 'admin_email', '');
-        $adminName = $this->appConfig->getValueString('logcleaner', 'admin_email_name', '');
+        $adminEmail = $this->appConfig->getValueString('logcleaner', 'admin_mail', '');
+        $adminName = $this->appConfig->getValueString('logcleaner', 'admin_mail_name', '');
         $user = $this->userManager->get($adminName);
-        $lang = $this->l10nFactory->getUserLanguage($user);
-        $adminDisplayname = $user->getDisplayName();
+        if ($user !== null) {
+            $lang = $this->l10nFactory->getUserLanguage($user);
+            $adminDisplayname = $user->getDisplayName();
+        } else {
+            $this->logger->error("LogCleaner: No administrator selected to send a log report or the selected administrator does not have a valid email address (adminname '$adminName' not known)");
+            return;
+        }
         $l = $this->l10nFactory->get('logcleaner', $lang);
         if (empty($adminEmail)) {
             $this->logger->error("LogCleaner: No administrator selected to send a log report or the selected administrator does not have a valid email address");
@@ -142,11 +147,17 @@ class LogNotificationService {
         $offset = (int)$this->appConfig->getValueString('logcleaner', 'logcleaner_wt_offset', '0');
         $stats = $this->getLogStats($lastSent, $minLevel, true);
         $targetUrl = $this->url->linkToRouteAbsolute('logcleaner.page.index');
-        $adminEmail = $this->appConfig->getValueString('logcleaner', 'admin_email', '');
-        $adminName = $this->appConfig->getValueString('logcleaner', 'admin_email_name', '');
+        $adminEmail = $this->appConfig->getValueString('logcleaner', 'admin_mail', '');
+        $adminName = $this->appConfig->getValueString('logcleaner', 'admin_mail_name', '');
         $user = $this->userManager->get($adminName);
-        $lang = $this->l10nFactory->getUserLanguage($user);
-        $adminDisplayname = $user->getDisplayName();
+        if ($user !== null) {
+            $lang = $this->l10nFactory->getUserLanguage($user);
+            $adminDisplayname = $user->getDisplayName();
+        } else {
+            $this->logger->error("LogCleaner: No administrator selected to send a log report or the selected administrator does not have a valid email address (adminname '$adminName' not known)");
+            return;
+        }
+
         $l = $this->l10nFactory->get('logcleaner', $lang);
         if (empty($adminEmail)) {
             $this->logger->error("LogCleaner: No administrator selected to send a log report or the selected administrator does not have a valid email address");
