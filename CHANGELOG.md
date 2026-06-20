@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.5.5
+
+### Added
+- added occ commands for LogCleaner: occ logcleaner:deduplicate (Removes duplicate entries from the Nextcloud log file), occ logcleaner:clean-level (Deletes all log entries of a specific log level), occ logcleaner:cleanlogfile (Attention! Be careful with this command! Empties the entire Nextcloud log file irrevocably.)
+
+
 ## 1.5.4
 
 ### Fixed
