@@ -218,12 +218,14 @@ class LogsController extends Controller {
         }
 		$wtpara_logmessage = (int)$this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '1');
 
-		$filesizeoriginal = filesize($inputFile);
-        $filesizecleaned = filesize($outputLog);
+        $filesizeoriginal = filesize($inputFile);
 
         if (file_exists($outputLog)) {
+            $filesizecleaned = filesize($outputLog); // <-- Erst hier messen
             unlink($inputFile);
             rename($outputLog, $inputFile);
+        } else {
+            $filesizecleaned = $filesizeoriginal; // Keine Änderung, wenn keine Datei da ist
         }
 
         $filesizediff = $this->wtfilesize($filesizeoriginal - $filesizecleaned,2);
@@ -414,7 +416,9 @@ class LogsController extends Controller {
         $output = ($deleted > 1) ? "LogCleaner $withorwithout: For level $levelname $deleted lines have been deleted. $filesizediff of storage space cleared in the file $file" : "LogCleaner $withorwithout: For level $levelname $deleted line has been deleted. $filesizediff of storage space cleared in the file $file";
         if ( $this->appConfig->getValueString('logcleaner', 'wtparam_logmessage', '2') === '2' ) $this->logger->info($output);
         return new DataResponse([
-            'status' => 'success'
+            'status' => 'success',
+            'deleted_count' => $deleted,
+            'size_diff' => $filesizediff
         ]);
     }
 

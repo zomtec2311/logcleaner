@@ -106,8 +106,6 @@ class Application extends App implements IBootstrap {
 			}
 			return $path;
 		});
-
-
 	}
 
 	public function boot(IBootContext $context): void {

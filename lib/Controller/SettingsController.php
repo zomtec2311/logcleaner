@@ -826,7 +826,8 @@ class SettingsController extends Controller {
 			$this->logger->info('LogCleaner: log file has been emptied. This log entry can be deleted without verification.');
 		}
 		return new DataResponse([
-            ]);
+			'status' => 'success'
+		]);
 	}
 
 	public function delapp($app): DataResponse {

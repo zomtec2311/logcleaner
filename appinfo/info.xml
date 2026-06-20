@@ -16,7 +16,7 @@
 - 🔍 Find solutions on the internet by various search engines.
 - 🔔 Send notifications for new log entries.
 - 📯 Send emails for new log entries.]]></description>
-	<version>1.5.4</version>
+	<version>1.5.5</version>
 	<licence>agpl</licence>
 	<author mail="wtoedt@gmail.com" homepage="https://github.com/zomtec2311/logcleaner">Wolfgang Tödt</author>
 	<documentation>
@@ -35,6 +35,11 @@
         <job>OCA\LogCleaner\Cron\Cleanup</job>
 		<job>OCA\LogCleaner\Cron\LogReportJob</job>
     </background-jobs>
+	<commands>
+        <command>OCA\LogCleaner\Command\Deduplicate</command>
+        <command>OCA\LogCleaner\Command\CleanLevel</command>
+		<command>OCA\LogCleaner\Command\CleanLog</command>
+    </commands>
 	<dependencies>
 		<nextcloud min-version="32" max-version="34"/>
 	</dependencies>
