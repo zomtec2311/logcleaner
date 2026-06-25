@@ -39,7 +39,7 @@ jobs:
             exit 1
           fi
 
-          # Standard-Metadaten aus info.xml auslesen
+          # Metadaten aus info.xml auslesen
           APP_ID=$(xmlstarlet sel -t -v "//info/id" $INFO_PATH)
           APP_NAME=$(xmlstarlet sel -t -v "//info/name" $INFO_PATH)
           APP_DESC=$(xmlstarlet sel -t -v "//info/description" $INFO_PATH)
@@ -48,11 +48,10 @@ jobs:
           MIN_NC=$(xmlstarlet sel -t -v "//info/dependencies/nextcloud/@min-version" $INFO_PATH)
           MAX_NC=$(xmlstarlet sel -t -v "//info/dependencies/nextcloud/@max-version" $INFO_PATH)
 
-          # Den ersten Screenshot-Tag auslesen (Inhalt und Attribut)
+          # Screenshot-Tags auslesen
           SCREENSHOT_URL=$(xmlstarlet sel -t -v "//info/screenshot[1]" $INFO_PATH)
           THUMB_URL=$(xmlstarlet sel -t -v "//info/screenshot[1]/@small-thumbnail" $INFO_PATH)
 
-          # Falls kein separates Thumbnail definiert ist, nimm das normale Bild als Fallback
           if [ -z "$THUMB_URL" ]; then
             THUMB_URL="$SCREENSHOT_URL"
           fi
@@ -62,24 +61,32 @@ jobs:
           CHANGELOG_PATH="temp_app/CHANGELOG.md"
 
           if [ -f "$CHANGELOG_PATH" ]; then
-            # Sucht nach der Zeile mit der aktuellen Version (z.B. "## 1.1.4") und liest bis zum nächsten "##"
-            # Schützt Sonderzeichen und Zeilenumbrüche für das JSON-Format
             CHANGELOG_TEXT=$(awk -v ver="$VERSION" '
               $0 ~ "## " ver {p=1; next}
               p && /^## / {p=0}
               p {print}
             ' "$CHANGELOG_PATH" | sed -e 's/^ *//' -e 's/ *$//' | tr '\n' ' ' | sed 's/"/\\"/g')
 
-            # Falls die Extraktion leer war, greift ein Fallback
             if [ -z "$CHANGELOG_TEXT" ]; then
               CHANGELOG_TEXT="Update auf Version $VERSION."
             fi
           fi
 
-          # JSON-Payload bauen (Struktur exakt an deine originale apps.json angepasst)
+          # === FORMATE FÜR NEXTCLOUD ANPASSEN ===
+          MIN_NC_FULL="${MIN_NC}.0.0"
+          MAX_NC_NEXT=$((MAX_NC + 1))
+          MAX_NC_FULL="${MAX_NC_NEXT}.0.0"
+
+          # JSON-Payload bauen (Exakt angepasst an den offiziellen Nextcloud-Standard)
           cat <<EOF > payload.json
           {
             "id": "$APP_ID",
+            "name": "$APP_NAME",
+            "summary": "$APP_SUMMARY",
+            "description": "$APP_DESC",
+            "categories": [
+              "custom_apps"
+            ],
             "screenshots": [
               {
                 "url": "$SCREENSHOT_URL",
@@ -97,9 +104,10 @@ jobs:
               {
                 "version": "$VERSION",
                 "phpVersionSpec": "*",
-                "platformVersionSpec": ">=${MIN_NC}.0.0 <=${MAX_NC}.0.0",
+                "platformVersionSpec": ">=$MIN_NC_FULL <$MAX_NC_FULL",
                 "download": "${{ env.TARBALL_URL }}",
-                "rawPlatformVersionSpec": ">=${MIN_NC} <=${MAX_NC}",
+                "rawPhpVersionSpec": "*",
+                "rawPlatformVersionSpec": ">=$MIN_NC <=$MAX_NC",
                 "licenses": ["AGPL-3.0-only"],
                 "translations": {
                   "de": {
