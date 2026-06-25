@@ -1,0 +1,84 @@
+ 
+name: Update Private App Store
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install XML Parser
+        run: sudo apt-get install -y xmlstarlet
+
+      - name: Download Released Tarball
+        run: |
+          # Holt die URL des ersten hochgeladenen .tar.gz Assets aus dem Release
+          TARBALL_URL=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases/${{ github.event.release.id }} \
+            | grep "browser_download_url" | grep "\.tar\.gz" | head -n 1 | cut -d '"' -f 4)
+
+          if [ -z "$TARBALL_URL" ]; then
+            echo "Kein .tar.gz Asset im Release gefunden!"
+            exit 1
+          fi
+
+          echo "Lade Tarball herunter: $TARBALL_URL"
+          curl -L -o app.tar.gz "$TARBALL_URL"
+          echo "TARBALL_URL=$TARBALL_URL" >> $GITHUB_ENV
+
+      - name: Extract and Parse info.xml
+        run: |
+          # Temporär entpacken, um an die info.xml zu kommen
+          mkdir temp_app
+          tar -xzf app.tar.gz -C temp_app --strip-components=1
+
+          INFO_PATH="temp_app/appinfo/info.xml"
+          if [ ! -f "$INFO_PATH" ]; then
+            echo "Fehler: info.xml nicht im Tarball gefunden!"
+            exit 1
+          fi
+
+          # Daten mit xmlstarlet extrahieren
+          APP_ID=$(xmlstarlet sel -t -v "//info/id" $INFO_PATH)
+          APP_NAME=$(xmlstarlet sel -t -v "//info/name" $INFO_PATH)
+          APP_DESC=$(xmlstarlet sel -t -v "//info/description" $INFO_PATH)
+          APP_SUMMARY=$(xmlstarlet sel -t -v "//info/summary" $INFO_PATH)
+          VERSION=$(xmlstarlet sel -t -v "//info/version" $INFO_PATH)
+          MIN_NC=$(xmlstarlet sel -t -v "//info/dependencies/nextcloud/@min-version" $INFO_PATH)
+          MAX_NC=$(xmlstarlet sel -t -v "//info/dependencies/nextcloud/@max-version" $INFO_PATH)
+
+          # JSON-Payload für den Webhook zusammenbauen
+          cat <<EOF > payload.json
+          {
+            "id": "$APP_ID",
+            "translations": {
+              "de": {
+                "name": "$APP_NAME",
+                "summary": "$APP_SUMMARY",
+                "description": "$APP_DESC"
+              }
+            },
+            "releases": [
+              {
+                "version": "$VERSION",
+                "phpVersionSpec": "*",
+                "platformVersionSpec": ">=${MIN_NC}.0.0 <=${MAX_NC}.0.0",
+                "download": "${{ env.TARBALL_URL }}",
+                "rawPlatformVersionSpec": ">=${MIN_NC} <=${MAX_NC}",
+                "licenses": ["AGPL-3.0-only"]
+              }
+            ]
+          }
+          EOF
+
+      - name: Send Data to Private App Store
+        run: |
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -H "X-AppStore-Token: ${{ secrets.APPSTORE_TOKEN }}" \
+            -d @payload.json \
+            https://git.24wt.de/appstore/v1/webhook.php
