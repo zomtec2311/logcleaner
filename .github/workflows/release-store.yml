@@ -39,7 +39,7 @@ jobs:
             exit 1
           fi
 
-          # Standard-Metadaten auslesen
+          # Standard-Metadaten aus info.xml auslesen
           APP_ID=$(xmlstarlet sel -t -v "//info/id" $INFO_PATH)
           APP_NAME=$(xmlstarlet sel -t -v "//info/name" $INFO_PATH)
           APP_DESC=$(xmlstarlet sel -t -v "//info/description" $INFO_PATH)
@@ -48,10 +48,14 @@ jobs:
           MIN_NC=$(xmlstarlet sel -t -v "//info/dependencies/nextcloud/@min-version" $INFO_PATH)
           MAX_NC=$(xmlstarlet sel -t -v "//info/dependencies/nextcloud/@max-version" $INFO_PATH)
 
-          # Screenshots auslesen
+          # Den ersten Screenshot-Tag auslesen (Inhalt und Attribut)
           SCREENSHOT_URL=$(xmlstarlet sel -t -v "//info/screenshot[1]" $INFO_PATH)
           THUMB_URL=$(xmlstarlet sel -t -v "//info/screenshot[1]/@small-thumbnail" $INFO_PATH)
-          if [ -z "$THUMB_URL" ]; then THUMB_URL="$SCREENSHOT_URL"; fi
+
+          # Falls kein separates Thumbnail definiert ist, nimm das normale Bild als Fallback
+          if [ -z "$THUMB_URL" ]; then
+            THUMB_URL="$SCREENSHOT_URL"
+          fi
 
           # === CHANGELOG EXTRAKTION ===
           CHANGELOG_TEXT="Erste Version."
@@ -72,7 +76,7 @@ jobs:
             fi
           fi
 
-          # JSON-Payload bauen (mit dynamischem Changelog)
+          # JSON-Payload bauen (Struktur exakt an deine originale apps.json angepasst)
           cat <<EOF > payload.json
           {
             "id": "$APP_ID",
