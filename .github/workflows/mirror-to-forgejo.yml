@@ -1,0 +1,47 @@
+name: Mirror to Forgejo & Create Test Release
+
+on:
+  push:
+    branches:
+      - main # Reagiert, wenn du Code auf den main-Branch von GitHub pushst
+
+jobs:
+  mirror_and_release:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Code aus GitHub auschecken
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Holt die gesamte Git-Historie, wichtig für sauberes Spiegeln
+
+      # 2. Code zu deinem privaten Forgejo pushen
+      - name: Push to Forgejo Mirror
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+
+          # Forgejo-Remote hinzufügen (nutzt das in GitHub hinterlegte Secret 'FORGEJO_TOKEN')
+          git remote add forgejo https://${{ secrets.FORGEJO_TOKEN }}@git.24wt.de/zomtec2311/${{ github.event.repository.name }}.git
+
+          # Force-Push auf den main-Branch bei Forgejo, um den Stand exakt anzugleichen
+          git push -f forgejo HEAD:main
+
+      # 3. Forgejo API triggern, um ein automatisches Test-Release zu erstellen
+      - name: Trigger Forgejo Release via API
+        run: |
+          # Generiert ein Tag-Format basierend auf dem aktuellen Datum (z.B. v2026.06.27-test.5)
+          TAG_NAME="v$(date +'%Y.%m.%d')-test.${{ github.run_number }}"
+
+          curl -X POST "https://git.24wt.de/api/v1/repos/zomtec2311/${{ github.event.repository.name }}/releases" \
+            -H "accept: application/json" \
+            -H "Authorization: token ${{ secrets.FORGEJO_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"tag_name\": \"$TAG_NAME\",
+              \"target_commitish\": \"main\",
+              \"name\": \"Test Release $TAG_NAME\",
+              \"body\": \"Automatischer Test-Build aus GitHub-Pipeline.\",
+              \"draft\": false,
+              \"prerelease\": true
+            }"
