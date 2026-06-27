@@ -52,7 +52,7 @@ class CleanLevel extends Command {
     protected function configure(): void {
         $this
             ->setName('logcleaner:clean-level')
-            ->setDescription('Deletes all log entries of a specific log level')
+            ->setDescription('Deletes all log entries of a specific log level. 0 to 4 is allowed (0=DEBUG, 1=INFO, 2=WARN, 3=ERROR, 4=FATAL)')
             ->addArgument(
                 'level',
                 InputArgument::REQUIRED,
