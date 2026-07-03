@@ -3,7 +3,9 @@ name: Mirror to Forgejo & Create Test Release
 on:
   push:
     branches:
-      - main # Reagiert, wenn du Code auf den main-Branch von GitHub pushst
+      - main
+    paths:
+      - 'appinfo/info.xml' # Pipeline startet NUR, wenn die info.xml geändert wurde!
 
 jobs:
   mirror_and_release:
@@ -13,35 +15,49 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Holt die gesamte Git-Historie, wichtig für sauberes Spiegeln
+          fetch-depth: 2 # Brauchen wir, um den vorherigen Commit mit dem aktuellen zu vergleichen
 
-      # 2. Code zu deinem privaten Forgejo pushen
+      # 2. Versions-Tag aus der info.xml extrahieren
+      - name: Get Version from info.xml
+        id: get_version
+        run: |
+          # Extrahiert den Inhalt zwischen <version>...</version>
+          VERSION=$(xmllint --xpath "string(//info/version)" appinfo/info.xml 2>/dev/null || grep -oP '(?<=<version>).*?(?=</version>)' appinfo/info.xml)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "Gefundene App-Version: $VERSION"
+
+      # 3. Prüfen, ob sich die Version im Vergleich zum letzten Commit WIRKLICH geändert hat
+      - name: Check if Version Changed
+        id: check_version
+        run: |
+          # Holt die info.xml aus dem vorherigen Commit
+          git show HEAD~1:appinfo/info.xml > old_info.xml 2>/dev/null || echo "" > old_info.xml
+          OLD_VERSION=$(xmllint --xpath "string(//info/version)" old_info.xml 2>/dev/null || grep -oP '(?<=<version>).*?(?=</version>)' old_info.xml || echo "0.0.0")
+          
+          if [ "$VERSION" = "$OLD_VERSION" ]; then
+            echo "Version hat sich nicht geändert ($VERSION). Breche ab."
+            exit 0
+          fi
+          echo "Version hat sich von $OLD_VERSION auf $VERSION geändert. Fahre fort..."
+
+      # 4. Code zu Forgejo spiegeln
       - name: Push to Forgejo Mirror
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-
-          # Forgejo-Remote hinzufügen (nutzt das in GitHub hinterlegte Secret 'FORGEJO_TOKEN')
+          
           git remote add forgejo https://${{ secrets.FORGEJO_TOKEN }}@git.24wt.de/zomtec2311/${{ github.event.repository.name }}.git
-
-          # Force-Push auf den main-Branch bei Forgejo, um den Stand exakt anzugleichen
           git push -f forgejo HEAD:main
 
-      # 3. Forgejo API triggern, um ein automatisches Test-Release zu erstellen
-      - name: Trigger Forgejo Release via API
+      # 5. Ein ECHTES Git-Tag lokal erstellen und zu Forgejo pushen
+      # Das triggert Forgejos Webhook garantiert als "create (tag)"-Event!
+      - name: Push Tag to Forgejo
         run: |
-          # Generiert ein Tag-Format basierend auf dem aktuellen Datum (z.B. v2026.06.27-test.5)
-          TAG_NAME="v$(date +'%Y.%m.%d')-test.${{ github.run_number }}"
-
-          curl -X POST "https://git.24wt.de/api/v1/repos/zomtec2311/${{ github.event.repository.name }}/releases" \
-            -H "accept: application/json" \
-            -H "Authorization: token ${{ secrets.FORGEJO_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            -d "{
-              \"tag_name\": \"$TAG_NAME\",
-              \"target_commitish\": \"main\",
-              \"name\": \"Test Release $TAG_NAME\",
-              \"body\": \"Automatischer Test-Build aus GitHub-Pipeline.\",
-              \"draft\": false,
-              \"prerelease\": true
-            }"
+          # Erstellt das exakte Test-Tag-Format (z.B. v1.5.6-test.5)
+          TAG_NAME="v${{ env.VERSION }}-test.${{ github.run_number }}"
+          
+          # Tag lokal setzen
+          git tag $TAG_NAME
+          
+          # Tag zu Forgejo pushen
+          git push forgejo $TAG_NAME
