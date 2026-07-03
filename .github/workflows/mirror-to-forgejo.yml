@@ -49,24 +49,20 @@ jobs:
           fi
           echo "Version erhöht! Fahre fort..."
 
-      # 4. Code zu Forgejo spiegeln
-      - name: Push to Forgejo Mirror
+      # 4. Code spiegeln UND das ECHTE Git-Tag in einem Rutsch pushen
+      - name: Push Code and Tag to Forgejo Mirror
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           
-          git remote add forgejo https://${{ secrets.FORGEJO_TOKEN }}@git.24wt.de/zomtec2311/${{ github.event.repository.name }}.git
-          git push -f forgejo HEAD:main
-
-      # 5. Ein ECHTES Git-Tag lokal erstellen und zu Forgejo pushen
-      # Das triggert Forgejos Webhook garantiert als "create (tag)"-Event!
-      - name: Push Tag to Forgejo
-        run: |
-          # Erstellt das exakte Test-Tag-Format (z.B. v1.5.6-test.5)
+          # Das exakte Test-Tag-Format generieren (z.B. v1.5.6-test.5)
           TAG_NAME="v${{ env.VERSION }}-test.${{ github.run_number }}"
           
           # Tag lokal setzen
           git tag $TAG_NAME
           
-          # Tag zu Forgejo pushen
-          git push forgejo $TAG_NAME
+          # Remote hinzufügen
+          git remote add forgejo https://${{ secrets.FORGEJO_TOKEN }}@git.24wt.de/zomtec2311/${{ github.event.repository.name }}.git
+          
+          # HEAD:main UND das Tag gleichzeitig pushen (das erzwingt das Tag-Push-Event!)
+          git push -f forgejo HEAD:main $TAG_NAME
