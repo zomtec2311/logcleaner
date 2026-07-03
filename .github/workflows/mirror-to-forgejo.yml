@@ -21,8 +21,7 @@ jobs:
       - name: Get Version from info.xml
         id: get_version
         run: |
-          # Extrahiert den Inhalt zwischen <version>...</version>
-          VERSION=$(xmllint --xpath "string(//info/version)" appinfo/info.xml 2>/dev/null || grep -oP '(?<=<version>).*?(?=</version>)' appinfo/info.xml)
+          VERSION=$(grep -oP '(?<=<version>).*?(?=</version>)' appinfo/info.xml || echo "0.0.0")
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "Gefundene App-Version: $VERSION"
 
@@ -30,15 +29,25 @@ jobs:
       - name: Check if Version Changed
         id: check_version
         run: |
-          # Holt die info.xml aus dem vorherigen Commit
-          git show HEAD~1:appinfo/info.xml > old_info.xml 2>/dev/null || echo "" > old_info.xml
-          OLD_VERSION=$(xmllint --xpath "string(//info/version)" old_info.xml 2>/dev/null || grep -oP '(?<=<version>).*?(?=</version>)' old_info.xml || echo "0.0.0")
+          # Wenn git show fehlschlägt (weil es z.B. der erste Commit ist), bleibt OLD_VERSION einfach leer
+          OLD_XML=$(git show HEAD~1:appinfo/info.xml 2>/dev/null || echo "")
           
-          if [ "$VERSION" = "$OLD_VERSION" ]; then
-            echo "Version hat sich nicht geändert ($VERSION). Breche ab."
+          if [ -z "$OLD_XML" ]; then
+            echo "Keine vorherige info.xml gefunden. Erste Version wird verarbeitet."
+            OLD_VERSION="0.0.0"
+          else
+            OLD_VERSION=$(echo "$OLD_XML" | grep -oP '(?<=<version>).*?(?=</version>)' || echo "0.0.0")
+          fi
+          
+          echo "Alte Version: $OLD_VERSION"
+          echo "Neue Version: ${{ env.VERSION }}"
+          
+          if [ "${{ env.VERSION }}" = "$OLD_VERSION" ]; then
+            echo "Version hat sich nicht geändert. Breche Pipeline sauber ab."
+            # Benutze exit 0 statt 1, damit GitHub den Durchlauf als erfolgreich (grün) markiert, aber nichts tut
             exit 0
           fi
-          echo "Version hat sich von $OLD_VERSION auf $VERSION geändert. Fahre fort..."
+          echo "Version erhöht! Fahre fort..."
 
       # 4. Code zu Forgejo spiegeln
       - name: Push to Forgejo Mirror
