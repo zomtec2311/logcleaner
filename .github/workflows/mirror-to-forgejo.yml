@@ -11,11 +11,11 @@ jobs:
   mirror_and_release:
     runs-on: ubuntu-latest
     steps:
-      # 1. Code aus GitHub auschecken
+      # 1. Code aus GitHub auschecken (jetzt vollständig, um den Shallow-Fehler zu umgehen)
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2 # Brauchen wir, um den vorherigen Commit mit dem aktuellen zu vergleichen
+          fetch-depth: 0 # Holt die komplette Historie, damit Forgejo den Push akzeptiert
 
       # 2. Versions-Tag aus der info.xml extrahieren
       - name: Get Version from info.xml
