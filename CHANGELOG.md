@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.6
+
+### Added
+- additional info in the widget
+
 ## 1.5.5
 
 ### Added
