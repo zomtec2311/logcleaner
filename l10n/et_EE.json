@@ -110,6 +110,7 @@
 "Basic Settings": "Põhiseaded",
 "Appearance": "Välimus",
 "Actions": "Tegevused",
-"Automatic": "Automaatne"
+"Automatic": "Automaatne",
+"logging level:": "logimise tase:"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

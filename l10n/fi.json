@@ -110,6 +110,7 @@
 "Basic Settings": "Perusasetukset",
 "Appearance": "Ulkonäkö",
 "Actions": "Toiminnot",
-"Automatic": "Automaattinen"
+"Automatic": "Automaattinen",
+"logging level:": "kirjaustaso:"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

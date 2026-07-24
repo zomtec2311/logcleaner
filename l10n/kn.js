@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "ಮೂಲ ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
 "Appearance": "ಗೋಚರತೆ",
 "Actions": "ಕ್ರಿಯೆಗಳು",
-"Automatic": "ಸ್ವಯಂಚಾಲಿತ"
+"Automatic": "ಸ್ವಯಂಚಾಲಿತ",
+"logging level:": "ಲಾಗಿಂಗ್ ಮಟ್ಟ:"
 },
 "nplurals=2; plural=n > 1;");

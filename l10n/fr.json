@@ -108,6 +108,7 @@
 "Basic Settings": "Paramètres de base",
 "Appearance": "Apparence",
 "Actions": "Actes",
-"Automatic": "Automatique"
+"Automatic": "Automatique",
+"logging level:": "niveau de journalisation :"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "ការកំណត់មូលដ្ឋាន",
 "Appearance": "រូបរាង",
 "Actions": "សកម្មភាព",
-"Automatic": "ស្វ័យប្រវត្តិ"
+"Automatic": "ស្វ័យប្រវត្តិ",
+"logging level:": "កម្រិតនៃការកត់ត្រា៖"
 },
 "nplurals=1; plural=0;");

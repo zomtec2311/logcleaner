@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Հիմնական կարգավորումներ",
 "Appearance": "Արտաքին տեսք",
 "Actions": "Գործողություններ",
-"Automatic": "Ավտոմատ"
+"Automatic": "Ավտոմատ",
+"logging level:": "անտառահատումների մակարդակ."
 },
 "nplurals=2; plural=n > 1;");

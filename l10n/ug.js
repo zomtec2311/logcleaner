@@ -113,6 +113,7 @@ OC.L10N.register(
                  "Basic Settings": "Basic Settings",
 "Appearance": "كۆرۈنۈش",
 "Actions": "ھەرىكەتلەر",
-"Automatic": "ئاپتوماتىك"
+"Automatic": "ئاپتوماتىك",
+"logging level:": "كىرىش دەرىجىسى:"
 },
 "nplurals=2; plural=n != 1;");

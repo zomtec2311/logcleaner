@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "ძირითადი პარამეტრები",
 "Appearance": "გარეგნობა",
 "Actions": "მოქმედებები",
-"Automatic": "ავტომატური"
+"Automatic": "ავტომატური",
+"logging level:": "ჭრის დონე:"
 },
 "nplurals=2; plural=n != 1;");

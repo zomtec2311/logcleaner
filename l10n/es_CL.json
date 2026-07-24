@@ -110,6 +110,7 @@
 "Basic Settings": "Configuraciones básicas",
 "Appearance": "Apariencia",
 "Actions": "Comportamiento",
-"Automatic": "Automático"
+"Automatic": "Automático",
+"logging level:": "nivel de registro:"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

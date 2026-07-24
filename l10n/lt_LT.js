@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Pagrindiniai nustatymai",
 "Appearance": "Išvaizda",
 "Actions": "Veiksmai",
-"Automatic": "Automatinis"
+"Automatic": "Automatinis",
+"logging level:": "registravimo lygis:"
 },
 "nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);");

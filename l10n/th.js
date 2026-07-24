@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "การตั้งค่าพื้นฐาน",
 "Appearance": "รูปร่าง",
 "Actions": "การดำเนินการ",
-"Automatic": "อัตโนมัติ"
+"Automatic": "อัตโนมัติ",
+"logging level:": "ระดับการบันทึก:"
 },
 "nplurals=1; plural=0;");

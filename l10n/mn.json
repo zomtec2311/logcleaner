@@ -110,6 +110,7 @@
 "Basic Settings": "Үндсэн тохиргоо",
 "Appearance": "Гадаад төрх",
 "Actions": "Үйлдлүүд",
-"Automatic": "Автомат"
+"Automatic": "Автомат",
+"logging level:": "Бүртгэлийн түвшин:"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

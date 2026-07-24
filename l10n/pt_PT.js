@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Configurações básicas",
 "Appearance": "Aparência",
 "Actions": "Ações",
-"Automatic": "Automático"
+"Automatic": "Automático",
+"logging level:": "nível de registro:"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0) ? 1 : 2);");

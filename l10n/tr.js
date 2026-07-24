@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Temel Ayarlar",
 "Appearance": "Dış görünüş",
 "Actions": "Eylemler",
-"Automatic": "Otomatik"
+"Automatic": "Otomatik",
+"logging level:": "günlük seviyesi:"
 },
 "nplurals=2; plural=n != 1;");

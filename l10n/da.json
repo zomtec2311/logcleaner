@@ -110,6 +110,7 @@
 "Basic Settings": "Grundlæggende indstillinger",
 "Appearance": "Udseende",
 "Actions": "Handlinger",
-"Automatic": "Automatisk"
+"Automatic": "Automatisk",
+"logging level:": "logningsniveau:"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

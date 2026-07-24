@@ -109,6 +109,7 @@
     "Basic Settings": "Basic Settings",
 "Appearance": "Appearance",
 "Actions": "Actions",
-"Automatic": "Automatic"
+"Automatic": "Automatic",
+"logging level:": "logging level:"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

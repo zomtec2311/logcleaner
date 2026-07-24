@@ -112,6 +112,7 @@ OC.L10N.register(
                  "Basic Settings": "Paramètres de base",
 "Appearance": "Apparence",
 "Actions": "Actes",
-"Automatic": "Automatique"
+"Automatic": "Automatique",
+"logging level:": "niveau de journalisation :"
 },
 "nplurals=2; plural=(n != 1);");

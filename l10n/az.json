@@ -110,6 +110,7 @@
 "Basic Settings": "Əsas Parametrlər",
 "Appearance": "Görünüş",
 "Actions": "Fəaliyyətlər",
-"Automatic": "Avtomatik"
+"Automatic": "Avtomatik",
+"logging level:": "giriş səviyyəsi:"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

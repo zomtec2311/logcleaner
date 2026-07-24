@@ -110,6 +110,7 @@
 "Basic Settings": "ძირითადი პარამეტრები",
 "Appearance": "გარეგნობა",
 "Actions": "მოქმედებები",
-"Automatic": "ავტომატური"
+"Automatic": "ავტომატური",
+"logging level:": "ჭრის დონე:"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

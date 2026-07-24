@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Oinarrizko ezarpenak",
 "Appearance": "Itxura",
 "Actions": "Ekintzak",
-"Automatic": "Automatikoa"
+"Automatic": "Automatikoa",
+"logging level:": "erregistro-maila:"
 },
 "nplurals=2; plural=n != 1;");

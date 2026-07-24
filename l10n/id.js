@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Pengaturan Dasar",
 "Appearance": "Penampilan",
 "Actions": "Tindakan",
-"Automatic": "Otomatis"
+"Automatic": "Otomatis",
+"logging level:": "tingkat pencatatan:"
 },
 "nplurals=1; plural=0;");

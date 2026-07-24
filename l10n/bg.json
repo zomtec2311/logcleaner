@@ -110,6 +110,7 @@
 "Basic Settings": "Основни настройки",
 "Appearance": "Външен вид",
 "Actions": "Действия",
-"Automatic": "Автоматичен"
+"Automatic": "Автоматичен",
+"logging level:": "ниво на регистриране:"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

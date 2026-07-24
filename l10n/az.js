@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Əsas Parametrlər",
 "Appearance": "Görünüş",
 "Actions": "Fəaliyyətlər",
-"Automatic": "Avtomatik"
+"Automatic": "Avtomatik",
+"logging level:": "giriş səviyyəsi:"
 },
 "nplurals=2; plural=n != 1;");

@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Základné nastavenia",
 "Appearance": "Vzhľad",
 "Actions": "Akcie",
-"Automatic": "Automaticky"
+"Automatic": "Automaticky",
+"logging level:": "úroveň protokolovania:"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);");

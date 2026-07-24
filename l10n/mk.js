@@ -114,6 +114,8 @@ OC.L10N.register(
                  "Basic Settings": "Основни поставки",
 "Appearance": "Изглед",
 "Actions": "Акции",
-"Automatic": "Автоматски"
+"Automatic": "Автоматски",
+
+"logging level:": "ниво на сеча:"
 },
 "nplurals=2; plural=(n==1 || n%10==1 ? 0 : 1);");

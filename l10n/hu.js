@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Alapbeállítások",
 "Appearance": "Megjelenés",
 "Actions": "Akciók",
-"Automatic": "Automatikus"
+"Automatic": "Automatikus",
+"logging level:": "naplózási szint:"
 },
 "nplurals=2; plural=n != 1;");

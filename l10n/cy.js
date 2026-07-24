@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Gosodiadau Sylfaenol",
 "Appearance": "Ymddangosiad",
 "Actions": "Gweithredoedd",
-"Automatic": "Awtomatig"
+"Automatic": "Awtomatig",
+"logging level:": "lefel logio:"
 },
 "nplurals=6; plural=(n == 0) ? 0 : ((n == 1) ? 1 : ((n == 2) ? 2 : ((n == 3) ? 3 : ((n == 6) ? 4 : 5))));");

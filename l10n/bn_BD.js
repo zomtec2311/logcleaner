@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "মৌলিক সেটিংস",
 "Appearance": "চেহারা",
 "Actions": "কর্ম",
-"Automatic": "স্বয়ংক্রিয়"
+"Automatic": "স্বয়ংক্রিয়",
+"logging level:": "লগিং স্তর:"
 },
 "nplurals=2; plural=n > 1;");

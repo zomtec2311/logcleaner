@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Perusasetukset",
 "Appearance": "Ulkonäkö",
 "Actions": "Toiminnot",
-"Automatic": "Automaattinen"
+"Automatic": "Automaattinen",
+"logging level:": "kirjaustaso:"
 },
 "nplurals=2; plural=n != 1;");

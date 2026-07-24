@@ -110,6 +110,7 @@
 "Basic Settings": "Βασικές ρυθμίσεις",
 "Appearance": "Εμφάνιση",
 "Actions": "Δράσεις",
-"Automatic": "Αυτόματο"
+"Automatic": "Αυτόματο",
+"logging level:": "επίπεδο καταγραφής:"
 },"pluralForm" :"nplurals=2; plural=n != 1;"
 }

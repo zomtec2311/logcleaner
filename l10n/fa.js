@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "تنظیمات اولیه",
 "Appearance": "ظاهر",
 "Actions": "اقدامات",
-"Automatic": "خودکار"
+"Automatic": "خودکار",
+"logging level:": "سطح ثبت:"
 },
 "nplurals=2; plural=n > 1;");

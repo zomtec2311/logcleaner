@@ -110,6 +110,7 @@
 "Basic Settings": "تنظیمات اولیه",
 "Appearance": "ظاهر",
 "Actions": "اقدامات",
-"Automatic": "خودکار"
+"Automatic": "خودکار",
+"logging level:": "سطح ثبت:"
 },"pluralForm" :"nplurals=2; plural=n > 1;"
 }

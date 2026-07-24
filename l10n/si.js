@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "මූලික සැකසුම්",
 "Appearance": "පෙනුම",
 "Actions": "ක්රියාවන්",
-"Automatic": "ස්වයංක්රීය"
+"Automatic": "ස්වයංක්රීය",
+"logging level:": "ලොග් මට්ටම:"
 },
 "nplurals=2; plural=n > 1;");

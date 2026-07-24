@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "ການຕັ້ງຄ່າພື້ນຖານ",
 "Appearance": "ຮູບລັກສະນະ",
 "Actions": "ການກະທໍາ",
-"Automatic": "ອັດຕະໂນມັດ"
+"Automatic": "ອັດຕະໂນມັດ",
+"logging level:": "ລະດັບການບັນທຶກ:"
 },
 "nplurals=1; plural=0;");

@@ -109,6 +109,7 @@
 "Basic Settings": "Grundeinstellungen",
 "Appearance": "Aussehen",
 "Actions": "Aktionen",
-"Automatic": "Automatik"
+"Automatic": "Automatik",
+"logging level:": "Protokollierungsstufe:"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

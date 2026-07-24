@@ -110,6 +110,7 @@
 "Basic Settings": "Basisinstellingen",
 "Appearance": "Verschijning",
 "Actions": "Acties",
-"Automatic": "Automatisch"
+"Automatic": "Automatisch",
+"logging level:": "logniveau:"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

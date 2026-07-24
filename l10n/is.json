@@ -110,6 +110,7 @@
 "Basic Settings": "Grunnstillingar",
 "Appearance": "Útlit",
 "Actions": "Aðgerðir",
-"Automatic": "Sjálfvirk"
+"Automatic": "Sjálfvirk",
+"logging level:": "skráningarstig:"
 },"pluralForm" :"nplurals=2; plural=n % 10 != 1 || n % 100 == 11;"
 }

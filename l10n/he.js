@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "הגדרות בסיסיות",
 "Appearance": "הוֹפָעָה",
 "Actions": "פעולות",
-"Automatic": "אוֹטוֹמָטִי"
+"Automatic": "אוֹטוֹמָטִי",
+"logging level:": "רמת רישום:"
 },
 "nplurals=3; plural=(n == 1) ? 0 : ((n == 2) ? 1 : 2);");

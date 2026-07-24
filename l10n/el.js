@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Βασικές ρυθμίσεις",
 "Appearance": "Εμφάνιση",
 "Actions": "Δράσεις",
-"Automatic": "Αυτόματο"
+"Automatic": "Αυτόματο",
+"logging level:": "επίπεδο καταγραφής:"
 },
 "nplurals=2; plural=n != 1;");

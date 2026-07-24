@@ -115,6 +115,7 @@ OC.L10N.register(
                  "Basic Settings": "Basiese instellings",
 "Appearance": "Voorkoms",
 "Actions": "Aksies",
-"Automatic": "Outomatiese"
+"Automatic": "Outomatiese",
+"logging level:": "aanteken vlak:"
 },
 "nplurals=2; plural=n != 1;");

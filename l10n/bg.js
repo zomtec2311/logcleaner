@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Основни настройки",
 "Appearance": "Външен вид",
 "Actions": "Действия",
-"Automatic": "Автоматичен"
+"Automatic": "Автоматичен",
+"logging level:": "ниво на регистриране:"
 },
 "nplurals=2; plural=n != 1;");

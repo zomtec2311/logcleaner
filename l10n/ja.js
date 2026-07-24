@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "基本設定",
 "Appearance": "外観",
 "Actions": "アクション",
-"Automatic": "自動"
+"Automatic": "自動",
+"logging level:": "ロギングレベル:"
 },
 "nplurals=1; plural=0;");

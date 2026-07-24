@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Cài đặt cơ bản",
 "Appearance": "Vẻ bề ngoài",
 "Actions": "hành động",
-"Automatic": "Tự động"
+"Automatic": "Tự động",
+"logging level:": "mức độ ghi nhật ký:"
 },
 "nplurals=1; plural=0;");

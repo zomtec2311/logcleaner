@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Үндсэн тохиргоо",
 "Appearance": "Гадаад төрх",
 "Actions": "Үйлдлүүд",
-"Automatic": "Автомат"
+"Automatic": "Автомат",
+"logging level:": "Бүртгэлийн түвшин:"
 },
 "nplurals=2; plural=n != 1;");

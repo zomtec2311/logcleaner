@@ -110,6 +110,7 @@
 "Basic Settings": "基本設定",
 "Appearance": "外観",
 "Actions": "アクション",
-"Automatic": "自動"
+"Automatic": "自動",
+"logging level:": "ロギングレベル:"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

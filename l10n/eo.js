@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Bazaj Agordoj",
 "Appearance": "Aspekto",
 "Actions": "Agoj",
-"Automatic": "Aŭtomata"
+"Automatic": "Aŭtomata",
+"logging level:": "registra nivelo:"
 },
 "nplurals=2; plural=n != 1;");

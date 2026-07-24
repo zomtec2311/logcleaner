@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Cilësimet bazë",
 "Appearance": "Pamja e jashtme",
 "Actions": "Veprimet",
-"Automatic": "Automatik"
+"Automatic": "Automatik",
+"logging level:": "Niveli i prerjeve:"
 },
 "nplurals=2; plural=n != 1;");

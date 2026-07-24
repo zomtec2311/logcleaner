@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "基本设置",
 "Appearance": "外貌",
 "Actions": "行动",
-"Automatic": "自动的"
+"Automatic": "自动的",
+"logging level:": "日志记录级别："
 },
 "nplurals=1; plural=0;");

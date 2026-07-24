@@ -114,6 +114,7 @@ OC.L10N.register(
                  "Basic Settings": "Põhiseaded",
 "Appearance": "Välimus",
 "Actions": "Tegevused",
-"Automatic": "Automaatne"
+"Automatic": "Automaatne",
+"logging level:": "logimise tase:"
 },
 "nplurals=2; plural=n != 1;");
