@@ -368,6 +368,37 @@ class LogsController extends Controller {
 
             $wtarr = array_reverse($wtarr);
             $linelength = array_reverse($linelength);
+            switch ($this->config->getSystemValue('loglevel')) {
+                case 0:
+                    $setloglevel = $this->l->t('debug');
+                    $setloglevelcolor = '#DFF0D8';
+                    $setlogleveltxtcolor = '#3C763D';
+                    break;
+                case 1:
+                    $setloglevel = $this->l->t('info');
+                    $setloglevelcolor = '#D9EDF7';
+                    $setlogleveltxtcolor = '#31708F';
+                    break;
+                case 2:
+                    $setloglevel = $this->l->t('warning');
+                    $setloglevelcolor = '#FCF8E3';
+                    $setlogleveltxtcolor = '#8A6d3B';
+                    break;
+                case 3:
+                    $setloglevel = $this->l->t('error');
+                    $setloglevelcolor = '#F2DEDE';
+                    $setlogleveltxtcolor = '#A94442';
+                    break;
+                case 4:
+                    $setloglevel = $this->l->t('fatal');
+                    $setloglevelcolor = '#F9AAF6';
+                    $setlogleveltxtcolor = '#870482';
+                    break;
+                default:
+                    $setloglevel = $this->l->t('unknown');
+                    $setloglevelcolor = '#fff';
+                    $setlogleveltxtcolor = '#000';
+            }
             return new DataResponse([
                 'status' => 'success',
                 'data' => $vueData,
@@ -379,6 +410,9 @@ class LogsController extends Controller {
                 'showFilters' => (($stats['levels'][0]['count'] + $stats['levels'][1]['count'] + $stats['levels'][2]['count'] + $stats['levels'][3]['count'] + $stats['levels'][4]['count']) > 0),
                 'wtarr' => $wtarr,
                 'linelength' => $linelength,
+                'setloglevel' => $setloglevel,
+                'setloglevelcolor' => $setloglevelcolor,
+                'setlogleveltxtcolor' => $setlogleveltxtcolor,
                 ]);
         } catch (Exception $e) {
             http_response_code(400);
