@@ -546,12 +546,36 @@ public function getNotiAdmins(): DataResponse {
 }
 
 
-	public function testLogEmail() {
-        $this->logNotificationService->sendTestEmail();
+	function testLogEmail(): DataResponse {
+        try {
+            $this->logNotificationService->sendTestEmail();
+            return new DataResponse([
+                'status' => 'success',
+            ]);
+        } catch (Exception $e) {
+            $this->logger->error("LogCleaner: failed to send test email");
+            return new DataResponse([
+                'status' => 'error',
+            ]);
+
+        } finally {
+        }
     }
 
-    public function testLogNotification() {
-        $this->logNotificationService->sendTestNotification();
+    function testLogNotification(): DataResponse {
+        try {
+            $this->logNotificationService->sendTestNotification();
+            return new DataResponse([
+                'status' => 'success',
+            ]);
+        } catch (Exception $e) {
+            $this->logger->error("LogCleaner: failed to send test notification");
+            return new DataResponse([
+                'status' => 'error',
+            ]);
+
+        } finally {
+        }
     }
 
     public function show_filesize($filename, $decimalplaces = 0) {
