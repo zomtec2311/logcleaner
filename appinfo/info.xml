@@ -16,7 +16,7 @@
 - 🔍 Find solutions on the internet by various search engines.
 - 🔔 Send notifications for new log entries.
 - 📯 Send emails for new log entries.]]></description>
-	<version>1.5.6</version>
+	<version>1.5.7</version>
 	<licence>agpl</licence>
 	<author mail="wtoedt@gmail.com" homepage="https://github.com/zomtec2311/logcleaner">Wolfgang Tödt</author>
 	<documentation>
@@ -41,7 +41,7 @@
 		<command>OCA\LogCleaner\Command\CleanLog</command>
     </commands>
 	<dependencies>
-		<nextcloud min-version="32" max-version="34"/>
+		<nextcloud min-version="32" max-version="35"/>
 	</dependencies>
 	<navigations>
 		<navigation>

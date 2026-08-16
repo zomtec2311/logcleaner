@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.5.7
+
+### Added
+- dialogs for test notification and test email on success or error
+- Nextcloud 35 compatibility
+
 ## 1.5.6
 
 ### Added
