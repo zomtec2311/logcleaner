@@ -309,22 +309,4 @@ class Helper
           'logger' => $fragment,
       ];
   }
-
-  public function isExecAvailable() {
-        if (!function_exists('exec')) {
-            return false;
-        }
-        $disabled = explode(',', ini_get('disable_functions'));
-        $disabled = array_map('trim', $disabled);
-
-        if (in_array('exec', $disabled)) {
-            return false;
-        }
-        try {
-            @exec('echo 1', $output, $returnVar);
-            return ($returnVar === 0);
-        } catch (Exception $e) {
-            return false;
-        }
-    }
 }
