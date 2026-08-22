@@ -225,7 +225,7 @@ class Helper
         return $obja;
     }
 
-	public function corruptline(?int $zeile, ?string $wtlog): array {
+	public function corruptline(int $zeile, string $wtlog): array {
       $format = $this->config->getSystemValue('logdateformat', \DateTimeInterface::ATOM);
       $logTimeZone = $this->config->getSystemValue('logtimezone', 'UTC');
       try {
