@@ -101,9 +101,19 @@ jobs:
 
           # Dev-Dateien entfernen
           rm -rf \
-            "${APP_ID}/.git" \
-            "${APP_ID}/.github" \
-            "${APP_ID}/.gitignore"
+            "${APP_ID}/logcleaner-info.png" \
+            "${APP_ID}/logcleaner-info3.png" \
+            "${APP_ID}/logcleaner-searchengines-TN.png" \
+            "${APP_ID}/logcleaner3-small.png" \
+            "${APP_ID}/logcleaner3.png" \
+            "${APP_ID}/logcleanerA.png" \
+            "${APP_ID}/logcleanerAA.png" \
+            "${APP_ID}/logcleanerEbutton.png" \
+            "${APP_ID}/logcleanerEbuttonok.png" \
+            "${APP_ID}/logcleanerico.png" \
+            "${APP_ID}/logcleanerleer2.png" \
+            "${APP_ID}/logcleanerwidget-dark.png" \
+            "${APP_ID}/logcleanerwidget.png"
 
       - name: Sign app
         if: steps.certificates.outputs.signing_available == 'true'
