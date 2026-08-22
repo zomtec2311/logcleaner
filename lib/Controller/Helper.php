@@ -253,16 +253,12 @@ class Helper
 
       $file = $wtlog;
       $fragment = '';
-      if ($this->isExecAvailable()) {
-          $fragment = exec("sed -n '{$zeile}p' " . escapeshellarg($file));
-      } else {
-          try {
-              $fileObj = new \SplFileObject($file);
-              $fileObj->seek($zeile - 1);
-              $fragment = $fileObj->current();
-          } catch (\Exception $e) {
-              $fragment = 'could not read line';
-          }
+      try {
+          $fileObj = new \SplFileObject($file);
+          $fileObj->seek($zeile - 1);
+          $fragment = $fileObj->current();
+      } catch (\Exception $e) {
+          $fragment = 'could not read line';
       }
 
       $fragment = str_replace(['{', '}'], '', (string)$fragment);
@@ -287,40 +283,23 @@ class Helper
           'version' => $version
       ]);
 
-      if ($this->isExecAvailable()) {
-          $tmpNew = tempnam(sys_get_temp_dir(), 'newline_');
-          file_put_contents($tmpNew, $replaceWith . PHP_EOL);
+      $tempFile = $file . '.tmp';
+      $handleIn = fopen($file, 'r');
+      $handleOut = fopen($tempFile, 'w');
 
-          $cmd = sprintf(
-              "awk -v n=%d -v f=%s 'NR==n{while((getline line < f)>0){print line}; close(f); next} {print}' %s > %s && mv %s %s",
-              $zeile,
-              escapeshellarg($tmpNew),
-              escapeshellarg($file),
-              escapeshellarg($file . '.tmp'),
-              escapeshellarg($file . '.tmp'),
-              escapeshellarg($file)
-          );
-          exec($cmd . ' 2>&1');
-          @unlink($tmpNew);
-      } else {
-          $tempFile = $file . '.tmp';
-          $handleIn = fopen($file, 'r');
-          $handleOut = fopen($tempFile, 'w');
-
-          if ($handleIn && $handleOut) {
-              $currentLine = 0;
-              while (($line = fgets($handleIn)) !== false) {
-                  $currentLine++;
-                  if ($currentLine === $zeile) {
-                      fwrite($handleOut, $replaceWith . PHP_EOL);
-                  } else {
-                      fwrite($handleOut, $line);
-                  }
+      if ($handleIn && $handleOut) {
+          $currentLine = 0;
+          while (($line = fgets($handleIn)) !== false) {
+              $currentLine++;
+              if ($currentLine === $zeile) {
+                  fwrite($handleOut, $replaceWith . PHP_EOL);
+              } else {
+                  fwrite($handleOut, $line);
               }
-              fclose($handleIn);
-              fclose($handleOut);
-              rename($tempFile, $file);
           }
+          fclose($handleIn);
+          fclose($handleOut);
+          rename($tempFile, $file);
       }
 
       return [
