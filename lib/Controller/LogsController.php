@@ -222,7 +222,6 @@ class LogsController extends Controller {
 
         if (file_exists($outputLog)) {
             $filesizecleaned = filesize($outputLog); // <-- Erst hier messen
-            unlink($inputFile);
             rename($outputLog, $inputFile);
         } else {
             $filesizecleaned = $filesizeoriginal; // Keine Änderung, wenn keine Datei da ist
@@ -495,12 +494,7 @@ class LogsController extends Controller {
 		$wtlogfile = $this->logService->getLogFile();
 
         if (file_exists($wtlogfile)) {
-            if ($this->logService->isExecAvailable()) {
-                $wtlogfilezeilen = intval(exec("wc -l " . $wtlogfile));
-            }
-            else {
-                $wtlogfilezeilen = count($this->helper->wtlogtoarr($wtlogfile));
-            }
+            $wtlogfilezeilen = count($this->helper->wtlogtoarr($wtlogfile));
         } else {
             $wtlogfilezeilen = 0;
         }
