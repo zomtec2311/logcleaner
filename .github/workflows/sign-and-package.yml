@@ -1,0 +1,238 @@
+name: Sign and Package Nextcloud App
+
+on:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  PHP_VERSION: '8.5'
+  NEXTCLOUD_VERSION: '34.0.3'
+
+  # Muss exakt der App-ID aus appinfo/info.xml entsprechen
+  APP_ID: ${{ github.event.repository.name }}
+
+jobs:
+  build-and-sign:
+    name: Build, sign and publish app
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          path: ${{ env.APP_ID }}
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.PHP_VERSION }}
+          extensions: >-
+            ctype,
+            curl,
+            dom,
+            iconv,
+            json,
+            libxml,
+            mbstring,
+            openssl,
+            posix,
+            session,
+            simplexml,
+            xml,
+            xmlreader,
+            xmlwriter,
+            zip,
+            zlib
+          coverage: none
+
+      - name: Download Nextcloud OCC tooling
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mkdir -p nextcloud
+          cd nextcloud
+
+          wget --quiet --show-progress \
+            "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2"
+
+          tar -xjf "nextcloud-${NEXTCLOUD_VERSION}.tar.bz2"
+
+      - name: Prepare signing files
+        id: certificates
+        shell: bash
+        env:
+          APP_KEY: ${{ secrets.NEXTCLOUD_APP_KEY }}
+          APP_CERT: ${{ secrets.NEXTCLOUD_APP_CERT }}
+        run: |
+          set -euo pipefail
+
+          if [[ -z "${APP_KEY}" || -z "${APP_CERT}" ]]; then
+            echo "::warning::NEXTCLOUD_APP_KEY oder NEXTCLOUD_APP_CERT fehlt bzw. ist leer."
+            echo "::warning::Die App wird unsigniert paketiert."
+
+            echo "signing_available=false" >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+
+          printf '%s\n' "${APP_KEY}" > "${GITHUB_WORKSPACE}/app.key"
+          printf '%s\n' "${APP_CERT}" > "${GITHUB_WORKSPACE}/app.crt"
+
+          chmod 600 \
+            "${GITHUB_WORKSPACE}/app.key" \
+            "${GITHUB_WORKSPACE}/app.crt"
+
+          echo "Signing-Secrets sind vorhanden."
+          echo "signing_available=true" >> "${GITHUB_OUTPUT}"
+
+      - name: Remove excluded and dev files
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Nicht benötigte Bild-Assets entfernen
+          rm -f \
+            "${APP_ID}/*.png"
+
+          # Dev-Dateien entfernen
+          rm -rf \
+            "${APP_ID}/.git" \
+            "${APP_ID}/.github" \
+            "${APP_ID}/.gitignore"
+
+      - name: Sign app
+        if: steps.certificates.outputs.signing_available == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          php "nextcloud/nextcloud/occ" \
+            integrity:sign-app \
+            --privateKey="${GITHUB_WORKSPACE}/app.key" \
+            --certificate="${GITHUB_WORKSPACE}/app.crt" \
+            --path="${GITHUB_WORKSPACE}/${APP_ID}"
+
+      - name: Determine package tag
+        id: package_tag
+        shell: bash
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+
+          TAG="${RELEASE_TAG:-$REF_NAME}"
+
+          # Ungültige Zeichen ersetzen
+          TAG="${TAG//\//-}"
+          TAG="${TAG// /-}"
+          TAG="${TAG//:/-}"
+
+          if [[ -z "${TAG}" ]]; then
+            echo "::error::Es konnte kein Release- oder Ref-Name ermittelt werden."
+            exit 1
+          fi
+
+          echo "tag=${TAG}" >> "${GITHUB_OUTPUT}"
+
+      - name: Create app archive
+        id: package
+        shell: bash
+        env:
+          SIGNING_AVAILABLE: ${{ steps.certificates.outputs.signing_available }}
+          TAG: ${{ steps.package_tag.outputs.tag }}
+        run: |
+          set -euo pipefail
+
+          if [[ "${SIGNING_AVAILABLE}" == "true" ]]; then
+            PACKAGE_NAME="${APP_ID}_${TAG}.tar.gz"
+          else
+            PACKAGE_NAME="unsigned_${APP_ID}_${TAG}.tar.gz"
+          fi
+
+          # Erzeugt das Archiv mit dem Stammverzeichnis = APP_ID
+          tar -czf "${PACKAGE_NAME}" "${APP_ID}"
+
+          echo "package_name=${PACKAGE_NAME}" >> "${GITHUB_OUTPUT}"
+          echo "Erzeugtes Archiv: ${PACKAGE_NAME}"
+
+      - name: Upload archive to GitHub Release
+        if: github.event_name == 'release'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.release.tag_name }}
+          files: ${{ steps.package.outputs.package_name }}
+          fail_on_unmatched_files: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload signed app to Official Nextcloud App Store
+        if: >
+          github.event_name == 'release' &&
+          steps.certificates.outputs.signing_available == 'true' &&
+          !startsWith(steps.package.outputs.package_name, 'unsigned_')
+        uses: R0Wi/nextcloud-appstore-push-action@v1
+        with:
+          app_name: ${{ env.APP_ID }}
+          appstore_token: ${{ secrets.APPSTORE_TOKEN }}
+          app_private_key: ${{ secrets.NEXTCLOUD_APP_KEY }}
+          download_url: >-
+            https://github.com/${{ github.repository }}/releases/download/${{
+            github.event.release.tag_name }}/${{
+            steps.package.outputs.package_name }}
+          nightly: ${{ github.event.release.prerelease }}
+
+      - name: Upload signed app to Custom Django App Store
+        if: >
+          github.event_name == 'release' &&
+          steps.certificates.outputs.signing_available == 'true' &&
+          !startsWith(steps.package.outputs.package_name, 'unsigned_')
+        shell: bash
+        env:
+          APPSTORE_TOKEN: ${{ secrets.MY_CUSTOM_APPSTORE_TOKEN }}
+          PACKAGE_NAME: ${{ steps.package.outputs.package_name }}
+          DOWNLOAD_URL: >-
+            https://github.com/${{ github.repository }}/releases/download/${{
+            github.event.release.tag_name }}/${{
+            steps.package.outputs.package_name }}
+          NIGHTLY: ${{ github.event.release.prerelease }}
+        run: |
+          set -euo pipefail
+
+          # Signatur der Archivdatei erzeugen
+          openssl dgst -sha512 -sign "${GITHUB_WORKSPACE}/app.key" "${PACKAGE_NAME}" | base64 -w 0 > signature.txt
+          SIGNATURE=$(cat signature.txt)
+
+          # Sauber lesbaren JSON-Payload in eine temporäre Datei schreiben
+          jq -n \
+            --arg download "${DOWNLOAD_URL}" \
+            --arg signature "${SIGNATURE}" \
+            --argjson nightly "${NIGHTLY}" \
+            '{download: $download, signature: $signature, nightly: $nightly}' > payload.json
+
+          # Payload an das eigene Django App Store Backend senden
+          curl -f -X POST "https://git.24wt.de/nc_appstore/api/v1/apps/releases/" \
+            -H "Authorization: Token ${APPSTORE_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -d @payload.json
+
+      - name: Upload archive as workflow artifact
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.package.outputs.package_name }}
+          path: ${{ steps.package.outputs.package_name }}
+          if-no-files-found: error
+
+      - name: Remove signing files
+        if: always()
+        shell: bash
+        run: |
+          rm -f \
+            "${GITHUB_WORKSPACE}/app.key" \
+            "${GITHUB_WORKSPACE}/app.crt"
