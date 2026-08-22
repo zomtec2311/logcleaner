@@ -37,6 +37,7 @@ use OCP\INavigationManager;
 use OCP\IURLGenerator;
 use OCP\IConfig;
 use OCP\IAppConfig;
+use OCP\IGroupManager;
 use Psr\Container\ContainerInterface;
 use OCA\LogCleaner\Dashboard\LogCleanerWidget;
 use OCA\LogCleaner\Dashboard\LogCleanerWidget2;
@@ -109,7 +110,8 @@ class Application extends App implements IBootstrap {
 	}
 
 	public function boot(IBootContext $context): void {
-		$server = $context->getServerContainer();
+		$igroupmanager = $context->getServerContainer()->get(IGroupManager::class);
+		if (!in_array("admin", $igroupmanager->getUserGroups())) return;
 		try {
 			$context->injectFn($this->registerAppsManagementNavigation(...));
 		} catch (NotFoundExceptionInterface|ContainerExceptionInterface|Throwable) {

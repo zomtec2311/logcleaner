@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.8
+
+### Fixed
+- NC >= 34: LogCleaner was displayed in the top menu for non-administrators
+
 ## 1.5.7
 
 ### Added
