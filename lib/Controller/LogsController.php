@@ -222,7 +222,6 @@ class LogsController extends Controller {
 
         if (file_exists($outputLog)) {
             $filesizecleaned = filesize($outputLog); // <-- Erst hier messen
-            unlink($inputFile);
             rename($outputLog, $inputFile);
         } else {
             $filesizecleaned = $filesizeoriginal; // Keine Änderung, wenn keine Datei da ist
@@ -494,15 +493,18 @@ class LogsController extends Controller {
 	public function getAll(): DataResponse {
 		$wtlogfile = $this->logService->getLogFile();
 
+        $wtlogfilezeilen = 0;
+
         if (file_exists($wtlogfile)) {
-            if ($this->logService->isExecAvailable()) {
-                $wtlogfilezeilen = intval(exec("wc -l " . $wtlogfile));
+            $handle = fopen($wtlogfile, 'rb');
+
+            if ($handle !== false) {
+                while (fgets($handle) !== false) {
+                    $wtlogfilezeilen++;
+                }
+
+                fclose($handle);
             }
-            else {
-                $wtlogfilezeilen = count($this->helper->wtlogtoarr($wtlogfile));
-            }
-        } else {
-            $wtlogfilezeilen = 0;
         }
 		$wttext = $this->l->n('%n log entry', '%n log entries', $wtlogfilezeilen);
 		return new DataResponse([
