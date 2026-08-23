@@ -493,10 +493,18 @@ class LogsController extends Controller {
 	public function getAll(): DataResponse {
 		$wtlogfile = $this->logService->getLogFile();
 
+        $wtlogfilezeilen = 0;
+
         if (file_exists($wtlogfile)) {
-            $wtlogfilezeilen = count($this->helper->wtlogtoarr($wtlogfile));
-        } else {
-            $wtlogfilezeilen = 0;
+            $handle = fopen($wtlogfile, 'rb');
+
+            if ($handle !== false) {
+                while (fgets($handle) !== false) {
+                    $wtlogfilezeilen++;
+                }
+
+                fclose($handle);
+            }
         }
 		$wttext = $this->l->n('%n log entry', '%n log entries', $wtlogfilezeilen);
 		return new DataResponse([
