@@ -50,15 +50,6 @@ jobs:
             zlib
           coverage: none
 
-      - name: Download Nextcloud OCC tooling
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          # Fast direct clone instead of downloading/extracting tar.bz2
-          git clone --depth 1 --branch "v${NEXTCLOUD_VERSION}" \
-            https://github.com/nextcloud/server.git nextcloud/nextcloud
-
       - name: Prepare signing files
         id: certificates
         shell: bash
@@ -107,17 +98,21 @@ jobs:
             "${APP_ID}/logcleanerwidget-dark.png" \
             "${APP_ID}/logcleanerwidget.png"
 
-      - name: Sign app
+      - name: Sign app via Docker
         if: steps.certificates.outputs.signing_available == 'true'
         shell: bash
         run: |
           set -euo pipefail
 
-          php "nextcloud/nextcloud/occ" \
-            integrity:sign-app \
-            --privateKey="${GITHUB_WORKSPACE}/app.key" \
-            --certificate="${GITHUB_WORKSPACE}/app.crt" \
-            --path="${GITHUB_WORKSPACE}/${APP_ID}"
+          docker run --rm \
+            -v "${GITHUB_WORKSPACE}/${APP_ID}:/app" \
+            -v "${GITHUB_WORKSPACE}/app.key:/app.key" \
+            -v "${GITHUB_WORKSPACE}/app.crt:/app.crt" \
+            nextcloud:${NEXTCLOUD_VERSION}-cli \
+            php /var/www/html/occ integrity:sign-app \
+              --privateKey=/app.key \
+              --certificate=/app.crt \
+              --path=/app
 
       - name: Determine package tag
         id: package_tag
