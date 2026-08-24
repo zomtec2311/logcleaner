@@ -77,12 +77,12 @@ jobs:
           echo "Signing-Secrets sind vorhanden."
           echo "signing_available=true" >> "${GITHUB_OUTPUT}"
 
-      - name: Remove dev files
+      - name: Remove dev files and git metadata
         shell: bash
         run: |
           set -euo pipefail
 
-          # Unbenötigte Entwicklungsgrafiken und Git-Ordner vorab säubern
+          # Unbenötigte Entwicklungsgrafiken entfernen
           rm -f \
             "${APP_ID}/logcleaner-info.png" \
             "${APP_ID}/logcleaner-info3.png" \
@@ -98,10 +98,11 @@ jobs:
             "${APP_ID}/logcleanerwidget-dark.png" \
             "${APP_ID}/logcleanerwidget.png"
 
-          # .git und .github physisch vor dem Signieren entfernen
-          find "${APP_ID}" -type d -name ".git" -exec rm -rf {} +
-          find "${APP_ID}" -type d -name ".github" -exec rm -rf {} +
-          find "${APP_ID}" -type f -name ".gitignore" -delete
+          # .git und .github radikal entfernen (greift für Dateien und Ordner)
+          rm -rf "${APP_ID}/.git" "${APP_ID}/.github" "${APP_ID}/.gitignore"
+
+          find "${APP_ID}" -name ".git" -exec rm -rf {} + 2>/dev/null || true
+          find "${APP_ID}" -name ".github" -exec rm -rf {} + 2>/dev/null || true
 
       - name: Sign app via Docker
         if: steps.certificates.outputs.signing_available == 'true'
