@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.5.9
+
+### Security
+- Hardened command execution across controllers (`Helper.php`, `LogsController.php`) by replacing dynamic shell commands with safe PHP alternatives ([#62](https://github.com/zomtec2311/logcleaner/pull/62), [#63](https://github.com/zomtec2311/logcleaner/pull/63)) @anupamme.
+- Eliminated potential command injection primitives flagged by Semgrep static analysis.
+
+### Improved
+- Reduced memory consumption when counting total log file entries by switching to a streaming PHP file reader.
+
+### Fixed
+- Bug fixed: menu right from logcleaner settings does not work for Nextcloud >= 34 ([#64](https://github.com/zomtec2311/logcleaner/issues/64))
+
 ## 1.5.8
 
 ### Fixed

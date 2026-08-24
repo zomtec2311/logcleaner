@@ -50,15 +50,6 @@ class Helper
         $this->l = $l;
         $this->appName = $appName;
     }
-/*
-    public function getAppValue($key) {
-        return $this->config->getAppValue($this->appName, $key);
-    }
-
-    public function setAppValue($key, $value) {
-        return $this->config->setAppValue($this->appName, $key, $value);
-    }
-*/
 
     public function wtlogtoarr(?string $wtlog)
     {
@@ -99,7 +90,7 @@ class Helper
 		}
 		$version = $this->config->getSystemValue('version', '');
 		$scriptName = $request->getScriptName();
-        
+
         $replaceWith = '{"reqId": "'.$reqId.'","level": 2,"time": "'.$time.'","remoteAddr": "'.$remoteAddr.'","user": "'.$user.'","app": "logcleaner","method": "'.$method.'","url": "'.$url.'","scriptName": "'.$scriptName.'","message": "Empty line detected within your logfile. LogCleaner has fixed this error.  This log entry can be deleted without verification.","userAgent": "'.$userAgent.'","version": "'.$version.'"}';
         $replaceWithThis = '{"reqId": "'.$reqId.'","level": 2,"time": "'.$time.'","remoteAddr": "'.$remoteAddr.'","user": "'.$user.'","app": "logcleaner","method": "'.$method.'","url": "'.$url.'","scriptName": "'.$scriptName.'","message": "Corrupted line detected within your logfile. LogCleaner has fixed this error.  This log entry can be deleted without verification.","userAgent": "'.$userAgent.'","version": "'.$version.'"}';
 
@@ -177,7 +168,7 @@ class Helper
         $obja->id = $wtlogfilezeilen;
         return $obja;
     }
-      
+
     public function myfilteredoutputdata($wtlog,$wtall,$wtlogfilezeilen,$wt_characters,$wt_offset, $level) {
         $wtarr =[];
         $obja = new \stdClass();

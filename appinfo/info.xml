@@ -16,7 +16,20 @@
 - 🔍 Find solutions on the internet by various search engines.
 - 🔔 Send notifications for new log entries.
 - 📯 Send emails for new log entries.]]></description>
-	<version>1.5.8</version>
+<description lang="de"><![CDATA[**Administrationswerkzeug zum Bereinigen der Protokolldatei**
+
+- 🛡️ Nur für die Administration zugänglich.
+- 🎨 Fehlerstufen mit unterschiedlichen Farben.
+- ⚙️ Zahlreiche Einstellungen für jeden Bedarf.
+- 🛠️ Nach der Korrektur eines Protokolleintrags kann dieser aus der Protokolldatei gelöscht werden.
+- ⏩ Mit einem Klick alle Duplikate innerhalb der Protokolldatei löschen.
+- 🗑️ Die Protokolldatei leeren, ohne Shell-Befehle zu verwenden.
+- 📜 Details zu Protokolleinträgen anzeigen.
+- 🔍 Über verschiedene Suchmaschinen im Internet nach Lösungen suchen.
+- 🔔 Benachrichtigungen über neue Protokolleinträge senden.
+- 📯 E-Mails über neue Protokolleinträge versenden.
+]]></description>
+	<version>1.5.9</version>
 	<licence>agpl</licence>
 	<author mail="wtoedt@gmail.com" homepage="https://github.com/zomtec2311/logcleaner">Wolfgang Tödt</author>
 	<documentation>
