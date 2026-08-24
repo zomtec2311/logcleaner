@@ -172,6 +172,24 @@ jobs:
           echo "package_name=${PACKAGE_NAME}" >> "${GITHUB_OUTPUT}"
           echo "Erzeugtes Archiv: ${PACKAGE_NAME}"
 
+      - name: Inspect app archive
+        shell: bash
+        env:
+          PACKAGE_NAME: ${{ steps.package.outputs.package_name }}
+        run: |
+          set -euo pipefail
+
+          echo "=== Inhalt von ${PACKAGE_NAME} ==="
+          tar -tf "${PACKAGE_NAME}"
+
+          # Sicherheitsprüfung: Abbrechen, falls .git oder .github im Archiv gelandet sind
+          if tar -tf "${PACKAGE_NAME}" | grep -E -q '\.git|\.github'; then
+            echo "::error::Das Archiv enthält verbotene Verzeichnisse (.git oder .github)!"
+            exit 1
+          else
+            echo "Verifizierung erfolgreich: Keine .git- oder .github-Dateien im Archiv gefunden."
+          fi
+
       - name: Upload archive to GitHub Release
         if: github.event_name == 'release'
         uses: softprops/action-gh-release@v2
