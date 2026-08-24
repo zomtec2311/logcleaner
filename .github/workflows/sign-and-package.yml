@@ -137,7 +137,7 @@ jobs:
 
           echo "tag=${TAG}" >> "${GITHUB_OUTPUT}"
 
-      - name: Create app archive
+      - name: Create app archive via Staging Directory
         id: package
         shell: bash
         env:
@@ -152,36 +152,46 @@ jobs:
             PACKAGE_NAME="unsigned_${APP_ID}_${TAG}.tar.gz"
           fi
 
-          # Erzeugt das Archiv und schließt .git/.github direkt beim Packen aus
-          tar -czf "${PACKAGE_NAME}" \
-              --exclude='*/.git' \
-              --exclude='*/.git/*' \
-              --exclude='*/.github' \
-              --exclude='*/.github/*' \
-              --exclude='*/.gitignore' \
-              --exclude='node_modules' \
-              "${APP_ID}"
+          # 1. Staging-Verzeichnis anlegen
+          STAGING_DIR="${GITHUB_WORKSPACE}/build_staging"
+          mkdir -p "${STAGING_DIR}/${APP_ID}"
+
+          # 2. Kopiere NUR was wir wollen ins Staging (rsync schließt .git/.github strikt aus)
+          rsync -av \
+            --exclude='.git*' \
+            --exclude='.github*' \
+            --exclude='node_modules*' \
+            "${APP_ID}/" "${STAGING_DIR}/${APP_ID}/"
+
+          # 3. Aus dem Staging-Ordner paketieren
+          tar -czf "${GITHUB_WORKSPACE}/${PACKAGE_NAME}" -C "${STAGING_DIR}" "${APP_ID}"
+
+          # Clean Staging
+          rm -rf "${STAGING_DIR}"
 
           echo "package_name=${PACKAGE_NAME}" >> "${GITHUB_OUTPUT}"
           echo "Erzeugtes Archiv: ${PACKAGE_NAME}"
 
-      - name: Inspect app archive
+      - name: Strict Local Validation (Safety Gate)
         shell: bash
         env:
           PACKAGE_NAME: ${{ steps.package.outputs.package_name }}
         run: |
           set -euo pipefail
 
-          echo "=== Inhalt von ${PACKAGE_NAME} ==="
-          tar -tf "${PACKAGE_NAME}"
+          echo "=== Prüfe Archivinhalt von ${PACKAGE_NAME} ==="
 
-          # Sicherheitsprüfung: Abbrechen, falls .git oder .github im Archiv gelandet sind
-          if tar -tf "${PACKAGE_NAME}" | grep -E -q '\.git|\.github'; then
-            echo "::error::Das Archiv enthält verbotene Verzeichnisse (.git oder .github)!"
+          # Suche nach verbotenen Einträgen
+          FORBIDDEN=$(tar -tf "${PACKAGE_NAME}" | grep -E '(\.git|\.github)' || true)
+
+          if [[ -n "${FORBIDDEN}" ]]; then
+            echo "::error::ABBRUCH! Folgende verbotene Dateien wurden im Tarball gefunden:"
+            echo "${FORBIDDEN}"
+            echo "::error::Der Upload zum App Store wurde gestoppt, um eine Sperre zu verhindern."
             exit 1
-          else
-            echo "Verifizierung erfolgreich: Keine .git- oder .github-Dateien im Archiv gefunden."
           fi
+
+          echo "✅ PERFEKT! Keine Git-Dateien im Tarball. Upload ist sicher."
 
       - name: Upload archive to GitHub Release
         if: github.event_name == 'release'
