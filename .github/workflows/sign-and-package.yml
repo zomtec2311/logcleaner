@@ -162,11 +162,12 @@ jobs:
           fi
 
           # Erzeugt das Archiv und schließt .git sowie Dev-Metadaten strikt aus
-          tar --exclude="${APP_ID}/.git" \
-              --exclude="${APP_ID}/.github" \
-              --exclude="${APP_ID}/.gitignore" \
-              --exclude="${APP_ID}/node_modules" \
-              -czf "${PACKAGE_NAME}" "${APP_ID}"
+          tar -czf "${PACKAGE_NAME}" \
+              --exclude='.git' \
+              --exclude='.github' \
+              --exclude='.gitignore' \
+              --exclude='node_modules' \
+              "${APP_ID}"
 
           echo "package_name=${PACKAGE_NAME}" >> "${GITHUB_OUTPUT}"
           echo "Erzeugtes Archiv: ${PACKAGE_NAME}"
