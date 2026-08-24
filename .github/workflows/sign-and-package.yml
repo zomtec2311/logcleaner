@@ -90,33 +90,32 @@ jobs:
           echo "Signing-Secrets sind vorhanden."
           echo "signing_available=true" >> "${GITHUB_OUTPUT}"
 
-      - name: Remove dev files and root images
+      - name: Remove excluded and dev files
         shell: bash
         run: |
           set -euo pipefail
 
-          # Nullglob aktivieren, damit Wildcards ohne Treffer keinen Fehler werfen
-          shopt -s nullglob
+          # Nicht benötigte Bild-Assets entfernen
+          rm -f \
+            "${APP_ID}/logcleaner3.png" \
+            "${APP_ID}/logcleanerAA.png" \
+            "${APP_ID}/logcleanerEbuttonok.png" \
+            "${APP_ID}/logcleanerico.png" \
+            "${APP_ID}/logcleaner-info.png" \
+            "${APP_ID}/logcleaner-searchengines-TN.png" \
+            "${APP_ID}/logcleanerwidget.png" \
+            "${APP_ID}/logcleaner3-small.png" \
+            "${APP_ID}/logcleanerA.png" \
+            "${APP_ID}/logcleanerEbutton.png" \
+            "${APP_ID}/logcleanerleer2.png" \
+            "${APP_ID}/logcleanerEbutton.png" \
+            "${APP_ID}/logcleanerwidget-dark.png"
 
-          # Alle Bilder direkt im Root-Verzeichnis der App entfernen (z. B. README-Screenshots)
-          rm -f "${APP_ID}"/*.png "${APP_ID}"/*.jpg "${APP_ID}"/*.jpeg "${APP_ID}"/*.gif "${APP_ID}"/*.webp "${APP_ID}"/*.svg
-
-          # Dokumentation & Repo-Metadaten im Root entfernen
-          rm -f "${APP_ID}"/*.md "${APP_ID}"/LICENSE "${APP_ID}"/COPYING
-
-          # Entwicklungs- und Build-Artefakte entfernen
+          # Dev-Dateien entfernen
           rm -rf \
             "${APP_ID}/.git" \
             "${APP_ID}/.github" \
-            "${APP_ID}/.gitignore" \
-            "${APP_ID}/.gitattributes" \
-            "${APP_ID}/node_modules" \
-            "${APP_ID}/tests" \
-            "${APP_ID}/.phpunit.result.cache" \
-            "${APP_ID}/package.json" \
-            "${APP_ID}/package-lock.json" \
-            "${APP_ID}/webpack.config.js" \
-            "${APP_ID}/vite.config.js"
+            "${APP_ID}/.gitignore"
 
       - name: Sign app
         if: steps.certificates.outputs.signing_available == 'true'
