@@ -90,32 +90,30 @@ jobs:
           echo "Signing-Secrets sind vorhanden."
           echo "signing_available=true" >> "${GITHUB_OUTPUT}"
 
-      - name: Remove excluded and dev files
+      - name: Remove dev files, root images and git metadata
         shell: bash
         run: |
           set -euo pipefail
 
-          # Nicht benötigte Bild-Assets entfernen
-          rm -f \
-            "${APP_ID}/logcleaner3.png" \
-            "${APP_ID}/logcleanerAA.png" \
-            "${APP_ID}/logcleanerEbuttonok.png" \
-            "${APP_ID}/logcleanerico.png" \
-            "${APP_ID}/logcleaner-info.png" \
-            "${APP_ID}/logcleaner-searchengines-TN.png" \
-            "${APP_ID}/logcleanerwidget.png" \
-            "${APP_ID}/logcleaner3-small.png" \
-            "${APP_ID}/logcleanerA.png" \
-            "${APP_ID}/logcleanerEbutton.png" \
-            "${APP_ID}/logcleanerleer2.png" \
-            "${APP_ID}/logcleanerEbutton.png" \
-            "${APP_ID}/logcleanerwidget-dark.png"
+          # Nullglob aktivieren, damit Wildcards ohne Treffer keinen Fehler werfen
+          shopt -s nullglob
 
-          # Dev-Dateien entfernen
-          rm -rf \
-            "${APP_ID}/.git" \
-            "${APP_ID}/.github" \
-            "${APP_ID}/.gitignore"
+          # 1. Bilder & Markdown-Doku direkt im Root des Repositories löschen (LICENSE bleibt erhalten)
+          rm -f "${APP_ID}"/*.png "${APP_ID}"/*.jpg "${APP_ID}"/*.jpeg "${APP_ID}"/*.gif "${APP_ID}"/*.webp "${APP_ID}"/*.svg
+          rm -f "${APP_ID}"/*.md "${APP_ID}"/COPYING
+
+          # 2. Versteckte Ordner & Dev-Dateien GARANTIERT löschen (absoluter Pfad vor dem Signieren)
+          rm -rf "${GITHUB_WORKSPACE}/${APP_ID}/.git"
+          rm -rf "${GITHUB_WORKSPACE}/${APP_ID}/.github"
+          rm -f  "${GITHUB_WORKSPACE}/${APP_ID}/.gitignore"
+          rm -f  "${GITHUB_WORKSPACE}/${APP_ID}/.gitattributes"
+          rm -rf "${GITHUB_WORKSPACE}/${APP_ID}/node_modules"
+          rm -rf "${GITHUB_WORKSPACE}/${APP_ID}/tests"
+          rm -f  "${GITHUB_WORKSPACE}/${APP_ID}/.phpunit.result.cache"
+          rm -f  "${GITHUB_WORKSPACE}/${APP_ID}/package.json"
+          rm -f  "${GITHUB_WORKSPACE}/${APP_ID}/package-lock.json"
+          rm -f  "${GITHUB_WORKSPACE}/${APP_ID}/webpack.config.js"
+          rm -f  "${GITHUB_WORKSPACE}/${APP_ID}/vite.config.js"
 
       - name: Sign app
         if: steps.certificates.outputs.signing_available == 'true'
@@ -167,8 +165,10 @@ jobs:
             PACKAGE_NAME="unsigned_${APP_ID}_${TAG}.tar.gz"
           fi
 
-          # Erzeugt das Archiv mit dem Stammverzeichnis = APP_ID
-          tar -czf "${PACKAGE_NAME}" "${APP_ID}"
+          # Erzeugt das Archiv (mit doppelter Absicherung gegen Git-Dateien)
+          tar --exclude='.git*' \
+              --exclude='.github*' \
+              -czf "${PACKAGE_NAME}" "${APP_ID}"
 
           echo "package_name=${PACKAGE_NAME}" >> "${GITHUB_OUTPUT}"
           echo "Erzeugtes Archiv: ${PACKAGE_NAME}"
@@ -179,6 +179,7 @@ jobs:
         with:
           tag_name: ${{ github.event.release.tag_name }}
           files: ${{ steps.package.outputs.package_name }}
+          overwrite: true
           fail_on_unmatched_files: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -220,7 +221,7 @@ jobs:
           openssl dgst -sha512 -sign "${GITHUB_WORKSPACE}/app.key" "${PACKAGE_NAME}" | base64 -w 0 > signature.txt
           SIGNATURE=$(cat signature.txt)
 
-          # Sauber lesbaren JSON-Payload in eine temporäre Datei schreiben
+          # JSON-Payload in eine temporäre Datei schreiben
           jq -n \
             --arg download "${DOWNLOAD_URL}" \
             --arg signature "${SIGNATURE}" \
