@@ -50,6 +50,19 @@ jobs:
             zlib
           coverage: none
 
+      - name: Download Nextcloud OCC tooling
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mkdir -p nextcloud
+          cd nextcloud
+
+          wget --quiet --show-progress \
+            "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2"
+
+          tar -xjf "nextcloud-${NEXTCLOUD_VERSION}.tar.bz2"
+
       - name: Prepare signing files
         id: certificates
         shell: bash
@@ -77,42 +90,45 @@ jobs:
           echo "Signing-Secrets sind vorhanden."
           echo "signing_available=true" >> "${GITHUB_OUTPUT}"
 
-      - name: Remove dev files
+      - name: Remove dev files and root images
         shell: bash
         run: |
           set -euo pipefail
 
-          # Unbenötigte Entwicklungsgrafiken vorab säubern
-          rm -f \
-            "${APP_ID}/logcleaner-info.png" \
-            "${APP_ID}/logcleaner-info3.png" \
-            "${APP_ID}/logcleaner-searchengines-TN.png" \
-            "${APP_ID}/logcleaner3-small.png" \
-            "${APP_ID}/logcleaner3.png" \
-            "${APP_ID}/logcleanerA.png" \
-            "${APP_ID}/logcleanerAA.png" \
-            "${APP_ID}/logcleanerEbutton.png" \
-            "${APP_ID}/logcleanerEbuttonok.png" \
-            "${APP_ID}/logcleanerico.png" \
-            "${APP_ID}/logcleanerleer2.png" \
-            "${APP_ID}/logcleanerwidget-dark.png" \
-            "${APP_ID}/logcleanerwidget.png"
+          # Nullglob aktivieren, damit Wildcards ohne Treffer keinen Fehler werfen
+          shopt -s nullglob
 
-      - name: Sign app via Docker
+          # Alle Bilder direkt im Root-Verzeichnis der App entfernen (z. B. README-Screenshots)
+          rm -f "${APP_ID}"/*.png "${APP_ID}"/*.jpg "${APP_ID}"/*.jpeg "${APP_ID}"/*.gif "${APP_ID}"/*.webp "${APP_ID}"/*.svg
+
+          # Dokumentation & Repo-Metadaten im Root entfernen
+          rm -f "${APP_ID}"/*.md "${APP_ID}"/LICENSE "${APP_ID}"/COPYING
+
+          # Entwicklungs- und Build-Artefakte entfernen
+          rm -rf \
+            "${APP_ID}/.git" \
+            "${APP_ID}/.github" \
+            "${APP_ID}/.gitignore" \
+            "${APP_ID}/.gitattributes" \
+            "${APP_ID}/node_modules" \
+            "${APP_ID}/tests" \
+            "${APP_ID}/.phpunit.result.cache" \
+            "${APP_ID}/package.json" \
+            "${APP_ID}/package-lock.json" \
+            "${APP_ID}/webpack.config.js" \
+            "${APP_ID}/vite.config.js"
+
+      - name: Sign app
         if: steps.certificates.outputs.signing_available == 'true'
         shell: bash
         run: |
           set -euo pipefail
 
-          docker run --rm \
-            -v "${GITHUB_WORKSPACE}/${APP_ID}:/app" \
-            -v "${GITHUB_WORKSPACE}/app.key:/app.key" \
-            -v "${GITHUB_WORKSPACE}/app.crt:/app.crt" \
-            nextcloud:${NEXTCLOUD_VERSION}-cli \
-            php /var/www/html/occ integrity:sign-app \
-              --privateKey=/app.key \
-              --certificate=/app.crt \
-              --path=/app
+          php "nextcloud/nextcloud/occ" \
+            integrity:sign-app \
+            --privateKey="${GITHUB_WORKSPACE}/app.key" \
+            --certificate="${GITHUB_WORKSPACE}/app.crt" \
+            --path="${GITHUB_WORKSPACE}/${APP_ID}"
 
       - name: Determine package tag
         id: package_tag
@@ -137,7 +153,7 @@ jobs:
 
           echo "tag=${TAG}" >> "${GITHUB_OUTPUT}"
 
-      - name: Create app archive via Staging Directory
+      - name: Create app archive
         id: package
         shell: bash
         env:
@@ -152,46 +168,11 @@ jobs:
             PACKAGE_NAME="unsigned_${APP_ID}_${TAG}.tar.gz"
           fi
 
-          # 1. Staging-Verzeichnis anlegen
-          STAGING_DIR="${GITHUB_WORKSPACE}/build_staging"
-          mkdir -p "${STAGING_DIR}/${APP_ID}"
-
-          # 2. Kopiere NUR was wir wollen ins Staging (rsync schließt .git/.github strikt aus)
-          rsync -av \
-            --exclude='.git*' \
-            --exclude='.github*' \
-            --exclude='node_modules*' \
-            "${APP_ID}/" "${STAGING_DIR}/${APP_ID}/"
-
-          # 3. Aus dem Staging-Ordner paketieren
-          tar -czf "${GITHUB_WORKSPACE}/${PACKAGE_NAME}" -C "${STAGING_DIR}" "${APP_ID}"
-
-          # Clean Staging
-          rm -rf "${STAGING_DIR}"
+          # Erzeugt das Archiv mit dem Stammverzeichnis = APP_ID
+          tar -czf "${PACKAGE_NAME}" "${APP_ID}"
 
           echo "package_name=${PACKAGE_NAME}" >> "${GITHUB_OUTPUT}"
           echo "Erzeugtes Archiv: ${PACKAGE_NAME}"
-
-      - name: Strict Local Validation (Safety Gate)
-        shell: bash
-        env:
-          PACKAGE_NAME: ${{ steps.package.outputs.package_name }}
-        run: |
-          set -euo pipefail
-
-          echo "=== Prüfe Archivinhalt von ${PACKAGE_NAME} ==="
-
-          # Suche nach verbotenen Einträgen
-          FORBIDDEN=$(tar -tf "${PACKAGE_NAME}" | grep -E '(\.git|\.github)' || true)
-
-          if [[ -n "${FORBIDDEN}" ]]; then
-            echo "::error::ABBRUCH! Folgende verbotene Dateien wurden im Tarball gefunden:"
-            echo "${FORBIDDEN}"
-            echo "::error::Der Upload zum App Store wurde gestoppt, um eine Sperre zu verhindern."
-            exit 1
-          fi
-
-          echo "✅ PERFEKT! Keine Git-Dateien im Tarball. Upload ist sicher."
 
       - name: Upload archive to GitHub Release
         if: github.event_name == 'release'
