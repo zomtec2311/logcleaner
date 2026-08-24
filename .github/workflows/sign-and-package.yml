@@ -77,12 +77,12 @@ jobs:
           echo "Signing-Secrets sind vorhanden."
           echo "signing_available=true" >> "${GITHUB_OUTPUT}"
 
-      - name: Remove dev files and git metadata
+      - name: Remove dev files
         shell: bash
         run: |
           set -euo pipefail
 
-          # Unbenötigte Entwicklungsgrafiken entfernen
+          # Unbenötigte Entwicklungsgrafiken vorab säubern
           rm -f \
             "${APP_ID}/logcleaner-info.png" \
             "${APP_ID}/logcleaner-info3.png" \
@@ -97,12 +97,6 @@ jobs:
             "${APP_ID}/logcleanerleer2.png" \
             "${APP_ID}/logcleanerwidget-dark.png" \
             "${APP_ID}/logcleanerwidget.png"
-
-          # .git und .github radikal entfernen (greift für Dateien und Ordner)
-          rm -rf "${APP_ID}/.git" "${APP_ID}/.github" "${APP_ID}/.gitignore"
-
-          find "${APP_ID}" -name ".git" -exec rm -rf {} + 2>/dev/null || true
-          find "${APP_ID}" -name ".github" -exec rm -rf {} + 2>/dev/null || true
 
       - name: Sign app via Docker
         if: steps.certificates.outputs.signing_available == 'true'
@@ -158,8 +152,13 @@ jobs:
             PACKAGE_NAME="unsigned_${APP_ID}_${TAG}.tar.gz"
           fi
 
-          # Erzeugt das Archiv
+          # Erzeugt das Archiv und schließt .git/.github direkt beim Packen aus
           tar -czf "${PACKAGE_NAME}" \
+              --exclude='*/.git' \
+              --exclude='*/.git/*' \
+              --exclude='*/.github' \
+              --exclude='*/.github/*' \
+              --exclude='*/.gitignore' \
               --exclude='node_modules' \
               "${APP_ID}"
 
