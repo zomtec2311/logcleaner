@@ -55,13 +55,9 @@ jobs:
         run: |
           set -euo pipefail
 
-          mkdir -p nextcloud
-          cd nextcloud
-
-          wget --quiet --show-progress \
-            "https://download.nextcloud.com/server/releases/nextcloud-${NEXTCLOUD_VERSION}.tar.bz2"
-
-          tar -xjf "nextcloud-${NEXTCLOUD_VERSION}.tar.bz2"
+          # Fast direct clone instead of downloading/extracting tar.bz2
+          git clone --depth 1 --branch "v${NEXTCLOUD_VERSION}" \
+            https://github.com/nextcloud/server.git nextcloud/nextcloud
 
       - name: Prepare signing files
         id: certificates
