@@ -82,7 +82,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          # Unbenötigte Entwicklungsgrafiken entfernen
+          # Unbenötigte Entwicklungsgrafiken und Git-Ordner vorab säubern
           rm -f \
             "${APP_ID}/logcleaner-info.png" \
             "${APP_ID}/logcleaner-info3.png" \
@@ -97,6 +97,11 @@ jobs:
             "${APP_ID}/logcleanerleer2.png" \
             "${APP_ID}/logcleanerwidget-dark.png" \
             "${APP_ID}/logcleanerwidget.png"
+
+          # .git und .github physisch vor dem Signieren entfernen
+          find "${APP_ID}" -type d -name ".git" -exec rm -rf {} +
+          find "${APP_ID}" -type d -name ".github" -exec rm -rf {} +
+          find "${APP_ID}" -type f -name ".gitignore" -delete
 
       - name: Sign app via Docker
         if: steps.certificates.outputs.signing_available == 'true'
@@ -152,11 +157,8 @@ jobs:
             PACKAGE_NAME="unsigned_${APP_ID}_${TAG}.tar.gz"
           fi
 
-          # Erzeugt das Archiv und schließt .git sowie Dev-Metadaten strikt aus
+          # Erzeugt das Archiv
           tar -czf "${PACKAGE_NAME}" \
-              --exclude='.git' \
-              --exclude='.github' \
-              --exclude='.gitignore' \
               --exclude='node_modules' \
               "${APP_ID}"
 
