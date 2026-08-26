@@ -174,19 +174,23 @@ jobs:
           echo "Erzeugtes Archiv: ${PACKAGE_NAME}"
 
       - name: Upload archive to GitHub Release
-        if: github.event_name == 'release' || github.event_name == 'workflow_dispatch'
+        # Läuft NUR bei echten Releases ODER wenn manuell explizit auf einem Tag gestartet wurde (nicht auf 'main')
+        if: >
+          github.event_name == 'release' ||
+          (github.event_name == 'workflow_dispatch' && startsWith(github.ref, 'refs/tags/'))
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.event.release.tag_name || steps.package_tag.outputs.tag }}
           files: ${{ steps.package.outputs.package_name }}
           overwrite: true
+          make_latest: true
           fail_on_unmatched_files: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload signed app to Official Nextcloud App Store
         if: >
-          (github.event_name == 'release' || github.event_name == 'workflow_dispatch') &&
+          (github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && startsWith(github.ref, 'refs/tags/'))) &&
           steps.certificates.outputs.signing_available == 'true' &&
           !startsWith(steps.package.outputs.package_name, 'unsigned_')
         uses: R0Wi/nextcloud-appstore-push-action@v1
@@ -202,7 +206,7 @@ jobs:
 
       - name: Upload signed app to Custom Django App Store
         if: >
-          (github.event_name == 'release' || github.event_name == 'workflow_dispatch') &&
+          (github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && startsWith(github.ref, 'refs/tags/'))) &&
           steps.certificates.outputs.signing_available == 'true' &&
           !startsWith(steps.package.outputs.package_name, 'unsigned_')
         shell: bash
