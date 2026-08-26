@@ -212,7 +212,7 @@ class LogService {
 
     public function smartDetail($file, $detail) {
         if ($this->isExecAvailable()) {
-            $finalCommand = "sed -n '$detail p' $file";
+            $finalCommand = "sed -n " . escapeshellarg((int)$detail . 'p') . " " . escapeshellarg($file);
             return exec($finalCommand);
 
         } else {
