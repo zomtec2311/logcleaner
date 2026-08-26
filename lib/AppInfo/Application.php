@@ -36,6 +36,7 @@ use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCP\INavigationManager;
 use OCP\IURLGenerator;
 use OCP\IConfig;
+use OCP\Util;
 use OCP\IAppConfig;
 use OCP\IGroupManager;
 use OCP\IUserSession;
@@ -105,50 +106,66 @@ class Application extends App implements IBootstrap {
 	}
 
 	public function boot(IBootContext $context): void {
-		$igroupmanager = $context->getServerContainer()->get(IGroupManager::class);
-		$iusersession = $context->getServerContainer()->get(IUserSession::class);
-		$myuid = $iusersession->getUser();
+		Util::addStyle(self::APP_ID, 'logcleaner-nav');
+		$igroupManager = $context->getServerContainer()->get(IGroupManager::class);
+		$iuserSession = $context->getServerContainer()->get(IUserSession::class);
+
+		$navigationManager = $context->getServerContainer()->get(INavigationManager::class);
+        $urlGenerator = $context->getServerContainer()->get(IURLGenerator::class);
+		$appManager = $context->getServerContainer()->get(IAppManager::class);
+		$appConfig = $context->getServerContainer()->get(IAppConfig::class);
+
+		$appManager->enableAppForGroups(self::APP_ID, array('admin'), false);
+
+		$myuid = $iuserSession->getUser();
+
 		if ($myuid === null) {
 			return;
 		}
-		if (!in_array("admin", $igroupmanager->getUserGroupIds($myuid))) {
+
+		if (!in_array("admin", $igroupManager->getUserGroupIds($myuid))) {
 			return;
 		}
+
 		try {
-			$context->injectFn($this->registerAppsManagementNavigation(...));
+			$navigationManager->add(function () use ($urlGenerator, $appConfig) {
+				$wtpara_menue = (int)$appConfig->getValueString(self::APP_ID, 'wtparam_menue');
+
+				$myapptop = [
+					'id' => self::APP_ID,
+					'order' => 1000,
+					'href' => $urlGenerator->linkToRoute(self::APP_ID.'.page.index'),
+					'icon' => $urlGenerator->imagePath(self::APP_ID, self::APP_ID.'.svg'),
+					'name' => 'LogCleaner',
+					'type' => 'link',
+					//'classes' => 'highlighted-nav-item js-admin-tab',
+					'app' => self::APP_ID
+				];
+				$myappright = [
+					'id' => self::APP_ID,
+					'order' => 2,
+					'href' => $urlGenerator->linkToRoute(self::APP_ID.'.page.index'),
+					'icon' => $urlGenerator->imagePath(self::APP_ID, self::APP_ID.'-dark.svg'),
+					'name' => 'LogCleaner',
+					'type' => 'settings',
+					//'classes' => 'highlighted-nav-item js-admin-tab',
+					'app' => self::APP_ID
+				];
+
+				if (!isset($wtpara_menue)) {
+					$appConfig->setValueString(self::APP_ID, 'wtparam_menue', '1');
+				}
+				if ($wtpara_menue === 1) { // right
+					$myapp = $myappright;
+				}
+				else { // top
+					$myapp = $myapptop;
+				}
+
+				return $myapp;
+			});
 		} catch (NotFoundExceptionInterface|ContainerExceptionInterface|Throwable) {
 		}
 	}
 
-	private function registerAppsManagementNavigation(IAppManager $appManager, INavigationManager $navigationManager,IURLGenerator $urlGenerator,IAppConfig $appConfig): void {
-		$myapptop = [
-			'id' => self::APP_ID,
-			'order' => 1000,
-			'href' => $urlGenerator->linkToRoute(self::APP_ID.'.page.index'),
-			'icon' => $urlGenerator->imagePath(self::APP_ID, self::APP_ID.'.svg'),
-			'name' => 'LogCleaner',
-			'type' => 'link',
-			'app' => self::APP_ID
-		];
-		$myappright = [
-			'id' => self::APP_ID,
-			'order' => 2,
-			'href' => $urlGenerator->linkToRoute(self::APP_ID.'.page.index'),
-			'icon' => $urlGenerator->imagePath(self::APP_ID, self::APP_ID.'-dark.svg'),
-			'name' => 'LogCleaner',
-			'type' => 'settings',
-			'app' => self::APP_ID
-		];
-		$appManager->enableAppForGroups(self::APP_ID, array('admin'), false);
-		$wtpara_menue = (int)$appConfig->getValueString(self::APP_ID, 'wtparam_menue');
-		if (!isset($wtpara_menue)) {
-			$appConfig->setValueString(self::APP_ID, 'wtparam_menue', '1');
-		}
-		if ($wtpara_menue === 1) { // right
-			$navigationManager->add($myappright);
-		}
-		else { // top
-			$navigationManager->add($myapptop);
-		}
-	}
 }
