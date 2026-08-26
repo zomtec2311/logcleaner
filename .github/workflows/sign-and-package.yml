@@ -174,10 +174,10 @@ jobs:
           echo "Erzeugtes Archiv: ${PACKAGE_NAME}"
 
       - name: Upload archive to GitHub Release
-        if: github.event_name == 'release'
+        if: github.event_name == 'release' || github.event_name == 'workflow_dispatch'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.event.release.tag_name }}
+          tag_name: ${{ github.event.release.tag_name || steps.package_tag.outputs.tag }}
           files: ${{ steps.package.outputs.package_name }}
           overwrite: true
           fail_on_unmatched_files: true
@@ -186,7 +186,7 @@ jobs:
 
       - name: Upload signed app to Official Nextcloud App Store
         if: >
-          github.event_name == 'release' &&
+          (github.event_name == 'release' || github.event_name == 'workflow_dispatch') &&
           steps.certificates.outputs.signing_available == 'true' &&
           !startsWith(steps.package.outputs.package_name, 'unsigned_')
         uses: R0Wi/nextcloud-appstore-push-action@v1
@@ -196,26 +196,25 @@ jobs:
           app_private_key: ${{ secrets.NEXTCLOUD_APP_KEY }}
           download_url: >-
             https://github.com/${{ github.repository }}/releases/download/${{
-            github.event.release.tag_name }}/${{
+            github.event.release.tag_name || steps.package_tag.outputs.tag }}/${{
             steps.package.outputs.package_name }}
-          nightly: ${{ github.event.release.prerelease }}
+          nightly: ${{ github.event.release.prerelease || false }}
 
       - name: Upload signed app to Custom Django App Store
         if: >
-          github.event_name == 'release' &&
+          (github.event_name == 'release' || github.event_name == 'workflow_dispatch') &&
           steps.certificates.outputs.signing_available == 'true' &&
           !startsWith(steps.package.outputs.package_name, 'unsigned_')
         shell: bash
         env:
           APPSTORE_TOKEN: ${{ secrets.MY_CUSTOM_APPSTORE_TOKEN }}
           PACKAGE_NAME: ${{ steps.package.outputs.package_name }}
-          DOWNLOAD_URL: >-
-            https://github.com/${{ github.repository }}/releases/download/${{
-            github.event.release.tag_name }}/${{
-            steps.package.outputs.package_name }}
-          NIGHTLY: ${{ github.event.release.prerelease }}
+          TAG: ${{ steps.package_tag.outputs.tag }}
+          NIGHTLY: ${{ github.event.release.prerelease || false }}
         run: |
           set -euo pipefail
+
+          DOWNLOAD_URL="https://github.com/${{ github.repository }}/releases/download/${TAG}/${PACKAGE_NAME}"
 
           # Signatur der Archivdatei erzeugen
           openssl dgst -sha512 -sign "${GITHUB_WORKSPACE}/app.key" "${PACKAGE_NAME}" | base64 -w 0 > signature.txt
