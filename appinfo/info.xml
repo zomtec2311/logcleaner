@@ -29,7 +29,7 @@
 - 🔔 Benachrichtigungen über neue Protokolleinträge senden.
 - 📯 E-Mails über neue Protokolleinträge versenden.
 ]]></description>
-	<version>1.6.1</version>
+	<version>1.6.2</version>
 	<licence>agpl</licence>
 	<author mail="wtoedt@gmail.com" homepage="https://github.com/zomtec2311/logcleaner">Wolfgang Tödt</author>
 	<documentation>
