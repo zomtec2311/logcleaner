@@ -29,7 +29,7 @@
 - 🔔 Benachrichtigungen über neue Protokolleinträge senden.
 - 📯 E-Mails über neue Protokolleinträge versenden.
 ]]></description>
-	<version>1.5.9</version>
+	<version>1.6.0</version>
 	<licence>agpl</licence>
 	<author mail="wtoedt@gmail.com" homepage="https://github.com/zomtec2311/logcleaner">Wolfgang Tödt</author>
 	<documentation>
@@ -56,13 +56,4 @@
 	<dependencies>
 		<nextcloud min-version="32" max-version="35"/>
 	</dependencies>
-	<navigations>
-		<navigation>
-			<id>logcleaner</id>
-			<name>Log Cleaner</name>
-			<route>logcleaner.page.index</route>
-			<icon>logcleaner.svg</icon>
-			<type>link</type>
-		</navigation>
-	</navigations>
 </info>

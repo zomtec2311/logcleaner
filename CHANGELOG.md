@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.6.0
+
+### Fixed
+- Bug fixed: Incorrect alignment when LogCleaner is placed in the menu on the right ([#76.2](https://github.com/zomtec2311/logcleaner/issues/76#issuecomment-5406675797)) @zonebattler
+### Changed
+- Replaced XML navigation with NavigationManager registration due to: Log Cleaner 1.5.9 mixing up Nextcloud's waffle menu ([#76.1](https://github.com/zomtec2311/logcleaner/issues/76)) @zonebattler
+
 ## 1.5.9
 
 ### Security
