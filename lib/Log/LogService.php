@@ -156,69 +156,32 @@ class LogService {
         return $c;
     }
 
-    public function isExecAvailable() {
-        if (!function_exists('exec')) {
-            return false;
-        }
-        $disabled = explode(',', ini_get('disable_functions'));
-        $disabled = array_map('trim', $disabled);
-
-        if (in_array('exec', $disabled)) {
-            return false;
-        }
-        try {
-            @exec('echo 1', $output, $returnVar);
-            return ($returnVar === 0);
-        } catch (Exception $e) {
-            return false;
-        }
-    }
-
     public function smartDeleteLines($file, $linesToDelete) {
         if (empty($linesToDelete)) return;
 
-        if ($this->isExecAvailable()) {
-            $reversedLines = array_reverse($linesToDelete);
-            $commands = array_map(fn($l) => "{$l}d", $reversedLines);
-            $commandString = implode(';', $commands);
+        $tempFile = $file . '.tmp';
+        $in = fopen($file, 'r');
+        $out = fopen($tempFile, 'w');
 
-            $cmd = "sed -i " . escapeshellarg($commandString) . " " . escapeshellarg($file);
-            exec($cmd);
-            return 'with exec()';
+        $deleteLookup = array_flip($linesToDelete);
+        $currentLine = 0;
 
-        } else {
-            $tempFile = $file . '.tmp';
-            $in = fopen($file, 'r');
-            $out = fopen($tempFile, 'w');
-
-            $deleteLookup = array_flip($linesToDelete);
-            $currentLine = 0;
-
-            while (($line = fgets($in)) !== false) {
-                $currentLine++;
-                if (!isset($deleteLookup[$currentLine])) {
-                    fwrite($out, $line);
-                }
+        while (($line = fgets($in)) !== false) {
+            $currentLine++;
+            if (!isset($deleteLookup[$currentLine])) {
+                fwrite($out, $line);
             }
-
-            fclose($in);
-            fclose($out);
-
-            rename($tempFile, $file);
-            return 'without exec()';
         }
-        return;
+
+        fclose($in);
+        fclose($out);
+
+        rename($tempFile, $file);
+        return 'without exec()';
     }
 
     public function smartDetail($file, $detail) {
-        if ($this->isExecAvailable()) {
-            $finalCommand = "sed -n '$detail p' $file";
-            return exec($finalCommand);
-
-        } else {
-            $wwt = $this->helper->wtlogtoarr($file);
-			return $wwt[$detail-1];
-        }
-        return;
+        $wwt = $this->helper->wtlogtoarr($file);
+        return $wwt[$detail-1];
     }
 }
