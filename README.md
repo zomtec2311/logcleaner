@@ -112,7 +112,7 @@ A **Fork** creates your own copy of this project under your GitHub account, allo
 
 ### Step 2: Locate and Edit the Translation File
 1. In your forked repository, navigate to the folder containing the language files (e.g., `l10n/`).
-2. Click on the file for your language (for example, `de.json` or `admincockpit_de.po`).
+2. Click on the file for your language (for example, `de.json` or `logcleaner_de.po`).
 3. Click the **Pencil icon** (✏️) in the top-right corner of the file view to open the editor.
 4. Edit or add the missing translations carefully:
    * **JSON files:** Keep the quotes `""` and commas `,` intact.
