@@ -92,3 +92,55 @@ https://github.com/user-attachments/assets/cdf10eac-e3ff-4816-aa37-73994dfbeb02
 
 
 </details>
+
+## 🌍 How to Contribute Translations (Step-by-Step Guide)
+
+We love contributions! If you notice a missing or incorrect translation, you can easily fix it directly on GitHub without installing any specialized software.
+
+Follow these simple steps to make your changes and send us a **Pull Request (PR)**:
+
+---
+
+### Step 1: Fork the Repository
+A **Fork** creates your own copy of this project under your GitHub account, allowing you to make changes safely.
+
+1. Scroll to the very top right of this GitHub page.
+2. Click the **Fork** button (located near the *Star* button).
+3. Click **Create fork**. You will now be redirected to your own copy of the repository.
+
+---
+
+### Step 2: Locate and Edit the Translation File
+1. In your forked repository, navigate to the folder containing the language files (e.g., `l10n/`).
+2. Click on the file for your language (for example, `de.json` or `admincockpit_de.po`).
+3. Click the **Pencil icon** (✏️) in the top-right corner of the file view to open the editor.
+4. Edit or add the missing translations carefully:
+   * **JSON files:** Keep the quotes `""` and commas `,` intact.
+   * **PO files:** Add your translation inside the `msgstr ""` quotes right below the matching `msgid ""`.
+
+---
+
+### Step 3: Commit Your Changes
+Once you have made your edits:
+
+1. Click the green **Commit changes...** button at the top right of the editor.
+2. Enter a short description of what you changed (e.g., `Fix German translation for plain text hint`).
+3. Make sure **Commit directly to the `main` branch** (or `master`) is selected.
+4. Click **Commit changes**.
+
+---
+
+### Step 4: Submit Your Pull Request (PR)
+Now send your changes back to us so we can review and include them in the official release!
+
+1. Go back to the main page of **your forked repository**.
+2. You should see a banner at the top showing your branch is ahead. Click **Contribute**, then click **Open pull request**.
+   *(If you don't see the banner, click the **Pull requests** tab, then the green **New pull request** button).*
+3. Double-check your changes on the comparison screen.
+4. Click **Create pull request**.
+5. Add a brief title and description, then click **Create pull request** once more to finalize.
+
+---
+
+🎉 **That's it!** Thank you for helping improve the project. We will review your contribution as soon as possible and merge it into the main repository.
+
