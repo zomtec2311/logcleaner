@@ -3,13 +3,22 @@ OC.L10N.register(
     {
     "How many lines to display": "Quante righe visualizzare",
     "How many characters should the error reason display": "Quanti caratteri mostrare per il motivo dell'errore",
-    "_Delete %n duplicate_::_Delete %n duplicates_": ["Elimina %n duplicato", "Elimina %n duplicati"],
+    "_Delete %n duplicate_::_Delete %n duplicates_": [
+        "Elimina %n duplicato",
+        "Elimina %n duplicati"
+    ],
     "Log entries fetched": "Voci di registro caricate",
     "Could not fetch log entries": "Impossibile caricare le voci di registro",
     "Could not fetch settings": "Impossibile caricare le impostazioni",
     "Log entry deleted": "Voce di registro eliminata",
-    "_%n log entry_::_%n log entries_": ["%n voce di registro", "%n voci di registro"],
-    "_%n log entry successful deleted_::_%n log entries successful deleted_": ["%n voce di registro eliminata con successo", "%n voci di registro eliminate con successo"],
+    "_%n log entry_::_%n log entries_": [
+        "%n voce di registro",
+        "%n voci di registro"
+    ],
+    "_%n log entry successful deleted_::_%n log entries successful deleted_": [
+        "%n voce di registro eliminata con successo",
+        "%n voci di registro eliminate con successo"
+    ],
     "After you have corrected an error from the error log, you can use the trash can symbol on the left of each error line to remove the respective line from the error log.": "Dopo aver corretto un errore presente nel registro, è possibile eliminare la relativa voce cliccando sull'icona del cestino a sinistra di ogni riga.",
     "Simply deleting it does not prevent the error from occurring again!": "La semplice eliminazione non impedisce che l'errore si ripresenti.",
     "The weighting of an error is differentiated by the following background colors": "La gravità degli errori è indicata dai seguenti colori di sfondo",
@@ -48,7 +57,10 @@ OC.L10N.register(
     "yes": "Sì",
     "no": "No",
     "The color at the top of a box indicates the range of the warning.": "Il colore nella parte superiore del riquadro indica il livello dell'avviso.",
-    "_%n duplicate_::_%n duplicates_" : ["%n duplicato","%n duplicati"],
+    "_%n duplicate_::_%n duplicates_": [
+        "%n duplicato",
+        "%n duplicati"
+    ],
     "Amount": "Quantità",
     "Apps with the most log entries": "App con il maggior numero di voci di registro",
     "Set logging level": "Imposta il livello di registrazione",
@@ -107,11 +119,15 @@ OC.L10N.register(
     "Daily Nextcloud Log Summary (%1$s to %2$s)": "Riepilogo giornaliero del registro Nextcloud (dal %1$s al %2$s)",
     "Weekly Nextcloud Log Summary (%1$s to %2$s)": "Riepilogo settimanale del registro Nextcloud (dal %1$s al %2$s)",
     "Monthly Nextcloud Log Summary (%1$s to %2$s)": "Riepilogo mensile del registro Nextcloud (dal %1$s al %2$s)",
-                 "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "se ti piace {name}, ⭐ vota e/o 💬 commenta {name} negli {where}",
-                 "Basic Settings": "Impostazioni di base",
-"Appearance": "Aspetto",
-"Actions": "Azioni",
-"Automatic": "Automatico",
-"logging level:": "livello di registrazione:"
+    "if you like {name}, ⭐ rate and/or 💬 comment on {name} in the {where}": "se ti piace {name}, ⭐ vota e/o 💬 commenta {name} negli {where}",
+    "Basic Settings": "Impostazioni di base",
+    "Appearance": "Aspetto",
+    "Actions": "Azioni",
+    "Automatic": "Automatico",
+    "logging level:": "livello di registrazione:",
+    "About": "Informazioni",
+    "Logcleaner on GitHub": "Logcleaner su GitHub",
+    "Report an Issue": "Segnala un problema",
+    "LogCleaner in the Appstore": "LogCleaner nell'Appstore"
 },
 "nplurals=2; plural=(n != 1);");

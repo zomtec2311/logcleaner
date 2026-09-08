@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.6.4
+
+### Added
+- added tab ***about*** to the settings
+- ***l10n***: language files supplemented with new phrases
+
 ## 1.6.3
 
 ## 1.6.2
