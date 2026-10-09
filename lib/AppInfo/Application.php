@@ -29,7 +29,6 @@ namespace OCA\LogCleaner\AppInfo;
 
 use OCP\AppFramework\App;
 use OCP\Server;
-use OCP\App\IAppManager;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
@@ -40,6 +39,7 @@ use OCP\Util;
 use OCP\IAppConfig;
 use OCP\IGroupManager;
 use OCP\IUserSession;
+use OCP\IUser;
 use Psr\Container\ContainerInterface;
 use OCA\LogCleaner\Dashboard\LogCleanerWidget;
 use OCA\LogCleaner\Dashboard\LogCleanerWidget2;
@@ -112,20 +112,13 @@ class Application extends App implements IBootstrap {
 
 		$navigationManager = $context->getServerContainer()->get(INavigationManager::class);
         $urlGenerator = $context->getServerContainer()->get(IURLGenerator::class);
-		$appManager = $context->getServerContainer()->get(IAppManager::class);
 		$appConfig = $context->getServerContainer()->get(IAppConfig::class);
 
-		$appManager->enableAppForGroups(self::APP_ID, array('admin'), false);
+		$myuser = $iuserSession->getUser();
+		if ($myuser === null) $myuid = null;
+		else $myuid = $myuser->getUID();
 
-		$myuid = $iuserSession->getUser();
-
-		if ($myuid === null) {
-			return;
-		}
-
-		if (!in_array("admin", $igroupManager->getUserGroupIds($myuid))) {
-			return;
-		}
+		if (($myuid === null) || (!$igroupManager->isAdmin($myuid))) return;
 
 		try {
 			$navigationManager->add(function () use ($urlGenerator, $appConfig) {
