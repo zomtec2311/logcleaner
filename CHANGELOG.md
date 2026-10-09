@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.6.5
+
+### Fixed
+- Bug fixed: boot() calls enableAppForGroups() on every request and floods the admin_audit log ([#84](https://github.com/zomtec2311/logcleaner/issues/84)) @AndreasSchwan-SIMO
+
 ## 1.6.4
 
 ### Added
